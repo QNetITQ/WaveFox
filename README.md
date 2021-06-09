@@ -1,7 +1,7 @@
 # WaveFox
 *Tabs with a unique shape*
 
-
+![Image](https://user-images.githubusercontent.com/85301851/121344799-d2f5cc00-c92c-11eb-9c9c-701cebef4dfb.png)
 
 # Installation
 1) *In the address bar, enter "about: profiles" and open the root directory folder. Create a "chrome" folder and copy the "userChrome.css" file*
