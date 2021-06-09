@@ -14,3 +14,7 @@
 *Linux and Mac are not yet supported*
 
 *Compact mode is not supported as Mozilla no longer supports it*
+
+*Control shadows through special css variables*
+
+![Image2](https://user-images.githubusercontent.com/85301851/121346187-75627f00-c92e-11eb-87a6-85456440b11b.PNG)
