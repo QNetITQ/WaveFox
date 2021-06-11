@@ -9,12 +9,8 @@
 3) *Restart the browser*
 
 # Notice
-*Only works with Windows 10/8/7*
+*Works with Windows 10/8/7. Linux and Mac are not yet supported*
 
-*Linux and Mac are not yet supported*
-
-*Compact mode is not supported as Mozilla no longer supports it*
-
-*Control shadows through special css variables*
+*Control the style through special variables*
 
 ![Image2](https://user-images.githubusercontent.com/85301851/121346187-75627f00-c92e-11eb-87a6-85456440b11b.PNG)
