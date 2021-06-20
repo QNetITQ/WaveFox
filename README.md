@@ -1,5 +1,4 @@
 # WaveFox (Windows only, for now)
-*Tabs with a unique shape*
 
 ![Image](https://user-images.githubusercontent.com/85301851/121344799-d2f5cc00-c92c-11eb-9c9c-701cebef4dfb.png)
 
