@@ -18,7 +18,7 @@ Supported interface densities:
 ## Windows 8
 ![Windows 8](https://user-images.githubusercontent.com/85301851/123125196-f94d5880-d450-11eb-93c3-c1d0331a8069.png)
 
-## Windows 7*
+## Windows 7
 ![Windows 7](https://user-images.githubusercontent.com/85301851/123125224-fe120c80-d450-11eb-8410-f9d90e5d5d9b.png)
 
 # Installation
