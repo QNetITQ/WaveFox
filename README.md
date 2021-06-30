@@ -14,6 +14,8 @@
 
 ## Compatible with themes from the repository
 
+## Customize the style for yourself in the "User preferences" section
+
 ### Windows 10
 ![Windows 10](https://user-images.githubusercontent.com/85301851/123125139-ee92c380-d450-11eb-8458-1e12fdc7e847.png)
 
@@ -35,6 +37,3 @@
 * "layout.css.color-mix.enabled" > "True"
 * "browser.tabs.tabMinWidth" > 94 (You can set more, but not less. Affects the length of tabs in overflow mode)
 7) Restart the browser
-
-# Notice
-Customize the view in a dedicated section "User preferences"
