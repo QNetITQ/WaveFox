@@ -31,8 +31,8 @@ Supported interface densities:
 * "toolkit.legacyUserProfileCustomizations.stylesheets" > "True"
 * "svg.context-properties.content.enabled" > "True"
 * "layout.css.color-mix.enabled" > "True"
-* "browser.tabs.tabMinWidth" > 94 (You can set more, but not less. Affects the length of tabs in overflow mode)*
-7) Restart the browser*
+* "browser.tabs.tabMinWidth" > 94 (You can set more, but not less. Affects the length of tabs in overflow mode)
+7) Restart the browser
 
 # Notice
-*Customize the view in a dedicated section "User preferences"*
+Customize the view in a dedicated section "User preferences"
