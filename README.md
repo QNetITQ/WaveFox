@@ -12,9 +12,9 @@
 * Normal
 * Touch
 
-## Compatible with themes from the repository
+### Compatible with themes from the repository
 
-## Customize the style for yourself in the "User preferences" section
+### Customize the style for yourself in the "User preferences" section
 
 ### Windows 10
 ![Windows 10](https://user-images.githubusercontent.com/85301851/123125139-ee92c380-d450-11eb-8458-1e12fdc7e847.png)
