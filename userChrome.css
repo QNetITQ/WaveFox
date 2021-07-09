@@ -1,7 +1,41 @@
 /* ---------------------------------------- Firefox 89 and newer ---------------------------------------- */
 /* ---------------------------------------- Windows 10 / Windows 8 / Windows 7 / Linux / MacOS ---------------------------------------- */
 
+/* ---------------------------------------- Experiment ---------------------------------------- */
 
+:root[uidensity="compact"]
+{
+    --arrowpanel-menuitem-margin: 0 4px !important;
+    --arrowpanel-menuitem-padding-block: 0 4px !important;
+    --panel-subview-body-padding: 4px 0 !important;
+}
+
+@media (-moz-windows-non-native-menus)
+{
+    :root[uidensity="compact"] menupopup > menuitem,
+    :root[uidensity="compact"] menupopup > menu
+    {
+        padding-block: 0 !important;
+    }
+
+    :root[uidensity="compact"] .menu-accel,
+    :root[uidensity="compact"] .menu-iconic-accel,
+    :root[uidensity="compact"] .menu-text,
+    :root[uidensity="compact"] .menu-iconic-text
+    {
+        padding: 0 !important;
+    }
+
+    :root[uidensity="compact"] #context-navigation:not([hidden])
+    {
+        padding: 0 !important;
+    }
+
+    :root[uidensity="compact"] menupopup
+    {
+        --panel-padding: 0 !important;
+    }
+}
 
 /* ---------------------------------------- User preferences ---------------------------------------- */
 
