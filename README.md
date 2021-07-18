@@ -1,4 +1,5 @@
-# *WaveFox (Style with unique shape of tabs)*
+# *WaveFox*
+*(Style with unique shape of tabs)*
 
 ## Supported operating systems:
 * Windows 10
@@ -8,9 +9,9 @@
 * MacOS
 
 ## Supported interface densities:
-* Compact
-* Normal
-* Touch
+* Compact (Non-system context menus are reduced. System menus are reduced only in Windows 10)
+* Normal (Context menus unchanged)
+* Touch (Context menus unchanged)
 
 ### Compatible with themes from the repository
 
@@ -35,5 +36,8 @@
 * "toolkit.legacyUserProfileCustomizations.stylesheets" > "True"
 * "svg.context-properties.content.enabled" > "True"
 * "layout.css.color-mix.enabled" > "True"
-* "browser.tabs.tabMinWidth" > 94 (You can set more, but not less. Affects the length of tabs in overflow mode)
-7) Restart the browser
+7) "browser.tabs.tabMinWidth":
+* Compact > Minimum: 88 Recommended: 106
+* Normal > Minimum: 94 Recommended: 112
+* Touch > Minimum: 90 Recommended: 118
+8) Restart the browser
