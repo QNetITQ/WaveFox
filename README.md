@@ -1,32 +1,26 @@
 # *WaveFox*
-*(Style with unique shape of tabs)*
 
-## Supported operating systems:
+### Supported operating systems:
 * Windows 10
 * Windows 8.1
 * Windows 7
 * Linux 
 * MacOS
 
-## Supported interface densities:
-* Compact (Non-system context menus are reduced. System menus are reduced only in Windows 10)
-* Normal (Context menus unchanged)
-* Touch (Context menus unchanged)
+### Features:
+* All interface densities supported
+* You can control the size of the drag space for each density in the "Custom Settings" section
+* Reduced context menus. You can control the size of the context menus for each density in the "Custom Settings" section
+* You can control the size and color of the shadows for each density in the "Custom Settings" section (Tab bar only)
+* Website icons and media icons on tabs are always visible 
+* Style is compatible with themes from the repository
 
-### Compatible with themes from the repository
+### Screenshots
 
-### Customize the style for yourself in the "User preferences" section
 
-### Windows 10
-![Windows 10](https://user-images.githubusercontent.com/85301851/123125139-ee92c380-d450-11eb-8458-1e12fdc7e847.png)
 
-### Windows 8
-![Windows 8](https://user-images.githubusercontent.com/85301851/123125196-f94d5880-d450-11eb-93c3-c1d0331a8069.png)
 
-### Windows 7
-![Windows 7](https://user-images.githubusercontent.com/85301851/123125224-fe120c80-d450-11eb-8410-f9d90e5d5d9b.png)
-
-# Installation
+### Installation
 1) Enter "about:profiles" in the address bar and open the root directory folder
 2) Create a folder "chrome"
 3) Download the "userChrome.css" file
