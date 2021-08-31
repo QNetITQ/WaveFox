@@ -8,11 +8,13 @@
 * MacOS
 
 ### Features:
+* Tabs with a more classic look
 * All interface densities supported
 * You can control the size of the drag space for each density in the "Custom Settings" section
 * Reduced context menus. You can control the size of the context menus for each density in the "Custom Settings" section
 * You can control the size and color of the shadows for each density in the "Custom Settings" section (Tab bar only)
-* Website icons and media icons on tabs are always visible 
+* Website icons and media icons on tabs are always visible
+* Returned accent color to Windows 10
 * Style is compatible with themes from the repository
 
 ### Screenshots:
