@@ -42,7 +42,8 @@
 * "toolkit.legacyUserProfileCustomizations.stylesheets" > "True"
 * "svg.context-properties.content.enabled" > "True"
 * "layout.css.color-mix.enabled" > "True"
-7) "browser.tabs.tabMinWidth":
+* If you want compact mode, set "browser.compactmode.show" > "True" 
+7) "browser.tabs.tabMinWidth" set according to the selected density: 
 * Compact > Minimum: 88 Recommended: 106
 * Normal > Minimum: 94 Recommended: 112
 * Touch > Minimum: 90 Recommended: 118
