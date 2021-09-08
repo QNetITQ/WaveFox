@@ -15,6 +15,7 @@
 * You can control the size and color of the shadows for each density in the "Custom Settings" section (Tab bar only)
 * Website icons and media icons on tabs are always visible
 * Returned accent color to Windows 10
+* MacOS vibrancy support
 * Style is compatible with themes from the repository
 
 ### Screenshots:
