@@ -1,24 +1,22 @@
 # *WaveFox*
 
-### Supported operating systems:
-* Windows 10
-* Windows 8.1
-* Windows 7
+## Supported operating systems
+* Windows 7 and newer (Windows 11 is not supported yet)
 * Linux 
-* MacOS
+* MacOS 11 and newer
 
-### Features:
+## Features
 * Tabs with a more classic look
 * All interface densities supported
 * You can control the size of the drag space for each density in the "Custom Settings" section
 * Reduced context menus. You can control the size of the context menus for each density in the "Custom Settings" section
 * You can control the size and color of the shadows for each density in the "Custom Settings" section (Tab bar only)
-* Website icons and media icons on tabs are always visible
-* Returned accent color to Windows 10
-* MacOS vibrancy support
+* Media icons on tabs are always visible
+* Accent color (Windows 10) 
+* Vibrancy (MacOS)
 * Style is compatible with themes from the repository
 
-### Screenshots:
+## Screenshots
 #### Compact (Light)
 ![7KBRGjs](https://user-images.githubusercontent.com/85301851/131252428-6d49b402-1380-4857-901a-481e73c8fa3d.jpeg)
 #### Compact (Dark)
@@ -33,7 +31,7 @@
 ![flwqscM](https://user-images.githubusercontent.com/85301851/131252472-d305f9dc-ca91-4cd4-aa65-a3edeae9b0fd.jpeg)
 -----------------------------------------------------------------------------------------------------------------------
 
-### Installation
+## Installation
 1) Enter "about:profiles" in the address bar and open the root directory folder
 2) Create a folder "chrome"
 3) Download the "userChrome.css" file
