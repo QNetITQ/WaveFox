@@ -29,7 +29,6 @@
 ![oWaAVDq](https://user-images.githubusercontent.com/85301851/131252461-0d54f7a8-cd9b-4be6-b118-36c47c803e12.jpeg)
 #### Touch (Dark)
 ![flwqscM](https://user-images.githubusercontent.com/85301851/131252472-d305f9dc-ca91-4cd4-aa65-a3edeae9b0fd.jpeg)
------------------------------------------------------------------------------------------------------------------------
 
 ## Installation
 1) Enter "about:profiles" in the address bar and open the root directory folder
@@ -42,8 +41,8 @@
 * "svg.context-properties.content.enabled" > "True"
 * "layout.css.color-mix.enabled" > "True"
 * If you want compact mode, set "browser.compactmode.show" > "True" 
-7) "browser.tabs.tabMinWidth" set according to the selected density: 
-* Compact > Minimum: 88 Recommended: 106
-* Normal > Minimum: 94 Recommended: 112
-* Touch > Minimum: 90 Recommended: 118
-8) Restart the browser
+* "browser.tabs.tabMinWidth" set according to the selected density: 
+* Compact > Minimum: 90; Recommended: 108;
+* Normal  > Minimum: 96; Recommended: 114;
+* Touch   > Minimum: 92; Recommended: 120;
+7) Restart the browser
