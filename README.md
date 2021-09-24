@@ -40,7 +40,7 @@
 * "toolkit.legacyUserProfileCustomizations.stylesheets" > "True"
 * "svg.context-properties.content.enabled" > "True"
 * "layout.css.color-mix.enabled" > "True"
-* If you want compact mode, set "browser.compactmode.show" > "True"
+* If you want compact mode, set "browser.compactmode.show" > "True" and go to "Customize Toolbar"
 7) Restart the browser
 
 ## Tabs (Overflow mode)
