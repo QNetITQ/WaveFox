@@ -40,9 +40,11 @@
 * "toolkit.legacyUserProfileCustomizations.stylesheets" > "True"
 * "svg.context-properties.content.enabled" > "True"
 * "layout.css.color-mix.enabled" > "True"
-* If you want compact mode, set "browser.compactmode.show" > "True" 
-* "browser.tabs.tabMinWidth" set according to the selected density: 
-* Compact > Minimum: 90; Recommended: 108;
-* Normal  > Minimum: 96; Recommended: 114;
-* Touch   > Minimum: 92; Recommended: 120;
+* If you want compact mode, set "browser.compactmode.show" > "True"
 7) Restart the browser
+
+## Tabs (Overflow mode)
+Removed the ability to close tabs with the left mouse button in overflow mode to protect the user from accidental actions. Use the methods below to close tabs:
+* Through the context menu
+* By clicking on the mouse wheel
+* "browser.tabs.closeTabByDblclick" > "True" in "about:config"
