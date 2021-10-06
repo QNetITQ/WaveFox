@@ -1,7 +1,7 @@
 # *WaveFox*
 
 ## Supported operating systems
-* Windows 7 and newer (Windows 11 is not supported yet)
+* Windows 7 and newer
 * Linux 
 * MacOS 11 and newer
 
@@ -12,7 +12,7 @@
 * Reduced context menus. You can control the size of the context menus for each density in the "Custom Settings" section
 * You can control the size and color of the shadows for each density in the "Custom Settings" section (Tab bar only)
 * Media icons on tabs are always visible
-* Accent color (Windows 10) 
+* Accent color (Windows 11 / Windows 10) 
 * Vibrancy (MacOS)
 * Style is compatible with themes from the repository
 
