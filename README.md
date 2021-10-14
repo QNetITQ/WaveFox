@@ -10,7 +10,7 @@
 * All interface densities supported
 * You can control the size of the drag space for each density in the "Custom Settings" section
 * Reduced context menus. You can control the size of the context menus for each density in the "Custom Settings" section
-* You can control the size and color of the shadows for each density in the "Custom Settings" section (Tab bar only)
+* You can control the size and color of the shadows for each density in the "Custom Settings" section (Tab bar and navigator toolbox)
 * Media icons on tabs are always visible
 * Accent color (Windows 11 / Windows 10) 
 * Vibrancy (MacOS)
