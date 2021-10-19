@@ -7,6 +7,7 @@
 
 ## Features
 * Tabs with a more classic look
+* Light and dark theme support 
 * All interface densities supported
 * You can control the size of the drag space for each density in the "Custom Settings" section
 * Reduced context menus. You can control the size of the context menus for each density in the "Custom Settings" section
@@ -15,6 +16,7 @@
 * Accent color (Windows 11 / Windows 10) 
 * Vibrancy (MacOS)
 * Style is compatible with themes from the repository
+* Support for different forms of tabs 
 
 ## Screenshots
 ### Proton Tabs
