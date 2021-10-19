@@ -1,0 +1,1028 @@
+@media (-moz-os-version: windows-win10),
+       (-moz-os-version: windows-win8),
+       (-moz-os-version: windows-win7),
+       (-moz-gtk-csd-available),
+       (-moz-mac-big-sur-theme)
+{
+
+/* ---------------------------------------- Custom settings ---------------------------------------- */
+
+/* -------------------- Compact mode -------------------- */
+
+:root[uidensity="compact"][lwtheme-mozlightdark]:is(:not(:-moz-lwtheme), :-moz-lwtheme-darktext)
+{
+    /* ---------- Shadows (Light theme / Compact mode) ---------- */
+    --primary-shadow-color:         black;
+    --secondary-shadow-color:       black;
+    --primary-shadow-blur:          2px;     /* Even values only */
+    --secondary-shadow-blur:        8px;     /* Even values only */
+    --primary-shadow-saturation:    10%;
+    --secondary-shadow-saturation:  20%;
+}
+
+:root[uidensity="compact"][lwtheme-mozlightdark]:is([lwt-default-theme-in-dark-mode], :-moz-lwtheme-brighttext)
+{
+    /* ---------- Shadows (Dark theme / Compact mode) ---------- */
+    --primary-shadow-color:         black;
+    --secondary-shadow-color:       black;
+    --primary-shadow-blur:          2px;     /* Even values only */
+    --secondary-shadow-blur:        8px;     /* Even values only */
+    --primary-shadow-saturation:    25%;
+    --secondary-shadow-saturation:  50%;
+}
+
+:root[uidensity="compact"]
+{
+    /* ---------- Drag space (Compact mode) ---------- */
+    --drag-space-windowed:          8px;
+    --drag-space-maximized:         0px;
+    --drag-space-menubar-titlebar:  8px;
+
+    /* ---------- Context menus (Compact mode) ---------- */
+    --browser-context-menu-margin-padding:        4px;
+    --win11-win10-context-menu-margin-padding:    4px;
+
+    /* ---------- Tabs (Compact mode) ---------- */
+    --separator-color-saturation:           50%;
+    --first-tab-left-separator-saturation:  50%;
+}
+
+/* -------------------- Normal mode -------------------- */
+
+:root[lwtheme-mozlightdark]:is(:not(:-moz-lwtheme), :-moz-lwtheme-darktext)
+{
+    /* ---------- Shadows (Light theme / Normal mode) ---------- */
+    --primary-shadow-color:         black;
+    --secondary-shadow-color:       black;
+    --primary-shadow-blur:          2px;     /* Even values only */
+    --secondary-shadow-blur:        8px;     /* Even values only */
+    --primary-shadow-saturation:    10%;
+    --secondary-shadow-saturation:  20%;
+}
+
+:root[lwtheme-mozlightdark]:is([lwt-default-theme-in-dark-mode], :-moz-lwtheme-brighttext)
+{
+    /* ---------- Shadows (Dark theme / Normal mode) ---------- */
+    --primary-shadow-color:         black;
+    --secondary-shadow-color:       black;
+    --primary-shadow-blur:          2px;     /* Even values only */
+    --secondary-shadow-blur:        8px;     /* Even values only */
+    --primary-shadow-saturation:    25%;
+    --secondary-shadow-saturation:  50%;
+}
+
+:root
+{
+    /* ---------- Drag space (Normal mode) ---------- */
+    --drag-space-windowed:          8px;
+    --drag-space-maximized:         0px;
+    --drag-space-menubar-titlebar:  8px;
+
+    /* ---------- Context menus (Normal mode) ---------- */
+    --browser-context-menu-margin-padding:        6px;
+    --win11-win10-context-menu-margin-padding:    6px;
+
+    /* ---------- Tabs (Normal mode) ---------- */
+    --separator-color-saturation:           50%;
+    --first-tab-left-separator-saturation:  50%;
+}
+
+/* -------------------- Touch mode -------------------- */
+
+:root[uidensity="touch"][lwtheme-mozlightdark]:is(:not(:-moz-lwtheme), :-moz-lwtheme-darktext)
+{
+    /* ---------- Shadows (Light theme / Touch mode) ---------- */
+    --primary-shadow-color:         black;
+    --secondary-shadow-color:       black;
+    --primary-shadow-blur:          2px;     /* Even values only */
+    --secondary-shadow-blur:        8px;     /* Even values only */
+    --primary-shadow-saturation:    10%;
+    --secondary-shadow-saturation:  20%;
+}
+
+:root[uidensity="touch"][lwtheme-mozlightdark]:is([lwt-default-theme-in-dark-mode], :-moz-lwtheme-brighttext)
+{
+    /* ---------- Shadows (Dark theme / Touch mode) ---------- */
+    --primary-shadow-color:         black;
+    --secondary-shadow-color:       black;
+    --primary-shadow-blur:          2px;     /* Even values only */
+    --secondary-shadow-blur:        8px;     /* Even values only */
+    --primary-shadow-saturation:    25%;
+    --secondary-shadow-saturation:  50%;
+}
+
+:root[uidensity="touch"]
+{
+    /* ---------- Drag space (Touch mode) ---------- */
+    --drag-space-windowed:          8px;
+    --drag-space-maximized:         0px;
+    --drag-space-menubar-titlebar:  8px;
+
+    /* ---------- Context menus (Touch mode) ---------- */
+    --browser-context-menu-margin-padding:        8px;
+    --win11-win10-context-menu-margin-padding:    8px;
+
+    /* ---------- Tabs (Touch mode) ---------- */
+    --separator-color-saturation:           50%;
+    --first-tab-left-separator-saturation:  50%;
+}
+
+/* -------------------- Alpenglow / Repository -------------------- */
+
+:root:not([lwtheme-mozlightdark])
+{
+    /* ---------- Selected tab indicator ---------- */
+    --tab-indicator-color: var(--toolbarbutton-icon-fill);  /* var(--toolbarbutton-icon-fill) */
+    --tab-indicator-saturation: 100%;
+}
+
+/* ------------------------------------------------------------------------------------------------- */
+
+/* ---------------------------------------- Shadows ---------------------------------------- */
+
+:root[lwtheme-mozlightdark]
+{
+    --primary-shadow: color-mix(in srgb, var(--primary-shadow-color) var(--primary-shadow-saturation), transparent);
+    --secondary-shadow: color-mix(in srgb, var(--secondary-shadow-color) var(--secondary-shadow-saturation), transparent);
+}
+
+:root[lwtheme-mozlightdark]
+{
+    --outer-shadows: 0 0 var(--primary-shadow-blur) 0 var(--primary-shadow),
+                     0 0 var(--secondary-shadow-blur) 0 var(--secondary-shadow);
+    --inner-shadows: inset 0 calc(-1 * var(--primary-shadow-blur)) var(--primary-shadow-blur) calc(-1 * var(--primary-shadow-blur)) var(--primary-shadow),
+                     inset 0 calc(-1 * var(--secondary-shadow-blur)) var(--secondary-shadow-blur) calc(-1 * var(--secondary-shadow-blur)) var(--secondary-shadow);
+    --special-outer-shadows: drop-shadow(0 0 calc(var(--primary-shadow-blur) / 2) var(--primary-shadow))
+                             drop-shadow(0 0 calc(var(--secondary-shadow-blur) / 2) var(--secondary-shadow));
+}
+
+/* ---------------------------------------- Unneeded styles ---------------------------------------- */
+
+:root
+{
+    --tab-selected-bgcolor: unset !important;
+
+    --lwt-selected-tab-background-color: unset !important;
+
+    --tabs-border-color: unset !important;
+}
+
+/* ---------------------------------------- Density ---------------------------------------- */
+
+:root[uidensity="compact"]
+{
+    --tab-min-height: 30px !important;
+}
+
+:root[uidensity="touch"]
+{
+    --tab-min-height: 42px !important;
+}
+
+:root[sizemode="normal"]
+{
+    --tabbar-head: var(--drag-space-windowed);
+}
+
+:root[sizemode="maximized"]
+{
+    --tabbar-head: var(--drag-space-maximized);
+}
+
+:root:not([tabsintitlebar]),
+#toolbar-menubar:not([autohide][inactive]) + #TabsToolbar
+{
+    --tabbar-head: var(--drag-space-menubar-titlebar);
+}
+
+/* ---------------------------------------- Alpenglow / Repository ---------------------------------------- */
+
+:root:not([lwtheme-mozlightdark])
+{
+    --middle-svg: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path fill='transparent' stroke='context-stroke' stroke-width='4px' d='M 0,2 C 0,2 100,2 100,2'/></svg>");
+}
+
+:root:not([lwtheme-mozlightdark])
+{
+    --tab-indicator: color-mix(in srgb, var(--tab-indicator-color) var(--tab-indicator-saturation), transparent);
+}
+
+:root:not([lwtheme-mozlightdark]) .tabbrowser-tab[visuallyselected] .tab-background::before,
+:root:not([lwtheme-mozlightdark]) .tabbrowser-tab[visuallyselected] .tab-background::after
+{
+    stroke: var(--tab-indicator);
+}
+
+:root:not([lwtheme-mozlightdark]) .tabbrowser-tab[visuallyselected] .tab-background
+{
+    background-color: var(--toolbar-bgcolor) !important;
+    background-image: var(--middle-svg) !important;
+    stroke: var(--tab-indicator);
+    -moz-context-properties: stroke;
+}
+
+/* ---------------------------------------- Context menus (Not os related) ---------------------------------------- */
+
+:root
+{
+    --arrowpanel-menuitem-margin: 0 var(--browser-context-menu-margin-padding) !important;
+    --arrowpanel-menuitem-padding-block: var(--browser-context-menu-margin-padding) !important;
+    --arrowpanel-menuitem-padding-inline: var(--browser-context-menu-margin-padding) !important;
+    --panel-separator-margin-vertical: var(--browser-context-menu-margin-padding) !important;
+    --panel-separator-margin-horizontal: var(--browser-context-menu-margin-padding) !important;
+    --panel-subview-body-padding: var(--browser-context-menu-margin-padding) 0 !important;
+}
+
+/* ---------------------------------------- Context menus (Os related) ---------------------------------------- */
+
+@media (-moz-os-version: windows-win10)
+{
+    @media (-moz-windows-non-native-menus)
+    {
+        menupopup:not(.in-menulist)
+        {
+            --panel-padding: var(--win11-win10-context-menu-margin-padding) 0 !important;
+        }
+
+        menupopup:not(.in-menulist) :is(menuitem, menu)
+        {
+            padding-block: var(--win11-win10-context-menu-margin-padding) !important;
+        }
+    }
+}
+
+/* ---------------------------------------- Navigator toolbox ---------------------------------------- */
+
+#navigator-toolbox
+{
+    border-bottom: none !important;
+}
+
+:root[lwtheme-mozlightdark] #navigator-toolbox
+{
+    position: relative;
+    z-index: 1;
+    box-shadow: var(--outer-shadows) !important;
+}
+
+/* ---------------------------------------- Titlebar ---------------------------------------- */
+
+:root[lwtheme-mozlightdark] #titlebar
+{
+    --toolbarbutton-icon-fill: currentColor;
+
+    --toolbarbutton-hover-background: color-mix(in srgb, currentColor 10%, transparent) !important;
+
+    --toolbarbutton-active-background: color-mix(in srgb, currentColor 20%, transparent) !important;
+}
+
+/* ---------------------------------------- Tabs ---------------------------------------- */
+
+.tabbrowser-tab
+{
+    margin-top: var(--tabbar-head) !important;
+    color: inherit !important;
+    --tab-label-mask-size: 2em !important;
+}
+
+.tabbrowser-tab[visuallyselected] .tab-stack
+{
+    color: var(--lwt-tab-text, var(--toolbar-color)) !important;
+}
+
+.tabbrowser-tab[visuallyselected] .tab-background
+{
+    filter: var(--special-outer-shadows);
+}
+
+.tab-background
+{
+    box-shadow: none !important;
+    opacity: 1 !important;
+}
+
+.tabbrowser-tab:hover:not([visuallyselected],[multiselected]) .tab-background
+{
+    background: var(--toolbarbutton-hover-background) !important;
+}
+
+.tabbrowser-tab[multiselected]:not([visuallyselected]) .tab-background
+{
+    background: var(--toolbarbutton-active-background) !important;
+}
+
+.tab-loading-burst
+{
+    display: none !important;
+}
+
+.tab-close-button
+{
+    width: 24px !important;
+    padding: 7px !important;
+}
+
+/* ---------- Overflow & Pinned ---------- */
+    
+#tabbrowser-tabs[overflow] .tabbrowser-tab:is([visuallyselected],:hover,[multiselected]):not([pinned]) .tab-stack
+{
+    justify-content: center !important;
+}
+
+#tabbrowser-tabs[overflow] .tabbrowser-tab:is([visuallyselected],:hover,[multiselected]):not([pinned]) :is(.tab-throbber, .tab-icon-pending, .tab-icon-image, .tab-sharing-icon-overlay, .tab-icon-overlay)
+{
+    margin-inline-end: 0 !important;
+}
+
+#tabbrowser-tabs[overflow] .tabbrowser-tab:is([visuallyselected],:hover,[multiselected]):not([pinned]) :is(.tab-label-container, .tab-close-button)
+{
+    display: none !important;
+}
+
+/* ----- Density ----- */
+:root[uidensity="compact"] #tabbrowser-tabs[overflow] .tabbrowser-tab:is([visuallyselected],:hover,[multiselected]):not([pinned]) .tab-content,
+:root[uidensity="compact"] .tab-content[pinned]
+{
+    padding: 0 calc(var(--tab-min-height) / 3 - 3px) !important;
+}
+
+#tabbrowser-tabs[overflow] .tabbrowser-tab:is([visuallyselected],:hover,[multiselected]):not([pinned]) .tab-content,
+.tab-content[pinned]
+{
+    padding: 0 calc(var(--tab-min-height) / 3 - 2px) !important;
+}
+
+:root[uidensity="touch"] #tabbrowser-tabs[overflow] .tabbrowser-tab:is([visuallyselected],:hover,[multiselected]):not([pinned]) .tab-content,
+:root[uidensity="touch"] .tab-content[pinned]
+{
+    padding: 0 calc(var(--tab-min-height) / 3 - 1px) !important;
+}
+
+/* ---------- Containers ---------- */
+
+.tab-icon-stack::before
+{
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 2px;
+    top: 18px;
+    background-color: var(--identity-icon-color);
+}
+
+.tab-context-line
+{
+    display: none !important;
+}
+
+/* -------------------- Tab icon image -------------------- */
+
+.tab-icon-image:not([src], [pinned], [crashed], [sharing], [pictureinpicture], [busy])
+{
+    display: revert !important;
+}
+
+/* -------------------- Tab icon indicator -------------------- */
+
+#TabsToolbar
+{
+    --attention-icon-color: currentColor !important;
+}
+
+.tabbrowser-tab:is([image], [pinned]) .tab-content[attention]:not([selected]),
+.tab-content[pinned][titlechanged]:not([selected])
+{
+    background-position: 50% 4px !important;
+}
+
+/* ---------- Media icons ---------- */
+
+:root
+{
+    --tab-media-icon-overlay-background: var(--toolbar-bgcolor);
+    --tab-media-icon-overlay-color: var(--lwt-tab-text, var(--toolbar-color));
+    --tab-media-icon-overlay-hover: color-mix(in srgb, currentColor 10%, var(--toolbar-bgcolor));
+    --tab-media-icon-overlay-active: color-mix(in srgb, currentColor 20%, var(--toolbar-bgcolor));
+    --tab-media-icon-overlay-shadows: var(--outer-shadows);
+}
+
+.tab-icon-overlay:not([crashed]):is([pinned], [sharing]):hover,
+.tab-icon-overlay:not([pinned], [sharing], [crashed]):hover
+{
+    background-color: var(--tab-media-icon-overlay-hover) !important;
+}
+
+.tab-icon-overlay:not([crashed]):is([pinned], [sharing]):active,
+.tab-icon-overlay:not([pinned], [sharing], [crashed]):active
+{
+    background-color: var(--tab-media-icon-overlay-active) !important;
+}
+
+.tabbrowser-tab:not([visuallyselected]) .tab-icon-overlay:not([crashed]):is([pinned], [sharing]),
+.tabbrowser-tab:not([visuallyselected]) .tab-icon-overlay:not([pinned], [sharing], [crashed])
+{
+    box-shadow: var(--tab-media-icon-overlay-shadows);
+}
+
+/* ----- Pinned tabs ----- */
+
+.tab-icon-overlay:not([crashed]):is([pinned], [sharing])
+{
+    stroke: none !important;
+    background-color: var(--tab-media-icon-overlay-background) !important;
+    color: var(--tab-media-icon-overlay-color) !important;
+    fill: currentColor !important;
+    top: -6px !important;
+}
+
+/* ----- Regular tabs (All densities) ----- */
+
+.tab-icon-stack:not([pinned], [sharing], [crashed]) :is(.tab-icon-image, .tab-icon-overlay)
+{
+    opacity: 1 !important;    
+}
+
+.tab-icon-overlay:not([pinned], [sharing], [crashed])
+{
+    stroke: none !important;
+    background-color: var(--tab-media-icon-overlay-background) !important;
+    color: var(--tab-media-icon-overlay-color) !important;
+    fill: currentColor !important;
+    fill-opacity: 1 !important;
+    border-radius: 50% !important;
+    bottom: 6px;
+    left: 6px;
+}
+
+.tabbrowser-tab:not([pinned]) :is(.tab-throbber, .tab-icon-pending, .tab-icon-image, .tab-sharing-icon-overlay, .tab-icon-overlay)
+{
+    margin-inline-end: var(--inline-tab-padding) !important;
+}
+
+/* ----- Regular tabs (Normal / Touch) ----- */
+
+.tab-secondary-label
+{
+    -moz-box-ordinal-group: 0;
+    font-size: xx-small !important;
+}
+
+/* ---------------------------------------- Tabbar ---------------------------------------- */
+
+#TabsToolbar
+{
+    --toolbarbutton-inner-padding: inherit !important;
+    position: relative;
+    clip-path: fill-box;
+}
+
+#TabsToolbar::before
+{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0%;
+    bottom: 0%;
+    z-index: 2;
+    box-shadow: var(--inner-shadows);
+    background-repeat: no-repeat;
+    pointer-events: none;
+}
+
+#TabsToolbar .toolbarbutton-1
+{
+    margin-top: var(--tabbar-head) !important;
+}
+
+#TabsToolbar #search-container
+{
+    margin-top: var(--tabbar-head) !important;
+    padding-block: unset !important;
+}
+
+#TabsToolbar #personal-bookmarks
+{
+    margin-top: var(--tabbar-head) !important;
+}
+
+.accessibility-indicator,
+.private-browsing-indicator
+{
+    margin-top: var(--tabbar-head) !important;
+}
+
+.titlebar-spacer[type="pre-tabs"],
+.titlebar-spacer[type="post-tabs"]
+{
+    display: none !important;
+}
+
+/* ---------------------------------------- Indents ---------------------------------------- */
+
+/* ---------- Tabs ---------- */
+
+#tabbrowser-tabs:not([overflow]) .tabbrowser-tab[first-visible-tab],
+#tabbrowser-tabs[positionpinnedtabs],
+.tabbrowser-tab[first-visible-unpinned-tab]
+{
+    margin-left: calc(var(--toolbar-start-end-padding) - var(--toolbarbutton-outer-padding)) !important;
+}
+
+.tabbrowser-tab[last-visible-tab]
+{
+    margin-right: calc(var(--toolbar-start-end-padding) - var(--toolbarbutton-outer-padding)) !important;
+}
+
+/* ---------- Tab bar buttons ---------- */
+
+#TabsToolbar-customization-target > :is(toolbarbutton, toolbaritem):first-child,
+#TabsToolbar-customization-target > toolbarpaletteitem:first-child > :is(toolbarbutton, toolbaritem)
+{
+    margin-left: calc(var(--toolbar-start-end-padding) - var(--toolbarbutton-outer-padding)) !important;
+}
+
+#TabsToolbar-customization-target > :is(toolbarbutton, toolbaritem):last-child,
+#TabsToolbar-customization-target > toolbarpaletteitem:last-child > :is(toolbarbutton, toolbaritem),
+#tabs-newtab-button
+{
+    margin-right: calc(var(--toolbar-start-end-padding) - var(--toolbarbutton-outer-padding)) !important;
+}
+
+/* ---------------------------------------- Shadow DOM ---------------------------------------- */
+
+#tabbrowser-tabs[overflow]
+{
+    --my-margin-top: var(--tabbar-head) !important;
+    --toolbarbutton-inner-padding: 0px !important;
+}
+
+#scrollbutton-up,
+#scrollbutton-down,
+spacer[part="overflow-start-indicator"],
+spacer[part="overflow-end-indicator"]
+{
+    margin-top: var(--my-margin-top) !important;
+}
+
+/* ---------------------------------------- Separators ---------------------------------------- */
+
+.tabbrowser-tab:not([pinned])::before,
+.tabbrowser-tab[last-visible-tab]:not([pinned])::after
+{
+    content: "";
+    display: inherit;
+    position: absolute;
+    width: 1px;
+    background-image: linear-gradient(transparent 25%, currentColor 25%, currentColor 75%, transparent 75%);
+    opacity: var(--separator-color-saturation);
+}
+
+.tabbrowser-tab::before
+{
+    transform: translateX(-2px);
+}
+
+.tabbrowser-tab::after
+{
+    transform: translateX(3px);
+}
+
+#tabbrowser-tabs:not([overflow])
+    .tabbrowser-tab:is(
+        [selected],
+        :hover,
+        :hover:not([pinned]) + .tabbrowser-tab,
+        [selected]:not([pinned]) + .tabbrowser-tab:not([selected]),
+        [multiselected])::before,
+#tabbrowser-tabs:not([overflow])
+    .tabbrowser-tab:is(
+        [selected],
+        [last-visible-tab]:not([pinned]):hover,
+        [multiselected])::after
+{
+    opacity: 0;
+}
+
+.tabbrowser-tab::after
+{
+    margin-left: -1px;
+}
+
+.tabbrowser-tab[first-visible-unpinned-tab]::before
+{
+    opacity: var(--first-tab-left-separator-saturation);
+}
+
+#tabbrowser-tabs[overflow] .tabbrowser-tab[first-visible-unpinned-tab]::before,
+#tabbrowser-tabs[overflow] .tabbrowser-tab[last-visible-tab]::after
+{
+    opacity: 0;
+}
+
+#tabbrowser-tabs[overflow] .tabbrowser-tab:active::before
+{
+    opacity: 0;
+    transition-delay: 0.25s;
+}
+
+@media (min-resolution: 1.25dppx)
+{
+    .tabbrowser-tab::before,
+    .tabbrowser-tab::after
+    {
+        width: 0.8px !important;
+    }
+}
+
+@media (min-resolution: 1.5dppx)
+{
+    .tabbrowser-tab::before,
+    .tabbrowser-tab::after
+    {
+        width: 0.66px !important;
+    }
+}
+
+@media (min-resolution: 1.75dppx)
+{
+    .tabbrowser-tab::before,
+    .tabbrowser-tab::after
+    {
+        width: 0.57px !important;
+    }
+}
+
+@media (min-resolution: 2dppx)
+{
+    .tabbrowser-tab::before,
+    .tabbrowser-tab::after
+    {
+        width: 0.5px !important;
+    }
+}
+
+/* ---------------------------------------- Linux ---------------------------------------- */
+
+@media (-moz-gtk-csd-available)
+{
+    :root:not(:-moz-lwtheme) .tabbrowser-tab[selected] .tab-background::before,
+    :root:not(:-moz-lwtheme) .tabbrowser-tab[selected] .tab-background::after
+    {
+        fill: color-mix(in srgb, var(--toolbar-bgcolor), white 15%) !important;
+    }
+
+    /* ---------- Tab media icons ---------- */
+
+    :root:not(:-moz-lwtheme) .tab-icon-overlay:not([crashed]):is([pinned], [sharing]):not(:hover, :active),
+    :root:not(:-moz-lwtheme) .tab-icon-overlay:not([pinned], [sharing], [crashed]):not(:hover, :active)
+    {
+        background-color: color-mix(in srgb, var(--tab-media-icon-overlay-background), white 15%) !important;
+    }
+
+    .tab-secondary-label
+    {
+        margin-block: 6px -6px !important;
+    }
+
+    @media (prefers-contrast)
+    {
+        :root:not(:-moz-lwtheme) .tab-background
+        {
+            outline: unset !important;
+        }
+    }
+}
+
+/* ---------------------------------------- MacOS ---------------------------------------- */
+
+@media (-moz-mac-big-sur-theme)
+{
+    :root:not(:-moz-lwtheme) #titlebar
+    {
+        appearance: -moz-mac-vibrant-titlebar-light;
+    }
+
+    :root[lwt-default-theme-in-dark-mode] #titlebar
+    {
+        appearance: -moz-mac-vibrant-titlebar-dark;
+    }
+
+    :root:is(:not(:-moz-lwtheme),[lwt-default-theme-in-dark-mode]) #navigator-toolbox
+    {
+        background-color: transparent !important;
+    }
+
+    /* ---------- Tab media icons ---------- */
+
+    .tab-secondary-label
+    {
+        margin-block: 4px -4px !important;
+    }
+
+    .tab-label
+    {
+        margin-block: 0 !important;
+    }
+}
+
+/* ---------------------------------------- Windows 11 / Windows 10 / Windows 8 / Windows 7 ---------------------------------------- */
+
+@media (-moz-os-version: windows-win10),
+       (-moz-os-version: windows-win8),
+       (-moz-os-version: windows-win7)
+{
+
+@media (prefers-contrast)
+{
+    :root:not(:-moz-lwtheme) .tab-background
+    {
+        outline: unset !important;
+    }
+
+    :root:not(:-moz-lwtheme) .tabbrowser-tab[selected] .tab-background::before,
+    :root:not(:-moz-lwtheme) .tabbrowser-tab[selected] .tab-background::after
+    {
+        fill: color-mix(in srgb, var(--toolbar-bgcolor), white 15%) !important;
+    }
+
+    /* ---------- Tab media icons ---------- */
+
+    :root:not(:-moz-lwtheme) .tab-icon-overlay:not([crashed]):is([pinned], [sharing]):not(:hover, :active),
+    :root:not(:-moz-lwtheme) .tab-icon-overlay:not([pinned], [sharing], [crashed]):not(:hover, :active)
+    {
+        background-color: color-mix(in srgb, var(--tab-media-icon-overlay-background), white 15%) !important;
+    }
+}
+
+/* ---------- Tab media icons ---------- */
+
+.tab-secondary-label
+{
+    margin-block: 4px -4px !important;
+}
+
+}
+
+/* ---------------------------------------- Windows 10 ---------------------------------------- */
+
+@media (-moz-os-version: windows-win10)
+{
+    @media not (prefers-contrast)
+    {
+        @media (-moz-windows-accent-color-in-titlebar)
+        {
+            :root:is(:not(:-moz-lwtheme),[lwt-default-theme-in-dark-mode]) #toolbar-menubar,
+            :root:is(:not(:-moz-lwtheme),[lwt-default-theme-in-dark-mode]) #TabsToolbar
+            {
+                background: -moz-accent-color !important;
+            }
+
+            :root:is(:not(:-moz-lwtheme),[lwt-default-theme-in-dark-mode]) #titlebar
+            {
+                color: -moz-accent-color-foreground !important;
+            }
+        }
+
+        .titlebar-buttonbox-container
+        {
+            -moz-box-align: start !important;
+        }
+
+        .titlebar-button:not(.titlebar-close):hover
+        {
+            background-color: var(--toolbarbutton-hover-background) !important;
+        }
+
+        .titlebar-button:not(.titlebar-close):hover:active
+        {
+            background-color: var(--toolbarbutton-active-background) !important;
+        }
+    }
+}
+
+/* ---------------------------------------- Windows 7 ---------------------------------------- */
+
+@media (-moz-os-version: windows-win7)
+{
+    @media (-moz-windows-compositor)
+    {
+        :root:not(:-moz-lwtheme) #toolbar-menubar,
+        :root:not(:-moz-lwtheme) #TabsToolbar
+        {
+            background: color-mix(in srgb, white 50%, transparent) !important;
+        }
+
+        :root:not(:-moz-lwtheme) #toolbar-menubar[autohide][inactive] + #TabsToolbar
+        {
+            background: linear-gradient(transparent, color-mix(in srgb, white 75%, transparent)) !important;
+        }
+
+        :root[lwtheme-mozlightdark]:is(:-moz-lwtheme-darktext,:-moz-lwtheme-brighttext) #TabsToolbar
+        {
+            background: unset !important;
+        }
+
+        :root:-moz-lwtheme #TabsToolbar
+        {
+            color: unset !important;
+        }
+    }
+
+    @media (-moz-windows-compositor: 0)
+    {
+        :root[lwtheme-mozlightdark] #TabsToolbar
+        {
+            background: unset !important;
+        }
+    }
+}
+
+@supports -moz-bool-pref("Style.Photon-Tabs") or
+          -moz-bool-pref("Style.WaveFox-Tabs") or
+          -moz-bool-pref("Style.Australis-Tabs") or
+          -moz-bool-pref("Style.NeoChrome-Tabs") or
+          -moz-bool-pref("Style.ExChrome-Tabs") or
+          -moz-bool-pref("Style.NeoEdge-Tabs")
+{
+    /* ---------------------------------------- Tabs ---------------------------------------- */
+    .tabbrowser-tab
+    {
+        padding-inline: 0 !important;
+    }
+
+    .tab-background
+    {
+        margin-block: 0 !important;
+        border-radius: 0 !important;
+    }
+
+    /* -------------------- Tab icon indicator -------------------- */
+    .tabbrowser-tab:is([image], [pinned]) .tab-content[attention]:not([selected]),
+    .tab-content[pinned][titlechanged]:not([selected])
+    {
+        background-position: 50% 0% !important;
+    }
+
+    /* ---------------------------------------- Separators ---------------------------------------- */
+    .tabbrowser-tab::before,
+    .tabbrowser-tab::after
+    {
+        transform: none;
+    }
+}
+
+@supports -moz-bool-pref("Style.WaveFox-Tabs") or
+          -moz-bool-pref("Style.Australis-Tabs") or
+          -moz-bool-pref("Style.NeoChrome-Tabs") or
+          -moz-bool-pref("Style.ExChrome-Tabs") or
+          -moz-bool-pref("Style.NeoEdge-Tabs")
+{
+    /* ---------------------------------------- Rounded corners (SVG) ---------------------------------------- */
+    .tab-background::before,
+    .tab-background::after
+    {
+        content: "";
+        position: absolute;
+        width: var(--tab-min-height);
+        height: var(--tab-min-height);
+        bottom: 0%;
+        fill: transparent;
+        z-index: -1;
+        background-repeat: no-repeat;
+        pointer-events: none;
+        -moz-context-properties: fill, stroke;
+    }
+
+    .tab-background::before
+    {
+        right: 100%;
+        background-image: var(--left-side-svg);
+    }
+
+    .tab-background::after
+    {
+        left: 100%;
+        background-image: var(--right-side-svg);
+    }
+
+    .tabbrowser-tab[visuallyselected] .tab-background::before,
+    .tabbrowser-tab[visuallyselected] .tab-background::after
+    {
+        fill: var(--toolbar-bgcolor) !important;
+    }
+
+    .tabbrowser-tab:hover .tab-background::before,
+    .tabbrowser-tab:hover .tab-background::after
+    {
+        fill: var(--toolbarbutton-hover-background);
+    }
+
+    .tabbrowser-tab[multiselected] .tab-background::before,
+    .tabbrowser-tab[multiselected] .tab-background::after
+    {
+        fill: var(--toolbarbutton-active-background);
+    }
+
+    /* ---------------------------------------- Tabs ---------------------------------------- */
+    .tab-background
+    {
+        position: relative !important;
+        margin-inline: calc(var(--tab-min-height) / 2) !important;
+    }
+
+    .tab-close-button
+    {
+        border-radius: 50% !important;
+    }
+
+    /* ---------- Overflow & Pinned ---------- */
+    #tabbrowser-tabs[overflow] .tabbrowser-tab:is([visuallyselected],:hover,[multiselected]):not([pinned]) .tab-content,
+    .tab-content[pinned]
+    {
+        padding: 0 calc(var(--tab-min-height) / 3) !important;
+    }
+}
+
+@supports -moz-bool-pref("Style.WaveFox-Tabs") or
+          -moz-bool-pref("Style.Australis-Tabs") or
+          -moz-bool-pref("Style.ExChrome-Tabs")
+{
+    /* ---------------------------------------- Indents ---------------------------------------- */
+    #tabbrowser-tabs:not([overflow]) .tabbrowser-tab[first-visible-tab],
+    #tabbrowser-tabs[positionpinnedtabs],
+    .tabbrowser-tab[first-visible-unpinned-tab]
+    {
+        margin-left: calc(var(--tab-min-height) / 2) !important;
+    }
+
+    .tabbrowser-tab[last-visible-tab]
+    {
+        margin-right: calc(var(--tab-min-height) / 2) !important;
+    }
+}
+
+@supports -moz-bool-pref("Style.NeoChrome-Tabs") or
+          -moz-bool-pref("Style.NeoEdge-Tabs")
+{
+    /* ---------------------------------------- Indents ---------------------------------------- */
+    #tabbrowser-tabs:not([overflow]) .tabbrowser-tab[first-visible-tab],
+    #tabbrowser-tabs[positionpinnedtabs],
+    .tabbrowser-tab[first-visible-unpinned-tab]
+    {
+        margin-left: calc(var(--tab-min-height) / 3 - 4px) !important;
+    }
+
+    .tabbrowser-tab[last-visible-tab]
+    {
+        margin-right: calc(var(--tab-min-height) / 3 - 4px) !important;
+    }
+}
+
+/* ---------------------------------------- Firefox ---------------------------------------- */
+@supports -moz-bool-pref("Style.Australis-Tabs")
+{
+    :root
+    {
+        --left-side-svg: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path fill='context-fill' d='m 0,100 c 6.6666667,1.3e-4 13.334333,2.5e-4 21.333928,-3.333148 7.999595,-3.3334 17.332928,-10.000194 22.666136,-23.333058 5.333207,-13.332865 6.666541,-33.332865 12,-46.666668 C 61.333523,13.333323 70.666856,6.6667815 78.667261,3.3335158 86.667667,2.4998125e-4 93.333333,1.25e-4 100,0 c 0,0 0,100 0,100 0,0 -100,0 -100,0 z'/><path fill='transparent' stroke='context-stroke' stroke-width='4px' d=''/></svg>");
+        --right-side-svg: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path fill='context-fill' d='m 100,100 c -6.666667,1.3e-4 -13.332333,2.5e-4 -21.332266,-3.332675 C 70.667801,93.334397 61.334468,86.667604 56.000602,73.334333 50.666737,60.001062 49.333404,40.001062 44.000604,26.667666 38.667803,13.334269 29.33447,6.6677275 21.334402,3.3339887 13.334335,2.5001875e-4 6.6666673,1.25e-4 0,0 c 0,0 0,100 0,100 0,0 100,0 100,0 z'/><path fill='transparent' stroke='context-stroke' stroke-width='4px' d=''/></svg>");
+    }
+}
+
+@supports -moz-bool-pref("Style.WaveFox-Tabs")
+{
+    :root
+    {
+        --left-side-svg: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path fill='context-fill' d='m 0,100 c 16.666667,0 33.334333,0 41.667167,-16.666167 C 50,66.667667 50,33.334333 58.333833,16.667167 66.667667,0 83.333333,0 100,0 c 0,0 0,100 0,100 0,0 -100,0 -100,0 z'/><path fill='transparent' stroke='context-stroke' stroke-width='4px' d='M 0,98 C 16.666667,98 33.334333,98 41.667167,82.0005 50,66.001 50,34.001 58.333833,18.0005 66.667667,2 83.333333,2 100,2'/></svg>");
+        --right-side-svg: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path fill='context-fill' d='M 100,100 C 83.333333,100 66.667667,100 58.333833,83.333833 50,66.667667 50,33.334333 41.667167,16.667167 33.334333,0 16.666667,0 0,0 c 0,0 0,100 0,100 0,0 100,0 100,0 z'/><path fill='transparent' stroke='context-stroke' stroke-width='4px' d='M 0,2 C 16.666667,2 33.334333,2 41.667167,18.0005 50,34.001 50,66.001 58.333833,82.0005 66.667667,98 83.333333,98 100,98'/></svg>");
+    }
+}
+
+@supports -moz-bool-pref("Style.NeoChrome-Tabs")
+{
+    :root
+    {
+        --left-side-svg: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path fill='context-fill' d='m 0,100 c 3.3333333,1.3e-4 6.6676666,2.5e-4 15.000996,2.5e-4 8.33333,0 21.666656,-1.2e-4 28.332823,-6.666353 6.666166,-6.66623 6.666174,-19.999564 6.666174,-29.999564 0,-10 -8e-6,-16.666666 -1.1e-5,-26.666666 -4e-6,-10 -4e-6,-23.333334 6.667166,-30.0004378 C 63.334319,1.2500938e-4 76.667659,2.5000938e-4 85.000996,2.4998594e-4 93.334333,2.499625e-4 96.666667,1.25e-4 100,0 c 0,0 0,100 0,100 0,0 -100,0 -100,0 z'/><path fill='transparent' stroke='context-stroke' stroke-width='4px' d=''/></svg>");
+        --right-side-svg: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path fill='context-fill' d='m 100,100 c -3.333333,1.3e-4 -6.665667,2.5e-4 -14.998996,2.5e-4 -8.33333,0 -21.666656,-1.2e-4 -28.333823,-6.666353 -6.667166,-6.66623 -6.667174,-19.999564 -6.667174,-29.999564 0,-10 8e-6,-16.666666 1.1e-5,-26.666666 4e-6,-10 4e-6,-23.333334 -6.666166,-30.0004378 C 36.667681,1.2499063e-4 23.334341,2.4999063e-4 15.001004,2.5001406e-4 6.6676667,2.500375e-4 3.3333333,1.25e-4 0,0 c 0,0 0,100 0,100 0,0 100,0 100,0 z'/><path fill='transparent' stroke='context-stroke' stroke-width='4px' d=''/></svg>");
+    }
+}
+
+@supports -moz-bool-pref("Style.ExChrome-Tabs")
+{
+    :root
+    {
+        --left-side-svg: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path fill='context-fill' d='m 0,100 c 0,0 24.999999,3.8e-4 24.999999,3.8e-4 C 24.999999,100.00038 75,3.75e-4 75,3.75e-4 75,3.75e-4 100,0 100,0 c 0,0 0,100 0,100 0,0 -100,0 -100,0 z'/><path fill='transparent' stroke='context-stroke' stroke-width='4px' d=''/></svg>");
+        --right-side-svg: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path fill='context-fill' d='m 100,100 c 0,0 -25,3.8e-4 -25,3.8e-4 C 75,100.00038 25,3.75e-4 25,3.75e-4 25,3.75e-4 0,0 0,0 c 0,0 0,100 0,100 0,0 100,0 100,0 z'/><path fill='transparent' stroke='context-stroke' stroke-width='4px' d=''/></svg>");
+    }
+}
+
+@supports -moz-bool-pref("Style.NeoEdge-Tabs")
+{
+    :root
+    {
+        --left-side-svg: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path fill='context-fill' d='m 0,100 c 8.3333333,1.3e-4 16.667667,2.5e-4 25.001,2.5e-4 8.333333,0 16.666667,-1.2e-4 20.832833,-4.166353 C 50,91.667667 50,83.334333 50,70.834333 c 0,-12.5 0,-29.166666 0,-41.666666 0,-12.5 0,-20.8333337 4.167167,-25.0004378 C 58.334333,1.25015e-4 66.667667,2.50015e-4 75.001,2.5e-4 83.334333,2.49985e-4 91.666667,1.25e-4 100,0 c 0,0 0,100 0,100 0,0 -100,0 -100,0 z'/><path fill='transparent' stroke='context-stroke' stroke-width='4px' d=''/></svg>");
+        --right-side-svg: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path fill='context-fill' d='m 100,100 c -8.333337,1.3e-4 -16.665674,2.5e-4 -24.999004,2.5e-4 -8.333329,0 -16.666652,-1.2e-4 -20.833813,-4.166353 -4.167161,-4.16623 -4.167161,-12.499564 -4.167161,-24.999564 0,-12.5 0,-29.166666 0,-41.666666 0,-12.5 0,-20.8333337 -4.166169,-25.0004378 C 41.667685,1.24985e-4 33.334348,2.49985e-4 25.001011,2.5e-4 16.667674,2.50015e-4 8.333337,1.25e-4 0,0 c 0,0 0,100 0,100 0,0 100,0 100,0 z'/><path fill='transparent' stroke='context-stroke' stroke-width='4px' d=''/></svg>");
+    }
+}
+
+}
