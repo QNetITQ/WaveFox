@@ -47,7 +47,14 @@
 * "svg.context-properties.content.enabled" > "True"
 * "layout.css.color-mix.enabled" > "True"
 * If you want compact mode, set "browser.compactmode.show" > "True" and go to "Customize Toolbar"
-7) Restart the browser
+7) By default, the shape of the tabs corresponds to the proton interface. To select a different form of tabs, go to "about:config" and create one of the keys below:
+* Style.Photon-Tabs
+* Style.WaveFox-Tabs
+* Style.Australis-Tabs
+* Style.ExChrome-Tabs
+* Style.NeoChrome-Tabs
+* Style.NeoEdge-Tabs
+8) Restart the browser
 
 ## Tabs (Overflow mode)
 Removed the ability to close tabs with the left mouse button in overflow mode to protect the user from accidental actions. Use the methods below to close tabs:
