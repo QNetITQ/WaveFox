@@ -17,18 +17,22 @@
 * Style is compatible with themes from the repository
 
 ## Screenshots
-#### Compact (Light)
-![7KBRGjs](https://user-images.githubusercontent.com/85301851/131252428-6d49b402-1380-4857-901a-481e73c8fa3d.jpeg)
-#### Compact (Dark)
-![QdY1qHy](https://user-images.githubusercontent.com/85301851/131252437-424ed58d-df61-4e56-a6e0-989055443af0.jpeg)
-#### Normal (Light)
-![Ey9uBqz](https://user-images.githubusercontent.com/85301851/131252443-d0295b17-54b4-4598-8b05-621b77459f76.jpeg)
-#### Normal (Dark)
-![TVRfbMI](https://user-images.githubusercontent.com/85301851/131252452-de7d893a-23bd-4b9d-926f-660050d907cb.jpeg)
-#### Touch (Light)
-![oWaAVDq](https://user-images.githubusercontent.com/85301851/131252461-0d54f7a8-cd9b-4be6-b118-36c47c803e12.jpeg)
-#### Touch (Dark)
-![flwqscM](https://user-images.githubusercontent.com/85301851/131252472-d305f9dc-ca91-4cd4-aa65-a3edeae9b0fd.jpeg)
+### Proton Tabs
+![изображение](https://user-images.githubusercontent.com/85301851/137958256-b6476b63-5c3a-4c26-8d02-b026dcaf3caa.png)
+### Photon Tabs
+![изображение](https://user-images.githubusercontent.com/85301851/137958462-b3498673-e969-40c2-ba7b-d7185037e129.png)
+### WaveFox Tabs
+![изображение](https://user-images.githubusercontent.com/85301851/137959254-65b911a4-86cb-48ec-8505-f95855e67870.png)
+### Australis Tabs
+![изображение](https://user-images.githubusercontent.com/85301851/137958540-db9e43ce-d4d8-4240-9d73-820efb4edfdb.png)
+### ExChrome Tabs
+![изображение](https://user-images.githubusercontent.com/85301851/137958662-c27530d2-a8bf-46d5-902b-09e866d37618.png)
+### NeoChrome Tabs
+![изображение](https://user-images.githubusercontent.com/85301851/137958735-3265a11d-36e5-421b-a5e6-b49360f6fb0f.png)
+### NeoEdge Tabs
+![изображение](https://user-images.githubusercontent.com/85301851/137958818-5eced00a-bf60-479a-bf40-61de6d75c4a8.png)
+
+
 
 ## Installation
 1) Enter "about:profiles" in the address bar and open the root directory folder
