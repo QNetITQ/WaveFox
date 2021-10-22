@@ -1031,7 +1031,7 @@ spacer[part="overflow-end-indicator"]
     }
 }
 
-@supports -moz-bool-pref("Style.NeoChrome-Tabs")
+@supports -moz-bool-pref("Style.Chrome")
 {
     :root
     {
@@ -1040,7 +1040,7 @@ spacer[part="overflow-end-indicator"]
     }
 }
 
-@supports -moz-bool-pref("Style.ExChrome-Tabs")
+@supports -moz-bool-pref("Style.Chrome-Old")
 {
     :root
     {
@@ -1049,7 +1049,7 @@ spacer[part="overflow-end-indicator"]
     }
 }
 
-@supports -moz-bool-pref("Style.NeoEdge-Tabs")
+@supports -moz-bool-pref("Style.Edge")
 {
     :root
     {
