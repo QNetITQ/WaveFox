@@ -27,11 +27,11 @@
 ![изображение](https://user-images.githubusercontent.com/85301851/137959254-65b911a4-86cb-48ec-8505-f95855e67870.png)
 ### Australis Tabs
 ![изображение](https://user-images.githubusercontent.com/85301851/137958540-db9e43ce-d4d8-4240-9d73-820efb4edfdb.png)
-### ExChrome Tabs
+### Old Chrome Tabs
 ![изображение](https://user-images.githubusercontent.com/85301851/137958662-c27530d2-a8bf-46d5-902b-09e866d37618.png)
-### NeoChrome Tabs
+### Chrome Tabs
 ![изображение](https://user-images.githubusercontent.com/85301851/137958735-3265a11d-36e5-421b-a5e6-b49360f6fb0f.png)
-### NeoEdge Tabs
+### Edge Tabs
 ![изображение](https://user-images.githubusercontent.com/85301851/137958818-5eced00a-bf60-479a-bf40-61de6d75c4a8.png)
 
 
@@ -48,12 +48,12 @@
 * "layout.css.color-mix.enabled" > "True"
 * If you want compact mode, set "browser.compactmode.show" > "True" and go to "Customize Toolbar"
 7) By default, the shape of the tabs corresponds to the proton interface. To select a different form of tabs, go to "about:config" and create one of the keys below:
-* Style.Photon-Tabs
-* Style.WaveFox-Tabs
-* Style.Australis-Tabs
-* Style.ExChrome-Tabs
-* Style.NeoChrome-Tabs
-* Style.NeoEdge-Tabs
+* Style.Photon
+* Style.WaveFox
+* Style.Australis
+* Style.Chrome-Old
+* Style.Chrome
+* Style.Edge
 8) Restart the browser
 
 ## Tabs (Overflow mode)
