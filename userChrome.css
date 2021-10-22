@@ -7,7 +7,7 @@
 
 /* ---------------------------------------- Custom settings ---------------------------------------- */
 
-/* -------------------- Compact mode -------------------- */
+/* -------------------- Compact mode -------------------- */ 
 
 :root[uidensity="compact"][lwtheme-mozlightdark]:is(:not(:-moz-lwtheme), :-moz-lwtheme-darktext)
 {
