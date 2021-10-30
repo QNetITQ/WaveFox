@@ -15,7 +15,7 @@
 * Media icons on tabs are always visible
 * Accent color (Windows 11 / Windows 10) 
 * Vibrancy (MacOS)
-* Style is compatible with themes from the repository
+* Style is compatible with themes from the repository (Browser bar can be difficult to see depending on the theme)
 * Support for different forms of tabs 
 
 ## Screenshots
