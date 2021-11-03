@@ -16,7 +16,8 @@
 * Accent color (Windows 11 / Windows 10) 
 * Vibrancy (MacOS)
 * Style is compatible with themes from the repository (Browser bar can be difficult to see depending on the theme)
-* Support for different forms of tabs 
+* Support for different forms of tabs
+* Support for tabs at the bottom 
 
 ## Screenshots
 ![Styles](https://user-images.githubusercontent.com/85301851/139716492-b4ac94d2-8dc8-41ff-acc8-53631cd3befd.png)
@@ -39,6 +40,7 @@
 * Style.Edge
 * Style.Australis
 * Style.Chrome-Old
+Key "Style.Tabs-On-Bottom" moves tabs to the bottom of the browser panel. To work correctly with this mode, you need to activate "browser.tabs.drawInTitlebar" > 0  
 8) Restart the browser
 
 ## Tabs (Overflow mode)
