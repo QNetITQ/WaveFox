@@ -40,7 +40,9 @@
 * Style.Edge
 * Style.Australis
 * Style.Chrome-Old
-Key "Style.Tabs-On-Bottom" moves tabs to the bottom of the browser panel. To work correctly with this mode, you need to activate "browser.tabs.drawInTitlebar" > 0  
+
+Key "Style.Tabs-On-Bottom" moves tabs to the bottom of the browser panel. To work correctly with this mode, you need to activate "browser.tabs.drawInTitlebar" > 0
+
 8) Restart the browser
 
 ## Tabs (Overflow mode)
