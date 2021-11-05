@@ -44,7 +44,7 @@
 
 To move tabs to the bottom of the browser bar, create a key below: 
 * Style.Tabs-On-Bottom
-* browser.tabs.drawInTitlebar > 0
+* browser.tabs.drawInTitlebar > 0 (This key is optional for Linux)
 
 8) Restart the browser
 
