@@ -3,7 +3,7 @@
 ## Supported operating systems
 * Windows 7 and newer
 * Linux 
-* MacOS 11 and newer
+* MacOS 11 and newer (MacOS support temporarily suspended)
 
 ## Features
 * Tabs with a more classic look
@@ -53,3 +53,4 @@ Removed the ability to close tabs with the left mouse button in overflow mode to
 * Through the context menu
 * By clicking on the mouse wheel
 * "browser.tabs.closeTabByDblclick" > "True" in "about:config"
+* The keyboard shortcut Ctrl + W / Command + W closes the current tab 
