@@ -3,7 +3,7 @@
 ## Supported operating systems
 * Windows 7 and newer
 * Linux 
-* MacOS 11 and newer (MacOS support temporarily suspended)
+* MacOS 11 and newer (MacOS support temporarily suspended. This does not mean that the style will not work, it just has not been personally verified by the author)
 
 ## Features
 * Tabs with a more classic look
