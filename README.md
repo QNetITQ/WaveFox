@@ -16,6 +16,7 @@
 * Vibrancy (MacOS)
 * Various forms of tabs are supported
 * Tabs under the bookmarks bar supported
+* Menu icons support (Only the main menu and only native browser icons)
 
 ## Screenshots
 ![Styles](https://user-images.githubusercontent.com/85301851/139716492-b4ac94d2-8dc8-41ff-acc8-53631cd3befd.png)
@@ -28,21 +29,24 @@
 4) Put the file "userChrome.css" in "chrome"
 5) Enter "about:config" in the address bar
 6) Looking for and changing the value of the following keys:
-* "toolkit.legacyUserProfileCustomizations.stylesheets" > "True"
-* "svg.context-properties.content.enabled" > "True"
-* "layout.css.color-mix.enabled" > "True"
+* `toolkit.legacyUserProfileCustomizations.stylesheets` > `True`
+* `svg.context-properties.content.enabled` > `True`
+* `layout.css.color-mix.enabled` > `True`
 * If you want compact mode, set "browser.compactmode.show" > "True" and go to "Customize Toolbar"
 7) By default, the shape of the tabs corresponds to the proton interface. To select a different form of tabs, go to "about:config" and create one of the keys below:
-* Style.Photon > "True"
-* Style.WaveFox > "True"
-* Style.Chrome > "True"
-* Style.Edge > "True"
-* Style.Australis > "True"
-* Style.Chrome-Old > "True"
+* `Style.Photon` > `True`
+* `Style.WaveFox` > `True`
+* `Style.Chrome` > `True`
+* `Style.Edge` > `True`
+* `Style.Australis` > `True`
+* `Style.Chrome-Old` > `True`
 
 To move tabs under the bookmarks bar, create a key below: 
-* Style.Tabs-On-Bottom > "True"
-* browser.tabs.drawInTitlebar > 0 (To display window control buttons on Windows 7/8. Not necessary for other systems)
+* `Style.Tabs-On-Bottom` > `True`
+* `browser.tabs.drawInTitlebar` > '0' (To display window control buttons on Windows 7/8. Not necessary for other systems)
+
+To enable icons in the main menu, create a key below:
+* `Style.Menu-Icons` > `True`
 
 8) Restart the browser
 
