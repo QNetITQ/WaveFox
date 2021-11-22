@@ -32,7 +32,7 @@
 * `toolkit.legacyUserProfileCustomizations.stylesheets` > `True`
 * `svg.context-properties.content.enabled` > `True`
 * `layout.css.color-mix.enabled` > `True`
-* If you want compact mode, set "browser.compactmode.show" > "True" and go to "Customize Toolbar"
+* If you want compact mode, set `browser.compactmode.show` > `True` and go to "Customize Toolbar"
 7) By default, the shape of the tabs corresponds to the proton interface. To select a different form of tabs, go to "about:config" and create one of the keys below:
 * `Style.Photon` > `True`
 * `Style.WaveFox` > `True`
@@ -43,7 +43,7 @@
 
 To move tabs under the bookmarks bar, create a key below: 
 * `Style.Tabs-On-Bottom` > `True`
-* `browser.tabs.drawInTitlebar` > '0' (To display window control buttons on Windows 7/8. Not necessary for other systems)
+* `browser.tabs.drawInTitlebar` > `0` (To display window control buttons on Windows 7/8. Not necessary for other systems)
 
 To enable icons in the main menu, create a key below:
 * `Style.Menu-Icons` > `True`
@@ -54,5 +54,5 @@ To enable icons in the main menu, create a key below:
 Removed the ability to close tabs with the left mouse button in overflow mode to protect the user from accidental actions. Use the methods below to close tabs:
 * Through the context menu
 * By clicking on the mouse wheel
-* "browser.tabs.closeTabByDblclick" > "True" in "about:config"
-* The keyboard shortcut Ctrl + W / Command + W closes the current tab 
+* `browser.tabs.closeTabByDblclick` > `True`
+* `Ctrl + W` / `Command + W` closes the current tab
