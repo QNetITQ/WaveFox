@@ -16,7 +16,7 @@
 * Vibrancy (MacOS)
 * Various forms of tabs are supported
 * Tabs under the bookmarks bar supported
-* Menu icons support (Only the main menu and only native browser icons)
+* Menu icons support (Only the main menu)
 
 ## Screenshots
 ![Styles](https://user-images.githubusercontent.com/85301851/139716492-b4ac94d2-8dc8-41ff-acc8-53631cd3befd.png)
