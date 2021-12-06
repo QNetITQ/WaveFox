@@ -1,0 +1,1557 @@
+@media (-moz-os-version: windows-win10),
+       (-moz-os-version: windows-win8),
+       (-moz-os-version: windows-win7),
+       (-moz-gtk-csd-available),
+       (-moz-mac-big-sur-theme)
+{
+
+/* ---------------------------------------- Custom settings ---------------------------------------- */
+
+/* -------------------- Compact mode -------------------- */
+
+:root[uidensity="compact"]:not([lwtheme-image]):is(:not(:-moz-lwtheme), :-moz-lwtheme-darktext)
+{
+    /* ---------- Shadows (Light theme / Compact mode) ---------- */
+    --primary-shadow-color:         black;
+    --secondary-shadow-color:       black;
+    --primary-shadow-blur:          2px;     /* Even values only */
+    --secondary-shadow-blur:        8px;     /* Even values only */
+    --primary-shadow-saturation:    10%;
+    --secondary-shadow-saturation:  20%;
+}
+
+:root[uidensity="compact"]:not([lwtheme-image]):is([lwt-default-theme-in-dark-mode], :-moz-lwtheme-brighttext)
+{
+    /* ---------- Shadows (Dark theme / Compact mode) ---------- */
+    --primary-shadow-color:         black;
+    --secondary-shadow-color:       black;
+    --primary-shadow-blur:          2px;     /* Even values only */
+    --secondary-shadow-blur:        8px;     /* Even values only */
+    --primary-shadow-saturation:    25%;
+    --secondary-shadow-saturation:  50%;
+}
+
+:root[uidensity="compact"]
+{
+    /* ---------- Drag space (Compact mode) ---------- */
+    --left-side-drag-space:                  40px;
+    --right-side-drag-space:                 40px;
+
+    /* ----- Top tabs (Compact mode) ----- */
+    --top-side-drag-space-windowed:          8px;
+    --top-side-drag-space-maximized:         0px;
+    --top-side-drag-space-menubar-titlebar:  8px;
+    
+    /* ----- Bottom tabs (Compact mode) ----- */
+    --bottom-side-drag-space-windowed:          0px;
+    --bottom-side-drag-space-maximized:         0px;
+    --bottom-side-drag-space-menubar-titlebar:  0px;
+
+    /* ---------- Context menus (Compact mode) ---------- */
+    --browser-context-menu-margin-padding:        4px;
+    --win11-win10-context-menu-margin-padding:    4px;
+
+    /* ---------- Tabs (Compact mode) ---------- */
+    --separators-color-saturation:           50%;
+    --first-separator-saturation:            50%;
+}
+
+/* -------------------- Normal mode -------------------- */
+
+:root:not([lwtheme-image]):is(:not(:-moz-lwtheme), :-moz-lwtheme-darktext)
+{
+    /* ---------- Shadows (Light theme / Normal mode) ---------- */
+    --primary-shadow-color:         black;
+    --secondary-shadow-color:       black;
+    --primary-shadow-blur:          2px;     /* Even values only */
+    --secondary-shadow-blur:        8px;     /* Even values only */
+    --primary-shadow-saturation:    10%;
+    --secondary-shadow-saturation:  20%;
+}
+
+:root:not([lwtheme-image]):is([lwt-default-theme-in-dark-mode], :-moz-lwtheme-brighttext)
+{
+    /* ---------- Shadows (Dark theme / Normal mode) ---------- */
+    --primary-shadow-color:         black;
+    --secondary-shadow-color:       black;
+    --primary-shadow-blur:          2px;     /* Even values only */
+    --secondary-shadow-blur:        8px;     /* Even values only */
+    --primary-shadow-saturation:    25%;
+    --secondary-shadow-saturation:  50%;
+}
+
+:root
+{
+    /* ---------- Drag space (Normal mode) ---------- */
+    --left-side-drag-space:                  40px;
+    --right-side-drag-space:                 40px;
+
+    /* ----- Top tabs (Normal mode) ----- */
+    --top-side-drag-space-windowed:          8px;
+    --top-side-drag-space-maximized:         0px;
+    --top-side-drag-space-menubar-titlebar:  8px;
+    
+    /* ----- Bottom tabs (Normal mode) ----- */
+    --bottom-side-drag-space-windowed:          0px;
+    --bottom-side-drag-space-maximized:         0px;
+    --bottom-side-drag-space-menubar-titlebar:  0px;
+
+    /* ---------- Context menus (Normal mode) ---------- */
+    --browser-context-menu-margin-padding:        6px;
+    --win11-win10-context-menu-margin-padding:    6px;
+
+    /* ---------- Tabs (Normal mode) ---------- */
+    --separators-color-saturation:           50%;
+    --first-separator-saturation:            50%;
+}
+
+/* -------------------- Touch mode -------------------- */
+
+:root[uidensity="touch"]:not([lwtheme-image]):is(:not(:-moz-lwtheme), :-moz-lwtheme-darktext)
+{
+    /* ---------- Shadows (Light theme / Touch mode) ---------- */
+    --primary-shadow-color:         black;
+    --secondary-shadow-color:       black;
+    --primary-shadow-blur:          2px;     /* Even values only */
+    --secondary-shadow-blur:        8px;     /* Even values only */
+    --primary-shadow-saturation:    10%;
+    --secondary-shadow-saturation:  20%;
+}
+
+:root[uidensity="touch"]:not([lwtheme-image]):is([lwt-default-theme-in-dark-mode], :-moz-lwtheme-brighttext)
+{
+    /* ---------- Shadows (Dark theme / Touch mode) ---------- */
+    --primary-shadow-color:         black;
+    --secondary-shadow-color:       black;
+    --primary-shadow-blur:          2px;     /* Even values only */
+    --secondary-shadow-blur:        8px;     /* Even values only */
+    --primary-shadow-saturation:    25%;
+    --secondary-shadow-saturation:  50%;
+}
+
+:root[uidensity="touch"]
+{
+    /* ---------- Drag space (Touch mode) ---------- */
+    --left-side-drag-space:                  40px;
+    --right-side-drag-space:                 40px;
+
+    /* ----- Top tabs (Touch mode) ----- */
+    --top-side-drag-space-windowed:          8px;
+    --top-side-drag-space-maximized:         0px;
+    --top-side-drag-space-menubar-titlebar:  8px;
+    
+    /* ----- Bottom tabs (Touch mode) ----- */
+    --bottom-side-drag-space-windowed:          0px;
+    --bottom-side-drag-space-maximized:         0px;
+    --bottom-side-drag-space-menubar-titlebar:  0px;
+
+    /* ---------- Context menus (Touch mode) ---------- */
+    --browser-context-menu-margin-padding:        8px;
+    --win11-win10-context-menu-margin-padding:    8px;
+
+    /* ---------- Tabs (Touch mode) ---------- */
+    --separators-color-saturation:           50%;
+    --first-separator-saturation:            50%;
+}
+
+/* ------------------------------------------------------------------------------------------------- */
+
+/* ---------------------------------------- Shadows ---------------------------------------- */
+
+:root:not([lwtheme-image])
+{
+    --primary-shadow: color-mix(in srgb, var(--primary-shadow-color) var(--primary-shadow-saturation), transparent);
+    --secondary-shadow: color-mix(in srgb, var(--secondary-shadow-color) var(--secondary-shadow-saturation), transparent);
+}
+
+:root:not([lwtheme-image])
+{
+    --outer-shadows: 0 0 var(--primary-shadow-blur) 0 var(--primary-shadow),
+                     0 0 var(--secondary-shadow-blur) 0 var(--secondary-shadow);
+    --tab-bar-inner-shadows: inset 0 calc(-1 * var(--primary-shadow-blur)) var(--primary-shadow-blur) calc(-1 * var(--primary-shadow-blur)) var(--primary-shadow),
+                             inset 0 calc(-1 * var(--secondary-shadow-blur)) var(--secondary-shadow-blur) calc(-1 * var(--secondary-shadow-blur)) var(--secondary-shadow);
+    --special-outer-shadows: drop-shadow(0 0 calc(var(--primary-shadow-blur) / 2) var(--primary-shadow))
+                             drop-shadow(0 0 calc(var(--secondary-shadow-blur) / 2) var(--secondary-shadow));
+}
+
+/* ---------------------------------------- Unneeded styles ---------------------------------------- */
+
+:root
+{
+    --tab-selected-bgcolor: unset !important;
+    --lwt-selected-tab-background-color: unset !important;
+    --tabs-navbar-shadow-size: 0 !important;
+}
+
+/* ---------------------------------------- Density ---------------------------------------- */
+
+:root[uidensity="compact"]
+{
+    --tab-min-height: 30px !important;
+}
+
+:root[uidensity="touch"]
+{
+    --tab-min-height: 42px !important;
+}
+
+/* ---------------------------------------- Context menus (Not os related) ---------------------------------------- */
+
+:root
+{
+    --arrowpanel-menuitem-margin: 0 var(--browser-context-menu-margin-padding) !important;
+    --arrowpanel-menuitem-padding-block: var(--browser-context-menu-margin-padding) !important;
+    --arrowpanel-menuitem-padding-inline: var(--browser-context-menu-margin-padding) !important;
+    --panel-separator-margin-vertical: var(--browser-context-menu-margin-padding) !important;
+    --panel-separator-margin-horizontal: var(--browser-context-menu-margin-padding) !important;
+    --panel-subview-body-padding: var(--browser-context-menu-margin-padding) 0 !important;
+}
+
+/* ---------------------------------------- Context menus (Os related) ---------------------------------------- */
+
+@media (-moz-os-version: windows-win10)
+{
+    @media (-moz-windows-non-native-menus)
+    {
+        menupopup:not(.in-menulist)
+        {
+            --panel-padding: var(--win11-win10-context-menu-margin-padding) 0 !important;
+        }
+
+        menupopup:not(.in-menulist) :is(menuitem, menu)
+        {
+            padding-block: var(--win11-win10-context-menu-margin-padding) !important;
+        }
+    }
+}
+
+/* ---------------------------------------- Titlebar ---------------------------------------- */
+
+:root:not([lwtheme-image]) #titlebar
+{
+    --toolbarbutton-icon-fill: currentColor;
+    --toolbarbutton-hover-background: color-mix(in srgb, currentColor 10%, transparent) !important;
+    --toolbarbutton-active-background: color-mix(in srgb, currentColor 20%, transparent) !important;
+}
+
+/* ---------------------------------------- Tabs ---------------------------------------- */
+
+.tabbrowser-tab
+{
+    color: inherit !important;
+    --tab-label-mask-size: 2em !important;
+}
+
+.tabbrowser-tab[visuallyselected] .tab-stack
+{
+    color: var(--lwt-tab-text, var(--toolbar-color)) !important;
+}
+
+.tabbrowser-tab[visuallyselected] .tab-background
+{
+    filter: var(--special-outer-shadows);
+}
+
+.tab-background
+{
+    box-shadow: none !important;
+    opacity: 1 !important;
+    border: none !important;
+}
+
+.tabbrowser-tab:hover:not([visuallyselected],[multiselected]) .tab-background
+{
+    background: var(--toolbarbutton-hover-background) !important;
+}
+
+.tabbrowser-tab[multiselected]:not([visuallyselected]) .tab-background
+{
+    background: var(--toolbarbutton-active-background) !important;
+}
+
+.tab-loading-burst
+{
+    display: none !important;
+}
+
+.tab-close-button
+{
+    width: 24px !important;
+    padding: 7px !important;
+}
+
+/* -------------------- Overflow Mode -------------------- */
+    
+#tabbrowser-tabs[overflow] .tabbrowser-tab:is([visuallyselected],:hover,[multiselected]):not([pinned]) .tab-stack
+{
+    justify-content: center !important;
+}
+
+#tabbrowser-tabs[overflow] .tabbrowser-tab:is([visuallyselected],:hover,[multiselected]):not([pinned]) :is(.tab-throbber, .tab-icon-pending, .tab-icon-image, .tab-sharing-icon-overlay, .tab-icon-overlay)
+{
+    margin-right: 0 !important;
+}
+
+#tabbrowser-tabs[overflow] .tabbrowser-tab:is([visuallyselected],:hover,[multiselected]):not([pinned]) :is(.tab-label-container, .tab-close-button)
+{
+    display: none !important;
+}
+
+/* -------------------- Pinned Tabs -------------------- */
+
+#tabbrowser-tabs[overflow] .tabbrowser-tab:is([visuallyselected],:hover,[multiselected]):not([pinned]) .tab-content,
+.tab-content[pinned]
+{
+    padding: 0 calc(var(--tab-min-height) / 2 - var(--inline-tab-padding)) !important;
+}
+
+/* -------------------- Container Indicators -------------------- */
+
+.tab-icon-stack::before
+{
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 2px;
+    top: 18px;
+    background-color: var(--identity-icon-color);
+}
+
+.tab-context-line
+{
+    display: none !important;
+}
+
+/* -------------------- Tab Icon Image -------------------- */
+
+.tab-icon-image:not([src], [pinned], [crashed], [sharing], [pictureinpicture], [busy])
+{
+    display: revert !important;
+}
+
+/* -------------------- Tab Icon Indicator -------------------- */
+
+#TabsToolbar
+{
+    --attention-icon-color: currentColor !important;
+}
+
+.tabbrowser-tab:is([image], [pinned]) .tab-content[attention]:not([selected]),
+.tab-content[pinned][titlechanged]:not([selected])
+{
+    background-position: 50% 4px !important;
+}
+
+/* -------------------- Media Icons -------------------- */
+
+:root
+{
+    --tab-media-icon-overlay-color: var(--lwt-tab-text, var(--toolbar-color));
+    --tab-media-icon-overlay-hover: color-mix(in srgb, currentColor 10%, var(--toolbar-bgcolor));
+    --tab-media-icon-overlay-active: color-mix(in srgb, currentColor 20%, var(--toolbar-bgcolor));
+}
+
+.tab-icon-overlay:not([crashed]):is([pinned], [sharing]):hover,
+.tab-icon-overlay:not([pinned], [sharing], [crashed]):hover
+{
+    stroke: transparent !important;
+    background-color: var(--tab-media-icon-overlay-hover) !important;
+}
+
+.tab-icon-overlay:not([crashed]):is([pinned], [sharing]):active,
+.tab-icon-overlay:not([pinned], [sharing], [crashed]):active
+{
+    stroke: transparent !important;
+    background-color: var(--tab-media-icon-overlay-active) !important;
+}
+
+.tabbrowser-tab:not([visuallyselected]) .tab-icon-overlay:not([crashed]):is([pinned], [sharing]),
+.tabbrowser-tab:not([visuallyselected]) .tab-icon-overlay:not([pinned], [sharing], [crashed])
+{
+    filter: var(--special-outer-shadows);
+}
+
+/* ---------- Pinned Tabs ---------- */
+
+.tab-icon-overlay:not([crashed]):is([pinned], [sharing])
+{
+    stroke: var(--toolbar-bgcolor) !important;
+    background-color: transparent !important;
+    color: var(--tab-media-icon-overlay-color) !important;
+    fill: currentColor !important;
+    top: -6px !important;
+    z-index: 1 !important;
+}
+
+/* ---------- Tabs ---------- */
+
+.tab-icon-stack:not([pinned], [sharing], [crashed]) :is(.tab-icon-image, .tab-icon-overlay)
+{
+    opacity: 1 !important;    
+}
+
+.tab-icon-overlay:not([pinned], [sharing], [crashed])
+{
+    stroke: var(--toolbar-bgcolor) !important;
+    background-color: transparent !important;
+    color: var(--tab-media-icon-overlay-color) !important;
+    fill: currentColor !important;
+    fill-opacity: 1 !important;
+    border-radius: 50% !important;
+    bottom: 6px;
+    left: 6px;
+    z-index: 1 !important;
+}
+
+.tabbrowser-tab:not([pinned]) :is(.tab-throbber, .tab-icon-pending, .tab-icon-image, .tab-sharing-icon-overlay, .tab-icon-overlay)
+{
+    margin-inline-end: var(--inline-tab-padding) !important;
+}
+
+.tab-secondary-label
+{
+    -moz-box-ordinal-group: 0;
+    font-size: xx-small !important;
+}
+
+/* ---------- Picture-In-Picture Mode  ---------- */
+
+.tabbrowser-tab[pictureinpicture] .tab-icon-image
+{
+    opacity: 0 !important;
+}
+    
+.tabbrowser-tab[pictureinpicture] .tab-icon-stack::after
+{
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-image: url("chrome://global/skin/media/picture-in-picture-open.svg");
+    fill: currentColor;
+    -moz-context-properties: fill;
+}
+
+/* ---------------------------------------- Tab Bar ---------------------------------------- */
+
+#TabsToolbar
+{
+    --toolbarbutton-inner-padding: inherit !important;
+    position: relative;
+    clip-path: fill-box;
+}
+
+#TabsToolbar::before
+{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0%;
+    bottom: 0%;
+    z-index: 2;
+    box-shadow: var(--tab-bar-inner-shadows);
+    background-repeat: no-repeat;
+    pointer-events: none;
+}
+
+/* ---------------------------------------- Indents ---------------------------------------- */
+
+/* ---------- Tab Bar ---------- */
+
+.titlebar-spacer[type="pre-tabs"]
+{
+    width: var(--left-side-drag-space) !important;
+}
+
+.titlebar-spacer[type="post-tabs"]
+{
+    width: var(--right-side-drag-space) !important;
+}
+
+:root[sizemode="normal"]
+{
+    --drag-space: var(--top-side-drag-space-windowed);
+}
+
+:root[sizemode="maximized"]
+{
+    --drag-space: var(--top-side-drag-space-maximized);
+}
+
+:root:not([tabsintitlebar]),
+#toolbar-menubar:not([autohide][inactive]) + #TabsToolbar
+{
+    --drag-space: var(--top-side-drag-space-menubar-titlebar);
+}
+
+#TabsToolbar :is(.tabbrowser-tab, .toolbarbutton-1, separator, #personal-bookmarks, #search-container, .accessibility-indicator, .private-browsing-indicator)
+{
+    margin-top: var(--drag-space) !important;
+}
+
+#TabsToolbar-customization-target > :is(toolbarbutton, toolbaritem):first-child,
+#TabsToolbar-customization-target > toolbarpaletteitem:first-child > :is(toolbarbutton, toolbaritem)
+{
+    margin-left: calc(var(--toolbar-start-end-padding) - var(--toolbarbutton-outer-padding)) !important;
+}
+
+#TabsToolbar-customization-target > :is(toolbarbutton, toolbaritem):last-child,
+#TabsToolbar-customization-target > toolbarpaletteitem:last-child > :is(toolbarbutton, toolbaritem),
+#tabs-newtab-button
+{
+    margin-right: calc(var(--toolbar-start-end-padding) - var(--toolbarbutton-outer-padding)) !important;
+}
+
+/* ---------- Shadow DOM ---------- */
+
+#tabbrowser-tabs[overflow]
+{
+    --margin-top: var(--drag-space) !important;
+}
+
+#scrollbutton-up,
+#scrollbutton-down,
+spacer[part="overflow-start-indicator"],
+spacer[part="overflow-end-indicator"]
+{
+    margin-top: var(--margin-top) !important;
+}
+
+/* -------------------- Base Styles / Derived Styles -------------------- */
+
+/* ---------- Proton / Photon ---------- */
+
+@supports not (-moz-bool-pref("Style.WaveFox") or
+               -moz-bool-pref("Style.Australis") or
+               -moz-bool-pref("Style.Chrome") or
+               -moz-bool-pref("Style.Chrome-Old") or
+               -moz-bool-pref("Style.Edge"))
+{
+    /* ---------- Tabs ---------- */
+
+    .tabbrowser-tab[first-visible-unpinned-tab]
+    {
+        margin-left: 0 !important;
+    }
+
+    :root[sizemode="normal"] #tabbrowser-tabs:not([overflow]) .tabbrowser-tab[first-visible-tab],
+    :root[sizemode="normal"] #tabbrowser-tabs[positionpinnedtabs],
+    #tabbrowser-tabs:not([overflow], :first-child) .tabbrowser-tab[first-visible-tab],
+    #tabbrowser-tabs[positionpinnedtabs]:not(:first-child)
+    {
+        margin-left: calc(var(--tab-min-height) / 3) !important;
+    }
+
+    #tabbrowser-tabs:not([overflow]) .tabbrowser-tab[last-visible-tab]
+    {
+        margin-right: calc(var(--tab-min-height) / 3) !important;
+    }
+
+    :root:is([sizemode="maximized"], [sizemode="fullscreen"]) #tabbrowser-tabs:first-child:not([haspinnedtabs], [overflow]) #tabbrowser-arrowscrollbox
+    {
+        margin-left: -1px;
+    }
+}
+
+/* ---------------------------------------- Separators ---------------------------------------- */
+
+.tabbrowser-tab:not([pinned])::before,
+.tabbrowser-tab[last-visible-tab]:not([pinned])::after
+{
+    content: "";
+    display: inherit;
+    position: absolute;
+    width: 1px;
+    background-image: linear-gradient(transparent 25%, currentColor 25%, currentColor 75%, transparent 75%);
+    opacity: var(--separators-color-saturation);
+}
+
+#tabbrowser-tabs:not([overflow])
+    .tabbrowser-tab:is(
+        [selected],
+        [selected] + .tabbrowser-tab,
+        :hover,
+        :hover + .tabbrowser-tab,
+        [multiselected],
+        [multiselected] + .tabbrowser-tab)::before,
+#tabbrowser-tabs:not([overflow])
+    .tabbrowser-tab:is(
+        [selected],
+        :hover,
+        [multiselected])::after
+{
+    opacity: 0;
+}
+
+.tabbrowser-tab::before
+{
+    transform: translateX(-2px);
+}
+
+.tabbrowser-tab::after
+{
+    transform: translateX(2px);
+    margin-left: -1px;
+}
+
+.tabbrowser-tab[first-visible-unpinned-tab]::before
+{
+    opacity: var(--first-separator-saturation);
+}
+
+#tabbrowser-tabs[overflow] .tabbrowser-tab[first-visible-unpinned-tab]::before,
+#tabbrowser-tabs[overflow] .tabbrowser-tab::after
+{
+    opacity: 0;
+}
+
+#tabbrowser-tabs[overflow] .tabbrowser-tab:active::before
+{
+    opacity: 0;
+    transition-delay: 0.25s;
+}
+
+@media (min-resolution: 1.25dppx)
+{
+    .tabbrowser-tab::before,
+    .tabbrowser-tab::after
+    {
+        width: 0.8px !important;
+    }
+}
+
+@media (min-resolution: 1.5dppx)
+{
+    .tabbrowser-tab::before,
+    .tabbrowser-tab::after
+    {
+        width: 0.66px !important;
+    }
+}
+
+@media (min-resolution: 1.75dppx)
+{
+    .tabbrowser-tab::before,
+    .tabbrowser-tab::after
+    {
+        width: 0.57px !important;
+    }
+}
+
+@media (min-resolution: 2dppx)
+{
+    .tabbrowser-tab::before,
+    .tabbrowser-tab::after
+    {
+        width: 0.5px !important;
+    }
+}
+
+/* ---------------------------------------- Linux ---------------------------------------- */
+
+@media (-moz-gtk-csd-available)
+{
+    :root:not(:-moz-lwtheme) .tabbrowser-tab[selected] .tab-background::before,
+    :root:not(:-moz-lwtheme) .tabbrowser-tab[selected] .tab-background::after
+    {
+        fill: color-mix(in srgb, var(--toolbar-bgcolor), white 15%) !important;
+    }
+
+    /* ---------- Tab media icons ---------- */
+
+    :root:not(:-moz-lwtheme) .tab-icon-overlay:not([crashed]):is([pinned], [sharing]):not(:hover, :active),
+    :root:not(:-moz-lwtheme) .tab-icon-overlay:not([pinned], [sharing], [crashed]):not(:hover, :active)
+    {
+        stroke: color-mix(in srgb, var(--toolbar-bgcolor), white 15%) !important;
+    }
+
+    .tab-secondary-label
+    {
+        margin-block: 6px -6px !important;
+    }
+
+    @media (prefers-contrast)
+    {
+        :root:not(:-moz-lwtheme) .tab-background
+        {
+            outline: unset !important;
+        }
+    }
+}
+
+/* ---------------------------------------- MacOS ---------------------------------------- */
+
+@media (-moz-mac-big-sur-theme)
+{
+    :root:not(:-moz-lwtheme) #titlebar
+    {
+        appearance: -moz-mac-vibrant-titlebar-light;
+    }
+
+    :root[lwt-default-theme-in-dark-mode] #titlebar
+    {
+        appearance: -moz-mac-vibrant-titlebar-dark;
+    }
+
+    :root:is(:not(:-moz-lwtheme),[lwt-default-theme-in-dark-mode]) #navigator-toolbox
+    {
+        background-color: transparent !important;
+    }
+
+    /* ---------- Tab media icons ---------- */
+
+    .tab-secondary-label
+    {
+        margin-block: 4px -4px !important;
+    }
+
+    .tab-label
+    {
+        margin-block: 0 !important;
+    }
+}
+
+/* ---------------------------------------- Windows 11 / Windows 10 / Windows 8 / Windows 7 ---------------------------------------- */
+
+@media (-moz-os-version: windows-win10),
+       (-moz-os-version: windows-win8),
+       (-moz-os-version: windows-win7)
+{
+
+@media (prefers-contrast)
+{
+    :root:not(:-moz-lwtheme) .tab-background
+    {
+        outline: unset !important;
+    }
+
+    :root:not(:-moz-lwtheme) .tabbrowser-tab[selected] .tab-background::before,
+    :root:not(:-moz-lwtheme) .tabbrowser-tab[selected] .tab-background::after
+    {
+        fill: color-mix(in srgb, var(--toolbar-bgcolor), white 15%) !important;
+    }
+
+    /* ---------- Tab media icons ---------- */
+
+    :root:not(:-moz-lwtheme) .tab-icon-overlay:not([crashed]):is([pinned], [sharing]):not(:hover, :active),
+    :root:not(:-moz-lwtheme) .tab-icon-overlay:not([pinned], [sharing], [crashed]):not(:hover, :active)
+    {
+        stroke: color-mix(in srgb, var(--toolbar-bgcolor), white 15%) !important;
+    }
+}
+
+/* ---------- Tab media icons ---------- */
+
+.tab-secondary-label
+{
+    margin-block: 4px -4px !important;
+}
+
+}
+
+/* ---------------------------------------- Windows 10 ---------------------------------------- */
+
+@media (-moz-os-version: windows-win10)
+{
+    @media not (prefers-contrast)
+    {
+        @media (-moz-windows-accent-color-in-titlebar)
+        {
+            :root:is(:not(:-moz-lwtheme),[lwt-default-theme-in-dark-mode]) #toolbar-menubar,
+            :root:is(:not(:-moz-lwtheme),[lwt-default-theme-in-dark-mode]) #TabsToolbar
+            {
+                background: -moz-accent-color !important;
+            }
+
+            :root:is(:not(:-moz-lwtheme),[lwt-default-theme-in-dark-mode]) #titlebar
+            {
+                color: -moz-accent-color-foreground !important;
+            }
+        }
+
+        .titlebar-buttonbox-container
+        {
+            -moz-box-align: start !important;
+        }
+
+        .titlebar-button:not(.titlebar-close):hover
+        {
+            background-color: var(--toolbarbutton-hover-background) !important;
+        }
+
+        .titlebar-button:not(.titlebar-close):hover:active
+        {
+            background-color: var(--toolbarbutton-active-background) !important;
+        }
+    }
+}
+
+/* ---------------------------------------- Windows 7 ---------------------------------------- */
+
+@media (-moz-os-version: windows-win7)
+{
+    @media (-moz-windows-compositor)
+    {
+        :root:not(:-moz-lwtheme) #toolbar-menubar,
+        :root:not(:-moz-lwtheme) #TabsToolbar
+        {
+            background: color-mix(in srgb, white 50%, transparent) !important;
+        }
+
+        :root:not(:-moz-lwtheme) #toolbar-menubar[autohide][inactive] + #TabsToolbar
+        {
+            background: linear-gradient(transparent, color-mix(in srgb, white 75%, transparent)) !important;
+        }
+
+        :root:not([lwtheme-image]):is(:-moz-lwtheme-darktext,:-moz-lwtheme-brighttext) #TabsToolbar
+        {
+            background: unset !important;
+        }
+
+        :root:-moz-lwtheme #TabsToolbar
+        {
+            color: unset !important;
+        }
+    }
+
+    @media (-moz-windows-compositor: 0)
+    {
+        :root:not([lwtheme-image]) #TabsToolbar
+        {
+            background: unset !important;
+        }
+    }
+}
+
+/* ---------------------------------------- Derived Styles ---------------------------------------- */
+
+/* -------------------- SVG -------------------- */
+
+@supports -moz-bool-pref("Style.WaveFox")
+{
+    :root
+    {
+        --left-side-svg: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path fill='context-fill' d='m 0,100 c 16.666667,0 33.334333,0 41.667167,-16.666167 C 50,66.667667 50,33.334333 58.333833,16.667167 66.667667,0 83.333333,0 100,0 c 0,0 0,100 0,100 0,0 -100,0 -100,0 z'/></svg>");
+        --right-side-svg: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path fill='context-fill' d='M 100,100 C 83.333333,100 66.667667,100 58.333833,83.333833 50,66.667667 50,33.334333 41.667167,16.667167 33.334333,0 16.666667,0 0,0 c 0,0 0,100 0,100 0,0 100,0 100,0 z'/></svg>");
+    }
+}
+
+@supports -moz-bool-pref("Style.Australis")
+{
+    :root
+    {
+        --left-side-svg: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path fill='context-fill' d='m 0,100 c 8.3333333,0 16.667667,0 24.833823,-4.166656 C 32.99998,91.666687 40.99998,83.333354 45.333304,70.833823 49.666628,58.334292 50.333295,41.667625 54.666638,29.167156 58.99998,16.666687 66.99998,8.3333541 75.167157,4.1666771 83.334333,0 91.666667,0 100,0 c 0,0 0,100 0,100 0,0 -100,0 -100,0 z'/></svg>");
+        --right-side-svg: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path fill='context-fill' d='M 100,100 C 91.666667,100 83.334333,100 75.167656,95.833843 67.000979,91.667687 59.000979,83.334353 54.667177,70.834362 50.333375,58.334372 49.666708,41.667705 45.333844,29.167696 41.000979,16.667687 33.000979,8.3343533 24.834323,4.1671767 16.667667,0 8.3333333,0 0,0 c 0,0 0,100 0,100 0,0 100,0 100,0 z'/></svg>");
+    }
+}
+
+@supports -moz-bool-pref("Style.Chrome-Old")
+{
+    :root
+    {
+        --left-side-svg: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path fill='context-fill' d='m 0,100 c 0,0 30,0 30,0 0,0 40,-100 40,-100 0,0 30,0 30,0 0,0 0,100 0,100 0,0 -100,0 -100,0 z'/></svg>");
+        --right-side-svg: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path fill='context-fill' d='m 100,100 c 0,0 -30,0 -30,0 C 70,100 30,0 30,0 30,0 0,0 0,0 c 0,0 0,100 0,100 0,0 100,0 100,0 z'/></svg>");
+    }
+}
+
+@supports -moz-bool-pref("Style.Chrome") or
+          -moz-bool-pref("Style.Edge")
+{
+    :root
+    {
+        --left-side-svg: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path fill='context-fill' d='m 100,-3.6e-6 c 0,0 9.8e-4,0.390625 -0.02344,1.123047 -0.02441,0.732422 -0.07422,1.806641 -0.171874,3.173828 -0.09766,1.3671877 -0.245118,3.027344 -0.464844,4.9316408 -0.109864,0.9521488 -0.237183,1.9650888 -0.386719,3.0332038 -0.149536,1.068115 -0.320313,2.191406 -0.515625,3.363281 -0.195312,1.171875 -0.414917,2.392822 -0.662109,3.656249 -0.247193,1.263428 -0.520996,2.569336 -0.826172,3.912109 -0.305176,1.342774 -0.642456,2.722901 -1.011719,4.132813 -0.369263,1.409912 -0.771484,2.849609 -1.210938,4.314453 -0.439453,1.464844 -0.915893,2.953369 -1.43164,4.460937 -0.515747,1.507569 -1.071777,3.03418 -1.669922,4.572266 -0.598145,1.538086 -1.237183,3.088135 -1.923828,4.644531 -0.686646,1.556397 -1.419922,3.119141 -2.201172,4.681641 -0.78125,1.5625 -1.612183,3.125244 -2.494141,4.681641 -0.440979,0.778198 -0.894027,1.553741 -1.361328,2.328125 -0.4673,0.774383 -0.947021,1.547363 -1.441406,2.316406 -0.494385,0.769043 -1.003159,1.534698 -1.525391,2.296875 -0.522232,0.762176 -1.058532,1.521606 -1.609375,2.275391 -0.550842,0.753784 -1.11705,1.502227 -1.697265,2.246093 -0.580216,0.743866 -1.174805,1.482422 -1.785156,2.214844 -0.610352,0.732422 -1.235703,1.458282 -1.876954,2.177734 -0.64125,0.719452 -1.29779,1.431763 -1.970703,2.136719 -0.672912,0.704956 -1.363022,1.402863 -2.068359,2.091797 -0.705338,0.688934 -1.42749,1.369629 -2.166016,2.041016 -0.738525,0.671386 -1.493149,1.334015 -2.265625,1.986328 -0.772476,0.652313 -1.56195,1.294067 -2.36914,1.925781 -0.80719,0.631714 -1.631943,1.253693 -2.47461,1.863281 -0.842666,0.609589 -1.703125,1.207031 -2.582031,1.792969 -0.878906,0.585938 -1.775497,1.159943 -2.691406,1.720703 -0.915909,0.560761 -1.851013,1.108521 -2.804688,1.642578 -0.953674,0.534058 -1.925766,1.054718 -2.917968,1.560547 -0.992203,0.505829 -2.003663,0.996582 -3.035157,1.472656 -1.031494,0.476075 -2.084701,0.936066 -3.15625,1.38086 -1.071548,0.444793 -2.163025,0.875122 -3.27539,1.287109 -1.112366,0.411987 -2.244492,0.805939 -3.398438,1.183594 -1.153946,0.377655 -2.329101,0.738281 -3.525391,1.080078 -1.196289,0.341797 -2.414901,0.664337 -3.654296,0.96875 -1.239396,0.304413 -2.499939,0.589966 -3.783204,0.855469 -1.283264,0.265503 -2.588119,0.511261 -3.916015,0.736328 -1.327896,0.225067 -2.679443,0.430176 -4.052735,0.613281 -1.373291,0.183106 -2.768051,0.344757 -4.1875,0.484375 -1.419448,0.139618 -2.861755,0.256958 -4.328124,0.351563 -1.46637,0.0946 -2.95665,0.166778 -4.470703,0.214843 C 3.101181,99.9758 1.5625,100 0,100 h 100 z'/></svg>");
+        --right-side-svg: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path fill='context-fill' d='m 6.501319e-4,-3.6e-6 c 0,0 -9.9049469e-4,0.390625 0.0229458381,1.123047 0.02294582,0.732422 0.07419152,1.806641 0.1717113,3.173828 0.0975198,1.3671877 0.24513797,3.027344 0.46484431,4.9316408 0.10975756,0.9521488 0.23710695,1.9650888 0.38671382,3.0332038 0.1495303,1.068115 0.3204767,2.191406 0.515631,3.363281 0.195422,1.171875 0.4148989,2.392822 0.662102,3.656249 0.2470501,1.263428 0.5209851,2.569336 0.8261647,3.912109 0.3051796,1.342774 0.642445,2.722901 1.0117199,4.132813 0.3694279,1.409912 0.7714771,2.849609 1.210928,4.314453 0.4394509,1.464844 0.9159212,2.953369 1.431667,4.460937 0.5157458,1.507569 1.0717615,3.03418 1.6699213,4.572266 0.5981211,1.538086 1.237163,3.088135 1.9238167,4.644531 0.686654,1.556397 1.419926,3.119141 2.201155,4.681641 0.781267,1.5625 1.612213,3.125244 2.494174,4.681641 0.440981,0.778198 0.894008,1.553741 1.3613,2.328125 0.46733,0.774383 0.947051,1.547363 1.441419,2.316406 0.494367,0.769043 1.003153,1.534698 1.5254,2.296875 0.522209,0.762176 1.05853,1.521606 1.609383,2.275391 0.550814,0.753784 1.117041,1.502227 1.697264,2.246093 0.580186,0.743866 1.174789,1.482422 1.785148,2.214844 0.610359,0.732422 1.23571,1.458282 1.876931,2.177734 0.641259,0.719452 1.297816,1.431763 1.970702,2.136719 0.672925,0.704956 1.363021,1.402863 2.068376,2.091797 0.705355,0.688934 1.427499,1.369629 2.16601,2.041016 0.738512,0.671386 1.493162,1.334015 2.265634,1.986328 0.772471,0.652313 1.56196,1.294067 2.369118,1.925781 0.807197,0.631714 1.631946,1.253693 2.474631,1.863281 0.842648,0.609589 1.703117,1.207031 2.582019,1.792969 0.878902,0.585938 1.77551,1.159943 2.691431,1.720703 0.915883,0.560761 1.851002,1.108521 2.804669,1.642578 0.953667,0.534058 1.925767,1.054718 2.917983,1.560547 0.992178,0.505829 2.003668,0.996582 3.03516,1.472656 1.031492,0.476075 2.084667,0.936066 3.156238,1.38086 1.071532,0.444793 2.163026,0.875122 3.275402,1.287109 1.112338,0.411987 2.244485,0.805939 3.398431,1.183594 1.153945,0.377655 2.329078,0.738281 3.525397,1.080078 1.196281,0.341797 2.414896,0.664337 3.654277,0.96875 1.239419,0.304413 2.499949,0.589966 3.783194,0.855469 1.283284,0.265503 2.588137,0.511261 3.916012,0.736328 1.327914,0.225067 2.679465,0.430176 4.052768,0.613281 1.373272,0.183106 2.768034,0.344757 4.187498,0.484375 1.419431,0.139618 2.861733,0.256958 4.328125,0.351563 1.466352,0.0946 2.956645,0.166778 4.470687,0.214843 C 96.898795,99.9758 98.437507,100 100,100 H 0 Z'/></svg>");
+    }
+}
+
+/* -------------------- WaveFox / Photon / Australis / Chrome / Chrome-Old / Edge -------------------- */
+
+@supports -moz-bool-pref("Style.WaveFox") or
+          -moz-bool-pref("Style.Photon") or
+          -moz-bool-pref("Style.Australis") or
+          -moz-bool-pref("Style.Chrome") or
+          -moz-bool-pref("Style.Chrome-Old") or
+          -moz-bool-pref("Style.Edge")
+{
+    /* ---------- Tabs ---------- */
+
+    .tabbrowser-tab
+    {
+        padding-inline: 0 !important;
+    }
+
+    .tab-background
+    {
+        margin-block: 0 !important;
+        border-radius: 0 !important;
+    }
+
+    /* ---------- Shadow DOM ---------- */
+
+    #tabbrowser-tabs[overflow]
+    {
+        --toolbarbutton-inner-padding: 0 !important;
+    }
+
+    /* ---------- Tab Bar ---------- */
+
+    #TabsToolbar #search-container
+    {
+        padding-block: 0 !important;
+    }
+
+    /* ---------- Tab Icon Indicator ---------- */
+
+    .tabbrowser-tab:is([image], [pinned]) .tab-content[attention]:not([selected]),
+    .tab-content[pinned][titlechanged]:not([selected])
+    {
+        background-position: 50% 0% !important;
+    }
+
+    /* ---------- Indents ---------- */
+
+    .tabbrowser-tab::before,
+    .tabbrowser-tab::after
+    {
+        transform: none;
+    }
+}
+
+/* -------------------- WaveFox / Australis / Chrome / Chrome-Old / Edge -------------------- */
+
+@supports -moz-bool-pref("Style.WaveFox") or
+          -moz-bool-pref("Style.Australis") or
+          -moz-bool-pref("Style.Chrome") or
+          -moz-bool-pref("Style.Chrome-Old") or
+          -moz-bool-pref("Style.Edge")
+{
+    /* ---------- Rounded Corners (SVG) ---------- */
+
+    .tab-background::before,
+    .tab-background::after
+    {
+        content: "";
+        position: absolute;
+        bottom: 0%;
+        fill: transparent;
+        z-index: -1;
+        background-repeat: no-repeat;
+        pointer-events: none;
+        -moz-context-properties: fill;
+    }
+
+    .tab-background::before
+    {
+        right: 100%;
+        background-image: var(--left-side-svg);
+    }
+
+    .tab-background::after
+    {
+        left: 100%;
+        background-image: var(--right-side-svg);
+    }
+
+    .tabbrowser-tab[visuallyselected] .tab-background::before,
+    .tabbrowser-tab[visuallyselected] .tab-background::after
+    {
+        fill: var(--toolbar-bgcolor) !important;
+    }
+
+    .tabbrowser-tab:hover .tab-background::before,
+    .tabbrowser-tab:hover .tab-background::after
+    {
+        fill: var(--toolbarbutton-hover-background);
+    }
+
+    .tabbrowser-tab[multiselected] .tab-background::before,
+    .tabbrowser-tab[multiselected] .tab-background::after
+    {
+        fill: var(--toolbarbutton-active-background);
+    }
+
+    /* ---------- Tabs ---------- */
+
+    .tab-background
+    {
+        position: relative !important;
+    }
+
+    #tabbrowser-tabs:not([overflow]) .tabbrowser-tab[first-visible-unpinned-tab]
+    {
+        margin-left: 0 !important;
+    }
+
+    /* ---------- Overflow & Pinned ---------- */
+
+    #tabbrowser-tabs[overflow] .tabbrowser-tab:is([visuallyselected],:hover,[multiselected]):not([pinned]) .tab-content,
+    .tab-content[pinned]
+    {
+        padding: 0 calc(var(--tab-min-height) / 3) !important;
+    }
+}
+
+/* ---------- WaveFox / Australis / Chrome-Old ---------- */
+
+@supports -moz-bool-pref("Style.WaveFox") or
+          -moz-bool-pref("Style.Australis") or
+          -moz-bool-pref("Style.Chrome-Old")
+{
+    /* ---------- Rounded Corners (SVG) ---------- */
+
+    .tab-background::before,
+    .tab-background::after
+    {
+        width: var(--tab-min-height);
+        height: var(--tab-min-height);
+    }
+
+    /* ---------- Tabs ---------- */
+
+    .tab-background
+    {
+        margin-inline: calc(var(--tab-min-height) / 2) !important;
+    }
+
+    .tab-close-button
+    {
+        border-radius: 50% !important;
+    }
+
+    /* ---------- Indents ---------- */
+
+    #tabbrowser-tabs:not([overflow]) .tabbrowser-tab[first-visible-tab],
+    #tabbrowser-tabs[positionpinnedtabs],
+    .tabbrowser-tab[first-visible-unpinned-tab]
+    {
+        margin-left: calc(var(--tab-min-height) / 2) !important;
+    }
+
+    .tabbrowser-tab[last-visible-tab]
+    {
+        margin-right: calc(var(--tab-min-height) / 2) !important;
+    }
+}
+
+/* -------------------- Chrome -------------------- */
+
+@supports -moz-bool-pref("Style.Chrome")
+{
+    /* ---------- Rounded Corners (SVG) ---------- */
+
+    .tab-background::before,
+    .tab-background::after
+    {
+        width: 8px;
+        height: 8px;
+    }
+
+    /* ---------- Tabs ---------- */
+
+    .tab-background
+    {
+        border-radius: 8px 8px 0 0 !important;
+    }
+
+    /* ---------- Indents ---------- */
+
+    #tabbrowser-tabs:not([overflow]) .tabbrowser-tab[first-visible-tab],
+    #tabbrowser-tabs[positionpinnedtabs],
+    .tabbrowser-tab[first-visible-unpinned-tab]
+    {
+        margin-left: 8px !important;
+    }
+
+    .tabbrowser-tab[last-visible-tab]
+    {
+        margin-right: 8px !important;
+    }
+}
+
+/* -------------------- Edge -------------------- */
+
+@supports -moz-bool-pref("Style.Edge")
+{
+    /* ---------- Rounded Corners (SVG) ---------- */
+
+    .tab-background::before,
+    .tab-background::after
+    {
+        width: 4px;
+        height: 4px;
+    }
+
+    /* ---------- Tabs ---------- */
+
+    .tab-background
+    {
+        border-radius: 4px 4px 0 0 !important;
+    }
+
+    /* ---------- Indents ---------- */
+
+    #tabbrowser-tabs:not([overflow]) .tabbrowser-tab[first-visible-tab],
+    #tabbrowser-tabs[positionpinnedtabs],
+    .tabbrowser-tab[first-visible-unpinned-tab]
+    {
+        margin-left: 4px !important;
+    }
+
+    .tabbrowser-tab[last-visible-tab]
+    {
+        margin-right: 4px !important;
+    }
+}
+
+/* ---------------------------------------- Tabs On Bottom ---------------------------------------- */
+
+@supports -moz-bool-pref("Style.Tabs-On-Bottom")
+{
+    /* ---------- Titlebar ---------- */
+
+    #titlebar
+    {
+        -moz-box-ordinal-group: 2;
+    }
+
+    #navigator-toolbox > #titlebar > #toolbar-menubar
+    {
+        background-color: var(--toolbar-bgcolor) !important;
+        background-image: var(--toolbar-bgimage) !important;
+        background-clip: padding-box !important;
+        color: var(--toolbar-color) !important;
+        appearance: none !important;
+    }
+
+    /* ---------- Tab Bar ---------- */
+    
+    #TabsToolbar :is(.tabbrowser-tab, .toolbarbutton-1, separator, #personal-bookmarks, #search-container, .accessibility-indicator, .private-browsing-indicator)
+    {
+        margin-top: 0 !important;
+        margin-bottom: var(--drag-space) !important;
+    }
+    
+    #TabsToolbar::before
+    {
+        transform: rotateX(180deg);
+    }
+
+    .toolbar-items
+    {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+    
+    /* ---------- Shadow DOM ---------- */
+
+    #tabbrowser-tabs[overflow]
+    {
+        --margin-top: 0 !important;
+        --margin-bottom: var(--drag-space) !important;
+    }
+
+    #scrollbutton-up,
+    #scrollbutton-down,
+    spacer[part="overflow-start-indicator"],
+    spacer[part="overflow-end-indicator"]
+    {
+        margin-top: var(--margin-top) !important;
+        margin-bottom: var(--margin-bottom) !important;
+    }
+
+    /* -------------------- Indents -------------------- */
+
+    /* ---------- Tab Bar ---------- */
+
+    :root[sizemode="normal"]
+    {
+        --drag-space: var(--bottom-side-drag-space-windowed);
+    }
+
+    :root[sizemode="maximized"]
+    {
+        --drag-space: var(--bottom-side-drag-space-maximized);
+    }
+
+    :root:not([tabsintitlebar]),
+    #toolbar-menubar:not([autohide][inactive]) + #TabsToolbar
+    {
+        --drag-space: var(--bottom-side-drag-space-menubar-titlebar);
+    }
+
+    /* ---------- Windows 11 / Windows 10 / Windows 8 / Windows 7 ---------- */
+
+    @media (-moz-os-version: windows-win10),
+           (-moz-os-version: windows-win8),
+           (-moz-os-version: windows-win7)
+    {
+        /* ---------- Titlebar ---------- */
+        #titlebar
+        {
+            appearance: none !important;
+        }
+    
+        /* ---------- Nav Bar ---------- */
+        :root[tabsintitlebar][sizemode="maximized"] #nav-bar
+        {
+            margin-top: 8px !important;
+        }
+    }
+
+    /* -------------------- WaveFox / Australis / Chrome / Chrome-Old / Edge -------------------- */
+
+    @supports -moz-bool-pref("Style.WaveFox") or
+              -moz-bool-pref("Style.Australis") or
+              -moz-bool-pref("Style.Chrome") or
+              -moz-bool-pref("Style.Chrome-Old") or
+              -moz-bool-pref("Style.Edge")
+    {
+        /* ---------- Rounded Corners (SVG) ---------- */
+
+        .tab-background::before,
+        .tab-background::after
+        {
+            top: 0%;
+            transform: rotateX(180deg);
+        }
+
+        /* ---------- Chrome ---------- */
+
+        @supports -moz-bool-pref("Style.Chrome")
+        {
+            /* ---------- Tabs ---------- */
+
+            .tab-background
+            {
+                border-radius: 0 0 8px 8px !important;
+            }
+        }
+
+        /* ---------- Edge ---------- */
+
+        @supports -moz-bool-pref("Style.Edge")
+        {
+            /* ---------- Tabs ---------- */
+
+            .tab-background
+            {
+                border-radius: 0 0 4px 4px !important;
+            }
+        }
+    }
+
+    /* ---------- Windows 7 ---------- */
+    
+    @media (-moz-os-version: windows-win7)
+    {
+        @media (-moz-windows-compositor)
+        {
+            :root:not(:-moz-lwtheme) #navigator-toolbox > #titlebar > #TabsToolbar
+            {
+                background: linear-gradient(color-mix(in srgb, white 75%, transparent), transparent) !important;
+            }
+        }
+    }
+}
+
+/* ---------------------------------------- Menu Icons ---------------------------------------- */
+
+/* ---------- Regular Icons ---------- */
+
+@supports -moz-bool-pref("Style.Menu-Icons-Regular")
+{
+    :root
+    {
+        --tab-new-page: url("./icons/tab_desktop_new_page_20_regular.svg");
+        --window: url("./icons/window_20_regular.svg");
+        --window-inprivate-account: url("./icons/window_inprivate_account_20_regular.svg");
+        --star-line-horizontal: url("./icons/star_line_horizontal_3_20_regular.svg");
+        --star-add: url("./icons/star_add_20_regular.svg");
+        --star: url("./icons/star_20_filled.svg");
+        --history: url("./icons/history_20_regular.svg");
+        --arrow-download: url("./icons/arrow_download_20_regular.svg");
+        --key: url("./icons/key_20_regular.svg");
+        --puzzle-piece: url("./icons/puzzle_piece_20_regular.svg");
+        --print: url("./icons/print_20_regular.svg");
+        --save-edit: url("./icons/save_edit_20_regular.svg");
+        --document-search: url("./icons/document_search_20_regular.svg");
+        --settings: url("./icons/settings_20_regular.svg");
+        --question-circle: url("./icons/question_circle_20_regular.svg");
+        --color: url("./icons/color_20_regular.svg");
+        --window-dev-tools: url("./icons/window_dev_tools_20_regular.svg");
+        --person-feedback: url("./icons/person_feedback_20_regular.svg");
+        --warning: url("./icons/warning_20_regular.svg");
+    }
+}
+
+/* ---------- Filled Icons ---------- */
+
+@supports -moz-bool-pref("Style.Menu-Icons-Filled")
+{
+    :root
+    {
+        --tab-new-page: url("./icons/tab_desktop_new_page_20_filled.svg");
+        --window: url("./icons/window_20_filled.svg");
+        --window-inprivate-account: url("./icons/window_inprivate_account_20_filled.svg");
+        --star-line-horizontal: url("./icons/star_line_horizontal_3_20_filled.svg");
+        --star-add: url("./icons/star_add_20_filled.svg");
+        --star: url("./icons/star_20_filled.svg");
+        --history: url("./icons/history_20_filled.svg");
+        --arrow-download: url("./icons/arrow_download_20_filled.svg");
+        --key: url("./icons/key_20_filled.svg");
+        --puzzle-piece: url("./icons/puzzle_piece_20_filled.svg");
+        --print: url("./icons/print_20_filled.svg");
+        --save-edit: url("./icons/save_edit_20_filled.svg");
+        --document-search: url("./icons/document_search_20_filled.svg");
+        --settings: url("./icons/settings_20_filled.svg");
+        --question-circle: url("./icons/question_circle_20_filled.svg");
+        --color: url("./icons/color_20_filled.svg");
+        --window-dev-tools: url("./icons/window_dev_tools_20_filled.svg");
+        --person-feedback: url("./icons/person_feedback_20_filled.svg");
+        --warning: url("./icons/warning_20_filled.svg");
+    }
+}
+
+/* ---------- Native Browser Menus ---------- */
+
+@supports -moz-bool-pref("Style.Menu-Icons-Regular") or
+          -moz-bool-pref("Style.Menu-Icons-Filled")
+{
+    :is(
+
+        /* ----- Main Menu ----- */
+
+        #appMenu-new-tab-button2,
+        #appMenu-new-window-button2,
+        #appMenu-new-private-window-button2,
+        #appMenu-bookmarks-button,
+        #appMenu-history-button,
+        #appMenu-downloads-button,
+        #appMenu-passwords-button,
+        #appMenu-extensions-themes-button,
+        #appMenu-print-button2,
+        #appMenu-save-file-button2,
+        #appMenu-find-button2,
+        #appMenu-settings-button,
+        #appMenu-help-button2,
+
+        /* ----- Main Menu (Submenus) ----- */
+
+        #appmenu-moreTools-button,
+        #appmenu-developer-tools-view > toolbarbutton:nth-child(1),
+
+        #appMenu_menu_openHelp,
+        #appMenu_feedbackPage,
+        #appMenu_menu_HelpPopup_reportPhishingtoolmenu,
+
+        /* ----- Bookmark Menu ----- */
+
+        #panelMenuBookmarkThisPage,
+        #panelMenu_showAllBookmarks,
+        #BMB_bookmarksShowAllTop,
+        #BMB_bookmarksShowAll,
+
+        /* ----- History Menu ----- */
+
+        #PanelUI-historyMore,
+
+        /* ----- Library Menu ----- */
+
+        #appMenu-library-bookmarks-button,
+        #appMenu-library-history-button,
+        #appMenu-library-downloads-button,
+
+        /* ----- Downloads Menu ----- */
+
+        #downloadsHistory,
+
+        /* ----- Developer Menu ----- */
+
+        #PanelUI-developer-tools-view > toolbarbutton:nth-child(1),
+
+        /* ----- Sidebar Menu ----- */
+
+        #sidebar-switcher-bookmarks,
+        #sidebar-switcher-history
+
+    )::before
+    {
+        content: "";
+        display: block;
+        position: relative;
+        width: 20px;
+        height: 20px;
+        background-size: 20px;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-block: -2px;
+        margin-right: 8px;
+        fill: currentColor;
+        -moz-context-properties: fill;
+    }
+
+    /* ----- Main Menu ----- */
+    
+    #appMenu-new-tab-button2::before
+    {
+        background-image: var(--tab-new-page);
+    }
+    
+    #appMenu-new-window-button2::before
+    {
+        background-image: var(--window);
+    }
+    
+    #appMenu-new-private-window-button2::before
+    {
+        background-image: var(--window-inprivate-account);
+    }
+    
+    #appMenu-bookmarks-button::before
+    {
+        background-image: var(--star-line-horizontal);
+    }
+    
+    #appMenu-history-button::before
+    {
+        background-image: var(--history);
+    }
+    
+    #appMenu-downloads-button::before
+    {
+        background-image: var(--arrow-download);
+    }
+    
+    #appMenu-passwords-button::before
+    {
+        background-image: var(--key);
+    }
+    
+    #appMenu-extensions-themes-button::before
+    {
+        background-image: var(--puzzle-piece);
+    }
+
+    #appMenu-print-button2::before
+    {
+        background-image: var(--print);
+    }
+
+    #appMenu-save-file-button2::before
+    {
+        background-image: var(--save-edit);
+    }
+
+    #appMenu-find-button2::before
+    {
+        background-image: var(--document-search);
+    }
+
+    #appMenu-settings-button::before
+    {
+        background-image: var(--settings);
+    }
+
+    #appMenu-help-button2::before
+    {
+        background-image: var(--question-circle);
+    }
+
+    /* ----- Main Menu (Submenus) ----- */
+
+    #appmenu-moreTools-button::before
+    {
+        background-image: var(--color);
+    }
+
+    #appmenu-developer-tools-view > toolbarbutton:nth-child(1)::before
+    {
+        background-image: var(--window-dev-tools);
+    }
+
+    #appMenu_menu_openHelp::before
+    {
+        background-image: var(--question-circle);
+    }
+
+    #appMenu_feedbackPage::before
+    {
+        background-image: var(--person-feedback);
+    }
+
+    #appMenu_menu_HelpPopup_reportPhishingtoolmenu::before
+    {
+        background-image: var(--warning);
+    }
+
+    /* ----- Bookmark Menu ----- */
+
+    #panelMenuBookmarkThisPage::before
+    {
+        background-image: var(--star-add);
+    }
+
+    #panelMenuBookmarkThisPage[starred]::before
+    {
+        background-image: var(--star);
+        fill: var(--toolbar-field-icon-fill-attention) !important;
+    }
+
+    :is(#panelMenu_showAllBookmarks, #BMB_bookmarksShowAllTop, #BMB_bookmarksShowAll)::before
+    {
+        background-image: var(--star-line-horizontal);
+    }
+
+    /* ----- History Menu ----- */
+
+    #PanelUI-historyMore::before
+    {
+        background-image: var(--history);
+    }
+
+    /* ----- Library Menu ----- */
+
+    #appMenu-library-bookmarks-button::before
+    {
+        background-image: var(--star-line-horizontal);
+    }
+
+    #appMenu-library-history-button::before
+    {
+        background-image: var(--history);
+    }
+
+    #appMenu-library-downloads-button::before
+    {
+        background-image: var(--arrow-download);
+    }
+
+    /* ----- Downloads Menu ----- */
+
+    #downloadsHistory::before
+    {
+        background-image: var(--arrow-download);
+    }
+
+    /* ----- Developer Menu ----- */
+
+    #PanelUI-developer-tools-view > toolbarbutton:nth-child(1)::before
+    {
+        background-image: var(--window-dev-tools);
+    }
+
+    /* ----- Sidebar Menu ----- */
+
+    #sidebar-switcher-bookmarks::before
+    {
+        background-image: var(--star-line-horizontal);
+    }
+
+    #sidebar-switcher-history::before
+    {
+        background-image: var(--history);
+    }
+}
+
+}
