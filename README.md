@@ -23,17 +23,12 @@
 ![изображение](https://user-images.githubusercontent.com/85301851/140235546-78f58809-33f5-44f6-9d1d-4467c30da597.png)
 
 ## Installation
-1) Enter "about:profiles" in the address bar and open the root directory folder
-2) Create a folder "chrome"
-3) Download the "userChrome.css" file
-4) Put the file "userChrome.css" in "chrome"
-5) Enter "about:config" in the address bar
-6) Looking for and changing the value of the following keys:
+1) Open your profile folder and add the downloaded folder inside
+2) Go to the `about:config` and switch the keys below:
 * `toolkit.legacyUserProfileCustomizations.stylesheets` > `True`
 * `svg.context-properties.content.enabled` > `True`
 * `layout.css.color-mix.enabled` > `True`
-* If you want compact mode, set `browser.compactmode.show` > `True` and go to "Customize Toolbar"
-7) By default, the shape of the tabs corresponds to the proton interface. To select a different form of tabs, go to "about:config" and create one of the keys below:
+3) To enable an alternative form of tabs, go to `about:config` and create one of the keys below:
 * `Style.Photon` > `True`
 * `Style.WaveFox` > `True`
 * `Style.Chrome` > `True`
