@@ -16,7 +16,7 @@
 * Vibrancy (MacOS)
 * Various forms of tabs are supported
 * Tabs under the bookmarks bar supported
-* Menu icons support (Only the main menu)
+* Menu icons support (Only native browser context menus)
 
 ## Screenshots
 ![Styles](https://user-images.githubusercontent.com/85301851/139716492-b4ac94d2-8dc8-41ff-acc8-53631cd3befd.png)
@@ -45,8 +45,9 @@ To move tabs under the bookmarks bar, create a key below:
 * `Style.Tabs-On-Bottom` > `True`
 * `browser.tabs.drawInTitlebar` > `0` (To display window control buttons on Windows 7/8. Not necessary for other systems)
 
-To enable icons in the main menu, create a key below:
-* `Style.Menu-Icons` > `True`
+There are 2 kinds of icons available. To enable icons, create one of the keys below:
+* `Style.Menu-Icons-Regular` > `True`
+* `Style.Menu-Icons-Filled` > `True`
 
 8) Restart the browser
 
