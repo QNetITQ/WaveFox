@@ -28,6 +28,7 @@
 * `toolkit.legacyUserProfileCustomizations.stylesheets` > `True`
 * `svg.context-properties.content.enabled` > `True`
 * `layout.css.color-mix.enabled` > `True`
+
 To enable an alternative form of tabs, go to `about:config` and create one of the keys below:
 * `Style.Photon` > `True`
 * `Style.WaveFox` > `True`
@@ -36,11 +37,12 @@ To enable an alternative form of tabs, go to `about:config` and create one of th
 * `Style.Australis` > `True`
 * `Style.Chrome-Old` > `True`
 
+
 To move tabs under the bookmarks bar, create a key below: 
 * `Style.Tabs-On-Bottom` > `True`
 * `browser.tabs.drawInTitlebar` > `0` (To display window control buttons on Windows 7/8. Not necessary for other systems)
 
-There are 2 kinds of icons available. To enable icons, create one of the keys below:
+To enable icons, create one of the keys below:
 * `Style.Menu-Icons-Regular` > `True`
 * `Style.Menu-Icons-Filled` > `True`
 
