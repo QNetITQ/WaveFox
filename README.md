@@ -8,9 +8,9 @@
 ## Features
 * All themes supported (Tabs can be difficult to distinguish with some themes from the repository)
 * All interface densities supported
-* You can control the size of the drag space for each density in the "Custom Settings" section
-* You can control the size of the context menus for each density in the "Custom Settings" section
-* You can control the size and color of the shadows for each density in the "Custom Settings" section (Tab bar only)
+* You can control the size of the drag space in the "Custom Settings" section
+* You can control the size of the context menus in the "Custom Settings" section
+* You can control the size and color of the shadows in the "Custom Settings" section (Tab bar only)
 * Media icons on tabs are always visible
 * Accent color (Windows 11 / Windows 10) 
 * Vibrancy (MacOS)
@@ -28,7 +28,7 @@
 * `toolkit.legacyUserProfileCustomizations.stylesheets` > `True`
 * `svg.context-properties.content.enabled` > `True`
 * `layout.css.color-mix.enabled` > `True`
-3) To enable an alternative form of tabs, go to `about:config` and create one of the keys below:
+To enable an alternative form of tabs, go to `about:config` and create one of the keys below:
 * `Style.Photon` > `True`
 * `Style.WaveFox` > `True`
 * `Style.Chrome` > `True`
@@ -43,8 +43,6 @@ To move tabs under the bookmarks bar, create a key below:
 There are 2 kinds of icons available. To enable icons, create one of the keys below:
 * `Style.Menu-Icons-Regular` > `True`
 * `Style.Menu-Icons-Filled` > `True`
-
-8) Restart the browser
 
 ## Tabs (Overflow mode)
 Removed the ability to close tabs with the left mouse button in overflow mode to protect the user from accidental actions. Use the methods below to close tabs:
