@@ -40,7 +40,7 @@ To enable an alternative form of tabs, go to `about:config` and create one of th
 
 To move tabs under the bookmarks bar, create a key below: 
 * `Style.Tabs-On-Bottom` > `True`
-* `browser.tabs.drawInTitlebar` > `0` (To display window control buttons on Windows 7/8. Not necessary for other systems)
+* `browser.tabs.drawInTitlebar` > `0` or `browser.tabs.inTitlebar` > `1` (To display window control buttons on Windows 7/8. Not necessary for other systems)
 
 To enable icons, create one of the keys below:
 * `Style.Menu-Icons-Regular` > `True`
