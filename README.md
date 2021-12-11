@@ -16,15 +16,16 @@
 * Vibrancy (MacOS)
 * Various forms of tabs are supported
 * Tabs under the bookmarks bar supported
-* Menu icons support (Only native browser context menus)
+* Menu icons support (Not all icons are active on MacOS)
 
 ## Screenshots
 ![Styles](https://user-images.githubusercontent.com/85301851/139716492-b4ac94d2-8dc8-41ff-acc8-53631cd3befd.png)
 ![изображение](https://user-images.githubusercontent.com/85301851/140235546-78f58809-33f5-44f6-9d1d-4467c30da597.png)
 
 ## Installation
-1) Download the `chrome` folder and put it in the root folder (also known as the user profile folder) 
-2) Go to the `about:config` and switch the keys below:
+Download the `chrome` folder and put it in the root folder (also known as the user profile folder)
+
+Go to the `about:config` and switch the keys below:
 * `toolkit.legacyUserProfileCustomizations.stylesheets` > `True`
 * `svg.context-properties.content.enabled` > `True`
 * `layout.css.color-mix.enabled` > `True`
@@ -40,7 +41,7 @@ To enable an alternative form of tabs, go to `about:config` and create one of th
 
 To move tabs under the bookmarks bar, create a key below: 
 * `Style.Tabs-On-Bottom` > `True`
-* `browser.tabs.drawInTitlebar` > `0` or `browser.tabs.inTitlebar` > `1` (To display window control buttons on Windows 7/8. Not necessary for other systems)
+* `browser.tabs.drawInTitlebar` > `0` or `browser.tabs.inTitlebar` > `0` (To display window control buttons on Windows 7/8. Not necessary for other systems)
 
 To enable icons, create one of the keys below:
 * `Style.Menu-Icons-Regular` > `True`
