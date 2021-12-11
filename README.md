@@ -23,9 +23,8 @@
 ![изображение](https://user-images.githubusercontent.com/85301851/140235546-78f58809-33f5-44f6-9d1d-4467c30da597.png)
 
 ## Installation
-Download the `chrome` folder and put it in the root folder (also known as the user profile folder)
-
-Go to the `about:config` and switch the keys below:
+1. Download the `chrome` folder and put it in the root folder (also known as the user profile folder)
+2. Go to the `about:config` and switch the keys below:
 * `toolkit.legacyUserProfileCustomizations.stylesheets` > `True`
 * `svg.context-properties.content.enabled` > `True`
 * `layout.css.color-mix.enabled` > `True`
