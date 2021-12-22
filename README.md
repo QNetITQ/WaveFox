@@ -1,9 +1,12 @@
 # *WaveFox*
 
 ## Supported operating systems
-* Windows 7 and newer
-* Linux 
-* MacOS 11 and newer (MacOS support temporarily suspended. This does not mean that the style will not work, it just has not been personally verified by the author)
+* Windows 10 and newer (Full support)
+* Linux (Full support)
+* MacOS 11 and newer (Temporarily suspended)
+* Windows 7/8 (Partial support)
+
+Partial support means that all system-specific lines of code, except important ones, are removed. Important lines of code will not be updated in the future. Code lines shared between supported and unsupported systems will continue to be updated. The author will no longer check the style under these operating systems personally. 
 
 ## Features
 * All themes supported (Tabs can be difficult to distinguish with some themes from the repository)
