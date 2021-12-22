@@ -1,0 +1,17 @@
+@media (-moz-os-version: windows-win8)
+{
+    /* Menu Icons (System Menus) */
+    :root
+    {
+        --align-menu-icons: 0 -22px 0 2px;
+    }
+
+    @supports -moz-bool-pref("Style.Win8-Custom-TitleBar")
+    {
+        /* System Theme */
+        :root:not(:-moz-lwtheme) :is(#toolbar-menubar, #TabsToolbar)
+        {
+            color: white !important;
+        }
+    }
+}
