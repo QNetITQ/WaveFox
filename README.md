@@ -49,6 +49,12 @@ To enable icons, create one of the keys below:
 * `Style.Menu-Icons-Regular` > `True`
 * `Style.Menu-Icons-Filled` > `True`
 
+Windows 7 and Windows 8 follow the native title bar by default for compatibility with future updates. You can activate a custom title bar. On windows 7 and 8, it paints fonts white on the system theme. On windows 7 additionally disables the gradient.
+
+To activate a custom title bar, create one of the keys below depending on the system you are using: 
+* `Style.Win7-Custom-TitleBar` > `True`
+* `Style.Win8-Custom-TitleBar` > `True`
+
 ## Tabs (Overflow mode)
 Removed the ability to close tabs with the left mouse button in overflow mode to protect the user from accidental actions. Use the methods below to close tabs:
 * Through the context menu
