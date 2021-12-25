@@ -1,22 +1,26 @@
 @media (-moz-os-version: windows-win7)
 {
-    /* Menu Icons (System Menus) */
-    :root
+    @supports -moz-bool-pref("Style.Menu-Icons-Regular") or
+              -moz-bool-pref("Style.Menu-Icons-Filled")
     {
-        --align-menu-icons: 0 -22px 0 2px;
+        /* Menu Icons (System Menus) */
+        :root
+        {
+            --align-menu-icons: 0 -22px 0 2px;
+        }
     }
-
+    
     @supports -moz-bool-pref("Style.Win7-Custom-TitleBar")
     {
         /* System Theme */
-        :root:not(:-moz-lwtheme) :is(#toolbar-menubar, #TabsToolbar)
+        :root:not(:-moz-lwtheme) .titlebar-color
         {
             background-image: none !important;
             color: white !important;
         }
 
         /* Light Theme / Dark Theme */
-        :root:-moz-lwtheme :is(#toolbar-menubar, #TabsToolbar)
+        :root:-moz-lwtheme .titlebar-color
         {
             background-image: none !important;
             color: inherit !important;
