@@ -18,7 +18,6 @@ Partial support means that all system-specific lines of code, except important o
 * Accent color (Windows 11 / Windows 10) 
 * Vibrancy (MacOS)
 * Various forms of tabs are supported
-* Tabs under the bookmarks bar supported
 * Menu icons support (Not all icons are active on MacOS)
 
 ## Screenshots
@@ -39,11 +38,6 @@ To enable an alternative form of tabs, go to `about:config` and create one of th
 * `Style.Edge` > `True`
 * `Style.Australis` > `True`
 * `Style.Chrome-Old` > `True`
-
-
-To move tabs under the bookmarks bar, create a key below: 
-* `Style.Tabs-On-Bottom` > `True`
-* `browser.tabs.drawInTitlebar` > `0` or `browser.tabs.inTitlebar` > `0` (To display window control buttons on Windows 7/8. Not necessary for other systems)
 
 To enable icons, create one of the keys below:
 * `Style.Menu-Icons-Regular` > `True`
