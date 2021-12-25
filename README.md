@@ -22,7 +22,6 @@ Partial support means that all system-specific lines of code, except important o
 
 ## Screenshots
 ![Styles](https://user-images.githubusercontent.com/85301851/139716492-b4ac94d2-8dc8-41ff-acc8-53631cd3befd.png)
-![изображение](https://user-images.githubusercontent.com/85301851/140235546-78f58809-33f5-44f6-9d1d-4467c30da597.png)
 
 ## Installation
 1. Download the `chrome` folder and put it in the root folder (also known as the user profile folder)
