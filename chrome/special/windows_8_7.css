@@ -1,0 +1,12 @@
+@media (-moz-os-version: windows-win8),
+       (-moz-os-version: windows-win7)
+{
+    @supports -moz-bool-pref("Style.Menu-Icons-Regular") or
+              -moz-bool-pref("Style.Menu-Icons-Filled")
+    {
+        :root
+        {
+            --align-menu-icons: 0 -22px 0 2px;
+        }
+    }
+}
