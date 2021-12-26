@@ -1,0 +1,38 @@
+@media (-moz-os-version: windows-win10)
+{
+    @media (-moz-windows-default-theme)
+    {
+        @media (-moz-windows-accent-color-in-titlebar)
+        {
+            :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not(:-moz-window-inactive) .titlebar-color
+            {
+                background-color: -moz-accent-color;
+                color: -moz-accent-color-foreground;
+            }
+        }
+
+        .titlebar-buttonbox-container
+        {
+            -moz-box-align: start !important;
+        }
+
+        .titlebar-button:not(.titlebar-close):hover
+        {
+            background-color: var(--toolbarbutton-hover-background) !important;
+        }
+
+        .titlebar-button:not(.titlebar-close):hover:active
+        {
+            background-color: var(--toolbarbutton-active-background) !important;
+        }
+    }
+
+    @supports -moz-bool-pref("Style.Menu-Icons-Regular") or
+              -moz-bool-pref("Style.Menu-Icons-Filled")
+    {
+        :root
+        {
+            --align-menu-icons: -2px 8px -2px 0;
+        }
+    }
+}
