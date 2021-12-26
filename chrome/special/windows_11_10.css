@@ -4,7 +4,7 @@
     {
         @media (-moz-windows-accent-color-in-titlebar)
         {
-            :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not(:-moz-window-inactive) .titlebar-color
+            :root[tabsintitlebar]:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not(:-moz-window-inactive) .titlebar-color
             {
                 background-color: -moz-accent-color;
                 color: -moz-accent-color-foreground;
