@@ -1,5 +1,6 @@
 @import "special/windows_11_10.css";
 @import "special/windows_8_7.css";
+@import "special/linux.css";
 
 @media (-moz-os-version: windows-win10),
        (-moz-os-version: windows-win8),
@@ -314,7 +315,6 @@
 
 .tab-secondary-label
 {
-    -moz-box-ordinal-group: 0;
     font-size: xx-small !important;
 }
 
@@ -557,22 +557,6 @@ spacer[part="overflow-end-indicator"]
     }
 }
 
-/* ---------------------------------------- Linux ---------------------------------------- */
-
-@media (-moz-gtk-csd-available)
-{
-    :root:not(:-moz-lwtheme) .tabbrowser-tab[selected] .tab-background::before,
-    :root:not(:-moz-lwtheme) .tabbrowser-tab[selected] .tab-background::after
-    {
-        fill: color-mix(in srgb, var(--toolbar-bgcolor), white 15%) !important;
-    }
-
-    .tab-secondary-label
-    {
-        margin-block: 6px -6px !important;
-    }
-}
-
 /* ---------------------------------------- MacOS ---------------------------------------- */
 
 @media (-moz-mac-big-sur-theme)
@@ -591,16 +575,6 @@ spacer[part="overflow-end-indicator"]
     {
         background-color: transparent !important;
     }
-
-    .tab-secondary-label
-    {
-        margin-block: 4px -4px !important;
-    }
-
-    .tab-label
-    {
-        margin-block: 0 !important;
-    }
 }
 
 /* ---------------------------------------- Windows 11 / Windows 10 / Windows 8 / Windows 7 ---------------------------------------- */
@@ -617,11 +591,6 @@ spacer[part="overflow-end-indicator"]
     {
         fill: color-mix(in srgb, var(--toolbar-bgcolor), white 15%) !important;
     }
-}
-
-.tab-secondary-label
-{
-    margin-block: 4px -4px !important;
 }
 
 }
