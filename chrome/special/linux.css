@@ -1,0 +1,21 @@
+@media (-moz-gtk-csd-available)
+{
+    :root:not(:-moz-lwtheme) .tabbrowser-tab[visuallyselected] .tab-background::before,
+    :root:not(:-moz-lwtheme) .tabbrowser-tab[visuallyselected] .tab-background::after
+    {
+        fill: color-mix(in srgb, var(--toolbar-bgcolor), white 15%) !important;
+    }
+
+    @media (prefers-contrast)
+    {
+        :root:not(:-moz-lwtheme)
+        {
+            --primary-shadow-color:         ThreeDShadow;
+            --secondary-shadow-color:       ThreeDShadow;
+            --primary-shadow-blur:          2px;
+            --secondary-shadow-blur:        2px;
+            --primary-shadow-saturation:    100%;
+            --secondary-shadow-saturation:  100%;
+        }
+    }
+}
