@@ -10,6 +10,8 @@
 {
 
 /* ---------------------------------------- Custom settings ---------------------------------------- */
+@media not (prefers-contrast)
+{
 
 :root:not([lwtheme-image]):is(:not(:-moz-lwtheme), :-moz-lwtheme-darktext)
 {
@@ -31,6 +33,8 @@
     --secondary-shadow-blur:        8px;     /* Even values only */
     --primary-shadow-saturation:    25%;
     --secondary-shadow-saturation:  50%;
+}
+
 }
 
 :root
