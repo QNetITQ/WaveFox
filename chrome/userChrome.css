@@ -1707,28 +1707,6 @@ spacer[part="overflow-end-indicator"]
         background-image: var(--save-edit);
     }
 
-    /* ---------- System Specific ---------- */
-
-    /* ----- Linux ----- */
-
-    @media (-moz-gtk-csd-available)
-    {
-        :root
-        {
-            --align-menu-icons: -2px -18px -2px -2px;
-        }
-    }
-
-    /* ----- Mac ----- */
-
-    @media (-moz-mac-big-sur-theme)
-    {
-        :root
-        {
-            --align-menu-icons: 0 0 0 0;
-        }
-    }
-
     }
 
 }
