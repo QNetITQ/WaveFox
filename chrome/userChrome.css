@@ -10,8 +10,6 @@
 {
 
 /* ---------------------------------------- Custom settings ---------------------------------------- */
-@media not (prefers-contrast)
-{
 
 :root:not([lwtheme-image]):is(:not(:-moz-lwtheme), :-moz-lwtheme-darktext)
 {
@@ -33,8 +31,6 @@
     --secondary-shadow-blur:        8px;     /* Even values only */
     --primary-shadow-saturation:    25%;
     --secondary-shadow-saturation:  50%;
-}
-
 }
 
 :root
@@ -579,24 +575,6 @@ spacer[part="overflow-end-indicator"]
     {
         background-color: transparent !important;
     }
-}
-
-/* ---------------------------------------- Windows 11 / Windows 10 / Windows 8 / Windows 7 ---------------------------------------- */
-
-@media (-moz-os-version: windows-win10),
-       (-moz-os-version: windows-win8),
-       (-moz-os-version: windows-win7)
-{
-
-@media (prefers-contrast)
-{
-    :root:not(:-moz-lwtheme) .tabbrowser-tab[selected] .tab-background::before,
-    :root:not(:-moz-lwtheme) .tabbrowser-tab[selected] .tab-background::after
-    {
-        fill: color-mix(in srgb, var(--toolbar-bgcolor), white 15%) !important;
-    }
-}
-
 }
 
 /* ---------------------------------------- Derived Styles ---------------------------------------- */
