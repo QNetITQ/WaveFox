@@ -3,7 +3,7 @@
 ## Supported operating systems
 * Windows 10 and newer (Full support)
 * Linux (Full support)
-* MacOS 11 and newer (Temporarily suspended)
+* MacOS 11 and newer (Partial support)
 * Windows 7/8 (Partial support)
 
 Partial support means that all system-specific lines of code, except important ones, are removed. Important lines of code will not be updated in the future. Code lines shared between supported and unsupported systems will continue to be updated. The author will no longer check the style under these operating systems personally. 
