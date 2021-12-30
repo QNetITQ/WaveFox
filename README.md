@@ -7,7 +7,7 @@
 * Windows 7/8 (Partial support)
 
 #### Partial support
-The style works under these systems, but has not been tested by the author. Visual effects unique to these systems (Aero / Vibration, etc.) are not supported, but will work if Mozilla activates them by default 
+The style works under these systems, but has not been tested by the author. Visual effects unique to these systems (Aero / Vibrancy, etc.) are not supported, but will work if Mozilla activates them by default 
 
 ## Features
 * All themes supported (Tabs can be difficult to distinguish with some themes from the repository)
