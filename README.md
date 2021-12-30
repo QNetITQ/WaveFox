@@ -6,8 +6,14 @@
 * MacOS 11 and newer (Partial support)
 * Windows 7/8 (Partial support)
 
+#### Full support
+The style was tested by the author. All visuals are supported and updated as needed
+
 #### Partial support
-The style works under these systems, but has not been tested by the author. Visual effects unique to these systems (Aero / Vibrancy, etc.) are not supported, but will work if Mozilla activates them by default 
+The style has not been tested by the author. Visual effects unique to these systems (Aero / Vibrancy, etc.) are not supported, but will work if Mozilla activates them by default
+
+#### Unsupported systems
+The style works only with systems from the list of supported. On other systems, the browser will ignore the style to avoid visual bugs and interface glitches 
 
 ## Features
 * All themes supported (Tabs can be difficult to distinguish with some themes from the repository)
