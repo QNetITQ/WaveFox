@@ -13,7 +13,7 @@ The style was tested by the author. All visuals are supported and updated as nee
 The style has not been tested by the author. Visual effects unique to these systems (Aero / Vibrancy, etc.) are not supported, but will work if Mozilla activates them by default
 
 #### Unsupported systems
-The style works only with systems from the list of supported. On other systems, the browser will ignore the style to avoid visual bugs and interface glitches 
+The style works only with systems from the list of supported
 
 ## Features
 * All themes supported (Tabs can be difficult to distinguish with some themes from the repository)
@@ -24,7 +24,7 @@ The style works only with systems from the list of supported. On other systems, 
 * Media icons on tabs are always visible
 * Accent color (Windows 11 / Windows 10)
 * Various forms of tabs are supported
-* Menu icons support (Not all icons are active on MacOS)
+* Menu icons support
 
 ## Screenshots
 ![Styles](https://user-images.githubusercontent.com/85301851/139716492-b4ac94d2-8dc8-41ff-acc8-53631cd3befd.png)
