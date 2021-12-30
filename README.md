@@ -6,7 +6,8 @@
 * MacOS 11 and newer (Partial support)
 * Windows 7/8 (Partial support)
 
-Partial support means that all system-specific lines of code, except important ones, are removed. Important lines of code will not be updated in the future. Code lines shared between supported and unsupported systems will continue to be updated. The author will no longer check the style under these operating systems personally. 
+#### Partial support
+The style works under these systems, but has not been tested by the author. Visual effects unique to these systems (Aero / Vibration, etc.) are not supported, but will work if Mozilla activates them by default 
 
 ## Features
 * All themes supported (Tabs can be difficult to distinguish with some themes from the repository)
@@ -15,8 +16,7 @@ Partial support means that all system-specific lines of code, except important o
 * You can control the size of the context menus in the "Custom Settings" section
 * You can control the size and color of the shadows in the "Custom Settings" section (Tab bar only)
 * Media icons on tabs are always visible
-* Accent color (Windows 11 / Windows 10) 
-* Vibrancy (MacOS)
+* Accent color (Windows 11 / Windows 10)
 * Various forms of tabs are supported
 * Menu icons support (Not all icons are active on MacOS)
 
