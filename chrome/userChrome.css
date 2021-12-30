@@ -557,26 +557,6 @@ spacer[part="overflow-end-indicator"]
     }
 }
 
-/* ---------------------------------------- MacOS ---------------------------------------- */
-
-@media (-moz-mac-big-sur-theme)
-{
-    :root:not(:-moz-lwtheme) #titlebar
-    {
-        appearance: -moz-mac-vibrant-titlebar-light;
-    }
-
-    :root[lwt-default-theme-in-dark-mode] #titlebar
-    {
-        appearance: -moz-mac-vibrant-titlebar-dark;
-    }
-
-    :root:is(:not(:-moz-lwtheme),[lwt-default-theme-in-dark-mode]) #navigator-toolbox
-    {
-        background-color: transparent !important;
-    }
-}
-
 /* ---------------------------------------- Derived Styles ---------------------------------------- */
 
 /* -------------------- SVG -------------------- */
