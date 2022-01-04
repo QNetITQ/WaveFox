@@ -105,12 +105,12 @@
 
 :root[uidensity="compact"]
 {
-    --tab-min-height: 30px !important;
+    --tab-min-height: 28px !important;
 }
 
 :root[uidensity="touch"]
 {
-    --tab-min-height: 42px !important;
+    --tab-min-height: 44px !important;
 }
 
 /* ---------------------------------------- Context menus (Not os related) ---------------------------------------- */
@@ -197,6 +197,7 @@
 {
     width: 24px !important;
     padding: 7px !important;
+    border-radius: 50% !important;
 }
 
 /* -------------------- Overflow Mode -------------------- */
@@ -221,7 +222,7 @@
 #tabbrowser-tabs[overflow] .tabbrowser-tab:is([visuallyselected],:hover,[multiselected]):not([pinned]) .tab-content,
 .tab-content[pinned]
 {
-    padding: 0 calc(var(--tab-min-height) / 2 - var(--inline-tab-padding)) !important;
+    padding: 0 calc(var(--tab-min-height) / 2 - 8px) !important;
 }
 
 /* -------------------- Container Indicators -------------------- */
@@ -449,12 +450,12 @@ spacer[part="overflow-end-indicator"]
     #tabbrowser-tabs:not([overflow], :first-child) .tabbrowser-tab[first-visible-tab],
     #tabbrowser-tabs[positionpinnedtabs]:not(:first-child)
     {
-        margin-left: calc(var(--tab-min-height) / 3) !important;
+        margin-left: calc(var(--tab-min-height) / 4) !important;
     }
 
     #tabbrowser-tabs:not([overflow]) .tabbrowser-tab[last-visible-tab]
     {
-        margin-right: calc(var(--tab-min-height) / 3) !important;
+        margin-right: calc(var(--tab-min-height) / 4) !important;
     }
 
     :root:is([sizemode="maximized"], [sizemode="fullscreen"]) #tabbrowser-tabs:first-child:not([haspinnedtabs], [overflow]) #tabbrowser-arrowscrollbox
@@ -574,8 +575,8 @@ spacer[part="overflow-end-indicator"]
 {
     :root
     {
-        --left-side-svg: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path fill='context-fill' d='m 0,100 c 8.3333333,0 16.667667,0 24.833823,-4.166656 C 32.99998,91.666687 40.99998,83.333354 45.333304,70.833823 49.666628,58.334292 50.333295,41.667625 54.666638,29.167156 58.99998,16.666687 66.99998,8.3333541 75.167157,4.1666771 83.334333,0 91.666667,0 100,0 c 0,0 0,100 0,100 0,0 -100,0 -100,0 z'/></svg>");
-        --right-side-svg: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path fill='context-fill' d='M 100,100 C 91.666667,100 83.334333,100 75.167656,95.833843 67.000979,91.667687 59.000979,83.334353 54.667177,70.834362 50.333375,58.334372 49.666708,41.667705 45.333844,29.167696 41.000979,16.667687 33.000979,8.3343533 24.834323,4.1671767 16.667667,0 8.3333333,0 0,0 c 0,0 0,100 0,100 0,0 100,0 100,0 z'/></svg>");
+        --left-side-svg: url("special/Australis_left_corners_of_tabs_30.svg");
+        --right-side-svg: url("special/Australis_right_corners_of_tabs_30.svg");
     }
 }
 
@@ -583,18 +584,26 @@ spacer[part="overflow-end-indicator"]
 {
     :root
     {
-        --left-side-svg: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path fill='context-fill' d='m 0,100 c 0,0 30,0 30,0 0,0 40,-100 40,-100 0,0 30,0 30,0 0,0 0,100 0,100 0,0 -100,0 -100,0 z'/></svg>");
-        --right-side-svg: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path fill='context-fill' d='m 100,100 c 0,0 -30,0 -30,0 C 70,100 30,0 30,0 30,0 0,0 0,0 c 0,0 0,100 0,100 0,0 100,0 100,0 z'/></svg>");
+        --left-side-svg: url("special/Chrome_legacy_left_corners_of_tabs_36.svg");
+        --right-side-svg: url("special/Chrome_legacy_right_corners_of_tabs_36.svg");
     }
 }
 
-@supports -moz-bool-pref("Style.Chrome") or
-          -moz-bool-pref("Style.Edge")
+@supports -moz-bool-pref("Style.Chrome")
 {
     :root
     {
-        --left-side-svg: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path fill='context-fill' d='m 100,-3.6e-6 c 0,0 9.8e-4,0.390625 -0.02344,1.123047 -0.02441,0.732422 -0.07422,1.806641 -0.171874,3.173828 -0.09766,1.3671877 -0.245118,3.027344 -0.464844,4.9316408 -0.109864,0.9521488 -0.237183,1.9650888 -0.386719,3.0332038 -0.149536,1.068115 -0.320313,2.191406 -0.515625,3.363281 -0.195312,1.171875 -0.414917,2.392822 -0.662109,3.656249 -0.247193,1.263428 -0.520996,2.569336 -0.826172,3.912109 -0.305176,1.342774 -0.642456,2.722901 -1.011719,4.132813 -0.369263,1.409912 -0.771484,2.849609 -1.210938,4.314453 -0.439453,1.464844 -0.915893,2.953369 -1.43164,4.460937 -0.515747,1.507569 -1.071777,3.03418 -1.669922,4.572266 -0.598145,1.538086 -1.237183,3.088135 -1.923828,4.644531 -0.686646,1.556397 -1.419922,3.119141 -2.201172,4.681641 -0.78125,1.5625 -1.612183,3.125244 -2.494141,4.681641 -0.440979,0.778198 -0.894027,1.553741 -1.361328,2.328125 -0.4673,0.774383 -0.947021,1.547363 -1.441406,2.316406 -0.494385,0.769043 -1.003159,1.534698 -1.525391,2.296875 -0.522232,0.762176 -1.058532,1.521606 -1.609375,2.275391 -0.550842,0.753784 -1.11705,1.502227 -1.697265,2.246093 -0.580216,0.743866 -1.174805,1.482422 -1.785156,2.214844 -0.610352,0.732422 -1.235703,1.458282 -1.876954,2.177734 -0.64125,0.719452 -1.29779,1.431763 -1.970703,2.136719 -0.672912,0.704956 -1.363022,1.402863 -2.068359,2.091797 -0.705338,0.688934 -1.42749,1.369629 -2.166016,2.041016 -0.738525,0.671386 -1.493149,1.334015 -2.265625,1.986328 -0.772476,0.652313 -1.56195,1.294067 -2.36914,1.925781 -0.80719,0.631714 -1.631943,1.253693 -2.47461,1.863281 -0.842666,0.609589 -1.703125,1.207031 -2.582031,1.792969 -0.878906,0.585938 -1.775497,1.159943 -2.691406,1.720703 -0.915909,0.560761 -1.851013,1.108521 -2.804688,1.642578 -0.953674,0.534058 -1.925766,1.054718 -2.917968,1.560547 -0.992203,0.505829 -2.003663,0.996582 -3.035157,1.472656 -1.031494,0.476075 -2.084701,0.936066 -3.15625,1.38086 -1.071548,0.444793 -2.163025,0.875122 -3.27539,1.287109 -1.112366,0.411987 -2.244492,0.805939 -3.398438,1.183594 -1.153946,0.377655 -2.329101,0.738281 -3.525391,1.080078 -1.196289,0.341797 -2.414901,0.664337 -3.654296,0.96875 -1.239396,0.304413 -2.499939,0.589966 -3.783204,0.855469 -1.283264,0.265503 -2.588119,0.511261 -3.916015,0.736328 -1.327896,0.225067 -2.679443,0.430176 -4.052735,0.613281 -1.373291,0.183106 -2.768051,0.344757 -4.1875,0.484375 -1.419448,0.139618 -2.861755,0.256958 -4.328124,0.351563 -1.46637,0.0946 -2.95665,0.166778 -4.470703,0.214843 C 3.101181,99.9758 1.5625,100 0,100 h 100 z'/></svg>");
-        --right-side-svg: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path fill='context-fill' d='m 6.501319e-4,-3.6e-6 c 0,0 -9.9049469e-4,0.390625 0.0229458381,1.123047 0.02294582,0.732422 0.07419152,1.806641 0.1717113,3.173828 0.0975198,1.3671877 0.24513797,3.027344 0.46484431,4.9316408 0.10975756,0.9521488 0.23710695,1.9650888 0.38671382,3.0332038 0.1495303,1.068115 0.3204767,2.191406 0.515631,3.363281 0.195422,1.171875 0.4148989,2.392822 0.662102,3.656249 0.2470501,1.263428 0.5209851,2.569336 0.8261647,3.912109 0.3051796,1.342774 0.642445,2.722901 1.0117199,4.132813 0.3694279,1.409912 0.7714771,2.849609 1.210928,4.314453 0.4394509,1.464844 0.9159212,2.953369 1.431667,4.460937 0.5157458,1.507569 1.0717615,3.03418 1.6699213,4.572266 0.5981211,1.538086 1.237163,3.088135 1.9238167,4.644531 0.686654,1.556397 1.419926,3.119141 2.201155,4.681641 0.781267,1.5625 1.612213,3.125244 2.494174,4.681641 0.440981,0.778198 0.894008,1.553741 1.3613,2.328125 0.46733,0.774383 0.947051,1.547363 1.441419,2.316406 0.494367,0.769043 1.003153,1.534698 1.5254,2.296875 0.522209,0.762176 1.05853,1.521606 1.609383,2.275391 0.550814,0.753784 1.117041,1.502227 1.697264,2.246093 0.580186,0.743866 1.174789,1.482422 1.785148,2.214844 0.610359,0.732422 1.23571,1.458282 1.876931,2.177734 0.641259,0.719452 1.297816,1.431763 1.970702,2.136719 0.672925,0.704956 1.363021,1.402863 2.068376,2.091797 0.705355,0.688934 1.427499,1.369629 2.16601,2.041016 0.738512,0.671386 1.493162,1.334015 2.265634,1.986328 0.772471,0.652313 1.56196,1.294067 2.369118,1.925781 0.807197,0.631714 1.631946,1.253693 2.474631,1.863281 0.842648,0.609589 1.703117,1.207031 2.582019,1.792969 0.878902,0.585938 1.77551,1.159943 2.691431,1.720703 0.915883,0.560761 1.851002,1.108521 2.804669,1.642578 0.953667,0.534058 1.925767,1.054718 2.917983,1.560547 0.992178,0.505829 2.003668,0.996582 3.03516,1.472656 1.031492,0.476075 2.084667,0.936066 3.156238,1.38086 1.071532,0.444793 2.163026,0.875122 3.275402,1.287109 1.112338,0.411987 2.244485,0.805939 3.398431,1.183594 1.153945,0.377655 2.329078,0.738281 3.525397,1.080078 1.196281,0.341797 2.414896,0.664337 3.654277,0.96875 1.239419,0.304413 2.499949,0.589966 3.783194,0.855469 1.283284,0.265503 2.588137,0.511261 3.916012,0.736328 1.327914,0.225067 2.679465,0.430176 4.052768,0.613281 1.373272,0.183106 2.768034,0.344757 4.187498,0.484375 1.419431,0.139618 2.861733,0.256958 4.328125,0.351563 1.466352,0.0946 2.956645,0.166778 4.470687,0.214843 C 96.898795,99.9758 98.437507,100 100,100 H 0 Z'/></svg>");
+        --left-side-svg: url("special/Chrome_left_corners_of_tabs_36.svg");
+        --right-side-svg: url("special/Chrome_right_corners_of_tabs_36.svg");
+    }
+}
+
+@supports -moz-bool-pref("Style.Edge")
+{
+    :root
+    {
+        --left-side-svg: url("special/Edge_left_corners_of_tabs_32.svg");
+        --right-side-svg: url("special/Edge_right_corners_of_tabs_32.svg");
     }
 }
 
@@ -721,7 +730,7 @@ spacer[part="overflow-end-indicator"]
     #tabbrowser-tabs[overflow] .tabbrowser-tab:is([visuallyselected],:hover,[multiselected]):not([pinned]) .tab-content,
     .tab-content[pinned]
     {
-        padding: 0 calc(var(--tab-min-height) / 3) !important;
+        padding: 0 calc(var(--tab-min-height) / 2 - 4px) !important;
     }
 }
 
@@ -748,11 +757,6 @@ spacer[part="overflow-end-indicator"]
         margin-inline: calc(var(--tab-min-height) / 2) !important;
     }
 
-    .tab-close-button
-    {
-        border-radius: 50% !important;
-    }
-
     /* ---------- Indents ---------- */
 
     #tabbrowser-tabs:not([overflow]) .tabbrowser-tab[first-visible-tab],
@@ -768,24 +772,26 @@ spacer[part="overflow-end-indicator"]
     }
 }
 
-/* -------------------- Chrome -------------------- */
+/* -------------------- Chrome / Edge -------------------- */
 
-@supports -moz-bool-pref("Style.Chrome")
+@supports -moz-bool-pref("Style.Chrome") or
+          -moz-bool-pref("Style.Edge")
 {
     /* ---------- Rounded Corners (SVG) ---------- */
 
     .tab-background::before,
     .tab-background::after
     {
-        width: 8px;
-        height: 8px;
+        width: calc(var(--tab-min-height) / 2);
+        height: var(--tab-min-height);
+        background-size: calc(var(--tab-min-height) / 2);
     }
 
     /* ---------- Tabs ---------- */
 
     .tab-background
     {
-        border-radius: 8px 8px 0 0 !important;
+        margin-inline: calc(var(--tab-min-height) / 4) !important;
     }
 
     /* ---------- Indents ---------- */
@@ -794,47 +800,12 @@ spacer[part="overflow-end-indicator"]
     #tabbrowser-tabs[positionpinnedtabs],
     .tabbrowser-tab[first-visible-unpinned-tab]
     {
-        margin-left: 8px !important;
+        margin-left: calc(var(--tab-min-height) / 4) !important;
     }
 
     .tabbrowser-tab[last-visible-tab]
     {
-        margin-right: 8px !important;
-    }
-}
-
-/* -------------------- Edge -------------------- */
-
-@supports -moz-bool-pref("Style.Edge")
-{
-    /* ---------- Rounded Corners (SVG) ---------- */
-
-    .tab-background::before,
-    .tab-background::after
-    {
-        width: 4px;
-        height: 4px;
-    }
-
-    /* ---------- Tabs ---------- */
-
-    .tab-background
-    {
-        border-radius: 4px 4px 0 0 !important;
-    }
-
-    /* ---------- Indents ---------- */
-
-    #tabbrowser-tabs:not([overflow]) .tabbrowser-tab[first-visible-tab],
-    #tabbrowser-tabs[positionpinnedtabs],
-    .tabbrowser-tab[first-visible-unpinned-tab]
-    {
-        margin-left: 4px !important;
-    }
-
-    .tabbrowser-tab[last-visible-tab]
-    {
-        margin-right: 4px !important;
+        margin-right: calc(var(--tab-min-height) / 4) !important;
     }
 }
 
