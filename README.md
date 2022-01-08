@@ -16,7 +16,7 @@ The style has not been tested by the author. Visual effects unique to these syst
 The style works only with systems from the list of supported
 
 ## Features
-* All themes supported (Tabs can be difficult to distinguish with some themes from the repository)
+* All themes supported
 * All interface densities supported
 * You can control the size of the drag space in the "Custom Settings" section
 * You can control the size of the context menus in the "Custom Settings" section
