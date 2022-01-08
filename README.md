@@ -36,6 +36,7 @@ The style works only with systems from the list of supported
 * `svg.context-properties.content.enabled` > `True`
 * `layout.css.color-mix.enabled` > `True`
 3. Select the desired shape of the tabs. Сreate one of the keys below:
+* `Style.Proton` > `True`
 * `Style.Photon` > `True`
 * `Style.WaveFox` > `True`
 * `Style.Chrome` > `True`
