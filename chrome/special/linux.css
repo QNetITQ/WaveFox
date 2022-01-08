@@ -1,9 +1,17 @@
 @media (-moz-gtk-csd-available)
 {
-    :root:not(:-moz-lwtheme) .tabbrowser-tab[visuallyselected] .tab-background::before,
-    :root:not(:-moz-lwtheme) .tabbrowser-tab[visuallyselected] .tab-background::after
+    
+    @supports -moz-bool-pref("Style.WaveFox") or
+              -moz-bool-pref("Style.Australis") or
+              -moz-bool-pref("Style.Chrome") or
+              -moz-bool-pref("Style.Chrome-Old") or
+              -moz-bool-pref("Style.Edge")
     {
-        fill: color-mix(in srgb, var(--toolbar-bgcolor), white 15%) !important;
+        :root:not(:-moz-lwtheme) .tabbrowser-tab[visuallyselected] .tab-background::before,
+        :root:not(:-moz-lwtheme) .tabbrowser-tab[visuallyselected] .tab-background::after
+        {
+            fill: color-mix(in srgb, var(--toolbar-bgcolor), white 15%) !important;
+        }
     }
     
     @supports -moz-bool-pref("Style.Menu-Icons-Regular") or
@@ -14,4 +22,5 @@
             --align-menu-icons: -2px -18px -2px -2px;
         }
     }
+
 }
