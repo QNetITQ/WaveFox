@@ -46,7 +46,7 @@ The style works only with systems from the list of supported
 
 If point 3 is not fulfilled, the tabs and everything connected with them will be by default, as the Mozilla intended.
 
-Icons are no longer tied to tabs. They can be activated without having to complete step 3
+Icons are no longer tied to tabs. They can be activated without having to complete step 3. Context menus will be by default
 
 To enable icons, create one of the keys below:
 * `Style.Menu-Icons-Regular` > `True`
