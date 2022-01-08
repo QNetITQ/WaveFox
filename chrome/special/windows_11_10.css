@@ -1,38 +1,55 @@
 @media (-moz-os-version: windows-win10)
 {
-    @media (-moz-windows-default-theme)
+    
+    @supports -moz-bool-pref("Style.Proton") or
+              -moz-bool-pref("Style.Photon") or
+              -moz-bool-pref("Style.WaveFox") or
+              -moz-bool-pref("Style.Australis") or
+              -moz-bool-pref("Style.Chrome") or
+              -moz-bool-pref("Style.Chrome-Old") or
+              -moz-bool-pref("Style.Edge")
     {
-        @media (-moz-windows-accent-color-in-titlebar)
+        @media (-moz-windows-default-theme)
         {
-            :root[tabsintitlebar]:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not(:-moz-window-inactive) .titlebar-color
+            @media (-moz-windows-accent-color-in-titlebar)
             {
-                background-color: -moz-accent-color;
-                color: -moz-accent-color-foreground;
+                :root[tabsintitlebar]:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not(:-moz-window-inactive) .titlebar-color
+                {
+                    background-color: -moz-accent-color;
+                    color: -moz-accent-color-foreground;
+                }
             }
-        }
 
-        .titlebar-buttonbox-container
-        {
-            -moz-box-align: start !important;
-        }
+            .titlebar-buttonbox-container
+            {
+                -moz-box-align: start !important;
+            }
 
-        .titlebar-button:not(.titlebar-close):hover
-        {
-            background-color: var(--toolbarbutton-hover-background) !important;
-        }
+            .titlebar-button:not(.titlebar-close):hover
+            {
+                background-color: var(--toolbarbutton-hover-background) !important;
+            }
 
-        .titlebar-button:not(.titlebar-close):hover:active
-        {
-            background-color: var(--toolbarbutton-active-background) !important;
+            .titlebar-button:not(.titlebar-close):hover:active
+            {
+                background-color: var(--toolbarbutton-active-background) !important;
+            }
         }
     }
     
-    @media (prefers-contrast)
-    {
-        :root:not(:-moz-lwtheme) .tabbrowser-tab[visuallyselected] .tab-background::before,
-        :root:not(:-moz-lwtheme) .tabbrowser-tab[visuallyselected] .tab-background::after
+    @supports -moz-bool-pref("Style.WaveFox") or
+              -moz-bool-pref("Style.Australis") or
+              -moz-bool-pref("Style.Chrome") or
+              -moz-bool-pref("Style.Chrome-Old") or
+              -moz-bool-pref("Style.Edge")
+    {    
+        @media (prefers-contrast)
         {
-            fill: color-mix(in srgb, var(--toolbar-bgcolor), white 15%) !important;
+            :root:not(:-moz-lwtheme) .tabbrowser-tab[visuallyselected] .tab-background::before,
+            :root:not(:-moz-lwtheme) .tabbrowser-tab[visuallyselected] .tab-background::after
+            {
+                fill: color-mix(in srgb, var(--toolbar-bgcolor), white 15%) !important;
+            }
         }
     }
     
@@ -41,7 +58,8 @@
     {
         :root
         {
-            --align-menu-icons: -2px 8px -2px 0;
+            --align-menu-icons: -2px 6px -2px -2px;
         }
     }
+
 }
