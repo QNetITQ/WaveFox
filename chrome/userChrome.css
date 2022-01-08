@@ -1,0 +1,1787 @@
+@import "special/windows_11_10.css";
+@import "special/windows_8_7.css";
+@import "special/linux.css";
+
+@media (-moz-os-version: windows-win10),
+       (-moz-os-version: windows-win8),
+       (-moz-os-version: windows-win7),
+       (-moz-gtk-csd-available),
+       (-moz-mac-big-sur-theme)
+{
+
+@supports -moz-bool-pref("Style.Proton") or
+          -moz-bool-pref("Style.Photon") or
+          -moz-bool-pref("Style.WaveFox") or
+          -moz-bool-pref("Style.Australis") or
+          -moz-bool-pref("Style.Chrome") or
+          -moz-bool-pref("Style.Chrome-Old") or
+          -moz-bool-pref("Style.Edge")
+{
+
+/* ---------------------------------------- Custom settings ---------------------------------------- */
+
+:root:not([lwtheme-image]):is(:not(:-moz-lwtheme), :-moz-lwtheme-darktext)
+{
+    /* ---------- Shadows (Light theme) ---------- */
+    --primary-shadow-color:         black;
+    --secondary-shadow-color:       black;
+    --primary-shadow-blur:          2px;     /* Even values only */
+    --secondary-shadow-blur:        8px;     /* Even values only */
+    --primary-shadow-saturation:    10%;
+    --secondary-shadow-saturation:  20%;
+}
+
+:root:not([lwtheme-image]):is([lwt-default-theme-in-dark-mode], :-moz-lwtheme-brighttext)
+{
+    /* ---------- Shadows (Dark theme) ---------- */
+    --primary-shadow-color:         black;
+    --secondary-shadow-color:       black;
+    --primary-shadow-blur:          2px;     /* Even values only */
+    --secondary-shadow-blur:        8px;     /* Even values only */
+    --primary-shadow-saturation:    25%;
+    --secondary-shadow-saturation:  50%;
+}
+
+:root
+{
+    /* ---------- Drag space ---------- */
+    --left-side-drag-space:                  40px;
+    --right-side-drag-space:                 40px;
+
+    /* ----- Tabs ----- */
+    --top-side-drag-space-windowed:          8px;
+    --top-side-drag-space-maximized:         0px;
+    --top-side-drag-space-menubar-titlebar:  8px;
+
+    /* ---------- Tab separators ---------- */
+    --separators-color-saturation:           50%;
+    --first-separator-saturation:            50%;
+}
+
+/* -------------------- Context Menu -------------------- */
+
+:root[uidensity="compact"]
+{
+    /* ---------- Compact mode ---------- */
+    --browser-context-menu-margin-padding:        4px;
+    --win11-win10-context-menu-margin-padding:    4px;
+}
+
+:root
+{
+    /* ---------- Normal mode ---------- */
+    --browser-context-menu-margin-padding:        6px;
+    --win11-win10-context-menu-margin-padding:    6px;
+}
+
+:root[uidensity="touch"]
+{
+    /* ---------- Touch mode ---------- */
+    --browser-context-menu-margin-padding:        8px;
+    --win11-win10-context-menu-margin-padding:    8px;
+}
+
+/* -------------------- Repository -------------------- */
+
+:root[lwtheme-image]
+{
+    /* ---------- Selected tab indicator ---------- */
+    --tab-indicator-color: var(--toolbarbutton-icon-fill);
+    --tab-indicator-saturation: 100%;
+}
+
+/* ------------------------------------------------------------------------------------------------- */
+
+/* ---------------------------------------- Shadows ---------------------------------------- */
+
+:root:not([lwtheme-image])
+{
+    --primary-shadow: color-mix(in srgb, var(--primary-shadow-color) var(--primary-shadow-saturation), transparent);
+    --secondary-shadow: color-mix(in srgb, var(--secondary-shadow-color) var(--secondary-shadow-saturation), transparent);
+}
+
+:root:not([lwtheme-image])
+{
+    --outer-shadows: 0 0 var(--primary-shadow-blur) 0 var(--primary-shadow),
+                     0 0 var(--secondary-shadow-blur) 0 var(--secondary-shadow);
+    --tab-bar-inner-shadows: inset 0 calc(-1 * var(--primary-shadow-blur)) var(--primary-shadow-blur) calc(-1 * var(--primary-shadow-blur)) var(--primary-shadow),
+                             inset 0 calc(-1 * var(--secondary-shadow-blur)) var(--secondary-shadow-blur) calc(-1 * var(--secondary-shadow-blur)) var(--secondary-shadow);
+    --special-outer-shadows: drop-shadow(0 0 calc(var(--primary-shadow-blur) / 2) var(--primary-shadow))
+                             drop-shadow(0 0 calc(var(--secondary-shadow-blur) / 2) var(--secondary-shadow));
+}
+
+/* ---------------------------------------- Unneeded styles ---------------------------------------- */
+
+:root
+{
+    --tab-selected-bgcolor: unset !important;
+    --lwt-selected-tab-background-color: unset !important;
+    --tabs-navbar-shadow-size: 0 !important;
+}
+
+/* ---------------------------------------- Density ---------------------------------------- */
+
+:root[uidensity="compact"]
+{
+    --tab-min-height: 32px !important;
+}
+
+:root[uidensity="touch"]
+{
+    --tab-min-height: 40px !important;
+}
+
+/* ---------------------------------------- Context menus (Not os related) ---------------------------------------- */
+
+:root
+{
+    --arrowpanel-menuitem-margin: 0 var(--browser-context-menu-margin-padding) !important;
+    --arrowpanel-menuitem-padding-block: var(--browser-context-menu-margin-padding) !important;
+    --arrowpanel-menuitem-padding-inline: var(--browser-context-menu-margin-padding) !important;
+    --panel-separator-margin-vertical: var(--browser-context-menu-margin-padding) !important;
+    --panel-separator-margin-horizontal: var(--browser-context-menu-margin-padding) !important;
+    --panel-subview-body-padding: var(--browser-context-menu-margin-padding) 0 !important;
+}
+
+/* ---------------------------------------- Context menus (Os related) ---------------------------------------- */
+
+@media (-moz-os-version: windows-win10)
+{
+    @media (-moz-windows-non-native-menus)
+    {
+        menupopup:not(.in-menulist)
+        {
+            --panel-padding: var(--win11-win10-context-menu-margin-padding) 0 !important;
+        }
+
+        menupopup:not(.in-menulist) :is(menuitem, menu)
+        {
+            padding-block: var(--win11-win10-context-menu-margin-padding) !important;
+        }
+
+        menupopup[needsgutter] menu:not([icon], .menu-iconic),
+        menupopup[needsgutter] menuitem:not([checked="true"], [icon], .menuitem-iconic)
+        {
+            padding-inline-start: 1em !important;
+        }
+
+        #context-navigation:not([hidden])
+        {
+            padding-bottom: var(--win11-win10-context-menu-margin-padding) !important;
+        }
+    }
+}
+
+/* ---------------------------------------- Titlebar ---------------------------------------- */
+
+:root:not([lwtheme-image]) #titlebar
+{
+    --toolbarbutton-icon-fill: currentColor;
+    --toolbarbutton-hover-background: color-mix(in srgb, currentColor 10%, transparent) !important;
+    --toolbarbutton-active-background: color-mix(in srgb, currentColor 20%, transparent) !important;
+}
+
+/* ---------------------------------------- Tabs ---------------------------------------- */
+
+.tabbrowser-tab
+{
+    color: inherit !important;
+    --tab-label-mask-size: 2em !important;
+}
+
+.tabbrowser-tab[visuallyselected] .tab-stack
+{
+    color: var(--lwt-tab-text, var(--toolbar-color)) !important;
+}
+
+.tabbrowser-tab[visuallyselected] .tab-background
+{
+    filter: var(--special-outer-shadows);
+}
+
+.tab-background
+{
+    position: relative !important;
+    box-shadow: none !important;
+    opacity: 1 !important;
+    border: none !important;
+    outline: none !important;
+}
+
+.tabbrowser-tab:hover:not([visuallyselected],[multiselected]) .tab-background
+{
+    background: var(--toolbarbutton-hover-background) !important;
+}
+
+.tabbrowser-tab[multiselected]:not([visuallyselected]) .tab-background
+{
+    background: var(--toolbarbutton-active-background) !important;
+}
+
+.tab-loading-burst
+{
+    display: none !important;
+}
+
+.tab-close-button
+{
+    width: 24px !important;
+    padding: 7px !important;
+    border-radius: 50% !important;
+}
+
+/* -------------------- Overflow Mode -------------------- */
+    
+#tabbrowser-tabs[overflow] .tabbrowser-tab:is([visuallyselected],:hover,[multiselected]):not([pinned]) .tab-stack
+{
+    justify-content: center !important;
+}
+
+#tabbrowser-tabs[overflow] .tabbrowser-tab:is([visuallyselected],:hover,[multiselected]):not([pinned]) :is(.tab-throbber, .tab-icon-pending, .tab-icon-image, .tab-sharing-icon-overlay, .tab-icon-overlay)
+{
+    margin-right: 0 !important;
+}
+
+#tabbrowser-tabs[overflow] .tabbrowser-tab:is([visuallyselected],:hover,[multiselected]):not([pinned]) :is(.tab-label-container, .tab-close-button)
+{
+    display: none !important;
+}
+
+/* -------------------- Container Indicators -------------------- */
+
+.tab-icon-stack::before
+{
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 2px;
+    top: 18px;
+    background-color: var(--identity-icon-color);
+}
+
+.tab-context-line
+{
+    display: none !important;
+}
+
+/* -------------------- Tab Icon Image -------------------- */
+
+.tab-icon-image:not([src], [pinned], [crashed], [sharing], [pictureinpicture], [busy])
+{
+    display: revert !important;
+}
+
+/* -------------------- Tab Icon Indicators -------------------- */
+
+#TabsToolbar
+{
+    --attention-icon-color: currentColor !important;
+}
+
+.tabbrowser-tab:not([visuallyselected]) .tab-icon-stack[busy] .tab-throbber::before
+{
+    fill: currentColor !important;
+}
+
+.tab-sharing-icon-overlay
+{
+    fill: currentColor !important;
+}
+
+/* -------------------- Media Icons -------------------- */
+
+.tab-icon-overlay:not([crashed]):is([pinned], [sharing]),
+.tab-icon-overlay:not([pinned], [sharing], [crashed])
+{
+    stroke: transparent !important;
+    background-color: transparent !important;
+    border-radius: 50% !important;
+    color: inherit !important;
+    fill: currentColor !important;
+    fill-opacity: 1 !important;
+    z-index: 1 !important;
+}
+
+.tab-icon-overlay:not([crashed]):is([pinned], [sharing])
+{
+    top: -6px !important;
+}
+
+.tab-icon-overlay:not([pinned], [sharing], [crashed])
+{
+    bottom: 6px;
+    left: 6px;
+}
+
+.tab-icon-stack[busy] .tab-icon-overlay
+{
+    display: none !important;
+}
+
+.tab-icon-overlay:not([crashed]):is([pinned], [sharing]):hover,
+.tab-icon-overlay:not([pinned], [sharing], [crashed]):hover
+{
+    background-color: var(--toolbarbutton-hover-background) !important;
+}
+
+.tab-icon-overlay:not([crashed]):is([pinned], [sharing]):active,
+.tab-icon-overlay:not([pinned], [sharing], [crashed]):active
+{
+    background-color: var(--toolbarbutton-active-background) !important;
+}
+
+.tab-icon-stack:not([pinned], [sharing], [crashed]) :is(.tab-icon-image, .tab-icon-overlay)
+{
+    opacity: 1 !important;    
+}
+
+.tabbrowser-tab:not([pinned]) :is(.tab-throbber, .tab-icon-pending, .tab-icon-image, .tab-sharing-icon-overlay, .tab-icon-overlay)
+{
+    margin-inline-end: var(--inline-tab-padding) !important;
+}
+
+.tabbrowser-tab:is([soundplaying], [muted], [activemedia-blocked]) :is(.tab-icon-image, .tab-sharing-icon-overlay)
+{
+    mask-image: url("./special/tab_icon_mask_16.svg");
+}
+
+.tab-secondary-label
+{
+    font-size: xx-small !important;
+}
+
+/* ---------- Picture-In-Picture ---------- */
+
+.tabbrowser-tab[pictureinpicture] .tab-icon-image
+{
+    opacity: 0 !important;
+}
+    
+.tabbrowser-tab[pictureinpicture] .tab-icon-stack::after
+{
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-image: url("chrome://global/skin/media/picture-in-picture-open.svg");
+    fill: currentColor;
+    -moz-context-properties: fill;
+}
+
+.tabbrowser-tab:is([soundplaying], [muted], [activemedia-blocked]) .tab-icon-stack::after
+{
+    mask-image: url("./special/tab_icon_mask_16.svg");
+}
+
+/* ---------------------------------------- Tab Bar ---------------------------------------- */
+
+#TabsToolbar
+{
+    --toolbarbutton-inner-padding: inherit !important;
+    position: relative;
+    clip-path: fill-box;
+}
+
+#TabsToolbar::before
+{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0%;
+    bottom: 0%;
+    z-index: 2;
+    box-shadow: var(--tab-bar-inner-shadows);
+    background-repeat: no-repeat;
+    pointer-events: none;
+}
+
+#TabsToolbar #search-container
+{
+    padding-block: 0 !important;
+}
+
+/* ---------------------------------------- Indents ---------------------------------------- */
+
+/* ---------- Tab Bar ---------- */
+
+.titlebar-spacer[type="pre-tabs"]
+{
+    width: var(--left-side-drag-space) !important;
+}
+
+.titlebar-spacer[type="post-tabs"]
+{
+    width: var(--right-side-drag-space) !important;
+}
+
+:root[sizemode="normal"]
+{
+    --drag-space: var(--top-side-drag-space-windowed);
+}
+
+:root[sizemode="maximized"]
+{
+    --drag-space: var(--top-side-drag-space-maximized);
+}
+
+:root:not([tabsintitlebar]),
+#toolbar-menubar:not([autohide][inactive]) + #TabsToolbar
+{
+    --drag-space: var(--top-side-drag-space-menubar-titlebar);
+}
+
+#TabsToolbar :is(.tabbrowser-tab, .toolbarbutton-1, separator, #personal-bookmarks, #search-container, .accessibility-indicator, .private-browsing-indicator)
+{
+    margin-top: var(--drag-space) !important;
+}
+
+#TabsToolbar-customization-target > :is(toolbarbutton, toolbaritem):first-child,
+#TabsToolbar-customization-target > toolbarpaletteitem:first-child > :is(toolbarbutton, toolbaritem)
+{
+    margin-left: calc(var(--toolbar-start-end-padding) - var(--toolbarbutton-outer-padding)) !important;
+}
+
+#TabsToolbar-customization-target > :is(toolbarbutton, toolbaritem):last-child,
+#TabsToolbar-customization-target > toolbarpaletteitem:last-child > :is(toolbarbutton, toolbaritem),
+#tabs-newtab-button
+{
+    margin-right: calc(var(--toolbar-start-end-padding) - var(--toolbarbutton-outer-padding)) !important;
+}
+
+#tabbrowser-tabs:not([overflow]) .tabbrowser-tab[first-visible-unpinned-tab]
+{
+    margin-left: 0 !important;
+}
+
+/* ---------- Shadow DOM ---------- */
+
+#tabbrowser-tabs[overflow]
+{
+    --margin-top: var(--drag-space) !important;
+    --toolbarbutton-inner-padding: 0 !important;
+}
+
+#scrollbutton-up,
+#scrollbutton-down,
+spacer[part="overflow-start-indicator"],
+spacer[part="overflow-end-indicator"]
+{
+    margin-top: var(--margin-top) !important;
+}
+
+/* ---------------------------------------- Separators ---------------------------------------- */
+
+.tabbrowser-tab:not([pinned])::before,
+.tabbrowser-tab[last-visible-tab]:not([pinned])::after
+{
+    content: "";
+    display: inherit;
+    position: absolute;
+    width: 1px;
+    background-image: linear-gradient(transparent 25%, currentColor 25%, currentColor 75%, transparent 75%);
+    opacity: var(--separators-color-saturation);
+}
+
+#tabbrowser-tabs:not([overflow])
+    .tabbrowser-tab:is(
+        [selected],
+        [selected] + .tabbrowser-tab,
+        :hover,
+        :hover + .tabbrowser-tab,
+        [multiselected],
+        [multiselected] + .tabbrowser-tab)::before,
+#tabbrowser-tabs:not([overflow])
+    .tabbrowser-tab:is(
+        [selected],
+        :hover,
+        [multiselected])::after
+{
+    opacity: 0;
+}
+
+.tabbrowser-tab::after
+{
+    margin-left: -1px;
+}
+
+.tabbrowser-tab[first-visible-unpinned-tab]::before
+{
+    opacity: var(--first-separator-saturation);
+}
+
+#tabbrowser-tabs[overflow] .tabbrowser-tab[first-visible-unpinned-tab]::before,
+#tabbrowser-tabs[overflow] .tabbrowser-tab::after
+{
+    opacity: 0;
+}
+
+#tabbrowser-tabs[overflow] .tabbrowser-tab:active::before
+{
+    opacity: 0;
+    transition-delay: 0.25s;
+}
+
+@media (min-resolution: 1.25dppx)
+{
+    .tabbrowser-tab::before,
+    .tabbrowser-tab::after
+    {
+        width: 0.8px !important;
+    }
+}
+
+@media (min-resolution: 1.5dppx)
+{
+    .tabbrowser-tab::before,
+    .tabbrowser-tab::after
+    {
+        width: 0.66px !important;
+    }
+}
+
+@media (min-resolution: 1.75dppx)
+{
+    .tabbrowser-tab::before,
+    .tabbrowser-tab::after
+    {
+        width: 0.57px !important;
+    }
+}
+
+@media (min-resolution: 2dppx)
+{
+    .tabbrowser-tab::before,
+    .tabbrowser-tab::after
+    {
+        width: 0.5px !important;
+    }
+}
+
+/* ---------------------------------------- Derived Styles ---------------------------------------- */
+
+/* -------------------- SVG -------------------- */
+
+@supports -moz-bool-pref("Style.WaveFox")
+{
+    :root
+    {
+        --left-side-svg: url("special/WaveFox/WaveFox_left_corners_of_tabs_36.svg");
+        --middle-svg: url("special/WaveFox/Middle_part_of_tabs_36.svg");
+        --right-side-svg: url("special/WaveFox/WaveFox_right_corners_of_tabs_36.svg");
+    }
+}
+
+@supports -moz-bool-pref("Style.Australis")
+{
+    :root
+    {
+        --left-side-svg: url("special/Australis/Australis_left_corners_of_tabs_30.svg");
+        --middle-svg: url("special/Australis/Middle_part_of_tabs_30.svg");
+        --right-side-svg: url("special/Australis/Australis_right_corners_of_tabs_30.svg");
+    }
+}
+
+@supports -moz-bool-pref("Style.Chrome-Old")
+{
+    :root
+    {
+        --left-side-svg: url("special/Chrome_legacy/Chrome_legacy_left_corners_of_tabs_36.svg");
+        --middle-svg: url("special/Chrome_legacy/Middle_part_of_tabs_36.svg");
+        --right-side-svg: url("special/Chrome_legacy/Chrome_legacy_right_corners_of_tabs_36.svg");
+    }
+}
+
+@supports -moz-bool-pref("Style.Chrome")
+{
+    :root
+    {
+        --left-side-svg: url("special/Chrome/Chrome_left_corners_of_tabs_36.svg");
+        --middle-svg: url("special/Chrome/Middle_part_of_tabs_36.svg");
+        --right-side-svg: url("special/Chrome/Chrome_right_corners_of_tabs_36.svg");
+    }
+}
+
+@supports -moz-bool-pref("Style.Edge")
+{
+    :root
+    {
+        --left-side-svg: url("special/Edge/Edge_left_corners_of_tabs_32.svg");
+        --middle-svg: url("special/Edge/Middle_part_of_tabs_32.svg");
+        --right-side-svg: url("special/Edge/Edge_right_corners_of_tabs_32.svg");
+    }
+}
+
+/* -------------------- Proton / Photon -------------------- */
+
+@supports -moz-bool-pref("Style.Proton") or
+          -moz-bool-pref("Style.Photon")
+{
+    /* ---------- Overflow & Pinned ---------- */
+
+    #tabbrowser-tabs[overflow] .tabbrowser-tab:is([visuallyselected],:hover,[multiselected]) .tab-content,
+    .tabbrowser-tab[pinned] .tab-content
+    {
+        padding: 0 calc(var(--tab-min-height) / 2 - 8px) !important;
+    }
+
+    :root[tabsintitlebar][sizemode="normal"] #tabbrowser-tabs:not([overflow]) .tabbrowser-tab[first-visible-tab],
+    :root[tabsintitlebar][sizemode="normal"] #tabbrowser-tabs[positionpinnedtabs],
+    #tabbrowser-tabs:not([overflow], :first-child) .tabbrowser-tab[first-visible-tab],
+    #tabbrowser-tabs[positionpinnedtabs]:not(:first-child)
+    {
+        margin-left: calc(var(--tab-min-height) / 4) !important;
+    }
+
+    #tabbrowser-tabs:not([overflow]) .tabbrowser-tab[last-visible-tab]
+    {
+        margin-right: calc(var(--tab-min-height) / 4) !important;
+    }
+
+    :root[tabsintitlebar]:is([sizemode="maximized"], [sizemode="fullscreen"]) #tabbrowser-tabs:first-child:not([haspinnedtabs], [overflow]) #tabbrowser-arrowscrollbox,
+    :root:not([tabsintitlebar]) #tabbrowser-tabs:first-child:not([haspinnedtabs], [overflow]) #tabbrowser-arrowscrollbox
+    {
+        margin-left: -1px;
+    }
+}
+
+/* -------------------- Proton -------------------- */
+
+@supports -moz-bool-pref("Style.Proton")
+{
+    /* ---------- Tab Icon Indicator ---------- */
+
+    .tabbrowser-tab:is([image], [pinned]) .tab-content[attention]:not([selected]),
+    .tab-content[pinned][titlechanged]:not([selected])
+    {
+        background-position: 50% 4px !important;
+    }
+
+    /* ---------- Separators ---------- */
+
+    .tabbrowser-tab::before
+    {
+        transform: translateX(-2px);
+    }
+
+    .tabbrowser-tab::after
+    {
+        transform: translateX(2px);
+    }
+}
+
+/* -------------------- WaveFox / Photon / Australis / Chrome / Chrome-Old / Edge -------------------- */
+
+@supports -moz-bool-pref("Style.WaveFox") or
+          -moz-bool-pref("Style.Photon") or
+          -moz-bool-pref("Style.Australis") or
+          -moz-bool-pref("Style.Chrome") or
+          -moz-bool-pref("Style.Chrome-Old") or
+          -moz-bool-pref("Style.Edge")
+{
+    /* ---------- Tabs ---------- */
+
+    .tabbrowser-tab
+    {
+        padding-inline: 0 !important;
+    }
+
+    .tab-background
+    {
+        margin-block: 0 !important;
+        border-radius: 0 !important;
+    }
+
+    /* ---------- Tab Icon Indicator ---------- */
+
+    .tabbrowser-tab:is([image], [pinned]) .tab-content[attention]:not([selected]),
+    .tab-content[pinned][titlechanged]:not([selected])
+    {
+        background-position: 50% 0% !important;
+    }
+}
+
+/* -------------------- WaveFox / Australis / Chrome / Chrome-Old / Edge -------------------- */
+
+@supports -moz-bool-pref("Style.WaveFox") or
+          -moz-bool-pref("Style.Australis") or
+          -moz-bool-pref("Style.Chrome") or
+          -moz-bool-pref("Style.Chrome-Old") or
+          -moz-bool-pref("Style.Edge")
+{
+    /* ---------- Rounded Corners (SVG) ---------- */
+
+    .tab-background::before,
+    .tab-background::after
+    {
+        content: "";
+        position: absolute;
+        bottom: 0%;
+        fill: transparent;
+        z-index: -1;
+        background-size: contain;
+        background-repeat: no-repeat;
+        pointer-events: none;
+        -moz-context-properties: fill, stroke;
+    }
+
+    .tab-background::before
+    {
+        right: 100%;
+        background-image: var(--left-side-svg);
+    }
+
+    .tab-background::after
+    {
+        left: 100%;
+        background-image: var(--right-side-svg);
+    }
+
+    .tabbrowser-tab[visuallyselected] .tab-background::before,
+    .tabbrowser-tab[visuallyselected] .tab-background::after
+    {
+        fill: var(--toolbar-bgcolor) !important;
+    }
+
+    .tabbrowser-tab:hover .tab-background::before,
+    .tabbrowser-tab:hover .tab-background::after
+    {
+        fill: var(--toolbarbutton-hover-background);
+    }
+
+    .tabbrowser-tab[multiselected] .tab-background::before,
+    .tabbrowser-tab[multiselected] .tab-background::after
+    {
+        fill: var(--toolbarbutton-active-background);
+    }
+
+    /* ---------- Overflow & Pinned ---------- */
+
+    #tabbrowser-tabs[overflow] .tabbrowser-tab:is([visuallyselected],:hover,[multiselected]) .tab-content,
+    .tabbrowser-tab[pinned] .tab-content
+    {
+        padding: 0 calc(var(--tab-min-height) / 2 - 4px) !important;
+    }
+}
+
+/* ---------- WaveFox / Australis / Chrome-Old ---------- */
+
+@supports -moz-bool-pref("Style.WaveFox") or
+          -moz-bool-pref("Style.Australis") or
+          -moz-bool-pref("Style.Chrome-Old")
+{
+    /* ---------- Rounded Corners (SVG) ---------- */
+
+    .tab-background::before,
+    .tab-background::after
+    {
+        width: var(--tab-min-height);
+        height: var(--tab-min-height);
+    }
+
+    /* ---------- Tabs ---------- */
+
+    .tab-background
+    {
+        margin-inline: calc(var(--tab-min-height) / 2) !important;
+    }
+
+    /* ---------- Indents ---------- */
+
+    #tabbrowser-tabs:not([overflow]) .tabbrowser-tab[first-visible-tab],
+    #tabbrowser-tabs[positionpinnedtabs],
+    #tabbrowser-tabs[overflow] .tabbrowser-tab[first-visible-unpinned-tab]
+    {
+        margin-left: calc(var(--tab-min-height) / 2) !important;
+    }
+
+    .tabbrowser-tab[last-visible-tab]
+    {
+        margin-right: calc(var(--tab-min-height) / 2) !important;
+    }
+}
+
+/* -------------------- Chrome / Edge -------------------- */
+
+@supports -moz-bool-pref("Style.Chrome") or
+          -moz-bool-pref("Style.Edge")
+{
+    /* ---------- Rounded Corners (SVG) ---------- */
+
+    .tab-background::before,
+    .tab-background::after
+    {
+        width: calc(var(--tab-min-height) / 2);
+        height: var(--tab-min-height);
+    }
+
+    /* ---------- Tabs ---------- */
+
+    .tab-background
+    {
+        margin-inline: calc(var(--tab-min-height) / 4) !important;
+    }
+
+    /* ---------- Indents ---------- */
+
+    #tabbrowser-tabs:not([overflow]) .tabbrowser-tab[first-visible-tab],
+    #tabbrowser-tabs[positionpinnedtabs],
+    #tabbrowser-tabs[overflow] .tabbrowser-tab[first-visible-unpinned-tab]
+    {
+        margin-left: calc(var(--tab-min-height) / 4) !important;
+    }
+
+    .tabbrowser-tab[last-visible-tab]
+    {
+        margin-right: calc(var(--tab-min-height) / 4) !important;
+    }
+}
+
+/* -------------------- Repository -------------------- */
+
+:root[lwtheme-image]
+{
+    --tab-indicator: color-mix(in srgb, var(--tab-indicator-color) var(--tab-indicator-saturation), transparent);
+}
+
+@supports -moz-bool-pref("Style.Proton")
+{
+    :root[lwtheme-image] .tabbrowser-tab[visuallyselected] .tab-background
+    {
+        box-shadow: inset 0 0 0 2px var(--tab-indicator) !important;
+    }
+}
+
+@supports -moz-bool-pref("Style.Photon")
+{
+    :root[lwtheme-image] .tabbrowser-tab[visuallyselected] .tab-background
+    {
+        box-shadow: inset 0 2px 0 0 var(--tab-indicator), inset 2px 0 0 0 var(--tab-indicator), inset -2px 0 0 0 var(--tab-indicator) !important;
+    }
+}
+
+@supports -moz-bool-pref("Style.WaveFox") or
+          -moz-bool-pref("Style.Australis") or
+          -moz-bool-pref("Style.Chrome") or
+          -moz-bool-pref("Style.Chrome-Old") or
+          -moz-bool-pref("Style.Edge")
+{
+    :root[lwtheme-image] .tabbrowser-tab[visuallyselected] .tab-background::before,
+    :root[lwtheme-image] .tabbrowser-tab[visuallyselected] .tab-background::after
+    {
+        stroke: var(--tab-indicator);
+    }
+
+    :root[lwtheme-image] .tabbrowser-tab[visuallyselected] .tab-background
+    {
+        background-color: var(--toolbar-bgcolor) !important;
+        background-image: var(--middle-svg) !important;
+        stroke: var(--tab-indicator) !important;
+        fill: transparent !important;
+        -moz-context-properties: fill, stroke !important;
+    }
+}
+
+}
+
+/* ---------------------------------------- Menu Icons ---------------------------------------- */
+
+/* ---------- Regular Icons ---------- */
+
+@supports -moz-bool-pref("Style.Menu-Icons-Regular")
+{
+    :root
+    {
+        --tab-new-page: url("./icons/tab_desktop_new_page_20_regular.svg");
+        --window: url("./icons/window_20_regular.svg");
+        --window-inprivate-account: url("./icons/window_inprivate_account_20_regular.svg");
+        --star-line-horizontal: url("./icons/star_line_horizontal_3_20_regular.svg");
+        --star-add: url("./icons/star_add_20_regular.svg");
+        --star: url("./icons/star_20_filled.svg");
+        --history: url("./icons/history_20_regular.svg");
+        --arrow-download: url("./icons/arrow_download_20_regular.svg");
+        --key: url("./icons/key_20_regular.svg");
+        --puzzle-piece: url("./icons/puzzle_piece_20_regular.svg");
+        --print: url("./icons/print_20_regular.svg");
+        --save-edit: url("./icons/save_edit_20_regular.svg");
+        --document-search: url("./icons/document_search_20_regular.svg");
+        --settings: url("./icons/settings_20_regular.svg");
+        --question-circle: url("./icons/question_circle_20_regular.svg");
+        --color: url("./icons/color_20_regular.svg");
+        --window-dev-tools: url("./icons/window_dev_tools_20_regular.svg");
+        --person-feedback: url("./icons/person_feedback_20_regular.svg");
+        --warning: url("./icons/warning_20_regular.svg");
+        --arrow-clockwise: url("./icons/arrow_clockwise_20_regular.svg");
+        --arrow-redo: url("./icons/arrow_redo_20_regular.svg");
+        --arrow-undo: url("./icons/arrow_undo_20_regular.svg");
+        --clipboard-paste: url("./icons/clipboard_paste_20_regular.svg");
+        --clipboard-search: url("./icons/clipboard_search_20_regular.svg");
+        --copy: url("./icons/copy_20_regular.svg");
+        --cut: url("./icons/cut_20_regular.svg");
+        --delete: url("./icons/delete_20_regular.svg");
+        --dismiss: url("./icons/dismiss_20_regular.svg");
+        --folder-add: url("./icons/folder_add_20_regular.svg");
+        --pin: url("./icons/pin_20_regular.svg");
+        --speaker-mute: url("./icons/speaker_mute_20_regular.svg");
+        --tab-desktop: url("./icons/tab_desktop_20_regular.svg");
+        --tab-desktop-copy: url("./icons/tab_desktop_copy_20_regular.svg");
+        --edit: url("./icons/edit_20_regular.svg");
+        --speaker-2: url("./icons/speaker_2_20_regular.svg");
+        --camera-edit: url("./icons/camera_edit_20_regular.svg");
+        --cursor-hover: url("./icons/cursor_hover_20_regular.svg");
+        --image-copy: url("./icons/image_copy_20_regular.svg");
+        --image-edit: url("./icons/image_edit_20_regular.svg");
+        --link: url("./icons/link_20_regular.svg");
+        --play: url("./icons/play_20_regular.svg");
+        --pause: url("./icons/pause_20_regular.svg");
+        --search: url("./icons/search_20_regular.svg");
+        --tab-desktop-image: url("./icons/tab_desktop_image_20_regular.svg");
+    }
+}
+
+/* ---------- Filled Icons ---------- */
+
+@supports -moz-bool-pref("Style.Menu-Icons-Filled")
+{
+    :root
+    {
+        --tab-new-page: url("./icons/tab_desktop_new_page_20_filled.svg");
+        --window: url("./icons/window_20_filled.svg");
+        --window-inprivate-account: url("./icons/window_inprivate_account_20_filled.svg");
+        --star-line-horizontal: url("./icons/star_line_horizontal_3_20_filled.svg");
+        --star-add: url("./icons/star_add_20_filled.svg");
+        --star: url("./icons/star_20_filled.svg");
+        --history: url("./icons/history_20_filled.svg");
+        --arrow-download: url("./icons/arrow_download_20_filled.svg");
+        --key: url("./icons/key_20_filled.svg");
+        --puzzle-piece: url("./icons/puzzle_piece_20_filled.svg");
+        --print: url("./icons/print_20_filled.svg");
+        --save-edit: url("./icons/save_edit_20_filled.svg");
+        --document-search: url("./icons/document_search_20_filled.svg");
+        --settings: url("./icons/settings_20_filled.svg");
+        --question-circle: url("./icons/question_circle_20_filled.svg");
+        --color: url("./icons/color_20_filled.svg");
+        --window-dev-tools: url("./icons/window_dev_tools_20_filled.svg");
+        --person-feedback: url("./icons/person_feedback_20_filled.svg");
+        --warning: url("./icons/warning_20_filled.svg");
+        --arrow-clockwise: url("./icons/arrow_clockwise_20_filled.svg");
+        --arrow-redo: url("./icons/arrow_redo_20_filled.svg");
+        --arrow-undo: url("./icons/arrow_undo_20_filled.svg");
+        --clipboard-paste: url("./icons/clipboard_paste_20_filled.svg");
+        --clipboard-search: url("./icons/clipboard_search_20_filled.svg");
+        --copy: url("./icons/copy_20_filled.svg");
+        --cut: url("./icons/cut_20_filled.svg");
+        --delete: url("./icons/delete_20_filled.svg");
+        --dismiss: url("./icons/dismiss_20_filled.svg");
+        --folder-add: url("./icons/folder_add_20_filled.svg");
+        --pin: url("./icons/pin_20_filled.svg");
+        --speaker-mute: url("./icons/speaker_mute_20_filled.svg");
+        --tab-desktop: url("./icons/tab_desktop_20_filled.svg");
+        --tab-desktop-copy: url("./icons/tab_desktop_copy_20_filled.svg");
+        --edit: url("./icons/edit_20_filled.svg");
+        --speaker-2: url("./icons/speaker_2_20_filled.svg");
+        --camera-edit: url("./icons/camera_edit_20_filled.svg");
+        --cursor-hover: url("./icons/cursor_hover_20_filled.svg");
+        --image-copy: url("./icons/image_copy_20_filled.svg");
+        --image-edit: url("./icons/image_edit_20_filled.svg");
+        --link: url("./icons/link_20_filled.svg");
+        --play: url("./icons/play_20_filled.svg");
+        --pause: url("./icons/pause_20_filled.svg");
+        --search: url("./icons/search_20_filled.svg");
+        --tab-desktop-image: url("./icons/tab_desktop_image_20_filled.svg");
+    }
+}
+
+/* ---------- Native Browser Menus ---------- */
+
+@supports -moz-bool-pref("Style.Menu-Icons-Regular") or
+          -moz-bool-pref("Style.Menu-Icons-Filled")
+{
+    :is(
+
+        /* ----- Main Menu ----- */
+
+        #appMenu-new-tab-button2,
+        #appMenu-new-window-button2,
+        #appMenu-new-private-window-button2,
+        #appMenu-bookmarks-button,
+        #appMenu-history-button,
+        #appMenu-downloads-button,
+        #appMenu-passwords-button,
+        #appMenu-extensions-themes-button,
+        #appMenu-print-button2,
+        #appMenu-save-file-button2,
+        #appMenu-find-button2,
+        #appMenu-settings-button,
+        #appMenu-help-button2,
+
+        /* ----- Main Menu (Submenus) ----- */
+
+        #appmenu-moreTools-button,
+        #appmenu-developer-tools-view > toolbarbutton:nth-child(1),
+
+        #appMenu_menu_openHelp,
+        #appMenu_feedbackPage,
+        #appMenu_menu_HelpPopup_reportPhishingtoolmenu,
+
+        /* ----- Bookmark Menu ----- */
+
+        #panelMenuBookmarkThisPage,
+        #panelMenu_showAllBookmarks,
+        #BMB_bookmarksShowAllTop,
+        #BMB_bookmarksShowAll,
+
+        /* ----- History Menu ----- */
+
+        #PanelUI-historyMore,
+
+        /* ----- Library Menu ----- */
+
+        #appMenu-library-bookmarks-button,
+        #appMenu-library-history-button,
+        #appMenu-library-downloads-button,
+
+        /* ----- Downloads Menu ----- */
+
+        #downloadsHistory,
+
+        /* ----- Developer Menu ----- */
+
+        #PanelUI-developer-tools-view > toolbarbutton:nth-child(1),
+
+        /* ----- Sidebar Menu ----- */
+
+        #sidebar-switcher-bookmarks,
+        #sidebar-switcher-history
+
+    )::before
+    {
+        content: "";
+        display: block;
+        position: relative;
+        width: 20px;
+        height: 20px;
+        background-size: 20px;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-block: -2px;
+        margin-inline: -2px 6px;
+        fill: currentColor;
+        -moz-context-properties: fill;
+    }
+
+    /* ----- Main Menu ----- */
+    
+    #appMenu-new-tab-button2::before
+    {
+        background-image: var(--tab-new-page);
+    }
+    
+    #appMenu-new-window-button2::before
+    {
+        background-image: var(--window);
+    }
+    
+    #appMenu-new-private-window-button2::before
+    {
+        background-image: var(--window-inprivate-account);
+    }
+    
+    #appMenu-bookmarks-button::before
+    {
+        background-image: var(--star-line-horizontal);
+    }
+    
+    #appMenu-history-button::before
+    {
+        background-image: var(--history);
+    }
+    
+    #appMenu-downloads-button::before
+    {
+        background-image: var(--arrow-download);
+    }
+    
+    #appMenu-passwords-button::before
+    {
+        background-image: var(--key);
+    }
+    
+    #appMenu-extensions-themes-button::before
+    {
+        background-image: var(--puzzle-piece);
+    }
+
+    #appMenu-print-button2::before
+    {
+        background-image: var(--print);
+    }
+
+    #appMenu-save-file-button2::before
+    {
+        background-image: var(--save-edit);
+    }
+
+    #appMenu-find-button2::before
+    {
+        background-image: var(--document-search);
+    }
+
+    #appMenu-settings-button::before
+    {
+        background-image: var(--settings);
+    }
+
+    #appMenu-help-button2::before
+    {
+        background-image: var(--question-circle);
+    }
+
+    /* ----- Main Menu (Submenus) ----- */
+
+    #appmenu-moreTools-button::before
+    {
+        background-image: var(--color);
+    }
+
+    #appmenu-developer-tools-view > toolbarbutton:nth-child(1)::before
+    {
+        background-image: var(--window-dev-tools);
+    }
+
+    #appMenu_menu_openHelp::before
+    {
+        background-image: var(--question-circle);
+    }
+
+    #appMenu_feedbackPage::before
+    {
+        background-image: var(--person-feedback);
+    }
+
+    #appMenu_menu_HelpPopup_reportPhishingtoolmenu::before
+    {
+        background-image: var(--warning);
+    }
+
+    /* ----- Bookmark Menu ----- */
+
+    #panelMenuBookmarkThisPage::before
+    {
+        background-image: var(--star-add);
+    }
+
+    #panelMenuBookmarkThisPage[starred]::before
+    {
+        background-image: var(--star);
+        fill: var(--toolbar-field-icon-fill-attention) !important;
+    }
+
+    :is(#panelMenu_showAllBookmarks, #BMB_bookmarksShowAllTop, #BMB_bookmarksShowAll)::before
+    {
+        background-image: var(--star-line-horizontal);
+    }
+
+    /* ----- History Menu ----- */
+
+    #PanelUI-historyMore::before
+    {
+        background-image: var(--history);
+    }
+
+    /* ----- Library Menu ----- */
+
+    #appMenu-library-bookmarks-button::before
+    {
+        background-image: var(--star-line-horizontal);
+    }
+
+    #appMenu-library-history-button::before
+    {
+        background-image: var(--history);
+    }
+
+    #appMenu-library-downloads-button::before
+    {
+        background-image: var(--arrow-download);
+    }
+
+    /* ----- Downloads Menu ----- */
+
+    #downloadsHistory::before
+    {
+        background-image: var(--arrow-download);
+    }
+
+    /* ----- Developer Menu ----- */
+
+    #PanelUI-developer-tools-view > toolbarbutton:nth-child(1)::before
+    {
+        background-image: var(--window-dev-tools);
+    }
+
+    /* ----- Sidebar Menu ----- */
+
+    #sidebar-switcher-bookmarks::before
+    {
+        background-image: var(--star-line-horizontal);
+    }
+
+    #sidebar-switcher-history::before
+    {
+        background-image: var(--history);
+    }
+
+    /* ---------- Non-Native Browser Menus ---------- */
+
+    @media (-moz-os-version: windows-win10),
+           (-moz-os-version: windows-win8),
+           (-moz-os-version: windows-win7),
+           (-moz-gtk-csd-available)
+    {
+
+    :is(
+
+        /* ----- Toolbar Menubar Menu ----- */
+
+        menuitem.viewCustomizeToolbar,
+
+        /* ----- TabsToolbar Menu ----- */
+
+        #toolbar-context-openANewTab,
+        #toolbar-context-reloadSelectedTab,
+        #toolbar-context-bookmarkSelectedTab,
+
+        /* ----- Tab Menu ----- */
+
+        #context_openANewTab,
+        #context_reloadTab,
+        #context_toggleMuteTab,
+        #context_pinTab,
+        #context_unpinTab,
+        #context_duplicateTab,
+        #context_bookmarkTab,
+        #context_openTabInWindow,
+        #context_closeTab,
+
+        /* ----- Tabs Menu ----- */
+
+        #context_reloadSelectedTabs,
+        #context_toggleMuteSelectedTabs,
+        #context_pinSelectedTabs,
+        #context_unpinSelectedTabs,
+        #context_duplicateTabs,
+        #context_bookmarkSelectedTabs,
+
+        /* ----- Urlbar Menu ----- */
+
+        menupopup.textbox-contextmenu:nth-child(3) > menuitem:nth-child(1),
+        menupopup.textbox-contextmenu:nth-child(3) > menuitem:nth-child(2),
+        menupopup.textbox-contextmenu:nth-child(3) > menuitem:nth-child(4),
+        menupopup.textbox-contextmenu:nth-child(3) > menuitem:nth-child(5),
+        menupopup.textbox-contextmenu:nth-child(3) > menuitem:nth-child(6),
+        menupopup.textbox-contextmenu:nth-child(3) > menuitem:nth-child(7),
+        menupopup.textbox-contextmenu:nth-child(3) > menuitem:nth-child(8),
+
+        /* ----- Searchbar Menu ----- */
+
+        menupopup.textbox-contextmenu:nth-child(4) > menuitem:nth-child(1),
+        menupopup.textbox-contextmenu:nth-child(4) > menuitem:nth-child(2),
+        menupopup.textbox-contextmenu:nth-child(4) > menuitem:nth-child(4),
+        menupopup.textbox-contextmenu:nth-child(4) > menuitem:nth-child(5),
+        menupopup.textbox-contextmenu:nth-child(4) > menuitem:nth-child(6),
+        menupopup.textbox-contextmenu:nth-child(4) > menuitem:nth-child(7),
+        menupopup.textbox-contextmenu:nth-child(4) > menuitem:nth-child(8),
+
+        /* ----- PersonalToolbar Menu ----- */
+
+        #placesContext_openBookmarkContainer\:tabs,
+        #placesContext_new\:bookmark,
+        #placesContext_new\:folder,
+        #placesContext_paste,
+        #placesContext_showAllBookmarks,
+
+        /* ----- Bookmarks Menu ----- */
+
+        #placesContext_open\:newtab,
+        #placesContext_open\:newwindow,
+        #placesContext_open\:newprivatewindow,
+        #placesContext_show_bookmark\:info,
+        #placesContext_deleteBookmark,
+        #placesContext_cut,
+        #placesContext_copy,
+        #placesContext_paste_group,
+
+        /* ----- Folder Menu ----- */
+
+        #placesContext_show_folder\:info,
+        #placesContext_deleteFolder,
+
+        /* ---------- Web Menu ---------- */
+
+        /* ----- Menu ----- */
+
+        #context-savepage,
+        #context-take-screenshot,
+        #context-inspect,
+
+        /* ----- Text Menu ----- */
+
+        #context-copy,
+        #context-print-selection,
+        #context-searchselect,
+
+        /* ----- Image Menu ----- */
+
+        #context-viewimage,
+        #context-saveimage,
+        #context-copyimage-contents,
+
+        /* ----- Link Menu ----- */
+
+        #context-openlinkintab,
+        #context-openlink,
+        #context-openlinkprivate,
+        #context-bookmarklink,
+        #context-savelink,
+        #context-copylink,
+
+        /* ----- Input Menu ----- */
+
+        #context-undo,
+        #context-redo,
+        #context-cut,
+        #context-copy,
+        #context-paste,
+        #context-delete,
+        #context-keywordfield,
+
+        /* ----- Video Menu ----- */
+
+        #context-media-play,
+        #context-media-pause,
+        #context-media-mute,
+        #context-media-unmute,
+        #context-viewvideo,
+        #context-savevideo
+
+    )::before
+    {
+        content: "";
+        display: block;
+        position: relative;
+        width: 20px;
+        height: 20px;
+        background-size: 20px;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin: var(--align-menu-icons);
+        fill: currentColor;
+        -moz-context-properties: fill;
+    }
+
+    /* ----- Toolbar Menubar Menu ----- */
+
+    menuitem.viewCustomizeToolbar::before
+    {
+        background-image: var(--color);
+    }
+
+    /* ----- TabsToolbar Menu ----- */
+
+    #toolbar-context-openANewTab::before
+    {
+        background-image: var(--tab-new-page);
+    }
+
+    #toolbar-context-reloadSelectedTab::before
+    {
+        background-image: var(--arrow-clockwise);
+    }
+
+    #toolbar-context-bookmarkSelectedTab::before
+    {
+        background-image: var(--star-add);
+    }
+
+    /* ----- Tab Menu ----- */
+
+    #context_openANewTab::before
+    {
+        background-image: var(--tab-new-page);
+    }
+
+    #context_reloadTab::before
+    {
+        background-image: var(--arrow-clockwise);
+    }
+
+    #context_toggleMuteTab::before
+    {
+        background-image: var(--speaker-mute);
+    }
+
+    #context_toggleMuteTab[muted]::before
+    {
+        background-image: var(--speaker-2);
+    }
+
+    :is(#context_pinTab, #context_unpinTab)::before
+    {
+        background-image: var(--pin);
+    }
+
+    #context_duplicateTab::before
+    {
+        background-image: var(--tab-desktop-copy);
+    }
+
+    #context_bookmarkTab::before
+    {
+        background-image: var(--star-add);
+    }
+
+    #context_openTabInWindow::before
+    {
+        background-image: var(--window);
+    }
+
+    #context_closeTab::before
+    {
+        background-image: var(--dismiss);
+    }
+
+    /* ----- Tabs Menu ----- */
+
+    #context_reloadSelectedTabs::before
+    {
+        background-image: var(--arrow-clockwise);
+    }
+
+    #context_toggleMuteSelectedTabs::before
+    {
+        background-image: var(--speaker-mute);
+    }
+
+    #context_toggleMuteSelectedTabs[muted]::before
+    {
+        background-image: var(--speaker-2);
+    }
+
+    :is(#context_pinSelectedTabs, #context_unpinSelectedTabs)::before
+    {
+        background-image: var(--pin);
+    }
+
+    #context_duplicateTabs::before
+    {
+        background-image: var(--tab-desktop-copy);
+    }
+
+    #context_bookmarkSelectedTabs::before
+    {
+        background-image: var(--star-add);
+    }
+
+    /* ----- Urlbar Menu ----- */
+
+    menupopup.textbox-contextmenu:nth-child(3) > menuitem:nth-child(1)::before
+    {
+        background-image: var(--arrow-undo);
+    }
+
+    menupopup.textbox-contextmenu:nth-child(3) > menuitem:nth-child(2)::before
+    {
+        background-image: var(--arrow-redo);
+    }
+
+    menupopup.textbox-contextmenu:nth-child(3) > menuitem:nth-child(4)::before
+    {
+        background-image: var(--cut);
+    }
+
+    menupopup.textbox-contextmenu:nth-child(3) > menuitem:nth-child(5)::before
+    {
+        background-image: var(--copy);
+    }
+
+    menupopup.textbox-contextmenu:nth-child(3) > menuitem:nth-child(6)::before
+    {
+        background-image: var(--clipboard-paste);
+    }
+
+    menupopup.textbox-contextmenu:nth-child(3) > menuitem:nth-child(7)::before
+    {
+        background-image: var(--clipboard-search);
+    }
+
+    menupopup.textbox-contextmenu:nth-child(3) > menuitem:nth-child(8)::before
+    {
+        background-image: var(--delete);
+    }
+
+    /* ----- Searchbar Menu ----- */
+
+    menupopup.textbox-contextmenu:nth-child(4) > menuitem:nth-child(1)::before
+    {
+        background-image: var(--arrow-undo);
+    }
+
+    menupopup.textbox-contextmenu:nth-child(4) > menuitem:nth-child(2)::before
+    {
+        background-image: var(--arrow-redo);
+    }
+
+    menupopup.textbox-contextmenu:nth-child(4) > menuitem:nth-child(4)::before
+    {
+        background-image: var(--cut);
+    }
+
+    menupopup.textbox-contextmenu:nth-child(4) > menuitem:nth-child(5)::before
+    {
+        background-image: var(--copy);
+    }
+
+    menupopup.textbox-contextmenu:nth-child(4) > menuitem:nth-child(6)::before
+    {
+        background-image: var(--clipboard-paste);
+    }
+
+    menupopup.textbox-contextmenu:nth-child(4) > menuitem:nth-child(7)::before
+    {
+        background-image: var(--clipboard-search);
+    }
+
+    menupopup.textbox-contextmenu:nth-child(4) > menuitem:nth-child(8)::before
+    {
+        background-image: var(--delete);
+    }
+
+    /* ----- PersonalToolbar Menu ----- */
+
+    #placesContext_openBookmarkContainer\:tabs::before
+    {
+        background-image: var(--tab-desktop);
+    }
+
+    #placesContext_new\:bookmark::before
+    {
+        background-image: var(--star-add);
+    }
+
+    #placesContext_new\:folder::before
+    {
+        background-image: var(--folder-add);
+    }
+
+    #placesContext_paste::before
+    {
+        background-image: var(--clipboard-paste);
+    }
+
+    #placesContext_showAllBookmarks::before
+    {
+        background-image: var(--star-line-horizontal);
+    }
+
+    /* ----- Bookmarks Menu ----- */
+
+    #placesContext_open\:newtab::before
+    {
+        background-image: var(--tab-new-page);
+    }
+
+    #placesContext_open\:newwindow::before
+    {
+        background-image: var(--window);
+    }
+
+    #placesContext_open\:newprivatewindow::before
+    {
+        background-image: var(--window-inprivate-account);
+    }
+
+    #placesContext_show_bookmark\:info::before
+    {
+        background-image: var(--edit);
+    }
+
+    #placesContext_deleteBookmark::before
+    {
+        background-image: var(--delete);
+    }
+
+    #placesContext_cut::before
+    {
+        background-image: var(--cut);
+    }
+
+    #placesContext_copy::before
+    {
+        background-image: var(--copy);
+    }
+
+    #placesContext_paste_group::before
+    {
+        background-image: var(--clipboard-paste);
+    }
+
+    /* ----- Folder Menu ----- */
+
+    #placesContext_show_folder\:info::before
+    {
+        background-image: var(--edit);
+    }
+
+    #placesContext_deleteFolder::before
+    {
+        background-image: var(--delete);
+    }
+
+    /* ---------- Web Menu ---------- */
+
+    #context-savepage::before
+    {
+        background-image: var(--save-edit);
+    }
+
+    #context-take-screenshot::before
+    {
+        background-image: var(--camera-edit);
+    }
+
+    #context-inspect::before
+    {
+        background-image: var(--cursor-hover);
+    }
+
+    #context-copy::before
+    {
+        background-image: var(--copy);
+    }
+
+    #context-print-selection::before
+    {
+        background-image: var(--print);
+    }
+
+    #context-searchselect::before
+    {
+        background-image: var(--search);
+    }
+
+    #context-viewimage::before
+    {
+        background-image: var(--tab-desktop-image);
+    }
+
+    #context-saveimage::before
+    {
+        background-image: var(--image-edit);
+    }
+
+    #context-copyimage-contents::before
+    {
+        background-image: var(--image-copy);
+    }
+
+    #context-openlinkintab::before
+    {
+        background-image: var(--tab-desktop);
+    }
+
+    #context-openlink::before
+    {
+        background-image: var(--window);
+    }
+
+    #context-openlinkprivate::before
+    {
+        background-image: var(--window-inprivate-account);
+    }
+
+    #context-bookmarklink::before
+    {
+        background-image: var(--star-add);
+    }
+
+    #context-savelink::before
+    {
+        background-image: var(--save-edit);
+    }
+
+    #context-copylink::before
+    {
+        background-image: var(--link);
+    }
+
+    #context-undo::before
+    {
+        background-image: var(--arrow-undo);
+    }
+
+    #context-redo::before
+    {
+        background-image: var(--arrow-redo);
+    }
+
+    #context-cut::before
+    {
+        background-image: var(--cut);
+    }
+
+    #context-copy::before
+    {
+        background-image: var(--copy);
+    }
+
+    #context-paste::before
+    {
+        background-image: var(--clipboard-paste);
+    }
+
+    #context-delete::before
+    {
+        background-image: var(--delete);
+    }
+
+    #context-keywordfield::before
+    {
+        background-image: var(--star-add);
+    }
+
+    #context-media-play::before
+    {
+        background-image: var(--play);
+    }
+
+    #context-media-pause::before
+    {
+        background-image: var(--pause);
+    }
+
+    #context-media-mute::before
+    {
+        background-image: var(--speaker-mute);
+    }
+
+    #context-media-unmute::before
+    {
+        background-image: var(--speaker-2);
+    }
+
+    #context-viewvideo::before
+    {
+        background-image: var(--tab-desktop);
+    }
+
+    #context-savevideo::before
+    {
+        background-image: var(--save-edit);
+    }
+
+  }
+
+}
+
+}
