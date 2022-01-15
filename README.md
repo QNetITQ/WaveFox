@@ -25,6 +25,7 @@ The style works only with systems from the list of supported
 * Accent color (Windows 11 / Windows 10)
 * Various forms of tabs are supported
 * Menu icons support
+* New tab button like pinned tab
 
 ## Screenshots
 ![Styles](https://user-images.githubusercontent.com/85301851/139716492-b4ac94d2-8dc8-41ff-acc8-53631cd3befd.png)
@@ -46,7 +47,8 @@ The style works only with systems from the list of supported
 
 If point 3 is not fulfilled, the tabs and everything connected with them will be by default, as the Mozilla intended.
 
-Icons are no longer tied to tabs. They can be activated without having to complete step 3. Context menus will be by default
+The new tab button may look like a pinned tab. Create the key below:
+* `Style.New-Tab-Button-Like-Pinned-Tab`
 
 To enable icons, create one of the keys below:
 * `Style.Menu-Icons-Regular` > `True`
