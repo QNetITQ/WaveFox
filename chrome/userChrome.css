@@ -233,7 +233,7 @@
 
 #tabbrowser-tabs:not([secondarytext-unsupported]) .tab-label-container
 {
-    height: calc(2.7em - var(--tab-block-margin) * 2) !important;
+    height: auto !important;
 }
 
 /* -------------------- Overflow Mode -------------------- */
@@ -1023,7 +1023,7 @@ spacer[part="overflow-end-indicator"]
         {
             height: var(--tab-min-height);
             margin-left: -1px;
-            transform: translateX(calc(-1 * var(--pinned-tabs-width-offset)));
+            transform: translateX(calc(-1 * var(--pinned-tabs-width-offset) - 1px));
         }
 
         /* ---------- Hover / Active ---------- */
