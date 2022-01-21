@@ -26,6 +26,7 @@ The style works only with systems from the list of supported
 * Various forms of tabs are supported
 * Menu icons support
 * New tab button like pinned tab
+* Ability to control the length of pinned tabs 
 
 ## Screenshots
 ![Styles](https://user-images.githubusercontent.com/85301851/139716492-b4ac94d2-8dc8-41ff-acc8-53631cd3befd.png)
