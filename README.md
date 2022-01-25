@@ -53,8 +53,11 @@ The style works only with systems from the list of supported
 
 If point 3 is not fulfilled, the tabs and everything connected with them will be by default, as the Mozilla intended.
 
+Tabs can be made even more compact. Create the key below:
+* `Style.Compact-Plus` > `True`
+
 The new tab button may look like a pinned tab. Create the key below:
-* `Style.New-Tab-Button-Like-Pinned-Tab`
+* `Style.New-Tab-Button-Like-Pinned-Tab` > `True`
 
 To enable icons, create one of the keys below:
 * `Style.Menu-Icons-Regular` > `True`
