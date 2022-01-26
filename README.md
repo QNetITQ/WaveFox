@@ -23,6 +23,8 @@
 | Chrome (Legacy) | ![изображение](https://user-images.githubusercontent.com/85301851/151188819-8ac900d2-f126-4302-8824-f507a80e5f1b.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151188707-3ed5a636-e3d2-456b-9fa7-f7e5f8991b27.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151188546-7abb257c-235a-420e-b841-13657b07968d.png) |
 | Australis | ![изображение](https://user-images.githubusercontent.com/85301851/151189110-5de939b8-f6d4-4a40-930b-f15c07254be5.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151189212-52918558-9969-4127-bc6d-30ab70b73949.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151189329-c6c48d18-091c-4f62-903a-d4dc08eb0ac8.png) |
 
+
+
 ### Icons in context menus 
 | Context menus | Light | Dark |
 |---------------|-------|------|
@@ -65,6 +67,11 @@
 |---------------------|----------------------|
 | ![изображение](https://user-images.githubusercontent.com/85301851/151209741-97915f54-f259-4950-9287-ab06c2464beb.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151209618-483dfd65-47f7-4b1b-9144-ace111b2ea09.png) |
 
+### Accent color (Windows 11 / Windows 10)
+| Light | Dark |
+|-------|------|
+| ![изображение](https://user-images.githubusercontent.com/85301851/151212851-3aee4b2d-3766-47de-b701-1978ff7c6648.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151213171-70c40b46-24ff-4e19-868a-e9cf902ad2aa.png) |
+
 ## Supported operating systems
 * Windows 10 and newer (Full support)
 * Linux (Full support)
@@ -79,19 +86,6 @@ The style has not been tested by the author. Visual effects unique to these syst
 
 #### Unsupported systems
 The style works only with systems from the list of supported
-
-## Features
-* All themes supported
-* All interface densities supported
-* You can control the size of the drag space in the "Custom Settings" section
-* You can control the size of the context menus in the "Custom Settings" section
-* You can control the size and color of the shadows in the "Custom Settings" section (Tab bar only)
-* Media icons on tabs are always visible
-* Accent color (Windows 11 / Windows 10)
-* Various forms of tabs are supported
-* Menu icons support
-* New tab button like pinned tab
-* Ability to control the length of pinned tabs 
 
 ## Installation
 1. Download the `chrome` folder and put it in the root folder (also known as the user profile folder)
