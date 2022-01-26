@@ -45,7 +45,7 @@
 |-----------------------|------------------------|----------------------|----------------------|------------------------|-------------------------|
 | ![изображение](https://user-images.githubusercontent.com/85301851/151207587-ee6aac0a-529a-44fa-a349-05a71f7e0e42.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151207693-4ec2cefc-ae72-4bac-aadf-5d03c5821fa8.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151208756-236844a6-c2a2-4275-aadf-245872e5bf43.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151208590-b35da78d-99d2-4815-a465-23bb1cd78b3e.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151208486-ffadb816-5f58-4ba3-9c6f-8da735c1d5e8.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151208387-f6311b91-58d3-474f-b6c4-2eb99cc891ff.png) |
 
-| Tab Separators (0%) | Tab Separators (50%) |
+| Tab Separators Saturation (0%) | Tab Separators Saturation (50%) |
 |---------------------|----------------------|
 | ![изображение](https://user-images.githubusercontent.com/85301851/151209741-97915f54-f259-4950-9287-ab06c2464beb.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151209618-483dfd65-47f7-4b1b-9144-ace111b2ea09.png) |
 
