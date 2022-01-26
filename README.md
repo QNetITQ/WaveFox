@@ -31,7 +31,7 @@ You can control this setting in the "Custom settings" at the top of the css file
 |--------------------|----------------------|
 | ![изображение](https://user-images.githubusercontent.com/85301851/151200011-718f6a89-9a05-47e2-8655-de03161857a1.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151199885-136a3864-edac-4a47-88e6-2a3fe5f25fcf.png) |
 
-### Managing the length of pinned tabs 
+### Managing the width of pinned tabs 
 You can control this setting in the "Custom settings" at the top of the css file
 | Pinned Tabs Width Offset (0px) | Pinned Tabs Width Offset (2px) | Pinned Tabs Width Offset (4px) |
 |--------------------------------|--------------------------------|--------------------------------|
