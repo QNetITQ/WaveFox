@@ -35,27 +35,32 @@
 |--------------|---------|--------|-------|
 | ![изображение](https://user-images.githubusercontent.com/85301851/151196005-5a35bb8f-faa1-49e1-a092-fffeeb24a6ec.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151195648-d0120335-87d0-41fa-afea-4daa7ae4057b.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151195788-8ed8a19b-64a0-48cc-9383-f582210cf3b3.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151195144-9424311d-fc1e-4d58-b2eb-38c06406dbb8.png) |
 
-
+### AMO compatibility 
 | Tab Indicator (0%) | Tab Indicator (100%) |
 |--------------------|----------------------|
 | ![изображение](https://user-images.githubusercontent.com/85301851/151200011-718f6a89-9a05-47e2-8655-de03161857a1.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151199885-136a3864-edac-4a47-88e6-2a3fe5f25fcf.png) |
 
+### Managing the length of pinned tabs 
 | Pinned Tabs Width Offset (0px) | Pinned Tabs Width Offset (2px) | Pinned Tabs Width Offset (4px) |
 |--------------------------------|--------------------------------|--------------------------------|
 | ![изображение](https://user-images.githubusercontent.com/85301851/151201603-b2e264c9-18bd-4be8-be8b-10d43924596e.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151201782-926f3347-578c-4714-a764-d97e467e376a.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151201904-e34bb60f-7db3-4824-8b59-3924124de52c.png) |
 
+### New Tab Button Like Pinned Tab
 | New Tab Button | New Tab Button Like Pinned Tab |
 |----------------|--------------------------------|
 | ![изображение](https://user-images.githubusercontent.com/85301851/151203456-3ead802b-110c-4687-919f-27cb26076c34.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151203609-e3d723a9-fcc3-4887-a16a-b20e3364dc52.png) |
 
+### Tab bar shadows
 | No Shadow | Shadow Like Border | Primary 2px, Seconadry 8px |
 |-----------|--------------------|----------------------------|
 | ![изображение](https://user-images.githubusercontent.com/85301851/151204462-0366825f-1df9-47db-924c-bd6f5928178e.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151204663-76cc04e1-aeab-4fbb-845a-e2293ecc5abd.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151204786-67a97aa8-8689-4395-a08f-a2b553b1817f.png) |
 
+### Drag space
 | Left Drag Space (0px) | Left Drag Space (40px) | Top Drag Space (0px) | Top Drag Space (8px) | Right Drag Space (0px) | Right Drag Space (40px) |
 |-----------------------|------------------------|----------------------|----------------------|------------------------|-------------------------|
 | ![изображение](https://user-images.githubusercontent.com/85301851/151207587-ee6aac0a-529a-44fa-a349-05a71f7e0e42.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151207693-4ec2cefc-ae72-4bac-aadf-5d03c5821fa8.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151208756-236844a6-c2a2-4275-aadf-245872e5bf43.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151208590-b35da78d-99d2-4815-a465-23bb1cd78b3e.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151208486-ffadb816-5f58-4ba3-9c6f-8da735c1d5e8.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151208387-f6311b91-58d3-474f-b6c4-2eb99cc891ff.png) |
 
+### Tab serarators 
 | Tab Separators Saturation (0%) | Tab Separators Saturation (50%) |
 |---------------------|----------------------|
 | ![изображение](https://user-images.githubusercontent.com/85301851/151209741-97915f54-f259-4950-9287-ab06c2464beb.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151209618-483dfd65-47f7-4b1b-9144-ace111b2ea09.png) |
