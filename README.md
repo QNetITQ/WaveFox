@@ -37,6 +37,15 @@
 |----------------|--------------------------------|
 | ![изображение](https://user-images.githubusercontent.com/85301851/151203456-3ead802b-110c-4687-919f-27cb26076c34.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151203609-e3d723a9-fcc3-4887-a16a-b20e3364dc52.png) |
 
+| No Shadow | Shadow Like Border | Primary 2px, Seconadry 8px |
+|-----------|--------------------|----------------------------|
+| ![изображение](https://user-images.githubusercontent.com/85301851/151204462-0366825f-1df9-47db-924c-bd6f5928178e.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151204663-76cc04e1-aeab-4fbb-845a-e2293ecc5abd.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151204786-67a97aa8-8689-4395-a08f-a2b553b1817f.png) |
+
+| Left Drag Space (0px) | Left Drag Space (40px) | Top Drag Space (0px) | Top Drag Space (8px) | Right Drag Space (0px) | Right Drag Space (40px) |
+|-----------------------|------------------------|----------------------|----------------------|------------------------|-------------------------|
+| ![изображение](https://user-images.githubusercontent.com/85301851/151207587-ee6aac0a-529a-44fa-a349-05a71f7e0e42.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151207693-4ec2cefc-ae72-4bac-aadf-5d03c5821fa8.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151208756-236844a6-c2a2-4275-aadf-245872e5bf43.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151208590-b35da78d-99d2-4815-a465-23bb1cd78b3e.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151208486-ffadb816-5f58-4ba3-9c6f-8da735c1d5e8.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151208387-f6311b91-58d3-474f-b6c4-2eb99cc891ff.png) |
+
+
 ## Supported operating systems
 * Windows 10 and newer (Full support)
 * Linux (Full support)
