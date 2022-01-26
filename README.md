@@ -15,6 +15,15 @@
 | Chrome (Legacy) | ![изображение](https://user-images.githubusercontent.com/85301851/151188819-8ac900d2-f126-4302-8824-f507a80e5f1b.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151188707-3ed5a636-e3d2-456b-9fa7-f7e5f8991b27.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151188546-7abb257c-235a-420e-b841-13657b07968d.png) |
 | Australis | ![изображение](https://user-images.githubusercontent.com/85301851/151189110-5de939b8-f6d4-4a40-930b-f15c07254be5.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151189212-52918558-9969-4127-bc6d-30ab70b73949.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151189329-c6c48d18-091c-4f62-903a-d4dc08eb0ac8.png) |
 
+| Context menus | Light | Dark |
+|---------------|-------|------|
+| No icons       | ![изображение](https://user-images.githubusercontent.com/85301851/151193203-17224f6b-9d15-498b-83ae-9965c26da40c.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151193373-bd4f68f5-69bc-457b-9357-5c5b11ded705.png) |
+| Regular icons  | ![изображение](https://user-images.githubusercontent.com/85301851/151192118-0cbdb5a7-a77f-4275-8841-2ac321657c86.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151192223-e7890752-e992-4e4e-b6d3-6b5e5746954b.png) |
+| Filled icons   | ![изображение](https://user-images.githubusercontent.com/85301851/151192708-5ae7691c-ce07-49d8-b4fb-fc58692b63fe.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151192622-25eb0991-0742-4e55-a88f-4e097fae67d6.png) |
+
+
+
+
 ## Supported operating systems
 * Windows 10 and newer (Full support)
 * Linux (Full support)
