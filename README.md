@@ -67,6 +67,11 @@
 |---------------------|----------------------|
 | ![изображение](https://user-images.githubusercontent.com/85301851/151209741-97915f54-f259-4950-9287-ab06c2464beb.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151209618-483dfd65-47f7-4b1b-9144-ace111b2ea09.png) |
 
+### Tab media icons and status bar
+| Light | Dark |
+|-------|------|
+| ![изображение](https://user-images.githubusercontent.com/85301851/151214450-d31ad03c-71d6-468a-9abb-8a43debf4fb8.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151214537-a130ad46-d57b-498b-ab53-863f9b5203b5.png) |
+
 ### Accent color (Windows 11 / Windows 10)
 | Light | Dark |
 |-------|------|
