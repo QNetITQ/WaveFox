@@ -33,6 +33,10 @@
 |--------------------------------|--------------------------------|--------------------------------|
 | ![изображение](https://user-images.githubusercontent.com/85301851/151201603-b2e264c9-18bd-4be8-be8b-10d43924596e.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151201782-926f3347-578c-4714-a764-d97e467e376a.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151201904-e34bb60f-7db3-4824-8b59-3924124de52c.png) |
 
+| New Tab Button | New Tab Button Like Pinned Tab |
+|----------------|--------------------------------|
+| ![изображение](https://user-images.githubusercontent.com/85301851/151203456-3ead802b-110c-4687-919f-27cb26076c34.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151203609-e3d723a9-fcc3-4887-a16a-b20e3364dc52.png) |
+
 ## Supported operating systems
 * Windows 10 and newer (Full support)
 * Linux (Full support)
