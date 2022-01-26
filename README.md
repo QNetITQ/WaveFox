@@ -21,7 +21,9 @@
 | Regular icons  | ![изображение](https://user-images.githubusercontent.com/85301851/151192118-0cbdb5a7-a77f-4275-8841-2ac321657c86.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151192223-e7890752-e992-4e4e-b6d3-6b5e5746954b.png) |
 | Filled icons   | ![изображение](https://user-images.githubusercontent.com/85301851/151192708-5ae7691c-ce07-49d8-b4fb-fc58692b63fe.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151192622-25eb0991-0742-4e55-a88f-4e097fae67d6.png) |
 
-
+|| Compact Plus | Compact | Normal | Touch |
+|---------|--------------|---------|--------|-------|
+| Density | ![изображение](https://user-images.githubusercontent.com/85301851/151196005-5a35bb8f-faa1-49e1-a092-fffeeb24a6ec.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151195648-d0120335-87d0-41fa-afea-4daa7ae4057b.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151195788-8ed8a19b-64a0-48cc-9383-f582210cf3b3.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151195144-9424311d-fc1e-4d58-b2eb-38c06406dbb8.png) |
 
 
 ## Supported operating systems
