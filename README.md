@@ -90,7 +90,7 @@ The style has not been tested by the author. Visual effects unique to these syst
 The style works only with systems from the list of supported
 
 ## Installation
-1. Download the `chrome` folder and put it in the root folder (also known as the user profile folder)
+1. Download the `chrome` folder and put it in the root folder (also known as the user profile folder. You can easily get there from `about:profiles`)
 2. Go to the `about:config` and switch the keys below:
 * `toolkit.legacyUserProfileCustomizations.stylesheets` > `True`
 * `svg.context-properties.content.enabled` > `True`
