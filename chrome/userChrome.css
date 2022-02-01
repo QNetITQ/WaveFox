@@ -382,7 +382,7 @@
 
 .tabbrowser-tab[visuallyselected] .tab-background
 {
-    filter: var(--special-outer-shadows);
+    filter: var(--special-main-outer-shadow) var(--special-additional-outer-shadow);
 }
 
 .tab-background
@@ -602,7 +602,7 @@
     left: 0%;
     bottom: 0%;
     z-index: 2;
-    box-shadow: var(--tab-bar-inner-shadows);
+    box-shadow: var(--tab-bar-main-inner-shadow), var(--tab-bar-additional-inner-shadow);
     background-repeat: no-repeat;
     pointer-events: none;
 }
