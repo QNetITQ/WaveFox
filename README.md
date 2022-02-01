@@ -40,7 +40,7 @@ Style in progress. This page is also under construction.
 ### Shadows
 There are two shadows available for use. Each shadow is completely independent. In most situations, one shadow is enough, but there are situations where a second shadow can be useful. Shadows are formed from a combination of blur and saturation.
 
-#### Main
+#### Main Shadow
 Blur:
 - Style.Main-Shadow-Blur-Low
 - Style.Main-Shadow-Blur-Medium
@@ -53,7 +53,7 @@ Saturation:
 - Style.Main-Shadow-Saturation-High
 - Style.Main-Shadow-Saturation-Very-High
 
-#### Additional
+#### Additional Shadow
 Blur:
 - Style.Additional-Shadow-Blur-Low
 - Style.Additional-Shadow-Blur-Medium
