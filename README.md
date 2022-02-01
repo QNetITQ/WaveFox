@@ -33,6 +33,60 @@ Style in progress. This page is also under construction.
 | Australis | ![изображение](https://user-images.githubusercontent.com/85301851/151189110-5de939b8-f6d4-4a40-930b-f15c07254be5.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151189212-52918558-9969-4127-bc6d-30ab70b73949.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151189329-c6c48d18-091c-4f62-903a-d4dc08eb0ac8.png) |
 
 ## Optional
+
+
+
+
+### Shadows
+There are two shadows available for use. Each shadow is completely independent. In most situations, one shadow is enough, but there are situations where a second shadow can be useful. Shadows are formed from a combination of blur and saturation.
+
+#### Main
+Blur:
+- Style.Main-Shadow-Blur-Low
+- Style.Main-Shadow-Blur-Medium
+- Style.Main-Shadow-Blur-High
+- Style.Main-Shadow-Blur-Very-High
+
+Saturation:
+- Style.Main-Shadow-Saturation-Low
+- Style.Main-Shadow-Saturation-Medium
+- Style.Main-Shadow-Saturation-High
+- Style.Main-Shadow-Saturation-Very-High
+
+#### Additional
+Blur:
+- Style.Additional-Shadow-Blur-Low
+- Style.Additional-Shadow-Blur-Medium
+- Style.Additional-Shadow-Blur-High
+- Style.Additional-Shadow-Blur-Very-High
+
+Saturation:
+- Style.Additional-Shadow-Saturation-Low
+- Style.Additional-Shadow-Saturation-Medium
+- Style.Additional-Shadow-Saturation-High
+- Style.Additional-Shadow-Saturation-Very-High
+
+
+
+![изображение](https://user-images.githubusercontent.com/85301851/151998586-e480aa60-d487-491b-bfac-802e71aa4649.png)
+![изображение](https://user-images.githubusercontent.com/85301851/151999253-196818ec-0358-4f4e-adb4-3041130ee971.png)
+![изображение](https://user-images.githubusercontent.com/85301851/151999401-e9147e76-592d-46e5-892a-4fad2018016f.png)
+![изображение](https://user-images.githubusercontent.com/85301851/151999547-a75767b5-b860-4d3a-90a7-829519e5f06e.png)
+
+![изображение](https://user-images.githubusercontent.com/85301851/152000900-04da35e0-0eac-480c-a7e8-541669617fca.png)
+![изображение](https://user-images.githubusercontent.com/85301851/152000702-64eb2aae-b178-46b2-a056-69e051b31960.png)
+![изображение](https://user-images.githubusercontent.com/85301851/152000537-fb99f7ce-8f75-4d1e-bc57-5550af307da9.png)
+![изображение](https://user-images.githubusercontent.com/85301851/152000020-3419d09c-fb71-4375-9b4c-545e3bfe07b9.png)
+
+
+
+
+
+
+
+
+
+
 ### Icons in context menus 
 | Context menus | Light | Dark |
 |---------------|-------|------|
