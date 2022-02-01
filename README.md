@@ -116,12 +116,6 @@ You can control this setting in the "Custom settings" at the top of the css file
 |----------------|--------------------------------|
 | ![изображение](https://user-images.githubusercontent.com/85301851/151203456-3ead802b-110c-4687-919f-27cb26076c34.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151203609-e3d723a9-fcc3-4887-a16a-b20e3364dc52.png) |
 
-### Tab bar shadows
-You can control this setting in the "Custom settings" at the top of the css file
-| No Shadow | Shadow Like Border | Primary 2px, Seconadry 8px |
-|-----------|--------------------|----------------------------|
-| ![изображение](https://user-images.githubusercontent.com/85301851/151204462-0366825f-1df9-47db-924c-bd6f5928178e.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151204663-76cc04e1-aeab-4fbb-845a-e2293ecc5abd.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151204786-67a97aa8-8689-4395-a08f-a2b553b1817f.png) |
-
 ### Drag space
 You can control this setting in the "Custom settings" at the top of the css file
 | Left Drag Space (0px) | Left Drag Space (40px) | Top Drag Space (0px) | Top Drag Space (8px) | Right Drag Space (0px) | Right Drag Space (40px) |
