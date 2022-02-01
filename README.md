@@ -40,6 +40,13 @@ Style in progress. This page is also under construction.
 ### Shadows
 There are two shadows available for use. Each shadow is completely independent. In most situations, one shadow is enough, but there are situations where a second shadow can be useful. Shadows are formed from a combination of blur and saturation.
 
+##### Low Blur + Very High Saturation
+![изображение](https://user-images.githubusercontent.com/85301851/152011458-07a0790f-cf1e-4e80-b267-62334a36377c.png)
+##### Very High Blur + Low Saturation
+![изображение](https://user-images.githubusercontent.com/85301851/152011749-4d5619b3-0fd8-40f9-a3dc-96be31839971.png)
+##### A combination of shadows from the screenshots above
+![изображение](https://user-images.githubusercontent.com/85301851/152012361-a2660ff1-eb59-44bf-910b-cf626a0c1d3e.png)
+
 #### Main Shadow
 Blur:
 - Style.Main-Shadow-Blur-Low
@@ -65,27 +72,6 @@ Saturation:
 - Style.Additional-Shadow-Saturation-Medium
 - Style.Additional-Shadow-Saturation-High
 - Style.Additional-Shadow-Saturation-Very-High
-
-
-
-![изображение](https://user-images.githubusercontent.com/85301851/151998586-e480aa60-d487-491b-bfac-802e71aa4649.png)
-![изображение](https://user-images.githubusercontent.com/85301851/151999253-196818ec-0358-4f4e-adb4-3041130ee971.png)
-![изображение](https://user-images.githubusercontent.com/85301851/151999401-e9147e76-592d-46e5-892a-4fad2018016f.png)
-![изображение](https://user-images.githubusercontent.com/85301851/151999547-a75767b5-b860-4d3a-90a7-829519e5f06e.png)
-
-![изображение](https://user-images.githubusercontent.com/85301851/152000900-04da35e0-0eac-480c-a7e8-541669617fca.png)
-![изображение](https://user-images.githubusercontent.com/85301851/152000702-64eb2aae-b178-46b2-a056-69e051b31960.png)
-![изображение](https://user-images.githubusercontent.com/85301851/152000537-fb99f7ce-8f75-4d1e-bc57-5550af307da9.png)
-![изображение](https://user-images.githubusercontent.com/85301851/152000020-3419d09c-fb71-4375-9b4c-545e3bfe07b9.png)
-
-
-
-
-
-
-
-
-
 
 ### Icons in context menus 
 | Context menus | Light | Dark |
