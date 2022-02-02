@@ -371,13 +371,12 @@
 
 .tabbrowser-tab
 {
-    color: inherit !important;
     --tab-label-mask-size: 2em !important;
 }
-
-.tabbrowser-tab[visuallyselected] .tab-stack
+       
+.tabbrowser-tab:not([visuallyselected])
 {
-    color: var(--lwt-tab-text, var(--toolbar-color)) !important;
+    color: inherit !important;
 }
 
 .tabbrowser-tab[visuallyselected] .tab-background
@@ -416,26 +415,6 @@
     border-radius: 50% !important;
 }
 
-/* -------------------- Overflow Mode -------------------- */
-    
-#tabbrowser-tabs[overflow] .tabbrowser-tab:is([visuallyselected],:hover,[multiselected]):not([pinned]) .tab-stack
-{
-    justify-content: center !important;
-}
-
-#tabbrowser-tabs[overflow] .tabbrowser-tab:is([visuallyselected],:hover,[multiselected]):not([pinned]) :is(.tab-throbber, .tab-icon-pending, .tab-icon-image, .tab-sharing-icon-overlay, .tab-icon-overlay)
-{
-    margin-right: 0 !important;
-}
-
-#tabbrowser-tabs[overflow] .tabbrowser-tab:is([visuallyselected],:hover,[multiselected]):not([pinned]) :is(.tab-label-container, .tab-close-button)
-{
-    display: none !important;
-}
-
-/* -------------------- Overflow & Pinned -------------------- */
-
-#tabbrowser-tabs[overflow] .tabbrowser-tab:is([visuallyselected], :hover, [multiselected]) .tab-content,
 .tabbrowser-tab[pinned] .tab-content
 {
     padding: 0 calc((var(--tab-min-height) - 16px) / 2 + var(--pinned-tabs-width-offset)) !important;
@@ -694,16 +673,14 @@ spacer[part="overflow-end-indicator"]
     opacity: var(--separators-color-saturation);
 }
 
-#tabbrowser-tabs:not([overflow])
-    .tabbrowser-tab:is(
+.tabbrowser-tab:is(
         [selected],
         [selected] + .tabbrowser-tab,
         :hover,
         :hover + .tabbrowser-tab,
         [multiselected],
         [multiselected] + .tabbrowser-tab)::before,
-#tabbrowser-tabs:not([overflow])
-    .tabbrowser-tab:is(
+.tabbrowser-tab:is(
         [selected],
         :hover,
         [multiselected])::after
@@ -719,18 +696,6 @@ spacer[part="overflow-end-indicator"]
 .tabbrowser-tab[first-visible-unpinned-tab]::before
 {
     opacity: var(--first-separator-saturation);
-}
-
-#tabbrowser-tabs[overflow] .tabbrowser-tab[first-visible-unpinned-tab]::before,
-#tabbrowser-tabs[overflow] .tabbrowser-tab::after
-{
-    opacity: 0;
-}
-
-#tabbrowser-tabs[overflow] .tabbrowser-tab:active::before
-{
-    opacity: 0;
-    transition-delay: 0.25s;
 }
 
 @media (min-resolution: 1.25dppx)
