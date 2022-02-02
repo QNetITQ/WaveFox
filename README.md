@@ -154,10 +154,3 @@ The new tab button may look like a pinned tab. Create the key below:
 To enable icons, create one of the keys below:
 * `Style.Menu-Icons-Regular` > `True`
 * `Style.Menu-Icons-Filled` > `True`
-
-## Tabs (Overflow mode)
-Removed the ability to close tabs with the left mouse button in overflow mode to protect the user from accidental actions. Use the methods below to close tabs:
-* Through the context menu
-* By clicking on the mouse wheel
-* `browser.tabs.closeTabByDblclick` > `True`
-* `Ctrl + W` / `Command + W` closes the current tab
