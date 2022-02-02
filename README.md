@@ -2,6 +2,12 @@
 Style in progress. This page is also under construction. 
 
 ## Installation
+0. Minimum Requirements:
+- Firefox 96.0.2 and newer
+- Windows 7 and newer
+- MacOS 11 and newer
+- Linux
+
 1. Download the `chrome` folder and put it in the root folder (Also known as the user profile folder. You can easily get there from `about:profiles`)
 2. Go to `about:config` and activate the keys below:
 * `toolkit.legacyUserProfileCustomizations.stylesheets`
@@ -125,23 +131,6 @@ Accent color only works with system theme
 |-------|------|
 | ![изображение](https://user-images.githubusercontent.com/85301851/151212851-3aee4b2d-3766-47de-b701-1978ff7c6648.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151213171-70c40b46-24ff-4e19-868a-e9cf902ad2aa.png) |
 
-
-
-
-## Supported operating systems
-* Windows 10 and newer (Full support)
-* Linux (Full support)
-* MacOS 11 and newer (Partial support)
-* Windows 7/8 (Partial support)
-
-#### Full support
-The style was tested by the author. All visuals are supported and updated as needed
-
-#### Partial support
-The style has not been tested by the author. Visual effects unique to these systems (Aero / Vibrancy, etc.) are not supported, but will work if Mozilla activates them by default
-
-#### Unsupported systems
-The style works only with systems from the list of supported
 
 -----------------------------------------------
 
