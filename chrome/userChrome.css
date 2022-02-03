@@ -691,22 +691,34 @@ spacer[part="overflow-end-indicator"]
 
 @supports -moz-bool-pref("Style.Separators-Saturation-Low")
 {
-    --separators-color-saturation: 0.25;
+    :root
+    {
+        --separators-color-saturation: 0.25;
+    }
 }
 
 @supports -moz-bool-pref("Style.Separators-Saturation-Normal")
 {
-    --separators-color-saturation: 0.5;
+    :root
+    {
+        --separators-color-saturation: 0.5;
+    }
 }
 
 @supports -moz-bool-pref("Style.Separators-Saturation-High")
 {
-    --separators-color-saturation: 0.75;
+    :root
+    {
+        --separators-color-saturation: 0.75;
+    }
 }
 
 @supports -moz-bool-pref("Style.Separators-Saturation-Very-High")
 {
-    --separators-color-saturation: 1.0;
+    :root
+    {
+        --separators-color-saturation: 1;
+    }
 }
 
 @supports -moz-bool-pref("Style.Disable-First-Separator")
