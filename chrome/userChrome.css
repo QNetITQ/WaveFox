@@ -22,10 +22,6 @@
     --top-side-drag-space-maximized:         0px;
     --top-side-drag-space-menubar-titlebar:  8px;
     --pinned-tabs-width-offset:              0px;
-
-    /* ---------- Tab separators ---------- */
-    --separators-color-saturation:           50%;
-    --first-separator-saturation:            50%;
 }
 
 /* -------------------- Context Menu -------------------- */
@@ -670,7 +666,7 @@ spacer[part="overflow-end-indicator"]
     position: absolute;
     width: 1px;
     background-image: linear-gradient(transparent 25%, currentColor 25%, currentColor 75%, transparent 75%);
-    opacity: var(--separators-color-saturation);
+    opacity: var(--separators-color-saturation, 0);
 }
 
 .tabbrowser-tab:is(
@@ -685,7 +681,7 @@ spacer[part="overflow-end-indicator"]
         :hover,
         [multiselected])::after
 {
-    opacity: 0;
+    opacity: 0 !important;
 }
 
 .tabbrowser-tab::after
@@ -693,9 +689,32 @@ spacer[part="overflow-end-indicator"]
     margin-left: -1px;
 }
 
-.tabbrowser-tab[first-visible-unpinned-tab]::before
+@supports -moz-bool-pref("Style.Separators-Saturation-Low")
 {
-    opacity: var(--first-separator-saturation);
+    --separators-color-saturation: 0.25;
+}
+
+@supports -moz-bool-pref("Style.Separators-Saturation-Normal")
+{
+    --separators-color-saturation: 0.5;
+}
+
+@supports -moz-bool-pref("Style.Separators-Saturation-High")
+{
+    --separators-color-saturation: 0.75;
+}
+
+@supports -moz-bool-pref("Style.Separators-Saturation-Very-High")
+{
+    --separators-color-saturation: 1.0;
+}
+
+@supports -moz-bool-pref("Style.Disable-First-Separator")
+{
+    #tabbrowser-tabs:not([overflow]) .tabbrowser-tab[first-visible-unpinned-tab]::before
+    {
+        opacity: 0;
+    }
 }
 
 @media (min-resolution: 1.25dppx)
