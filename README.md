@@ -92,9 +92,9 @@ Saturation:
 It is possible to set the saturation of tab separators and disable the first separator.
 
 ##### Low Saturation
-![изображение](https://user-images.githubusercontent.com/85301851/152350495-56ac7899-9c99-468c-b204-8d18a8ab3907.png)
+![изображение](https://user-images.githubusercontent.com/85301851/152351312-f6ad4578-e7d5-40b7-8b2d-49388a750f54.png)
 ##### Very High Saturation
-![изображение](https://user-images.githubusercontent.com/85301851/152350640-f0ae8f96-f54d-424a-aaa0-9c91dbe8c3bb.png)
+![изображение](https://user-images.githubusercontent.com/85301851/152351155-3f7e22a7-b7f0-453a-88ff-0b708b50a955.png)
 
 #### Separators
 
