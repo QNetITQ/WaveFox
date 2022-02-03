@@ -79,6 +79,39 @@ Saturation:
 - Style.Additional-Shadow-Saturation-High
 - Style.Additional-Shadow-Saturation-Very-High
 
+
+
+
+
+
+
+
+
+
+### Separators
+It is possible to set the saturation of tab separators and disable the first separator.
+
+##### Low Saturation
+
+##### Very High Saturation
+
+#### Separators
+
+- Style.Separators-Saturation-Low
+- Style.Separators-Saturation-Normal
+- Style.Separators-Saturation-High
+- Style.Separators-Saturation-Very-High
+- Style.Disable-First-Separator
+
+
+
+
+
+
+
+
+
+
 ### Icons in context menus 
 | Context menus | Light | Dark |
 |---------------|-------|------|
