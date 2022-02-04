@@ -47,15 +47,6 @@
     --win11-win10-context-menu-margin-padding:    8px;
 }
 
-/* -------------------- Repository -------------------- */
-
-:root[lwtheme-image]
-{
-    /* ---------- Selected tab indicator ---------- */
-    --tab-indicator-color: var(--toolbarbutton-icon-fill);
-    --tab-indicator-saturation: 100%;
-}
-
 /* ------------------------------------------------------------------------------------------------- */
 
 /* ---------------------------------------- Shadows ---------------------------------------- */
@@ -289,6 +280,54 @@
         {
             --additional-shadow-color: rgba(0,0,0,1.0);
         }
+    }
+}
+
+/* ---------------------------------------- AMO ---------------------------------------- */
+
+@supports -moz-bool-pref("Style.AMO-Tab-Frame")
+{
+    :root[lwtheme-image]
+    {
+        --tab-indicator-color: var(--toolbarbutton-icon-fill);
+    }
+}
+
+@supports -moz-bool-pref("Style.Proton")
+{
+    :root[lwtheme-image] .tabbrowser-tab[visuallyselected] .tab-background
+    {
+        box-shadow: inset 0 0 0 2px var(--tab-indicator-color) !important;
+    }
+}
+
+@supports -moz-bool-pref("Style.Photon")
+{
+    :root[lwtheme-image] .tabbrowser-tab[visuallyselected] .tab-background
+    {
+        box-shadow: inset 0 2px 0 0 var(--tab-indicator-color), inset 2px 0 0 0 var(--tab-indicator-color), inset -2px 0 0 0 var(--tab-indicator-color) !important;
+    }
+}
+
+@supports -moz-bool-pref("Style.WaveFox") or
+          -moz-bool-pref("Style.Australis") or
+          -moz-bool-pref("Style.Chrome") or
+          -moz-bool-pref("Style.Chrome-Old") or
+          -moz-bool-pref("Style.Edge")
+{
+    :root[lwtheme-image] .tabbrowser-tab[visuallyselected] .tab-background::before,
+    :root[lwtheme-image] .tabbrowser-tab[visuallyselected] .tab-background::after
+    {
+        stroke: var(--tab-indicator-color);
+    }
+
+    :root[lwtheme-image] .tabbrowser-tab[visuallyselected] .tab-background
+    {
+        background-color: var(--toolbar-bgcolor) !important;
+        background-image: var(--middle-svg) !important;
+        stroke: var(--tab-indicator-color) !important;
+        fill: transparent !important;
+        -moz-context-properties: fill, stroke !important;
     }
 }
 
@@ -1036,51 +1075,6 @@ spacer[part="overflow-end-indicator"]
     .tabbrowser-tab[last-visible-tab]
     {
         margin-right: calc(var(--tab-min-height) / 4) !important;
-    }
-}
-
-/* -------------------- Repository -------------------- */
-
-:root[lwtheme-image]
-{
-    --tab-indicator: color-mix(in srgb, var(--tab-indicator-color) var(--tab-indicator-saturation), transparent);
-}
-
-@supports -moz-bool-pref("Style.Proton")
-{
-    :root[lwtheme-image] .tabbrowser-tab[visuallyselected] .tab-background
-    {
-        box-shadow: inset 0 0 0 2px var(--tab-indicator) !important;
-    }
-}
-
-@supports -moz-bool-pref("Style.Photon")
-{
-    :root[lwtheme-image] .tabbrowser-tab[visuallyselected] .tab-background
-    {
-        box-shadow: inset 0 2px 0 0 var(--tab-indicator), inset 2px 0 0 0 var(--tab-indicator), inset -2px 0 0 0 var(--tab-indicator) !important;
-    }
-}
-
-@supports -moz-bool-pref("Style.WaveFox") or
-          -moz-bool-pref("Style.Australis") or
-          -moz-bool-pref("Style.Chrome") or
-          -moz-bool-pref("Style.Chrome-Old") or
-          -moz-bool-pref("Style.Edge")
-{
-    :root[lwtheme-image] .tabbrowser-tab[visuallyselected] .tab-background::before,
-    :root[lwtheme-image] .tabbrowser-tab[visuallyselected] .tab-background::after
-    {
-        stroke: var(--tab-indicator);
-    }
-
-    :root[lwtheme-image] .tabbrowser-tab[visuallyselected] .tab-background
-    {
-        background-color: var(--toolbar-bgcolor) !important;
-        background-image: var(--middle-svg) !important;
-        stroke: var(--tab-indicator) !important;
-        fill: transparent !important;
-        -moz-context-properties: fill, stroke !important;
     }
 }
 
