@@ -196,7 +196,3 @@ Tabs can be made even more compact. Create the key below:
 
 The new tab button may look like a pinned tab. Create the key below:
 * `Style.New-Tab-Button-Like-Pinned-Tab` > `True`
-
-To enable icons, create one of the keys below:
-* `Style.Menu-Icons-Regular` > `True`
-* `Style.Menu-Icons-Filled` > `True`
