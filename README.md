@@ -55,29 +55,29 @@ There are two shadows available for use. Each shadow is completely independent. 
 
 #### Main Shadow
 Blur:
-- Style.Main-Shadow-Blur-Low
-- Style.Main-Shadow-Blur-Medium
-- Style.Main-Shadow-Blur-High
-- Style.Main-Shadow-Blur-Very-High
+- `Style.Main-Shadow-Blur-Low`
+- `Style.Main-Shadow-Blur-Medium`
+- `Style.Main-Shadow-Blur-High`
+- `Style.Main-Shadow-Blur-Very-High`
 
 Saturation:
-- Style.Main-Shadow-Saturation-Low
-- Style.Main-Shadow-Saturation-Medium
-- Style.Main-Shadow-Saturation-High
-- Style.Main-Shadow-Saturation-Very-High
+- `Style.Main-Shadow-Saturation-Low`
+- `Style.Main-Shadow-Saturation-Medium`
+- `Style.Main-Shadow-Saturation-High`
+- `Style.Main-Shadow-Saturation-Very-High`
 
 #### Additional Shadow
 Blur:
-- Style.Additional-Shadow-Blur-Low
-- Style.Additional-Shadow-Blur-Medium
-- Style.Additional-Shadow-Blur-High
-- Style.Additional-Shadow-Blur-Very-High
+- `Style.Additional-Shadow-Blur-Low`
+- `Style.Additional-Shadow-Blur-Medium`
+- `Style.Additional-Shadow-Blur-High`
+- `Style.Additional-Shadow-Blur-Very-High`
 
 Saturation:
-- Style.Additional-Shadow-Saturation-Low
-- Style.Additional-Shadow-Saturation-Medium
-- Style.Additional-Shadow-Saturation-High
-- Style.Additional-Shadow-Saturation-Very-High
+- `Style.Additional-Shadow-Saturation-Low`
+- `Style.Additional-Shadow-Saturation-Medium`
+- `Style.Additional-Shadow-Saturation-High`
+- `Style.Additional-Shadow-Saturation-Very-High`
 
 
 
@@ -98,11 +98,11 @@ It is possible to set the saturation of tab separators and disable the first sep
 
 #### Separators
 
-- Style.Separators-Saturation-Low
-- Style.Separators-Saturation-Normal
-- Style.Separators-Saturation-High
-- Style.Separators-Saturation-Very-High
-- Style.Disable-First-Separator
+- `Style.Separators-Saturation-Low`
+- `Style.Separators-Saturation-Normal`
+- `Style.Separators-Saturation-High`
+- `Style.Separators-Saturation-Very-High`
+- `Style.Disable-First-Separator`
 
 ### AMO
 Compatible with AMO. Since shadows do not work with these themes, the selected tab may be hard to see. It is possible to activate the tab frame for better visibility.
@@ -114,7 +114,7 @@ Compatible with AMO. Since shadows do not work with these themes, the selected t
 
 #### AMO Tab Frame
 
-- Style.AMO-Tab-Frame
+- `Style.AMO-Tab-Frame`
 
 
 
@@ -133,12 +133,27 @@ Compatible with AMO. Since shadows do not work with these themes, the selected t
 
 
 
-### Icons in context menus 
-| Context menus | Light | Dark |
-|---------------|-------|------|
-| No icons       | ![изображение](https://user-images.githubusercontent.com/85301851/151193203-17224f6b-9d15-498b-83ae-9965c26da40c.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151193373-bd4f68f5-69bc-457b-9357-5c5b11ded705.png) |
-| Regular icons  | ![изображение](https://user-images.githubusercontent.com/85301851/151192118-0cbdb5a7-a77f-4275-8841-2ac321657c86.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151192223-e7890752-e992-4e4e-b6d3-6b5e5746954b.png) |
-| Filled icons   | ![изображение](https://user-images.githubusercontent.com/85301851/151192708-5ae7691c-ce07-49d8-b4fb-fc58692b63fe.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151192622-25eb0991-0742-4e55-a88f-4e097fae67d6.png) |
+### Icons
+There are two types of fluent style icons from Microsoft.
+
+| Regular | Filled |
+|---------|--------|
+| ![изображение](https://user-images.githubusercontent.com/85301851/151192118-0cbdb5a7-a77f-4275-8841-2ac321657c86.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151192708-5ae7691c-ce07-49d8-b4fb-fc58692b63fe.png) |
+
+#### Icons
+- `Style.Menu-Icons-Regular`
+- `Style.Menu-Icons-Filled`
+
+
+
+
+
+
+
+
+
+
+
 
 ### Various interface densities
 | Compact Plus | Compact | Normal | Touch |
