@@ -61,5 +61,14 @@
             --align-menu-icons: -2px 6px -2px -2px;
         }
     }
+    
+    @media (-moz-windows-non-native-menus)
+    {
+        menupopup[needsgutter] menu:not([icon], .menu-iconic),
+        menupopup[needsgutter] menuitem:not([checked="true"], [icon], .menuitem-iconic)
+        {
+            padding-inline-start: 1em !important;
+        }
+    }
 
 }
