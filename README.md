@@ -104,17 +104,6 @@ Compatible with AMO. Since shadows do not work with these themes, the selected t
 
 - `Style.AMO-Tab-Frame`
 
-### Icons
-There are two types of fluent style icons from Microsoft.
-
-| Regular | Filled |
-|---------|--------|
-| ![изображение](https://user-images.githubusercontent.com/85301851/151192118-0cbdb5a7-a77f-4275-8841-2ac321657c86.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151192708-5ae7691c-ce07-49d8-b4fb-fc58692b63fe.png) |
-
-#### Icons
-- `Style.Menu-Icons-Regular`
-- `Style.Menu-Icons-Filled`
-
 ### Density
 By default, context menus follow the selected interface density, but it is possible to set a fixed size.
 
@@ -126,6 +115,17 @@ By default, context menus follow the selected interface density, but it is possi
 - `Style.Context-Menus-Compact`
 - `Style.Context-Menus-Normal`
 - `Style.Context-Menus-Touch`
+
+### Icons
+There are two types of fluent style icons from Microsoft.
+
+| Regular | Filled |
+|---------|--------|
+| ![изображение](https://user-images.githubusercontent.com/85301851/151192118-0cbdb5a7-a77f-4275-8841-2ac321657c86.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151192708-5ae7691c-ce07-49d8-b4fb-fc58692b63fe.png) |
+
+#### Icons
+- `Style.Menu-Icons-Regular`
+- `Style.Menu-Icons-Filled`
 
 
 
