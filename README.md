@@ -40,9 +40,6 @@ Style in progress. This page is also under construction.
 
 ## Optional
 
-
-
-
 ### Shadows
 There are two shadows available for use. Each shadow is completely independent. In most situations, one shadow is enough, but there are situations where a second shadow can be useful. Shadows are formed from a combination of blur and saturation.
 
@@ -79,15 +76,6 @@ Saturation:
 - `Style.Additional-Shadow-Saturation-High`
 - `Style.Additional-Shadow-Saturation-Very-High`
 
-
-
-
-
-
-
-
-
-
 ### Separators
 It is possible to set the saturation of tab separators and disable the first separator.
 
@@ -116,23 +104,6 @@ Compatible with AMO. Since shadows do not work with these themes, the selected t
 
 - `Style.AMO-Tab-Frame`
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ### Icons
 There are two types of fluent style icons from Microsoft.
 
@@ -143,6 +114,19 @@ There are two types of fluent style icons from Microsoft.
 #### Icons
 - `Style.Menu-Icons-Regular`
 - `Style.Menu-Icons-Filled`
+
+### Density
+By default, context menus follow the selected interface density, but it is possible to set a fixed size.
+
+| Compact | Normal | Touch |
+|---------|--------|-------|
+| ![изображение](https://user-images.githubusercontent.com/85301851/152645825-7d351e3e-b938-4fa1-a460-1f699ed1c3c6.png) | ![изображение](https://user-images.githubusercontent.com/85301851/152645878-d917e841-837a-4a11-8fc1-ce0fc2262aef.png) | ![изображение](https://user-images.githubusercontent.com/85301851/152645915-833c1b22-e320-445f-817e-408ea26f7605.png) |
+
+#### Density
+- `Style.Context-Menus-Compact`
+- `Style.Context-Menus-Normal`
+- `Style.Context-Menus-Touch`
+
 
 
 
