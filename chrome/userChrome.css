@@ -24,29 +24,6 @@
     --pinned-tabs-width-offset:              0px;
 }
 
-/* -------------------- Context Menu -------------------- */
-
-:root[uidensity="compact"]
-{
-    /* ---------- Compact mode ---------- */
-    --browser-context-menu-margin-padding:        4px;
-    --win11-win10-context-menu-margin-padding:    4px;
-}
-
-:root
-{
-    /* ---------- Normal mode ---------- */
-    --browser-context-menu-margin-padding:        6px;
-    --win11-win10-context-menu-margin-padding:    6px;
-}
-
-:root[uidensity="touch"]
-{
-    /* ---------- Touch mode ---------- */
-    --browser-context-menu-margin-padding:        8px;
-    --win11-win10-context-menu-margin-padding:    8px;
-}
-
 /* ------------------------------------------------------------------------------------------------- */
 
 /* ---------------------------------------- Shadows ---------------------------------------- */
@@ -352,44 +329,44 @@
     --tab-min-height: 40px !important;
 }
 
-/* ---------------------------------------- Context menus (Not os related) ---------------------------------------- */
+/* ---------------------------------------- Context Menus (Not System Related) ---------------------------------------- */
 
-:root
+@supports -moz-bool-pref("Style.Context-Menus-Compact") or
+          -moz-bool-pref("Style.Context-Menus-Normal") or
+          -moz-bool-pref("Style.Context-Menus-Touch")
 {
-    --arrowpanel-menuitem-margin: 0 var(--browser-context-menu-margin-padding) !important;
-    --arrowpanel-menuitem-padding-block: var(--browser-context-menu-margin-padding) !important;
-    --arrowpanel-menuitem-padding-inline: var(--browser-context-menu-margin-padding) !important;
-    --panel-separator-margin-vertical: var(--browser-context-menu-margin-padding) !important;
-    --panel-separator-margin-horizontal: var(--browser-context-menu-margin-padding) !important;
-    --panel-subview-body-padding: var(--browser-context-menu-margin-padding) 0 !important;
+    :root
+    {
+        --arrowpanel-menuitem-margin: 0 var(--browser-context-menu-margin-padding) !important;
+        --arrowpanel-menuitem-padding-block: var(--browser-context-menu-margin-padding) !important;
+        --arrowpanel-menuitem-padding-inline: var(--browser-context-menu-margin-padding) !important;
+        --panel-separator-margin-vertical: var(--browser-context-menu-margin-padding) !important;
+        --panel-separator-margin-horizontal: var(--browser-context-menu-margin-padding) !important;
+        --panel-subview-body-padding: var(--browser-context-menu-margin-padding) 0 !important;
+    }
 }
 
-/* ---------------------------------------- Context menus (Os related) ---------------------------------------- */
-
-@media (-moz-os-version: windows-win10)
+@supports -moz-bool-pref("Style.Context-Menus-Compact")
 {
-    @media (-moz-windows-non-native-menus)
+    :root
     {
-        menupopup:not(.in-menulist)
-        {
-            --panel-padding: var(--win11-win10-context-menu-margin-padding) 0 !important;
-        }
+        --browser-context-menu-margin-padding: 4px;
+    }
+}
 
-        menupopup:not(.in-menulist) :is(menuitem, menu)
-        {
-            padding-block: var(--win11-win10-context-menu-margin-padding) !important;
-        }
+@supports -moz-bool-pref("Style.Context-Menus-Normal")
+{
+    :root
+    {
+        --browser-context-menu-margin-padding: 6px;
+    }
+}
 
-        menupopup[needsgutter] menu:not([icon], .menu-iconic),
-        menupopup[needsgutter] menuitem:not([checked="true"], [icon], .menuitem-iconic)
-        {
-            padding-inline-start: 1em !important;
-        }
-
-        #context-navigation:not([hidden])
-        {
-            padding-bottom: var(--win11-win10-context-menu-margin-padding) !important;
-        }
+@supports -moz-bool-pref("Style.Context-Menus-Touch")
+{
+    :root
+    {
+        --browser-context-menu-margin-padding: 8px;
     }
 }
 
