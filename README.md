@@ -144,11 +144,46 @@ There are two types of fluent style icons from Microsoft.
 |--------------|---------|--------|-------|
 | ![изображение](https://user-images.githubusercontent.com/85301851/151196005-5a35bb8f-faa1-49e1-a092-fffeeb24a6ec.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151195648-d0120335-87d0-41fa-afea-4daa7ae4057b.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151195788-8ed8a19b-64a0-48cc-9383-f582210cf3b3.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151195144-9424311d-fc1e-4d58-b2eb-38c06406dbb8.png) |
 
-### Managing the width of pinned tabs 
-You can control this setting in the "Custom settings" at the top of the css file
-| Pinned Tabs Width Offset (0px) | Pinned Tabs Width Offset (2px) | Pinned Tabs Width Offset (4px) |
-|--------------------------------|--------------------------------|--------------------------------|
-| ![изображение](https://user-images.githubusercontent.com/85301851/151201603-b2e264c9-18bd-4be8-be8b-10d43924596e.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151201782-926f3347-578c-4714-a764-d97e467e376a.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151201904-e34bb60f-7db3-4824-8b59-3924124de52c.png) |
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Pinned Tabs 
+Ability to control the width of pinned tabs
+
+##### No Offset
+![изображение](https://user-images.githubusercontent.com/85301851/152679216-f1303454-5f42-487b-854e-9f6874a46759.png)
+
+##### Very High Offset
+![изображение](https://user-images.githubusercontent.com/85301851/152679258-37628eff-ac26-4dab-b90f-838687867d79.png)
+
+#### Pinned Tabs Width
+- `Style.Pinned-Tabs-Width-Offset-Low`
+- `Style.Pinned-Tabs-Width-Offset-Medium`
+- `Style.Pinned-Tabs-Width-Offset-High`
+- `Style.Pinned-Tabs-Width-Offset-Very-High`
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### New Tab Button Like Pinned Tab
 | New Tab Button | New Tab Button Like Pinned Tab |
