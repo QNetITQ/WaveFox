@@ -9,22 +9,6 @@
        (-moz-mac-big-sur-theme)
 {
 
-/* ---------------------------------------- Custom settings ---------------------------------------- */
-
-:root
-{
-    /* ---------- Drag space ---------- */
-    --left-side-drag-space:                  40px;
-    --right-side-drag-space:                 40px;
-
-    /* ----- Tabs ----- */
-    --top-side-drag-space-windowed:          8px;
-    --top-side-drag-space-maximized:         0px;
-    --top-side-drag-space-menubar-titlebar:  8px;
-}
-
-/* ------------------------------------------------------------------------------------------------- */
-
 /* ---------------------------------------- Shadows ---------------------------------------- */
 
 /* -------------------- Main Shadow -------------------- */
@@ -408,6 +392,74 @@
     padding: 0 calc((var(--tab-min-height) - 16px) / 2 + var(--pinned-tabs-width-offset, 0px)) !important;
 }
 
+/* ---------------------------------------- Drag Space ---------------------------------------- */
+
+@supports -moz-bool-pref("Style.Left-Drag-Space-Disabled")
+{
+    .titlebar-spacer[type="pre-tabs"]
+    {
+        display: none !important;
+    }
+}
+
+@supports -moz-bool-pref("Style.Right-Drag-Space-Disabled")
+{
+    .titlebar-spacer[type="post-tabs"]
+    {
+        display: none !important;
+    }
+}
+
+@supports -moz-bool-pref("Style.Drag-Space-Above-Tabs-All-States-Disabled")
+{
+    :root
+    {
+        --drag-space-above-tabs: 0px;
+    }
+}
+
+@supports -moz-bool-pref("Style.Drag-Space-Above-Tabs-All-States-Enabled")
+{
+    :root
+    {
+        --drag-space-above-tabs: 8px;
+    }
+}
+
+:root[sizemode="normal"],
+:root:not([tabsintitlebar]),
+#toolbar-menubar:not([autohide][inactive]) + #TabsToolbar
+{
+    --drag-space: var(--drag-space-above-tabs, 8px);
+}
+
+:root[sizemode="maximized"],
+:root[sizemode="fullscreen"]
+{
+    --drag-space: var(--drag-space-above-tabs, 0px);
+}
+
+#TabsToolbar :is(.tabbrowser-tab, .toolbarbutton-1, separator, #personal-bookmarks, #search-container, .accessibility-indicator, .private-browsing-indicator)
+{
+    margin-top: var(--drag-space) !important;
+}
+
+/* ---------- Shadow DOM ---------- */
+
+#tabbrowser-arrowscrollbox[overflowing]
+{
+    --margin-top: var(--drag-space) !important;
+    --toolbarbutton-inner-padding: 0px !important;
+}
+
+#scrollbutton-up,
+#scrollbutton-down,
+spacer[part="overflow-start-indicator"],
+spacer[part="overflow-end-indicator"]
+{
+    margin-top: var(--margin-top, revert) !important;
+}
+
 /* ---------------------------------------- Titlebar ---------------------------------------- */
 
 :root:not([lwtheme-image]) #titlebar
@@ -638,39 +690,6 @@
 
 /* ---------------------------------------- Indents ---------------------------------------- */
 
-/* ---------- Tab Bar ---------- */
-
-.titlebar-spacer[type="pre-tabs"]
-{
-    width: var(--left-side-drag-space) !important;
-}
-
-.titlebar-spacer[type="post-tabs"]
-{
-    width: var(--right-side-drag-space) !important;
-}
-
-:root[sizemode="normal"]
-{
-    --drag-space: var(--top-side-drag-space-windowed);
-}
-
-:root[sizemode="maximized"]
-{
-    --drag-space: var(--top-side-drag-space-maximized);
-}
-
-:root:not([tabsintitlebar]),
-#toolbar-menubar:not([autohide][inactive]) + #TabsToolbar
-{
-    --drag-space: var(--top-side-drag-space-menubar-titlebar);
-}
-
-#TabsToolbar :is(.tabbrowser-tab, .toolbarbutton-1, separator, #personal-bookmarks, #search-container, .accessibility-indicator, .private-browsing-indicator)
-{
-    margin-top: var(--drag-space) !important;
-}
-
 #TabsToolbar-customization-target > :is(toolbarbutton, toolbaritem):first-child,
 #TabsToolbar-customization-target > toolbarpaletteitem:first-child > :is(toolbarbutton, toolbaritem)
 {
@@ -687,22 +706,6 @@
 #tabbrowser-tabs:not([overflow]) .tabbrowser-tab[first-visible-unpinned-tab]
 {
     margin-left: 0 !important;
-}
-
-/* ---------- Shadow DOM ---------- */
-
-#tabbrowser-arrowscrollbox[overflowing]
-{
-    --margin-top: var(--drag-space) !important;
-    --toolbarbutton-inner-padding: 0px !important;
-}
-
-#scrollbutton-up,
-#scrollbutton-down,
-spacer[part="overflow-start-indicator"],
-spacer[part="overflow-end-indicator"]
-{
-    margin-top: var(--margin-top, revert) !important;
 }
 
 /* ---------------------------------------- Separators ---------------------------------------- */
