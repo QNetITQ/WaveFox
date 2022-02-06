@@ -473,12 +473,13 @@ spacer[part="overflow-end-indicator"]
 
 .tabbrowser-tab
 {
-    --tab-label-mask-size: 2em !important;
+    --tab-label-mask-size: 1em !important;
+    color: inherit !important;
 }
        
-.tabbrowser-tab:not([visuallyselected])
+.tabbrowser-tab[visuallyselected]
 {
-    color: inherit !important;
+    color: var(--lwt-tab-text, var(--toolbar-color)) !important;
 }
 
 .tabbrowser-tab[visuallyselected] .tab-background
@@ -634,7 +635,6 @@ spacer[part="overflow-end-indicator"]
     height: 16px !important;
     line-height: 16px !important;
     margin-block: 2px -6px !important;
-    font-size: xx-small !important;
 }
 
 /* ---------- Picture-In-Picture ---------- */
