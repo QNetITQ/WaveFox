@@ -128,7 +128,7 @@ There are two types of fluent style icons from Microsoft.
 - `Style.Menu-Icons-Filled`
 
 ### Pinned Tabs 
-Ability to control the width of pinned tabs
+Ability to control the width of pinned tabs.
 
 ##### No Offset
 ![изображение](https://user-images.githubusercontent.com/85301851/152679216-f1303454-5f42-487b-854e-9f6874a46759.png)
@@ -148,41 +148,49 @@ Ability to control the width of pinned tabs
 
 
 
+### Drag Space
+Added the ability to force drag space on or off.
 
-### Various interface densities
-| Compact Plus | Compact | Normal | Touch |
-|--------------|---------|--------|-------|
-| ![изображение](https://user-images.githubusercontent.com/85301851/151196005-5a35bb8f-faa1-49e1-a092-fffeeb24a6ec.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151195648-d0120335-87d0-41fa-afea-4daa7ae4057b.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151195788-8ed8a19b-64a0-48cc-9383-f582210cf3b3.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151195144-9424311d-fc1e-4d58-b2eb-38c06406dbb8.png) |
+##### No Drag Space
 
+##### Drag Space Above Tabs
 
-
-
-
-
-
-
-
+#### Drag Space
+- `Style.Left-Drag-Space-Disabled`
+- `Style.Right-Drag-Space-Disabled`
+- `Style.Drag-Space-Above-Tabs-All-States-Disabled`
+- `Style.Drag-Space-Above-Tabs-All-States-Enabled`
 
 
 
 
 
-### New Tab Button Like Pinned Tab
-| New Tab Button | New Tab Button Like Pinned Tab |
-|----------------|--------------------------------|
-| ![изображение](https://user-images.githubusercontent.com/85301851/151203456-3ead802b-110c-4687-919f-27cb26076c34.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151203609-e3d723a9-fcc3-4887-a16a-b20e3364dc52.png) |
-
-### Drag space
-You can control this setting in the "Custom settings" at the top of the css file
-| Left Drag Space (0px) | Left Drag Space (40px) | Top Drag Space (0px) | Top Drag Space (8px) | Right Drag Space (0px) | Right Drag Space (40px) |
-|-----------------------|------------------------|----------------------|----------------------|------------------------|-------------------------|
-| ![изображение](https://user-images.githubusercontent.com/85301851/151207587-ee6aac0a-529a-44fa-a349-05a71f7e0e42.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151207693-4ec2cefc-ae72-4bac-aadf-5d03c5821fa8.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151208756-236844a6-c2a2-4275-aadf-245872e5bf43.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151208590-b35da78d-99d2-4815-a465-23bb1cd78b3e.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151208486-ffadb816-5f58-4ba3-9c6f-8da735c1d5e8.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151208387-f6311b91-58d3-474f-b6c4-2eb99cc891ff.png) |
 
 
------------------------------------------------
 
-Tabs can be made even more compact. Create the key below:
-* `Style.Compact-Plus` > `True`
 
-The new tab button may look like a pinned tab. Create the key below:
-* `Style.New-Tab-Button-Like-Pinned-Tab` > `True`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Experemental
+#### New Tab Button Like Pinned Tab
+![изображение](https://user-images.githubusercontent.com/85301851/151203609-e3d723a9-fcc3-4887-a16a-b20e3364dc52.png)
+- `Style.New-Tab-Button-Like-Pinned-Tab`
+
+#### Compact Plus
+![изображение](https://user-images.githubusercontent.com/85301851/151196005-5a35bb8f-faa1-49e1-a092-fffeeb24a6ec.png)
+- `Style.Compact-Plus`
