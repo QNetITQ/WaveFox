@@ -142,18 +142,14 @@ Ability to control the width of pinned tabs.
 - `Style.Pinned-Tabs-Width-Offset-High`
 - `Style.Pinned-Tabs-Width-Offset-Very-High`
 
-
-
-
-
-
-
 ### Drag Space
 Added the ability to force drag space on or off.
 
 ##### No Drag Space
+![изображение](https://user-images.githubusercontent.com/85301851/152680181-ccc799aa-3d86-4621-9932-f17f75a36272.png)
 
 ##### Drag Space Above Tabs
+![изображение](https://user-images.githubusercontent.com/85301851/152680229-43547df0-1d2c-4384-b024-950e7aa56ca6.png)
 
 #### Drag Space
 - `Style.Left-Drag-Space-Disabled`
