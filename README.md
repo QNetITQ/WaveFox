@@ -127,10 +127,20 @@ There are two types of fluent style icons from Microsoft.
 - `Style.Menu-Icons-Regular`
 - `Style.Menu-Icons-Filled`
 
+### Pinned Tabs 
+Ability to control the width of pinned tabs
 
+##### No Offset
+![изображение](https://user-images.githubusercontent.com/85301851/152679216-f1303454-5f42-487b-854e-9f6874a46759.png)
 
+##### Very High Offset
+![изображение](https://user-images.githubusercontent.com/85301851/152679258-37628eff-ac26-4dab-b90f-838687867d79.png)
 
-
+#### Pinned Tabs Width
+- `Style.Pinned-Tabs-Width-Offset-Low`
+- `Style.Pinned-Tabs-Width-Offset-Medium`
+- `Style.Pinned-Tabs-Width-Offset-High`
+- `Style.Pinned-Tabs-Width-Offset-Very-High`
 
 
 
@@ -157,34 +167,6 @@ There are two types of fluent style icons from Microsoft.
 
 
 
-### Pinned Tabs 
-Ability to control the width of pinned tabs
-
-##### No Offset
-![изображение](https://user-images.githubusercontent.com/85301851/152679216-f1303454-5f42-487b-854e-9f6874a46759.png)
-
-##### Very High Offset
-![изображение](https://user-images.githubusercontent.com/85301851/152679258-37628eff-ac26-4dab-b90f-838687867d79.png)
-
-#### Pinned Tabs Width
-- `Style.Pinned-Tabs-Width-Offset-Low`
-- `Style.Pinned-Tabs-Width-Offset-Medium`
-- `Style.Pinned-Tabs-Width-Offset-High`
-- `Style.Pinned-Tabs-Width-Offset-Very-High`
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ### New Tab Button Like Pinned Tab
 | New Tab Button | New Tab Button Like Pinned Tab |
 |----------------|--------------------------------|
@@ -195,17 +177,6 @@ You can control this setting in the "Custom settings" at the top of the css file
 | Left Drag Space (0px) | Left Drag Space (40px) | Top Drag Space (0px) | Top Drag Space (8px) | Right Drag Space (0px) | Right Drag Space (40px) |
 |-----------------------|------------------------|----------------------|----------------------|------------------------|-------------------------|
 | ![изображение](https://user-images.githubusercontent.com/85301851/151207587-ee6aac0a-529a-44fa-a349-05a71f7e0e42.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151207693-4ec2cefc-ae72-4bac-aadf-5d03c5821fa8.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151208756-236844a6-c2a2-4275-aadf-245872e5bf43.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151208590-b35da78d-99d2-4815-a465-23bb1cd78b3e.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151208486-ffadb816-5f58-4ba3-9c6f-8da735c1d5e8.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151208387-f6311b91-58d3-474f-b6c4-2eb99cc891ff.png) |
-
-### Tab media icons and status bar
-| Light | Dark |
-|-------|------|
-| ![изображение](https://user-images.githubusercontent.com/85301851/151214450-d31ad03c-71d6-468a-9abb-8a43debf4fb8.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151214537-a130ad46-d57b-498b-ab53-863f9b5203b5.png) |
-
-### Accent color (Windows 11 / Windows 10)
-Accent color only works with system theme
-| Light | Dark |
-|-------|------|
-| ![изображение](https://user-images.githubusercontent.com/85301851/151212851-3aee4b2d-3766-47de-b701-1978ff7c6648.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151213171-70c40b46-24ff-4e19-868a-e9cf902ad2aa.png) |
 
 
 -----------------------------------------------
