@@ -21,7 +21,6 @@
     --top-side-drag-space-windowed:          8px;
     --top-side-drag-space-maximized:         0px;
     --top-side-drag-space-menubar-titlebar:  8px;
-    --pinned-tabs-width-offset:              0px;
 }
 
 /* ------------------------------------------------------------------------------------------------- */
@@ -370,6 +369,45 @@
     }
 }
 
+/* ---------------------------------------- Pinned Tabs Width ---------------------------------------- */
+
+@supports -moz-bool-pref("Style.Pinned-Tabs-Width-Offset-Low")
+{
+    :root
+    {
+        --pinned-tabs-width-offset: 1px;
+    }
+}
+
+@supports -moz-bool-pref("Style.Pinned-Tabs-Width-Offset-Medium")
+{
+    :root
+    {
+        --pinned-tabs-width-offset: 2px;
+    }
+}
+
+@supports -moz-bool-pref("Style.Pinned-Tabs-Width-Offset-High")
+{
+    :root
+    {
+        --pinned-tabs-width-offset: 3px;
+    }
+}
+
+@supports -moz-bool-pref("Style.Pinned-Tabs-Width-Offset-Very-High")
+{
+    :root
+    {
+        --pinned-tabs-width-offset: 4px;
+    }
+}
+
+.tabbrowser-tab[pinned] .tab-content
+{
+    padding: 0 calc((var(--tab-min-height) - 16px) / 2 + var(--pinned-tabs-width-offset, 0px)) !important;
+}
+
 /* ---------------------------------------- Titlebar ---------------------------------------- */
 
 :root:not([lwtheme-image]) #titlebar
@@ -425,11 +463,6 @@
     width: 24px !important;
     padding: 7px !important;
     border-radius: 50% !important;
-}
-
-.tabbrowser-tab[pinned] .tab-content
-{
-    padding: 0 calc((var(--tab-min-height) - 16px) / 2 + var(--pinned-tabs-width-offset)) !important;
 }
 
 /* -------------------- Container Indicators -------------------- */
