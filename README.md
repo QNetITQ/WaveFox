@@ -157,36 +157,22 @@ Added the ability to force drag space on or off.
 - `Style.Drag-Space-Above-Tabs-All-States-Disabled`
 - `Style.Drag-Space-Above-Tabs-All-States-Enabled`
 
+### New Tab Button Like Pinned Tab
+It is possible to make the new tab button as a pinned tab.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
----------------------------------------
-
-
-
-
-### Experemental
-#### New Tab Button Like Pinned Tab
 ![изображение](https://user-images.githubusercontent.com/85301851/151203609-e3d723a9-fcc3-4887-a16a-b20e3364dc52.png)
+
+#### New Tab Button
 - `Style.New-Tab-Button-Like-Pinned-Tab`
 
+### Compact Plus
+It is possible to make the tabs even more compact. Works only with compact mode.
+
+##### Compact
+![изображение](https://user-images.githubusercontent.com/85301851/152867122-6a02d1ad-94d8-4274-a830-736515007eda.png)
+
+##### Compact Plus
+![изображение](https://user-images.githubusercontent.com/85301851/152867274-194c0472-3628-4777-9178-7a7dbab1f7ad.png)
+
 #### Compact Plus
-![изображение](https://user-images.githubusercontent.com/85301851/151196005-5a35bb8f-faa1-49e1-a092-fffeeb24a6ec.png)
 - `Style.Compact-Plus`
