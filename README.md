@@ -1,5 +1,4 @@
 # *WaveFox*
-Style in progress. This page is also under construction. 
 
 ## Installation
 0. Minimum Requirements:
