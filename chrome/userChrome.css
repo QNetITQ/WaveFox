@@ -446,10 +446,9 @@
 
 /* ---------- Shadow DOM ---------- */
 
-#tabbrowser-arrowscrollbox[overflowing]
+#tabbrowser-arrowscrollbox
 {
     --margin-top: var(--drag-space) !important;
-    --toolbarbutton-inner-padding: 0px !important;
 }
 
 #scrollbutton-up,
@@ -1150,13 +1149,6 @@ spacer[part="overflow-end-indicator"]
         opacity: 0 !important;
     }
 
-    /* ---------- Unwanted Indent ---------- */
-
-    #tabs-newtab-button
-    {
-        margin-right: 0 !important;
-    }
-
     /* ---------- Proton / Photon ---------- */
 
     @supports -moz-bool-pref("Style.Proton") or
@@ -1314,6 +1306,7 @@ spacer[part="overflow-end-indicator"]
             background-size: var(--tab-min-height), calc(var(--pinned-tabs-width-offset, 0px) * 2) var(--tab-min-height) !important;
             background-position: left, var(--tab-min-height) !important;
             margin-left: calc(-1 * var(--tab-min-height) + 1px) !important;
+            margin-right: calc(var(--tab-min-height) / 2 + var(--pinned-tabs-width-offset, 0px)) !important;
         }
 
         /* ---------- New Tab Button Icon ---------- */
@@ -1350,6 +1343,7 @@ spacer[part="overflow-end-indicator"]
             background-size: calc(var(--tab-min-height) / 2), calc(var(--tab-min-height) / 2 + var(--pinned-tabs-width-offset, 0px) * 2) var(--tab-min-height) !important;
             background-position: left, calc(var(--tab-min-height) / 2) !important;
             margin-left: calc(var(--tab-min-height) / -2 + 1px) !important;
+            margin-right: calc(var(--tab-min-height) / 4 + var(--pinned-tabs-width-offset, 0px)) !important;
         }
 
         /* ---------- New Tab Button Icon ---------- */
