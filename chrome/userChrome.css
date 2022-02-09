@@ -1259,7 +1259,6 @@ spacer[part="overflow-end-indicator"]
             content: "";
             display: block;
             position: absolute;
-            width: var(--tab-min-height);
             height: var(--tab-min-height);
             background-image: var(--right-side-svg);
             background-repeat: no-repeat;
@@ -1327,6 +1326,7 @@ spacer[part="overflow-end-indicator"]
 
         #tabs-newtab-button::after
         {
+            width: var(--tab-min-height);
             background-size: var(--tab-min-height);
         }
     }
@@ -1364,6 +1364,7 @@ spacer[part="overflow-end-indicator"]
 
         #tabs-newtab-button::after
         {
+            width: calc(var(--tab-min-height) / 2);
             background-size: calc(var(--tab-min-height) / 2);
         }
     }
