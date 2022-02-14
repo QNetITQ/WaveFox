@@ -629,14 +629,12 @@ spacer[part="overflow-end-indicator"]
 
 .tab-label
 {
-    height: 20px !important;
     line-height: 20px !important;
 }
 
 .tab-secondary-label
 {
     -moz-box-ordinal-group: 0 !important;
-    height: 16px !important;
     line-height: 16px !important;
     margin-block: 2px -6px !important;
 }
