@@ -1,6 +1,15 @@
-@media (-moz-os-version: windows-win8),
+@media (-moz-platform: windows-win8),
+       (-moz-platform: windows-win7),
+
+       /* Legacy (Firefox 99) */
+       (-moz-os-version: windows-win8),
        (-moz-os-version: windows-win7)
 {
+
+    :root:not([lwtheme-image]) .titlebar-color
+    {
+        background-image: none !important;
+    }
 
     @supports -moz-bool-pref("Style.WaveFox") or
               -moz-bool-pref("Style.Australis") or
