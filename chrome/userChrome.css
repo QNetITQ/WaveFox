@@ -1280,7 +1280,7 @@ spacer[part="overflow-end-indicator"]
 
         #tabs-newtab-button .toolbarbutton-icon
         {
-            fill: currentColor !important;
+            fill: var(--toolbarbutton-icon-fill) !important;
         }
 
         /* ---------- Unwanted Hover / Active ---------- */
