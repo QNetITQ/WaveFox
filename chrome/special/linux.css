@@ -1,4 +1,7 @@
-@media (-moz-gtk-csd-available)
+@media (-moz-platform: linux),
+    
+       /* Legacy (Firefox 99) */
+       (-moz-gtk-csd-available)
 {
     
     @supports -moz-bool-pref("Style.WaveFox") or
