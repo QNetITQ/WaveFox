@@ -4,7 +4,7 @@
 0. Minimum Requirements:
     - Firefox 97 and newer
     - Windows 7 and newer
-    - MacOS 11 and newer
+    - MacOS 11 and newer (MacOS 10 since Firefox 99)
     - Linux
 
 1. Download the `chrome` folder and put it in the root folder (Also known as the user profile folder. You can easily get there from `about:profiles`)
