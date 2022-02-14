@@ -1,4 +1,7 @@
-@media (-moz-os-version: windows-win10)
+@media (-moz-platform: windows-win10),
+    
+       /* Legacy (Firefox 99) */
+       (-moz-os-version: windows-win10)
 {
     
     @supports -moz-bool-pref("Style.Proton") or
@@ -15,8 +18,8 @@
             {
                 :root[tabsintitlebar]:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not(:-moz-window-inactive) .titlebar-color
                 {
-                    background-color: -moz-accent-color;
-                    color: -moz-accent-color-foreground;
+                    background-color: -moz-accent-color !important;
+                    color: -moz-accent-color-foreground !important;
                 }
             }
 
