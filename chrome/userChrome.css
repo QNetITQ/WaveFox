@@ -745,6 +745,12 @@ spacer[part="overflow-end-indicator"]
     transform: translateX(1px);
 }
 
+#tabbrowser-tabs[overflow] .tabbrowser-tab[first-visible-unpinned-tab]::before,
+#tabbrowser-tabs[overflow] .tabbrowser-tab::after
+{
+    opacity: 0 !important;
+}
+
 @supports -moz-bool-pref("Style.Separators-Saturation-Low")
 {
     :root
@@ -1148,7 +1154,7 @@ spacer[part="overflow-end-indicator"]
     #tabs-newtab-button:not([disabled="true"], [checked], [open], :active):hover::before,
     #tabs-newtab-button:not([disabled="true"]):is([open], [checked], :hover:active)::before,
     .tabbrowser-tab:is([visuallyselected], :hover, [multiselected], [pinned]) + #tabs-newtab-button::before,
-    #tabbrowser-tabs:not([overflow]) .tabbrowser-tab::after
+    .tabbrowser-tab::after
     {
         opacity: 0 !important;
     }
