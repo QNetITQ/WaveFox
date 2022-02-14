@@ -466,9 +466,10 @@ spacer[part="overflow-end-indicator"]
 
 /* ---------------------------------------- Titlebar ---------------------------------------- */
 
-:root:not([lwtheme-image]) #titlebar
+:root:not([lwtheme-image]) .titlebar-color
 {
-    --toolbarbutton-icon-fill: currentColor;
+    color: inherit !important;
+    --toolbarbutton-icon-fill: currentColor !important;
     --toolbarbutton-hover-background: color-mix(in srgb, currentColor 10%, transparent) !important;
     --toolbarbutton-active-background: color-mix(in srgb, currentColor 20%, transparent) !important;
 }
