@@ -6,6 +6,14 @@
        (-moz-os-version: windows-win7)
 {
 
+    @media (-moz-windows-glass)
+    {
+        :root:not(:-moz-lwtheme) #titlebar
+        {
+            color: white !important;
+        }
+    }
+
     :root:not([lwtheme-image]) .titlebar-color
     {
         background-image: none !important;
