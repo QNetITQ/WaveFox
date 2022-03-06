@@ -865,9 +865,9 @@ spacer[part="overflow-end-indicator"]
 {
     :root
     {
-        --left-side-svg: url("special/Chrome_legacy/Chrome_legacy_left_corners_of_tabs_36.svg");
-        --middle-svg: url("special/Chrome_legacy/Middle_part_of_tabs_36.svg");
-        --right-side-svg: url("special/Chrome_legacy/Chrome_legacy_right_corners_of_tabs_36.svg");
+        --left-side-svg: url("special/Chrome_Legacy/Chrome_legacy_left_corners_of_tabs_36.svg");
+        --middle-svg: url("special/Chrome_Legacy/Middle_part_of_tabs_36.svg");
+        --right-side-svg: url("special/Chrome_Legacy/Chrome_legacy_right_corners_of_tabs_36.svg");
     }
 }
 
