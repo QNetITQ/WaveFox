@@ -525,19 +525,9 @@ spacer[part="overflow-end-indicator"]
 
 /* -------------------- Container Indicators -------------------- */
 
-.tab-icon-stack::before
-{
-    content: "";
-    position: absolute;
-    width: 16px;
-    height: 2px;
-    top: 18px;
-    background-color: var(--identity-icon-color);
-}
-
 .tab-context-line
 {
-    display: none !important;
+    margin-block: calc(var(--tab-min-height) - 2px) 0px !important;
 }
 
 /* -------------------- Tab Icon Image -------------------- */
@@ -914,6 +904,18 @@ spacer[part="overflow-end-indicator"]
     {
         margin-left: -1px;
     }
+
+    /* ---------- Container Indicators ---------- */
+
+    .tab-context-line
+    {
+        margin-inline: calc(var(--tab-min-height) / 2) !important;
+    }
+
+    .tabbrowser-tab[pinned] .tab-context-line
+    {
+        margin-inline: calc((var(--tab-min-height) - 16px) / 2 + var(--pinned-tabs-width-offset, 0px)) !important;
+    }
 }
 
 /* -------------------- Proton -------------------- */
@@ -1024,6 +1026,13 @@ spacer[part="overflow-end-indicator"]
     {
         fill: var(--toolbarbutton-active-background);
     }
+
+    /* ---------- Container Indicators ---------- */
+
+    .tab-context-line
+    {
+        margin-inline: 0px !important;
+    }
 }
 
 /* ---------- WaveFox / Australis / Chrome-Old ---------- */
@@ -1062,6 +1071,13 @@ spacer[part="overflow-end-indicator"]
     {
         margin-right: calc(var(--tab-min-height) / 2) !important;
     }
+
+    /* ---------- Container Indicators ---------- */
+
+    .tabbrowser-tab[pinned] .tab-context-line
+    {
+        margin-inline: calc(var(--tab-min-height) / -2 + (var(--tab-min-height) - 16px) / 2 + var(--pinned-tabs-width-offset, 0px)) !important;
+    }
 }
 
 /* -------------------- Chrome / Edge -------------------- */
@@ -1098,6 +1114,13 @@ spacer[part="overflow-end-indicator"]
     .tabbrowser-tab[last-visible-tab]
     {
         margin-right: calc(var(--tab-min-height) / 4) !important;
+    }
+
+    /* ---------- Container Indicators ---------- */
+
+    .tabbrowser-tab[pinned] .tab-context-line
+    {
+        margin-inline: calc(var(--tab-min-height) / -4 + (var(--tab-min-height) - 16px) / 2 + var(--pinned-tabs-width-offset, 0px)) !important;
     }
 }
 
