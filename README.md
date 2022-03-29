@@ -41,7 +41,9 @@
 
 ### Windows 11 Mica / Acrylic
 Download and install MicaForEveryone from the link below. 
+
 https://github.com/minusium/MicaForEveryone/releases
+
 Once installed, create and activate the key below. For transparency to work correctly, turn off the accent color in Windows 11 personalization and select the system theme in Firefox.
 
 ##### Mica
