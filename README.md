@@ -47,8 +47,9 @@ https://github.com/minusium/MicaForEveryone/releases
 Once installed, create and activate the key below. For transparency to work correctly, turn off the accent color in Windows 11 personalization and select the system theme in Firefox.
 
 ##### Mica
-
+![изображение](https://user-images.githubusercontent.com/85301851/160721004-ebc32cf6-8bc2-49a5-acfa-e3eff67e5a9b.png)
 ##### Acrylic
+![изображение](https://user-images.githubusercontent.com/85301851/160720915-a055134a-357c-44cc-a638-8dd56e869111.png)
 
 #### Mica / Acrylic
 
