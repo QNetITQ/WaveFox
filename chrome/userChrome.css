@@ -530,13 +530,6 @@ spacer[part="overflow-end-indicator"]
     margin-block: calc(var(--tab-min-height) - 2px) 0px !important;
 }
 
-/* -------------------- Tab Icon Image -------------------- */
-
-.tab-icon-image:not([src], [pinned], [crashed], [sharing], [pictureinpicture], [busy])
-{
-    display: revert !important;
-}
-
 /* -------------------- Tab Icon Indicators -------------------- */
 
 #TabsToolbar
@@ -556,8 +549,7 @@ spacer[part="overflow-end-indicator"]
 
 /* -------------------- Media Icons -------------------- */
 
-.tab-icon-overlay:not([crashed]):is([pinned], [sharing]),
-.tab-icon-overlay:not([pinned], [sharing], [crashed])
+.tab-icon-overlay
 {
     stroke: transparent !important;
     background-color: transparent !important;
@@ -568,15 +560,20 @@ spacer[part="overflow-end-indicator"]
     z-index: 1 !important;
 }
 
-.tab-icon-overlay:not([crashed]):is([pinned], [sharing])
-{
+.tabbrowser-tab:is([image], [pinned]) .tab-icon-overlay
+{    
     top: -6px !important;
+    inset-inline-end: -6px !important;
 }
 
-.tab-icon-overlay:not([pinned], [sharing], [crashed])
+.tab-icon-overlay:hover
 {
-    bottom: 6px;
-    left: 6px;
+    background-color: var(--toolbarbutton-hover-background) !important;
+}
+
+.tab-icon-overlay:active
+{
+    background-color: var(--toolbarbutton-active-background) !important;
 }
 
 .tab-icon-stack[busy] .tab-icon-overlay
@@ -584,31 +581,15 @@ spacer[part="overflow-end-indicator"]
     display: none !important;
 }
 
-.tab-icon-overlay:not([crashed]):is([pinned], [sharing]):hover,
-.tab-icon-overlay:not([pinned], [sharing], [crashed]):hover
-{
-    background-color: var(--toolbarbutton-hover-background) !important;
-}
-
-.tab-icon-overlay:not([crashed]):is([pinned], [sharing]):active,
-.tab-icon-overlay:not([pinned], [sharing], [crashed]):active
-{
-    background-color: var(--toolbarbutton-active-background) !important;
-}
-
-.tab-icon-stack:not([pinned], [sharing], [crashed]) :is(.tab-icon-image, .tab-icon-overlay)
-{
-    opacity: 1 !important;    
-}
-
 .tabbrowser-tab:not([pinned]) :is(.tab-throbber, .tab-icon-pending, .tab-icon-image, .tab-sharing-icon-overlay, .tab-icon-overlay)
 {
     margin-inline-end: var(--inline-tab-padding) !important;
+    opacity: 1.0 !important;    
 }
 
-.tabbrowser-tab:is([soundplaying], [muted], [activemedia-blocked]) :is(.tab-icon-image, .tab-sharing-icon-overlay)
+.tabbrowser-tab:is([image], [pinned]):is([soundplaying], [muted], [activemedia-blocked]) .tab-icon-stack:not([busy]) :is(.tab-throbber, .tab-icon-pending, .tab-icon-image, .tab-sharing-icon-overlay)
 {
-    mask-image: url("./special/tab_icon_mask_16.svg");
+    mask-image: url("./special/SVG_Masks/sound_mask_16.svg");
 }
 
 /* -------------------- Tab Status Bar -------------------- */
@@ -632,12 +613,7 @@ spacer[part="overflow-end-indicator"]
 
 /* ---------- Picture-In-Picture ---------- */
 
-.tabbrowser-tab[pictureinpicture] .tab-icon-image
-{
-    opacity: 0 !important;
-}
-    
-.tabbrowser-tab[pictureinpicture] .tab-icon-stack::after
+.tabbrowser-tab[pictureinpicture] .tab-icon-stack::before
 {
     content: "";
     position: absolute;
@@ -648,9 +624,36 @@ spacer[part="overflow-end-indicator"]
     -moz-context-properties: fill;
 }
 
-.tabbrowser-tab:is([soundplaying], [muted], [activemedia-blocked]) .tab-icon-stack::after
+.tabbrowser-tab[pictureinpicture] .tab-icon-overlay
+{    
+    top: -6px !important;
+    inset-inline-end: -6px !important;
+}
+
+.tabbrowser-tab[pictureinpicture] :is(.tab-icon-image, .tab-sharing-icon-overlay)
 {
-    mask-image: url("./special/tab_icon_mask_16.svg");
+    position: relative !important;
+    padding: 2px !important;
+    left: 6px !important;
+    top: 6px !important;
+    mask-image: none !important;
+    box-sizing: border-box !important;
+    z-index: 1 !important;
+}
+
+.tabbrowser-tab[pictureinpicture]:not([image], [pinned]) .tab-icon-image
+{
+    display: revert !important;
+}
+
+.tabbrowser-tab[pictureinpicture]:not([soundplaying], [muted], [activemedia-blocked]) .tab-icon-stack::before
+{
+    mask-image: url("./special/SVG_Masks/pip_mask_16.svg");
+}
+
+.tabbrowser-tab[pictureinpicture]:is([soundplaying], [muted], [activemedia-blocked]) .tab-icon-stack::before
+{
+    mask-image: url("./special/SVG_Masks/sound_pip_mask_16.svg");
 }
 
 /* ---------------------------------------- Tab Bar ---------------------------------------- */
