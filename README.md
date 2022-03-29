@@ -39,6 +39,19 @@
 
 ## Optional
 
+### Windows 11 Mica / Acrylic
+Download and install MicaForEveryone from the link below. 
+https://github.com/minusium/MicaForEveryone/releases
+Once installed, create and activate the key below. For transparency to work correctly, turn off the accent color in Windows 11 personalization and select the system theme in Firefox.
+
+##### Mica
+
+##### Acrylic
+
+#### Mica / Acrylic
+
+- `Style.Win11-Mica-Acrylic`
+
 ### Shadows
 There are two shadows available for use. Each shadow is completely independent. In most situations, one shadow is enough, but there are situations where a second shadow can be useful. Shadows are formed from a combination of blur and saturation.
 
