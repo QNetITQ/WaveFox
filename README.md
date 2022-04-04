@@ -55,6 +55,15 @@ Once installed, create and activate the key below. For transparency to work corr
 
 - `Style.Win11-Mica-Acrylic`
 
+### Additional Container Indicator
+Possibility to activate an additional indicator for better visibility.
+
+##### Additional Indicator
+![изображение](https://user-images.githubusercontent.com/85301851/161597087-fc818bc5-c60e-48a9-8eb9-1bcafc030607.png)
+
+#### Additional Indicator
+- `Style.Additional-Container-Indicator`
+
 ### Shadows
 There are two shadows available for use. Each shadow is completely independent. In most situations, one shadow is enough, but there are situations where a second shadow can be useful. Shadows are formed from a combination of blur and saturation.
 
