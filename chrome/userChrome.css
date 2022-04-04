@@ -248,6 +248,30 @@
     }
 }
 
+/* ---------------------------------------- Additional Container Indicator ---------------------------------------- */
+
+@supports -moz-bool-pref("Style.Additional-Container-Indicator")
+{
+    .tabbrowser-tab[usercontextid] .tab-background
+    {
+        background-color: color-mix(in srgb, var(--identity-icon-color) 25%, transparent);
+    }
+
+    .tabbrowser-tab[usercontextid] .tab-background::before,
+    .tabbrowser-tab[usercontextid] .tab-background::after
+    {
+        fill: color-mix(in srgb, var(--identity-icon-color) 25%, transparent);
+    }
+    
+    .tabbrowser-tab[usercontextid]::before,
+    .tabbrowser-tab[usercontextid]::after,
+    .tabbrowser-tab[usercontextid] + .tabbrowser-tab::before,
+    .tabbrowser-tab[usercontextid] + #tabs-newtab-button::before
+    {
+        opacity: 0 !important;
+    }
+}
+
 /* ---------------------------------------- AMO ---------------------------------------- */
 
 @supports -moz-bool-pref("Style.AMO-Tab-Frame")
