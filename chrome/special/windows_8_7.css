@@ -1,9 +1,5 @@
 @media (-moz-platform: windows-win8),
-       (-moz-platform: windows-win7),
-
-       /* Legacy (Firefox 99) */
-       (-moz-os-version: windows-win8),
-       (-moz-os-version: windows-win7)
+       (-moz-platform: windows-win7)
 {
 
     @media (-moz-windows-glass)
