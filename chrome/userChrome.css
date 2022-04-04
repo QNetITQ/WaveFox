@@ -1,17 +1,11 @@
 @import "special/windows_11_10.css";
 @import "special/windows_8_7.css";
 @import "special/linux.css";
+@import "special/mac.css";
 
 @media (-moz-platform: windows),
        (-moz-platform: linux),
-       (-moz-platform: macos),
-
-       /* Legacy (Firefox 99) */
-       (-moz-os-version: windows-win10),
-       (-moz-os-version: windows-win8),
-       (-moz-os-version: windows-win7),
-       (-moz-gtk-csd-available),
-       (-moz-mac-big-sur-theme)
+       (-moz-platform: macos)
 {
 
 /* ---------------------------------------- Shadows ---------------------------------------- */
@@ -1781,13 +1775,7 @@ spacer[part="overflow-end-indicator"]
     /* ---------- Non-Native Browser Menus ---------- */
 
     @media (-moz-platform: windows),
-           (-moz-platform: linux),
-           
-           /* Legacy (Firefox 99) */
-           (-moz-os-version: windows-win10),
-           (-moz-os-version: windows-win8),
-           (-moz-os-version: windows-win7),
-           (-moz-gtk-csd-available)
+           (-moz-platform: linux)
     {
 
     :is(
