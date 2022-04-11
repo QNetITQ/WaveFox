@@ -7,10 +7,10 @@
               -moz-bool-pref("Style.Chrome-Old") or
               -moz-bool-pref("Style.Edge")
     {
-        :root:not(:-moz-lwtheme) .tabbrowser-tab[visuallyselected] .tab-background::before,
-        :root:not(:-moz-lwtheme) .tabbrowser-tab[visuallyselected] .tab-background::after
+        :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) .tabbrowser-tab[visuallyselected] .tab-background::before,
+        :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) .tabbrowser-tab[visuallyselected] .tab-background::after
         {
-            fill: color-mix(in srgb, var(--toolbar-bgcolor), white 15%) !important;
+            fill: color-mix(in srgb, var(--toolbar-bgcolor), white 7.5%) !important;
         }
     }
     
