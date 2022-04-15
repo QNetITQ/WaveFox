@@ -3,8 +3,10 @@
 ## Installation
 0. Minimum Requirements:
     - Firefox 99 and newer
+    - Firefox ESR 91.8.0 and newer
+    - Waterfox G4.1.1 and newer
     - Windows 7 and newer
-    - MacOS 10 and newer
+    - MacOS 10 (Firefox) / MacOS 11 (ESR / Waterfox) and newer
     - Linux
 
 1. Download the `chrome` folder and put it in the root folder (Also known as the user profile folder. You can easily get there from `about:profiles`)
