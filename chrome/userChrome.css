@@ -320,6 +320,7 @@
 {
     --tab-selected-bgcolor: unset !important;
     --lwt-selected-tab-background-color: unset !important;
+    --tab-selected-bgimage: unset !important;
     --tabs-navbar-shadow-size: 0 !important;
 }
 
@@ -433,30 +434,118 @@
     }
 }
 
-@supports -moz-bool-pref("Style.Drag-Space-Above-Tabs-All-States-Disabled")
+/* -------------------- Windowed Mode -------------------- */
+
+@supports -moz-bool-pref("Style.Drag-Space-Above-Tabs-Windowed-Mode-Low")
 {
-    :root
+    :root[sizemode="normal"]
     {
-        --drag-space-above-tabs: 0px;
+        --drag-space-above-tabs: 4px;
     }
 }
 
-@supports -moz-bool-pref("Style.Drag-Space-Above-Tabs-All-States-Enabled")
+@supports -moz-bool-pref("Style.Drag-Space-Above-Tabs-Windowed-Mode-Medium")
 {
-    :root
+    :root[sizemode="normal"]
     {
         --drag-space-above-tabs: 8px;
     }
 }
 
-:root[sizemode="normal"],
-:root:not([tabsintitlebar]),
-#toolbar-menubar:not([autohide][inactive]) + #TabsToolbar
+@supports -moz-bool-pref("Style.Drag-Space-Above-Tabs-Windowed-Mode-High")
 {
-    --drag-space: var(--drag-space-above-tabs, 8px);
+    :root[sizemode="normal"]
+    {
+        --drag-space-above-tabs: 12px;
+    }
 }
 
-:root[sizemode="maximized"],
+@supports -moz-bool-pref("Style.Drag-Space-Above-Tabs-Windowed-Mode-Very-High")
+{
+    :root[sizemode="normal"]
+    {
+        --drag-space-above-tabs: 16px;
+    }
+}
+
+:root[sizemode="normal"]
+{
+    --drag-space: var(--drag-space-above-tabs, 0px);
+}
+
+/* -------------------- Maximized Mode -------------------- */
+
+@supports -moz-bool-pref("Style.Drag-Space-Above-Tabs-Maximized-Mode-Low")
+{
+    :root[sizemode="maximized"]
+    {
+        --drag-space-above-tabs: 2px;
+    }
+}
+
+@supports -moz-bool-pref("Style.Drag-Space-Above-Tabs-Maximized-Mode-Medium")
+{
+    :root[sizemode="maximized"]
+    {
+        --drag-space-above-tabs: 4px;
+    }
+}
+
+@supports -moz-bool-pref("Style.Drag-Space-Above-Tabs-Maximized-Mode-High")
+{
+    :root[sizemode="maximized"]
+    {
+        --drag-space-above-tabs: 6px;
+    }
+}
+
+@supports -moz-bool-pref("Style.Drag-Space-Above-Tabs-Maximized-Mode-Very-High")
+{
+    :root[sizemode="maximized"]
+    {
+        --drag-space-above-tabs: 8px;
+    }
+}
+
+:root[sizemode="maximized"]
+{
+    --drag-space: var(--drag-space-above-tabs, 0px);
+}
+
+/* -------------------- Fullscreen Mode -------------------- */
+
+@supports -moz-bool-pref("Style.Drag-Space-Above-Tabs-Fullscreen-Mode-Low")
+{
+    :root[sizemode="fullscreen"]
+    {
+        --drag-space-above-tabs: 2px;
+    }
+}
+
+@supports -moz-bool-pref("Style.Drag-Space-Above-Tabs-Fullscreen-Mode-Medium")
+{
+    :root[sizemode="fullscreen"]
+    {
+        --drag-space-above-tabs: 4px;
+    }
+}
+
+@supports -moz-bool-pref("Style.Drag-Space-Above-Tabs-Fullscreen-Mode-High")
+{
+    :root[sizemode="fullscreen"]
+    {
+        --drag-space-above-tabs: 6px;
+    }
+}
+
+@supports -moz-bool-pref("Style.Drag-Space-Above-Tabs-Fullscreen-Mode-Very-High")
+{
+    :root[sizemode="fullscreen"]
+    {
+        --drag-space-above-tabs: 8px;
+    }
+}
+
 :root[sizemode="fullscreen"]
 {
     --drag-space: var(--drag-space-above-tabs, 0px);
