@@ -1,4 +1,7 @@
-@media (-moz-platform: macos)
+@media (-moz-platform: macos),
+    
+       /* ESR / Waterfox */
+       (-moz-mac-big-sur-theme)    
 {
     #main-window:not(:-moz-lwtheme)
     {
