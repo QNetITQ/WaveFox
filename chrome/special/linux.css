@@ -1,4 +1,7 @@
-@media (-moz-platform: linux)
+@media (-moz-platform: linux),
+
+       /* ESR / Waterfox */
+       (-moz-gtk-csd-available)
 {
     
     @supports -moz-bool-pref("Style.WaveFox") or
