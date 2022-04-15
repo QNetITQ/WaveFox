@@ -1,4 +1,7 @@
-@media (-moz-platform: windows-win10)
+@media (-moz-platform: windows-win10),
+    
+       /* ESR / Waterfox */
+       (-moz-os-version: windows-win10)
 {
     
     @supports -moz-bool-pref("Style.Proton") or
