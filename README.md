@@ -167,7 +167,7 @@ Ability to control the width of pinned tabs.
 - `Style.Pinned-Tabs-Width-Offset-Very-High`
 
 ### Drag Space
-Added the ability to force drag space on or off.
+Ability to control the drag space.
 
 ##### No Drag Space
 ![изображение](https://user-images.githubusercontent.com/85301851/152680181-ccc799aa-3d86-4621-9932-f17f75a36272.png)
@@ -178,8 +178,24 @@ Added the ability to force drag space on or off.
 #### Drag Space
 - `Style.Left-Drag-Space-Disabled`
 - `Style.Right-Drag-Space-Disabled`
-- `Style.Drag-Space-Above-Tabs-All-States-Disabled`
-- `Style.Drag-Space-Above-Tabs-All-States-Enabled`
+
+##### Windowed Mode
+- `Style.Drag-Space-Above-Tabs-Windowed-Mode-Low`
+- `Style.Drag-Space-Above-Tabs-Windowed-Mode-Medium`
+- `Style.Drag-Space-Above-Tabs-Windowed-Mode-High`
+- `Style.Drag-Space-Above-Tabs-Windowed-Mode-Very-High`
+
+##### Maximized Mode
+- `Style.Drag-Space-Above-Tabs-Maximized-Mode-Low`
+- `Style.Drag-Space-Above-Tabs-Maximized-Mode-Medium`
+- `Style.Drag-Space-Above-Tabs-Maximized-Mode-High`
+- `Style.Drag-Space-Above-Tabs-Maximized-Mode-Very-High`
+
+##### Fullscreen Mode
+- `Style.Drag-Space-Above-Tabs-Fullscreen-Mode-Low`
+- `Style.Drag-Space-Above-Tabs-Fullscreen-Mode-Medium`
+- `Style.Drag-Space-Above-Tabs-Fullscreen-Mode-High`
+- `Style.Drag-Space-Above-Tabs-Fullscreen-Mode-Very-High`
 
 ### New Tab Button Like Pinned Tab
 It is possible to make the new tab button as a pinned tab.
