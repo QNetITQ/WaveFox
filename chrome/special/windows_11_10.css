@@ -40,34 +40,42 @@
 
                     #main-window:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) .titlebar-buttonbox
                     {
-                        background-color: var(--toolbar-bgcolor) !important;
-                        border-bottom-left-radius: 8px !important;
-                        filter: var(--special-main-outer-shadow) var(--special-additional-outer-shadow) !important;
-                        opacity: 0 !important;
+                        height: 30px;
                     }
 
                     #main-window:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) .titlebar-buttonbox:hover
                     {
                         opacity: 1 !important;
                     }
-
-                    #main-window:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) .titlebar-min
+                    .titlebar-buttonbox-container
                     {
-                        border-bottom-left-radius: 8px !important;
+                        display: block;
+                    }
+                    .titlebar-button:is(.titlebar-close):not(:hover)
+                    {
+                        list-style-image: none !important;
+                    }
+                    .titlebar-button:not(.titlebar-close):hover
+                    {
+                        list-style-image: none !important;
+                    }
+                    .titlebar-button:not(.titlebar-close):not(:hover)
+                    {
+                        list-style-image: none !important;
                     }
                 }
             }
-
-            .titlebar-buttonbox-container
+            @supports not -moz-bool-pref("Style.Win11-Mica-Acrylic")
             {
-                -moz-box-align: start !important;
+                .titlebar-buttonbox-container
+                {
+                    -moz-box-align: start !important;
+                }
+                .titlebar-button:not(.titlebar-close):hover
+                {
+                    background-color: var(--toolbarbutton-hover-background) !important;
+                }
             }
-
-            .titlebar-button:not(.titlebar-close):hover
-            {
-                background-color: var(--toolbarbutton-hover-background) !important;
-            }
-
             .titlebar-button:not(.titlebar-close):hover:active
             {
                 background-color: var(--toolbarbutton-active-background) !important;
