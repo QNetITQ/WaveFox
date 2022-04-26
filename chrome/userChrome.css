@@ -321,6 +321,194 @@
     }
 }
 
+/* ---------------------------------------- Colorways ---------------------------------------- */
+
+/* -------------------- Light -------------------- */
+
+@supports -moz-bool-pref("Style.Colorways-Light-Gray")
+{
+    :root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"]:not([lwtheme-image])
+    {
+        --lwt-accent-color: rgb(170,176,182) !important;
+        --toolbar-bgcolor: rgb(221,223,226) !important;
+        --toolbar-field-background-color: rgb(252,252,252) !important;
+        --chrome-content-separator-color: transparent !important;
+        --button-hover-bgcolor: rgba(0,0,0,0.1) !important;
+        --button-active-bgcolor: rgba(0,0,0,0.2) !important;
+    }
+}
+
+@supports -moz-bool-pref("Style.Colorways-Mint")
+{
+    :root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"]:not([lwtheme-image])
+    {
+        --lwt-accent-color: rgb(125,182,191) !important;
+        --toolbar-bgcolor: rgb(200,224,228) !important;
+        --toolbar-field-background-color: rgb(245,249,250) !important;
+        --chrome-content-separator-color: transparent !important;
+        --button-hover-bgcolor: rgba(0,0,0,0.1) !important;
+        --button-active-bgcolor: rgba(0,0,0,0.2) !important;
+    }
+}
+
+@supports -moz-bool-pref("Style.Colorways-Blue-Green")
+{
+    :root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"]:not([lwtheme-image])
+    {
+        --lwt-accent-color: rgb(48,165,167) !important;
+        --toolbar-bgcolor: rgb(98,209,210) !important;
+        --toolbar-field-background-color: rgb(168,230,230) !important;
+        --chrome-content-separator-color: transparent !important;
+        --button-hover-bgcolor: rgba(0,0,0,0.1) !important;
+        --button-active-bgcolor: rgba(0,0,0,0.2) !important;
+    }
+}
+
+@supports -moz-bool-pref("Style.Colorways-Blue")
+{
+    :root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"]:not([lwtheme-image])
+    {
+        --lwt-accent-color: rgb(96,157,191) !important;
+        --toolbar-bgcolor: rgb(163,198,218) !important;
+        --toolbar-field-background-color: rgb(202,222,234) !important;
+        --chrome-content-separator-color: transparent !important;
+        --button-hover-bgcolor: rgba(0,0,0,0.1) !important;
+        --button-active-bgcolor: rgba(0,0,0,0.2) !important;
+    }
+}
+
+@supports -moz-bool-pref("Style.Colorways-Light-Pink")
+{
+    :root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"]:not([lwtheme-image])
+    {
+        --lwt-accent-color: rgb(216,178,173) !important;
+        --toolbar-bgcolor: rgb(241,227,225) !important;
+        --toolbar-field-background-color: rgb(213,200,199) !important;
+        --chrome-content-separator-color: transparent !important;
+        --button-hover-bgcolor: rgba(0,0,0,0.1) !important;
+        --button-active-bgcolor: rgba(0,0,0,0.2) !important;
+    }
+}
+
+@supports -moz-bool-pref("Style.Colorways-Pink")
+{
+    :root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"]:not([lwtheme-image])
+    {
+        --lwt-accent-color: rgb(253,112,161) !important;
+        --toolbar-bgcolor: rgb(254,188,211) !important;
+        --toolbar-field-background-color: rgb(255,227,236) !important;
+        --chrome-content-separator-color: transparent !important;
+        --button-hover-bgcolor: rgba(0,0,0,0.1) !important;
+        --button-active-bgcolor: rgba(0,0,0,0.2) !important;
+    }
+}
+
+@supports -moz-bool-pref("Style.Colorways-Yellow")
+{
+    :root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"]:not([lwtheme-image])
+    {
+        --lwt-accent-color: rgb(215,174,70) !important;
+        --toolbar-bgcolor: rgb(240,226,189) !important;
+        --toolbar-field-background-color: rgb(212,199,167) !important;
+        --chrome-content-separator-color: transparent !important;
+        --button-hover-bgcolor: rgba(0,0,0,0.1) !important;
+        --button-active-bgcolor: rgba(0,0,0,0.2) !important;
+    }
+}
+
+@supports -moz-bool-pref("Style.Colorways-Orange")
+{
+    :root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"]:not([lwtheme-image])
+    {
+        --lwt-accent-color: rgb(235,143,59) !important;
+        --toolbar-bgcolor: rgb(245,203,163) !important;
+        --toolbar-field-background-color: rgb(251,236,221) !important;
+        --chrome-content-separator-color: transparent !important;
+        --button-hover-bgcolor: rgba(0,0,0,0.1) !important;
+        --button-active-bgcolor: rgba(0,0,0,0.2) !important;
+    }
+}
+
+/* -------------------- Dark -------------------- */
+
+@supports -moz-bool-pref("Style.Colorways-Dark-Grey")
+{
+    :root[style*="--lwt-accent-color: rgb(28, 27, 34); --lwt-text-color: rgba(251, 251, 254);"]:not([lwt-default-theme-in-dark-mode], [lwtheme-image])
+    {
+        --lwt-accent-color: rgb(56,57,60) !important;
+        --toolbar-bgcolor: rgb(86,88,93) !important;
+        --toolbar-field-background-color: rgb(70,71,75) !important;
+        --chrome-content-separator-color: transparent !important;
+        --button-hover-bgcolor: rgba(255,255,255,0.1) !important;
+        --button-active-bgcolor: rgba(255,255,255,0.2) !important;
+    }
+}
+
+@supports -moz-bool-pref("Style.Colorways-Gray-Blue")
+{
+    :root[style*="--lwt-accent-color: rgb(28, 27, 34); --lwt-text-color: rgba(251, 251, 254);"]:not([lwt-default-theme-in-dark-mode], [lwtheme-image])
+    {
+        --lwt-accent-color: rgb(42,52,65) !important;
+        --toolbar-bgcolor: rgb(68,84,105) !important;
+        --toolbar-field-background-color: rgb(54,67,84) !important;
+        --chrome-content-separator-color: transparent !important;
+        --button-hover-bgcolor: rgba(255,255,255,0.1) !important;
+        --button-active-bgcolor: rgba(255,255,255,0.2) !important;
+    }
+}
+
+@supports -moz-bool-pref("Style.Colorways-Navy-Blue")
+{
+    :root[style*="--lwt-accent-color: rgb(28, 27, 34); --lwt-text-color: rgba(251, 251, 254);"]:not([lwt-default-theme-in-dark-mode], [lwtheme-image])
+    {
+        --lwt-accent-color: rgb(7,43,71) !important;
+        --toolbar-bgcolor: rgb(12,76,125) !important;
+        --toolbar-field-background-color: rgb(9,58,96) !important;
+        --chrome-content-separator-color: transparent !important;
+        --button-hover-bgcolor: rgba(255,255,255,0.1) !important;
+        --button-active-bgcolor: rgba(255,255,255,0.2) !important;
+    }
+}
+
+@supports -moz-bool-pref("Style.Colorways-Purple")
+{
+    :root[style*="--lwt-accent-color: rgb(28, 27, 34); --lwt-text-color: rgba(251, 251, 254);"]:not([lwt-default-theme-in-dark-mode], [lwtheme-image])
+    {
+        --lwt-accent-color: rgb(71,34,112) !important;
+        --toolbar-bgcolor: rgb(110,53,174) !important;
+        --toolbar-field-background-color: rgb(88,43,140) !important;
+        --chrome-content-separator-color: transparent !important;
+        --button-hover-bgcolor: rgba(255,255,255,0.1) !important;
+        --button-active-bgcolor: rgba(255,255,255,0.2) !important;
+    }
+}
+
+@supports -moz-bool-pref("Style.Colorways-Red")
+{
+    :root[style*="--lwt-accent-color: rgb(28, 27, 34); --lwt-text-color: rgba(251, 251, 254);"]:not([lwt-default-theme-in-dark-mode], [lwtheme-image])
+    {
+        --lwt-accent-color: rgb(111,15,21) !important;
+        --toolbar-bgcolor: rgb(169,23,33) !important;
+        --toolbar-field-background-color: rgb(137,19,27) !important;
+        --chrome-content-separator-color: transparent !important;
+        --button-hover-bgcolor: rgba(255,255,255,0.1) !important;
+        --button-active-bgcolor: rgba(255,255,255,0.2) !important;
+    }
+}
+
+@supports -moz-bool-pref("Style.Colorways-Green")
+{
+    :root[style*="--lwt-accent-color: rgb(28, 27, 34); --lwt-text-color: rgba(251, 251, 254);"]:not([lwt-default-theme-in-dark-mode], [lwtheme-image])
+    {
+        --lwt-accent-color: rgb(10,62,30) !important;
+        --toolbar-bgcolor: rgb(15,97,47) !important;
+        --toolbar-field-background-color: rgb(12,77,37) !important;
+        --chrome-content-separator-color: transparent !important;
+        --button-hover-bgcolor: rgba(255,255,255,0.1) !important;
+        --button-active-bgcolor: rgba(255,255,255,0.2) !important;
+    }
+}
+
 /* ---------------------------------------- Unneeded styles ---------------------------------------- */
 
 :root
