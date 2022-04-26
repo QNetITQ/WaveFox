@@ -57,6 +57,37 @@ Once installed, create and activate the key below. For transparency to work corr
 
 - `Style.Win11-Mica-Acrylic`
 
+
+
+
+
+
+
+
+### Colorways
+Mozilla keeps deleting these custom themes. I don't know why, but it doesn't matter. Now it is possible to use built-in themes. They will not be deleted. Use with light/dark themes. On the system does not work.
+
+##### Colorways
+
+#### Colorways
+Light:
+- `Style.Colorways-Light-Gray`
+- `Style.Colorways-Mint`
+- `Style.Colorways-Blue-Green`
+- `Style.Colorways-Blue`
+- `Style.Colorways-Light-Pink`
+- `Style.Colorways-Pink`
+- `Style.Colorways-Yellow`
+- `Style.Colorways-Orange`
+
+Dark:
+- `Style.Colorways-Dark-Grey`
+- `Style.Colorways-Gray-Blue`
+- `Style.Colorways-Navy-Blue`
+- `Style.Colorways-Purple`
+- `Style.Colorways-Red`
+- `Style.Colorways-Green`
+
 ### Additional Container Indicator
 Possibility to activate an additional indicator for better visibility.
 
