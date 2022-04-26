@@ -67,7 +67,11 @@ Once installed, create and activate the key below. For transparency to work corr
 ### Colorways
 Mozilla keeps deleting these custom themes. I don't know why, but it doesn't matter. Now it is possible to use built-in themes. They will not be deleted. Use with light/dark themes. On the system does not work.
 
-##### Colorways
+##### Blue
+![изображение](https://user-images.githubusercontent.com/85301851/165319656-490ad853-2dea-4eb8-abe4-8c4490b8c686.png)
+
+##### Navy Blue
+![изображение](https://user-images.githubusercontent.com/85301851/165319907-0126d0a3-34b5-4ea8-8f25-473acb4b2121.png)
 
 #### Colorways
 Light:
