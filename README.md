@@ -8,6 +8,7 @@
     - Windows 7 and newer
     - MacOS 10 (Firefox 99+) / MacOS 11 (ESR / Waterfox) and newer
     - Linux
+    - Only native OS themes are supported
 
 1. Download the `chrome` folder and put it in the root folder (Also known as the user profile folder. You can easily get there from `about:profiles`)
 2. Go to `about:config` and activate the keys below:
@@ -15,7 +16,8 @@
 * `svg.context-properties.content.enabled`
 * `layout.css.color-mix.enabled`
 
-#### How to create keys?
+### How to create keys?
+##### You need to restart your browser for the changes to take effect
 ![изображение](https://user-images.githubusercontent.com/85301851/151872252-87ff2a81-cb34-4bac-94fb-304f8f5210eb.png)
 ![изображение](https://user-images.githubusercontent.com/85301851/151872514-15bd77fd-929e-4d4d-a0e1-fa89385e0d0a.png)
 
