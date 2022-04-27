@@ -321,6 +321,89 @@
     }
 }
 
+/* ---------------------------------------- Toolbar Transparency ---------------------------------------- */
+
+@supports -moz-bool-pref("Style.Toolbar-Transparency-Low")
+{
+    :root:not(:-moz-lwtheme)
+    {
+        --toolbar-bgcolor: rgba(255,255,255,0.75) !important;
+        --toolbar-field-background-color: rgba(255,255,255,0.75) !important;
+        --toolbar-field-border-color: transparent !important;
+        --chrome-content-separator-color: transparent !important;
+        --button-hover-bgcolor: rgba(0,0,0,0.1) !important;
+        --button-active-bgcolor: rgba(0,0,0,0.2) !important;
+        --main-shadow-color: transparent !important;
+        --additional-shadow-color: transparent !important;
+    }
+
+    :root[lwt-default-theme-in-dark-mode]
+    {
+        --toolbar-bgcolor: rgba(0,0,0,0.75) !important;
+        --toolbar-field-background-color: rgba(0,0,0,0.75) !important;
+        --toolbar-field-border-color: transparent !important;
+        --chrome-content-separator-color: transparent !important;
+        --button-hover-bgcolor: rgba(255,255,255,0.1) !important;
+        --button-active-bgcolor: rgba(255,255,255,0.2) !important;
+        --main-shadow-color: transparent !important;
+        --additional-shadow-color: transparent !important;
+    }
+}
+
+@supports -moz-bool-pref("Style.Toolbar-Transparency-Medium")
+{
+    :root:not(:-moz-lwtheme)
+    {
+        --toolbar-bgcolor: rgba(255,255,255,0.5) !important;
+        --toolbar-field-background-color: rgba(255,255,255,0.5) !important;
+        --toolbar-field-border-color: transparent !important;
+        --chrome-content-separator-color: transparent !important;
+        --button-hover-bgcolor: rgba(0,0,0,0.1) !important;
+        --button-active-bgcolor: rgba(0,0,0,0.2) !important;
+        --main-shadow-color: transparent !important;
+        --additional-shadow-color: transparent !important;
+    }
+
+    :root[lwt-default-theme-in-dark-mode]
+    {
+        --toolbar-bgcolor: rgba(0,0,0,0.5) !important;
+        --toolbar-field-background-color: rgba(0,0,0,0.5) !important;
+        --toolbar-field-border-color: transparent !important;
+        --chrome-content-separator-color: transparent !important;
+        --button-hover-bgcolor: rgba(255,255,255,0.1) !important;
+        --button-active-bgcolor: rgba(255,255,255,0.2) !important;
+        --main-shadow-color: transparent !important;
+        --additional-shadow-color: transparent !important;
+    }
+}
+
+@supports -moz-bool-pref("Style.Toolbar-Transparency-High")
+{
+    :root:not(:-moz-lwtheme)
+    {
+        --toolbar-bgcolor: rgba(255,255,255,0.25) !important;
+        --toolbar-field-background-color: rgba(255,255,255,0.25) !important;
+        --toolbar-field-border-color: transparent !important;
+        --chrome-content-separator-color: transparent !important;
+        --button-hover-bgcolor: rgba(0,0,0,0.1) !important;
+        --button-active-bgcolor: rgba(0,0,0,0.2) !important;
+        --main-shadow-color: transparent !important;
+        --additional-shadow-color: transparent !important;
+    }
+
+    :root[lwt-default-theme-in-dark-mode]
+    {
+        --toolbar-bgcolor: rgba(0,0,0,0.25) !important;
+        --toolbar-field-background-color: rgba(0,0,0,0.25) !important;
+        --toolbar-field-border-color: transparent !important;
+        --chrome-content-separator-color: transparent !important;
+        --button-hover-bgcolor: rgba(255,255,255,0.1) !important;
+        --button-active-bgcolor: rgba(255,255,255,0.2) !important;
+        --main-shadow-color: transparent !important;
+        --additional-shadow-color: transparent !important;
+    }
+}
+
 /* ---------------------------------------- Colorways ---------------------------------------- */
 
 /* -------------------- Light -------------------- */
