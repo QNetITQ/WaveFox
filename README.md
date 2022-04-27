@@ -58,7 +58,7 @@ Once installed, create and activate the key below. For transparency to work corr
 - `Style.Win11-Mica-Acrylic`
 
 ### Toolbar Transparency
-It is possible to make the toolbar translucent. This can be useful if you want to extend the use of system effects like Windows 7 Aero / Windows 11 Mika / MacOS Vibrancy.
+It is possible to make the toolbar translucent. This can be useful if you want to extend the use of system effects like Windows 7 Aero / Windows 11 Mika / MacOS Vibrancy. Works only with the system theme.
 
 ##### Toolbar Transparency
 ![изображение](https://user-images.githubusercontent.com/85301851/165526704-4f7486c4-f330-4c86-a25d-6ed8ab2affe4.png)
