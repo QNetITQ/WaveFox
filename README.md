@@ -60,6 +60,24 @@ Once installed, create and activate the key below. For transparency to work corr
 
 
 
+### Toolbar Transparency
+It is possible to make the toolbar translucent. This can be useful if you want to extend the use of system effects like Windows 7 Aero / Windows 11 Mika / MacOS Vibrancy.
+
+##### Toolbar Transparency
+
+
+#### Toolbar Transparency
+- `Style.Toolbar-Transparency-Low`
+- `Style.Toolbar-Transparency-Medium`
+- `Style.Toolbar-Transparency-High`
+
+
+
+
+
+
+
+
 
 
 
