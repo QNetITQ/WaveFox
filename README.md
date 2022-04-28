@@ -160,7 +160,7 @@ It is possible to set the saturation of tab separators and disable the first sep
 - `Style.Separators-Saturation-Very-High`
 - `Style.Disable-First-Separator`
 
-### AMO
+### AMO (Deprecated option. Will be removed in the future)
 Compatible with AMO. Since shadows do not work with these themes, the selected tab may be hard to see. It is possible to activate the tab frame for better visibility.
 
 ##### Without Tab Frame 
