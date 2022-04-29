@@ -160,18 +160,6 @@ It is possible to set the saturation of tab separators and disable the first sep
 - `Style.Separators-Saturation-Very-High`
 - `Style.Disable-First-Separator`
 
-### AMO (Deprecated option. Will be removed in the future)
-Compatible with AMO. Since shadows do not work with these themes, the selected tab may be hard to see. It is possible to activate the tab frame for better visibility.
-
-##### Without Tab Frame 
-![изображение](https://user-images.githubusercontent.com/85301851/152528816-fd21f6ff-0a16-4c8e-bb2a-aaf69501f365.png)
-##### With Tab Frame
-![изображение](https://user-images.githubusercontent.com/85301851/152529473-628eaf15-6603-4282-b5d4-a146f818b318.png)
-
-#### AMO Tab Frame
-
-- `Style.AMO-Tab-Frame`
-
 ### Density
 By default, context menus follow the selected interface density, but it is possible to set a fixed size.
 
