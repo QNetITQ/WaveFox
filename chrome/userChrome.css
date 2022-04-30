@@ -1645,18 +1645,12 @@ spacer[part="overflow-end-indicator"]
               -moz-bool-pref("Style.Chrome") or
               -moz-bool-pref("Style.Edge")
     {
-        /* ---------- SVG ---------- */
-
-        :root
-        {
-            --new-tab-middle-svg: url("special/middle_part_of_new_tab_button_36.svg");
-        }
-
         /* ---------- New Tab Button ---------- */
 
         #tabs-newtab-button
         {
-            background-image: var(--left-side-svg), var(--new-tab-middle-svg) !important;
+            --new-tab-middle: linear-gradient(transparent, transparent);
+            background-image: var(--left-side-svg), var(--new-tab-middle) !important;
             background-repeat: no-repeat !important;
             padding: 0px !important;
             fill: transparent !important;
@@ -1697,11 +1691,13 @@ spacer[part="overflow-end-indicator"]
 
         #tabs-newtab-button:not([disabled="true"], [checked], [open], :active):hover
         {
+            --new-tab-middle: linear-gradient(var(--toolbarbutton-hover-background), var(--toolbarbutton-hover-background));
             fill: var(--toolbarbutton-hover-background) !important;
         }
 
         #tabs-newtab-button:not([disabled="true"]):is([open], [checked], :hover:active)
         {
+            --new-tab-middle: linear-gradient(var(--toolbarbutton-active-background), var(--toolbarbutton-active-background));
             fill: var(--toolbarbutton-active-background) !important;
         }
 
