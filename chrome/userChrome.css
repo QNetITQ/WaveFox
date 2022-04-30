@@ -273,54 +273,6 @@
     }
 }
 
-/* ---------------------------------------- AMO ---------------------------------------- */
-
-@supports -moz-bool-pref("Style.AMO-Tab-Frame")
-{
-    :root[lwtheme-image]
-    {
-        --tab-indicator-color: var(--toolbarbutton-icon-fill);
-    }
-}
-
-@supports -moz-bool-pref("Style.Proton")
-{
-    :root[lwtheme-image] .tabbrowser-tab[visuallyselected] .tab-background
-    {
-        box-shadow: inset 0 0 0 2px var(--tab-indicator-color) !important;
-    }
-}
-
-@supports -moz-bool-pref("Style.Photon")
-{
-    :root[lwtheme-image] .tabbrowser-tab[visuallyselected] .tab-background
-    {
-        box-shadow: inset 0 2px 0 0 var(--tab-indicator-color), inset 2px 0 0 0 var(--tab-indicator-color), inset -2px 0 0 0 var(--tab-indicator-color) !important;
-    }
-}
-
-@supports -moz-bool-pref("Style.WaveFox") or
-          -moz-bool-pref("Style.Australis") or
-          -moz-bool-pref("Style.Chrome") or
-          -moz-bool-pref("Style.Chrome-Old") or
-          -moz-bool-pref("Style.Edge")
-{
-    :root[lwtheme-image] .tabbrowser-tab[visuallyselected] .tab-background::before,
-    :root[lwtheme-image] .tabbrowser-tab[visuallyselected] .tab-background::after
-    {
-        stroke: var(--tab-indicator-color);
-    }
-
-    :root[lwtheme-image] .tabbrowser-tab[visuallyselected] .tab-background
-    {
-        background-color: var(--toolbar-bgcolor) !important;
-        background-image: var(--middle-svg) !important;
-        stroke: var(--tab-indicator-color) !important;
-        fill: transparent !important;
-        -moz-context-properties: fill, stroke !important;
-    }
-}
-
 /* ---------------------------------------- Toolbar Transparency ---------------------------------------- */
 
 @supports -moz-bool-pref("Style.Toolbar-Transparency-Low")
@@ -1230,8 +1182,9 @@ spacer[part="overflow-end-indicator"]
     :root
     {
         --left-side-svg: url("special/WaveFox/WaveFox_left_corners_of_tabs_36.svg");
-        --middle-svg: url("special/WaveFox/Middle_part_of_tabs_36.svg");
         --right-side-svg: url("special/WaveFox/WaveFox_right_corners_of_tabs_36.svg");
+        --left-side-svg-clipped: url("special/WaveFox/WaveFox_left_corners_of_tabs_36_clipped.svg");
+        --right-side-svg-clipped: url("special/WaveFox/WaveFox_right_corners_of_tabs_36_clipped.svg");
     }
 }
 
@@ -1240,8 +1193,9 @@ spacer[part="overflow-end-indicator"]
     :root
     {
         --left-side-svg: url("special/Australis/Australis_left_corners_of_tabs_30.svg");
-        --middle-svg: url("special/Australis/Middle_part_of_tabs_30.svg");
         --right-side-svg: url("special/Australis/Australis_right_corners_of_tabs_30.svg");
+        --left-side-svg-clipped: url("special/Australis/Australis_left_corners_of_tabs_30_clipped.svg");
+        --right-side-svg-clipped: url("special/Australis/Australis_right_corners_of_tabs_30_clipped.svg");
     }
 }
 
@@ -1250,8 +1204,9 @@ spacer[part="overflow-end-indicator"]
     :root
     {
         --left-side-svg: url("special/Chrome_Legacy/Chrome_legacy_left_corners_of_tabs_36.svg");
-        --middle-svg: url("special/Chrome_Legacy/Middle_part_of_tabs_36.svg");
         --right-side-svg: url("special/Chrome_Legacy/Chrome_legacy_right_corners_of_tabs_36.svg");
+        --left-side-svg-clipped: url("special/Chrome_Legacy/Chrome_legacy_left_corners_of_tabs_36_clipped.svg");
+        --right-side-svg-clipped: url("special/Chrome_Legacy/Chrome_legacy_right_corners_of_tabs_36_clipped.svg");
     }
 }
 
@@ -1260,8 +1215,9 @@ spacer[part="overflow-end-indicator"]
     :root
     {
         --left-side-svg: url("special/Chrome/Chrome_left_corners_of_tabs_36.svg");
-        --middle-svg: url("special/Chrome/Middle_part_of_tabs_36.svg");
         --right-side-svg: url("special/Chrome/Chrome_right_corners_of_tabs_36.svg");
+        --left-side-svg-clipped: url("special/Chrome/Chrome_left_corners_of_tabs_36_clipped.svg");
+        --right-side-svg-clipped: url("special/Chrome/Chrome_right_corners_of_tabs_36_clipped.svg");
     }
 }
 
@@ -1270,8 +1226,9 @@ spacer[part="overflow-end-indicator"]
     :root
     {
         --left-side-svg: url("special/Edge/Edge_left_corners_of_tabs_32.svg");
-        --middle-svg: url("special/Edge/Middle_part_of_tabs_32.svg");
         --right-side-svg: url("special/Edge/Edge_right_corners_of_tabs_32.svg");
+        --left-side-svg-clipped: url("special/Edge/Edge_left_corners_of_tabs_32_clipped.svg");
+        --right-side-svg-clipped: url("special/Edge/Edge_right_corners_of_tabs_32_clipped.svg");
     }
 }
 
@@ -1419,6 +1376,16 @@ spacer[part="overflow-end-indicator"]
     .tabbrowser-tab[multiselected] .tab-background::after
     {
         fill: var(--toolbarbutton-active-background);
+    }
+       
+    #tabbrowser-arrowscrollbox:not([overflowing]) .tabbrowser-tab[beforeselected-visible] .tab-background::after
+    {
+        --right-side-svg: var(--right-side-svg-clipped);
+    }
+
+    #tabbrowser-arrowscrollbox:not([overflowing]) .tabbrowser-tab[visuallyselected] + .tabbrowser-tab .tab-background::before
+    {
+        --left-side-svg: var(--left-side-svg-clipped);
     }
 
     /* ---------- Container Indicators ---------- */
@@ -1654,6 +1621,11 @@ spacer[part="overflow-end-indicator"]
             background-repeat: no-repeat !important;
             padding: 0px !important;
             fill: transparent !important;
+        }
+
+        .tabbrowser-tab[visuallyselected] + #tabs-newtab-button
+        {
+            --left-side-svg: var(--left-side-svg-clipped) !important;
         }
 
         /* ---------- New Tab Button Icon ---------- */
