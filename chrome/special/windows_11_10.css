@@ -109,12 +109,12 @@
         }
     }
     
-    @supports -moz-bool-pref("Style.Compact-Plus")
+    /* @supports -moz-bool-pref("Style.Compact-Plus")
     {
         :root[uidensity="compact"][tabsintitlebar] #titlebar
         {
             appearance: none !important;
         }
-    }
+    } */
 
 }
