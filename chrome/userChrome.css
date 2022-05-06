@@ -368,7 +368,7 @@
 
 @supports -moz-bool-pref("Style.Colorways-Light-Gray")
 {
-    :root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"]:not([lwtheme-image])
+    :root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"]
     {
         --lwt-accent-color: rgb(170,176,182) !important;
         --toolbar-bgcolor: rgb(221,223,226) !important;
@@ -381,7 +381,7 @@
 
 @supports -moz-bool-pref("Style.Colorways-Mint")
 {
-    :root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"]:not([lwtheme-image])
+    :root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"]
     {
         --lwt-accent-color: rgb(125,182,191) !important;
         --toolbar-bgcolor: rgb(200,224,228) !important;
@@ -394,7 +394,7 @@
 
 @supports -moz-bool-pref("Style.Colorways-Blue-Green")
 {
-    :root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"]:not([lwtheme-image])
+    :root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"]
     {
         --lwt-accent-color: rgb(48,165,167) !important;
         --toolbar-bgcolor: rgb(98,209,210) !important;
@@ -407,7 +407,7 @@
 
 @supports -moz-bool-pref("Style.Colorways-Blue")
 {
-    :root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"]:not([lwtheme-image])
+    :root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"]
     {
         --lwt-accent-color: rgb(96,157,191) !important;
         --toolbar-bgcolor: rgb(163,198,218) !important;
@@ -420,7 +420,7 @@
 
 @supports -moz-bool-pref("Style.Colorways-Light-Pink")
 {
-    :root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"]:not([lwtheme-image])
+    :root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"]
     {
         --lwt-accent-color: rgb(216,178,173) !important;
         --toolbar-bgcolor: rgb(241,227,225) !important;
@@ -433,7 +433,7 @@
 
 @supports -moz-bool-pref("Style.Colorways-Pink")
 {
-    :root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"]:not([lwtheme-image])
+    :root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"]
     {
         --lwt-accent-color: rgb(253,112,161) !important;
         --toolbar-bgcolor: rgb(254,188,211) !important;
@@ -446,7 +446,7 @@
 
 @supports -moz-bool-pref("Style.Colorways-Yellow")
 {
-    :root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"]:not([lwtheme-image])
+    :root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"]
     {
         --lwt-accent-color: rgb(215,174,70) !important;
         --toolbar-bgcolor: rgb(240,226,189) !important;
@@ -459,7 +459,7 @@
 
 @supports -moz-bool-pref("Style.Colorways-Orange")
 {
-    :root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"]:not([lwtheme-image])
+    :root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"]
     {
         --lwt-accent-color: rgb(235,143,59) !important;
         --toolbar-bgcolor: rgb(245,203,163) !important;
@@ -474,7 +474,7 @@
 
 @supports -moz-bool-pref("Style.Colorways-Dark-Grey")
 {
-    :root[style*="--lwt-accent-color: rgb(28, 27, 34); --lwt-text-color: rgba(251, 251, 254);"]:not([lwt-default-theme-in-dark-mode], [lwtheme-image])
+    :root[style*="--lwt-accent-color: rgb(28, 27, 34); --lwt-text-color: rgba(251, 251, 254);"]:not([lwt-default-theme-in-dark-mode])
     {
         --lwt-accent-color: rgb(56,57,60) !important;
         --toolbar-bgcolor: rgb(86,88,93) !important;
@@ -487,7 +487,7 @@
 
 @supports -moz-bool-pref("Style.Colorways-Gray-Blue")
 {
-    :root[style*="--lwt-accent-color: rgb(28, 27, 34); --lwt-text-color: rgba(251, 251, 254);"]:not([lwt-default-theme-in-dark-mode], [lwtheme-image])
+    :root[style*="--lwt-accent-color: rgb(28, 27, 34); --lwt-text-color: rgba(251, 251, 254);"]:not([lwt-default-theme-in-dark-mode])
     {
         --lwt-accent-color: rgb(42,52,65) !important;
         --toolbar-bgcolor: rgb(68,84,105) !important;
@@ -500,7 +500,7 @@
 
 @supports -moz-bool-pref("Style.Colorways-Navy-Blue")
 {
-    :root[style*="--lwt-accent-color: rgb(28, 27, 34); --lwt-text-color: rgba(251, 251, 254);"]:not([lwt-default-theme-in-dark-mode], [lwtheme-image])
+    :root[style*="--lwt-accent-color: rgb(28, 27, 34); --lwt-text-color: rgba(251, 251, 254);"]:not([lwt-default-theme-in-dark-mode])
     {
         --lwt-accent-color: rgb(7,43,71) !important;
         --toolbar-bgcolor: rgb(12,76,125) !important;
@@ -513,7 +513,7 @@
 
 @supports -moz-bool-pref("Style.Colorways-Purple")
 {
-    :root[style*="--lwt-accent-color: rgb(28, 27, 34); --lwt-text-color: rgba(251, 251, 254);"]:not([lwt-default-theme-in-dark-mode], [lwtheme-image])
+    :root[style*="--lwt-accent-color: rgb(28, 27, 34); --lwt-text-color: rgba(251, 251, 254);"]:not([lwt-default-theme-in-dark-mode])
     {
         --lwt-accent-color: rgb(71,34,112) !important;
         --toolbar-bgcolor: rgb(110,53,174) !important;
@@ -526,7 +526,7 @@
 
 @supports -moz-bool-pref("Style.Colorways-Red")
 {
-    :root[style*="--lwt-accent-color: rgb(28, 27, 34); --lwt-text-color: rgba(251, 251, 254);"]:not([lwt-default-theme-in-dark-mode], [lwtheme-image])
+    :root[style*="--lwt-accent-color: rgb(28, 27, 34); --lwt-text-color: rgba(251, 251, 254);"]:not([lwt-default-theme-in-dark-mode])
     {
         --lwt-accent-color: rgb(111,15,21) !important;
         --toolbar-bgcolor: rgb(169,23,33) !important;
@@ -539,7 +539,7 @@
 
 @supports -moz-bool-pref("Style.Colorways-Green")
 {
-    :root[style*="--lwt-accent-color: rgb(28, 27, 34); --lwt-text-color: rgba(251, 251, 254);"]:not([lwt-default-theme-in-dark-mode], [lwtheme-image])
+    :root[style*="--lwt-accent-color: rgb(28, 27, 34); --lwt-text-color: rgba(251, 251, 254);"]:not([lwt-default-theme-in-dark-mode])
     {
         --lwt-accent-color: rgb(10,62,30) !important;
         --toolbar-bgcolor: rgb(15,97,47) !important;
@@ -815,7 +815,10 @@ spacer[part="overflow-end-indicator"]
 
 /* ---------------------------------------- Titlebar ---------------------------------------- */
 
-:root:not([lwtheme-image]) .titlebar-color
+:root:is(:not(:-moz-lwtheme),
+         [lwt-default-theme-in-dark-mode],
+         [style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"],
+         [style*="--lwt-accent-color: rgb(28, 27, 34); --lwt-text-color: rgba(251, 251, 254);"]) .titlebar-color
 {
     color: inherit !important;
     --toolbarbutton-icon-fill: currentColor !important;
