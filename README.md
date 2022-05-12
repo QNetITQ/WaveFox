@@ -1,20 +1,18 @@
 # *WaveFox*
 
-## Installation
-0. Minimum Requirements:
-    - Firefox 99 and newer
-    - Firefox ESR 91.8.0 and newer
-    - Waterfox G4.1.1 and newer
-    - Windows 7 and newer
-    - MacOS 10 (Firefox 99+) / MacOS 11 (ESR / Waterfox) and newer
-    - Linux
-    - Only native OS themes are supported
+##### Minimum Requirements
+- Firefox 99 / ESR 91.8.0
+- Windows
+- MacOS (Firefox) / MacOS 11 (ESR)
+- Linux
 
-1. Download the `chrome` folder and put it in the root folder (Also known as the user profile folder. You can easily get there from `about:profiles`)
-2. Go to `about:config` and activate the keys below:
-* `toolkit.legacyUserProfileCustomizations.stylesheets`
-* `svg.context-properties.content.enabled`
-* `layout.css.color-mix.enabled`
+##### Installation
+- Download the `chrome` folder and put it in your user profile folder. For convenience, use `about:profiles`
+- Go to `about:config` and activate the keys below
+
+  - `toolkit.legacyUserProfileCustomizations.stylesheets`
+  - `svg.context-properties.content.enabled`
+  - `layout.css.color-mix.enabled`
 
 ### How to create keys?
 ##### You need to restart your browser for the changes to take effect
