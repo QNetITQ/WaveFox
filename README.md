@@ -219,15 +219,3 @@ It is possible to make the new tab button as a pinned tab.
 
 #### New Tab Button
 - `Style.New-Tab-Button-Like-Pinned-Tab`
-
-### Compact Plus (Discussion #39)
-It is possible to make the tabs even more compact. Works only with compact mode.
-
-##### Compact
-![изображение](https://user-images.githubusercontent.com/85301851/152867122-6a02d1ad-94d8-4274-a830-736515007eda.png)
-
-##### Compact Plus
-![изображение](https://user-images.githubusercontent.com/85301851/152867274-194c0472-3628-4777-9178-7a7dbab1f7ad.png)
-
-#### Compact Plus
-- `Style.Compact-Plus`
