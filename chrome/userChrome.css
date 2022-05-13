@@ -1173,16 +1173,6 @@ spacer[part="overflow-end-indicator"]
     }
 }
 
-/* ---------------------------------------- Compact Mode Plus ---------------------------------------- */
-
-@supports -moz-bool-pref("Style.Compact-Plus")
-{
-    :root[uidensity="compact"]
-    {
-        --tab-min-height: 28px !important;
-    }
-}
-
 /* ---------------------------------------- Derived Styles ---------------------------------------- */
 
 /* -------------------- SVG -------------------- */
