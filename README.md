@@ -181,21 +181,6 @@ There are two types of fluent style icons from Microsoft.
 - `Style.Menu-Icons-Regular`
 - `Style.Menu-Icons-Filled`
 
-### Pinned Tabs 
-Ability to control the width of pinned tabs.
-
-##### No Offset
-![изображение](https://user-images.githubusercontent.com/85301851/152679216-f1303454-5f42-487b-854e-9f6874a46759.png)
-
-##### Very High Offset
-![изображение](https://user-images.githubusercontent.com/85301851/152679258-37628eff-ac26-4dab-b90f-838687867d79.png)
-
-#### Pinned Tabs Width
-- `Style.Pinned-Tabs-Width-Offset-Low`
-- `Style.Pinned-Tabs-Width-Offset-Medium`
-- `Style.Pinned-Tabs-Width-Offset-High`
-- `Style.Pinned-Tabs-Width-Offset-Very-High`
-
 ### Drag Space
 Ability to control the drag space.
 
