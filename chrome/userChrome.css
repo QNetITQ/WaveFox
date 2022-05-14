@@ -557,7 +557,7 @@
     --tab-selected-bgcolor: unset !important;
     --lwt-selected-tab-background-color: unset !important;
     --tab-selected-bgimage: unset !important;
-    --tabs-navbar-shadow-size: 0 !important;
+    --tabs-navbar-shadow-size: 0px !important;
 }
 
 /* ---------------------------------------- Density ---------------------------------------- */
@@ -1015,7 +1015,7 @@ spacer[part="overflow-end-indicator"]
 {
     --toolbarbutton-inner-padding: inherit !important;
     position: relative;
-    clip-path: fill-box;
+    clip-path: inset(0px);
 }
 
 #TabsToolbar::before
@@ -1462,40 +1462,9 @@ spacer[part="overflow-end-indicator"]
         display: inherit;
         position: absolute;
         width: 1px;
-        background-image: linear-gradient(transparent 25%, currentColor 25%, currentColor 75%, transparent 75%);
+        border-left: 1px solid transparent;
+        border-image: linear-gradient(transparent 25%, currentColor 25%, currentColor 75%, transparent 75%) 1;
         opacity: var(--separators-color-saturation, 0);
-    }
-
-    @media (min-resolution: 1.25dppx)
-    {
-        #tabs-newtab-button::before
-        {
-            width: 0.8px !important;
-        }
-    }
-
-    @media (min-resolution: 1.5dppx)
-    {
-        #tabs-newtab-button::before
-        {
-            width: 0.66px !important;
-        }
-    }
-
-    @media (min-resolution: 1.75dppx)
-    {
-        #tabs-newtab-button::before
-        {
-            width: 0.57px !important;
-        }
-    }
-
-    @media (min-resolution: 2dppx)
-    {
-        #tabs-newtab-button::before
-        {
-            width: 0.5px !important;
-        }
     }
 
     /* ---------- Separator Hover / Active ---------- */
