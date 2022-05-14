@@ -1066,7 +1066,8 @@ spacer[part="overflow-end-indicator"]
     display: inherit;
     position: absolute;
     width: 1px;
-    background-image: linear-gradient(transparent 25%, currentColor 25%, currentColor 75%, transparent 75%);
+    border-left: 1px solid transparent;
+    border-image: linear-gradient(transparent 25%, currentColor 25%, currentColor 75%, transparent 75%) 1;
     opacity: var(--separators-color-saturation, 0);
 }
 
@@ -1134,42 +1135,6 @@ spacer[part="overflow-end-indicator"]
     #tabbrowser-tabs:not([overflow]) .tabbrowser-tab[first-visible-unpinned-tab]::before
     {
         opacity: 0;
-    }
-}
-
-@media (min-resolution: 1.25dppx)
-{
-    .tabbrowser-tab::before,
-    .tabbrowser-tab::after
-    {
-        width: 0.8px !important;
-    }
-}
-
-@media (min-resolution: 1.5dppx)
-{
-    .tabbrowser-tab::before,
-    .tabbrowser-tab::after
-    {
-        width: 0.66px !important;
-    }
-}
-
-@media (min-resolution: 1.75dppx)
-{
-    .tabbrowser-tab::before,
-    .tabbrowser-tab::after
-    {
-        width: 0.57px !important;
-    }
-}
-
-@media (min-resolution: 2dppx)
-{
-    .tabbrowser-tab::before,
-    .tabbrowser-tab::after
-    {
-        width: 0.5px !important;
     }
 }
 
