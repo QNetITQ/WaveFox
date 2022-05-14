@@ -224,8 +224,13 @@ It is possible to make the new tab button as a pinned tab.
 
 
 ### Pinned Tabs Width
-
 Ability to control the width of pinned tabs.
+
+No Offset
+https://user-images.githubusercontent.com/85301851/152679216-f1303454-5f42-487b-854e-9f6874a46759.png
+
+Very High
+https://user-images.githubusercontent.com/85301851/152679258-37628eff-ac26-4dab-b90f-838687867d79.png
 
 - `Style.Pinned-Tabs-Width-Offset-Low`
 - `Style.Pinned-Tabs-Width-Offset-Medium`
