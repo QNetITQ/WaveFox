@@ -219,3 +219,18 @@ It is possible to make the new tab button as a pinned tab.
 
 #### New Tab Button
 - `Style.New-Tab-Button-Like-Pinned-Tab`
+
+
+
+
+### Pinned Tabs Width
+
+Ability to control the width of pinned tabs.
+
+- `Style.Pinned-Tabs-Width-Offset-Low`
+- `Style.Pinned-Tabs-Width-Offset-Medium`
+- `Style.Pinned-Tabs-Width-Offset-High`
+- `Style.Pinned-Tabs-Width-Offset-Very-High`
+
+
+
