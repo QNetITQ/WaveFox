@@ -108,13 +108,5 @@
             padding-inline-start: 1em !important;
         }
     }
-    
-    /* @supports -moz-bool-pref("Style.Compact-Plus")
-    {
-        :root[uidensity="compact"][tabsintitlebar] #titlebar
-        {
-            appearance: none !important;
-        }
-    } */
 
 }
