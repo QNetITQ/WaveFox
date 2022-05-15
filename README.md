@@ -14,19 +14,22 @@
   - `svg.context-properties.content.enabled`
   - `layout.css.color-mix.enabled`
 
+- Specify the desired shape of the tabs. Create and activate one of the keys below
+
+  - `Style.Proton`
+  - `Style.Photon`
+  - `Style.WaveFox`
+  - `Style.Chrome`
+  - `Style.Edge`
+  - `Style.Australis`
+  - `Style.Chrome-Old`
+
+- Create and activate other keys. This step is optional
+
 ### How to create keys?
 ##### You need to restart your browser for the changes to take effect
 ![изображение](https://user-images.githubusercontent.com/85301851/151872252-87ff2a81-cb34-4bac-94fb-304f8f5210eb.png)
 ![изображение](https://user-images.githubusercontent.com/85301851/151872514-15bd77fd-929e-4d4d-a0e1-fa89385e0d0a.png)
-
-3. Specify the desired shape of the tabs. Create and activate one of the keys below:
-* `Style.Proton`
-* `Style.Photon`
-* `Style.WaveFox`
-* `Style.Chrome`
-* `Style.Edge`
-* `Style.Australis`
-* `Style.Chrome-Old`
 
 | Style | Light | Dark |
 |-------|-------|------|
@@ -37,8 +40,6 @@
 | Edge | ![изображение](https://user-images.githubusercontent.com/85301851/151188052-dd550152-e7e7-4ad6-9df2-4b4bc8fa41cf.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151188156-a80e9e38-5e5f-440e-9864-6958e10b736d.png) |
 | Chrome (Legacy) | ![изображение](https://user-images.githubusercontent.com/85301851/151188819-8ac900d2-f126-4302-8824-f507a80e5f1b.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151188707-3ed5a636-e3d2-456b-9fa7-f7e5f8991b27.png) |
 | Australis | ![изображение](https://user-images.githubusercontent.com/85301851/151189110-5de939b8-f6d4-4a40-930b-f15c07254be5.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151189212-52918558-9969-4127-bc6d-30ab70b73949.png) |
-
-4. Create and activate other keys. This step is optional
 
 ## Optional
 
