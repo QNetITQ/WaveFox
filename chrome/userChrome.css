@@ -1063,8 +1063,7 @@ spacer[part="overflow-end-indicator"]
 .tabbrowser-tab[last-visible-tab]:not([pinned])::after
 {
     content: "";
-    display: inherit;
-    position: absolute;
+    display: block;
     width: 1px;
     border-left: 1px solid transparent;
     border-image: linear-gradient(transparent 25%, currentColor 25%, currentColor 75%, transparent 75%) 1;
@@ -1459,8 +1458,7 @@ spacer[part="overflow-end-indicator"]
     #tabs-newtab-button::before
     {
         content: "";
-        display: inherit;
-        position: absolute;
+        display: block;
         width: 1px;
         border-left: 1px solid transparent;
         border-image: linear-gradient(transparent 25%, currentColor 25%, currentColor 75%, transparent 75%) 1;
