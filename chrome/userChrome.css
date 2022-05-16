@@ -1486,6 +1486,7 @@ spacer[part="overflow-end-indicator"]
         {
             --toolbarbutton-inner-padding: calc((var(--tab-min-height) - 16px) / 2) !important;
             margin-left: calc(var(--tab-min-height) / -4) !important;
+            margin-right: 0px !important;
         }
 
         /* ---------- New Tab Button Icon ---------- */
@@ -1548,11 +1549,13 @@ spacer[part="overflow-end-indicator"]
 
         #tabs-newtab-button
         {
-            --new-tab-middle: linear-gradient(transparent, transparent);
-            background-image: var(--left-side-svg), var(--new-tab-middle) !important;
+            --new-tab-middle-background: linear-gradient(transparent, transparent);
+            background-image: var(--left-side-svg), var(--new-tab-middle-background), var(--right-side-svg) !important;
+            background-position: left, center, right !important;
             background-repeat: no-repeat !important;
             padding: 0px !important;
             fill: transparent !important;
+            margin-right: 0px !important;
         }
 
         .tabbrowser-tab[visuallyselected] + #tabs-newtab-button
@@ -1562,7 +1565,7 @@ spacer[part="overflow-end-indicator"]
 
         /* ---------- New Tab Button Icon ---------- */
 
-        #tabs-newtab-button .toolbarbutton-icon
+        #tabs-newtab-button > .toolbarbutton-icon
         {
             width: var(--tab-min-height) !important;
             height: var(--tab-min-height) !important;
@@ -1575,33 +1578,20 @@ spacer[part="overflow-end-indicator"]
         {
             height: var(--tab-min-height);
             margin-left: -1px;
-        }
-
-        /* ---------- Right Corner ---------- */
-
-        #tabs-newtab-button::after
-        {
-            content: "";
-            display: block;
-            position: absolute;
-            height: var(--tab-min-height);
-            background-image: var(--right-side-svg);
-            background-repeat: no-repeat;
-            transform: translate(calc(var(--tab-min-height) + var(--pinned-tabs-width-offset, 0px) * 2), calc(var(--tab-min-height) / -2));
-            pointer-events: none;
+            transform: translateX(calc(-1 * var(--pinned-tabs-width-offset, 0px)));
         }
 
         /* ---------- Hover / Active ---------- */
 
         #tabs-newtab-button:not([disabled="true"], [checked], [open], :active):hover
         {
-            --new-tab-middle: linear-gradient(var(--toolbarbutton-hover-background), var(--toolbarbutton-hover-background));
+            --new-tab-middle-background: linear-gradient(var(--toolbarbutton-hover-background), var(--toolbarbutton-hover-background));
             fill: var(--toolbarbutton-hover-background) !important;
         }
 
         #tabs-newtab-button:not([disabled="true"]):is([open], [checked], :hover:active)
         {
-            --new-tab-middle: linear-gradient(var(--toolbarbutton-active-background), var(--toolbarbutton-active-background));
+            --new-tab-middle-background: linear-gradient(var(--toolbarbutton-active-background), var(--toolbarbutton-active-background));
             fill: var(--toolbarbutton-active-background) !important;
         }
 
@@ -1629,32 +1619,9 @@ spacer[part="overflow-end-indicator"]
 
         #tabs-newtab-button
         {
-            background-size: var(--tab-min-height), calc(var(--pinned-tabs-width-offset, 0px) * 2) var(--tab-min-height) !important;
-            background-position: left, var(--tab-min-height) !important;
+            width: calc(var(--tab-min-height) * 2 + var(--pinned-tabs-width-offset, 0px) * 2) !important;
+            background-size: var(--tab-min-height), calc(var(--pinned-tabs-width-offset, 0px) * 2), var(--tab-min-height) !important;
             margin-left: calc(-1 * var(--tab-min-height) + 1px) !important;
-            margin-right: calc(var(--tab-min-height) / 2 + var(--pinned-tabs-width-offset, 0px)) !important;
-        }
-
-        /* ---------- New Tab Button Icon ---------- */
-
-        #tabs-newtab-button .toolbarbutton-icon
-        {
-            margin-left: calc(var(--tab-min-height) / 2 + var(--pinned-tabs-width-offset, 0px)) !important;
-        }
-
-        /* ---------- Separator ---------- */
-
-        #tabs-newtab-button::before
-        {
-            transform: translateX(calc(var(--tab-min-height) / 2));
-        }
-
-        /* ---------- Right Corner ---------- */
-
-        #tabs-newtab-button::after
-        {
-            width: var(--tab-min-height);
-            background-size: var(--tab-min-height);
         }
     }
 
@@ -1667,32 +1634,9 @@ spacer[part="overflow-end-indicator"]
 
         #tabs-newtab-button
         {
-            background-size: calc(var(--tab-min-height) / 2), calc(var(--tab-min-height) / 2 + var(--pinned-tabs-width-offset, 0px) * 2) var(--tab-min-height) !important;
-            background-position: left, calc(var(--tab-min-height) / 2) !important;
+            width: calc(var(--tab-min-height) + var(--pinned-tabs-width-offset, 0px) * 2 + var(--tab-min-height) / 2) !important;
+            background-size: calc(var(--tab-min-height) / 2), calc(var(--tab-min-height) / 2 + var(--pinned-tabs-width-offset, 0px) * 2), calc(var(--tab-min-height) / 2) !important;
             margin-left: calc(var(--tab-min-height) / -2 + 1px) !important;
-            margin-right: calc(var(--tab-min-height) / 4 + var(--pinned-tabs-width-offset, 0px)) !important;
-        }
-
-        /* ---------- New Tab Button Icon ---------- */
-
-        #tabs-newtab-button .toolbarbutton-icon
-        {
-            margin-left: calc(var(--tab-min-height) / 4 + var(--pinned-tabs-width-offset, 0px)) !important;
-        }
-
-        /* ---------- Separator ---------- */
-
-        #tabs-newtab-button::before
-        {
-            transform: translateX(calc(var(--tab-min-height) / 4));
-        }
-
-        /* ---------- Right Corner ---------- */
-
-        #tabs-newtab-button::after
-        {
-            width: calc(var(--tab-min-height) / 2);
-            background-size: calc(var(--tab-min-height) / 2);
         }
     }
 }
