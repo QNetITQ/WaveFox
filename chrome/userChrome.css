@@ -1059,14 +1059,15 @@ spacer[part="overflow-end-indicator"]
 
 /* ---------------------------------------- Separators ---------------------------------------- */
 
-.tabbrowser-tab:not([pinned])::before,
+.tabbrowser-tab::before,
 .tabbrowser-tab[last-visible-tab]:not([pinned])::after
 {
     content: "";
-    display: block;
+    display: inherit;
+    position: inherit;
     width: 1px;
-    border-left: 1px solid transparent;
-    border-image: linear-gradient(transparent 25%, currentColor 25%, currentColor 75%, transparent 75%) 1;
+    border-left: 1px solid currentColor;
+    margin-block: calc(var(--tab-min-height) / 4);
     opacity: var(--separators-color-saturation, 0);
 }
 
@@ -1091,6 +1092,7 @@ spacer[part="overflow-end-indicator"]
     transform: translateX(1px);
 }
 
+.tabbrowser-tab[first-visible-tab]::before,
 #tabbrowser-tabs[overflow] .tabbrowser-tab[first-visible-unpinned-tab]::before,
 #tabbrowser-tabs[overflow] .tabbrowser-tab::after
 {
@@ -1129,9 +1131,10 @@ spacer[part="overflow-end-indicator"]
     }
 }
 
-@supports -moz-bool-pref("Style.Disable-First-Separator")
+@supports -moz-bool-pref("Style.Pinned-Tab-Separators-Disabled")
 {
-    #tabbrowser-tabs:not([overflow]) .tabbrowser-tab[first-visible-unpinned-tab]::before
+    .tabbrowser-tab[pinned]::before,
+    .tabbrowser-tab[pinned]::after
     {
         opacity: 0;
     }
@@ -1246,6 +1249,12 @@ spacer[part="overflow-end-indicator"]
     }
 
     /* ---------- Separators ---------- */
+       
+    #tabbrowser-tabs[overflow] .tabbrowser-tab[pinned]::before,
+    #tabbrowser-tabs[overflow] .tabbrowser-tab[pinned]::after
+    {
+        height: calc(var(--tab-min-height) / 2 + var(--tab-block-margin) * 2);
+    }
 
     .tabbrowser-tab::before
     {
@@ -1286,6 +1295,14 @@ spacer[part="overflow-end-indicator"]
     .tab-content[pinned][titlechanged]:not([selected])
     {
         background-position: 50% 0% !important;
+    }
+       
+    /* ---------- Separators ---------- */
+
+    #tabbrowser-tabs[overflow] .tabbrowser-tab[pinned]::before,
+    #tabbrowser-tabs[overflow] .tabbrowser-tab[pinned]::after
+    {
+        height: calc(var(--tab-min-height) / 2);
     }
 }
 
