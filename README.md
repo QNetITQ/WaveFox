@@ -144,7 +144,7 @@ Saturation:
 - `Style.Additional-Shadow-Saturation-Very-High`
 
 ### Separators
-It is possible to set the saturation of tab separators and disable the first separator.
+It is possible to set the saturation of tab separators.
 
 ##### Low Saturation
 ![изображение](https://user-images.githubusercontent.com/85301851/152351312-f6ad4578-e7d5-40b7-8b2d-49388a750f54.png)
@@ -157,7 +157,7 @@ It is possible to set the saturation of tab separators and disable the first sep
 - `Style.Separators-Saturation-Normal`
 - `Style.Separators-Saturation-High`
 - `Style.Separators-Saturation-Very-High`
-- `Style.Disable-First-Separator`
+- `Style.Pinned-Tab-Separators-Disabled`
 
 ### Density
 By default, context menus follow the selected interface density, but it is possible to set a fixed size.
