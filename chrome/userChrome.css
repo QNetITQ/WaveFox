@@ -1060,7 +1060,7 @@ spacer[part="overflow-end-indicator"]
 /* ---------------------------------------- Separators ---------------------------------------- */
 
 .tabbrowser-tab::before,
-.tabbrowser-tab[last-visible-tab]:not([pinned])::after
+.tabbrowser-tab[last-visible-tab]::after
 {
     content: "";
     display: inherit;
@@ -1217,8 +1217,8 @@ spacer[part="overflow-end-indicator"]
         margin-right: calc(var(--tab-min-height) / 4) !important;
     }
 
-    :root[tabsintitlebar]:is([sizemode="maximized"], [sizemode="fullscreen"]) #tabbrowser-tabs:first-child:not([haspinnedtabs], [overflow]) #tabbrowser-arrowscrollbox,
-    :root:not([tabsintitlebar]) #tabbrowser-tabs:first-child:not([haspinnedtabs], [overflow]) #tabbrowser-arrowscrollbox
+    :root[tabsintitlebar]:is([sizemode="maximized"], [sizemode="fullscreen"]) #tabbrowser-tabs:first-child:not([overflow]) #tabbrowser-arrowscrollbox,
+    :root:not([tabsintitlebar]) #tabbrowser-tabs:first-child:not([overflow]) #tabbrowser-arrowscrollbox
     {
         margin-left: -1px;
     }
@@ -1470,6 +1470,13 @@ spacer[part="overflow-end-indicator"]
 
 @supports -moz-bool-pref("Style.New-Tab-Button-Like-Pinned-Tab")
 {
+    /* ---------- New Tab Button ---------- */
+
+    #tabs-newtab-button
+    {
+        margin-right: 0px !important;
+    }
+
     /* ---------- Separator ---------- */
 
     #tabs-newtab-button::before
@@ -1477,8 +1484,7 @@ spacer[part="overflow-end-indicator"]
         content: "";
         display: block;
         width: 1px;
-        border-left: 1px solid transparent;
-        border-image: linear-gradient(transparent 25%, currentColor 25%, currentColor 75%, transparent 75%) 1;
+        border-left: 1px solid currentColor;
         opacity: var(--separators-color-saturation, 0);
     }
 
@@ -1503,7 +1509,6 @@ spacer[part="overflow-end-indicator"]
         {
             --toolbarbutton-inner-padding: calc((var(--tab-min-height) - 16px) / 2) !important;
             margin-left: calc(var(--tab-min-height) / -4) !important;
-            margin-right: 0px !important;
         }
 
         /* ---------- New Tab Button Icon ---------- */
@@ -1523,7 +1528,7 @@ spacer[part="overflow-end-indicator"]
 
         #tabs-newtab-button::before
         {
-            height: calc(var(--tab-min-height) + var(--tab-block-margin) * 2);
+            height: calc(var(--tab-min-height) / 2 + var(--tab-block-margin) * 2);
             transform: translateX(-2px);
         }
     }
@@ -1532,26 +1537,36 @@ spacer[part="overflow-end-indicator"]
 
     @supports -moz-bool-pref("Style.Photon")
     {
-        /* ---------- New Tab Button ---------- */
-
-        #tabs-newtab-button
-        {
-            padding: 0px !important;
-        }
-
         /* ---------- New Tab Button Icon ---------- */
 
         #tabs-newtab-button .toolbarbutton-icon
         {
             border-radius: 0 !important;
         }
+    }
 
-        /* ---------- Separator ---------- */
+    /* -------------------- WaveFox / Photon / Australis / Chrome / Chrome-Old / Edge -------------------- */
 
-        #tabs-newtab-button::before
-        {
-            height: var(--tab-min-height);
-        }
+    @supports -moz-bool-pref("Style.WaveFox") or
+              -moz-bool-pref("Style.Photon") or
+              -moz-bool-pref("Style.Australis") or
+              -moz-bool-pref("Style.Chrome") or
+              -moz-bool-pref("Style.Chrome-Old") or
+              -moz-bool-pref("Style.Edge")
+    {
+            /* ---------- New Tab Button ---------- */
+
+            #tabs-newtab-button
+            {
+                padding: 0px !important;
+            }
+    
+            /* ---------- Separator ---------- */
+
+            #tabs-newtab-button::before
+            {
+                height: calc(var(--tab-min-height) / 2);
+            }
     }
 
     /* ---------- WaveFox / Australis / Chrome-Old / Chrome / Edge ---------- */
@@ -1570,9 +1585,7 @@ spacer[part="overflow-end-indicator"]
             background-image: var(--left-side-svg), var(--new-tab-middle-background), var(--right-side-svg) !important;
             background-position: left, center, right !important;
             background-repeat: no-repeat !important;
-            padding: 0px !important;
             fill: transparent !important;
-            margin-right: 0px !important;
         }
 
         .tabbrowser-tab[visuallyselected] + #tabs-newtab-button
@@ -1593,7 +1606,6 @@ spacer[part="overflow-end-indicator"]
 
         #tabs-newtab-button::before
         {
-            height: var(--tab-min-height);
             margin-left: -1px;
             transform: translateX(calc(-1 * var(--pinned-tabs-width-offset, 0px)));
         }
