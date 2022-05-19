@@ -1093,6 +1093,7 @@ spacer[part="overflow-end-indicator"]
 }
 
 .tabbrowser-tab[first-visible-tab]::before,
+.tabbrowser-tab[last-visible-tab][pinned]::after,
 #tabbrowser-tabs[overflow] .tabbrowser-tab[first-visible-unpinned-tab]::before,
 #tabbrowser-tabs[overflow] .tabbrowser-tab::after
 {
