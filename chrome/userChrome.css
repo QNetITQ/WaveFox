@@ -1056,6 +1056,12 @@ spacer[part="overflow-end-indicator"]
 {
     margin-left: 0 !important;
 }
+       
+#tabbrowser-tabs:first-child:not([overflow]) #tabbrowser-arrowscrollbox,
+#tabbrowser-tabs:first-child:is([overflow][haspinnedtabs]) #tabbrowser-arrowscrollbox
+{
+    margin-left: -1px !important;
+}
 
 /* ---------------------------------------- Separators ---------------------------------------- */
 
@@ -1226,12 +1232,6 @@ spacer[part="overflow-end-indicator"]
     #tabbrowser-tabs:not([overflow]) .tabbrowser-tab[last-visible-tab]
     {
         margin-right: calc(var(--tab-min-height) / 4) !important;
-    }
-
-    :root[tabsintitlebar]:is([sizemode="maximized"], [sizemode="fullscreen"]) #tabbrowser-tabs:first-child:not([overflow]) #tabbrowser-arrowscrollbox,
-    :root:not([tabsintitlebar]) #tabbrowser-tabs:first-child:not([overflow]) #tabbrowser-arrowscrollbox
-    {
-        margin-left: -1px;
     }
 
     /* ---------- Container Indicators ---------- */
