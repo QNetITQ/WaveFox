@@ -270,9 +270,9 @@
         fill: color-mix(in srgb, var(--identity-icon-color) 25%, transparent);
     }
     
-    .tabbrowser-tab[usercontextid]::before,
-    .tabbrowser-tab[usercontextid]::after,
-    .tabbrowser-tab[usercontextid] + .tabbrowser-tab::before,
+    .tabbrowser-tab[usercontextid] .tab-stack::before,
+    .tabbrowser-tab[usercontextid] .tab-stack::after,
+    .tabbrowser-tab[usercontextid] + .tabbrowser-tab .tab-stack::before,
     .tabbrowser-tab[usercontextid] + #tabs-newtab-button::before
     {
         opacity: 0 !important;
@@ -1059,16 +1059,32 @@ spacer[part="overflow-end-indicator"]
 
 /* ---------------------------------------- Separators ---------------------------------------- */
 
-.tabbrowser-tab::before,
-.tabbrowser-tab[last-visible-tab]::after
+.tab-stack
+{
+    margin-left: 1px;
+}
+
+.tab-stack::before,
+.tabbrowser-tab[last-visible-tab] .tab-stack::after
 {
     content: "";
-    display: inherit;
-    position: inherit;
+    display: block;
+    position: absolute;
     width: 1px;
+    height: 50%;
     border-left: 1px solid currentColor;
-    margin-block: calc(var(--tab-min-height) / 4);
+    top: 25%;
     opacity: var(--separators-color-saturation, 0);
+}
+    
+.tab-stack::before
+{
+    left: -1px;
+}
+    
+.tab-stack::after
+{
+    right: -2px;
 }
 
 .tabbrowser-tab:is(
@@ -1077,25 +1093,19 @@ spacer[part="overflow-end-indicator"]
         :hover,
         :hover + .tabbrowser-tab,
         [multiselected],
-        [multiselected] + .tabbrowser-tab)::before,
+        [multiselected] + .tabbrowser-tab) .tab-stack::before,
 .tabbrowser-tab:is(
         [selected],
         :hover,
-        [multiselected])::after
+        [multiselected]) .tab-stack::after
 {
     opacity: 0 !important;
 }
 
-.tabbrowser-tab::after
-{
-    margin-left: -1px;
-    transform: translateX(1px);
-}
-
-.tabbrowser-tab[first-visible-tab]::before,
-.tabbrowser-tab[last-visible-tab][pinned]::after,
-#tabbrowser-tabs[overflow] .tabbrowser-tab[first-visible-unpinned-tab]::before,
-#tabbrowser-tabs[overflow] .tabbrowser-tab::after
+.tabbrowser-tab[first-visible-tab] .tab-stack::before,
+.tabbrowser-tab[last-visible-tab][pinned] .tab-stack::after,
+#tabbrowser-tabs[overflow] .tabbrowser-tab[first-visible-unpinned-tab] .tab-stack::before,
+#tabbrowser-tabs[overflow] .tab-stack::after
 {
     opacity: 0 !important;
 }
@@ -1134,8 +1144,8 @@ spacer[part="overflow-end-indicator"]
 
 @supports -moz-bool-pref("Style.Pinned-Tab-Separators-Disabled")
 {
-    .tabbrowser-tab[pinned]::before,
-    .tabbrowser-tab[pinned]::after
+    .tabbrowser-tab[pinned] .tab-stack::before,
+    .tabbrowser-tab[pinned] .tab-stack::after
     {
         opacity: 0;
     }
@@ -1251,20 +1261,14 @@ spacer[part="overflow-end-indicator"]
 
     /* ---------- Separators ---------- */
        
-    #tabbrowser-tabs[overflow] .tabbrowser-tab[pinned]::before,
-    #tabbrowser-tabs[overflow] .tabbrowser-tab[pinned]::after
+    .tab-stack::before
     {
-        height: calc(var(--tab-min-height) / 2 + var(--tab-block-margin) * 2);
+        left: -3px;
     }
 
-    .tabbrowser-tab::before
+    .tab-stack::after
     {
-        transform: translateX(-2px);
-    }
-
-    .tabbrowser-tab::after
-    {
-        transform: translateX(3px);
+        right: -4px;
     }
 }
 
@@ -1296,14 +1300,6 @@ spacer[part="overflow-end-indicator"]
     .tab-content[pinned][titlechanged]:not([selected])
     {
         background-position: 50% 0% !important;
-    }
-       
-    /* ---------- Separators ---------- */
-
-    #tabbrowser-tabs[overflow] .tabbrowser-tab[pinned]::before,
-    #tabbrowser-tabs[overflow] .tabbrowser-tab[pinned]::after
-    {
-        height: calc(var(--tab-min-height) / 2);
     }
 }
 
