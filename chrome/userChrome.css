@@ -1223,13 +1223,14 @@ spacer[part="overflow-end-indicator"]
 {
     :root[tabsintitlebar][sizemode="normal"] #tabbrowser-tabs:not([overflow]) .tabbrowser-tab[first-visible-tab],
     :root[tabsintitlebar][sizemode="normal"] #tabbrowser-tabs[positionpinnedtabs],
-    #tabbrowser-tabs:not([overflow], :first-child) .tabbrowser-tab[first-visible-tab],
+    #tabbrowser-tabs[overflow] .tabbrowser-tab[first-visible-unpinned-tab],
+    #tabbrowser-tabs:not([overflow]:first-child) .tabbrowser-tab[first-visible-tab],
     #tabbrowser-tabs[positionpinnedtabs]:not(:first-child)
     {
         margin-left: calc(var(--tab-min-height) / 4) !important;
     }
 
-    #tabbrowser-tabs:not([overflow]) .tabbrowser-tab[last-visible-tab]
+    .tabbrowser-tab[last-visible-tab]
     {
         margin-right: calc(var(--tab-min-height) / 4) !important;
     }
