@@ -1079,12 +1079,12 @@ spacer[part="overflow-end-indicator"]
     
 .tab-stack::before
 {
-    left: -1px;
+    right: 100%;
 }
     
 .tab-stack::after
 {
-    right: -2px;
+    left: 100%;
 }
 
 .tabbrowser-tab:is(
@@ -1263,12 +1263,12 @@ spacer[part="overflow-end-indicator"]
        
     .tab-stack::before
     {
-        left: -3px;
+        transform: translateX(-1px);
     }
 
     .tab-stack::after
     {
-        right: -4px;
+        transform: translateX(2px);
     }
 }
 
