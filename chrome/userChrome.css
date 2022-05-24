@@ -272,8 +272,7 @@
     
     .tabbrowser-tab[usercontextid] .tab-stack::before,
     .tabbrowser-tab[usercontextid] .tab-stack::after,
-    .tabbrowser-tab[usercontextid] + .tabbrowser-tab .tab-stack::before,
-    .tabbrowser-tab[usercontextid] + #tabs-newtab-button::before
+    .tabbrowser-tab[usercontextid] + .tabbrowser-tab .tab-stack::before
     {
         opacity: 0 !important;
     }
@@ -1265,7 +1264,7 @@ spacer[part="overflow-end-indicator"]
        
     .tab-stack::before
     {
-        transform: translateX(-1px);
+        transform: translateX(-2px);
     }
 
     .tab-stack::after
