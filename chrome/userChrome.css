@@ -1081,6 +1081,7 @@ spacer[part="overflow-end-indicator"]
     border-left: 1px solid currentColor;
     top: 25%;
     opacity: var(--separators-color-saturation, 0);
+    box-sizing: border-box;
 }
     
 .tab-stack::before
