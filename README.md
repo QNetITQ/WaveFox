@@ -213,17 +213,6 @@ Ability to control the drag space.
 - `Style.Drag-Space-Above-Tabs-Fullscreen-Mode-High`
 - `Style.Drag-Space-Above-Tabs-Fullscreen-Mode-Very-High`
 
-### New Tab Button Like Pinned Tab
-It is possible to make the new tab button as a pinned tab.
-
-![изображение](https://user-images.githubusercontent.com/85301851/151203609-e3d723a9-fcc3-4887-a16a-b20e3364dc52.png)
-
-#### New Tab Button
-- `Style.New-Tab-Button-Like-Pinned-Tab`
-
-
-
-
 ### Pinned Tabs Width
 Ability to control the width of pinned tabs.
 
@@ -237,6 +226,3 @@ Very High
 - `Style.Pinned-Tabs-Width-Offset-Medium`
 - `Style.Pinned-Tabs-Width-Offset-High`
 - `Style.Pinned-Tabs-Width-Offset-Very-High`
-
-
-
