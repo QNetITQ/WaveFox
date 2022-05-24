@@ -1466,205 +1466,37 @@ spacer[part="overflow-end-indicator"]
 
 /* ---------------------------------------- New Tab Button ---------------------------------------- */
 
-@supports -moz-bool-pref("Style.New-Tab-Button-Like-Pinned-Tab")
+@supports -moz-bool-pref("Style.Proton") or
+          -moz-bool-pref("Style.Photon") or
+          -moz-bool-pref("Style.Chrome") or
+          -moz-bool-pref("Style.Edge")
 {
-    /* ---------- New Tab Button ---------- */
-
     #tabs-newtab-button
     {
-        margin-right: 0px !important;
+        margin-left: calc(var(--tab-min-height) / -4 + 1px) !important;
+    }
+}
+
+@supports -moz-bool-pref("Style.WaveFox") or
+          -moz-bool-pref("Style.Australis") or
+          -moz-bool-pref("Style.Chrome-Old")
+{
+    #tabs-newtab-button
+    {
+        margin-left: calc(var(--tab-min-height) / -2 + 1px) !important;
     }
 
-    /* ---------- Separator ---------- */
-
-    #tabs-newtab-button::before
+    #tabs-newtab-button .toolbarbutton-icon
     {
-        content: "";
-        display: block;
-        width: 1px;
-        border-left: 1px solid currentColor;
-        opacity: var(--separators-color-saturation, 0);
+        border-radius: 50% !important;
     }
+}
 
-    /* ---------- Separator Hover / Active ---------- */
-
-    #tabs-newtab-button:not([disabled="true"], [checked], [open], :active):hover::before,
-    #tabs-newtab-button:not([disabled="true"]):is([open], [checked], :hover:active)::before,
-    .tabbrowser-tab:is([visuallyselected], :hover, [multiselected], [pinned]) + #tabs-newtab-button::before,
-    .tabbrowser-tab::after
+@supports -moz-bool-pref("Style.Chrome")
+{
+    #tabs-newtab-button .toolbarbutton-icon
     {
-        opacity: 0 !important;
-    }
-
-    /* ---------- Proton / Photon ---------- */
-
-    @supports -moz-bool-pref("Style.Proton") or
-              -moz-bool-pref("Style.Photon")
-    {
-        /* ---------- New Tab Button ---------- */
-
-        #tabs-newtab-button
-        {
-            --toolbarbutton-inner-padding: calc((var(--tab-min-height) - 16px) / 2) !important;
-            margin-left: calc(var(--tab-min-height) / -4) !important;
-        }
-
-        /* ---------- New Tab Button Icon ---------- */
-
-        #tabs-newtab-button .toolbarbutton-icon
-        {
-            width: calc(var(--tab-min-height) + var(--pinned-tabs-width-offset, 0px) * 2) !important;
-            padding-inline: calc(var(--toolbarbutton-inner-padding) + var(--pinned-tabs-width-offset, 0px)) !important;
-        }
-    }
-
-    /* ---------- Proton ---------- */
-
-    @supports -moz-bool-pref("Style.Proton")
-    {
-        /* ---------- Separator ---------- */
-
-        #tabs-newtab-button::before
-        {
-            height: calc(var(--tab-min-height) / 2 + var(--tab-block-margin) * 2);
-            transform: translateX(-2px);
-        }
-    }
-
-    /* ---------- Photon ---------- */
-
-    @supports -moz-bool-pref("Style.Photon")
-    {
-        /* ---------- New Tab Button Icon ---------- */
-
-        #tabs-newtab-button .toolbarbutton-icon
-        {
-            border-radius: 0 !important;
-        }
-    }
-
-    /* -------------------- WaveFox / Photon / Australis / Chrome / Chrome-Old / Edge -------------------- */
-
-    @supports -moz-bool-pref("Style.WaveFox") or
-              -moz-bool-pref("Style.Photon") or
-              -moz-bool-pref("Style.Australis") or
-              -moz-bool-pref("Style.Chrome") or
-              -moz-bool-pref("Style.Chrome-Old") or
-              -moz-bool-pref("Style.Edge")
-    {
-            /* ---------- New Tab Button ---------- */
-
-            #tabs-newtab-button
-            {
-                padding: 0px !important;
-            }
-    
-            /* ---------- Separator ---------- */
-
-            #tabs-newtab-button::before
-            {
-                height: calc(var(--tab-min-height) / 2);
-            }
-    }
-
-    /* ---------- WaveFox / Australis / Chrome-Old / Chrome / Edge ---------- */
-
-    @supports -moz-bool-pref("Style.WaveFox") or
-              -moz-bool-pref("Style.Australis") or
-              -moz-bool-pref("Style.Chrome-Old") or
-              -moz-bool-pref("Style.Chrome") or
-              -moz-bool-pref("Style.Edge")
-    {
-        /* ---------- New Tab Button ---------- */
-
-        #tabs-newtab-button
-        {
-            --new-tab-middle-background: linear-gradient(transparent, transparent);
-            background-image: var(--left-side-svg), var(--new-tab-middle-background), var(--right-side-svg) !important;
-            background-position: left, center, right !important;
-            background-repeat: no-repeat !important;
-            fill: transparent !important;
-        }
-
-        .tabbrowser-tab[visuallyselected] + #tabs-newtab-button
-        {
-            --left-side-svg: var(--left-side-svg-clipped) !important;
-        }
-
-        /* ---------- New Tab Button Icon ---------- */
-
-        #tabs-newtab-button > .toolbarbutton-icon
-        {
-            width: var(--tab-min-height) !important;
-            height: var(--tab-min-height) !important;
-            padding: calc((var(--tab-min-height) - 16px) / 2) !important;
-        }
-
-        /* ---------- Separator ---------- */
-
-        #tabs-newtab-button::before
-        {
-            margin-left: -1px;
-            transform: translateX(calc(-1 * var(--pinned-tabs-width-offset, 0px)));
-        }
-
-        /* ---------- Hover / Active ---------- */
-
-        #tabs-newtab-button:not([disabled="true"], [checked], [open], :active):hover
-        {
-            --new-tab-middle-background: linear-gradient(var(--toolbarbutton-hover-background), var(--toolbarbutton-hover-background));
-            fill: var(--toolbarbutton-hover-background) !important;
-        }
-
-        #tabs-newtab-button:not([disabled="true"]):is([open], [checked], :hover:active)
-        {
-            --new-tab-middle-background: linear-gradient(var(--toolbarbutton-active-background), var(--toolbarbutton-active-background));
-            fill: var(--toolbarbutton-active-background) !important;
-        }
-
-        #tabs-newtab-button .toolbarbutton-icon
-        {
-            fill: var(--toolbarbutton-icon-fill) !important;
-        }
-
-        /* ---------- Unwanted Hover / Active ---------- */
-
-        #tabs-newtab-button:not([disabled="true"], [checked], [open], :active):hover > .toolbarbutton-icon,
-        #tabs-newtab-button:not([disabled="true"]):is([open], [checked], :hover:active) > .toolbarbutton-icon
-        {
-            background-color: transparent !important;
-        }
-    }
-
-    /* ---------- WaveFox / Australis / Chrome-Old ---------- */
-
-    @supports -moz-bool-pref("Style.WaveFox") or
-              -moz-bool-pref("Style.Australis") or
-              -moz-bool-pref("Style.Chrome-Old")
-    {
-        /* ---------- New Tab Button ---------- */
-
-        #tabs-newtab-button
-        {
-            width: calc(var(--tab-min-height) * 2 + var(--pinned-tabs-width-offset, 0px) * 2) !important;
-            background-size: var(--tab-min-height), calc(var(--pinned-tabs-width-offset, 0px) * 2), var(--tab-min-height) !important;
-            margin-left: calc(-1 * var(--tab-min-height) + 1px) !important;
-        }
-    }
-
-    /* ---------- Chrome / Edge ---------- */
-
-    @supports -moz-bool-pref("Style.Chrome") or
-              -moz-bool-pref("Style.Edge")
-    {
-        /* ---------- New Tab Button ---------- */
-
-        #tabs-newtab-button
-        {
-            width: calc(var(--tab-min-height) + var(--pinned-tabs-width-offset, 0px) * 2 + var(--tab-min-height) / 2) !important;
-            background-size: calc(var(--tab-min-height) / 2), calc(var(--tab-min-height) / 2 + var(--pinned-tabs-width-offset, 0px) * 2), calc(var(--tab-min-height) / 2) !important;
-            margin-left: calc(var(--tab-min-height) / -2 + 1px) !important;
-        }
+        border-radius: 50% !important;
     }
 }
 
