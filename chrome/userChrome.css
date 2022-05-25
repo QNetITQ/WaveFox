@@ -831,6 +831,8 @@ spacer[part="overflow-end-indicator"]
 {
     --tab-label-mask-size: 1em !important;
     color: inherit !important;
+    -moz-box-pack: end !important;
+    overflow: visible !important;
 }
        
 .tabbrowser-tab[visuallyselected]
@@ -987,7 +989,7 @@ spacer[part="overflow-end-indicator"]
     position: relative !important;
     padding: 2px !important;
     left: 6px !important;
-    top: 6px !important;
+    top: 8px !important;
     mask-image: none !important;
     box-sizing: border-box !important;
     z-index: 1 !important;
@@ -1483,7 +1485,7 @@ spacer[part="overflow-end-indicator"]
 {
     #tabs-newtab-button
     {
-        margin-left: calc(var(--tab-min-height) / -2 + 1px) !important;
+        margin-left: calc(var(--tab-min-height) / -2 + 3px) !important;
     }
 
     #tabs-newtab-button .toolbarbutton-icon
