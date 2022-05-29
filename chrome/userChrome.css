@@ -989,7 +989,7 @@ spacer[part="overflow-end-indicator"]
     position: relative !important;
     padding: 2px !important;
     left: 6px !important;
-    top: 8px !important;
+    top: 6px !important;
     mask-image: none !important;
     box-sizing: border-box !important;
     z-index: 1 !important;
@@ -1499,6 +1499,16 @@ spacer[part="overflow-end-indicator"]
     #tabs-newtab-button .toolbarbutton-icon
     {
         border-radius: 50% !important;
+    }
+}
+
+/* ---------------------------------------- Tab Indicator ---------------------------------------- */
+
+@supports -moz-bool-pref("Style.Tab-Indicator-Enabled")
+{
+    .tabbrowser-tab[visuallyselected] .tab-background
+    {
+        box-shadow: inset 0 2px 0 var(--toolbar-field-focus-border-color) !important;
     }
 }
 
