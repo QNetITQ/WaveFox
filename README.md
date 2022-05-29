@@ -226,3 +226,10 @@ Very High
 - `Style.Pinned-Tabs-Width-Offset-Medium`
 - `Style.Pinned-Tabs-Width-Offset-High`
 - `Style.Pinned-Tabs-Width-Offset-Very-High`
+
+### Tab Indicator
+It is possible to activate the active tab indicator. On all themes except Proton/Photon, the indicator may not be visible on pinned tabs. Use the option to offset the width of pinned tabs. A very high offset is recommended.
+
+![изображение](https://user-images.githubusercontent.com/85301851/170877154-44db11c2-02ce-4aab-821e-c3cc68f26a2d.png)
+
+- `Style.Tab-Indicator-Enabled`
