@@ -70,6 +70,13 @@ It is possible to make the toolbar translucent. This can be useful if you want t
 - `Style.Toolbar-Transparency-Medium`
 - `Style.Toolbar-Transparency-High`
 
+### Linux Accent Color
+It is possible to activate the accent color on the tab bar. Works only on the system theme.
+
+![изображение](https://user-images.githubusercontent.com/85301851/171032958-826ceada-5515-4570-9c34-82ffcbfe62b2.png)
+
+- `Style.Linux-TitleBar-Accent-Color`
+
 ### Colorways
 Mozilla keeps deleting these custom themes. I don't know why, but it doesn't matter. Now it is possible to use built-in themes. They will not be deleted. Use with light/dark themes. On the system does not work.
 
