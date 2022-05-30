@@ -39,7 +39,6 @@
         :root[tabsintitlebar]:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not(:-moz-window-inactive) .titlebar-color
         {
             background-color: -moz-accent-color !important;
-            color: -moz-accent-color-foreground !important;
         }
     }
 
