@@ -70,21 +70,10 @@ It is possible to make the toolbar translucent. This can be useful if you want t
 - `Style.Toolbar-Transparency-Medium`
 - `Style.Toolbar-Transparency-High`
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 ### Linux Transparency
 Requires Linux with transparency support. Transparency only works with the title bar active or in windowed mode without the title bar. I don't know if this is a limitation of the browser or the script or the operating system itself. Tested on Linux KDE + ForceBlur.
+
+![изображение](https://user-images.githubusercontent.com/85301851/171746926-9e199afd-51cf-47f0-8b57-c972b8cee755.png)
 
 To enable transparency, create and activate the keys below
 
@@ -93,20 +82,9 @@ To enable transparency, create and activate the keys below
 
 It is possible to activate a semi-transparent background for better visibility
 
-- `Style.Linux-Transparency-Background`
+![изображение](https://user-images.githubusercontent.com/85301851/171746572-f863ad8b-6d2b-46a1-8595-24d8d055894c.png)
 
-
-
-
-
-
-
-
-
-
-
-
-
+- `Style.Linux-Transparency-Background-Enabled`
 
 ### Linux Accent Color
 It is possible to activate the accent color on the tab bar. Works only on the system theme.
