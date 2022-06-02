@@ -49,14 +49,9 @@
             appearance: none !important;
         }
 
-        :root[sizemode="normal"][tabsintitlebar]:not(:-moz-lwtheme) #navigator-toolbox
+        :root[sizemode="normal"][tabsintitlebar]:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) #navigator-toolbox
         {
-            background-color: rgba(255,255,255,0.5) !important;
-        }
-
-        :root[sizemode="normal"][tabsintitlebar][lwt-default-theme-in-dark-mode] #navigator-toolbox
-        {
-            background-color: rgba(0,0,0,0.5) !important;
+            background-color: color-mix(in srgb, var(--toolbar-bgcolor), transparent) !important;
         }
     }
 
