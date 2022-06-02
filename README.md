@@ -60,7 +60,7 @@ Once installed, create and activate the key below. For transparency to work corr
 - `Style.Win11-Mica-Acrylic`
 
 ### Toolbar Transparency
-It is possible to make the toolbar translucent. This can be useful if you want to extend the use of system effects like Windows 7 Aero / Windows 11 Mika / MacOS Vibrancy. Works only with the system theme.
+It is possible to make the toolbar translucent. This can be useful if you want to extend the use of system effects like Windows 7 Aero / Windows 11 Acrylic / MacOS Vibrancy / Linux. Works only with the system theme.
 
 ##### Toolbar Transparency
 ![изображение](https://user-images.githubusercontent.com/85301851/165526704-4f7486c4-f330-4c86-a25d-6ed8ab2affe4.png)
@@ -69,6 +69,46 @@ It is possible to make the toolbar translucent. This can be useful if you want t
 - `Style.Toolbar-Transparency-Low`
 - `Style.Toolbar-Transparency-Medium`
 - `Style.Toolbar-Transparency-High`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Linux Transparency
+Requires Linux with transparency support. Transparency only works in windowed mode. I don't know if this is a limitation of the browser or the script or the operating system itself. Tested on Linux KDE + ForceBlur.
+
+To enable transparency, create and activate the keys below
+
+- `Style.Linux-Transparency-Enabled`
+- `gfx.webrender.all`
+
+It is possible to control the saturation of the background
+
+- `Style.Linux-Transparency-Low`
+- `Style.Linux-Transparency-Medium`
+- `Style.Linux-Transparency-High`
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### Linux Accent Color
 It is possible to activate the accent color on the tab bar. Works only on the system theme.
