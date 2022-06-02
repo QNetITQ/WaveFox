@@ -50,15 +50,15 @@
         }
     }
 
-    @supports -moz-bool-pref("Style.Linux-Transparency-Background-Low")
+    @supports -moz-bool-pref("Style.Linux-Transparency-Low")
     {
         :root[sizemode="normal"][tabsintitlebar]:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) #navigator-toolbox
         {
-            background-color: color-mix(in srgb, var(--toolbar-bgcolor) 25%, transparent) !important;
+            background-color: color-mix(in srgb, var(--toolbar-bgcolor) 75%, transparent) !important;
         }
     }
        
-    @supports -moz-bool-pref("Style.Linux-Transparency-Background-Medium")
+    @supports -moz-bool-pref("Style.Linux-Transparency-Medium")
     {
         :root[sizemode="normal"][tabsintitlebar]:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) #navigator-toolbox
         {
@@ -66,11 +66,11 @@
         }
     }
 
-    @supports -moz-bool-pref("Style.Linux-Transparency-Background-High")
+    @supports -moz-bool-pref("Style.Linux-Transparency-High")
     {
         :root[sizemode="normal"][tabsintitlebar]:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) #navigator-toolbox
         {
-            background-color: color-mix(in srgb, var(--toolbar-bgcolor) 75%, transparent) !important;
+            background-color: color-mix(in srgb, var(--toolbar-bgcolor) 25%, transparent) !important;
         }
     }
 
