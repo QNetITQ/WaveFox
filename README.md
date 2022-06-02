@@ -84,18 +84,16 @@ It is possible to make the toolbar translucent. This can be useful if you want t
 
 
 ### Linux Transparency
-Requires Linux with transparency support. Transparency only works in windowed mode. I don't know if this is a limitation of the browser or the script or the operating system itself. Tested on Linux KDE + ForceBlur.
+Requires Linux with transparency support. Transparency only works with the title bar active or in windowed mode without the title bar. I don't know if this is a limitation of the browser or the script or the operating system itself. Tested on Linux KDE + ForceBlur.
 
 To enable transparency, create and activate the keys below
 
 - `Style.Linux-Transparency-Enabled`
 - `gfx.webrender.all`
 
-It is possible to control the saturation of the background
+It is possible to activate a semi-transparent background for better visibility
 
-- `Style.Linux-Transparency-Low`
-- `Style.Linux-Transparency-Medium`
-- `Style.Linux-Transparency-High`
+- `Style.Linux-Transparency-Background`
 
 
 
