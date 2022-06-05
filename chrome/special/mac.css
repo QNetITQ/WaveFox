@@ -1,16 +1,13 @@
-@media (-moz-platform: macos),
-    
-       /* ESR / Waterfox */
-       (-moz-mac-big-sur-theme)    
+@media (-moz-platform: macos)
 {
-    #main-window:not(:-moz-lwtheme)
+    :root[tabsintitlebar]:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) #navigator-toolbox-background
     {
-        appearance: -moz-mac-vibrant-titlebar-light !important;
+        appearance: -moz-window-titlebar !important;
     }
 
-    #main-window[lwt-default-theme-in-dark-mode]
+    :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) #navigator-toolbox-background
     {
-        appearance: -moz-mac-vibrant-titlebar-dark !important;
+        appearance: -moz-mac-source-list !important;
     }
 
     #main-window:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) #navigator-toolbox
