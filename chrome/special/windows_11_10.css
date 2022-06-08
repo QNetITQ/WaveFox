@@ -3,7 +3,6 @@
        /* ESR / Waterfox */
        (-moz-os-version: windows-win10)
 {
-    
     @supports -moz-bool-pref("Style.Proton") or
               -moz-bool-pref("Style.Photon") or
               -moz-bool-pref("Style.WaveFox") or
