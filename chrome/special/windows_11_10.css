@@ -16,45 +16,14 @@
         {
             @media (-moz-windows-accent-color-in-titlebar)
             {
-                :root[tabsintitlebar]:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not(:-moz-window-inactive) .titlebar-color
+                :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not(:-moz-window-inactive) #navigator-toolbox
                 {
                     background-color: -moz-accent-color !important;
-                    color: -moz-accent-color-foreground !important;
                 }
-            }
-
-            @supports -moz-bool-pref("Style.Win11-Mica-Acrylic")
-            {
-                @media (-moz-windows-accent-color-in-titlebar: 0)
+                
+                :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not(:-moz-window-inactive) .titlebar-color
                 {
-                    #main-window:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode])
-                    {
-                        appearance: -moz-win-glass !important;
-                        background-color: transparent !important;
-                    }
-
-                    #main-window:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) #navigator-toolbox
-                    {
-                        background-color: transparent !important;
-                    }
-
-                    #main-window:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) .titlebar-buttonbox
-                    {
-                        background-color: var(--toolbar-bgcolor) !important;
-                        border-bottom-left-radius: 8px !important;
-                        filter: var(--special-main-outer-shadow) var(--special-additional-outer-shadow) !important;
-                        opacity: 0 !important;
-                    }
-
-                    #main-window:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) .titlebar-buttonbox:hover
-                    {
-                        opacity: 1 !important;
-                    }
-
-                    #main-window:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) .titlebar-min
-                    {
-                        border-bottom-left-radius: 8px !important;
-                    }
+                    color: -moz-accent-color-foreground !important;
                 }
             }
 
@@ -71,6 +40,41 @@
             .titlebar-button:not(.titlebar-close):hover:active
             {
                 background-color: var(--toolbarbutton-active-background) !important;
+            }
+        }
+
+        @supports -moz-bool-pref("Style.Win11-Mica-Acrylic")
+        {
+            @media (-moz-windows-accent-color-in-titlebar: 0)
+            {
+                #main-window:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode])
+                {
+                    appearance: -moz-win-glass !important;
+                    background-color: transparent !important;
+                }
+
+                :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) #navigator-toolbox
+                {
+                    background-color: transparent !important;
+                }
+
+                :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) .titlebar-buttonbox
+                {
+                    background-color: var(--toolbar-bgcolor) !important;
+                    border-bottom-left-radius: 8px !important;
+                    filter: var(--special-main-outer-shadow) var(--special-additional-outer-shadow) !important;
+                    opacity: 0 !important;
+                }
+
+                :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) .titlebar-buttonbox:hover
+                {
+                    opacity: 1 !important;
+                }
+
+                :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) .titlebar-min
+                {
+                    border-bottom-left-radius: 8px !important;
+                }
             }
         }
     }
@@ -108,5 +112,4 @@
             padding-inline-start: 1em !important;
         }
     }
-
 }
