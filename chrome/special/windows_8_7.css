@@ -14,7 +14,7 @@
         }
     }
 
-    :root:not([lwtheme-image]) .titlebar-color
+    .titlebar-color
     {
         background-image: none !important;
     }
