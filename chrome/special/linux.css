@@ -34,14 +34,6 @@
         }
     }
 
-    @supports -moz-bool-pref("Style.Linux-TitleBar-Accent-Color")
-    {
-        :root[tabsintitlebar]:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not(:-moz-window-inactive) .titlebar-color
-        {
-            background-color: -moz-accent-color !important;
-        }
-    }
-
     @supports -moz-bool-pref("Style.Linux-Transparency-Enabled")
     {
         :root[sizemode="normal"][tabsintitlebar]:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) #navigator-toolbox-background
