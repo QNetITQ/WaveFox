@@ -73,7 +73,7 @@ It is possible to make the toolbar translucent. This can be useful if you want t
 ### Linux Transparency
 Requires Linux with transparency support. Tested on Linux Manjaro KDE + ForceBlur. Transparency is active for all window modes, but does not work everywhere. This may change with future browser updates. Works only with the system theme.
 
-![изображение](https://user-images.githubusercontent.com/85301851/171746926-9e199afd-51cf-47f0-8b57-c972b8cee755.png)
+![изображение](https://user-images.githubusercontent.com/85301851/173119832-e82bc2f7-eda7-4167-9dcd-ccca50383816.png)
 
 - `Style.Linux-Transparency-Enabled`
 - `gfx.webrender.all`
