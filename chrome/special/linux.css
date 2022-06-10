@@ -38,7 +38,7 @@
     {
         #main-window:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode])
         {
-            background-color: transparent !important;
+            background-color: color-mix(in srgb, -moz-Dialog 75%, transparent) !important;
         }
 
         :root[tabsintitlebar]:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) #navigator-toolbox-background
