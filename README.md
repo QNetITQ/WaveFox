@@ -75,16 +75,8 @@ Requires Linux with transparency support. Transparency only works with the title
 
 ![изображение](https://user-images.githubusercontent.com/85301851/171746926-9e199afd-51cf-47f0-8b57-c972b8cee755.png)
 
-To enable transparency, create and activate the keys below
-
 - `Style.Linux-Transparency-Enabled`
 - `gfx.webrender.all`
-
-It is possible to activate a semi-transparent background for better visibility
-
-![изображение](https://user-images.githubusercontent.com/85301851/171746572-f863ad8b-6d2b-46a1-8595-24d8d055894c.png)
-
-- `Style.Linux-Transparency-Background-Enabled`
 
 ### Colorways
 Mozilla keeps deleting these custom themes. I don't know why, but it doesn't matter. Now it is possible to use built-in themes. They will not be deleted. Use with light/dark themes. On the system does not work.
