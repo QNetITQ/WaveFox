@@ -60,7 +60,7 @@ Once installed, create and activate the key below. For transparency to work corr
 - `Style.Win11-Mica-Acrylic`
 
 ### Toolbar Transparency
-It is possible to make the toolbar translucent. This can be useful if you want to extend the use of system effects like Windows 7 Aero / Windows 11 Acrylic / MacOS Vibrancy / Linux. Works only with the system theme.
+It is possible to make the toolbar semi-translucent. Works only with the system theme.
 
 ##### Toolbar Transparency
 ![изображение](https://user-images.githubusercontent.com/85301851/165526704-4f7486c4-f330-4c86-a25d-6ed8ab2affe4.png)
@@ -79,7 +79,7 @@ Requires Linux with transparency support. Tested on Linux Manjaro KDE + ForceBlu
 - `gfx.webrender.all`
 
 ### Colorways
-Mozilla keeps deleting these custom themes. I don't know why, but it doesn't matter. Now it is possible to use built-in themes. They will not be deleted. Use with light/dark themes. On the system does not work.
+Use with light/dark themes. On the system does not work.
 
 ##### Blue
 ![изображение](https://user-images.githubusercontent.com/85301851/165319656-490ad853-2dea-4eb8-abe4-8c4490b8c686.png)
