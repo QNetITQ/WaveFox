@@ -282,82 +282,44 @@
 
 @supports -moz-bool-pref("Style.Toolbar-Transparency-Low")
 {
-    :root:not(:-moz-lwtheme)
+    :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode])
     {
-        --toolbar-bgcolor: rgba(255,255,255,0.75) !important;
-        --toolbar-field-background-color: rgba(255,255,255,0.75) !important;
-        --toolbar-field-border-color: transparent !important;
-        --chrome-content-separator-color: transparent !important;
-        --button-hover-bgcolor: rgba(0,0,0,0.1) !important;
-        --button-active-bgcolor: rgba(0,0,0,0.2) !important;
-        --main-shadow-color: transparent !important;
-        --additional-shadow-color: transparent !important;
-    }
-
-    :root[lwt-default-theme-in-dark-mode]
-    {
-        --toolbar-bgcolor: rgba(0,0,0,0.75) !important;
-        --toolbar-field-background-color: rgba(0,0,0,0.75) !important;
-        --toolbar-field-border-color: transparent !important;
-        --chrome-content-separator-color: transparent !important;
-        --button-hover-bgcolor: rgba(255,255,255,0.1) !important;
-        --button-active-bgcolor: rgba(255,255,255,0.2) !important;
-        --main-shadow-color: transparent !important;
-        --additional-shadow-color: transparent !important;
+        --custom-toolbar-bgcolor: color-mix(in srgb, var(--toolbar-bgcolor) 75%, transparent);
     }
 }
 
 @supports -moz-bool-pref("Style.Toolbar-Transparency-Medium")
 {
-    :root:not(:-moz-lwtheme)
+    :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode])
     {
-        --toolbar-bgcolor: rgba(255,255,255,0.5) !important;
-        --toolbar-field-background-color: rgba(255,255,255,0.5) !important;
-        --toolbar-field-border-color: transparent !important;
-        --chrome-content-separator-color: transparent !important;
-        --button-hover-bgcolor: rgba(0,0,0,0.1) !important;
-        --button-active-bgcolor: rgba(0,0,0,0.2) !important;
-        --main-shadow-color: transparent !important;
-        --additional-shadow-color: transparent !important;
-    }
-
-    :root[lwt-default-theme-in-dark-mode]
-    {
-        --toolbar-bgcolor: rgba(0,0,0,0.5) !important;
-        --toolbar-field-background-color: rgba(0,0,0,0.5) !important;
-        --toolbar-field-border-color: transparent !important;
-        --chrome-content-separator-color: transparent !important;
-        --button-hover-bgcolor: rgba(255,255,255,0.1) !important;
-        --button-active-bgcolor: rgba(255,255,255,0.2) !important;
-        --main-shadow-color: transparent !important;
-        --additional-shadow-color: transparent !important;
+        --custom-toolbar-bgcolor: color-mix(in srgb, var(--toolbar-bgcolor) 50%, transparent);
     }
 }
 
 @supports -moz-bool-pref("Style.Toolbar-Transparency-High")
 {
-    :root:not(:-moz-lwtheme)
+    :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode])
     {
-        --toolbar-bgcolor: rgba(255,255,255,0.25) !important;
-        --toolbar-field-background-color: rgba(255,255,255,0.25) !important;
-        --toolbar-field-border-color: transparent !important;
-        --chrome-content-separator-color: transparent !important;
-        --button-hover-bgcolor: rgba(0,0,0,0.1) !important;
-        --button-active-bgcolor: rgba(0,0,0,0.2) !important;
+        --custom-toolbar-bgcolor: color-mix(in srgb, var(--toolbar-bgcolor) 25%, transparent);
+    }
+}
+
+@supports -moz-bool-pref("Style.Toolbar-Transparency-Low") or
+          -moz-bool-pref("Style.Toolbar-Transparency-Medium") or
+          -moz-bool-pref("Style.Toolbar-Transparency-High")
+{
+    :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode])
+    {
+        --toolbar-field-background-color: var(--custom-toolbar-bgcolor) !important;
+        --button-hover-bgcolor: color-mix(in srgb, currentColor 10%, transparent) !important;
+        --button-active-bgcolor: color-mix(in srgb, currentColor 20%, transparent) !important;
         --main-shadow-color: transparent !important;
         --additional-shadow-color: transparent !important;
     }
 
-    :root[lwt-default-theme-in-dark-mode]
+    :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) #navigator-toolbox
     {
-        --toolbar-bgcolor: rgba(0,0,0,0.25) !important;
-        --toolbar-field-background-color: rgba(0,0,0,0.25) !important;
-        --toolbar-field-border-color: transparent !important;
-        --chrome-content-separator-color: transparent !important;
-        --button-hover-bgcolor: rgba(255,255,255,0.1) !important;
-        --button-active-bgcolor: rgba(255,255,255,0.2) !important;
-        --main-shadow-color: transparent !important;
-        --additional-shadow-color: transparent !important;
+        --toolbar-bgcolor: var(--custom-toolbar-bgcolor) !important;
     }
 }
 
