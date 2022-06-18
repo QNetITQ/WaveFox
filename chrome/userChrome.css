@@ -535,16 +535,6 @@
 :root
 {
     --tabs-navbar-shadow-size: 0px !important;
-    --tab-selected-bgimage: unset !important; 
-}
-
-@supports not -moz-bool-pref("Style.Toolbar-Full-Transparency")
-{
-    :root
-    {
-        --tab-selected-bgcolor: unset !important;
-        --lwt-selected-tab-background-color: unset !important;
-    }
 }
 
 :root:is(:not(:-moz-lwtheme),
@@ -842,6 +832,9 @@ spacer[part="overflow-end-indicator"]
 
 .tab-background
 {
+    --tab-selected-bgcolor: var(--toolbar-bgcolor) !important;
+    --lwt-selected-tab-background-color: var(--toolbar-bgcolor) !important;
+    --tab-selected-bgimage: none !important;
     position: relative !important;
     box-shadow: none !important;
     opacity: 1 !important;
