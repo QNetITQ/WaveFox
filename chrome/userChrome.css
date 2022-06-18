@@ -503,8 +503,8 @@
          [style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"],
          [style*="--lwt-accent-color: rgb(28, 27, 34); --lwt-text-color: rgba(251, 251, 254);"])
 {
-    --toolbarbutton-hover-background: color-mix(in srgb, currentColor 10%, transparent) !important;
-    --toolbarbutton-active-background: color-mix(in srgb, currentColor 20%, transparent) !important;
+    --button-hover-bgcolor: color-mix(in srgb, currentColor 10%, transparent) !important;
+    --button-active-bgcolor: color-mix(in srgb, currentColor 20%, transparent) !important;
 }
 
 /* ---------------------------------------- Density ---------------------------------------- */
