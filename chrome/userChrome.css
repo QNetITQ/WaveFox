@@ -328,6 +328,16 @@
         --toolbar-bgcolor: transparent !important;
         --toolbar-bgimage: none !important;
     }
+       
+    :root:not(:-moz-lwtheme) .tab-background
+    {
+        --tab-selected-bgcolor: inherit !important;
+    }
+    
+    :root[lwt-default-theme-in-dark-mode] .tab-background
+    {
+        --lwt-selected-tab-background-color: inherit !important;
+    }
 
     @supports -moz-bool-pref("Style.WaveFox") or
               -moz-bool-pref("Style.Australis") or
