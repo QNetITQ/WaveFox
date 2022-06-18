@@ -327,6 +327,8 @@
     {
         --toolbar-bgcolor: transparent !important;
         --toolbar-bgimage: none !important;
+        --tab-selected-bgcolor: Field !important;
+        --lwt-selected-tab-background-color: Field !important;
     }
        
     :root:not(:-moz-lwtheme) .tab-background
