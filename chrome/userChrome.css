@@ -511,13 +511,19 @@
     }
 }
 
-/* ---------------------------------------- Unneeded styles ---------------------------------------- */
+/* ---------------------------------------- Navigator ToolBox ---------------------------------------- */
 
-:root
+#navigator-toolbox
 {
     --tab-selected-bgcolor: unset !important;
     --lwt-selected-tab-background-color: unset !important;
     --tab-selected-bgimage: unset !important;
+}
+
+/* ---------------------------------------- Unneeded styles ---------------------------------------- */
+
+:root
+{
     --tabs-navbar-shadow-size: 0px !important;
 }
 
