@@ -844,7 +844,7 @@ spacer[part="overflow-end-indicator"]
 {
     --tab-selected-bgcolor: var(--toolbar-bgcolor) !important;
     --lwt-selected-tab-background-color: var(--toolbar-bgcolor) !important;
-    --tab-selected-bgimage: none !important;
+    --tab-selected-bgimage: var(--toolbar-bgimage) !important;
     position: relative !important;
     box-shadow: none !important;
     opacity: 1 !important;
