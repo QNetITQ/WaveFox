@@ -486,6 +486,7 @@
 :root
 {
     --tabs-navbar-shadow-size: 0px !important;
+    --tab-selected-bgimage: unset !important; 
 }
 
 @supports not -moz-bool-pref("Style.Toolbar-Full-Transparency")
@@ -494,7 +495,6 @@
     {
         --tab-selected-bgcolor: unset !important;
         --lwt-selected-tab-background-color: unset !important;
-        --tab-selected-bgimage: unset !important;       
     }
 }
 
