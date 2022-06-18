@@ -69,6 +69,7 @@ It is possible to make the toolbar semi-transparent. Works only with the system 
 - `Style.Toolbar-Transparency-Low`
 - `Style.Toolbar-Transparency-Medium`
 - `Style.Toolbar-Transparency-High`
+- `Style.Toolbar-Full-Transparency`
 
 ### Linux Transparency
 Requires Linux with transparency support. Tested on Linux Manjaro KDE + ForceBlur. Transparency is active for all window modes, but does not work everywhere. This may change with future browser updates. Works only with the system theme.
