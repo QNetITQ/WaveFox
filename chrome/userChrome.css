@@ -348,14 +348,14 @@
               -moz-bool-pref("Style.Chrome-Old") or
               -moz-bool-pref("Style.Edge")
     {
-        :root:not(:-moz-lwtheme) .tab-background::before,
-        :root:not(:-moz-lwtheme) .tab-background::after
+        :root:not(:-moz-lwtheme) .tabbrowser-tab[visuallyselected] .tab-background::before,
+        :root:not(:-moz-lwtheme) .tabbrowser-tab[visuallyselected] .tab-background::after
         {
             fill: var(--tab-selected-bgcolor) !important;
         }
 
-        :root[lwt-default-theme-in-dark-mode] .tab-background::before,
-        :root[lwt-default-theme-in-dark-mode] .tab-background::after
+        :root[lwt-default-theme-in-dark-mode] .tabbrowser-tab[visuallyselected] .tab-background::before,
+        :root[lwt-default-theme-in-dark-mode] .tabbrowser-tab[visuallyselected] .tab-background::after
         {
             fill: var(--lwt-selected-tab-background-color) !important;
         }
