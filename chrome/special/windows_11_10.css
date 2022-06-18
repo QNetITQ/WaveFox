@@ -3,77 +3,68 @@
        /* ESR / Waterfox */
        (-moz-os-version: windows-win10)
 {
-    @supports -moz-bool-pref("Style.Proton") or
-              -moz-bool-pref("Style.Photon") or
-              -moz-bool-pref("Style.WaveFox") or
-              -moz-bool-pref("Style.Australis") or
-              -moz-bool-pref("Style.Chrome") or
-              -moz-bool-pref("Style.Chrome-Old") or
-              -moz-bool-pref("Style.Edge")
+    @media (-moz-windows-default-theme)
     {
-        @media (-moz-windows-default-theme)
+        @media (-moz-windows-accent-color-in-titlebar)
         {
-            @media (-moz-windows-accent-color-in-titlebar)
+            :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not(:-moz-window-inactive) #navigator-toolbox
             {
-                :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not(:-moz-window-inactive) #navigator-toolbox
-                {
-                    background-color: -moz-accent-color !important;
-                }
+                background-color: -moz-accent-color !important;
+            }
                 
-                :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not(:-moz-window-inactive) .titlebar-color
-                {
-                    color: -moz-accent-color-foreground !important;
-                }
-            }
-
-            .titlebar-buttonbox-container
+            :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not(:-moz-window-inactive) .titlebar-color
             {
-                -moz-box-align: start !important;
-            }
-
-            .titlebar-button:not(.titlebar-close):hover
-            {
-                background-color: var(--toolbarbutton-hover-background) !important;
-            }
-
-            .titlebar-button:not(.titlebar-close):hover:active
-            {
-                background-color: var(--toolbarbutton-active-background) !important;
+                color: -moz-accent-color-foreground !important;
             }
         }
 
-        @supports -moz-bool-pref("Style.Win11-Mica-Acrylic")
+        .titlebar-buttonbox-container
         {
-            @media (-moz-windows-accent-color-in-titlebar: 0)
+            -moz-box-align: start !important;
+        }
+
+        .titlebar-button:not(.titlebar-close):hover
+        {
+            background-color: var(--toolbarbutton-hover-background) !important;
+        }
+
+        .titlebar-button:not(.titlebar-close):hover:active
+        {
+            background-color: var(--toolbarbutton-active-background) !important;
+        }
+    }
+
+    @supports -moz-bool-pref("Style.Win11-Mica-Acrylic")
+    {
+        @media (-moz-windows-accent-color-in-titlebar: 0)
+        {
+            #main-window:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode])
             {
-                #main-window:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode])
-                {
-                    appearance: -moz-win-glass !important;
-                    background-color: transparent !important;
-                }
+                appearance: -moz-win-glass !important;
+                background-color: transparent !important;
+            }
 
-                :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) #navigator-toolbox
-                {
-                    background-color: transparent !important;
-                }
+            :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) #navigator-toolbox
+            {
+                background-color: transparent !important;
+            }
 
-                :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) .titlebar-buttonbox
-                {
-                    background-color: var(--toolbar-bgcolor) !important;
-                    border-bottom-left-radius: 8px !important;
-                    filter: var(--special-main-outer-shadow) var(--special-additional-outer-shadow) !important;
-                    opacity: 0 !important;
-                }
+            :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) .titlebar-buttonbox
+            {
+                background-color: var(--toolbar-bgcolor) !important;
+                border-bottom-left-radius: 8px !important;
+                filter: var(--special-main-outer-shadow) var(--special-additional-outer-shadow) !important;
+                opacity: 0 !important;
+            }
 
-                :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) .titlebar-buttonbox:hover
-                {
-                    opacity: 1 !important;
-                }
+            :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) .titlebar-buttonbox:hover
+            {
+                opacity: 1 !important;
+            }
 
-                :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) .titlebar-min
-                {
-                    border-bottom-left-radius: 8px !important;
-                }
+            :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) .titlebar-min
+            {
+                border-bottom-left-radius: 8px !important;
             }
         }
     }
