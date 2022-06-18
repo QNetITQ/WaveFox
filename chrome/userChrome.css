@@ -321,6 +321,55 @@
     }
 }
 
+@supports -moz-bool-pref("Style.Toolbar-Full-Transparency")
+{
+    :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode])
+    {
+        --toolbar-bgcolor: transparent !important;
+        --toolbar-bgimage: none !important;
+    }
+
+    @supports -moz-bool-pref("Style.WaveFox") or
+              -moz-bool-pref("Style.Australis") or
+              -moz-bool-pref("Style.Chrome") or
+              -moz-bool-pref("Style.Chrome-Old") or
+              -moz-bool-pref("Style.Edge")
+    {
+        :root:not(:-moz-lwtheme) .tab-background::before,
+        :root:not(:-moz-lwtheme) .tab-background::after
+        {
+            fill: var(--tab-selected-bgcolor) !important;
+        }
+
+        :root[lwt-default-theme-in-dark-mode] .tab-background::before,
+        :root[lwt-default-theme-in-dark-mode] .tab-background::after
+        {
+            fill: var(--lwt-selected-tab-background-color) !important;
+        }
+    }
+
+    :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) #TabsToolbar::before
+    {
+        display: none !important;
+    }
+
+    :root:not(:-moz-lwtheme)
+    {
+        --toolbar-field-background-color: var(--tab-selected-bgcolor) !important;
+    }
+
+    :root[lwt-default-theme-in-dark-mode]
+    {
+        --toolbar-field-background-color: var(--lwt-selected-tab-background-color) !important;
+    }
+
+    :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) #urlbar:not([focused], [open]) > #urlbar-background,
+    :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) #searchbar:focus-within
+    {
+        filter: var(--special-main-outer-shadow) var(--special-additional-outer-shadow) !important;
+    }
+}
+
 /* ---------------------------------------- Colorways ---------------------------------------- */
 
 /* -------------------- Light -------------------- */
