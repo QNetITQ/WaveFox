@@ -328,7 +328,7 @@
         --toolbar-bgcolor: transparent !important;
         --toolbar-bgimage: none !important;
         --tab-selected-bgcolor: Field !important;
-        --lwt-selected-tab-background-color: Field !important;
+        /* --lwt-selected-tab-background-color: Field !important; */
         --toolbar-field-border-color: transparent !important;
     }
        
