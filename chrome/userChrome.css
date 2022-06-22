@@ -1069,7 +1069,7 @@ spacer[part="overflow-end-indicator"]
 
 .tab-stack
 {
-    margin-left: 1px;
+    margin-left: 1px !important;
 }
 
 .tab-stack::before,
@@ -1273,6 +1273,13 @@ spacer[part="overflow-end-indicator"]
     .tab-stack::after
     {
         transform: translateX(2px);
+    }
+
+    /* ---------- Density ---------- */
+
+    :root[uidensity="compact"]
+    {
+        --tab-min-height: 28px !important;
     }
 }
 
