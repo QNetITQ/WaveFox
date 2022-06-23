@@ -1,4 +1,4 @@
-@supports -moz-bool-pref("ESR-Compatibility")
+@supports -moz-bool-pref("ESR-Compatibility-Enabled")
 {
     @media (-moz-platform: windows-win10)
     {
