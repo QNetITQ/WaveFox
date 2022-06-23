@@ -6,14 +6,7 @@
 
 @media (-moz-platform: windows),
        (-moz-platform: linux),
-       (-moz-platform: macos),
-       
-       /* ESR / Waterfox */
-       (-moz-os-version: windows-win10),
-       (-moz-os-version: windows-win8),
-       (-moz-os-version: windows-win7),
-       (-moz-gtk-csd-available),
-       (-moz-mac-big-sur-theme)
+       (-moz-platform: macos)
 {
 
 /* ---------------------------------------- Shadows ---------------------------------------- */
@@ -805,12 +798,6 @@ spacer[part="overflow-start-indicator"],
 spacer[part="overflow-end-indicator"]
 {
     margin-top: var(--margin-top, revert) !important;
-}
-
-/* ESR / Waterfox */
-#tabbrowser-arrowscrollbox[overflowing]
-{
-    --toolbarbutton-inner-padding: 0 !important;
 }
 
 /* ---------------------------------------- Titlebar ---------------------------------------- */
@@ -1872,13 +1859,7 @@ spacer[part="overflow-end-indicator"]
     /* ---------- Non-Native Browser Menus ---------- */
 
     @media (-moz-platform: windows),
-           (-moz-platform: linux),
-
-           /* ESR / Waterfox */
-           (-moz-os-version: windows-win10),
-           (-moz-os-version: windows-win8),
-           (-moz-os-version: windows-win7),
-           (-moz-gtk-csd-available)
+           (-moz-platform: linux)
     {
 
     :is(
