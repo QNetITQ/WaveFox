@@ -1,9 +1,5 @@
 @media (-moz-platform: windows-win8),
-       (-moz-platform: windows-win7),
-       
-       /* ESR / Waterfox */
-       (-moz-os-version: windows-win8),
-       (-moz-os-version: windows-win7)
+       (-moz-platform: windows-win7)
 {
 
     @media (-moz-windows-glass)
