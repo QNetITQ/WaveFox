@@ -24,6 +24,10 @@
   - `Style.Australis`
   - `Style.Chrome-Old`
 
+- For compatibility with the ESR, use the key below
+
+  - `ESR-Compatibility-Enabled`
+
 - Create and activate other keys. This step is optional
 
 ### How to create keys?
