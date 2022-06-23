@@ -1,9 +1,9 @@
 # *WaveFox*
 
 ##### Minimum Requirements
-- Firefox 99 / ESR 91.8.0
+- Firefox 101 / ESR 102
 - Windows
-- MacOS (Firefox) / MacOS 11 (ESR)
+- MacOS
 - Linux
 
 ##### Installation
