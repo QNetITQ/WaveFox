@@ -2,6 +2,7 @@
 @import "special/windows_8_7.css";
 @import "special/linux.css";
 @import "special/mac.css";
+@import "special/ESR_Windows_11_10.css";
 
 @media (-moz-platform: windows),
        (-moz-platform: linux),
