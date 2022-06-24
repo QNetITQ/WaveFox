@@ -836,6 +836,7 @@ spacer[part="overflow-end-indicator"]
 .tab-background
 {
     position: relative !important;
+    background-image: none !important;
     box-shadow: none !important;
     opacity: 1 !important;
     border: none !important;
@@ -844,12 +845,12 @@ spacer[part="overflow-end-indicator"]
 
 .tabbrowser-tab:hover:not([visuallyselected],[multiselected]) .tab-background
 {
-    background: var(--toolbarbutton-hover-background) !important;
+    background-color: var(--toolbarbutton-hover-background) !important;
 }
 
 .tabbrowser-tab[multiselected]:not([visuallyselected]) .tab-background
 {
-    background: var(--toolbarbutton-active-background) !important;
+    background-color: var(--toolbarbutton-active-background) !important;
 }
 
 .tab-loading-burst
