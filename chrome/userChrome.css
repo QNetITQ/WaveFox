@@ -1004,8 +1004,7 @@ spacer[part="overflow-end-indicator"]
 #TabsToolbar
 {
     --toolbarbutton-inner-padding: inherit !important;
-    position: relative;
-    clip-path: inset(0px);
+    clip-path: inset(0px) !important;
 }
 
 #TabsToolbar::before
@@ -1136,15 +1135,6 @@ spacer[part="overflow-end-indicator"]
     :root
     {
         --separators-color-saturation: 1;
-    }
-}
-
-@supports -moz-bool-pref("Style.Pinned-Tab-Separators-Disabled")
-{
-    .tabbrowser-tab[pinned] .tab-stack::before,
-    .tabbrowser-tab[pinned] .tab-stack::after
-    {
-        opacity: 0;
     }
 }
 
