@@ -828,14 +828,13 @@ spacer[part="overflow-end-indicator"]
 
 .tabbrowser-tab[visuallyselected] .tab-background
 {
+    background-color: var(--toolbar-bgcolor) !important;
+    background-image: var(--toolbar-bgimage) !important;
     filter: var(--special-main-outer-shadow) var(--special-additional-outer-shadow);
 }
 
 .tab-background
 {
-    --tab-selected-bgcolor: var(--toolbar-bgcolor) !important;
-    --lwt-selected-tab-background-color: var(--toolbar-bgcolor) !important;
-    --tab-selected-bgimage: var(--toolbar-bgimage) !important;
     position: relative !important;
     box-shadow: none !important;
     opacity: 1 !important;
@@ -1004,6 +1003,7 @@ spacer[part="overflow-end-indicator"]
 #TabsToolbar
 {
     --toolbarbutton-inner-padding: inherit !important;
+    position: relative !important;
     clip-path: inset(0px) !important;
 }
 
