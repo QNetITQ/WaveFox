@@ -170,7 +170,6 @@ It is possible to set the saturation of tab separators.
 - `Style.Separators-Saturation-Normal`
 - `Style.Separators-Saturation-High`
 - `Style.Separators-Saturation-Very-High`
-- `Style.Pinned-Tab-Separators-Disabled`
 
 ### Density
 By default, context menus follow the selected interface density, but it is possible to set a fixed size.
