@@ -1104,8 +1104,6 @@ spacer[part="overflow-end-indicator"]
     opacity: 0 !important;
 }
 
-.tabbrowser-tab[first-visible-tab] .tab-stack::before,
-.tabbrowser-tab[last-visible-tab][pinned] .tab-stack::after,
 #tabbrowser-tabs[overflow] .tabbrowser-tab[first-visible-unpinned-tab] .tab-stack::before,
 #tabbrowser-tabs[overflow] .tab-stack::after
 {
@@ -1318,7 +1316,7 @@ spacer[part="overflow-end-indicator"]
         z-index: -1;
         background-repeat: no-repeat;
         pointer-events: none;
-        -moz-context-properties: fill, stroke;
+        -moz-context-properties: fill;
     }
 
     .tab-background::before
