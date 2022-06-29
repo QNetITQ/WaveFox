@@ -1110,35 +1110,11 @@ spacer[part="overflow-end-indicator"]
     opacity: 0 !important;
 }
 
-@supports -moz-bool-pref("Style.Separators-Saturation-Low")
-{
-    :root
-    {
-        --separators-color-saturation: 0.25;
-    }
-}
-
-@supports -moz-bool-pref("Style.Separators-Saturation-Normal")
+@supports -moz-bool-pref("userChrome.Tab-Separators-Enabled")
 {
     :root
     {
         --separators-color-saturation: 0.5;
-    }
-}
-
-@supports -moz-bool-pref("Style.Separators-Saturation-High")
-{
-    :root
-    {
-        --separators-color-saturation: 0.75;
-    }
-}
-
-@supports -moz-bool-pref("Style.Separators-Saturation-Very-High")
-{
-    :root
-    {
-        --separators-color-saturation: 1;
     }
 }
 
