@@ -11,8 +11,6 @@
 
 /* ---------------------------------------- Shadows ---------------------------------------- */
 
-/* -------------------- Main Shadow -------------------- */
-
 :root:is(:not(:-moz-lwtheme),
          [lwt-default-theme-in-dark-mode],
          [style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"],
@@ -24,7 +22,7 @@
 
 /* ---------- Blur ---------- */
 
-@supports -moz-bool-pref("Style.Main-Shadow-Blur-Low")
+@supports -moz-bool-pref("userChrome.Tab-Bar-Highlight-Type-Border")
 {
     :root
     {
@@ -32,7 +30,7 @@
     }
 }
 
-@supports -moz-bool-pref("Style.Main-Shadow-Blur-Medium")
+@supports -moz-bool-pref("userChrome.Tab-Bar-Highlight-Type-Shadow")
 {
     :root
     {
@@ -40,27 +38,11 @@
     }
 }
 
-@supports -moz-bool-pref("Style.Main-Shadow-Blur-High")
-{
-    :root
-    {
-        --main-shadow-blur: 6px;
-    }
-}
-
-@supports -moz-bool-pref("Style.Main-Shadow-Blur-Very-High")
-{
-    :root
-    {
-        --main-shadow-blur: 8px;
-    }
-}
-
 /* ---------- Saturation (Light) ---------- */
 
 @media (prefers-color-scheme: light)
 {
-    @supports -moz-bool-pref("Style.Main-Shadow-Saturation-Low")
+    @supports -moz-bool-pref("userChrome.Tab-Bar-Highlight-Saturation-Low")
     {
         :root
         {
@@ -68,23 +50,7 @@
         }
     }
 
-    @supports -moz-bool-pref("Style.Main-Shadow-Saturation-Medium")
-    {
-        :root
-        {
-            --main-shadow-color: rgba(0,0,0,0.15)
-        }
-    }
-
-    @supports -moz-bool-pref("Style.Main-Shadow-Saturation-High")
-    {
-        :root
-        {
-            --main-shadow-color: rgba(0,0,0,0.2)
-        }
-    }
-
-    @supports -moz-bool-pref("Style.Main-Shadow-Saturation-Very-High")
+    @supports -moz-bool-pref("userChrome.Tab-Bar-Highlight-Saturation-High")
     {
         :root
         {
@@ -97,15 +63,7 @@
 
 @media (prefers-color-scheme: dark)
 {
-    @supports -moz-bool-pref("Style.Main-Shadow-Saturation-Low")
-    {
-        :root
-        {
-            --main-shadow-color: rgba(0,0,0,0.25);
-        }
-    }
-
-    @supports -moz-bool-pref("Style.Main-Shadow-Saturation-Medium")
+    @supports -moz-bool-pref("userChrome.Tab-Bar-Highlight-Saturation-Low")
     {
         :root
         {
@@ -113,19 +71,11 @@
         }
     }
 
-    @supports -moz-bool-pref("Style.Main-Shadow-Saturation-High")
+    @supports -moz-bool-pref("userChrome.Tab-Bar-Highlight-Saturation-High")
     {
         :root
         {
-            --main-shadow-color: rgba(0,0,0,0.75);
-        }
-    }
-
-    @supports -moz-bool-pref("Style.Main-Shadow-Saturation-Very-High")
-    {
-        :root
-        {
-            --main-shadow-color: rgba(0,0,0,1.0);
+            --main-shadow-color: rgb(0,0,0);
         }
     }
 }
@@ -254,12 +204,12 @@
     :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) #urlbar:not([focused], [open]) > #urlbar-background,
     :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) #searchbar:focus-within
     {
-        filter: var(--special-main-outer-shadow) var(--special-additional-outer-shadow) !important;
+        filter: var(--special-main-outer-shadow) !important;
     }
     
     :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) #navigator-toolbox
     {
-        box-shadow: var(--tab-bar-main-inner-shadow), var(--tab-bar-additional-inner-shadow) !important;
+        box-shadow: var(--tab-bar-main-inner-shadow) !important;
     }
 }
 
@@ -716,7 +666,7 @@ spacer[part="overflow-end-indicator"]
 {
     background-color: var(--toolbar-bgcolor) !important;
     background-image: var(--toolbar-bgimage) !important;
-    filter: var(--special-main-outer-shadow) var(--special-additional-outer-shadow);
+    filter: var(--special-main-outer-shadow);
 }
 
 .tab-background
@@ -903,7 +853,7 @@ spacer[part="overflow-end-indicator"]
     left: 0%;
     bottom: 0%;
     z-index: 2;
-    box-shadow: var(--tab-bar-main-inner-shadow), var(--tab-bar-additional-inner-shadow);
+    box-shadow: var(--tab-bar-main-inner-shadow);
     background-repeat: no-repeat;
     pointer-events: none;
 }
