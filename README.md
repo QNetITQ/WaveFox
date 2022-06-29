@@ -156,15 +156,15 @@ Saturation:
 - `Style.Additional-Shadow-Saturation-High`
 - `Style.Additional-Shadow-Saturation-Very-High`
 
-### Separators
-It is possible to set the saturation of tab separators.
+### Tab separators
 
-##### Low Saturation
 ![изображение](https://user-images.githubusercontent.com/85301851/152351312-f6ad4578-e7d5-40b7-8b2d-49388a750f54.png)
-##### Very High Saturation
-![изображение](https://user-images.githubusercontent.com/85301851/152351155-3f7e22a7-b7f0-453a-88ff-0b708b50a955.png)
 
-#### Separators
+##### v1.2.103 Beta
+
+- `userChrome.Tab-Separators-Enabled`
+
+##### v1.2.102
 
 - `Style.Separators-Saturation-Low`
 - `Style.Separators-Saturation-Normal`
