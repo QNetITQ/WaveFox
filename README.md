@@ -120,29 +120,25 @@ Possibility to activate an additional indicator for better visibility.
 #### Additional Indicator
 - `Style.Additional-Container-Indicator`
 
-### Tab bar shadows
+### Tab bar highlight
 
-Shadows are formed from a combination of blur and saturation.
+Specify the desired type and saturation.
 
 ![изображение](https://user-images.githubusercontent.com/85301851/152011749-4d5619b3-0fd8-40f9-a3dc-96be31839971.png)
 
 ##### v1.2.103 Beta
 
-Blur:
-- `Style.Main-Shadow-Blur-Low`
-- `Style.Main-Shadow-Blur-Medium`
-- `Style.Main-Shadow-Blur-High`
-- `Style.Main-Shadow-Blur-Very-High`
+Type:
+- `userChrome.Tab-Bar-Highlight-Type-Border'
+- `userChrome.Tab-Bar-Highlight-Type-Shadow`
 
 Saturation:
-- `Style.Main-Shadow-Saturation-Low`
-- `Style.Main-Shadow-Saturation-Medium`
-- `Style.Main-Shadow-Saturation-High`
-- `Style.Main-Shadow-Saturation-Very-High`
+- `userChrome.Tab-Bar-Highlight-Saturation-Low`
+- `userChrome.Tab-Bar-Highlight-Saturation-High`
 
 ##### v1.2.102
 
-There are two shadows available for use.
+Shadows are formed from a combination of blur and saturation. There are two shadows available for use.
 
 #### Main Shadow
 Blur:
