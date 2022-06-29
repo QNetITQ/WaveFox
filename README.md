@@ -120,15 +120,29 @@ Possibility to activate an additional indicator for better visibility.
 #### Additional Indicator
 - `Style.Additional-Container-Indicator`
 
-### Shadows
-There are two shadows available for use. Each shadow is completely independent. In most situations, one shadow is enough, but there are situations where a second shadow can be useful. Shadows are formed from a combination of blur and saturation.
+### Tab bar shadows
 
-##### Low Blur + Very High Saturation
-![изображение](https://user-images.githubusercontent.com/85301851/152011458-07a0790f-cf1e-4e80-b267-62334a36377c.png)
-##### Very High Blur + Low Saturation
+Shadows are formed from a combination of blur and saturation.
+
 ![изображение](https://user-images.githubusercontent.com/85301851/152011749-4d5619b3-0fd8-40f9-a3dc-96be31839971.png)
-##### A combination of shadows from the screenshots above
-![изображение](https://user-images.githubusercontent.com/85301851/152012361-a2660ff1-eb59-44bf-910b-cf626a0c1d3e.png)
+
+##### v1.2.103 Beta
+
+Blur:
+- `Style.Main-Shadow-Blur-Low`
+- `Style.Main-Shadow-Blur-Medium`
+- `Style.Main-Shadow-Blur-High`
+- `Style.Main-Shadow-Blur-Very-High`
+
+Saturation:
+- `Style.Main-Shadow-Saturation-Low`
+- `Style.Main-Shadow-Saturation-Medium`
+- `Style.Main-Shadow-Saturation-High`
+- `Style.Main-Shadow-Saturation-Very-High`
+
+##### v1.2.102
+
+There are two shadows available for use.
 
 #### Main Shadow
 Blur:
