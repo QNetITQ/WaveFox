@@ -129,12 +129,10 @@ Specify the desired type and saturation.
 ##### v1.2.103 Beta
 
 Type:
-
-- `userChrome.Tab-Bar-Highlight-Type-Border'
+- `userChrome.Tab-Bar-Highlight-Type-Border`
 - `userChrome.Tab-Bar-Highlight-Type-Shadow`
 
 Saturation:
-
 - `userChrome.Tab-Bar-Highlight-Saturation-Low`
 - `userChrome.Tab-Bar-Highlight-Saturation-High`
 
