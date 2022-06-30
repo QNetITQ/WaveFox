@@ -442,45 +442,6 @@
     }
 }
 
-/* ---------------------------------------- Pinned Tabs Width ---------------------------------------- */
-
-@supports -moz-bool-pref("Style.Pinned-Tabs-Width-Offset-Low")
-{
-    :root
-    {
-        --pinned-tabs-width-offset: 1px;
-    }
-}
-
-@supports -moz-bool-pref("Style.Pinned-Tabs-Width-Offset-Medium")
-{
-    :root
-    {
-        --pinned-tabs-width-offset: 2px;
-    }
-}
-
-@supports -moz-bool-pref("Style.Pinned-Tabs-Width-Offset-High")
-{
-    :root
-    {
-        --pinned-tabs-width-offset: 3px;
-    }
-}
-
-@supports -moz-bool-pref("Style.Pinned-Tabs-Width-Offset-Very-High")
-{
-    :root
-    {
-        --pinned-tabs-width-offset: 4px;
-    }
-}
-
-.tabbrowser-tab[pinned] .tab-content
-{
-    padding: 0 calc((var(--tab-min-height) - 16px) / 2 + var(--pinned-tabs-width-offset, 0px)) !important;
-}
-
 /* ---------------------------------------- Drag Space ---------------------------------------- */
 
 @supports -moz-bool-pref("Style.Left-Drag-Space-Disabled")
@@ -699,6 +660,11 @@ spacer[part="overflow-end-indicator"]
     width: 24px !important;
     padding: 7px !important;
     border-radius: 50% !important;
+}
+
+.tabbrowser-tab[pinned] .tab-content
+{
+    padding: 0 calc((var(--tab-min-height) - 16px) / 2 + var(--pinned-tabs-width-offset, 0px)) !important;
 }
 
 /* -------------------- Container Indicators -------------------- */
@@ -1082,6 +1048,11 @@ spacer[part="overflow-end-indicator"]
           -moz-bool-pref("Style.Edge")
 {
     /* ---------- Tabs ---------- */
+       
+    :root
+    {
+        --pinned-tabs-width-offset: 2px;
+    }
 
     .tabbrowser-tab
     {
