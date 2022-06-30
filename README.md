@@ -235,7 +235,7 @@ Ability to control the drag space.
 - `Style.Drag-Space-Above-Tabs-Fullscreen-Mode-High`
 - `Style.Drag-Space-Above-Tabs-Fullscreen-Mode-Very-High`
 
-### Pinned Tabs Width
+### Pinned Tabs Width (v1.2.102)
 Ability to control the width of pinned tabs.
 
 No Offset
