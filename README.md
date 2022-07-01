@@ -252,10 +252,10 @@ Very High
 ### Selected Tab Highlight
 ![изображение](https://user-images.githubusercontent.com/85301851/170877154-44db11c2-02ce-4aab-821e-c3cc68f26a2d.png)
 
-v1.2.103 Beta
+##### v1.2.103 Beta
 - `userChrome.SelectedTabHighligt-Enabled`
 
-v1.2.102
+##### v1.2.102
 On all themes except Proton/Photon, the indicator may not be visible on pinned tabs. Use the option to offset the width of pinned tabs. A very high offset is recommended.
 
 - `Style.Tab-Indicator-Enabled`
