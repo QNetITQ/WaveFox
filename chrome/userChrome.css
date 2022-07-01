@@ -699,6 +699,7 @@ spacer[part="overflow-end-indicator"]
     height: 4px !important;
     background: radial-gradient(circle at center, var(--identity-icon-color) 2px, transparent 2px) !important;
     margin-block: calc(var(--tab-min-height) - 4px) 0px !important;
+    margin-inline: 0px !important;
 }
 
 /* -------------------- Tab Icon Indicators -------------------- */
