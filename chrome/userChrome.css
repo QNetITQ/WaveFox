@@ -687,9 +687,18 @@ spacer[part="overflow-end-indicator"]
 
 /* -------------------- Container Indicators -------------------- */
 
-.tab-context-line
+.tabbrowser-tab:not([pinned]) .tab-context-line
 {
+    border-radius: 0px !important;
     margin-block: calc(var(--tab-min-height) - 2px) 0px !important;
+    margin-inline: 0px !important;
+}
+
+.tabbrowser-tab[pinned] .tab-context-line
+{
+    height: 4px !important;
+    background: radial-gradient(circle at center, var(--identity-icon-color) 2px, transparent 2px) !important;
+    margin-block: calc(var(--tab-min-height) - 4px) 0px !important;
 }
 
 /* -------------------- Tab Icon Indicators -------------------- */
@@ -1012,18 +1021,6 @@ spacer[part="overflow-end-indicator"]
     {
         margin-right: calc(var(--tab-min-height) / 4) !important;
     }
-
-    /* ---------- Container Indicators ---------- */
-
-    .tab-context-line
-    {
-        margin-inline: calc(var(--tab-min-height) / 2) !important;
-    }
-
-    .tabbrowser-tab[pinned] .tab-context-line
-    {
-        margin-inline: calc((var(--tab-min-height) - 16px) / 2 + var(--pinned-tabs-width-offset, 0px)) !important;
-    }
 }
 
 /* -------------------- Proton -------------------- */
@@ -1151,13 +1148,6 @@ spacer[part="overflow-end-indicator"]
     {
         --left-side-svg: var(--left-side-svg-clipped);
     }
-
-    /* ---------- Container Indicators ---------- */
-
-    .tab-context-line
-    {
-        margin-inline: 0px !important;
-    }
        
     /* ---------- Tabs ---------- */
        
@@ -1203,13 +1193,6 @@ spacer[part="overflow-end-indicator"]
     {
         margin-right: calc(var(--tab-min-height) / 2) !important;
     }
-
-    /* ---------- Container Indicators ---------- */
-
-    .tabbrowser-tab[pinned] .tab-context-line
-    {
-        margin-inline: calc(var(--tab-min-height) / -2 + (var(--tab-min-height) - 16px) / 2 + var(--pinned-tabs-width-offset, 0px)) !important;
-    }
 }
 
 /* -------------------- Chrome / Edge -------------------- */
@@ -1246,13 +1229,6 @@ spacer[part="overflow-end-indicator"]
     .tabbrowser-tab[last-visible-tab]
     {
         margin-right: calc(var(--tab-min-height) / 4) !important;
-    }
-
-    /* ---------- Container Indicators ---------- */
-
-    .tabbrowser-tab[pinned] .tab-context-line
-    {
-        margin-inline: calc(var(--tab-min-height) / -4 + (var(--tab-min-height) - 16px) / 2 + var(--pinned-tabs-width-offset, 0px)) !important;
     }
 }
 
