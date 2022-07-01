@@ -172,7 +172,7 @@ Saturation:
 
 ##### v1.2.103 Beta
 
-- `userChrome.Tab-Separators-Enabled`
+- `userChrome.TabSeparators-Enabled`
 
 ##### v1.2.102
 
@@ -249,9 +249,13 @@ Very High
 - `Style.Pinned-Tabs-Width-Offset-High`
 - `Style.Pinned-Tabs-Width-Offset-Very-High`
 
-### Tab Indicator
-It is possible to activate the active tab indicator. On all themes except Proton/Photon, the indicator may not be visible on pinned tabs. Use the option to offset the width of pinned tabs. A very high offset is recommended.
-
+### Selected Tab Highlight
 ![изображение](https://user-images.githubusercontent.com/85301851/170877154-44db11c2-02ce-4aab-821e-c3cc68f26a2d.png)
+
+v1.2.103 Beta
+- `userChrome.SelectedTabHighligt-Enabled`
+
+v1.2.102
+On all themes except Proton/Photon, the indicator may not be visible on pinned tabs. Use the option to offset the width of pinned tabs. A very high offset is recommended.
 
 - `Style.Tab-Indicator-Enabled`
