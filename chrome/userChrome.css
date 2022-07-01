@@ -103,6 +103,24 @@
     }
 }
 
+/* ---------------------------------------- Selected Tab Highlight ---------------------------------------- */
+
+@supports -moz-bool-pref("userChrome.SelectedTabHighlight-Enabled")
+{
+    .tabbrowser-tab[visuallyselected]:not([pinned]) .tab-background
+    {
+        box-shadow: inset 0 2px 0 var(--toolbar-field-focus-border-color) !important;
+    }
+
+    .tabbrowser-tab[visuallyselected][pinned] .tab-content
+    {
+        background-image: radial-gradient(circle at center, var(--toolbar-field-focus-border-color) 2px, transparent 2px);
+        background-size: 4px 4px;
+        background-repeat: no-repeat;
+        background-position: center top;
+    }
+}
+
 /* ---------------------------------------- Toolbar Transparency ---------------------------------------- */
 
 @supports -moz-bool-pref("Style.Toolbar-Transparency-Low")
@@ -901,13 +919,15 @@ spacer[part="overflow-end-indicator"]
     opacity: 0 !important;
 }
 
+.tabbrowser-tab[first-visible-tab] .tab-stack::before,
+.tabbrowser-tab[last-visible-tab][pinned] .tab-stack::after,
 #tabbrowser-tabs[overflow] .tabbrowser-tab[first-visible-unpinned-tab] .tab-stack::before,
 #tabbrowser-tabs[overflow] .tab-stack::after
 {
     opacity: 0 !important;
 }
 
-@supports -moz-bool-pref("userChrome.Tab-Separators-Enabled")
+@supports -moz-bool-pref("userChrome.TabSeparators-Enabled")
 {
     :root
     {
@@ -1048,11 +1068,6 @@ spacer[part="overflow-end-indicator"]
           -moz-bool-pref("Style.Edge")
 {
     /* ---------- Tabs ---------- */
-       
-    :root
-    {
-        --pinned-tabs-width-offset: 2px;
-    }
 
     .tabbrowser-tab
     {
@@ -1142,6 +1157,13 @@ spacer[part="overflow-end-indicator"]
     .tab-context-line
     {
         margin-inline: 0px !important;
+    }
+       
+    /* ---------- Tabs ---------- */
+       
+    :root
+    {
+        --pinned-tabs-width-offset: 2px;
     }
 }
 
@@ -1267,16 +1289,6 @@ spacer[part="overflow-end-indicator"]
     #tabs-newtab-button .toolbarbutton-icon
     {
         border-radius: 50% !important;
-    }
-}
-
-/* ---------------------------------------- Tab Indicator ---------------------------------------- */
-
-@supports -moz-bool-pref("Style.Tab-Indicator-Enabled")
-{
-    .tabbrowser-tab[visuallyselected] .tab-background
-    {
-        box-shadow: inset 0 2px 0 var(--toolbar-field-focus-border-color) !important;
     }
 }
 
