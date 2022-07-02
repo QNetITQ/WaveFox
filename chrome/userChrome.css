@@ -123,49 +123,22 @@
 
 /* ---------------------------------------- Toolbar Transparency ---------------------------------------- */
 
-@supports -moz-bool-pref("Style.Toolbar-Transparency-Low")
+@supports -moz-bool-pref("userChrome.SemiTransparentToolbar-Enabled")
 {
     :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode])
     {
-        --custom-toolbar-bgcolor: color-mix(in srgb, var(--toolbar-bgcolor) 75%, transparent);
-    }
-}
-
-@supports -moz-bool-pref("Style.Toolbar-Transparency-Medium")
-{
-    :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode])
-    {
-        --custom-toolbar-bgcolor: color-mix(in srgb, var(--toolbar-bgcolor) 50%, transparent);
-    }
-}
-
-@supports -moz-bool-pref("Style.Toolbar-Transparency-High")
-{
-    :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode])
-    {
-        --custom-toolbar-bgcolor: color-mix(in srgb, var(--toolbar-bgcolor) 25%, transparent);
-    }
-}
-
-@supports -moz-bool-pref("Style.Toolbar-Transparency-Low") or
-          -moz-bool-pref("Style.Toolbar-Transparency-Medium") or
-          -moz-bool-pref("Style.Toolbar-Transparency-High")
-{
-    :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode])
-    {
-        --toolbar-field-background-color: var(--custom-toolbar-bgcolor) !important;
+        --toolbar-field-background-color: color-mix(in srgb, var(--toolbar-bgcolor) 75%, transparent) !important;
         --chrome-content-separator-color: none !important;
         --main-shadow-color: transparent !important;
-        --additional-shadow-color: transparent !important;
     }
 
     :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) #navigator-toolbox
     {
-        --toolbar-bgcolor: var(--custom-toolbar-bgcolor) !important;
+        --toolbar-bgcolor: color-mix(in srgb, var(--toolbar-bgcolor) 75%, transparent) !important;
     }
 }
 
-@supports -moz-bool-pref("Style.Toolbar-Full-Transparency")
+@supports -moz-bool-pref("userChrome.TransparentToolbar-Enabled")
 {
     :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode])
     {
