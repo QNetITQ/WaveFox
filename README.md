@@ -64,12 +64,14 @@ Once installed, create and activate the key below. For transparency to work corr
 - `Style.Win11-Mica-Acrylic`
 
 ### Toolbar Transparency
-It is possible to make the toolbar semi-transparent. Works only with the system theme.
-
-##### Toolbar Transparency
+Works only with the system theme.
 ![изображение](https://user-images.githubusercontent.com/85301851/165526704-4f7486c4-f330-4c86-a25d-6ed8ab2affe4.png)
 
-#### Toolbar Transparency
+##### v1.2.103 Beta
+- `userChrome.SemiTransparentToolbar-Enabled`
+- `userChrome.TransparentToolbar-Enabled`
+
+##### v1.2.102
 - `Style.Toolbar-Transparency-Low`
 - `Style.Toolbar-Transparency-Medium`
 - `Style.Toolbar-Transparency-High`
