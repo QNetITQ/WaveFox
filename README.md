@@ -78,10 +78,16 @@ Works only with the system theme.
 - `Style.Toolbar-Full-Transparency`
 
 ### Linux Transparency
-Requires Linux with transparency support. Tested on Linux Manjaro KDE + ForceBlur. Transparency is active for all window modes, but does not work everywhere. This may change with future browser updates. Works only with the system theme.
+Requires Linux with transparency support. Tested on Linux Manjaro KDE + ForceBlur. Transparency is active for all modes, but does not work everywhere. This may change with future browser updates. Works only with the system theme.
 
 ![изображение](https://user-images.githubusercontent.com/85301851/173119832-e82bc2f7-eda7-4167-9dcd-ccca50383816.png)
 
+##### v1.2.103 Beta
+- `userChrome.LinuxSemiTransparency-Enabled`
+- `userChrome.LinuxTransparency-Enabled`
+- `gfx.webrender.all` (Required key)
+
+##### v1.2.102
 - `Style.Linux-Transparency-Enabled`
 - `gfx.webrender.all`
 
