@@ -127,14 +127,15 @@
 {
     :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode])
     {
-        --toolbar-field-background-color: color-mix(in srgb, var(--toolbar-bgcolor) 75%, transparent) !important;
+        --custom-toolbar-bgcolor: color-mix(in srgb, var(--toolbar-bgcolor) 75%, transparent);
+        --toolbar-field-background-color: var(--custom-toolbar-bgcolor) !important;
         --chrome-content-separator-color: none !important;
         --main-shadow-color: transparent !important;
     }
 
     :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) #navigator-toolbox
     {
-        --toolbar-bgcolor: color-mix(in srgb, var(--toolbar-bgcolor) 75%, transparent) !important;
+        --toolbar-bgcolor: var(--custom-toolbar-bgcolor) !important;
     }
 }
 
