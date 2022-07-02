@@ -9,5 +9,6 @@
     {
         background-color: transparent !important;
         transform: translateY(0px) !important;
+        z-index: 1 !important;
     }
 }
