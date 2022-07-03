@@ -210,13 +210,16 @@ By default context menus follow the selected interface density, but it is possib
 - `Style.Context-Menus-Touch`
 
 ### Icons
-There are two types of fluent style icons from Microsoft.
 
 | Regular | Filled |
 |---------|--------|
 | ![изображение](https://user-images.githubusercontent.com/85301851/151192118-0cbdb5a7-a77f-4275-8841-2ac321657c86.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151192708-5ae7691c-ce07-49d8-b4fb-fc58692b63fe.png) |
 
-#### Icons
+##### v1.2.103 Beta
+- `userChrome.RegularMenuIcons-Enabled`
+- `userChrome.FilledMenuIcons-Enabled`
+
+##### v1.2.102
 - `Style.Menu-Icons-Regular`
 - `Style.Menu-Icons-Filled`
 
