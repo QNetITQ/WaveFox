@@ -94,9 +94,6 @@ Requires Linux with transparency support. Tested on Linux Manjaro KDE + ForceBlu
 ### Colorways
 
 ##### 1.2.103 Beta
-
-Bringing back your preferred colorways
-
 https://www.reddit.com/r/firefox/comments/uq26ao/bringing_back_your_preferred_colorways/?utm_source=share&utm_medium=web2x&context=3
 
 ##### 1.2.102
