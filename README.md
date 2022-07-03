@@ -47,20 +47,18 @@
 
 ## Optional
 
-### Windows 11 Mica / Acrylic
-Download and install MicaForEveryone from the link below. 
+### Windows System Effects
+Works with modern versions of Windows 11 / Windows 10. System effects must be supported on the operating system side. Otherwise, you need third-party software, such as MikaForEveryone. Works only with the system theme.
+![изображение](https://user-images.githubusercontent.com/85301851/160720915-a055134a-357c-44cc-a638-8dd56e869111.png)
+
+Download and install MicaForEveryone from the link below.
 
 https://github.com/minusium/MicaForEveryone/releases
 
-Once installed, create and activate the key below. For transparency to work correctly, turn off the accent color in Windows 11 personalization and select the system theme in Firefox.
+##### v1.2.103 Beta
+- `userChrome.WindowsSystemEffects-Enabled`
 
-##### Mica
-![изображение](https://user-images.githubusercontent.com/85301851/160721004-ebc32cf6-8bc2-49a5-acfa-e3eff67e5a9b.png)
-##### Acrylic
-![изображение](https://user-images.githubusercontent.com/85301851/160720915-a055134a-357c-44cc-a638-8dd56e869111.png)
-
-#### Mica / Acrylic
-
+##### v1.2.102
 - `Style.Win11-Mica-Acrylic`
 
 ### Toolbar Transparency
