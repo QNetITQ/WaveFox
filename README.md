@@ -132,20 +132,13 @@ Dark:
 - `Style.Additional-Container-Indicator`
 
 ### Tab Bar Highlight
-
-Specify the desired type and saturation.
-
 ![изображение](https://user-images.githubusercontent.com/85301851/152011749-4d5619b3-0fd8-40f9-a3dc-96be31839971.png)
 
 ##### v1.2.103 Beta
-
-Type:
-- `userChrome.Tab-Bar-Highlight-Type-Border`
-- `userChrome.Tab-Bar-Highlight-Type-Shadow`
-
-Saturation:
-- `userChrome.Tab-Bar-Highlight-Saturation-Low`
-- `userChrome.Tab-Bar-Highlight-Saturation-High`
+- `userChrome.LowBorderSaturation-Enabled`
+- `userChrome.HighBorderSaturation-Enabled`
+- `userChrome.LowShadowSaturation-Enabled`
+- `userChrome.HighShadowSaturation-Enabled`
 
 ##### v1.2.102
 
