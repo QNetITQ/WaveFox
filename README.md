@@ -17,6 +17,14 @@
 ##### v1.2.103 Beta
 - Specify the desired shape of the tabs
 
+  - `Style.ProtonTabs-Enabled`
+  - `Style.PhotonTabs-Enabled`
+  - `Style.WaveFoxTabs-Enabled`
+  - `Style.ChromeTabs-Enabled`
+  - `Style.EdgeTabs-Enabled`
+  - `Style.AustralisTabs-Enabled`
+  - `Style.LegacyChromeTabs-Enabled`
+
 - For compatibility with the ESR
 
   - `userChrome.EsrCompatibility-Enabled`
