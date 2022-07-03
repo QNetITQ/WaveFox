@@ -174,7 +174,7 @@ Saturation:
 - `Style.Additional-Shadow-Saturation-High`
 - `Style.Additional-Shadow-Saturation-Very-High`
 
-### Tab separators
+### Tab Separators
 
 ![изображение](https://user-images.githubusercontent.com/85301851/152351312-f6ad4578-e7d5-40b7-8b2d-49388a750f54.png)
 
@@ -189,14 +189,19 @@ Saturation:
 - `Style.Separators-Saturation-High`
 - `Style.Separators-Saturation-Very-High`
 
-### Density
-By default, context menus follow the selected interface density, but it is possible to set a fixed size.
+### Menu Density
+By default context menus follow the selected interface density, but it is possible to set a fixed size.
 
 | Compact | Normal | Touch |
 |---------|--------|-------|
 | ![изображение](https://user-images.githubusercontent.com/85301851/152645825-7d351e3e-b938-4fa1-a460-1f699ed1c3c6.png) | ![изображение](https://user-images.githubusercontent.com/85301851/152645878-d917e841-837a-4a11-8fc1-ce0fc2262aef.png) | ![изображение](https://user-images.githubusercontent.com/85301851/152645915-833c1b22-e320-445f-817e-408ea26f7605.png) |
 
-#### Density
+##### v1.2.103 Beta
+- `userChrome.CompactContextMenu-Enabled`
+- `userChrome.NormalContextMenu-Enabled`
+- `userChrome.TouchContextMenu-Enabled`
+
+##### v1.2.102
 - `Style.Context-Menus-Compact`
 - `Style.Context-Menus-Normal`
 - `Style.Context-Menus-Touch`
