@@ -82,8 +82,8 @@
         }
     }
     
-    @supports -moz-bool-pref("Style.Menu-Icons-Regular") or
-              -moz-bool-pref("Style.Menu-Icons-Filled")
+    @supports -moz-bool-pref("userChrome.RegularMenuIcons-Enabled") or
+              -moz-bool-pref("userChrome.FilledMenuIcons-Enabled")
     {
         :root
         {
