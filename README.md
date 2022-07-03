@@ -213,15 +213,14 @@ There are two types of fluent style icons from Microsoft.
 - `Style.Menu-Icons-Filled`
 
 ### Drag Space
-Ability to control the drag space.
-
-##### No Drag Space
-![изображение](https://user-images.githubusercontent.com/85301851/152680181-ccc799aa-3d86-4621-9932-f17f75a36272.png)
-
-##### Drag Space Above Tabs
 ![изображение](https://user-images.githubusercontent.com/85301851/152680229-43547df0-1d2c-4384-b024-950e7aa56ca6.png)
 
-#### Drag Space
+##### v1.2.103 Beta
+- `userChrome.DragSpaceAboveTabsWindowedMode-Disabled`
+- `userChrome.DragSpaceAboveTabsMaximizedMode-Enabled`
+- `userChrome.DragSpaceAboveTabsFullscreenMode-Enabled`
+
+##### v1.2.102
 - `Style.Left-Drag-Space-Disabled`
 - `Style.Right-Drag-Space-Disabled`
 
