@@ -14,7 +14,6 @@
   - `svg.context-properties.content.enabled`
   - `layout.css.color-mix.enabled`
 
-##### v1.2.103 Beta
 - Specify the desired shape of the tabs
 
   - `userChrome.ProtonTabs-Enabled`
@@ -28,23 +27,6 @@
 - For compatibility with the ESR
 
   - `userChrome.EsrCompatibility-Enabled`
-
-##### v1.2.102
-- Specify the desired shape of the tabs. Create and activate one of the keys below
-
-  - `Style.Proton`
-  - `Style.Photon`
-  - `Style.WaveFox`
-  - `Style.Chrome`
-  - `Style.Edge`
-  - `Style.Australis`
-  - `Style.Chrome-Old`
-
-- For compatibility with the ESR, use the key below
-
-  - `ESR-Compatibility-Enabled`
-
-- Create and activate other keys. This step is optional
 
 ### How to create keys?
 ##### You need to restart your browser for the changes to take effect
@@ -71,135 +53,44 @@ Download and install MicaForEveryone from the link below.
 
 https://github.com/minusium/MicaForEveryone/releases
 
-##### v1.2.103 Beta
 - `userChrome.WindowsSystemEffects-Enabled`
-
-##### v1.2.102
-- `Style.Win11-Mica-Acrylic`
 
 ### Toolbar Transparency
 Works only with the system theme.
 ![изображение](https://user-images.githubusercontent.com/85301851/165526704-4f7486c4-f330-4c86-a25d-6ed8ab2affe4.png)
 
-##### v1.2.103 Beta
 - `userChrome.SemiTransparentToolbar-Enabled`
 - `userChrome.TransparentToolbar-Enabled`
-
-##### v1.2.102
-- `Style.Toolbar-Transparency-Low`
-- `Style.Toolbar-Transparency-Medium`
-- `Style.Toolbar-Transparency-High`
-- `Style.Toolbar-Full-Transparency`
 
 ### Linux Transparency
 Requires Linux with transparency support. Tested on Linux Manjaro KDE + ForceBlur. Transparency is active for all modes, but does not work everywhere. This may change with future browser updates. Works only with the system theme.
 
 ![изображение](https://user-images.githubusercontent.com/85301851/173119832-e82bc2f7-eda7-4167-9dcd-ccca50383816.png)
 
-##### v1.2.103 Beta
 - `userChrome.LinuxSemiTransparency-Enabled`
 - `userChrome.LinuxTransparency-Enabled`
 - `gfx.webrender.all` (Required key)
 
-##### v1.2.102
-- `Style.Linux-Transparency-Enabled`
-- `gfx.webrender.all`
-
 ### Colorways
-
-##### 1.2.103 Beta
 https://www.reddit.com/r/firefox/comments/uq26ao/bringing_back_your_preferred_colorways/?utm_source=share&utm_medium=web2x&context=3
-
-##### 1.2.102
-Use with light/dark themes. On the system does not work.
-
-##### Blue
-![изображение](https://user-images.githubusercontent.com/85301851/165319656-490ad853-2dea-4eb8-abe4-8c4490b8c686.png)
-
-##### Navy Blue
-![изображение](https://user-images.githubusercontent.com/85301851/165319907-0126d0a3-34b5-4ea8-8f25-473acb4b2121.png)
-
-#### Colorways
-Light:
-- `Style.Colorways-Light-Gray`
-- `Style.Colorways-Mint`
-- `Style.Colorways-Blue-Green`
-- `Style.Colorways-Blue`
-- `Style.Colorways-Light-Pink`
-- `Style.Colorways-Pink`
-- `Style.Colorways-Yellow`
-- `Style.Colorways-Orange`
-
-Dark:
-- `Style.Colorways-Dark-Grey`
-- `Style.Colorways-Gray-Blue`
-- `Style.Colorways-Navy-Blue`
-- `Style.Colorways-Purple`
-- `Style.Colorways-Red`
-- `Style.Colorways-Green`
 
 ### Additional Container Indicator
 ![изображение](https://user-images.githubusercontent.com/85301851/161597087-fc818bc5-c60e-48a9-8eb9-1bcafc030607.png)
 
-##### 1.2.103 Beta
 - `userChrome.AdditionalContainerIndicator-Enabled`
-
-##### 1.2.102
-- `Style.Additional-Container-Indicator`
 
 ### Tab Bar Highlight
 ![изображение](https://user-images.githubusercontent.com/85301851/152011749-4d5619b3-0fd8-40f9-a3dc-96be31839971.png)
 
-##### v1.2.103 Beta
 - `userChrome.LowBorderSaturation-Enabled`
 - `userChrome.HighBorderSaturation-Enabled`
 - `userChrome.LowShadowSaturation-Enabled`
 - `userChrome.HighShadowSaturation-Enabled`
 
-##### v1.2.102
-
-Shadows are formed from a combination of blur and saturation. There are two shadows available for use.
-
-#### Main Shadow
-Blur:
-- `Style.Main-Shadow-Blur-Low`
-- `Style.Main-Shadow-Blur-Medium`
-- `Style.Main-Shadow-Blur-High`
-- `Style.Main-Shadow-Blur-Very-High`
-
-Saturation:
-- `Style.Main-Shadow-Saturation-Low`
-- `Style.Main-Shadow-Saturation-Medium`
-- `Style.Main-Shadow-Saturation-High`
-- `Style.Main-Shadow-Saturation-Very-High`
-
-#### Additional Shadow
-Blur:
-- `Style.Additional-Shadow-Blur-Low`
-- `Style.Additional-Shadow-Blur-Medium`
-- `Style.Additional-Shadow-Blur-High`
-- `Style.Additional-Shadow-Blur-Very-High`
-
-Saturation:
-- `Style.Additional-Shadow-Saturation-Low`
-- `Style.Additional-Shadow-Saturation-Medium`
-- `Style.Additional-Shadow-Saturation-High`
-- `Style.Additional-Shadow-Saturation-Very-High`
-
 ### Tab Separators
-
 ![изображение](https://user-images.githubusercontent.com/85301851/152351312-f6ad4578-e7d5-40b7-8b2d-49388a750f54.png)
 
-##### v1.2.103 Beta
-
 - `userChrome.TabSeparators-Enabled`
-
-##### v1.2.102
-
-- `Style.Separators-Saturation-Low`
-- `Style.Separators-Saturation-Normal`
-- `Style.Separators-Saturation-High`
-- `Style.Separators-Saturation-Very-High`
 
 ### Menu Density
 By default context menus follow the selected interface density, but it is possible to set a fixed size.
@@ -208,15 +99,9 @@ By default context menus follow the selected interface density, but it is possib
 |---------|--------|-------|
 | ![изображение](https://user-images.githubusercontent.com/85301851/152645825-7d351e3e-b938-4fa1-a460-1f699ed1c3c6.png) | ![изображение](https://user-images.githubusercontent.com/85301851/152645878-d917e841-837a-4a11-8fc1-ce0fc2262aef.png) | ![изображение](https://user-images.githubusercontent.com/85301851/152645915-833c1b22-e320-445f-817e-408ea26f7605.png) |
 
-##### v1.2.103 Beta
 - `userChrome.CompactContextMenu-Enabled`
 - `userChrome.NormalContextMenu-Enabled`
 - `userChrome.TouchContextMenu-Enabled`
-
-##### v1.2.102
-- `Style.Context-Menus-Compact`
-- `Style.Context-Menus-Normal`
-- `Style.Context-Menus-Touch`
 
 ### Icons
 
@@ -224,43 +109,15 @@ By default context menus follow the selected interface density, but it is possib
 |---------|--------|
 | ![изображение](https://user-images.githubusercontent.com/85301851/151192118-0cbdb5a7-a77f-4275-8841-2ac321657c86.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151192708-5ae7691c-ce07-49d8-b4fb-fc58692b63fe.png) |
 
-##### v1.2.103 Beta
 - `userChrome.RegularMenuIcons-Enabled`
 - `userChrome.FilledMenuIcons-Enabled`
-
-##### v1.2.102
-- `Style.Menu-Icons-Regular`
-- `Style.Menu-Icons-Filled`
 
 ### Drag Space
 ![изображение](https://user-images.githubusercontent.com/85301851/152680229-43547df0-1d2c-4384-b024-950e7aa56ca6.png)
 
-##### v1.2.103 Beta
 - `userChrome.DragSpaceAboveTabsWindowedMode-Disabled`
 - `userChrome.DragSpaceAboveTabsMaximizedMode-Enabled`
 - `userChrome.DragSpaceAboveTabsFullscreenMode-Enabled`
-
-##### v1.2.102
-- `Style.Left-Drag-Space-Disabled`
-- `Style.Right-Drag-Space-Disabled`
-
-##### Windowed Mode
-- `Style.Drag-Space-Above-Tabs-Windowed-Mode-Low`
-- `Style.Drag-Space-Above-Tabs-Windowed-Mode-Medium`
-- `Style.Drag-Space-Above-Tabs-Windowed-Mode-High`
-- `Style.Drag-Space-Above-Tabs-Windowed-Mode-Very-High`
-
-##### Maximized Mode
-- `Style.Drag-Space-Above-Tabs-Maximized-Mode-Low`
-- `Style.Drag-Space-Above-Tabs-Maximized-Mode-Medium`
-- `Style.Drag-Space-Above-Tabs-Maximized-Mode-High`
-- `Style.Drag-Space-Above-Tabs-Maximized-Mode-Very-High`
-
-##### Fullscreen Mode
-- `Style.Drag-Space-Above-Tabs-Fullscreen-Mode-Low`
-- `Style.Drag-Space-Above-Tabs-Fullscreen-Mode-Medium`
-- `Style.Drag-Space-Above-Tabs-Fullscreen-Mode-High`
-- `Style.Drag-Space-Above-Tabs-Fullscreen-Mode-Very-High`
 
 ### Selected Tab Highlight
 ![изображение](https://user-images.githubusercontent.com/85301851/170877154-44db11c2-02ce-4aab-821e-c3cc68f26a2d.png)
