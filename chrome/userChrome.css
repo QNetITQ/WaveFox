@@ -82,7 +82,7 @@
 
 /* ---------------------------------------- Additional Container Indicator ---------------------------------------- */
 
-@supports -moz-bool-pref("Style.Additional-Container-Indicator")
+@supports -moz-bool-pref("userChrome.AdditionalContainerIndicator-Enabled")
 {
     .tabbrowser-tab[usercontextid] .tab-background
     {
