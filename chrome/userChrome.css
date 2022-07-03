@@ -165,11 +165,11 @@
         background-color: var(--lwt-selected-tab-background-color, Field) !important;
     }
 
-    @supports -moz-bool-pref("Style.WaveFox") or
-              -moz-bool-pref("Style.Australis") or
-              -moz-bool-pref("Style.Chrome") or
-              -moz-bool-pref("Style.Chrome-Old") or
-              -moz-bool-pref("Style.Edge")
+    @supports -moz-bool-pref("userChrome.WaveFoxTabs-Enabled") or
+              -moz-bool-pref("userChrome.AustralisTabs-Enabled") or
+              -moz-bool-pref("userChrome.ChromeTabs-Enabled") or
+              -moz-bool-pref("userChrome.LegacyChromeTabs-Enabled") or
+              -moz-bool-pref("userChrome.EdgeTabs-Enabled")
     {
         :root:not(:-moz-lwtheme) .tabbrowser-tab[visuallyselected] .tab-background::before,
         :root:not(:-moz-lwtheme) .tabbrowser-tab[visuallyselected] .tab-background::after
@@ -677,7 +677,7 @@ spacer[part="overflow-end-indicator"]
 
 /* -------------------- SVG -------------------- */
 
-@supports -moz-bool-pref("Style.WaveFox")
+@supports -moz-bool-pref("userChrome.WaveFoxTabs-Enabled")
 {
     :root
     {
@@ -688,7 +688,7 @@ spacer[part="overflow-end-indicator"]
     }
 }
 
-@supports -moz-bool-pref("Style.Australis")
+@supports -moz-bool-pref("userChrome.AustralisTabs-Enabled")
 {
     :root
     {
@@ -699,7 +699,7 @@ spacer[part="overflow-end-indicator"]
     }
 }
 
-@supports -moz-bool-pref("Style.Chrome-Old")
+@supports -moz-bool-pref("userChrome.LegacyChromeTabs-Enabled")
 {
     :root
     {
@@ -710,7 +710,7 @@ spacer[part="overflow-end-indicator"]
     }
 }
 
-@supports -moz-bool-pref("Style.Chrome")
+@supports -moz-bool-pref("userChrome.ChromeTabs-Enabled")
 {
     :root
     {
@@ -721,7 +721,7 @@ spacer[part="overflow-end-indicator"]
     }
 }
 
-@supports -moz-bool-pref("Style.Edge")
+@supports -moz-bool-pref("userChrome.EdgeTabs-Enabled")
 {
     :root
     {
@@ -734,8 +734,8 @@ spacer[part="overflow-end-indicator"]
 
 /* -------------------- Proton / Photon -------------------- */
 
-@supports -moz-bool-pref("Style.Proton") or
-          -moz-bool-pref("Style.Photon")
+@supports -moz-bool-pref("userChrome.ProtonTabs-Enabled") or
+          -moz-bool-pref("userChrome.PhotonTabs-Enabled")
 {
     :root[tabsintitlebar][sizemode="normal"] #tabbrowser-tabs:not([overflow]) .tabbrowser-tab[first-visible-tab],
     :root[tabsintitlebar][sizemode="normal"] #tabbrowser-tabs[positionpinnedtabs],
@@ -754,7 +754,7 @@ spacer[part="overflow-end-indicator"]
 
 /* -------------------- Proton -------------------- */
 
-@supports -moz-bool-pref("Style.Proton")
+@supports -moz-bool-pref("userChrome.ProtonTabs-Enabled")
 {
     /* ---------- Tab Icon Indicator ---------- */
 
@@ -786,12 +786,12 @@ spacer[part="overflow-end-indicator"]
 
 /* -------------------- WaveFox / Photon / Australis / Chrome / Chrome-Old / Edge -------------------- */
 
-@supports -moz-bool-pref("Style.WaveFox") or
-          -moz-bool-pref("Style.Photon") or
-          -moz-bool-pref("Style.Australis") or
-          -moz-bool-pref("Style.Chrome") or
-          -moz-bool-pref("Style.Chrome-Old") or
-          -moz-bool-pref("Style.Edge")
+@supports -moz-bool-pref("userChrome.WaveFoxTabs-Enabled") or
+          -moz-bool-pref("userChrome.PhotonTabs-Enabled") or
+          -moz-bool-pref("userChrome.AustralisTabs-Enabled") or
+          -moz-bool-pref("userChrome.ChromeTabs-Enabled") or
+          -moz-bool-pref("userChrome.LegacyChromeTabs-Enabled") or
+          -moz-bool-pref("userChrome.EdgeTabs-Enabled")
 {
     /* ---------- Tabs ---------- */
 
@@ -817,11 +817,11 @@ spacer[part="overflow-end-indicator"]
 
 /* -------------------- WaveFox / Australis / Chrome / Chrome-Old / Edge -------------------- */
 
-@supports -moz-bool-pref("Style.WaveFox") or
-          -moz-bool-pref("Style.Australis") or
-          -moz-bool-pref("Style.Chrome") or
-          -moz-bool-pref("Style.Chrome-Old") or
-          -moz-bool-pref("Style.Edge")
+@supports -moz-bool-pref("userChrome.WaveFoxTabs-Enabled") or
+          -moz-bool-pref("userChrome.AustralisTabs-Enabled") or
+          -moz-bool-pref("userChrome.ChromeTabs-Enabled") or
+          -moz-bool-pref("userChrome.LegacyChromeTabs-Enabled") or
+          -moz-bool-pref("userChrome.EdgeTabs-Enabled")
 {
     /* ---------- Rounded Corners (SVG) ---------- */
 
@@ -888,9 +888,9 @@ spacer[part="overflow-end-indicator"]
 
 /* ---------- WaveFox / Australis / Chrome-Old ---------- */
 
-@supports -moz-bool-pref("Style.WaveFox") or
-          -moz-bool-pref("Style.Australis") or
-          -moz-bool-pref("Style.Chrome-Old")
+@supports -moz-bool-pref("userChrome.WaveFoxTabs-Enabled") or
+          -moz-bool-pref("userChrome.AustralisTabs-Enabled") or
+          -moz-bool-pref("userChrome.LegacyChromeTabs-Enabled")
 {
     /* ---------- Rounded Corners (SVG) ---------- */
 
@@ -926,8 +926,8 @@ spacer[part="overflow-end-indicator"]
 
 /* -------------------- Chrome / Edge -------------------- */
 
-@supports -moz-bool-pref("Style.Chrome") or
-          -moz-bool-pref("Style.Edge")
+@supports -moz-bool-pref("userChrome.ChromeTabs-Enabled") or
+          -moz-bool-pref("userChrome.EdgeTabs-Enabled")
 {
     /* ---------- Rounded Corners (SVG) ---------- */
 
@@ -963,10 +963,10 @@ spacer[part="overflow-end-indicator"]
 
 /* ---------------------------------------- New Tab Button ---------------------------------------- */
 
-@supports -moz-bool-pref("Style.Proton") or
-          -moz-bool-pref("Style.Photon") or
-          -moz-bool-pref("Style.Chrome") or
-          -moz-bool-pref("Style.Edge")
+@supports -moz-bool-pref("userChrome.ProtonTabs-Enabled") or
+          -moz-bool-pref("userChrome.PhotonTabs-Enabled") or
+          -moz-bool-pref("userChrome.ChromeTabs-Enabled") or
+          -moz-bool-pref("userChrome.EdgeTabs-Enabled")
 {
     #tabs-newtab-button
     {
@@ -974,9 +974,9 @@ spacer[part="overflow-end-indicator"]
     }
 }
 
-@supports -moz-bool-pref("Style.WaveFox") or
-          -moz-bool-pref("Style.Australis") or
-          -moz-bool-pref("Style.Chrome-Old")
+@supports -moz-bool-pref("userChrome.WaveFoxTabs-Enabled") or
+          -moz-bool-pref("userChrome.AustralisTabs-Enabled") or
+          -moz-bool-pref("userChrome.LegacyChromeTabs-Enabled")
 {
     #tabs-newtab-button
     {
@@ -989,7 +989,7 @@ spacer[part="overflow-end-indicator"]
     }
 }
 
-@supports -moz-bool-pref("Style.Chrome")
+@supports -moz-bool-pref("userChrome.ChromeTabs-Enabled")
 {
     #tabs-newtab-button .toolbarbutton-icon
     {
