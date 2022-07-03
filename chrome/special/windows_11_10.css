@@ -66,11 +66,11 @@
         }
     }
     
-    @supports -moz-bool-pref("Style.WaveFox") or
-              -moz-bool-pref("Style.Australis") or
-              -moz-bool-pref("Style.Chrome") or
-              -moz-bool-pref("Style.Chrome-Old") or
-              -moz-bool-pref("Style.Edge")
+    @supports -moz-bool-pref("userChrome.WaveFoxTabs-Enabled") or
+              -moz-bool-pref("userChrome.AustralisTabs-Enabled") or
+              -moz-bool-pref("userChrome.ChromeTabs-Enabled") or
+              -moz-bool-pref("userChrome.LegacyChromeTabs-Enabled") or
+              -moz-bool-pref("userChrome.EdgeTabs-Enabled")
     {    
         @media (prefers-contrast)
         {
