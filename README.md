@@ -14,6 +14,14 @@
   - `svg.context-properties.content.enabled`
   - `layout.css.color-mix.enabled`
 
+##### v1.2.103 Beta
+- Specify the desired shape of the tabs
+
+- For compatibility with the ESR
+
+  - `userChrome.EsrCompatibility-Enabled`
+
+##### v1.2.102
 - Specify the desired shape of the tabs. Create and activate one of the keys below
 
   - `Style.Proton`
