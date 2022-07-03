@@ -22,7 +22,8 @@
 
 /* ---------- Blur ---------- */
 
-@supports -moz-bool-pref("userChrome.Tab-Bar-Highlight-Type-Border")
+@supports -moz-bool-pref("userChrome.LowBorderSaturation-Enabled") or
+          -moz-bool-pref("userChrome.HighBorderSaturation-Enabled")
 {
     :root
     {
@@ -30,7 +31,8 @@
     }
 }
 
-@supports -moz-bool-pref("userChrome.Tab-Bar-Highlight-Type-Shadow")
+@supports -moz-bool-pref("userChrome.LowShadowSaturation-Enabled") or
+          -moz-bool-pref("userChrome.HighShadowSaturation-Enabled")
 {
     :root
     {
@@ -42,7 +44,8 @@
 
 @media (prefers-color-scheme: light)
 {
-    @supports -moz-bool-pref("userChrome.Tab-Bar-Highlight-Saturation-Low")
+    @supports -moz-bool-pref("userChrome.LowBorderSaturation-Enabled") or
+              -moz-bool-pref("userChrome.LowShadowSaturation-Enabled")
     {
         :root
         {
@@ -50,7 +53,8 @@
         }
     }
 
-    @supports -moz-bool-pref("userChrome.Tab-Bar-Highlight-Saturation-High")
+    @supports -moz-bool-pref("userChrome.HighBorderSaturation-Enabled") or
+              -moz-bool-pref("userChrome.HighShadowSaturation-Enabled")
     {
         :root
         {
@@ -63,15 +67,17 @@
 
 @media (prefers-color-scheme: dark)
 {
-    @supports -moz-bool-pref("userChrome.Tab-Bar-Highlight-Saturation-Low")
+    @supports -moz-bool-pref("userChrome.LowBorderSaturation-Enabled") or
+              -moz-bool-pref("userChrome.LowShadowSaturation-Enabled")
     {
         :root
         {
-            --main-shadow-color: rgba(0,0,0,0.5);
+            --main-shadow-color: rgba(0,0,0,0.25);
         }
     }
 
-    @supports -moz-bool-pref("userChrome.Tab-Bar-Highlight-Saturation-High")
+    @supports -moz-bool-pref("userChrome.HighBorderSaturation-Enabled") or
+              -moz-bool-pref("userChrome.HighShadowSaturation-Enabled")
     {
         :root
         {
