@@ -262,27 +262,7 @@ By default context menus follow the selected interface density, but it is possib
 - `Style.Drag-Space-Above-Tabs-Fullscreen-Mode-High`
 - `Style.Drag-Space-Above-Tabs-Fullscreen-Mode-Very-High`
 
-### Pinned Tabs Width (v1.2.102)
-Ability to control the width of pinned tabs.
-
-No Offset
-![изображение](https://user-images.githubusercontent.com/85301851/152679216-f1303454-5f42-487b-854e-9f6874a46759.png)
-
-Very High
-![изображение](https://user-images.githubusercontent.com/85301851/152679258-37628eff-ac26-4dab-b90f-838687867d79.png)
-
-- `Style.Pinned-Tabs-Width-Offset-Low`
-- `Style.Pinned-Tabs-Width-Offset-Medium`
-- `Style.Pinned-Tabs-Width-Offset-High`
-- `Style.Pinned-Tabs-Width-Offset-Very-High`
-
 ### Selected Tab Highlight
 ![изображение](https://user-images.githubusercontent.com/85301851/170877154-44db11c2-02ce-4aab-821e-c3cc68f26a2d.png)
 
-##### v1.2.103 Beta
 - `userChrome.SelectedTabHighlight-Enabled`
-
-##### v1.2.102
-On all themes except Proton/Photon, the indicator may not be visible on pinned tabs. Use the option to offset the width of pinned tabs. A very high offset is recommended.
-
-- `Style.Tab-Indicator-Enabled`
