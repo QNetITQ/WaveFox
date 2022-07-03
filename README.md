@@ -7,6 +7,9 @@
 - Linux
 
 ##### Installation
+
+##### Installation instructions for version 1.2.102 are located in the corresponding tag.
+
 - Download the `chrome` folder and put it in your user profile folder. For convenience, use `about:profiles`
 - Go to `about:config` and activate the keys below
 
