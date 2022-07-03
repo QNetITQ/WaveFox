@@ -447,36 +447,6 @@
     --drag-space: 4px !important;
 }
 
-/* -------------------- Windowed Mode -------------------- */
-
-@supports not -moz-bool-pref("userChrome.DragSpaceAboveTabsWindowedMode-Disabled")
-{
-    :root[sizemode="normal"]
-    {
-        --drag-space: 16px;
-    }
-}
-
-/* -------------------- Maximized Mode -------------------- */
-
-@supports -moz-bool-pref("userChrome.DragSpaceAboveTabsMaximizedMode-Enabled")
-{
-    :root[sizemode="maximized"]
-    {
-        --drag-space: 4px;
-    }
-}
-
-/* -------------------- Fullscreen Mode -------------------- */
-
-@supports -moz-bool-pref("userChrome.DragSpaceAboveTabsFullscreenMode-Enabled")
-{
-    :root[sizemode="fullscreen"]
-    {
-        --drag-space: 4px;
-    }
-}
-
 #TabsToolbar :is(.tabbrowser-tab, .toolbarbutton-1, separator, #personal-bookmarks, #search-container, .accessibility-indicator, .private-browsing-indicator)
 {
     margin-top: var(--drag-space, 0px) !important;
@@ -495,6 +465,36 @@ spacer[part="overflow-start-indicator"],
 spacer[part="overflow-end-indicator"]
 {
     margin-top: var(--margin-top, revert) !important;
+}
+
+/* -------------------- Windowed Mode -------------------- */
+
+@supports not -moz-bool-pref("userChrome.DragSpaceAboveTabsWindowedMode-Disabled")
+{
+    :root[sizemode="normal"]
+    {
+        --drag-space: 16px;
+    }
+}
+
+/* -------------------- Maximized Mode -------------------- */
+
+@supports -moz-bool-pref("userChrome.DragSpaceAboveTabsMaximizedMode-Enabled")
+{
+    :root[sizemode="maximized"]
+    {
+        --drag-space: 8px;
+    }
+}
+
+/* -------------------- Fullscreen Mode -------------------- */
+
+@supports -moz-bool-pref("userChrome.DragSpaceAboveTabsFullscreenMode-Enabled")
+{
+    :root[sizemode="fullscreen"]
+    {
+        --drag-space: 8px;
+    }
 }
 
 /* ---------------------------------------- Titlebar ---------------------------------------- */
