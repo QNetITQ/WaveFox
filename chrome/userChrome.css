@@ -995,7 +995,7 @@ spacer[part="overflow-end-indicator"]
 
 /* ---------- Regular Icons ---------- */
 
-@supports -moz-bool-pref("Style.Menu-Icons-Regular")
+@supports -moz-bool-pref("userChrome.RegularMenuIcons-Enabled")
 {
     :root
     {
@@ -1048,7 +1048,7 @@ spacer[part="overflow-end-indicator"]
 
 /* ---------- Filled Icons ---------- */
 
-@supports -moz-bool-pref("Style.Menu-Icons-Filled")
+@supports -moz-bool-pref("userChrome.FilledMenuIcons-Enabled")
 {
     :root
     {
@@ -1101,8 +1101,8 @@ spacer[part="overflow-end-indicator"]
 
 /* ---------- Native Browser Menus ---------- */
 
-@supports -moz-bool-pref("Style.Menu-Icons-Regular") or
-          -moz-bool-pref("Style.Menu-Icons-Filled")
+@supports -moz-bool-pref("userChrome.RegularMenuIcons-Enabled") or
+          -moz-bool-pref("userChrome.FilledMenuIcons-Enabled")
 {
     :is(
 
