@@ -31,7 +31,7 @@
         }
     }
 
-    @supports -moz-bool-pref("Style.Win11-Mica-Acrylic")
+    @supports -moz-bool-pref("userChrome.WindowsSystemEffects-Enabled")
     {
         @media (-moz-windows-accent-color-in-titlebar: 0)
         {
@@ -50,7 +50,7 @@
             {
                 background-color: var(--toolbar-bgcolor) !important;
                 border-bottom-left-radius: 8px !important;
-                filter: var(--special-main-outer-shadow) var(--special-additional-outer-shadow) !important;
+                filter: var(--special-main-outer-shadow) !important;
                 opacity: 0 !important;
             }
 
