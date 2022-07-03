@@ -395,9 +395,9 @@
 
 /* ---------------------------------------- Context Menus (Not System Related) ---------------------------------------- */
 
-@supports -moz-bool-pref("Style.Context-Menus-Compact") or
-          -moz-bool-pref("Style.Context-Menus-Normal") or
-          -moz-bool-pref("Style.Context-Menus-Touch")
+@supports -moz-bool-pref("userChrome.CompactContextMenu-Enabled") or
+          -moz-bool-pref("userChrome.NormalContextMenu-Enabled") or
+          -moz-bool-pref("userChrome.TouchContextMenu-Enabled")
 {
     :root
     {
@@ -410,7 +410,7 @@
     }
 }
 
-@supports -moz-bool-pref("Style.Context-Menus-Compact")
+@supports -moz-bool-pref("userChrome.CompactContextMenu-Enabled")
 {
     :root
     {
@@ -418,7 +418,7 @@
     }
 }
 
-@supports -moz-bool-pref("Style.Context-Menus-Normal")
+@supports -moz-bool-pref("userChrome.NormalContextMenu-Enabled")
 {
     :root
     {
@@ -426,7 +426,7 @@
     }
 }
 
-@supports -moz-bool-pref("Style.Context-Menus-Touch")
+@supports -moz-bool-pref("userChrome.TouchContextMenu-Enabled")
 {
     :root
     {
