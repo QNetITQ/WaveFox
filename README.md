@@ -120,15 +120,15 @@ Dark:
 - `Style.Colorways-Green`
 
 ### Additional Container Indicator
-Possibility to activate an additional indicator for better visibility.
-
-##### Additional Indicator
 ![изображение](https://user-images.githubusercontent.com/85301851/161597087-fc818bc5-c60e-48a9-8eb9-1bcafc030607.png)
 
-#### Additional Indicator
+##### 1.2.103 Beta
+- `userChrome.AdditionalContainerIndicator-Enabled`
+
+##### 1.2.102
 - `Style.Additional-Container-Indicator`
 
-### Tab bar highlight
+### Tab Bar Highlight
 
 Specify the desired type and saturation.
 
