@@ -92,6 +92,11 @@ Requires Linux with transparency support. Tested on Linux Manjaro KDE + ForceBlu
 - `gfx.webrender.all`
 
 ### Colorways
+
+##### 1.2.103 Beta
+https://www.reddit.com/r/firefox/comments/uq26ao/bringing_back_your_preferred_colorways/?utm_source=share&utm_medium=web2x&context=3
+
+##### 1.2.102
 Use with light/dark themes. On the system does not work.
 
 ##### Blue
