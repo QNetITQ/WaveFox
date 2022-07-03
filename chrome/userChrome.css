@@ -436,149 +436,57 @@
 
 /* ---------------------------------------- Drag Space ---------------------------------------- */
 
-@supports -moz-bool-pref("Style.Left-Drag-Space-Disabled")
+.titlebar-spacer:is([type="pre-tabs"], [type="post-tabs"])
 {
-    .titlebar-spacer[type="pre-tabs"]
-    {
-        display: none !important;
-    }
+    display: none !important;
 }
 
-@supports -moz-bool-pref("Style.Right-Drag-Space-Disabled")
+:root:not([tabsintitlebar]),
+#toolbar-menubar:not([inactive]) + #TabsToolbar
 {
-    .titlebar-spacer[type="post-tabs"]
-    {
-        display: none !important;
-    }
+    --drag-space: 4px !important;
 }
 
 /* -------------------- Windowed Mode -------------------- */
 
-@supports -moz-bool-pref("Style.Drag-Space-Above-Tabs-Windowed-Mode-Low")
+@supports not -moz-bool-pref("userChrome.DragSpaceAboveTabsWindowedMode-Disabled")
 {
     :root[sizemode="normal"]
     {
-        --drag-space-above-tabs: 4px;
+        --drag-space: 16px;
     }
-}
-
-@supports -moz-bool-pref("Style.Drag-Space-Above-Tabs-Windowed-Mode-Medium")
-{
-    :root[sizemode="normal"]
-    {
-        --drag-space-above-tabs: 8px;
-    }
-}
-
-@supports -moz-bool-pref("Style.Drag-Space-Above-Tabs-Windowed-Mode-High")
-{
-    :root[sizemode="normal"]
-    {
-        --drag-space-above-tabs: 12px;
-    }
-}
-
-@supports -moz-bool-pref("Style.Drag-Space-Above-Tabs-Windowed-Mode-Very-High")
-{
-    :root[sizemode="normal"]
-    {
-        --drag-space-above-tabs: 16px;
-    }
-}
-
-:root[sizemode="normal"]
-{
-    --drag-space: var(--drag-space-above-tabs, 0px);
 }
 
 /* -------------------- Maximized Mode -------------------- */
 
-@supports -moz-bool-pref("Style.Drag-Space-Above-Tabs-Maximized-Mode-Low")
+@supports -moz-bool-pref("userChrome.DragSpaceAboveTabsMaximizedMode-Enabled")
 {
     :root[sizemode="maximized"]
     {
-        --drag-space-above-tabs: 2px;
+        --drag-space: 4px;
     }
-}
-
-@supports -moz-bool-pref("Style.Drag-Space-Above-Tabs-Maximized-Mode-Medium")
-{
-    :root[sizemode="maximized"]
-    {
-        --drag-space-above-tabs: 4px;
-    }
-}
-
-@supports -moz-bool-pref("Style.Drag-Space-Above-Tabs-Maximized-Mode-High")
-{
-    :root[sizemode="maximized"]
-    {
-        --drag-space-above-tabs: 6px;
-    }
-}
-
-@supports -moz-bool-pref("Style.Drag-Space-Above-Tabs-Maximized-Mode-Very-High")
-{
-    :root[sizemode="maximized"]
-    {
-        --drag-space-above-tabs: 8px;
-    }
-}
-
-:root[sizemode="maximized"]
-{
-    --drag-space: var(--drag-space-above-tabs, 0px);
 }
 
 /* -------------------- Fullscreen Mode -------------------- */
 
-@supports -moz-bool-pref("Style.Drag-Space-Above-Tabs-Fullscreen-Mode-Low")
+@supports -moz-bool-pref("userChrome.DragSpaceAboveTabsFullscreenMode-Enabled")
 {
     :root[sizemode="fullscreen"]
     {
-        --drag-space-above-tabs: 2px;
+        --drag-space: 4px;
     }
-}
-
-@supports -moz-bool-pref("Style.Drag-Space-Above-Tabs-Fullscreen-Mode-Medium")
-{
-    :root[sizemode="fullscreen"]
-    {
-        --drag-space-above-tabs: 4px;
-    }
-}
-
-@supports -moz-bool-pref("Style.Drag-Space-Above-Tabs-Fullscreen-Mode-High")
-{
-    :root[sizemode="fullscreen"]
-    {
-        --drag-space-above-tabs: 6px;
-    }
-}
-
-@supports -moz-bool-pref("Style.Drag-Space-Above-Tabs-Fullscreen-Mode-Very-High")
-{
-    :root[sizemode="fullscreen"]
-    {
-        --drag-space-above-tabs: 8px;
-    }
-}
-
-:root[sizemode="fullscreen"]
-{
-    --drag-space: var(--drag-space-above-tabs, 0px);
 }
 
 #TabsToolbar :is(.tabbrowser-tab, .toolbarbutton-1, separator, #personal-bookmarks, #search-container, .accessibility-indicator, .private-browsing-indicator)
 {
-    margin-top: var(--drag-space) !important;
+    margin-top: var(--drag-space, 0px) !important;
 }
 
 /* ---------- Shadow DOM ---------- */
 
 #tabbrowser-arrowscrollbox
 {
-    --margin-top: var(--drag-space) !important;
+    --margin-top: var(--drag-space, 0px) !important;
 }
 
 #scrollbutton-up,
