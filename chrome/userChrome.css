@@ -202,12 +202,12 @@
     :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) #urlbar:not([focused], [open]) > #urlbar-background,
     :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) #searchbar:focus-within
     {
-        filter: var(--special-main-outer-shadow) !important;
+        filter: var(--special-main-outer-shadow) var(--special-additional-outer-shadow) !important;
     }
     
     :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) #navigator-toolbox
     {
-        box-shadow: var(--tab-bar-main-inner-shadow) !important;
+        box-shadow: var(--tab-bar-main-inner-shadow), var(--tab-bar-additional-inner-shadow) !important;
     }
 }
 
@@ -373,7 +373,7 @@ spacer[part="overflow-end-indicator"]
 {
     background-color: var(--toolbar-bgcolor) !important;
     background-image: var(--toolbar-bgimage) !important;
-    filter: var(--special-main-outer-shadow);
+    filter: var(--special-main-outer-shadow) var(--special-additional-outer-shadow) !important;
 }
 
 .tab-background
@@ -575,7 +575,7 @@ spacer[part="overflow-end-indicator"]
     left: 0%;
     bottom: 0%;
     z-index: 2;
-    box-shadow: var(--tab-bar-main-inner-shadow);
+    box-shadow: var(--tab-bar-main-inner-shadow), var(--tab-bar-additional-inner-shadow);
     background-repeat: no-repeat;
     pointer-events: none;
 }
