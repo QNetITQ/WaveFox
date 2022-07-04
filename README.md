@@ -83,7 +83,7 @@ https://www.reddit.com/r/firefox/comments/uq26ao/bringing_back_your_preferred_co
 - `userChrome.AdditionalContainerIndicator-Enabled`
 
 ### Tab Bar Highlight
-It is possible to enable border and shadow at the same time.
+It is also possible to turn on the border and the shadow at the same time.
 ![изображение](https://user-images.githubusercontent.com/85301851/152011749-4d5619b3-0fd8-40f9-a3dc-96be31839971.png)
 
 - `userChrome.LowBorderSaturation-Enabled`
