@@ -50,7 +50,7 @@
             {
                 background-color: var(--toolbar-bgcolor) !important;
                 border-bottom-left-radius: 8px !important;
-                filter: var(--special-main-outer-shadow) !important;
+                filter: var(--special-main-outer-shadow) var(--special-additional-outer-shadow) !important;
                 opacity: 0 !important;
             }
 
