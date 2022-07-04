@@ -88,7 +88,6 @@ It is possible to enable border and shadow at the same time.
 
 - `userChrome.LowBorderSaturation-Enabled`
 - `userChrome.HighBorderSaturation-Enabled`
-
 - `userChrome.LowShadowSaturation-Enabled`
 - `userChrome.HighShadowSaturation-Enabled`
 
