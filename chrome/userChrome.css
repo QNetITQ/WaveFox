@@ -18,9 +18,12 @@
 {
     --tab-bar-main-inner-shadow: inset 0 calc(-1 * var(--main-shadow-blur, 0px)) var(--main-shadow-blur, 0px) calc(-1 * var(--main-shadow-blur, 0px)) var(--main-shadow-color, transparent);
     --special-main-outer-shadow: drop-shadow(0 0 calc(var(--main-shadow-blur, 0px) / 2) var(--main-shadow-color, transparent));
+
+    --tab-bar-additional-inner-shadow: inset 0 calc(-1 * var(--additional-shadow-blur, 0px)) var(--additional-shadow-blur, 0px) calc(-1 * var(--additional-shadow-blur, 0px)) var(--additional-shadow-color, transparent);
+    --special-additional-outer-shadow: drop-shadow(0 0 calc(var(--additional-shadow-blur, 0px) / 2) var(--additional-shadow-color, transparent));
 }
 
-/* ---------- Blur ---------- */
+/* ---------- Selected Tab Border ---------- */
 
 @supports -moz-bool-pref("userChrome.LowBorderSaturation-Enabled") or
           -moz-bool-pref("userChrome.HighBorderSaturation-Enabled")
@@ -29,59 +32,91 @@
     {
         --main-shadow-blur: 2px;
     }
+
+    @media (prefers-color-scheme: light)
+    {
+        @supports -moz-bool-pref("userChrome.LowBorderSaturation-Enabled")
+        {
+            :root
+            {
+                --main-shadow-color: rgba(0,0,0,0.1)
+            }
+        }
+
+        @supports -moz-bool-pref("userChrome.HighBorderSaturation-Enabled")
+        {
+            :root
+            {
+                --main-shadow-color: rgba(0,0,0,0.25)
+            }
+        }
+    }
+
+    @media (prefers-color-scheme: dark)
+    {
+        @supports -moz-bool-pref("userChrome.LowBorderSaturation-Enabled")
+        {
+            :root
+            {
+                --main-shadow-color: rgba(0,0,0,0.25);
+            }
+        }
+
+        @supports -moz-bool-pref("userChrome.HighBorderSaturation-Enabled")
+        {
+            :root
+            {
+                --main-shadow-color: rgb(0,0,0);
+            }
+        }
+    }
 }
+
+/* ---------- Selected Tab Shadow ---------- */
 
 @supports -moz-bool-pref("userChrome.LowShadowSaturation-Enabled") or
           -moz-bool-pref("userChrome.HighShadowSaturation-Enabled")
 {
     :root
     {
-        --main-shadow-blur: 4px;
+        --additional-shadow-blur: 4px;
     }
-}
 
-/* ---------- Saturation (Light) ---------- */
-
-@media (prefers-color-scheme: light)
-{
-    @supports -moz-bool-pref("userChrome.LowBorderSaturation-Enabled") or
-              -moz-bool-pref("userChrome.LowShadowSaturation-Enabled")
+    @media (prefers-color-scheme: light)
     {
-        :root
+        @supports -moz-bool-pref("userChrome.LowShadowSaturation-Enabled")
         {
-            --main-shadow-color: rgba(0,0,0,0.1)
+            :root
+            {
+                --additional-shadow-color: rgba(0,0,0,0.1)
+            }
+        }
+
+        @supports -moz-bool-pref("userChrome.HighShadowSaturation-Enabled")
+        {
+            :root
+            {
+                --additional-shadow-color: rgba(0,0,0,0.25)
+            }
         }
     }
 
-    @supports -moz-bool-pref("userChrome.HighBorderSaturation-Enabled") or
-              -moz-bool-pref("userChrome.HighShadowSaturation-Enabled")
+    @media (prefers-color-scheme: dark)
     {
-        :root
+        @supports -moz-bool-pref("userChrome.LowShadowSaturation-Enabled")
         {
-            --main-shadow-color: rgba(0,0,0,0.25)
+            :root
+            {
+                --additional-shadow-color: rgba(0,0,0,0.25);
+            }
         }
-    }
-}
 
-/* ---------- Saturation (Dark) ---------- */
-
-@media (prefers-color-scheme: dark)
-{
-    @supports -moz-bool-pref("userChrome.LowBorderSaturation-Enabled") or
-              -moz-bool-pref("userChrome.LowShadowSaturation-Enabled")
-    {
-        :root
+        @supports -moz-bool-pref("userChrome.HighShadowSaturation-Enabled")
         {
-            --main-shadow-color: rgba(0,0,0,0.25);
-        }
-    }
-
-    @supports -moz-bool-pref("userChrome.HighBorderSaturation-Enabled") or
-              -moz-bool-pref("userChrome.HighShadowSaturation-Enabled")
-    {
-        :root
-        {
-            --main-shadow-color: rgb(0,0,0);
+            :root
+            {
+                --additional-shadow-color: rgb(0,0,0);
+            }
         }
     }
 }
