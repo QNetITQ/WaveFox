@@ -316,26 +316,15 @@
 
 /* ---------------------------------------- Drag Space ---------------------------------------- */
 
-@supports -moz-bool-pref("userChrome.LeftSideDragSpace-Disabled")
+.titlebar-spacer:is([type="pre-tabs"], [type="post-tabs"])
 {
-    .titlebar-spacer[type="pre-tabs"]
-    {
-        display: none !important;
-    }
-}
-
-@supports -moz-bool-pref("userChrome.RightSideDragSpace-Disabled")
-{
-    .titlebar-spacer[type="post-tabs"]
-    {
-        display: none !important;
-    }
+    display: none !important;
 }
 
 :root:not([tabsintitlebar]),
 #toolbar-menubar:not([inactive]) + #TabsToolbar
 {
-    --drag-space: 4px !important;
+    --drag-space: 8px !important;
 }
 
 #TabsToolbar :is(.tabbrowser-tab, .toolbarbutton-1, separator, #personal-bookmarks, #search-container, .accessibility-indicator, .private-browsing-indicator)
