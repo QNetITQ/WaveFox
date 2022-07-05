@@ -453,7 +453,6 @@ spacer[part="overflow-end-indicator"]
 {
     border-radius: 0px !important;
     margin-block: calc(var(--tab-min-height) - 2px) 0px !important;
-    margin-inline: 0px !important;
 }
 
 .tabbrowser-tab[pinned] .tab-context-line
@@ -462,6 +461,7 @@ spacer[part="overflow-end-indicator"]
     background: radial-gradient(circle at center, var(--identity-icon-color) 2px, transparent 2px) !important;
     margin-block: calc(var(--tab-min-height) - 4px) 0px !important;
     margin-inline: 0px !important;
+    border-radius: 0px !important;
 }
 
 /* -------------------- Tab Icon Indicators -------------------- */
@@ -784,6 +784,13 @@ spacer[part="overflow-end-indicator"]
     {
         margin-right: calc(var(--tab-min-height) / 4) !important;
     }
+
+    /* ---------- Container Indicators ---------- */
+
+    .tabbrowser-tab:not([pinned]) .tab-context-line
+    {
+        margin-inline: calc(var(--tab-min-height) / 2) !important;
+    }
 }
 
 /* -------------------- Proton -------------------- */
@@ -931,6 +938,13 @@ spacer[part="overflow-end-indicator"]
     :root
     {
         --pinned-tabs-width-offset: 2px;
+    }
+
+    /* ---------- Container Indicators ---------- */
+
+    .tabbrowser-tab:not([pinned]) .tab-context-line
+    {
+        margin-inline: 0px !important;
     }
 }
 
