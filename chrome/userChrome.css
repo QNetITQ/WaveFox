@@ -158,7 +158,6 @@
         background-image: radial-gradient(circle at center, var(--toolbar-field-focus-border-color) 2px, transparent 2px);
         background-size: 4px 4px;
         background-repeat: no-repeat;
-        background-position: center top;
     }
 }
 
@@ -796,7 +795,14 @@ spacer[part="overflow-end-indicator"]
     .tabbrowser-tab:is([image], [pinned]) .tab-content[attention]:not([selected]),
     .tab-content[pinned][titlechanged]:not([selected])
     {
-        background-position: 50% 4px !important;
+        background-position: center var(--tab-block-margin) !important;
+    }
+
+    /* ---------- Selected Tab Highlight ---------- */
+
+    .tabbrowser-tab[visuallyselected][pinned] .tab-content
+    {
+        background-position: center var(--tab-block-margin) !important;
     }
 
     /* ---------- Separators ---------- */
@@ -846,7 +852,14 @@ spacer[part="overflow-end-indicator"]
     .tabbrowser-tab:is([image], [pinned]) .tab-content[attention]:not([selected]),
     .tab-content[pinned][titlechanged]:not([selected])
     {
-        background-position: 50% 0% !important;
+        background-position: center top !important;
+    }
+
+    /* ---------- Selected Tab Highlight ---------- */
+
+    .tabbrowser-tab[visuallyselected][pinned] .tab-content
+    {
+        background-position: center top !important;
     }
 }
 
