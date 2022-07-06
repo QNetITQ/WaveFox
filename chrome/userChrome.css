@@ -316,9 +316,20 @@
 
 /* ---------------------------------------- Drag Space ---------------------------------------- */
 
-.titlebar-spacer:is([type="pre-tabs"], [type="post-tabs"])
+@supports -moz-bool-pref("userChrome.LeftSideDragSpace-Disabled")
 {
-    display: none !important;
+    .titlebar-spacer[type="pre-tabs"]
+    {
+        display: none !important;
+    }
+}
+
+@supports -moz-bool-pref("userChrome.RightSideDragSpace-Disabled")
+{
+    .titlebar-spacer[type="post-tabs"]
+    {
+        display: none !important;
+    }
 }
 
 :root:not([tabsintitlebar]),
