@@ -119,6 +119,8 @@ By default context menus follow the selected interface density, but it is possib
 ### Drag Space
 ![изображение](https://user-images.githubusercontent.com/85301851/152680229-43547df0-1d2c-4384-b024-950e7aa56ca6.png)
 
+- `userChrome.LeftSideDragSpace-Disabled`
+- `userChrome.RightSideDragSpace-Disabled`
 - `userChrome.DragSpaceAboveTabsWindowedMode-Disabled`
 - `userChrome.DragSpaceAboveTabsMaximizedMode-Enabled`
 - `userChrome.DragSpaceAboveTabsFullscreenMode-Enabled`
