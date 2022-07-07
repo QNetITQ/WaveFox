@@ -333,12 +333,6 @@
     }
 }
 
-:root:not([tabsintitlebar]),
-#toolbar-menubar:not([inactive]) + #TabsToolbar
-{
-    --drag-space: 8px !important;
-}
-
 #TabsToolbar :is(.tabbrowser-tab, .toolbarbutton-1, separator, #personal-bookmarks, #search-container, .accessibility-indicator, .private-browsing-indicator)
 {
     margin-top: var(--drag-space, 0px) !important;
@@ -363,7 +357,7 @@ spacer[part="overflow-end-indicator"]
 
 @supports not -moz-bool-pref("userChrome.DragSpaceAboveTabsWindowedMode-Disabled")
 {
-    :root[sizemode="normal"]
+    :root[sizemode="normal"][tabsintitlebar]
     {
         --drag-space: 16px;
     }
@@ -373,7 +367,7 @@ spacer[part="overflow-end-indicator"]
 
 @supports -moz-bool-pref("userChrome.DragSpaceAboveTabsMaximizedMode-Enabled")
 {
-    :root[sizemode="maximized"]
+    :root[sizemode="maximized"][tabsintitlebar]
     {
         --drag-space: 8px;
     }
@@ -383,7 +377,7 @@ spacer[part="overflow-end-indicator"]
 
 @supports -moz-bool-pref("userChrome.DragSpaceAboveTabsFullscreenMode-Enabled")
 {
-    :root[sizemode="fullscreen"]
+    :root[sizemode="fullscreen"][tabsintitlebar]
     {
         --drag-space: 8px;
     }
