@@ -21,4 +21,15 @@
             margin-left: calc(var(--tab-min-height) / 4) !important;
         }
     }
+
+    /* ---------- Drag Space ---------- */
+
+    @supports not -moz-bool-pref("userChrome.ProtonTabs-Enabled")
+    {
+        :root:not([tabsintitlebar])
+        {
+            --drag-space: 8px !important;
+        }
+    }
+
 }
