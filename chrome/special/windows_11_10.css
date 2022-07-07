@@ -111,6 +111,14 @@
     }
     
     /* ---------- Drag Space ---------- */
+    
+    @supports -moz-bool-pref("userChrome.ProtonTabs-Enabled")
+    {
+        #toolbar-menubar:not([inactive]) + #TabsToolbar
+        {
+            --drag-space: 0px !important;
+        }
+    }
 
     @supports not -moz-bool-pref("userChrome.ProtonTabs-Enabled")
     {
