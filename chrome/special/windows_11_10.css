@@ -109,4 +109,16 @@
             padding-inline-start: 1em !important;
         }
     }
+    
+    /* ---------- Drag Space ---------- */
+
+    @supports not -moz-bool-pref("userChrome.ProtonTabs-Enabled")
+    {
+        :root:not([tabsintitlebar]),
+        #toolbar-menubar:not([inactive]) + #TabsToolbar
+        {
+            --drag-space: 8px !important;
+        }
+    }
+
 }
