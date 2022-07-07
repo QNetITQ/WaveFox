@@ -363,26 +363,6 @@ spacer[part="overflow-end-indicator"]
     }
 }
 
-/* -------------------- Maximized Mode -------------------- */
-
-@supports -moz-bool-pref("userChrome.DragSpaceAboveTabsMaximizedMode-Enabled")
-{
-    :root[sizemode="maximized"][tabsintitlebar]
-    {
-        --drag-space: 8px;
-    }
-}
-
-/* -------------------- Fullscreen Mode -------------------- */
-
-@supports -moz-bool-pref("userChrome.DragSpaceAboveTabsFullscreenMode-Enabled")
-{
-    :root[sizemode="fullscreen"][tabsintitlebar]
-    {
-        --drag-space: 8px;
-    }
-}
-
 /* ---------------------------------------- Titlebar ---------------------------------------- */
 
 :root:is(:not(:-moz-lwtheme),
@@ -844,12 +824,7 @@ spacer[part="overflow-end-indicator"]
 
 /* -------------------- WaveFox / Photon / Australis / Chrome / Chrome-Old / Edge -------------------- */
 
-@supports -moz-bool-pref("userChrome.WaveFoxTabs-Enabled") or
-          -moz-bool-pref("userChrome.PhotonTabs-Enabled") or
-          -moz-bool-pref("userChrome.AustralisTabs-Enabled") or
-          -moz-bool-pref("userChrome.ChromeTabs-Enabled") or
-          -moz-bool-pref("userChrome.LegacyChromeTabs-Enabled") or
-          -moz-bool-pref("userChrome.EdgeTabs-Enabled")
+@supports not -moz-bool-pref("userChrome.ProtonTabs-Enabled")
 {
     /* ---------- Tabs ---------- */
 
@@ -862,6 +837,24 @@ spacer[part="overflow-end-indicator"]
     {
         margin-block: 0 !important;
         border-radius: 0 !important;
+    }
+
+    /* ---------- Drag Space ---------- */
+
+    @supports -moz-bool-pref("userChrome.DragSpaceAboveTabsMaximizedMode-Enabled")
+    {
+        :root[sizemode="maximized"][tabsintitlebar]
+        {
+            --drag-space: 8px;
+        }
+    }
+
+    @supports -moz-bool-pref("userChrome.DragSpaceAboveTabsFullscreenMode-Enabled")
+    {
+        :root[sizemode="fullscreen"][tabsintitlebar]
+        {
+            --drag-space: 8px;
+        }
     }
 
     /* ---------- Tab Icon Indicator ---------- */
