@@ -84,10 +84,17 @@ https://www.reddit.com/r/firefox/comments/uq26ao/bringing_back_your_preferred_co
 It is also possible to turn on the border and the shadow at the same time.
 ![изображение](https://user-images.githubusercontent.com/85301851/152011749-4d5619b3-0fd8-40f9-a3dc-96be31839971.png)
 
+##### Border
 - `userChrome.LowBorderSaturation-Enabled`
+- `userChrome.MediumBorderSaturation-Enabled`
 - `userChrome.HighBorderSaturation-Enabled`
+- `userChrome.VeryHighBorderSaturation-Enabled`
+
+##### Shadow
 - `userChrome.LowShadowSaturation-Enabled`
+- `userChrome.MediumShadowSaturation-Enabled`
 - `userChrome.HighShadowSaturation-Enabled`
+- `userChrome.VeryHighShadowSaturation-Enabled`
 
 ### Tab Separators
 ![изображение](https://user-images.githubusercontent.com/85301851/152351312-f6ad4578-e7d5-40b7-8b2d-49388a750f54.png)
