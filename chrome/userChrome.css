@@ -23,100 +23,162 @@
     --special-additional-outer-shadow: drop-shadow(0 0 calc(var(--additional-shadow-blur, 0px) / 2) var(--additional-shadow-color, transparent));
 }
 
-/* ---------- Selected Tab Border ---------- */
+/* ---------- Tab Bar Border ---------- */
 
-@supports -moz-bool-pref("userChrome.LowBorderSaturation-Enabled") or
-          -moz-bool-pref("userChrome.HighBorderSaturation-Enabled")
+@media (prefers-color-scheme: light)
 {
-    :root
+    @supports -moz-bool-pref("userChrome.LowBorderSaturation-Enabled")
     {
-        --main-shadow-blur: 2px;
-    }
-
-    @media (prefers-color-scheme: light)
-    {
-        @supports -moz-bool-pref("userChrome.LowBorderSaturation-Enabled")
+        :root
         {
-            :root
-            {
-                --main-shadow-color: rgba(0,0,0,0.1)
-            }
-        }
-
-        @supports -moz-bool-pref("userChrome.HighBorderSaturation-Enabled")
-        {
-            :root
-            {
-                --main-shadow-color: rgba(0,0,0,0.25)
-            }
+            --main-shadow-blur: 2px;
+            --main-shadow-color: rgba(0,0,0,0.1);
         }
     }
 
-    @media (prefers-color-scheme: dark)
+    @supports -moz-bool-pref("userChrome.MediumBorderSaturation-Enabled")
     {
-        @supports -moz-bool-pref("userChrome.LowBorderSaturation-Enabled")
+        :root
         {
-            :root
-            {
-                --main-shadow-color: rgba(0,0,0,0.25);
-            }
+            --main-shadow-blur: 2px;
+            --main-shadow-color: rgba(0,0,0,0.15);
         }
+    }
 
-        @supports -moz-bool-pref("userChrome.HighBorderSaturation-Enabled")
+    @supports -moz-bool-pref("userChrome.HighBorderSaturation-Enabled")
+    {
+        :root
         {
-            :root
-            {
-                --main-shadow-color: rgb(0,0,0);
-            }
+            --main-shadow-blur: 2px;
+            --main-shadow-color: rgba(0,0,0,0.2);
+        }
+    }
+
+    @supports -moz-bool-pref("userChrome.VeryHighBorderSaturation-Enabled")
+    {
+        :root
+        {
+            --main-shadow-blur: 2px;
+            --main-shadow-color: rgba(0,0,0,0.25);
         }
     }
 }
 
-/* ---------- Selected Tab Shadow ---------- */
-
-@supports -moz-bool-pref("userChrome.LowShadowSaturation-Enabled") or
-          -moz-bool-pref("userChrome.HighShadowSaturation-Enabled")
+@media (prefers-color-scheme: dark)
 {
-    :root
+    @supports -moz-bool-pref("userChrome.LowBorderSaturation-Enabled")
     {
-        --additional-shadow-blur: 4px;
-    }
-
-    @media (prefers-color-scheme: light)
-    {
-        @supports -moz-bool-pref("userChrome.LowShadowSaturation-Enabled")
+        :root
         {
-            :root
-            {
-                --additional-shadow-color: rgba(0,0,0,0.1)
-            }
-        }
-
-        @supports -moz-bool-pref("userChrome.HighShadowSaturation-Enabled")
-        {
-            :root
-            {
-                --additional-shadow-color: rgba(0,0,0,0.25)
-            }
+            --main-shadow-blur: 2px;
+            --main-shadow-color: rgba(0,0,0,0.25);
         }
     }
 
-    @media (prefers-color-scheme: dark)
+    @supports -moz-bool-pref("userChrome.MediumBorderSaturation-Enabled")
     {
-        @supports -moz-bool-pref("userChrome.LowShadowSaturation-Enabled")
+        :root
         {
-            :root
-            {
-                --additional-shadow-color: rgba(0,0,0,0.25);
-            }
+            --main-shadow-blur: 2px;
+            --main-shadow-color: rgba(0,0,0,0.5);
         }
+    }
 
-        @supports -moz-bool-pref("userChrome.HighShadowSaturation-Enabled")
+    @supports -moz-bool-pref("userChrome.HighBorderSaturation-Enabled")
+    {
+        :root
         {
-            :root
-            {
-                --additional-shadow-color: rgb(0,0,0);
-            }
+            --main-shadow-blur: 2px;
+            --main-shadow-color: rgba(0,0,0,0.75);
+        }
+    }
+
+    @supports -moz-bool-pref("userChrome.VeryHighBorderSaturation-Enabled")
+    {
+        :root
+        {
+            --main-shadow-blur: 2px;
+            --main-shadow-color: rgb(0,0,0);
+        }
+    }
+}
+
+/* ---------- Tab Bar Shadow ---------- */
+
+@media (prefers-color-scheme: light)
+{
+    @supports -moz-bool-pref("userChrome.LowShadowSaturation-Enabled")
+    {
+        :root
+        {
+            --additional-shadow-blur: 4px;
+            --additional-shadow-color: rgba(0,0,0,0.1);
+        }
+    }
+
+    @supports -moz-bool-pref("userChrome.MediumShadowSaturation-Enabled")
+    {
+        :root
+        {
+            --additional-shadow-blur: 4px;
+            --additional-shadow-color: rgba(0,0,0,0.15);
+        }
+    }
+
+    @supports -moz-bool-pref("userChrome.HighShadowSaturation-Enabled")
+    {
+        :root
+        {
+            --additional-shadow-blur: 4px;
+            --additional-shadow-color: rgba(0,0,0,0.2);
+        }
+    }
+
+    @supports -moz-bool-pref("userChrome.VeryHighShadowSaturation-Enabled")
+    {
+        :root
+        {
+            --additional-shadow-blur: 4px;
+            --additional-shadow-color: rgba(0,0,0,0.25);
+        }
+    }
+}
+
+@media (prefers-color-scheme: dark)
+{
+    @supports -moz-bool-pref("userChrome.LowShadowSaturation-Enabled")
+    {
+        :root
+        {
+            --additional-shadow-blur: 4px;
+            --additional-shadow-color: rgba(0,0,0,0.25);
+        }
+    }
+
+    @supports -moz-bool-pref("userChrome.MediumShadowSaturation-Enabled")
+    {
+        :root
+        {
+            --additional-shadow-blur: 4px;
+            --additional-shadow-color: rgba(0,0,0,0.5);
+        }
+    }
+
+    @supports -moz-bool-pref("userChrome.HighShadowSaturation-Enabled")
+    {
+        :root
+        {
+            --additional-shadow-blur: 4px;
+            --additional-shadow-color: rgba(0,0,0,0.75);
+        }
+    }
+
+    @supports -moz-bool-pref("userChrome.VeryHighShadowSaturation-Enabled")
+    {
+        :root
+        {
+            --additional-shadow-blur: 4px;
+            --additional-shadow-color: rgb(0,0,0);
         }
     }
 }
