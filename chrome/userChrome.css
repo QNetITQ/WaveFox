@@ -1052,6 +1052,18 @@ spacer[part="overflow-end-indicator"]
     {
         margin-right: calc(var(--tab-min-height) / 2) !important;
     }
+       
+    /* ---------- New Tab Button ---------- */
+
+    #tabs-newtab-button
+    {
+        margin-left: calc(var(--tab-min-height) / -2 + 3px) !important;
+    }
+
+    #tabs-newtab-button .toolbarbutton-icon
+    {
+        border-radius: 50% !important;
+    }
 }
 
 /* -------------------- Chrome / Edge -------------------- */
