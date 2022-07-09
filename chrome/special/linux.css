@@ -1,14 +1,5 @@
 @media (-moz-platform: linux)
 {
-    @supports -moz-bool-pref("userChrome.ProtonTabs-Enabled") or
-              -moz-bool-pref("userChrome.PhotonTabs-Enabled")
-    {
-        :root[tabsintitlebar][sizemode="normal"] #tabbrowser-tabs:not([overflow]) .tabbrowser-tab[first-visible-tab],
-        :root[tabsintitlebar][sizemode="normal"] #tabbrowser-tabs[positionpinnedtabs]
-        {
-            margin-left: calc(var(--tab-min-height) / 4) !important;
-        }
-    }
 
     @supports -moz-bool-pref("userChrome.WaveFoxTabs-Enabled") or
               -moz-bool-pref("userChrome.AustralisTabs-Enabled") or
