@@ -1089,6 +1089,13 @@ spacer[part="overflow-end-indicator"]
     {
         margin-right: calc(var(--tab-min-height) / 4) !important;
     }
+       
+    /* ---------- New Tab Button ---------- */
+
+    #tabs-newtab-button
+    {
+        margin-left: calc(var(--tab-min-height) / -4 + 1px) !important;
+    }
 }
 
 /* ---------------------------------------- New Tab Button ---------------------------------------- */
