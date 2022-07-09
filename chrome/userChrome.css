@@ -1108,38 +1108,7 @@ spacer[part="overflow-end-indicator"]
     {
         margin-left: calc(var(--tab-min-height) / -4 + 1px) !important;
     }
-}
-
-/* ---------------------------------------- New Tab Button ---------------------------------------- */
-
-@supports -moz-bool-pref("userChrome.ProtonTabs-Enabled") or
-          -moz-bool-pref("userChrome.PhotonTabs-Enabled") or
-          -moz-bool-pref("userChrome.ChromeTabs-Enabled") or
-          -moz-bool-pref("userChrome.EdgeTabs-Enabled")
-{
-    #tabs-newtab-button
-    {
-        margin-left: calc(var(--tab-min-height) / -4 + 1px) !important;
-    }
-}
-
-@supports -moz-bool-pref("userChrome.WaveFoxTabs-Enabled") or
-          -moz-bool-pref("userChrome.AustralisTabs-Enabled") or
-          -moz-bool-pref("userChrome.LegacyChromeTabs-Enabled")
-{
-    #tabs-newtab-button
-    {
-        margin-left: calc(var(--tab-min-height) / -2 + 3px) !important;
-    }
-
-    #tabs-newtab-button .toolbarbutton-icon
-    {
-        border-radius: 50% !important;
-    }
-}
-
-@supports -moz-bool-pref("userChrome.ChromeTabs-Enabled")
-{
+       
     #tabs-newtab-button .toolbarbutton-icon
     {
         border-radius: 50% !important;
