@@ -684,11 +684,11 @@ spacer[part="overflow-end-indicator"]
 
 #tabbrowser-tabs:not([overflow]) .tabbrowser-tab[first-visible-unpinned-tab]
 {
-    margin-left: 0 !important;
+    margin-left: 0px !important;
 }
        
-#tabbrowser-tabs:first-child:not([overflow]) #tabbrowser-arrowscrollbox,
-#tabbrowser-tabs:first-child:is([overflow][haspinnedtabs]) #tabbrowser-arrowscrollbox
+#tabbrowser-tabs:not([overflow]) #tabbrowser-arrowscrollbox,
+#tabbrowser-tabs[positionpinnedtabs] #tabbrowser-arrowscrollbox
 {
     margin-left: -1px !important;
 }
@@ -821,20 +821,16 @@ spacer[part="overflow-end-indicator"]
 {
     /* ---------- Indents ---------- */
 
-    #tabbrowser-tabs:not(:first-child) #tabbrowser-arrowscrollbox:not([overflowing]) .tabbrowser-tab[first-visible-tab],
-    #tabbrowser-tabs[positionpinnedtabs]:not(:first-child)
-    {
-        margin-left: calc(var(--tab-min-height) / 4) !important;
-    }
-
+    #tabbrowser-tabs:not([overflow]) .tabbrowser-tab[first-visible-tab],
+    #tabbrowser-tabs[positionpinnedtabs],
     #tabbrowser-tabs[overflow] .tabbrowser-tab[first-visible-unpinned-tab]
     {
-        margin-left: calc(var(--tab-min-height) / 4) !important;
+        margin-left: calc(var(--toolbar-start-end-padding) - var(--toolbarbutton-outer-padding)) !important;
     }
 
     .tabbrowser-tab[last-visible-tab]
     {
-        margin-right: calc(var(--tab-min-height) / 4) !important;
+        margin-right: calc(var(--toolbar-start-end-padding) - var(--toolbarbutton-outer-padding)) !important;
     }
 
     /* ---------- Container Indicators ---------- */
