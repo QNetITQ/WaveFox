@@ -814,10 +814,9 @@ spacer[part="overflow-end-indicator"]
     }
 }
 
-/* -------------------- Proton / Photon -------------------- */
+/* -------------------- Proton -------------------- */
 
-@supports -moz-bool-pref("userChrome.ProtonTabs-Enabled") or
-          -moz-bool-pref("userChrome.PhotonTabs-Enabled")
+@supports -moz-bool-pref("userChrome.ProtonTabs-Enabled")
 {
     /* ---------- Indents ---------- */
 
@@ -839,19 +838,14 @@ spacer[part="overflow-end-indicator"]
     {
         margin-inline: calc(var(--tab-min-height) / 2) !important;
     }
-       
+
     /* ---------- New Tab Button ---------- */
 
     #tabs-newtab-button
     {
         margin-left: calc(-1 * (var(--toolbar-start-end-padding) - var(--toolbarbutton-outer-padding)) + 1px) !important;
     }
-}
 
-/* -------------------- Proton -------------------- */
-
-@supports -moz-bool-pref("userChrome.ProtonTabs-Enabled")
-{
     /* ---------- Tab Icon Indicator ---------- */
 
     .tabbrowser-tab:is([image], [pinned]) .tab-content[attention]:not([selected]),
@@ -884,6 +878,39 @@ spacer[part="overflow-end-indicator"]
     :root[uidensity="compact"]
     {
         --tab-min-height: 28px !important;
+    }
+}
+
+/* -------------------- Photon -------------------- */
+
+@supports -moz-bool-pref("userChrome.PhotonTabs-Enabled")
+{
+    /* ---------- Indents ---------- */
+
+    #tabbrowser-tabs:not([overflow]) .tabbrowser-tab[first-visible-tab],
+    #tabbrowser-tabs[positionpinnedtabs],
+    #tabbrowser-tabs[overflow] .tabbrowser-tab[first-visible-unpinned-tab]
+    {
+        margin-left: var(--toolbar-start-end-padding) !important;
+    }
+
+    .tabbrowser-tab[last-visible-tab]
+    {
+        margin-right: var(--toolbar-start-end-padding) !important;
+    }
+
+    /* ---------- Container Indicators ---------- */
+
+    .tabbrowser-tab:not([pinned]) .tab-context-line
+    {
+        margin-inline: calc(var(--tab-min-height) / 2) !important;
+    }
+
+    /* ---------- New Tab Button ---------- */
+
+    #tabs-newtab-button
+    {
+        margin-left: calc(-1 * var(--toolbar-start-end-padding) + 1px) !important;
     }
 }
 
