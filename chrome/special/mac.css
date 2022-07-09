@@ -12,16 +12,6 @@
         z-index: 1 !important;
     }
 
-    @supports -moz-bool-pref("userChrome.ProtonTabs-Enabled") or
-              -moz-bool-pref("userChrome.PhotonTabs-Enabled")
-    {
-        :root[tabsintitlebar]:is([sizemode="normal"], [sizemode="maximized"]) #tabbrowser-tabs:not([overflow]) .tabbrowser-tab[first-visible-tab],
-        :root[tabsintitlebar]:is([sizemode="normal"], [sizemode="maximized"]) #tabbrowser-tabs[positionpinnedtabs]
-        {
-            margin-left: calc(var(--tab-min-height) / 4) !important;
-        }
-    }
-
     /* ---------- Drag Space ---------- */
 
     @supports not -moz-bool-pref("userChrome.ProtonTabs-Enabled")
