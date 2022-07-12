@@ -262,11 +262,8 @@
         background-color: var(--lwt-selected-tab-background-color, Field) !important;
     }
 
-    @supports -moz-bool-pref("userChrome.WaveFoxTabs-Enabled") or
-              -moz-bool-pref("userChrome.AustralisTabs-Enabled") or
-              -moz-bool-pref("userChrome.ChromeTabs-Enabled") or
-              -moz-bool-pref("userChrome.LegacyChromeTabs-Enabled") or
-              -moz-bool-pref("userChrome.EdgeTabs-Enabled")
+    @supports not (-moz-bool-pref("userChrome.ProtonTabs-Enabled") or
+                   -moz-bool-pref("userChrome.PhotonTabs-Enabled"))
     {
         :root:not(:-moz-lwtheme) .tabbrowser-tab[visuallyselected] .tab-background::before,
         :root:not(:-moz-lwtheme) .tabbrowser-tab[visuallyselected] .tab-background::after
@@ -861,16 +858,23 @@ spacer[part="overflow-end-indicator"]
         background-position: center var(--tab-block-margin) !important;
     }
 
+    /* ---------- Tabs ---------- */
+
+    .tabbrowser-tab
+    {
+        padding-inline: var(--toolbarbutton-outer-padding) !important;
+    }
+
     /* ---------- Separators ---------- */
        
     .tab-stack::before
     {
-        transform: translateX(-2px);
+        transform: translateX(calc(-1 * var(--toolbarbutton-outer-padding)));
     }
 
     .tab-stack::after
     {
-        transform: translateX(2px);
+        transform: translateX(var(--toolbarbutton-outer-padding));
     }
 
     /* ---------- Density ---------- */
@@ -967,11 +971,8 @@ spacer[part="overflow-end-indicator"]
 
 /* -------------------- WaveFox / Australis / Chrome / Chrome-Old / Edge -------------------- */
 
-@supports -moz-bool-pref("userChrome.WaveFoxTabs-Enabled") or
-          -moz-bool-pref("userChrome.AustralisTabs-Enabled") or
-          -moz-bool-pref("userChrome.ChromeTabs-Enabled") or
-          -moz-bool-pref("userChrome.LegacyChromeTabs-Enabled") or
-          -moz-bool-pref("userChrome.EdgeTabs-Enabled")
+@supports not (-moz-bool-pref("userChrome.ProtonTabs-Enabled") or
+               -moz-bool-pref("userChrome.PhotonTabs-Enabled"))
 {
     /* ---------- Rounded Corners (SVG) ---------- */
 
