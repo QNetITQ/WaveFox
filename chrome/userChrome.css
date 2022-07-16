@@ -437,6 +437,7 @@ spacer[part="overflow-end-indicator"]
 
 .tabbrowser-tab
 {
+    --tab-loading-fill: var(--toolbar-field-focus-border-color) !important;
     --tab-label-mask-size: 1em !important;
     color: inherit !important;
     -moz-box-pack: end !important;
@@ -494,19 +495,23 @@ spacer[part="overflow-end-indicator"]
 
 /* -------------------- Container Indicators -------------------- */
 
-.tabbrowser-tab:not([pinned]) .tab-context-line
+.tab-icon-stack::after
 {
-    border-radius: 0px !important;
-    margin-block: calc(var(--tab-min-height) - 2px) 0px !important;
+    content: "";
+    display: block;
+    position: absolute;
+    width: 16px;
+    height: var(--tab-min-height);
+    top: calc((var(--tab-min-height) - 16px) / -2);
+    background-image: radial-gradient(circle at center, var(--identity-icon-color) 2px, transparent 2px);
+    background-size: 4px 4px;
+    background-repeat: no-repeat;
+    background-position: center bottom;
 }
 
-.tabbrowser-tab[pinned] .tab-context-line
+.tab-context-line
 {
-    height: 4px !important;
-    background: radial-gradient(circle at center, var(--identity-icon-color) 2px, transparent 2px) !important;
-    margin-block: calc(var(--tab-min-height) - 4px) 0px !important;
-    margin-inline: 0px !important;
-    border-radius: 0px !important;
+    display: none !important;
 }
 
 /* -------------------- Tab Icon Indicators -------------------- */
@@ -823,13 +828,6 @@ spacer[part="overflow-end-indicator"]
         margin-right: calc(var(--toolbar-start-end-padding) - var(--toolbarbutton-outer-padding)) !important;
     }
 
-    /* ---------- Container Indicators ---------- */
-
-    .tabbrowser-tab:not([pinned]) .tab-context-line
-    {
-        margin-inline: calc(var(--tab-min-height) / 2) !important;
-    }
-
     /* ---------- New Tab Button ---------- */
 
     #tabs-newtab-button
@@ -895,13 +893,6 @@ spacer[part="overflow-end-indicator"]
     .tabbrowser-tab[last-visible-tab]
     {
         margin-right: var(--toolbar-start-end-padding) !important;
-    }
-
-    /* ---------- Container Indicators ---------- */
-
-    .tabbrowser-tab:not([pinned]) .tab-context-line
-    {
-        margin-inline: calc(var(--tab-min-height) / 2) !important;
     }
 
     /* ---------- New Tab Button ---------- */
@@ -1028,13 +1019,6 @@ spacer[part="overflow-end-indicator"]
     :root
     {
         --pinned-tabs-width-offset: 2px;
-    }
-
-    /* ---------- Container Indicators ---------- */
-
-    .tabbrowser-tab:not([pinned]) .tab-context-line
-    {
-        margin-inline: 0px !important;
     }
 }
 
