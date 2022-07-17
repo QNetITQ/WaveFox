@@ -476,11 +476,6 @@ spacer[part="overflow-end-indicator"]
     background-color: var(--toolbarbutton-active-background) !important;
 }
 
-.tab-loading-burst
-{
-    display: none !important;
-}
-
 .tab-close-button
 {
     width: 24px !important;
@@ -503,15 +498,60 @@ spacer[part="overflow-end-indicator"]
     width: 16px;
     height: var(--tab-min-height);
     top: calc((var(--tab-min-height) - 16px) / -2);
-    background-image: radial-gradient(circle at center, var(--identity-icon-color) 2px, transparent 2px);
-    background-size: 4px 4px;
+    background-image: radial-gradient(circle at center, var(--identity-icon-color) 2px, transparent 3px);
+    background-size: 6px 6px;
     background-repeat: no-repeat;
     background-position: center bottom;
 }
 
 .tab-context-line
 {
-    display: none !important;
+    opacity: 0 !important;
+}
+
+/* -------------------- Tab Loading Burst -------------------- */
+
+@media (prefers-reduced-motion: no-preference)
+{
+    :root[sessionrestored] .tabbrowser-tab:is([bursting], [notselectedsinceload]) .tab-icon-stack::before
+    {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 16px;
+        height: var(--tab-min-height);
+        top: calc((var(--tab-min-height) - 16px) / -2);
+        background-image: radial-gradient(circle at center, var(--tab-loading-fill) 2px, transparent 3px);
+        background-size: 6px 6px;
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        opacity: 0;
+        animation-name: TabLoadingBurst;
+        animation-duration: 500ms;
+    }
+
+    @keyframes TabLoadingBurst
+    {
+        0%
+        {
+            opacity: 0;
+        }
+
+        50%
+        {
+            opacity: 1;
+        }
+
+        100%
+        {
+            opacity: 0;
+        }
+    }
+}
+
+.tab-loading-burst
+{
+    opacity: 0 !important;
 }
 
 /* -------------------- Tab Icon Indicators -------------------- */
@@ -594,51 +634,6 @@ spacer[part="overflow-end-indicator"]
     height: 16px !important;
     line-height: 16px !important;
     margin-block: 2px -6px !important;
-}
-
-/* ---------- Picture-In-Picture ---------- */
-
-.tabbrowser-tab[pictureinpicture] .tab-icon-stack::before
-{
-    content: "";
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    background-image: url("chrome://global/skin/media/picture-in-picture-open.svg");
-    fill: currentColor;
-    -moz-context-properties: fill;
-}
-
-.tabbrowser-tab[pictureinpicture] .tab-icon-overlay
-{    
-    top: -6px !important;
-    inset-inline-end: -6px !important;
-}
-
-.tabbrowser-tab[pictureinpicture] :is(.tab-icon-image, .tab-sharing-icon-overlay)
-{
-    position: relative !important;
-    padding: 2px !important;
-    left: 6px !important;
-    top: 6px !important;
-    mask-image: none !important;
-    box-sizing: border-box !important;
-    z-index: 1 !important;
-}
-
-.tabbrowser-tab[pictureinpicture]:not([image], [pinned]) .tab-icon-image
-{
-    display: revert !important;
-}
-
-.tabbrowser-tab[pictureinpicture]:not([soundplaying], [muted], [activemedia-blocked]) .tab-icon-stack::before
-{
-    mask-image: url("./special/SVG_Masks/pip_mask_16.svg");
-}
-
-.tabbrowser-tab[pictureinpicture]:is([soundplaying], [muted], [activemedia-blocked]) .tab-icon-stack::before
-{
-    mask-image: url("./special/SVG_Masks/sound_pip_mask_16.svg");
 }
 
 /* ---------------------------------------- Tab Bar ---------------------------------------- */
