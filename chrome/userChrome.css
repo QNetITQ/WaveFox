@@ -501,7 +501,7 @@ spacer[part="overflow-end-indicator"]
     background-image: radial-gradient(circle at center, var(--identity-icon-color) 2px, transparent 2px);
     background-size: 6px 6px;
     background-repeat: no-repeat;
-    background-position: center bottom;
+    background-position: center bottom calc(((var(--tab-min-height) - 16px) / 2 - 6px) / 2);
 }
 
 .tab-context-line
@@ -524,10 +524,10 @@ spacer[part="overflow-end-indicator"]
         background-image: radial-gradient(circle at center, var(--tab-loading-fill) 2px, transparent 3px);
         background-size: 6px 6px;
         background-repeat: no-repeat;
-        background-position: center bottom;
+        background-position: center bottom calc(((var(--tab-min-height) - 16px) / 2 - 6px) / 2);
         opacity: 0;
         animation-name: TabLoadingBurst;
-        animation-duration: 500ms;
+        animation-duration: 375ms;
     }
 
     @keyframes TabLoadingBurst
