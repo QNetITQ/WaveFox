@@ -490,7 +490,7 @@ spacer[part="overflow-end-indicator"]
 
 /* -------------------- Container Indicators -------------------- */
 
-.tab-icon-stack::after
+.tab-icon-stack::before
 {
     content: "";
     display: block;
@@ -498,7 +498,7 @@ spacer[part="overflow-end-indicator"]
     width: 16px;
     height: var(--tab-min-height);
     top: calc((var(--tab-min-height) - 16px) / -2);
-    background-image: radial-gradient(circle at center, var(--identity-icon-color) 2px, transparent 3px);
+    background-image: radial-gradient(circle at center, var(--identity-icon-color) 2px, transparent 2px);
     background-size: 6px 6px;
     background-repeat: no-repeat;
     background-position: center bottom;
@@ -513,7 +513,7 @@ spacer[part="overflow-end-indicator"]
 
 @media (prefers-reduced-motion: no-preference)
 {
-    :root[sessionrestored] .tabbrowser-tab:is([bursting], [notselectedsinceload]) .tab-icon-stack::before
+    :root[sessionrestored] .tabbrowser-tab:is([bursting], [notselectedsinceload]) .tab-icon-stack::after
     {
         content: "";
         display: block;
