@@ -437,7 +437,7 @@ spacer[part="overflow-end-indicator"]
 
 .tabbrowser-tab
 {
-    --tab-loading-fill: var(--toolbar-field-focus-border-color) !important;
+    --tab-loading-fill: currentColor !important;
     --tab-label-mask-size: 1em !important;
     color: inherit !important;
     -moz-box-pack: end !important;
@@ -446,6 +446,7 @@ spacer[part="overflow-end-indicator"]
        
 .tabbrowser-tab[visuallyselected]
 {
+    --tab-loading-fill: var(--toolbar-field-focus-border-color) !important;
     color: var(--lwt-tab-text, var(--toolbar-color)) !important;
 }
 
