@@ -514,7 +514,7 @@ spacer[part="overflow-end-indicator"]
 
 @media (prefers-reduced-motion: no-preference)
 {
-    .tabbrowser-tab:is([bursting], [notselectedsinceload]) .tab-icon-stack::after
+    :root[sessionrestored] .tabbrowser-tab:is([bursting], [bursting][notselectedsinceload]) .tab-icon-stack::after
     {
         content: "";
         display: block;
