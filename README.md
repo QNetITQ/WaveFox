@@ -25,10 +25,6 @@
   - `userChrome.AustralisTabs-Enabled`
   - `userChrome.LegacyChromeTabs-Enabled`
 
-- For compatibility with the ESR
-
-  - `userChrome.EsrCompatibility-Enabled`
-
 ### How to create keys?
 ##### You need to restart your browser for the changes to take effect
 ![изображение](https://user-images.githubusercontent.com/85301851/151872252-87ff2a81-cb34-4bac-94fb-304f8f5210eb.png)
@@ -61,7 +57,7 @@ Works only with the system theme.
 ![изображение](https://user-images.githubusercontent.com/85301851/165526704-4f7486c4-f330-4c86-a25d-6ed8ab2affe4.png)
 
 - `userChrome.SemiTransparentToolbar-Enabled`
-- `userChrome.TransparentToolbar-Enabled`
+- `userChrome.TransparentToolbar-Enabled` (Proton Tabs Only)
 
 ### Linux Transparency
 Requires Linux with transparency support. Tested on Linux Manjaro KDE + ForceBlur. Transparency is active for all modes, but does not work everywhere. This may change with future browser updates. Works only with the system theme.
