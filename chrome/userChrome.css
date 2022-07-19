@@ -236,7 +236,8 @@
     }
 }
 
-@supports -moz-bool-pref("userChrome.TransparentToolbar-Enabled")
+@supports -moz-bool-pref("userChrome.TransparentToolbar-Enabled") and
+          -moz-bool-pref("userChrome.ProtonTabs-Enabled")
 {
     :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode])
     {
@@ -253,22 +254,6 @@
     :root[lwt-default-theme-in-dark-mode] .tabbrowser-tab[visuallyselected] .tab-background
     {
         background-color: var(--lwt-selected-tab-background-color, Field) !important;
-    }
-
-    @supports not (-moz-bool-pref("userChrome.ProtonTabs-Enabled") or
-                   -moz-bool-pref("userChrome.PhotonTabs-Enabled"))
-    {
-        :root:not(:-moz-lwtheme) .tabbrowser-tab[visuallyselected] .tab-background::before,
-        :root:not(:-moz-lwtheme) .tabbrowser-tab[visuallyselected] .tab-background::after
-        {
-            fill: var(--tab-selected-bgcolor, Field) !important;
-        }
-
-        :root[lwt-default-theme-in-dark-mode] .tabbrowser-tab[visuallyselected] .tab-background::before,
-        :root[lwt-default-theme-in-dark-mode] .tabbrowser-tab[visuallyselected] .tab-background::after
-        {
-            fill: var(--lwt-selected-tab-background-color, Field) !important;
-        }
     }
 
     :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) #TabsToolbar::before
