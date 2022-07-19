@@ -241,34 +241,21 @@
 {
     :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode])
     {
+        --custom-toolbar-bgcolor: Field;
         --toolbar-bgcolor: transparent !important;
         --toolbar-bgimage: none !important;
         --toolbar-field-border-color: transparent !important;
+        --toolbar-field-background-color: var(--custom-toolbar-bgcolor) !important;
     }
        
-    :root:not(:-moz-lwtheme) .tabbrowser-tab[visuallyselected] .tab-background
+    :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) .tabbrowser-tab[visuallyselected] .tab-background
     {
-        background-color: var(--tab-selected-bgcolor, Field) !important;
-    }
-    
-    :root[lwt-default-theme-in-dark-mode] .tabbrowser-tab[visuallyselected] .tab-background
-    {
-        background-color: var(--lwt-selected-tab-background-color, Field) !important;
+        background-color: var(--custom-toolbar-bgcolor) !important;
     }
 
     :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) #TabsToolbar::before
     {
         display: none !important;
-    }
-
-    :root:not(:-moz-lwtheme)
-    {
-        --toolbar-field-background-color: var(--tab-selected-bgcolor, Field) !important;
-    }
-
-    :root[lwt-default-theme-in-dark-mode]
-    {
-        --toolbar-field-background-color: var(--lwt-selected-tab-background-color, Field) !important;
     }
 
     :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) #urlbar:not([focused], [open]) > #urlbar-background,
