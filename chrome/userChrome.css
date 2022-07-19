@@ -243,7 +243,6 @@
         --toolbar-bgcolor: transparent !important;
         --toolbar-bgimage: none !important;
         --toolbar-field-border-color: transparent !important;
-        --chrome-content-separator-color: none !important;
     }
        
     :root:not(:-moz-lwtheme) .tabbrowser-tab[visuallyselected] .tab-background
@@ -291,11 +290,6 @@
     :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) #searchbar:focus-within
     {
         filter: var(--special-main-outer-shadow) var(--special-additional-outer-shadow) !important;
-    }
-    
-    :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) #navigator-toolbox
-    {
-        box-shadow: var(--tab-bar-main-inner-shadow), var(--tab-bar-additional-inner-shadow) !important;
     }
 }
 
