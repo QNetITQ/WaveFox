@@ -2,7 +2,6 @@
 @import "special/windows_8_7.css";
 @import "special/linux.css";
 @import "special/mac.css";
-@import "special/ESR_Windows_11_10.css";
 
 @media (-moz-platform: windows),
        (-moz-platform: linux),
@@ -212,12 +211,12 @@
 {
     .tabbrowser-tab[visuallyselected]:not([pinned]) .tab-background
     {
-        box-shadow: inset 0 2px 0 var(--toolbar-field-focus-border-color) !important;
+        box-shadow: inset 0 2px 0 var(--tab-loading-fill) !important;
     }
 
     .tabbrowser-tab[visuallyselected][pinned] .tab-content
     {
-        background-image: radial-gradient(circle at center, var(--toolbar-field-focus-border-color) 2px, transparent 2px);
+        background-image: radial-gradient(circle at center, var(--tab-loading-fill) 2px, transparent 2px);
         background-size: 4px 4px;
         background-repeat: no-repeat;
     }
