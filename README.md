@@ -45,8 +45,8 @@
   ![Legacy Chrome](https://user-images.githubusercontent.com/85301851/180249039-350dd21d-51ee-432b-a79d-0c82861e7d43.PNG)
   - `userChrome.LegacyChromeTabs-Enabled`
 
-### How to create keys?
-##### You need to restart your browser for the changes to take effect
+## Creation of keys
+##### Restart your browser for the changes to take effect.
 ![изображение](https://user-images.githubusercontent.com/85301851/180253017-22325fad-2f53-47f5-b409-618ca7fe6084.png)
 ![изображение](https://user-images.githubusercontent.com/85301851/180253209-3e6965a9-641a-4ac2-bf3d-242ac8b3451c.png)
 
