@@ -14,8 +14,16 @@
   - `toolkit.legacyUserProfileCustomizations.stylesheets`
   - `svg.context-properties.content.enabled`
   - `layout.css.color-mix.enabled`
+  
+- Specify the desired shape of the tabs.
 
-- Specify the desired shape of the tabs
+  <details>
+  <summary>Creation of keys</summary>
+  Restart your browser for the changes to take effect.
+  
+  ![изображение](https://user-images.githubusercontent.com/85301851/180253017-22325fad-2f53-47f5-b409-618ca7fe6084.png)
+  ![изображение](https://user-images.githubusercontent.com/85301851/180253209-3e6965a9-641a-4ac2-bf3d-242ac8b3451c.png)
+  </details>
 
   ##### Proton
   ![Proton](https://user-images.githubusercontent.com/85301851/180247798-3685fad6-cc4e-49ad-9b0e-7664354233ff.PNG)
@@ -44,11 +52,6 @@
   ##### Chrome (Legacy)
   ![Legacy Chrome](https://user-images.githubusercontent.com/85301851/180249039-350dd21d-51ee-432b-a79d-0c82861e7d43.PNG)
   - `userChrome.LegacyChromeTabs-Enabled`
-
-## Creation of keys
-##### Restart your browser for the changes to take effect.
-![изображение](https://user-images.githubusercontent.com/85301851/180253017-22325fad-2f53-47f5-b409-618ca7fe6084.png)
-![изображение](https://user-images.githubusercontent.com/85301851/180253209-3e6965a9-641a-4ac2-bf3d-242ac8b3451c.png)
 
 ## Optional
 
