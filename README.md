@@ -17,28 +17,38 @@
 
 - Specify the desired shape of the tabs
 
-  - `userChrome.ProtonTabs-Enabled`
-  - `userChrome.PhotonTabs-Enabled`
-  - `userChrome.WaveFoxTabs-Enabled`
-  - `userChrome.ChromeTabs-Enabled`
-  - `userChrome.EdgeTabs-Enabled`
-  - `userChrome.AustralisTabs-Enabled`
-  - `userChrome.LegacyChromeTabs-Enabled`
+##### Proton
+![Proton](https://user-images.githubusercontent.com/85301851/180247798-3685fad6-cc4e-49ad-9b0e-7664354233ff.PNG)
+- `userChrome.ProtonTabs-Enabled`
+  
+##### Photon
+![Photon](https://user-images.githubusercontent.com/85301851/180248812-8aecba52-77bd-4ee5-9e04-e6f07276dfa4.PNG)
+- `userChrome.PhotonTabs-Enabled`
+
+##### WaveFox
+![WaveFox](https://user-images.githubusercontent.com/85301851/180248857-fee4dd92-6d6c-4c34-8615-bf69e740f2bd.PNG)
+- `userChrome.WaveFoxTabs-Enabled`
+
+##### Chrome
+![Modern Chrome](https://user-images.githubusercontent.com/85301851/180248907-bdcf4ffc-fd4a-4923-b97d-a0b0b0cf5ee2.PNG)
+- `userChrome.ChromeTabs-Enabled`
+
+##### Edge
+![Edge](https://user-images.githubusercontent.com/85301851/180248952-faa55898-0243-4cdf-ba6a-33513184398f.PNG)
+- `userChrome.EdgeTabs-Enabled`
+
+##### Australis
+![Australis](https://user-images.githubusercontent.com/85301851/180248996-2f21d3b0-e33b-4feb-bbfc-2859df714344.PNG)
+- `userChrome.AustralisTabs-Enabled`
+
+##### Chrome (Legacy)
+![Legacy Chrome](https://user-images.githubusercontent.com/85301851/180249039-350dd21d-51ee-432b-a79d-0c82861e7d43.PNG)
+- `userChrome.LegacyChromeTabs-Enabled`
 
 ### How to create keys?
 ##### You need to restart your browser for the changes to take effect
 ![изображение](https://user-images.githubusercontent.com/85301851/151872252-87ff2a81-cb34-4bac-94fb-304f8f5210eb.png)
 ![изображение](https://user-images.githubusercontent.com/85301851/151872514-15bd77fd-929e-4d4d-a0e1-fa89385e0d0a.png)
-
-| Style | Light | Dark |
-|-------|-------|------|
-| WaveFox | ![изображение](https://user-images.githubusercontent.com/85301851/151183317-12228b83-7e4d-4daf-b7ae-ee333c94aa54.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151183202-e4e183b3-80f3-4aa6-a95b-e40c1ca91a61.png) |
-| Proton | ![изображение](https://user-images.githubusercontent.com/85301851/151183646-82878986-78d9-43df-956e-21380f7d04e5.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151183808-76a9aeff-34df-46f8-8f15-a120058580ee.png) |
-| Photon | ![изображение](https://user-images.githubusercontent.com/85301851/151182545-934db216-a15b-449d-b6f8-3f0c8a5f9bc9.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151182383-1b1a1833-d5b8-4b7c-8476-a193bdb7c015.png) |
-| Chrome | ![изображение](https://user-images.githubusercontent.com/85301851/151187719-5e64c2f0-d01c-4248-b80e-c275b4e89677.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151187617-1b4f5d55-0bc6-4a0a-a284-822deaeb8a8c.png) |
-| Edge | ![изображение](https://user-images.githubusercontent.com/85301851/151188052-dd550152-e7e7-4ad6-9df2-4b4bc8fa41cf.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151188156-a80e9e38-5e5f-440e-9864-6958e10b736d.png) |
-| Chrome (Legacy) | ![изображение](https://user-images.githubusercontent.com/85301851/151188819-8ac900d2-f126-4302-8824-f507a80e5f1b.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151188707-3ed5a636-e3d2-456b-9fa7-f7e5f8991b27.png) |
-| Australis | ![изображение](https://user-images.githubusercontent.com/85301851/151189110-5de939b8-f6d4-4a40-930b-f15c07254be5.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151189212-52918558-9969-4127-bc6d-30ab70b73949.png) |
 
 ## Optional
 
