@@ -104,13 +104,21 @@
 
 /* ---------- Tab Bar Shadow ---------- */
 
+@supports -moz-bool-pref("userChrome.IncreaseShadowBlur-Enabled")
+{
+    :root
+    {
+        --increased-shadow-blur: 8px;
+    }
+}
+
 @media (prefers-color-scheme: light)
 {
     @supports -moz-bool-pref("userChrome.LowShadowSaturation-Enabled")
     {
         :root
         {
-            --additional-shadow-blur: 4px;
+            --additional-shadow-blur: var(--increased-shadow-blur, 4px);
             --additional-shadow-color: rgba(0,0,0,0.1);
         }
     }
@@ -119,7 +127,7 @@
     {
         :root
         {
-            --additional-shadow-blur: 4px;
+            --additional-shadow-blur: var(--increased-shadow-blur, 4px);
             --additional-shadow-color: rgba(0,0,0,0.15);
         }
     }
@@ -128,7 +136,7 @@
     {
         :root
         {
-            --additional-shadow-blur: 4px;
+            --additional-shadow-blur: var(--increased-shadow-blur, 4px);
             --additional-shadow-color: rgba(0,0,0,0.2);
         }
     }
@@ -137,7 +145,7 @@
     {
         :root
         {
-            --additional-shadow-blur: 4px;
+            --additional-shadow-blur: var(--increased-shadow-blur, 4px);
             --additional-shadow-color: rgba(0,0,0,0.25);
         }
     }
@@ -149,7 +157,7 @@
     {
         :root
         {
-            --additional-shadow-blur: 4px;
+            --additional-shadow-blur: var(--increased-shadow-blur, 4px);
             --additional-shadow-color: rgba(0,0,0,0.25);
         }
     }
@@ -158,7 +166,7 @@
     {
         :root
         {
-            --additional-shadow-blur: 4px;
+            --additional-shadow-blur: var(--increased-shadow-blur, 4px);
             --additional-shadow-color: rgba(0,0,0,0.5);
         }
     }
@@ -167,7 +175,7 @@
     {
         :root
         {
-            --additional-shadow-blur: 4px;
+            --additional-shadow-blur: var(--increased-shadow-blur, 4px);
             --additional-shadow-color: rgba(0,0,0,0.75);
         }
     }
@@ -176,7 +184,7 @@
     {
         :root
         {
-            --additional-shadow-blur: 4px;
+            --additional-shadow-blur: var(--increased-shadow-blur, 4px);
             --additional-shadow-color: rgb(0,0,0);
         }
     }
