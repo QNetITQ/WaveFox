@@ -1,7 +1,7 @@
 # *WaveFox*
 
 ##### Minimum Requirements
-- Firefox 102 / ESR 102
+- Firefox 103
 - Windows
 - MacOS
 - Linux
