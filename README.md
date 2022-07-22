@@ -100,6 +100,7 @@ It is also possible to turn on the border and the shadow at the same time.
 - `userChrome.VeryHighBorderSaturation-Enabled`
 
 ##### Shadow
+- `userChrome.IncreaseShadowBlur-Enabled` (Increases shadow blur above the default value)
 - `userChrome.LowShadowSaturation-Enabled`
 - `userChrome.MediumShadowSaturation-Enabled`
 - `userChrome.HighShadowSaturation-Enabled`
