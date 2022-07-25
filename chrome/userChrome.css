@@ -502,7 +502,7 @@ spacer[part="overflow-end-indicator"]
         animation-name: TabLoadingBurst;
         animation-duration: 375ms;
         animation-timing-function: linear;
-    }
+    } 
 
     @keyframes TabLoadingBurst
     {
