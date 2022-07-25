@@ -487,13 +487,17 @@ spacer[part="overflow-end-indicator"]
         content: "";
         display: block;
         position: absolute;
-        width: 16px;
+        width: var(--tab-min-height);
         height: var(--tab-min-height);
         top: calc((var(--tab-min-height) - 16px) / -2);
-        background-image: radial-gradient(circle at center, var(--tab-loading-fill) 2px, transparent 2px), radial-gradient(circle at center, var(--tab-loading-fill) 2px, transparent 2px);
+        left: calc((var(--tab-min-height) - 16px) / -2);
+        background-image: radial-gradient(circle at center, var(--tab-loading-fill) 2px, transparent 2px),
+                          radial-gradient(circle at center, var(--tab-loading-fill) 2px, transparent 2px),
+                          radial-gradient(circle at center, var(--tab-loading-fill) 2px, transparent 2px),
+                          radial-gradient(circle at center, var(--tab-loading-fill) 2px, transparent 2px);
         background-size: calc((var(--tab-min-height) - 16px) / 2) calc((var(--tab-min-height) - 16px) / 2);
         background-repeat: no-repeat;
-        background-position: center top, center bottom;
+        background-position: center top, right center, center bottom, left center;
         opacity: 0;
         animation-name: TabLoadingBurst;
         animation-duration: 375ms;
