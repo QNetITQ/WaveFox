@@ -144,3 +144,13 @@ By default context menus follow the selected interface density, but it is possib
 ![изображение](https://user-images.githubusercontent.com/85301851/170877154-44db11c2-02ce-4aab-821e-c3cc68f26a2d.png)
 
 - `userChrome.SelectedTabHighlight-Enabled`
+
+
+
+
+### One Line (v1.3.104)
+
+- `userChrome.OneLine-Enabled` (Proton Tabs Only)
+
+
+
