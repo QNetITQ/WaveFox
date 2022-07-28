@@ -13,16 +13,6 @@
             {
                 color: AccentColorText !important;
             }
-            
-            @supports -moz-bool-pref("userChrome.OneLine-Enabled") and
-                      -moz-bool-pref("userChrome.ProtonTabs-Enabled")
-            {
-                :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not(:-moz-window-inactive) #PersonalToolbar
-                {
-                    color: AccentColorText !important;
-                    --toolbarbutton-icon-fill: currentColor !important;
-                }
-            }
         }
 
         .titlebar-buttonbox-container
@@ -126,6 +116,17 @@
         #toolbar-menubar:not([inactive]) + #TabsToolbar
         {
             --drag-space: 8px !important;
+        }
+    }
+    
+    /* One Line */
+
+    @supports -moz-bool-pref("userChrome.OneLine-Enabled") and
+              -moz-bool-pref("userChrome.ProtonTabs-Enabled")
+    {
+        #titlebar
+        {
+            appearance: none !important;
         }
     }
 
