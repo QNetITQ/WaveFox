@@ -1101,22 +1101,32 @@ spacer[part="overflow-end-indicator"]
 @supports -moz-bool-pref("userChrome.OneLine-Enabled") and
           -moz-bool-pref("userChrome.ProtonTabs-Enabled")
 {
-    /* -------------------- Tab Bar -------------------- */
-
-    #TabsToolbar
+    :root[sizemode="normal"][tabsintitlebar]
     {
-        margin-left: 30vw !important;
+        --drag-space: 0px;
     }
+
+    #navigator-toolbox
+    {
+        display: flex !important;
+        position: relative !important;
+        flex-direction: row !important;
+        border-bottom: none !important;
+        z-index: 1 !important;
+    }
+
+    #titlebar
+    {
+        appearance: none !important;
+        width: 100% !important;
+        order: 3 !important;
+    }
+
+    /* -------------------- Tab Bar -------------------- */
 
     #TabsToolbar::before
     {
         display: none;
-    }
-
-    .titlebar-spacer[type="pre-tabs"],
-    .titlebar-spacer[type="post-tabs"]
-    {
-        display: none !important;
     }
 
     /* -------------------- Nav Bar -------------------- */
@@ -1124,13 +1134,12 @@ spacer[part="overflow-end-indicator"]
     #nav-bar
     {
         --toolbar-start-end-padding: var(--toolbarbutton-outer-padding) !important;
-        margin-bottom: var(--tab-block-margin) !important;
-        margin-top: calc(-1 * (var(--tab-min-height) + var(--tab-block-margin))) !important;
-        margin-left: var(--tab-block-margin) !important;
-        margin-right: 70vw !important;
-        border-radius: var(--tab-border-radius) !important; 
+        min-width: fit-content !important;
+        margin: var(--tab-block-margin) !important;
+        border-radius: var(--tab-border-radius) !important;
+        -moz-box-align: center !important;
         filter: var(--special-main-outer-shadow) var(--special-additional-outer-shadow) !important;
-        z-index: 1 !important;
+        order: 1 !important;
     }
 
     #urlbar-container
@@ -1146,16 +1155,30 @@ spacer[part="overflow-end-indicator"]
     #urlbar-container,
     #search-container
     {
-        min-width: auto !important;
         padding-block: 0px !important;
+    }
+
+    #urlbar-container
+    {
+        min-width: 20vw !important;
+    }
+
+    #search-container
+    {
+        min-width: 10vw !important;
     }
 
     /* -------------------- Bookmarks Bar -------------------- */
 
     #PersonalToolbar
     {
-        background-color: transparent !important;
-        background-image: none !important;
+        min-width: fit-content !important;
+        max-width: 20vw !important;
+        max-height: 100% !important;
+        border-radius: var(--tab-border-radius) !important;
+        margin: var(--tab-block-margin) !important;
+        filter: var(--special-main-outer-shadow) var(--special-additional-outer-shadow) !important;
+        order: 2 !important;
     }
 }
 
