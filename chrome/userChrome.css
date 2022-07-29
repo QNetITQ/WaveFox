@@ -1113,6 +1113,7 @@ spacer[part="overflow-end-indicator"]
         flex-direction: row !important;
         border-bottom: none !important;
         z-index: 1 !important;
+        box-shadow: var(--tab-bar-main-inner-shadow), var(--tab-bar-additional-inner-shadow) !important;
     }
 
     #titlebar
@@ -1133,7 +1134,7 @@ spacer[part="overflow-end-indicator"]
     #nav-bar
     {
         --toolbar-start-end-padding: var(--toolbarbutton-outer-padding) !important;
-        min-width: 600px !important;
+        min-width: auto !important;
         width: 100% !important;
         max-width: 35% !important;
         margin: var(--tab-block-margin) !important;
@@ -1158,13 +1159,23 @@ spacer[part="overflow-end-indicator"]
     {
         padding-block: 0px !important;
     }
+       
+    #urlbar-container
+    {
+        min-width: auto !important;
+    }
+
+    #search-container
+    {
+        min-width: 10vw !important;
+    }
 
     /* -------------------- Bookmarks Bar -------------------- */
 
     #PersonalToolbar
     {
-        min-width: fit-content !important;
-        max-width: 20vw !important;
+        min-width: auto !important;
+        max-width: 15% !important;
         max-height: 100% !important;
         border-radius: var(--tab-border-radius) !important;
         margin: var(--tab-block-margin) !important;
