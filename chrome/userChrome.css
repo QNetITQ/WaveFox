@@ -1133,7 +1133,9 @@ spacer[part="overflow-end-indicator"]
     #nav-bar
     {
         --toolbar-start-end-padding: var(--toolbarbutton-outer-padding) !important;
-        min-width: fit-content !important;
+        min-width: 600px !important;
+        width: 100% !important;
+        max-width: 35% !important;
         margin: var(--tab-block-margin) !important;
         border-radius: var(--tab-border-radius) !important;
         -moz-box-align: center !important;
@@ -1155,16 +1157,6 @@ spacer[part="overflow-end-indicator"]
     #search-container
     {
         padding-block: 0px !important;
-    }
-
-    #urlbar-container
-    {
-        min-width: 20vw !important;
-    }
-
-    #search-container
-    {
-        min-width: 10vw !important;
     }
 
     /* -------------------- Bookmarks Bar -------------------- */
