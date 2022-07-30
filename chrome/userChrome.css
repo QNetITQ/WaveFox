@@ -1163,12 +1163,12 @@ spacer[part="overflow-end-indicator"]
        
         #urlbar-container
         {
-            min-width: 20vw !important;
+            min-width: 16vw !important;
         }
 
         #search-container
         {
-            min-width: 5vw !important;
+            min-width: 8vw !important;
         }
 
         /* -------------------- Bookmarks Bar -------------------- */
