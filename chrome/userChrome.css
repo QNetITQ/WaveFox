@@ -1101,48 +1101,7 @@ spacer[part="overflow-end-indicator"]
 @supports -moz-bool-pref("userChrome.OneLine-Enabled") and
           -moz-bool-pref("userChrome.ProtonTabs-Enabled")
 {
-    :root[sizemode="normal"][tabsintitlebar]
-    {
-        --drag-space: 0px;
-    }
-
-    #navigator-toolbox
-    {
-        display: flex !important;
-        position: relative !important;
-        flex-direction: row !important;
-        border-bottom: none !important;
-        z-index: 1 !important;
-        box-shadow: var(--tab-bar-main-inner-shadow), var(--tab-bar-additional-inner-shadow) !important;
-    }
-
-    #titlebar
-    {
-        width: 100% !important;
-        order: 3 !important;
-    }
-
-    /* -------------------- Tab Bar -------------------- */
-
-    #TabsToolbar::before
-    {
-        display: none;
-    }
-
     /* -------------------- Nav Bar -------------------- */
-
-    #nav-bar
-    {
-        --toolbar-start-end-padding: var(--toolbarbutton-outer-padding) !important;
-        min-width: auto !important;
-        width: 100% !important;
-        max-width: 35% !important;
-        margin: var(--tab-block-margin) !important;
-        border-radius: var(--tab-border-radius) !important;
-        -moz-box-align: center !important;
-        filter: var(--special-main-outer-shadow) var(--special-additional-outer-shadow) !important;
-        order: 1 !important;
-    }
 
     #urlbar-container
     {
@@ -1159,28 +1118,80 @@ spacer[part="overflow-end-indicator"]
     {
         padding-block: 0px !important;
     }
+
+    /* -------------------- One Line Mode -------------------- */
+
+    @media (min-width: 1250px)
+    {
+        #navigator-toolbox
+        {
+            display: flex !important;
+            flex-direction: row !important;
+            position: relative !important;
+            border-bottom: none !important;
+            box-shadow: var(--tab-bar-main-inner-shadow), var(--tab-bar-additional-inner-shadow) !important;
+            z-index: 1 !important;
+            -moz-window-dragging: drag !important;
+        }
+
+        #titlebar
+        {
+            width: 100% !important;
+        }
+
+        /* -------------------- Tab Bar -------------------- */
+
+        #TabsToolbar::before
+        {
+            display: none;
+        }
+
+        /* -------------------- Nav Bar -------------------- */
+
+        #nav-bar
+        {
+            min-width: 0% !important;
+            width: 100% !important;
+            max-width: 35% !important;
+            margin: calc(var(--tab-block-margin) + var(--drag-space, 0px)) var(--tab-block-margin) var(--tab-block-margin) !important;
+            border-radius: var(--tab-border-radius) !important;
+            -moz-box-align: center !important;
+            filter: var(--special-main-outer-shadow) var(--special-additional-outer-shadow) !important;
+            -moz-window-dragging: no-drag !important;
+            --toolbar-field-border-color: transparent !important;
+        }
        
-    #urlbar-container
-    {
-        min-width: auto !important;
-    }
+        #urlbar-container
+        {
+            min-width: 20vw !important;
+        }
 
-    #search-container
-    {
-        min-width: 10vw !important;
-    }
+        #search-container
+        {
+            min-width: 5vw !important;
+        }
 
-    /* -------------------- Bookmarks Bar -------------------- */
+        /* -------------------- Bookmarks Bar -------------------- */
 
-    #PersonalToolbar
-    {
-        min-width: auto !important;
-        max-width: 15% !important;
-        max-height: 100% !important;
-        border-radius: var(--tab-border-radius) !important;
-        margin: var(--tab-block-margin) !important;
-        filter: var(--special-main-outer-shadow) var(--special-additional-outer-shadow) !important;
-        order: 2 !important;
+        #PersonalToolbar
+        {
+            min-width: 0% !important;
+            width: 100% !important;
+            max-width: 15% !important;
+            max-height: 100% !important;
+            border-radius: var(--tab-border-radius) !important;
+            margin: calc(var(--tab-block-margin) + var(--drag-space, 0px)) var(--tab-block-margin) var(--tab-block-margin) !important;
+            filter: var(--special-main-outer-shadow) var(--special-additional-outer-shadow) !important;
+            order: 2 !important;
+            -moz-window-dragging: no-drag !important;
+        }
+
+        /* -------------------- Customizing Mode -------------------- */
+
+        #customization-panelWrapper
+        {
+            --panel-arrow-offset: 0px !important;
+        }
     }
 }
 
