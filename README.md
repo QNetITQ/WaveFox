@@ -146,7 +146,7 @@ By default context menus follow the selected interface density, but it is possib
 - `userChrome.SelectedTabHighlight-Enabled`
 
 ### One Line (v1.3.104) (Release Candidate)
-The toolbar and bookmarks bar always take up as much space as is needed for the items in them and not a pixel more. Leave only the most necessary elements on these panels. Place the optional ones in the hidden menu.
+The toolbar uses as much space as is needed for its contents. Leave only the most necessary elements. Place the optional ones in the hidden menu.
 ![Снимок](https://user-images.githubusercontent.com/85301851/181300272-d1ecfc93-898a-4eb3-80b9-9974fc471b45.PNG)
 
 - `userChrome.OneLine-Enabled` (Proton Tabs Only)
