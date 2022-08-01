@@ -25,14 +25,14 @@
     @supports -moz-bool-pref("userChrome.OneLine-Enabled") and
               -moz-bool-pref("userChrome.ProtonTabs-Enabled")
     {
-        #titlebar
+        #navigator-toolbox
         {
-            order: 1 !important;
+            grid-template-columns: auto max-content !important;
         }
 
-        #nav-bar
+        #titlebar
         {
-            order: 3 !important;
+            grid-area: 1 / 1 / 2 / 2 !important;
         }
     }
 
