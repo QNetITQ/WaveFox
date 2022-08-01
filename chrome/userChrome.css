@@ -1101,26 +1101,6 @@ spacer[part="overflow-end-indicator"]
 @supports -moz-bool-pref("userChrome.OneLine-Enabled") and
           -moz-bool-pref("userChrome.ProtonTabs-Enabled")
 {
-    /* -------------------- Nav Bar -------------------- */
-
-    #urlbar-container
-    {
-        --urlbar-container-height: var(--tab-min-height) !important;
-    }
-
-    #urlbar
-    {
-        --urlbar-toolbar-height: var(--tab-min-height) !important;
-    }
-
-    #urlbar-container,
-    #search-container
-    {
-        padding-block: 0px !important;
-    }
-
-    /* -------------------- One Line Mode -------------------- */
-
     #navigator-toolbox
     {
         display: grid !important;
@@ -1148,6 +1128,21 @@ spacer[part="overflow-end-indicator"]
         -moz-box-align: center !important;
         filter: var(--special-main-outer-shadow) var(--special-additional-outer-shadow) !important;
         -moz-window-dragging: no-drag !important;
+    }
+       
+    #nav-bar :is(#urlbar-container, #search-container)
+    {
+        padding-block: 0px !important;
+    }
+
+    #urlbar-container
+    {
+        --urlbar-container-height: var(--tab-min-height) !important;
+    }
+
+    #urlbar
+    {
+        --urlbar-toolbar-height: var(--tab-min-height) !important;
     }
 
     /* -------------------- Bookmarks Bar -------------------- */
