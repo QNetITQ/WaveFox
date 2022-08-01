@@ -19,7 +19,6 @@
             :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not(:-moz-window-inactive) #PersonalToolbar
             {
                 color: AccentColorText !important;
-                --toolbarbutton-icon-fill: currentColor !important;
             }
         }
 
