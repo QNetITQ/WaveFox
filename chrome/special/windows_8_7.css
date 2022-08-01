@@ -71,6 +71,7 @@
 
         #titlebar
         {
+            appearance: none !important;
             grid-area: 1 / 2 / 2 / 3 !important;
         }
     }
