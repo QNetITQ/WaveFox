@@ -64,18 +64,15 @@
     @supports -moz-bool-pref("userChrome.OneLine-Enabled") and
               -moz-bool-pref("userChrome.ProtonTabs-Enabled")
     {
-        @media (min-width: 1250px)
+        #titlebar
         {
-            #titlebar
-            {
-                appearance: none !important;
-                order: 3 !important;
-            }
+            appearance: none !important;
+            order: 3 !important;
+        }
 
-            #nav-bar
-            {
-                order: 1 !important;
-            }
+        #nav-bar
+        {
+            order: 1 !important;
         }
     }
 
