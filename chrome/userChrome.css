@@ -1153,7 +1153,6 @@ spacer[part="overflow-end-indicator"]
         background-color: transparent !important;
         background-image: none !important;
         color: inherit !important;
-        --toolbarbutton-icon-fill: currentColor !important;
     }
 
     /* -------------------- Customizing Mode -------------------- */
