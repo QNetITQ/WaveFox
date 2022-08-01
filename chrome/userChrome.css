@@ -1129,7 +1129,7 @@ spacer[part="overflow-end-indicator"]
         filter: var(--special-main-outer-shadow) var(--special-additional-outer-shadow) !important;
         -moz-window-dragging: no-drag !important;
     }
-       
+
     #nav-bar :is(#urlbar-container, #search-container)
     {
         padding-block: 0px !important;
