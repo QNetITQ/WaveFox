@@ -1105,10 +1105,8 @@ spacer[part="overflow-end-indicator"]
     {
         display: grid !important;
         grid-template-rows: auto auto !important;
-        position: relative !important;
         border-bottom: none !important;
         box-shadow: var(--tab-bar-main-inner-shadow), var(--tab-bar-additional-inner-shadow) !important;
-        z-index: 1 !important;
         -moz-window-dragging: drag !important;
     }
 
@@ -1128,6 +1126,7 @@ spacer[part="overflow-end-indicator"]
         -moz-box-align: center !important;
         filter: var(--special-main-outer-shadow) var(--special-additional-outer-shadow) !important;
         -moz-window-dragging: no-drag !important;
+        z-index: 1 !important;
     }
 
     #nav-bar :is(#urlbar-container, #search-container)
@@ -1160,6 +1159,88 @@ spacer[part="overflow-end-indicator"]
     #customization-panelWrapper
     {
         --panel-arrow-offset: 0px !important;
+    }
+}
+       
+/* ---------------------------------------- Tabs On Bottom ---------------------------------------- */
+
+@supports -moz-bool-pref("userChrome.TabsOnBottom-Enabled")
+{
+    #navigator-toolbox
+    {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    /* -------------------- Title Bar -------------------- */
+
+    #titlebar
+    {
+        order: 3 !important;
+    }
+
+    #toolbar-menubar
+    {
+        background-color: var(--toolbar-bgcolor) !important;
+        background-image: var(--toolbar-bgimage) !important;
+        color: var(--toolbar-color) !important;
+        appearance: none !important;
+    }
+
+    /* -------------------- Nav Bar -------------------- */
+
+    #nav-bar
+    {
+        order: 1 !important;
+    }
+
+    /* -------------------- Bookmarks Bar -------------------- */
+
+    #PersonalToolbar
+    {
+        order: 2 !important;
+    }
+
+    /* -------------------- Tab Bar -------------------- */
+
+    #TabsToolbar :is(.tabbrowser-tab, .toolbarbutton-1, separator, #personal-bookmarks, #search-container, .accessibility-indicator, .private-browsing-indicator)
+    {
+        margin-top: 0px !important;
+        margin-bottom: var(--drag-space, 0px) !important;
+    }
+
+    #TabsToolbar::before
+    {
+        transform: rotateX(180deg);
+    }
+
+    /* ---------- Shadow DOM ---------- */
+
+    #tabbrowser-arrowscrollbox
+    {
+        --margin-top: 0px !important;
+        --margin-bottom: var(--drag-space, 0px) !important;
+    }
+
+    #scrollbutton-up,
+    #scrollbutton-down,
+    spacer[part="overflow-start-indicator"],
+    spacer[part="overflow-end-indicator"]
+    {
+        margin-top: var(--margin-top, revert) !important;
+        margin-bottom: var(--margin-bottom, revert) !important;
+    }
+
+    @supports not (-moz-bool-pref("userChrome.ProtonTabs-Enabled") or
+                   -moz-bool-pref("userChrome.PhotonTabs-Enabled"))
+    {
+        /* ---------- Rounded Corners (SVG) ---------- */
+
+        .tab-background::before,
+        .tab-background::after
+        {
+            transform: rotateX(180deg);
+        }
     }
 }
 
