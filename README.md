@@ -150,3 +150,8 @@ The toolbar uses as much space as is needed for its contents. Leave only the mos
 ![Снимок](https://user-images.githubusercontent.com/85301851/181300272-d1ecfc93-898a-4eb3-80b9-9974fc471b45.PNG)
 
 - `userChrome.OneLine-Enabled` (Proton Tabs Only)
+
+### Tabs On Bottom (v1.3.104)
+![изображение](https://user-images.githubusercontent.com/85301851/182421633-3ec6948a-85cb-47ac-8b6d-6e92293e4ca3.png)
+
+- `userChrome.TabsOnBottom-Enabled`
