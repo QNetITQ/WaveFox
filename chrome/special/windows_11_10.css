@@ -146,9 +146,12 @@
     
     /* Tabs On Bottom */
 
-    #titlebar
+    @supports -moz-bool-pref("userChrome.TabsOnBottom-Enabled")
     {
-        appearance: none !important;
+        #titlebar
+        {
+            appearance: none !important;
+        }
     }
 
 }
