@@ -75,5 +75,15 @@
             grid-area: 1 / 2 / 2 / 3 !important;
         }
     }
+       
+    /* Tabs On Bottom */
+
+    @supports -moz-bool-pref("userChrome.TabsOnBottom-Enabled")
+    {
+        #titlebar
+        {
+            appearance: none !important;
+        }
+    }
 
 }
