@@ -143,5 +143,12 @@
             grid-area: 1 / 2 / 2 / 3 !important;
         }
     }
+    
+    /* Tabs On Bottom */
+
+    #titlebar
+    {
+        appearance: none !important;
+    }
 
 }
