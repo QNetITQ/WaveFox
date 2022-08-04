@@ -1105,8 +1105,6 @@ spacer[part="overflow-end-indicator"]
     {
         display: grid !important;
         grid-template-rows: auto auto !important;
-        border-bottom: none !important;
-        box-shadow: var(--tab-bar-main-inner-shadow), var(--tab-bar-additional-inner-shadow) !important;
         -moz-window-dragging: drag !important;
     }
 
