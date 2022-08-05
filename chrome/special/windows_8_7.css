@@ -66,6 +66,7 @@
     {
         #titlebar
         {
+            appearance: none !important;
             order: 3 !important;
         }
         
