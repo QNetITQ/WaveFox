@@ -22,17 +22,19 @@
         }
     }
     
+    /* One Line */
+    
     @supports -moz-bool-pref("userChrome.OneLine-Enabled") and
               -moz-bool-pref("userChrome.ProtonTabs-Enabled")
     {
-        #navigator-toolbox
-        {
-            grid-template-columns: auto max-content !important;
-        }
-
         #titlebar
         {
-            grid-area: 1 / 1 / 2 / 2 !important;
+            order: 1 !important;
+        }
+        
+        #nav-bar
+        {
+            order: 3 !important;
         }
     }
 
