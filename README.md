@@ -152,7 +152,7 @@ The toolbar uses as much space as is needed for its contents. Leave only the mos
 - `userChrome.OneLine-Enabled` (Proton Tabs Only)
 
 ### Tabs On Bottom (v1.3.104)
-Requires activation of the title bar in browser personalization.
+Activation of the title bar in browser personalization may be required.
 ![изображение](https://user-images.githubusercontent.com/85301851/182421633-3ec6948a-85cb-47ac-8b6d-6e92293e4ca3.png)
 
 - `userChrome.TabsOnBottom-Enabled`
