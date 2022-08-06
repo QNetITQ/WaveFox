@@ -1162,12 +1162,12 @@ spacer[part="overflow-end-indicator"]
         order: 2 !important;
     }
 
-    .bookmark-item > .toolbarbutton-icon
+    #PersonalToolbar .bookmark-item .toolbarbutton-icon
     {
         margin-right: 0px !important;
     }
 
-    .bookmark-item > .toolbarbutton-text
+    #PersonalToolbar .bookmark-item .toolbarbutton-text
     {
         display: none !important;
     }
