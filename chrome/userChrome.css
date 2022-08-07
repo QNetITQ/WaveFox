@@ -271,6 +271,14 @@
     {
         filter: var(--special-main-outer-shadow) var(--special-additional-outer-shadow) !important;
     }
+
+    @supports -moz-bool-pref("userChrome.OneLine-Enabled")
+    {
+        :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) :is(#nav-bar, #PersonalToolbar)
+        {
+            filter: none !important;
+        }
+    }
 }
 
 /* ---------------------------------------- Main Window ---------------------------------------- */
