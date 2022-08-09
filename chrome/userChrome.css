@@ -1196,6 +1196,7 @@ spacer[part="overflow-end-indicator"]
     {
         display: flex !important;
         flex-direction: column !important;
+        border-bottom: none !important;
     }
 
     /* -------------------- Title Bar -------------------- */
