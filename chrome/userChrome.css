@@ -1163,6 +1163,7 @@ spacer[part="overflow-end-indicator"]
     #PersonalToolbar
     {
         min-width: fit-content !important;
+        max-width: 20vw !important;
         max-height: 100% !important;
         margin: calc(var(--tab-block-margin) + var(--drag-space, 0px)) var(--tab-block-margin) var(--tab-block-margin) !important;
         border-radius: var(--tab-border-radius) !important;
