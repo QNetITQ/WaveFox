@@ -150,6 +150,7 @@ The toolbar uses as much space as is needed for its contents. Leave only the mos
 ![Снимок](https://user-images.githubusercontent.com/85301851/181300272-d1ecfc93-898a-4eb3-80b9-9974fc471b45.PNG)
 
 - `userChrome.OneLine-Enabled` (Proton Tabs Only)
+  - `userChrome.ResponsiveBookmarksBar-Enabled` (In this mode, the bookmarks bar will never take up more than 20% of the available screen space.)
 
 ### Tabs On Bottom
 Activation of the title bar in browser personalization may be required.
