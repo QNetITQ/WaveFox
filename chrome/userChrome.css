@@ -192,7 +192,7 @@
 
 /* ---------------------------------------- Pinned Tabs Width ---------------------------------------- */
 
-@supports -moz-bool-pref("userChrome.LowPinnedTabsWidthOffset-Enabled")
+@supports -moz-bool-pref("userChrome.PinnedTabsWidthLowIncrease-Enabled")
 {
     :root
     {
@@ -200,7 +200,7 @@
     }
 }
 
-@supports -moz-bool-pref("userChrome.HighPinnedTabsWidthOffset-Enabled")
+@supports -moz-bool-pref("userChrome.PinnedTabsWidthHighIncrease-Enabled")
 {
     :root
     {
