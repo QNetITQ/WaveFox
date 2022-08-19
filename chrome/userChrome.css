@@ -190,6 +190,24 @@
     }
 }
 
+/* ---------------------------------------- Pinned Tabs Width ---------------------------------------- */
+
+@supports -moz-bool-pref("userChrome.LowPinnedTabsWidthOffset-Enabled")
+{
+    :root
+    {
+        --pinned-tabs-width-offset: 2px;
+    }
+}
+
+@supports -moz-bool-pref("userChrome.HighPinnedTabsWidthOffset-Enabled")
+{
+    :root
+    {
+        --pinned-tabs-width-offset: 4px;
+    }
+}
+
 /* ---------------------------------------- Additional Container Indicator ---------------------------------------- */
 
 @supports -moz-bool-pref("userChrome.AdditionalContainerIndicator-Enabled")
@@ -987,21 +1005,19 @@ spacer[part="overflow-end-indicator"]
         fill: var(--toolbarbutton-active-background);
     }
        
-    #tabbrowser-arrowscrollbox:not([overflowing]) .tabbrowser-tab[beforeselected-visible] .tab-background::after
+    .tabbrowser-tab[beforeselected-visible] .tab-background::after
     {
-        --right-side-svg: var(--right-side-svg-clipped);
+        background-image: var(--right-side-svg-clipped);
     }
 
-    #tabbrowser-arrowscrollbox:not([overflowing]) .tabbrowser-tab[visuallyselected] + .tabbrowser-tab .tab-background::before
+    .tabbrowser-tab[visuallyselected] + .tabbrowser-tab .tab-background::before
     {
-        --left-side-svg: var(--left-side-svg-clipped);
+        background-image: var(--left-side-svg-clipped);
     }
        
-    /* ---------- Tabs ---------- */
-       
-    :root
+    #tabbrowser-tabs[positionpinnedtabs] .tabbrowser-tab[first-visible-unpinned-tab] .tab-background::before
     {
-        --pinned-tabs-width-offset: 2px;
+        background-image: var(--left-side-svg) !important;
     }
 }
 
