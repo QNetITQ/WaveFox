@@ -145,6 +145,12 @@ By default context menus follow the selected interface density, but it is possib
 
 - `userChrome.SelectedTabHighlight-Enabled`
 
+### Pinned Tabs Width
+![Снимок](https://user-images.githubusercontent.com/85301851/185612113-7bb0445f-8993-45bd-916d-d066e88ea7f4.PNG)
+
+- `userChrome.PinnedTabsWidthLowIncrease-Enabled`
+- `userChrome.PinnedTabsWidthHighIncrease-Enabled`
+
 ### One Line
 The toolbar uses as much space as is needed for its contents. Leave only the most necessary elements. Place the optional ones in the hidden menu.
 ![Снимок](https://user-images.githubusercontent.com/85301851/181300272-d1ecfc93-898a-4eb3-80b9-9974fc471b45.PNG)
