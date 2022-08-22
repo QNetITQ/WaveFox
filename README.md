@@ -1,7 +1,7 @@
 # *WaveFox*
 
 ##### Minimum Requirements
-- Firefox 103
+- Firefox 103 / ESR 102.1 (ESR has limited support. Some options may not work or work with limitations)
 - Windows
 - MacOS
 - Linux
