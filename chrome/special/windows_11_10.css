@@ -7,11 +7,13 @@
             :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not(:-moz-window-inactive) #navigator-toolbox
             {
                 background-color: AccentColor !important;
+                background-color: -moz-accent-color !important;
             }
                 
             :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not(:-moz-window-inactive) .titlebar-color
             {
                 color: AccentColorText !important;
+                color: -moz-accent-color-foreground !important;
             }
         }
 
