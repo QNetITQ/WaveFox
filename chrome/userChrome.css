@@ -190,16 +190,6 @@
     }
 }
 
-/* ---------------------------------------- Compact Plus ---------------------------------------- */
-
-@supports -moz-bool-pref("userChrome.CompactPlus-Enabled")
-{
-    :root[uidensity="compact"]
-    {
-        --tab-min-height: 28px !important;
-    }
-}
-
 /* ---------------------------------------- Pinned Tabs Width ---------------------------------------- */
 
 @supports -moz-bool-pref("userChrome.PinnedTabsWidthLowIncrease-Enabled")
@@ -335,6 +325,16 @@
 :root[uidensity="touch"]
 {
     --tab-min-height: 40px !important;
+}
+       
+/* ---------------------------------------- Compact Plus ---------------------------------------- */
+
+@supports -moz-bool-pref("userChrome.CompactPlus-Enabled")
+{
+    :root[uidensity="compact"]
+    {
+        --tab-min-height: 28px !important;
+    }
 }
 
 /* ---------------------------------------- Context Menus (Not System Related) ---------------------------------------- */
