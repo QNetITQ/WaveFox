@@ -147,5 +147,15 @@
             appearance: none !important;
         }
     }
+    
+    /* Compact Plus */
+
+    @supports -moz-bool-pref("userChrome.CompactPlus-Enabled")
+    {
+        :root[uidensity="compact"][tabsintitlebar]:is([sizemode="normal"], [sizemode="maximized"]) #titlebar
+        {
+            appearance: none !important;
+        }
+    }
 
 }
