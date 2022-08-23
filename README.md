@@ -100,11 +100,11 @@ It is also possible to turn on the border and the shadow at the same time.
 - `userChrome.VeryHighBorderSaturation-Enabled`
 
 ##### Shadow
-- `userChrome.IncreaseShadowBlur-Enabled` (Increases shadow blur above the default value)
 - `userChrome.LowShadowSaturation-Enabled`
 - `userChrome.MediumShadowSaturation-Enabled`
 - `userChrome.HighShadowSaturation-Enabled`
 - `userChrome.VeryHighShadowSaturation-Enabled`
+  - `userChrome.IncreaseShadowBlur-Enabled` (Increases shadow blur above the default value)
 
 ### Tab Separators
 ![изображение](https://user-images.githubusercontent.com/85301851/152351312-f6ad4578-e7d5-40b7-8b2d-49388a750f54.png)
@@ -150,6 +150,12 @@ By default context menus follow the selected interface density, but it is possib
 
 - `userChrome.PinnedTabsWidthLowIncrease-Enabled`
 - `userChrome.PinnedTabsWidthHighIncrease-Enabled`
+
+### Compact Plus (v1.5.105)
+Works only with compact mode.
+![изображение](https://user-images.githubusercontent.com/85301851/186209703-42638bdf-6f85-4f5c-a404-7f9c7427d132.png)
+
+- `userChrome.CompactPlus-Enabled`
 
 ### One Line
 The toolbar uses as much space as is needed for its contents. Leave only the most necessary elements. Place the optional ones in the hidden menu.
