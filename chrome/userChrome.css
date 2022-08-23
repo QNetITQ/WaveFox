@@ -190,6 +190,16 @@
     }
 }
 
+/* ---------------------------------------- Compact Plus ---------------------------------------- */
+
+@supports -moz-bool-pref("userChrome.CompactPlus-Enabled")
+{
+    :root[uidensity="compact"]
+    {
+        --tab-min-height: 28px !important;
+    }
+}
+
 /* ---------------------------------------- Pinned Tabs Width ---------------------------------------- */
 
 @supports -moz-bool-pref("userChrome.PinnedTabsWidthLowIncrease-Enabled")
@@ -868,13 +878,6 @@ spacer[part="overflow-end-indicator"]
     .tab-stack::after
     {
         transform: translateX(var(--toolbarbutton-outer-padding));
-    }
-
-    /* ---------- Density ---------- */
-
-    :root[uidensity="compact"]
-    {
-        --tab-min-height: 28px !important;
     }
 }
 
