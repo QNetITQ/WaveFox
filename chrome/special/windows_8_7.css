@@ -72,7 +72,7 @@
         #titlebar
         {
             appearance: none !important;
-            grid-area: 1 / 2 / span 1 / span 2 !important;
+            grid-area: 1 / 2 / 2 / 3 !important;
         }
            
         :root[tabsintitlebar][sizemode="maximized"] #navigator-toolbox
