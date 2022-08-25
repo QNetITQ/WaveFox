@@ -85,7 +85,7 @@
     {
         #navigator-toolbox
         {
-            grid-template-columns: min-content auto !important;
+            grid-template-columns: max-content auto !important;
         }
 
         #titlebar
