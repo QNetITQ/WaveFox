@@ -1133,16 +1133,11 @@ spacer[part="overflow-end-indicator"]
 {
     #navigator-toolbox
     {
-        display: flex !important;
-        flex-direction: row !important;
-        flex-wrap: nowrap !important;
+        display: grid !important;
+        gap: 0px !important;
+        grid-template-rows: auto auto auto auto !important;
         border-bottom: none !important;
         -moz-window-dragging: drag !important;
-    }
-
-    #titlebar
-    {
-        flex-basis: 100% !important;
     }
 
     /* -------------------- Tab Bar -------------------- */
@@ -1156,7 +1151,6 @@ spacer[part="overflow-end-indicator"]
 
     #nav-bar
     {
-        min-width: fit-content !important;
         margin: calc(var(--tab-block-margin) + var(--drag-space, 0px)) var(--tab-block-margin) var(--tab-block-margin) !important;
         border-radius: var(--tab-border-radius) !important;
         -moz-box-align: center !important;
@@ -1184,30 +1178,22 @@ spacer[part="overflow-end-indicator"]
 
     #PersonalToolbar
     {
-        min-width: fit-content !important;
-        max-height: 100% !important;
-        margin: calc(var(--tab-block-margin) + var(--drag-space, 0px)) var(--tab-block-margin) var(--tab-block-margin) !important;
-        border-radius: var(--tab-border-radius) !important;
-        filter: var(--special-main-outer-shadow) var(--special-additional-outer-shadow) !important;
-        order: 2 !important;
+        background-color: transparent !important;
+        grid-area: 2 / 1 / span 2 / span 2 !important;
     }
 
-    #PersonalToolbar .bookmark-item .toolbarbutton-icon
+    /* -------------------- Tab Notification -------------------- */
+
+    #tab-notification-deck-template
     {
-        margin-right: 0px !important;
+        grid-area: 3 / 1 / span 3 / span 2 !important;
     }
 
-    #PersonalToolbar .bookmark-item .toolbarbutton-text
+    /* -------------------- Browser Toolbar Palette -------------------- */
+
+    #BrowserToolbarPalette
     {
-        display: none !important;
-    }
-       
-    @supports -moz-bool-pref("userChrome.ResponsiveBookmarksBar-Enabled")
-    {
-        #PersonalToolbar
-        {
-            max-width: 20vw !important;
-        }
+        grid-area: 4 / 1 / span 4 / span 2 !important;
     }
 
     /* -------------------- Customizing Mode -------------------- */
