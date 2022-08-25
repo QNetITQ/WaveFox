@@ -29,7 +29,7 @@
     {
         #navigator-toolbox
         {
-            grid-template-columns: auto min-content !important;
+            grid-template-columns: auto max-content !important;
         }
 
         #titlebar
