@@ -259,6 +259,8 @@
         --toolbar-field-background-color: var(--custom-toolbar-bgcolor) !important;
         --main-shadow-color: transparent !important;
         --additional-shadow-color: transparent !important;
+        --chrome-content-separator-color: none !important;
+        --toolbar-field-border-color: transparent !important;
     }
 }
 
@@ -272,6 +274,7 @@
         --toolbar-bgimage: none !important;
         --toolbar-field-border-color: transparent !important;
         --toolbar-field-background-color: var(--custom-toolbar-bgcolor) !important;
+        --chrome-content-separator-color: none !important;
     }
        
     :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) .tabbrowser-tab[visuallyselected] .tab-background
