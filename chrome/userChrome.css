@@ -1155,7 +1155,7 @@ spacer[part="overflow-end-indicator"]
         border-radius: var(--tab-border-radius) !important;
         -moz-box-align: center !important;
         filter: var(--special-main-outer-shadow) var(--special-additional-outer-shadow) !important;
-        z-index: 1 !important;
+        z-index: 2 !important;
     }
 
     #urlbar-container,
@@ -1184,7 +1184,7 @@ spacer[part="overflow-end-indicator"]
 
     /* -------------------- Tab Notification -------------------- */
 
-    #tab-notification-deck-template
+    #tab-notification-deck
     {
         grid-area: 3 / 1 / 4 / 3 !important;
     }
