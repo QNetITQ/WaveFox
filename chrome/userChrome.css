@@ -1233,7 +1233,7 @@ spacer[part="overflow-end-indicator"]
 
     #titlebar
     {
-        order: 3 !important;
+        order: 2 !important;
     }
 
     #toolbar-menubar
@@ -1248,14 +1248,14 @@ spacer[part="overflow-end-indicator"]
 
     #nav-bar
     {
-        order: 1 !important;
+        order: 0 !important;
     }
 
     /* -------------------- Bookmarks Bar -------------------- */
 
     #PersonalToolbar
     {
-        order: 2 !important;
+        order: 1 !important;
     }
 
     /* -------------------- Tab Bar -------------------- */
