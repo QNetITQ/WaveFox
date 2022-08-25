@@ -1180,6 +1180,7 @@ spacer[part="overflow-end-indicator"]
     #PersonalToolbar
     {
         background-color: transparent !important;
+        color: inherit !important;
         grid-area: 2 / 1 / 3 / 3 !important;
     }
 
