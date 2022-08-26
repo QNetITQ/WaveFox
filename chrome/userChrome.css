@@ -1157,7 +1157,6 @@ spacer[part="overflow-end-indicator"]
         -moz-box-align: center !important;
         filter: var(--special-main-outer-shadow) var(--special-additional-outer-shadow) !important;
         z-index: 2 !important;
-        -moz-window-dragging: no-drag !important;
     }
 
     #urlbar-container,
