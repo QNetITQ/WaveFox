@@ -1158,6 +1158,11 @@ spacer[part="overflow-end-indicator"]
         filter: var(--special-main-outer-shadow) var(--special-additional-outer-shadow) !important;
         z-index: 2 !important;
     }
+       
+    :root[customizing] #nav-bar-customization-target
+    {
+        min-width: fit-content !important;
+    }
 
     #urlbar-container,
     #search-container
