@@ -16,11 +16,15 @@
                 color: -moz-accent-color-foreground !important;
             }
             
-            :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not(:-moz-window-inactive) #PersonalToolbar
+            @supports -moz-bool-pref("userChrome.OneLine-Enabled") and
+                      -moz-bool-pref("userChrome.ProtonTabs-Enabled")
             {
-                color: AccentColorText !important;
-                color: -moz-accent-color-foreground !important;
-                --toolbarbutton-icon-fill: currentColor !important;
+                :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not(:-moz-window-inactive) #PersonalToolbar
+                {
+                    color: AccentColorText !important;
+                    color: -moz-accent-color-foreground !important;
+                    --toolbarbutton-icon-fill: currentColor !important;
+                }
             }
         }
 
