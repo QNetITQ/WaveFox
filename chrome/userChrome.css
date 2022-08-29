@@ -1218,8 +1218,6 @@ spacer[part="overflow-end-indicator"]
 {
     #navigator-toolbox
     {
-        display: flex !important;
-        flex-direction: column !important;
         border-bottom: none !important;
     }
 
@@ -1227,7 +1225,7 @@ spacer[part="overflow-end-indicator"]
 
     #titlebar
     {
-        order: 3 !important;
+        -moz-box-ordinal-group: 2 !important;
     }
 
     #toolbar-menubar
@@ -1236,20 +1234,6 @@ spacer[part="overflow-end-indicator"]
         background-image: var(--toolbar-bgimage) !important;
         color: var(--toolbar-color) !important;
         appearance: none !important;
-    }
-
-    /* -------------------- Nav Bar -------------------- */
-
-    #nav-bar
-    {
-        order: 1 !important;
-    }
-
-    /* -------------------- Bookmarks Bar -------------------- */
-
-    #PersonalToolbar
-    {
-        order: 2 !important;
     }
 
     /* -------------------- Tab Bar -------------------- */
