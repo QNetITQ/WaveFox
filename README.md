@@ -1,7 +1,7 @@
 # *WaveFox*
 
 ##### Minimum Requirements
-- Firefox 103 / ESR 102.1 (ESR has limited support. Some options may not work or work with limitations)
+- Firefox 103
 - Windows
 - MacOS
 - Linux
@@ -151,13 +151,7 @@ By default context menus follow the selected interface density, but it is possib
 - `userChrome.PinnedTabsWidthLowIncrease-Enabled`
 - `userChrome.PinnedTabsWidthHighIncrease-Enabled`
 
-### Compact Plus (v1.5.105)
-Works only with compact mode.
-![изображение](https://user-images.githubusercontent.com/85301851/186209703-42638bdf-6f85-4f5c-a404-7f9c7427d132.png)
-
-- `userChrome.CompactPlus-Enabled`
-
-### One Line (Bookmarks bar changed in v1.5.105)
+### One Line
 The toolbar uses as much space as is needed for its contents. Leave only the most necessary elements. Place the optional ones in the hidden menu.
 ![Снимок](https://user-images.githubusercontent.com/85301851/181300272-d1ecfc93-898a-4eb3-80b9-9974fc471b45.PNG)
 
