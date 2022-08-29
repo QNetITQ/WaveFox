@@ -86,26 +86,5 @@
             padding-top: 0px !important;
         }
     }
-       
-    /* Tabs On Bottom */
-
-    @supports -moz-bool-pref("userChrome.TabsOnBottom-Enabled")
-    {
-        #titlebar
-        {
-            appearance: none !important;
-        }
-           
-        :root[tabsintitlebar][sizemode="maximized"] #navigator-toolbox
-        {
-            margin-top: 8px !important;
-        }
-
-        .toolbar-items
-        {
-            margin-top: 0px !important;
-            padding-top: 0px !important;
-        }
-    }
 
 }
