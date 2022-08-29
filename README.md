@@ -163,3 +163,4 @@ Activation of the title bar in browser personalization may be required.
 ![изображение](https://user-images.githubusercontent.com/85301851/182421633-3ec6948a-85cb-47ac-8b6d-6e92293e4ca3.png)
 
 - `userChrome.TabsOnBottom-Enabled`
+- `browser.tabs.inTitlebar` (Required key. Set the value to 0)
