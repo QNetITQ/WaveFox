@@ -159,7 +159,6 @@ The toolbar uses as much space as is needed for its contents. Leave only the mos
   - `userChrome.ResponsiveBookmarksBar-Enabled` (In this mode, the bookmarks bar will never take up more than 20% of the available screen space. Not relevant for v1.5.105)
 
 ### Tabs On Bottom
-Activation of the title bar in browser personalization may be required.
 ![изображение](https://user-images.githubusercontent.com/85301851/182421633-3ec6948a-85cb-47ac-8b6d-6e92293e4ca3.png)
 
 - `userChrome.TabsOnBottom-Enabled`
