@@ -86,5 +86,14 @@
             padding-top: 0px !important;
         }
     }
+       
+    @supports -moz-bool-pref("userChrome.TabsOnBottom-Enabled")
+    {
+        .toolbar-items
+        {
+            margin-top: 0px !important;
+            padding-top: 0px !important;
+        }
+    }
 
 }
