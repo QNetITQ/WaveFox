@@ -1130,6 +1130,7 @@ spacer[part="overflow-end-indicator"]
         display: flex !important;
         flex-direction: row !important;
         flex-wrap: nowrap !important;
+        position: relative !important;
         border-bottom: none !important;
         -moz-window-dragging: drag !important;
     }
@@ -1209,6 +1210,17 @@ spacer[part="overflow-end-indicator"]
     #customization-panelWrapper
     {
         --panel-arrow-offset: 0px !important;
+    }
+       
+    /* -------------------- Tab Notifications -------------------- */
+    
+    #tab-notification-deck
+    {
+        position: absolute !important;
+        width: 100% !important;
+        top: 100% !important;
+        left: 0% !important;
+        z-index: 1 !important;
     }
 }
        
