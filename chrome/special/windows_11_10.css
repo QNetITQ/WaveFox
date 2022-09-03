@@ -14,6 +14,20 @@
                 color: AccentColorText !important;
             }
         }
+        
+        @supports -moz-bool-pref("userChrome.MicaImitation-Enabled")
+        {
+            :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not(:-moz-window-inactive) #navigator-toolbox
+            {
+                background-color: color-mix(in srgb, AccentColor 5%, -moz-Dialog) !important;
+                background-image: radial-gradient(ellipse at center bottom, transparent 50%, -moz-Dialog) !important;
+            }
+            
+            :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not(:-moz-window-inactive) .titlebar-color
+            {
+                color: inherit !important;
+            }
+        }
 
         .titlebar-buttonbox-container
         {
