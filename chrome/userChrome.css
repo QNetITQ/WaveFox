@@ -1212,9 +1212,9 @@ spacer[part="overflow-end-indicator"]
         --panel-arrow-offset: 0px !important;
     }
        
-    /* -------------------- Tab Notifications -------------------- */
+    /* -------------------- Notifications -------------------- */
     
-    #tab-notification-deck
+    #navigator-toolbox :is(named-deck, div)
     {
         position: absolute !important;
         width: 100% !important;
