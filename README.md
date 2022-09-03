@@ -81,6 +81,12 @@ Requires Linux with transparency support. Tested on Linux Manjaro KDE + ForceBlu
 - `userChrome.LinuxTransparency-Enabled`
 - `gfx.webrender.all` (Required key)
 
+### Mica Imitation
+Simulate Mica on Windows 10
+![1](https://user-images.githubusercontent.com/85301851/188290563-a0d8b574-e5e3-40ea-a2c9-f0bfe59a7187.PNG)
+
+- `userChrome.MicaImitation-Enabled`
+
 ### Colorways
 https://www.reddit.com/r/firefox/comments/uq26ao/bringing_back_your_preferred_colorways/?utm_source=share&utm_medium=web2x&context=3
 
