@@ -49,7 +49,7 @@
     {
         @media (-moz-windows-accent-color-in-titlebar: 0)
         {
-            #main-window:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode])
+            :root:not([sizemode="fullscreen"]):is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode])
             {
                 appearance: -moz-win-glass !important;
                 background-color: transparent !important;
