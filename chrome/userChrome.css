@@ -414,6 +414,13 @@ spacer[part="overflow-end-indicator"]
     {
         --drag-space: 16px;
     }
+    @supports -moz-bool-pref("userChrome.DragSpaceAboveTabsWindowedMode-Reduced")
+    {
+        :root[sizemode="normal"][tabsintitlebar]
+        {
+            --drag-space: 8px;
+        }
+    }
 }
 
 /* ---------------------------------------- Titlebar ---------------------------------------- */
