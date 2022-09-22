@@ -1128,7 +1128,7 @@ spacer[part="overflow-end-indicator"]
 #firefox-view-button + #tabbrowser-tabs
 {
     border-inline-start: none !important;
-    padding-inline-start: 0px !important;
+    padding-inline-start: var(--tab-overflow-pinned-tabs-width) !important;
     margin-inline-start: 0px !important;
 }
 
