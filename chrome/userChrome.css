@@ -386,7 +386,7 @@
     }
 }
 
-#TabsToolbar :is(.tabbrowser-tab, .toolbarbutton-1, separator, #personal-bookmarks, #search-container, .accessibility-indicator, .private-browsing-indicator)
+#TabsToolbar :is(.tabbrowser-tab, .toolbarbutton-1, separator, #personal-bookmarks, #search-container, .accessibility-indicator, .private-browsing-indicator, #private-browsing-indicator-with-label)
 {
     margin-top: var(--drag-space, 0px) !important;
 }
@@ -1253,7 +1253,7 @@ spacer[part="overflow-end-indicator"]
 
     /* -------------------- Tab Bar -------------------- */
 
-    #TabsToolbar :is(.tabbrowser-tab, .toolbarbutton-1, separator, #personal-bookmarks, #search-container, .accessibility-indicator, .private-browsing-indicator)
+    #TabsToolbar :is(.tabbrowser-tab, .toolbarbutton-1, separator, #personal-bookmarks, #search-container, .accessibility-indicator, .private-browsing-indicator, #private-browsing-indicator-with-label)
     {
         margin-top: 0px !important;
         margin-bottom: var(--drag-space, 0px) !important;
