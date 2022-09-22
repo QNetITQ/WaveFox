@@ -440,6 +440,7 @@ spacer[part="overflow-end-indicator"]
 .tabbrowser-tab
 {
     --tab-loading-fill: currentColor !important;
+    --tab-attention-icon-color: currentColor !important;
     --tab-label-mask-size: 1em !important;
     color: inherit !important;
     -moz-box-pack: end !important;
@@ -566,11 +567,6 @@ spacer[part="overflow-end-indicator"]
 }
 
 /* -------------------- Tab Icon Indicators -------------------- */
-
-#TabsToolbar
-{
-    --tab-attention-icon-color: currentColor !important;
-}
 
 .tabbrowser-tab:not([visuallyselected]) .tab-icon-stack[busy] .tab-throbber::before
 {
