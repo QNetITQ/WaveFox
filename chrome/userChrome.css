@@ -1123,6 +1123,22 @@ spacer[part="overflow-end-indicator"]
     }
 }
 
+/* ---------------------------------------- Firefox View ---------------------------------------- */
+
+#firefox-view-button + #tabbrowser-tabs
+{
+    border-inline-start: none !important;
+    padding-inline-start: 0px !important;
+    margin-inline-start: 0px !important;
+}
+
+#TabsToolbar #firefox-view-button[open] > .toolbarbutton-icon
+{
+    background-color: var(--toolbarbutton-active-background) !important;
+    background-image: none !important;
+    box-shadow: none !important;
+}
+
 /* ---------------------------------------- One Line ---------------------------------------- */
 
 @supports -moz-bool-pref("userChrome.OneLine-Enabled") and
