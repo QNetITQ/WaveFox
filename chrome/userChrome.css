@@ -833,13 +833,6 @@ spacer[part="overflow-end-indicator"]
         margin-right: calc(var(--toolbar-start-end-padding) - var(--toolbarbutton-outer-padding)) !important;
     }
 
-    /* ---------- New Tab Button ---------- */
-
-    #tabs-newtab-button
-    {
-        margin-left: calc(-1 * (var(--toolbar-start-end-padding) - var(--toolbarbutton-outer-padding)) + 1px) !important;
-    }
-
     /* ---------- Tab Icon Indicator ---------- */
 
     .tabbrowser-tab:is([image], [pinned]) .tab-content[attention]:not([selected]),
@@ -898,13 +891,6 @@ spacer[part="overflow-end-indicator"]
     .tabbrowser-tab[last-visible-tab]
     {
         margin-right: var(--toolbar-start-end-padding) !important;
-    }
-
-    /* ---------- New Tab Button ---------- */
-
-    #tabs-newtab-button
-    {
-        margin-left: calc(-1 * var(--toolbar-start-end-padding) + 1px) !important;
     }
 }
 
@@ -1061,18 +1047,6 @@ spacer[part="overflow-end-indicator"]
     {
         margin-right: calc(var(--tab-min-height) / 2) !important;
     }
-       
-    /* ---------- New Tab Button ---------- */
-
-    #tabs-newtab-button
-    {
-        margin-left: calc(var(--tab-min-height) / -2 + 3px) !important;
-    }
-
-    #tabs-newtab-button .toolbarbutton-icon
-    {
-        border-radius: 50% !important;
-    }
 }
 
 /* -------------------- Chrome / Edge -------------------- */
@@ -1109,18 +1083,6 @@ spacer[part="overflow-end-indicator"]
     .tabbrowser-tab[last-visible-tab]
     {
         margin-right: calc(var(--tab-min-height) / 4) !important;
-    }
-       
-    /* ---------- New Tab Button ---------- */
-
-    #tabs-newtab-button
-    {
-        margin-left: calc(var(--tab-min-height) / -4 + 1px) !important;
-    }
-       
-    #tabs-newtab-button .toolbarbutton-icon
-    {
-        border-radius: 50% !important;
     }
 }
 
