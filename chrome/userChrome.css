@@ -268,18 +268,16 @@
 @supports -moz-bool-pref("userChrome.TransparentToolbar-Enabled") and
           -moz-bool-pref("userChrome.ProtonTabs-Enabled")
 {
-    :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode])
+    :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) :is(#titlebar, #nav-bar, #PersonalToolbar)
     {
-        --custom-toolbar-bgcolor: Field;
         --toolbar-bgcolor: transparent !important;
         --toolbar-bgimage: none !important;
-        --toolbar-field-border-color: transparent !important;
-        --toolbar-field-background-color: var(--custom-toolbar-bgcolor) !important;
+        --toolbar-field-background-color: Field !important;
     }
        
     :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) .tabbrowser-tab[visuallyselected] .tab-background
     {
-        background-color: var(--custom-toolbar-bgcolor) !important;
+        background-color: Field !important;
     }
 
     :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) #TabsToolbar::before
