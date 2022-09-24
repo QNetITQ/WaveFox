@@ -254,11 +254,14 @@
 {
     :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode])
     {
-        --custom-toolbar-bgcolor: color-mix(in srgb, Field 75%, transparent);
-        --toolbar-bgcolor: var(--custom-toolbar-bgcolor) !important;
-        --toolbar-field-background-color: var(--custom-toolbar-bgcolor) !important;
         --main-shadow-color: transparent !important;
         --additional-shadow-color: transparent !important;
+    }
+    
+    :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) :is(#titlebar, #nav-bar, #PersonalToolbar)
+    {
+        --toolbar-bgcolor: color-mix(in srgb, Field 75%, transparent) !important;
+        --toolbar-field-background-color: var(--toolbar-bgcolor) !important;
     }
 }
 
