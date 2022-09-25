@@ -444,8 +444,7 @@ spacer[part="overflow-end-indicator"]
     --tab-attention-icon-color: currentColor !important;
     --tab-label-mask-size: 1em !important;
     color: inherit !important;
-    -moz-box-pack: end !important;
-    overflow: visible !important;
+    overflow-clip-margin: var(--tab-min-height) !important;
 }
        
 .tabbrowser-tab[visuallyselected]
