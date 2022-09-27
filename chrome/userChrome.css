@@ -727,8 +727,10 @@ spacer[part="overflow-end-indicator"]
 .tabbrowser-tab:is(
         [selected],
         [selected] + .tabbrowser-tab,
+        [selected] + .tabbrowser-tab[hidden] + .tabbrowser-tab,
         :hover,
         :hover + .tabbrowser-tab,
+        :hover + .tabbrowser-tab[hidden] + .tabbrowser-tab,
         [multiselected],
         [multiselected] + .tabbrowser-tab) .tab-stack::before,
 .tabbrowser-tab:is(
