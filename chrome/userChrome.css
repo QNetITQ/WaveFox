@@ -1089,7 +1089,7 @@ spacer[part="overflow-end-indicator"]
 
 /* ---------------------------------------- Firefox View ---------------------------------------- */
 
-#firefox-view-button + #tabbrowser-tabs
+:root:not([privatebrowsingmode="temporary"]):not([firefoxviewhidden]) :is(#firefox-view-button, #wrapper-firefox-view-button) + #tabbrowser-tabs
 {
     border-inline-start: none !important;
     padding-inline-start: var(--tab-overflow-pinned-tabs-width) !important;
