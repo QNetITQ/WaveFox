@@ -208,6 +208,22 @@
     }
 }
 
+/* ---------------------------------------- Firefox View ---------------------------------------- */
+
+:root :where(#firefox-view-button, #wrapper-firefox-view-button) + #tabbrowser-tabs
+{
+    border-inline-start: none !important;
+    padding-inline-start: var(--tab-overflow-pinned-tabs-width) !important;
+    margin-inline-start: 0px !important;
+}
+
+#TabsToolbar #firefox-view-button[open] > .toolbarbutton-icon
+{
+    background-color: var(--toolbarbutton-active-background) !important;
+    background-image: none !important;
+    box-shadow: none !important;
+}
+
 /* ---------------------------------------- Additional Container Indicator ---------------------------------------- */
 
 @supports -moz-bool-pref("userChrome.AdditionalContainerIndicator-Enabled")
@@ -1084,22 +1100,6 @@ spacer[part="overflow-end-indicator"]
     {
         margin-right: calc(var(--tab-min-height) / 4) !important;
     }
-}
-
-/* ---------------------------------------- Firefox View ---------------------------------------- */
-
-:root:not([privatebrowsingmode="temporary"]):not([firefoxviewhidden]) :is(#firefox-view-button, #wrapper-firefox-view-button) + #tabbrowser-tabs
-{
-    border-inline-start: none !important;
-    padding-inline-start: var(--tab-overflow-pinned-tabs-width) !important;
-    margin-inline-start: 0px !important;
-}
-
-#TabsToolbar #firefox-view-button[open] > .toolbarbutton-icon
-{
-    background-color: var(--toolbarbutton-active-background) !important;
-    background-image: none !important;
-    box-shadow: none !important;
 }
 
 /* ---------------------------------------- One Line ---------------------------------------- */
