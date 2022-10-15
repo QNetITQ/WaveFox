@@ -1017,7 +1017,8 @@ spacer[part="overflow-end-indicator"]
         background-image: var(--right-side-svg-clipped);
     }
 
-    .tabbrowser-tab[visuallyselected] + .tabbrowser-tab .tab-background::before
+    .tabbrowser-tab[visuallyselected]:not([hidden]) + .tabbrowser-tab .tab-background::before,
+    .tabbrowser-tab[visuallyselected] + .tabbrowser-tab[hidden] + .tabbrowser-tab .tab-background::before
     {
         background-image: var(--left-side-svg-clipped);
     }
