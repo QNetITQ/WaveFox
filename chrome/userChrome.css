@@ -597,7 +597,7 @@ spacer[part="overflow-end-indicator"]
 
 /* -------------------- Tab Icon Image -------------------- */
 
-.tabbrowser-tab:not([pinned]) .tab-icon-image:not([src], [crashed], [sharing], [pictureinpicture], [busy])
+.tabbrowser-tab:not([pinned], [fadein]) .tab-icon-image:not([src], [crashed], [sharing], [pictureinpicture], [busy])
 {
     display: revert !important;
 }
@@ -748,7 +748,9 @@ spacer[part="overflow-end-indicator"]
         :hover,
         :hover + .tabbrowser-tab,
         :hover + .tabbrowser-tab[hidden] + .tabbrowser-tab,
-        [multiselected]) .tab-stack::before,
+        [multiselected],
+        [multiselected] + .tabbrowser-tab,
+        [multiselected] + .tabbrowser-tab[hidden] + .tabbrowser-tab) .tab-stack::before,
 .tabbrowser-tab:is(
         [selected],
         :hover,
