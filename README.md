@@ -88,7 +88,7 @@ Simulate Mica on Windows 10. Works only with the system theme.
 - `userChrome.MicaImitation-Enabled`
 
 ### Colorways
-https://www.reddit.com/r/firefox/comments/uq26ao/bringing_back_your_preferred_colorways/?utm_source=share&utm_medium=web2x&context=3
+https://redd.it/uq26ao
 
 ### Additional Container Indicator
 ![изображение](https://user-images.githubusercontent.com/85301851/161597087-fc818bc5-c60e-48a9-8eb9-1bcafc030607.png)
