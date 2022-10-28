@@ -238,12 +238,12 @@
     height: var(--tab-min-height) !important;
     border-radius: 0px !important;
     margin: 0px !important;
-    background-repeat: no-repeat no-repeat;
+    background-repeat: no-repeat no-repeat !important;
 }
 
 .tabbrowser-tab[pinned] .tab-context-line
 {
-    background-image: radial-gradient(circle at center, var(--tab-high-light, transparent) 2px, transparent 2px),
+    background-image: radial-gradient(circle at center, var(--tab-highlight, transparent) 2px, transparent 2px),
                       radial-gradient(circle at center, var(--identity-icon-color, transparent) 2px, transparent 2px) !important;
     background-size: 4px 4px, 4px 4px !important;
     background-position: center top, center bottom !important;
@@ -251,7 +251,7 @@
 
 .tabbrowser-tab:not([pinned]) .tab-context-line
 {
-    background-image: linear-gradient(to right, var(--tab-high-light, transparent), var(--tab-high-light, transparent)),
+    background-image: linear-gradient(to right, var(--tab-highlight, transparent), var(--tab-highlight, transparent)),
                       linear-gradient(to right, var(--identity-icon-color, transparent), var(--identity-icon-color, transparent)) !important;
     background-size: 100% 2px, 100% 2px !important;
     background-position: left top, left bottom !important;
@@ -263,7 +263,7 @@
 {
     .tabbrowser-tab[visuallyselected] .tab-context-line
     {
-        --tab-high-light: var(--tab-loading-fill) !important;
+        --tab-highlight: var(--tab-loading-fill) !important;
     }
 }
 
@@ -463,7 +463,7 @@ spacer[part="overflow-end-indicator"]
     --tab-attention-icon-color: currentColor !important;
     --tab-label-mask-size: 1em !important;
     color: inherit !important;
-    overflow-clip-margin: var(--tab-min-height) !important;
+    overflow-clip-margin: calc(var(--tab-min-height) / 2) !important;
 }
        
 .tabbrowser-tab[visuallyselected]
@@ -986,7 +986,6 @@ spacer[part="overflow-end-indicator"]
         position: absolute;
         bottom: 0%;
         fill: transparent;
-        z-index: -1;
         background-repeat: no-repeat;
         pointer-events: none;
         -moz-context-properties: fill;
