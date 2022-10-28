@@ -56,12 +56,10 @@
 ## Optional
 
 ### Windows System Effects
-Works with modern versions of Windows 11 / Windows 10. System effects must be supported on the operating system side. Otherwise, you need third-party software, such as MikaForEveryone. Works only with the system theme.
+Works with modern versions of Windows 11 / Windows 10. System effects must be supported on the operating system side. Otherwise, you need third-party software, such as Mica For Everyone. Works only with the system theme.
 ![изображение](https://user-images.githubusercontent.com/85301851/160720915-a055134a-357c-44cc-a638-8dd56e869111.png)
 
-Download and install MicaForEveryone from the link below.
-
-https://github.com/minusium/MicaForEveryone/releases
+Download and install Mica For Everyone from [here](https://github.com/minusium/MicaForEveryone/releases).
 
 - `userChrome.WindowsSystemEffects-Enabled`
 
@@ -88,7 +86,7 @@ Simulate Mica on Windows 10. Works only with the system theme.
 - `userChrome.MicaImitation-Enabled`
 
 ### Colorways
-https://www.reddit.com/r/firefox/comments/uq26ao/bringing_back_your_preferred_colorways/?utm_source=share&utm_medium=web2x&context=3
+[Bringing back your preferred colorways](https://redd.it/uq26ao)
 
 ### Additional Container Indicator
 ![изображение](https://user-images.githubusercontent.com/85301851/161597087-fc818bc5-c60e-48a9-8eb9-1bcafc030607.png)
