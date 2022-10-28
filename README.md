@@ -150,7 +150,7 @@ By default context menus follow the selected interface density, but it is possib
 
 - `userChrome.SelectedTabHighlight-Enabled`
 
-### Pinned Tabs Width
+### Pinned Tabs Width (Deprecated and removed from version 1.5.107 (Firefox 107))
 ![Снимок](https://user-images.githubusercontent.com/85301851/185612113-7bb0445f-8993-45bd-916d-d066e88ea7f4.PNG)
 
 - `userChrome.PinnedTabsWidthLowIncrease-Enabled`
