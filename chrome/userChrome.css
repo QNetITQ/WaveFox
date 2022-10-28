@@ -190,24 +190,6 @@
     }
 }
 
-/* ---------------------------------------- Pinned Tabs Width ---------------------------------------- */
-
-@supports -moz-bool-pref("userChrome.PinnedTabsWidthLowIncrease-Enabled")
-{
-    :root
-    {
-        --pinned-tabs-width-offset: 2px;
-    }
-}
-
-@supports -moz-bool-pref("userChrome.PinnedTabsWidthHighIncrease-Enabled")
-{
-    :root
-    {
-        --pinned-tabs-width-offset: 4px;
-    }
-}
-
 /* ---------------------------------------- Firefox View ---------------------------------------- */
 
 :root :where(#firefox-view-button, #wrapper-firefox-view-button) + #tabbrowser-tabs
@@ -997,6 +979,13 @@ spacer[part="overflow-end-indicator"]
     .tabbrowser-tab[visuallyselected][pinned] .tab-content
     {
         background-position: center top !important;
+    }
+       
+    /* ---------- Pinned Tabs Width ---------- */
+
+    :root
+    {
+        --pinned-tabs-width-offset: 2px;
     }
 }
 
