@@ -461,7 +461,7 @@ spacer[part="overflow-end-indicator"]
 {
     --tab-loading-fill: currentColor !important;
     --tab-attention-icon-color: currentColor !important;
-    --tab-label-mask-size: 8px !important;
+    --tab-label-mask-size: 10px !important;
     color: inherit !important;
     overflow-clip-margin: calc(var(--tab-min-height) / 2) !important;
 }
@@ -611,7 +611,7 @@ spacer[part="overflow-end-indicator"]
 
 .tabbrowser-tab:not([pinned]) :is(.tab-throbber, .tab-icon-pending, .tab-icon-image, .tab-sharing-icon-overlay, .tab-icon-overlay)
 {
-    margin-inline-end: 8px !important;
+    margin-inline-end: 10px !important;
     opacity: 1 !important;    
 }
 
@@ -893,13 +893,6 @@ spacer[part="overflow-end-indicator"]
     .tab-stack::after
     {
         transform: translateX(var(--toolbarbutton-outer-padding));
-    }
-
-    /* ---------- Density ---------- */
-
-    :root[uidensity="compact"]
-    {
-        --tab-min-height: 28px !important;
     }
 }
 
