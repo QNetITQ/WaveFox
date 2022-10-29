@@ -590,8 +590,8 @@ spacer[part="overflow-end-indicator"]
     fill: currentColor !important;
     fill-opacity: 1 !important;
     z-index: 1 !important;
-    top: -6px !important;
-    inset-inline-end: -6px !important;
+    top: -8px !important;
+    inset-inline-end: -8px !important;
 }
 
 .tab-icon-overlay:hover
@@ -641,8 +641,8 @@ spacer[part="overflow-end-indicator"]
 {
     position: relative !important;
     padding: 2px !important;
-    left: 6px !important;
-    top: 6px !important;
+    left: 8px !important;
+    top: 8px !important;
     mask-image: none !important;
     box-sizing: border-box !important;
     z-index: 1 !important;
@@ -667,6 +667,7 @@ spacer[part="overflow-end-indicator"]
 
 .tab-label
 {
+    height: 20px !important;
     line-height: 20px !important;
 }
 
@@ -675,7 +676,7 @@ spacer[part="overflow-end-indicator"]
     -moz-box-ordinal-group: 0 !important;
     height: 16px !important;
     line-height: 16px !important;
-    margin-block: 2px -6px !important;
+    margin-block: 0px -4px !important;
 }
 
 /* ---------------------------------------- Tab Bar ---------------------------------------- */
