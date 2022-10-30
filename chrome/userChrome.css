@@ -506,9 +506,14 @@ spacer[part="overflow-end-indicator"]
     border-radius: 50% !important;
 }
 
-.tab-content
+.tabbrowser-tab[pinned] .tab-content
 {
     padding: 0 calc((var(--tab-min-height) - 16px) / 2 + var(--pinned-tabs-width-offset, 0px)) !important;
+}
+
+.tabbrowser-tab:not([pinned]) .tab-content
+{
+    padding: 0 10px !important;
 }
 
 /* -------------------- Tab Loading Burst -------------------- */
