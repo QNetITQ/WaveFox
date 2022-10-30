@@ -461,7 +461,8 @@ spacer[part="overflow-end-indicator"]
 {
     --tab-loading-fill: currentColor !important;
     --tab-attention-icon-color: currentColor !important;
-    --tab-label-mask-size: 10px !important;
+    --tab-label-mask-size: var(--inline-tab-padding) !important;
+    --inline-tab-padding: 10px !important;
     color: inherit !important;
     overflow-clip-margin: calc(var(--tab-min-height) / 2) !important;
 }
@@ -509,11 +510,6 @@ spacer[part="overflow-end-indicator"]
 .tabbrowser-tab[pinned] .tab-content
 {
     padding: 0 calc((var(--tab-min-height) - 16px) / 2 + var(--pinned-tabs-width-offset, 0px)) !important;
-}
-
-.tabbrowser-tab:not([pinned]) .tab-content
-{
-    padding: 0 10px !important;
 }
 
 /* -------------------- Tab Loading Burst -------------------- */
@@ -616,7 +612,7 @@ spacer[part="overflow-end-indicator"]
 
 .tabbrowser-tab:not([pinned]) :is(.tab-throbber, .tab-icon-pending, .tab-icon-image, .tab-sharing-icon-overlay, .tab-icon-overlay)
 {
-    margin-inline-end: 10px !important;
+    margin-inline-end: var(--inline-tab-padding) !important;
     opacity: 1 !important;    
 }
 
