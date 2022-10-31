@@ -238,6 +238,7 @@
     height: var(--tab-min-height) !important;
     border-radius: 0px !important;
     margin: 0px !important;
+    background-position: center top, center bottom !important;
     background-repeat: no-repeat, no-repeat !important;
 }
 
@@ -246,15 +247,13 @@
     background-image: radial-gradient(circle at center, var(--tab-highlight, transparent) 2px, transparent 2px),
                       radial-gradient(circle at center, var(--identity-icon-color, transparent) 2px, transparent 2px) !important;
     background-size: 4px 4px, 4px 4px !important;
-    background-position: center top, center bottom !important;
 }
 
 .tabbrowser-tab:not([pinned]) .tab-context-line
 {
     background-image: linear-gradient(to right, var(--tab-highlight, transparent), var(--tab-highlight, transparent)),
                       linear-gradient(to right, var(--identity-icon-color, transparent), var(--identity-icon-color, transparent)) !important;
-    background-size: 100% 2px, 100% 2px !important;
-    background-position: left top, left bottom !important;
+    background-size: 90% 2px, 90% 2px !important;
 }
 
 /* -------------------- Selected Tab Highlight -------------------- */
