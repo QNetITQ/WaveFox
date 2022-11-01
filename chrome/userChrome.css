@@ -894,6 +894,13 @@ spacer[part="overflow-end-indicator"]
     {
         transform: translateX(var(--toolbarbutton-outer-padding));
     }
+       
+    /* ---------- Density ---------- */
+
+    :root[uidensity="compact"]
+    {
+        --tab-min-height: 28px !important;
+    }
 }
 
 /* -------------------- Photon -------------------- */
@@ -956,13 +963,6 @@ spacer[part="overflow-end-indicator"]
     .tab-content[pinned][titlechanged]:not([selected])
     {
         background-position: center top !important;
-    }
-       
-    /* ---------- Pinned Tabs Width ---------- */
-
-    :root
-    {
-        --pinned-tabs-width-offset: 2px;
     }
 }
 
@@ -1049,6 +1049,11 @@ spacer[part="overflow-end-indicator"]
     }
 
     /* ---------- Tabs ---------- */
+       
+    :root
+    {
+        --pinned-tabs-width-offset: 2px;
+    }
 
     .tab-background
     {
