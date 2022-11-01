@@ -79,7 +79,7 @@ Requires Linux with transparency support. Tested on Linux Manjaro KDE + ForceBlu
 - `userChrome.LinuxTransparency-Enabled`
 - `gfx.webrender.all` (Required key)
 
-### Mica Imitation
+### Mica Imitation (Deprecated and removed from version 1.5.107 (Firefox 107))
 Simulate Mica on Windows 10. Works only with the system theme.
 ![1](https://user-images.githubusercontent.com/85301851/188290563-a0d8b574-e5e3-40ea-a2c9-f0bfe59a7187.PNG)
 
