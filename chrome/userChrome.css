@@ -638,6 +638,19 @@ spacer[part="overflow-end-indicator"]
     mask-image: url("./special/SVG_Masks/sound_mask_16.svg");
 }
 
+/* ---------- Compact mode ---------- */
+
+:root[uidensity="compact"] .tab-icon-overlay
+{
+    top: -6px !important;
+    inset-inline-end: -6px !important;
+}
+    
+:root[uidensity="compact"] .tabbrowser-tab:is([soundplaying], [muted], [activemedia-blocked]) :is(.tab-icon-image, .tab-sharing-icon-overlay)
+{
+    mask-image: url("./special/SVG_Masks/sound_mask_16_compact.svg");
+}
+
 /* ---------- Picture-In-Picture ---------- */
 
 .tabbrowser-tab[pictureinpicture]:not([busy]) .tab-icon-stack::before
@@ -674,6 +687,24 @@ spacer[part="overflow-end-indicator"]
 .tabbrowser-tab[pictureinpicture]:is([soundplaying], [muted], [activemedia-blocked]) .tab-icon-stack::before
 {
     mask-image: url("./special/SVG_Masks/sound_pip_mask_16.svg");
+}
+
+/* ---------- Compact mode ---------- */
+
+:root[uidensity="compact"] .tabbrowser-tab[pictureinpicture] :is(.tab-icon-image, .tab-sharing-icon-overlay)
+{
+    left: 6px !important;
+    top: 6px !important;
+}
+    
+:root[uidensity="compact"] .tabbrowser-tab[pictureinpicture]:not([soundplaying], [muted], [activemedia-blocked]) .tab-icon-stack::before
+{
+    mask-image: url("./special/SVG_Masks/pip_mask_16_compact.svg");
+}
+
+:root[uidensity="compact"] .tabbrowser-tab[pictureinpicture]:is([soundplaying], [muted], [activemedia-blocked]) .tab-icon-stack::before
+{
+    mask-image: url("./special/SVG_Masks/sound_pip_mask_16_compact.svg");
 }
 
 /* -------------------- Tab Status Bar -------------------- */
