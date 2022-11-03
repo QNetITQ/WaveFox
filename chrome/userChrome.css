@@ -269,9 +269,9 @@
 
 .tabbrowser-tab:not([pinned]) .tab-context-line
 {
-    background-image: linear-gradient(to right, var(--tab-highlight, transparent), var(--tab-highlight, transparent)),
-                      linear-gradient(to right, var(--identity-icon-color, transparent), var(--identity-icon-color, transparent)) !important;
-    background-size: 90% 2px, 90% 2px !important;
+    background-image: linear-gradient(to right, transparent, var(--tab-highlight, transparent), transparent),
+                      linear-gradient(to right, transparent, var(--identity-icon-color, transparent), transparent) !important;
+    background-size: 100% 2px, 100% 2px !important;
 }
 
 /* -------------------- Selected Tab Highlight -------------------- */
@@ -481,7 +481,7 @@ spacer[part="overflow-end-indicator"]
     --tab-label-mask-size: var(--inline-tab-padding) !important;
     --inline-tab-padding: 10px !important;
     color: inherit !important;
-    overflow-clip-margin: calc(var(--tab-min-height) / 2) !important;
+    overflow-clip-margin: var(--tab-min-height) !important;
 }
        
 .tabbrowser-tab[visuallyselected]
