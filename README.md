@@ -75,15 +75,8 @@ Requires Linux with transparency support. Tested on Linux Manjaro KDE + ForceBlu
 
 ![изображение](https://user-images.githubusercontent.com/85301851/173119832-e82bc2f7-eda7-4167-9dcd-ccca50383816.png)
 
-- `userChrome.LinuxSemiTransparency-Enabled`
 - `userChrome.LinuxTransparency-Enabled`
 - `gfx.webrender.all` (Required key)
-
-### Mica Imitation (Deprecated and removed from version 1.5.107 (Firefox 107))
-Simulate Mica on Windows 10. Works only with the system theme.
-![1](https://user-images.githubusercontent.com/85301851/188290563-a0d8b574-e5e3-40ea-a2c9-f0bfe59a7187.PNG)
-
-- `userChrome.MicaImitation-Enabled`
 
 ### Colorways
 [Bringing back your preferred colorways](https://redd.it/uq26ao)
