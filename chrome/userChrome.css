@@ -589,14 +589,6 @@ spacer[part="overflow-end-indicator"]
     fill: currentColor !important;
 }
 
-/* -------------------- Tab Icon Image -------------------- */
-
-.tab-icon-image:not([src], [pinned], [crashed], [pictureinpicture], [busy])[selected],
-.tab-icon-image:not([src], [pinned], [crashed], [sharing], [pictureinpicture], [busy])
-{
-    display: revert !important;
-}
-
 /* -------------------- Media Icons -------------------- */
 
 .tab-icon-overlay
@@ -608,6 +600,10 @@ spacer[part="overflow-end-indicator"]
     fill: currentColor !important;
     fill-opacity: 1 !important;
     z-index: 1 !important;
+}
+
+.tabbrowser-tab:is([image], [sharing], [pinned]) .tab-icon-overlay
+{
     top: -8px !important;
     inset-inline-end: -8px !important;
 }
@@ -633,20 +629,20 @@ spacer[part="overflow-end-indicator"]
     opacity: 1 !important;    
 }
 
-.tabbrowser-tab:is([soundplaying], [muted], [activemedia-blocked]) :is(.tab-icon-image, .tab-sharing-icon-overlay)
+.tabbrowser-tab:is([image], [sharing], [pinned]):is([soundplaying], [muted], [activemedia-blocked]) :is(.tab-icon-image, .tab-sharing-icon-overlay)
 {
     mask-image: url("./special/SVG_Masks/sound_mask_16.svg");
 }
 
 /* ---------- Compact mode ---------- */
 
-:root[uidensity="compact"] .tab-icon-overlay
+:root[uidensity="compact"] .tabbrowser-tab:is([image], [sharing], [pinned]) .tab-icon-overlay
 {
     top: -6px !important;
     inset-inline-end: -6px !important;
 }
 
-:root[uidensity="compact"] .tabbrowser-tab:is([soundplaying], [muted], [activemedia-blocked]) :is(.tab-icon-image, .tab-sharing-icon-overlay)
+:root[uidensity="compact"] .tabbrowser-tab:is([image], [sharing], [pinned]):is([soundplaying], [muted], [activemedia-blocked]) :is(.tab-icon-image, .tab-sharing-icon-overlay)
 {
     mask-image: url("./special/SVG_Masks/sound_mask_16_compact.svg");
 }
