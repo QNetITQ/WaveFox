@@ -658,7 +658,6 @@ spacer[part="overflow-end-indicator"]
 {
     content: "";
     display: block;
-    position: absolute;
     width: 16px;
     height: 16px;
     background-image: url("chrome://global/skin/media/picture-in-picture-open.svg");
@@ -667,6 +666,23 @@ spacer[part="overflow-end-indicator"]
     background-repeat: no-repeat;
     fill: currentColor;
     -moz-context-properties: fill;
+}
+
+.tabbrowser-tab[pictureinpicture]:is([image], [sharing], [pinned], [soundplaying], [muted], [activemedia-blocked]) .tab-icon-stack::before
+{
+    position: absolute;
+}
+
+.tabbrowser-tab[pictureinpicture]:not([image], [sharing], [pinned], [soundplaying], [muted], [activemedia-blocked]) .tab-icon-stack::before
+{
+    position: relative;
+    margin-inline-end: var(--inline-tab-padding);
+}
+
+.tabbrowser-tab[pictureinpicture] .tab-icon-overlay
+{
+    top: -8px !important;
+    inset-inline-end: -8px !important;
 }
 
 .tabbrowser-tab[pictureinpicture] :is(.tab-icon-image, .tab-sharing-icon-overlay)
@@ -680,12 +696,17 @@ spacer[part="overflow-end-indicator"]
     z-index: 1 !important;
 }
 
-.tabbrowser-tab[pictureinpicture]:not([soundplaying], [muted], [activemedia-blocked]) .tab-icon-stack::before
+.tabbrowser-tab[pictureinpicture]:not([image], [sharing], [pinned]):is([soundplaying], [muted], [activemedia-blocked]) .tab-icon-stack::before
+{
+    mask-image: url("./special/SVG_Masks/sound_mask_16.svg");
+}
+
+.tabbrowser-tab[pictureinpicture]:is([image], [sharing], [pinned]):not([soundplaying], [muted], [activemedia-blocked]) .tab-icon-stack::before
 {
     mask-image: url("./special/SVG_Masks/pip_mask_16.svg");
 }
 
-.tabbrowser-tab[pictureinpicture]:is([soundplaying], [muted], [activemedia-blocked]) .tab-icon-stack::before
+.tabbrowser-tab[pictureinpicture]:is([image], [sharing], [pinned]):is([soundplaying], [muted], [activemedia-blocked]) .tab-icon-stack::before
 {
     mask-image: url("./special/SVG_Masks/sound_pip_mask_16.svg");
 }
@@ -697,13 +718,18 @@ spacer[part="overflow-end-indicator"]
     left: 6px !important;
     top: 6px !important;
 }
-    
-:root[uidensity="compact"] .tabbrowser-tab[pictureinpicture]:not([soundplaying], [muted], [activemedia-blocked]) .tab-icon-stack::before
+
+:root[uidensity="compact"] .tabbrowser-tab[pictureinpicture]:not([image], [sharing], [pinned]):is([soundplaying], [muted], [activemedia-blocked]) .tab-icon-stack::before
+{
+    mask-image: url("./special/SVG_Masks/sound_mask_16_compact.svg");
+}
+
+:root[uidensity="compact"] .tabbrowser-tab[pictureinpicture]:is([image], [sharing], [pinned]):not([soundplaying], [muted], [activemedia-blocked]) .tab-icon-stack::before
 {
     mask-image: url("./special/SVG_Masks/pip_mask_16_compact.svg");
 }
 
-:root[uidensity="compact"] .tabbrowser-tab[pictureinpicture]:is([soundplaying], [muted], [activemedia-blocked]) .tab-icon-stack::before
+:root[uidensity="compact"] .tabbrowser-tab[pictureinpicture]:is([image], [sharing], [pinned]):is([soundplaying], [muted], [activemedia-blocked]) .tab-icon-stack::before
 {
     mask-image: url("./special/SVG_Masks/sound_pip_mask_16_compact.svg");
 }
