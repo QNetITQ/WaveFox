@@ -548,7 +548,7 @@ spacer[part="overflow-end-indicator"]
         top: 0%;
         left: 0%;
         background-repeat: no-repeat;
-        background-position: center bottom 4px;
+        background-position: center top;
         opacity: 0;
         animation-name: TabLoadingBurst;
         animation-duration: 375ms;
