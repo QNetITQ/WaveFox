@@ -210,7 +210,7 @@
 
 /* ---------------------------------------- Firefox View ---------------------------------------- */
 
-:root :where(#firefox-view-button, #wrapper-firefox-view-button) + #tabbrowser-tabs
+:where(toolbarbutton, toolbarpaletteitem) + #tabbrowser-tabs
 {
     border-inline-start: none !important;
     padding-inline-start: var(--tab-overflow-pinned-tabs-width) !important;
