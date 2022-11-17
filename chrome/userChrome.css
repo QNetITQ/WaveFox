@@ -210,7 +210,7 @@
 
 /* ---------------------------------------- Firefox View ---------------------------------------- */
 
-:root :where(#firefox-view-button, #wrapper-firefox-view-button) + #tabbrowser-tabs
+:where(toolbarbutton, toolbarpaletteitem) + #tabbrowser-tabs
 {
     border-inline-start: none !important;
     padding-inline-start: var(--tab-overflow-pinned-tabs-width) !important;
@@ -611,6 +611,12 @@ spacer[part="overflow-end-indicator"]
     top: -8px !important;
     inset-inline-end: -8px !important;
 }
+       
+.tab-icon-overlay[indicator-replaces-favicon],
+.tab-icon-stack[indicator-replaces-favicon] > :not(.tab-icon-overlay)
+{
+    opacity: 1 !important;
+}
 
 .tab-icon-overlay:hover
 {
@@ -630,7 +636,6 @@ spacer[part="overflow-end-indicator"]
 .tabbrowser-tab:not([pinned]) :is(.tab-throbber, .tab-icon-pending, .tab-icon-image, .tab-sharing-icon-overlay, .tab-icon-overlay)
 {
     margin-inline-end: var(--inline-tab-padding) !important;
-    opacity: 1 !important;    
 }
 
 .tabbrowser-tab:is([soundplaying], [muted], [activemedia-blocked]) :is(.tab-icon-image, .tab-sharing-icon-overlay)
