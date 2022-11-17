@@ -210,7 +210,7 @@
 
 /* ---------------------------------------- Firefox View ---------------------------------------- */
 
-:where(toolbarbutton, toolbarpaletteitem) + #tabbrowser-tabs
+:root :where(#firefox-view-button, #wrapper-firefox-view-button) + #tabbrowser-tabs
 {
     border-inline-start: none !important;
     padding-inline-start: var(--tab-overflow-pinned-tabs-width) !important;
@@ -531,59 +531,55 @@ spacer[part="overflow-end-indicator"]
 
 /* -------------------- Tab Loading Burst -------------------- */
 
-.tab-loading-burst
-{
-    opacity: 0 !important;
-}
-
 @media (prefers-reduced-motion: no-preference)
 {
-    :root[sessionrestored] .tabbrowser-tab:is([bursting], [bursting][notselectedsinceload]) .tab-context-line::before
+    :root[sessionrestored] .tabbrowser-tab:is([bursting], [bursting][notselectedsinceload]) .tab-icon-stack::after
     {
         content: "";
         display: block;
         position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0%;
-        left: 0%;
+        width: var(--tab-min-height);
+        height: var(--tab-min-height);
+        top: calc((var(--tab-min-height) - 16px) / -2);
+        left: calc((var(--tab-min-height) - 16px) / -2);
+        background-image: radial-gradient(circle at center, var(--tab-loading-fill) 2px, transparent 2px),
+                          radial-gradient(circle at center, var(--tab-loading-fill) 2px, transparent 2px),
+                          radial-gradient(circle at center, var(--tab-loading-fill) 2px, transparent 2px),
+                          radial-gradient(circle at center, var(--tab-loading-fill) 2px, transparent 2px);
+        background-size: calc((var(--tab-min-height) - 16px) / 2) calc((var(--tab-min-height) - 16px) / 2);
         background-repeat: no-repeat;
-        background-position: center top;
+        background-position: center top, right center, center bottom, left center;
         opacity: 0;
         animation-name: TabLoadingBurst;
         animation-duration: 375ms;
         animation-timing-function: linear;
     }
 
-    :root[sessionrestored] .tabbrowser-tab[pinned]:is([bursting], [bursting][notselectedsinceload]) .tab-context-line::before
-    {
-        background-image: radial-gradient(circle at center, var(--tab-loading-fill) 2px, transparent 2px);
-        background-size: 4px 4px;
-    }
-
-    :root[sessionrestored] .tabbrowser-tab:not([pinned]):is([bursting], [bursting][notselectedsinceload]) .tab-context-line::before
-    {
-        background-image: linear-gradient(to right, transparent, var(--tab-loading-fill), transparent);
-        background-size: 100% 2px;
-    }
-
     @keyframes TabLoadingBurst
     {
         0%
         {
+            transform: rotateZ(0deg);
             opacity: 0;
         }
 
         50%
         {
+            transform: rotateZ(180deg);
             opacity: 1;
         }
 
         100%
         {
+            transform: rotateZ(360deg);
             opacity: 0;
         }
     }
+}
+
+.tab-loading-burst
+{
+    opacity: 0 !important;
 }
 
 /* -------------------- Tab Icon Indicators -------------------- */
@@ -591,6 +587,14 @@ spacer[part="overflow-end-indicator"]
 .tabbrowser-tab:not([visuallyselected]) .tab-icon-stack[busy] .tab-throbber::before
 {
     fill: currentColor !important;
+}
+
+/* -------------------- Tab Icon Image -------------------- */
+
+.tab-icon-image:not([src], [pinned], [crashed], [pictureinpicture], [busy])[selected],
+.tab-icon-image:not([src], [pinned], [crashed], [sharing], [pictureinpicture], [busy])
+{
+    display: revert !important;
 }
 
 /* -------------------- Media Icons -------------------- */
@@ -604,18 +608,8 @@ spacer[part="overflow-end-indicator"]
     fill: currentColor !important;
     fill-opacity: 1 !important;
     z-index: 1 !important;
-}
-
-.tabbrowser-tab:is([image], [sharing], [pinned]) .tab-icon-overlay
-{
     top: -8px !important;
     inset-inline-end: -8px !important;
-}
-       
-.tab-icon-overlay[indicator-replaces-favicon],
-.tab-icon-stack[indicator-replaces-favicon] > :not(.tab-icon-overlay)
-{
-    opacity: 1 !important;
 }
 
 .tab-icon-overlay:hover
@@ -636,22 +630,23 @@ spacer[part="overflow-end-indicator"]
 .tabbrowser-tab:not([pinned]) :is(.tab-throbber, .tab-icon-pending, .tab-icon-image, .tab-sharing-icon-overlay, .tab-icon-overlay)
 {
     margin-inline-end: var(--inline-tab-padding) !important;
+    opacity: 1 !important;    
 }
 
-.tabbrowser-tab:is([image], [sharing], [pinned]):is([soundplaying], [muted], [activemedia-blocked]) :is(.tab-icon-image, .tab-sharing-icon-overlay)
+.tabbrowser-tab:is([soundplaying], [muted], [activemedia-blocked]) :is(.tab-icon-image, .tab-sharing-icon-overlay)
 {
     mask-image: url("./special/SVG_Masks/sound_mask_16.svg");
 }
 
 /* ---------- Compact mode ---------- */
 
-:root[uidensity="compact"] .tabbrowser-tab:is([image], [sharing], [pinned]) .tab-icon-overlay
+:root[uidensity="compact"] .tab-icon-overlay
 {
     top: -6px !important;
     inset-inline-end: -6px !important;
 }
 
-:root[uidensity="compact"] .tabbrowser-tab:is([image], [sharing], [pinned]):is([soundplaying], [muted], [activemedia-blocked]) :is(.tab-icon-image, .tab-sharing-icon-overlay)
+:root[uidensity="compact"] .tabbrowser-tab:is([soundplaying], [muted], [activemedia-blocked]) :is(.tab-icon-image, .tab-sharing-icon-overlay)
 {
     mask-image: url("./special/SVG_Masks/sound_mask_16_compact.svg");
 }
@@ -662,6 +657,7 @@ spacer[part="overflow-end-indicator"]
 {
     content: "";
     display: block;
+    position: absolute;
     width: 16px;
     height: 16px;
     background-image: url("chrome://global/skin/media/picture-in-picture-open.svg");
@@ -670,23 +666,6 @@ spacer[part="overflow-end-indicator"]
     background-repeat: no-repeat;
     fill: currentColor;
     -moz-context-properties: fill;
-}
-
-.tabbrowser-tab[pictureinpicture]:is([image], [sharing], [pinned], [soundplaying], [muted], [activemedia-blocked]) .tab-icon-stack::before
-{
-    position: absolute;
-}
-
-.tabbrowser-tab[pictureinpicture]:not([image], [sharing], [pinned], [soundplaying], [muted], [activemedia-blocked]) .tab-icon-stack::before
-{
-    position: relative;
-    margin-inline-end: var(--inline-tab-padding);
-}
-
-.tabbrowser-tab[pictureinpicture] .tab-icon-overlay
-{
-    top: -8px !important;
-    inset-inline-end: -8px !important;
 }
 
 .tabbrowser-tab[pictureinpicture] :is(.tab-icon-image, .tab-sharing-icon-overlay)
@@ -700,17 +679,12 @@ spacer[part="overflow-end-indicator"]
     z-index: 1 !important;
 }
 
-.tabbrowser-tab[pictureinpicture]:not([image], [sharing], [pinned]):is([soundplaying], [muted], [activemedia-blocked]) .tab-icon-stack::before
-{
-    mask-image: url("./special/SVG_Masks/sound_mask_16.svg");
-}
-
-.tabbrowser-tab[pictureinpicture]:is([image], [sharing], [pinned]):not([soundplaying], [muted], [activemedia-blocked]) .tab-icon-stack::before
+.tabbrowser-tab[pictureinpicture]:not([soundplaying], [muted], [activemedia-blocked]) .tab-icon-stack::before
 {
     mask-image: url("./special/SVG_Masks/pip_mask_16.svg");
 }
 
-.tabbrowser-tab[pictureinpicture]:is([image], [sharing], [pinned]):is([soundplaying], [muted], [activemedia-blocked]) .tab-icon-stack::before
+.tabbrowser-tab[pictureinpicture]:is([soundplaying], [muted], [activemedia-blocked]) .tab-icon-stack::before
 {
     mask-image: url("./special/SVG_Masks/sound_pip_mask_16.svg");
 }
@@ -722,18 +696,13 @@ spacer[part="overflow-end-indicator"]
     left: 6px !important;
     top: 6px !important;
 }
-
-:root[uidensity="compact"] .tabbrowser-tab[pictureinpicture]:not([image], [sharing], [pinned]):is([soundplaying], [muted], [activemedia-blocked]) .tab-icon-stack::before
-{
-    mask-image: url("./special/SVG_Masks/sound_mask_16_compact.svg");
-}
-
-:root[uidensity="compact"] .tabbrowser-tab[pictureinpicture]:is([image], [sharing], [pinned]):not([soundplaying], [muted], [activemedia-blocked]) .tab-icon-stack::before
+    
+:root[uidensity="compact"] .tabbrowser-tab[pictureinpicture]:not([soundplaying], [muted], [activemedia-blocked]) .tab-icon-stack::before
 {
     mask-image: url("./special/SVG_Masks/pip_mask_16_compact.svg");
 }
 
-:root[uidensity="compact"] .tabbrowser-tab[pictureinpicture]:is([image], [sharing], [pinned]):is([soundplaying], [muted], [activemedia-blocked]) .tab-icon-stack::before
+:root[uidensity="compact"] .tabbrowser-tab[pictureinpicture]:is([soundplaying], [muted], [activemedia-blocked]) .tab-icon-stack::before
 {
     mask-image: url("./special/SVG_Masks/sound_pip_mask_16_compact.svg");
 }
