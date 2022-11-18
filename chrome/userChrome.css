@@ -595,6 +595,27 @@ spacer[part="overflow-end-indicator"]
 .tab-icon-image:not([src], [pinned], [crashed], [sharing], [pictureinpicture], [busy])
 {
     display: revert !important;
+    animation-name: HideGlobeIconAtStart;
+    animation-duration: 200ms;
+    animation-timing-function: linear;
+}
+       
+@keyframes HideGlobeIconAtStart
+{
+    0%
+    {
+        opacity: 0;
+    }
+
+    50%
+    {
+        opacity: 0;
+    }
+
+    100%
+    {
+        opacity: 1;
+    }
 }
 
 /* -------------------- Media Icons -------------------- */
