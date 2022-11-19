@@ -620,7 +620,8 @@ spacer[part="overflow-end-indicator"]
 
 /* -------------------- Media Icons -------------------- */
 
-.tab-icon-overlay
+.tab-icon-overlay:not([crashed]):is([pinned], [sharing]):is([soundplaying], [muted], [activemedia-blocked]),
+.tab-icon-overlay[indicator-replaces-favicon]
 {
     stroke: transparent !important;
     background-color: transparent !important;
@@ -639,12 +640,14 @@ spacer[part="overflow-end-indicator"]
     opacity: 1 !important;
 }
 
-.tab-icon-overlay:hover
+.tab-icon-overlay:not([crashed]):is([pinned], [sharing]):is([soundplaying], [muted], [activemedia-blocked]):hover,
+.tab-icon-overlay[indicator-replaces-favicon]:hover
 {
     background-color: var(--toolbarbutton-hover-background) !important;
 }
 
-.tab-icon-overlay:active
+.tab-icon-overlay:not([crashed]):is([pinned], [sharing]):is([soundplaying], [muted], [activemedia-blocked]):hover:active,
+.tab-icon-overlay[indicator-replaces-favicon]:hover:active
 {
     background-color: var(--toolbarbutton-active-background) !important;
 }
@@ -659,20 +662,21 @@ spacer[part="overflow-end-indicator"]
     margin-inline-end: var(--inline-tab-padding) !important;
 }
 
-.tabbrowser-tab:is([soundplaying], [muted], [activemedia-blocked]) :is(.tab-icon-image, .tab-sharing-icon-overlay)
+.tab-icon-stack:not([crashed]):is([soundplaying], [muted], [activemedia-blocked]) :is(.tab-icon-image, .tab-sharing-icon-overlay)
 {
     mask-image: url("./special/SVG_Masks/sound_mask_16.svg");
 }
 
 /* ---------- Compact mode ---------- */
 
-:root[uidensity="compact"] .tab-icon-overlay
+:root[uidensity="compact"] .tab-icon-overlay:not([crashed]):is([pinned], [sharing]):is([soundplaying], [muted], [activemedia-blocked]),
+:root[uidensity="compact"] .tab-icon-overlay[indicator-replaces-favicon]
 {
     top: -6px !important;
     inset-inline-end: -6px !important;
 }
 
-:root[uidensity="compact"] .tabbrowser-tab:is([soundplaying], [muted], [activemedia-blocked]) :is(.tab-icon-image, .tab-sharing-icon-overlay)
+:root[uidensity="compact"] .tab-icon-stack:not([crashed]):is([soundplaying], [muted], [activemedia-blocked]) :is(.tab-icon-image, .tab-sharing-icon-overlay)
 {
     mask-image: url("./special/SVG_Masks/sound_mask_16_compact.svg");
 }
