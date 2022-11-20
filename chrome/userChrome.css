@@ -533,7 +533,7 @@ spacer[part="overflow-end-indicator"]
 
 @media (prefers-reduced-motion: no-preference)
 {
-    :root[sessionrestored] .tabbrowser-tab:is([bursting], [bursting][notselectedsinceload]) .tab-icon-stack::after
+    .tabbrowser-tab:is([bursting], [bursting][notselectedsinceload]) .tab-icon-stack::after
     {
         content: "";
         display: block;
@@ -734,7 +734,7 @@ spacer[part="overflow-end-indicator"]
 
 /* -------------------- Tab Status Bar -------------------- */
 
-#tabbrowser-tabs:not([secondarytext-unsupported]) .tab-label-container
+.tab-label-container
 {
     height: var(--tab-min-height) !important;
 }
