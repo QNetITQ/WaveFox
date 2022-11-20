@@ -652,17 +652,12 @@ spacer[part="overflow-end-indicator"]
     background-color: var(--toolbarbutton-active-background) !important;
 }
 
-.tab-icon-stack[busy] .tab-icon-overlay
-{
-    display: none !important;
-}
-
 .tabbrowser-tab:not([pinned]) :is(.tab-throbber, .tab-icon-pending, .tab-icon-image, .tab-sharing-icon-overlay, .tab-icon-overlay)
 {
     margin-inline-end: var(--inline-tab-padding) !important;
 }
 
-.tab-icon-stack:not([crashed]):is([soundplaying], [muted], [activemedia-blocked]) :is(.tab-icon-image, .tab-sharing-icon-overlay)
+.tab-icon-stack:not([crashed]):is([soundplaying], [muted], [activemedia-blocked]) :is(.tab-throbber, .tab-icon-pending, .tab-icon-image, .tab-sharing-icon-overlay)
 {
     mask-image: url("./special/SVG_Masks/sound_mask_16.svg");
 }
@@ -676,7 +671,7 @@ spacer[part="overflow-end-indicator"]
     inset-inline-end: -6px !important;
 }
 
-:root[uidensity="compact"] .tab-icon-stack:not([crashed]):is([soundplaying], [muted], [activemedia-blocked]) :is(.tab-icon-image, .tab-sharing-icon-overlay)
+:root[uidensity="compact"] .tab-icon-stack:not([crashed]):is([soundplaying], [muted], [activemedia-blocked]) :is(.tab-throbber, .tab-icon-pending, .tab-icon-image, .tab-sharing-icon-overlay)
 {
     mask-image: url("./special/SVG_Masks/sound_mask_16_compact.svg");
 }
