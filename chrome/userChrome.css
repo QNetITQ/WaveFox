@@ -296,7 +296,7 @@
     
     :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) :is(#titlebar, #nav-bar, #PersonalToolbar)
     {
-        --toolbar-bgcolor: color-mix(in srgb, Field 75%, transparent) !important;
+        --toolbar-bgcolor: color-mix(in srgb, var(--tab-selected-bgcolor, var(--lwt-selected-tab-background-color, Field)) 75%, transparent) !important;
         --toolbar-field-background-color: var(--toolbar-bgcolor) !important;
     }
 }
@@ -308,12 +308,12 @@
     {
         --toolbar-bgcolor: transparent !important;
         --toolbar-bgimage: none !important;
-        --toolbar-field-background-color: Field !important;
+        --toolbar-field-background-color: var(--tab-selected-bgcolor, var(--lwt-selected-tab-background-color, Field)) !important;
     }
        
     :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) .tabbrowser-tab[visuallyselected] .tab-background
     {
-        background-color: Field !important;
+        background-color: var(--tab-selected-bgcolor, var(--lwt-selected-tab-background-color, Field)) !important;
     }
 
     :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) #TabsToolbar::before
