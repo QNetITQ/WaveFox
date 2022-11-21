@@ -1280,7 +1280,7 @@ spacer[part="overflow-end-indicator"]
        
     /* -------------------- Notifications -------------------- */
     
-    #navigator-toolbox :is(named-deck, div)
+    #navigator-toolbox > :is(named-deck, div)
     {
         position: absolute !important;
         width: 100% !important;
