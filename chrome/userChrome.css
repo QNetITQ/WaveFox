@@ -236,7 +236,7 @@
     .tabbrowser-tab[usercontextid] .tab-background::before,
     .tabbrowser-tab[usercontextid] .tab-background::after
     {
-        fill: color-mix(in srgb, var(--identity-icon-color) 25%, transparent);
+        background-color: color-mix(in srgb, var(--identity-icon-color) 25%, transparent);
     }
     
     .tabbrowser-tab[usercontextid] .tab-stack::before,
@@ -1051,6 +1051,8 @@ spacer[part="overflow-end-indicator"]
         content: "";
         display: block;
         position: absolute;
+        width: var(--tab-min-height);
+        height: var(--tab-min-height);
         bottom: 0%;
         pointer-events: none;
     }
@@ -1101,23 +1103,7 @@ spacer[part="overflow-end-indicator"]
     {
         clip-path: var(--left-side-svg) !important;
     }
-}
-
-/* ---------- WaveFox / Australis / Chrome-Old ---------- */
-
-@supports -moz-bool-pref("userChrome.WaveFoxTabs-Enabled") or
-          -moz-bool-pref("userChrome.AustralisTabs-Enabled") or
-          -moz-bool-pref("userChrome.LegacyChromeTabs-Enabled")
-{
-    /* ---------- Rounded Corners (SVG) ---------- */
-
-    .tab-background::before,
-    .tab-background::after
-    {
-        width: var(--tab-min-height);
-        height: var(--tab-min-height);
-    }
-
+       
     /* ---------- Tabs ---------- */
        
     .tabbrowser-tab[pinned] .tab-content
@@ -1129,7 +1115,14 @@ spacer[part="overflow-end-indicator"]
     {
         margin-inline: calc(var(--tab-min-height) / 2) !important;
     }
+}
 
+/* ---------- WaveFox / Australis / Chrome-Old ---------- */
+
+@supports -moz-bool-pref("userChrome.WaveFoxTabs-Enabled") or
+          -moz-bool-pref("userChrome.AustralisTabs-Enabled") or
+          -moz-bool-pref("userChrome.LegacyChromeTabs-Enabled")
+{
     /* ---------- Indents ---------- */
 
     #tabbrowser-tabs:not([overflow]) .tabbrowser-tab[first-visible-tab],
@@ -1150,22 +1143,6 @@ spacer[part="overflow-end-indicator"]
 @supports -moz-bool-pref("userChrome.ChromeTabs-Enabled") or
           -moz-bool-pref("userChrome.EdgeTabs-Enabled")
 {
-    /* ---------- Rounded Corners (SVG) ---------- */
-
-    .tab-background::before,
-    .tab-background::after
-    {
-        width: calc(var(--tab-min-height) / 2);
-        height: var(--tab-min-height);
-    }
-
-    /* ---------- Tabs ---------- */
-
-    .tab-background
-    {
-        margin-inline: calc(var(--tab-min-height) / 4) !important;
-    }
-
     /* ---------- Indents ---------- */
 
     #tabbrowser-tabs:not([overflow]) .tabbrowser-tab[first-visible-tab],
