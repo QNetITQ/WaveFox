@@ -869,7 +869,7 @@ spacer[part="overflow-end-indicator"]
 
 /* -------------------- SVG -------------------- */
 
-@supports -moz-bool-pref("userChrome.WaveFoxTabs-Enabled")
+@supports -moz-bool-pref("userChrome.WaveFoxTabs-Enabled") !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 {
     :root
     {
