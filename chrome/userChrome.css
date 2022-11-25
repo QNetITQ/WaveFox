@@ -867,16 +867,14 @@ spacer[part="overflow-end-indicator"]
 
 /* ---------------------------------------- Derived Styles ---------------------------------------- */
 
-/* -------------------- SVG -------------------- */
-
-@supports -moz-bool-pref("userChrome.WaveFoxTabs-Enabled") !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+@supports -moz-bool-pref("userChrome.WaveFoxTabs-Enabled")
 {
     :root
     {
-        --left-side-svg: url("special/WaveFox/WaveFox_left_corners_of_tabs_36.svg");
-        --right-side-svg: url("special/WaveFox/WaveFox_right_corners_of_tabs_36.svg");
-        --left-side-svg-clipped: url("special/WaveFox/WaveFox_left_corners_of_tabs_36_clipped.svg");
-        --right-side-svg-clipped: url("special/WaveFox/WaveFox_right_corners_of_tabs_36_clipped.svg");
+        --left-side-svg: url("special/svg_collection.svg#WaveFoxLeftSide");
+        --right-side-svg: url("special/svg_collection.svg#WaveFoxRightSide");
+        --left-side-svg-clipped: url("special/svg_collection.svg#WaveFoxLeftSideClipped");
+        --right-side-svg-clipped: url("special/svg_collection.svg#WaveFoxRightSideClipped");
     }
 }
 
@@ -884,10 +882,10 @@ spacer[part="overflow-end-indicator"]
 {
     :root
     {
-        --left-side-svg: url("special/Australis/Australis_left_corners_of_tabs_30.svg");
-        --right-side-svg: url("special/Australis/Australis_right_corners_of_tabs_30.svg");
-        --left-side-svg-clipped: url("special/Australis/Australis_left_corners_of_tabs_30_clipped.svg");
-        --right-side-svg-clipped: url("special/Australis/Australis_right_corners_of_tabs_30_clipped.svg");
+        --left-side-svg: url("special/svg_collection.svg#AustralisLeftSide");
+        --right-side-svg: url("special/svg_collection.svg#AustralisRightSide");
+        --left-side-svg-clipped: url("special/svg_collection.svg#AustralisLeftSideClipped");
+        --right-side-svg-clipped: url("special/svg_collection.svg#AustralisRightSideClipped");
     }
 }
 
@@ -895,10 +893,10 @@ spacer[part="overflow-end-indicator"]
 {
     :root
     {
-        --left-side-svg: url("special/Chrome_Legacy/Chrome_legacy_left_corners_of_tabs_36.svg");
-        --right-side-svg: url("special/Chrome_Legacy/Chrome_legacy_right_corners_of_tabs_36.svg");
-        --left-side-svg-clipped: url("special/Chrome_Legacy/Chrome_legacy_left_corners_of_tabs_36_clipped.svg");
-        --right-side-svg-clipped: url("special/Chrome_Legacy/Chrome_legacy_right_corners_of_tabs_36_clipped.svg");
+        --left-side-svg: url("special/svg_collection.svg#LegacyChromeLeftSide");
+        --right-side-svg: url("special/svg_collection.svg#LegacyChromeRightSide");
+        --left-side-svg-clipped: url("special/svg_collection.svg#LegacyChromeLeftSideClipped");
+        --right-side-svg-clipped: url("special/svg_collection.svg#LegacyChromeRightSideClipped");
     }
 }
 
@@ -906,10 +904,10 @@ spacer[part="overflow-end-indicator"]
 {
     :root
     {
-        --left-side-svg: url("special/Chrome/Chrome_left_corners_of_tabs_36.svg");
-        --right-side-svg: url("special/Chrome/Chrome_right_corners_of_tabs_36.svg");
-        --left-side-svg-clipped: url("special/Chrome/Chrome_left_corners_of_tabs_36_clipped.svg");
-        --right-side-svg-clipped: url("special/Chrome/Chrome_right_corners_of_tabs_36_clipped.svg");
+        --left-side-svg: url("special/svg_collection.svg#ChromeLeftSide");
+        --right-side-svg: url("special/svg_collection.svg#ChromeRightSide");
+        --left-side-svg-clipped: url("special/svg_collection.svg#ChromeLeftSideClipped");
+        --right-side-svg-clipped: url("special/svg_collection.svg#ChromeRightSideClipped");
     }
 }
 
@@ -917,10 +915,10 @@ spacer[part="overflow-end-indicator"]
 {
     :root
     {
-        --left-side-svg: url("special/Edge/Edge_left_corners_of_tabs_32.svg");
-        --right-side-svg: url("special/Edge/Edge_right_corners_of_tabs_32.svg");
-        --left-side-svg-clipped: url("special/Edge/Edge_left_corners_of_tabs_32_clipped.svg");
-        --right-side-svg-clipped: url("special/Edge/Edge_right_corners_of_tabs_32_clipped.svg");
+        --left-side-svg: url("special/svg_collection.svg#EdgeLeftSide");
+        --right-side-svg: url("special/svg_collection.svg#EdgeRightSide");
+        --left-side-svg-clipped: url("special/svg_collection.svg#EdgeLeftSideClipped");
+        --right-side-svg-clipped: url("special/svg_collection.svg#EdgeRightSideClipped");
     }
 }
 
@@ -1051,58 +1049,57 @@ spacer[part="overflow-end-indicator"]
     .tab-background::after
     {
         content: "";
+        display: block;
         position: absolute;
         bottom: 0%;
-        fill: transparent;
-        background-repeat: no-repeat;
         pointer-events: none;
-        -moz-context-properties: fill;
     }
 
     .tab-background::before
     {
         right: 100%;
-        background-image: var(--left-side-svg);
+        clip-path: var(--left-side-svg);
     }
 
     .tab-background::after
     {
         left: 100%;
-        background-image: var(--right-side-svg);
+        clip-path: var(--right-side-svg);
     }
 
     .tabbrowser-tab[visuallyselected] .tab-background::before,
     .tabbrowser-tab[visuallyselected] .tab-background::after
     {
-        fill: var(--toolbar-bgcolor) !important;
+        background-color: var(--toolbar-bgcolor) !important;
+        background-image: var(--toolbar-bgimage) !important;
     }
 
     .tabbrowser-tab:hover .tab-background::before,
     .tabbrowser-tab:hover .tab-background::after
     {
-        fill: var(--toolbarbutton-hover-background);
+        background-color: var(--toolbarbutton-hover-background);
     }
 
     .tabbrowser-tab[multiselected] .tab-background::before,
     .tabbrowser-tab[multiselected] .tab-background::after
     {
-        fill: var(--toolbarbutton-active-background);
+        background-color: var(--toolbarbutton-active-background);
     }
        
     .tabbrowser-tab[beforeselected-visible] .tab-background::after
     {
-        background-image: var(--right-side-svg-clipped);
+        clip-path: var(--right-side-svg-clipped);
     }
 
     .tabbrowser-tab[visuallyselected]:not([hidden]) + .tabbrowser-tab .tab-background::before,
     .tabbrowser-tab[visuallyselected] + .tabbrowser-tab[hidden] + .tabbrowser-tab .tab-background::before
     {
-        background-image: var(--left-side-svg-clipped);
+        clip-path: var(--left-side-svg-clipped);
     }
        
     #tabbrowser-tabs[positionpinnedtabs] .tabbrowser-tab[first-visible-unpinned-tab] .tab-background::before
     {
-        background-image: var(--left-side-svg) !important;
+        clip-path: var(--left-side-svg) !important;
     }
 }
 
@@ -1119,7 +1116,6 @@ spacer[part="overflow-end-indicator"]
     {
         width: var(--tab-min-height);
         height: var(--tab-min-height);
-        background-size: var(--tab-min-height);
     }
 
     /* ---------- Tabs ---------- */
@@ -1161,7 +1157,6 @@ spacer[part="overflow-end-indicator"]
     {
         width: calc(var(--tab-min-height) / 2);
         height: var(--tab-min-height);
-        background-size: calc(var(--tab-min-height) / 2);
     }
 
     /* ---------- Tabs ---------- */
