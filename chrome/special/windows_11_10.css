@@ -62,22 +62,6 @@
             border-bottom-left-radius: 8px !important;
         }
     }
-
-    @supports -moz-bool-pref("userChrome.WaveFoxTabs-Enabled") or
-              -moz-bool-pref("userChrome.AustralisTabs-Enabled") or
-              -moz-bool-pref("userChrome.ChromeTabs-Enabled") or
-              -moz-bool-pref("userChrome.LegacyChromeTabs-Enabled") or
-              -moz-bool-pref("userChrome.EdgeTabs-Enabled")
-    {    
-        @media (prefers-contrast)
-        {
-            :root:not(:-moz-lwtheme) .tabbrowser-tab[visuallyselected] .tab-background::before,
-            :root:not(:-moz-lwtheme) .tabbrowser-tab[visuallyselected] .tab-background::after
-            {
-                fill: color-mix(in srgb, var(--toolbar-bgcolor), white 15%) !important;
-            }
-        }
-    }
     
     @supports -moz-bool-pref("userChrome.RegularMenuIcons-Enabled") or
               -moz-bool-pref("userChrome.FilledMenuIcons-Enabled")
