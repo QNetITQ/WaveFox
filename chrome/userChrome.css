@@ -493,14 +493,17 @@ spacer[part="overflow-end-indicator"]
 .tabbrowser-tab[visuallyselected] .tab-background
 {
     background-color: var(--toolbar-bgcolor) !important;
-    background-image: var(--toolbar-bgimage) !important;
+    background-image: var(--toolbar-bgimage), var(--lwt-header-image, none) !important;
+    background-attachment: scroll, fixed !important;
+    background-position: 0 0, right top !important;
+    background-repeat: repeat-x, no-repeat !important;
+    background-size: auto 100%, auto auto !important;
     filter: var(--special-main-outer-shadow) var(--special-additional-outer-shadow) !important;
 }
 
 .tab-background
 {
     position: relative !important;
-    background-image: none !important;
     box-shadow: none !important;
     opacity: 1 !important;
     border: none !important;
@@ -1073,7 +1076,11 @@ spacer[part="overflow-end-indicator"]
     .tabbrowser-tab[visuallyselected] .tab-background::after
     {
         background-color: var(--toolbar-bgcolor) !important;
-        background-image: var(--toolbar-bgimage) !important;
+        background-image: var(--toolbar-bgimage), var(--lwt-header-image, none) !important;
+        background-attachment: scroll, fixed !important;
+        background-position: 0 0, right top !important;
+        background-repeat: repeat-x, no-repeat !important;
+        background-size: auto 100%, auto auto !important;
     }
 
     .tabbrowser-tab:hover .tab-background::before,
