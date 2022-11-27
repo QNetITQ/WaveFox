@@ -238,7 +238,7 @@
     {
         background-color: color-mix(in srgb, var(--identity-icon-color) 25%, transparent);
     }
-    
+
     .tabbrowser-tab[usercontextid] .tab-stack::before,
     .tabbrowser-tab[usercontextid] .tab-stack::after,
     .tabbrowser-tab[usercontextid] + .tabbrowser-tab .tab-stack::before,
