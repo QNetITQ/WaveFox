@@ -839,10 +839,10 @@ spacer[part="overflow-end-indicator"]
 {
     :root
     {
-        --left-side-svg: url("special/svg_collection.svg#WaveFoxLeftSide");
-        --right-side-svg: url("special/svg_collection.svg#WaveFoxRightSide");
-        --left-side-svg-clipped: url("special/svg_collection.svg#WaveFoxLeftSideClipped");
-        --right-side-svg-clipped: url("special/svg_collection.svg#WaveFoxRightSideClipped");
+        --left-side-svg: url("special/tab_shape_collection.svg#WaveFoxLeftSide");
+        --right-side-svg: url("special/tab_shape_collection.svg#WaveFoxRightSide");
+        --left-side-svg-clipped: url("special/tab_shape_collection.svg#WaveFoxLeftSideClipped");
+        --right-side-svg-clipped: url("special/tab_shape_collection.svg#WaveFoxRightSideClipped");
     }
 }
 
@@ -850,10 +850,10 @@ spacer[part="overflow-end-indicator"]
 {
     :root
     {
-        --left-side-svg: url("special/svg_collection.svg#AustralisLeftSide");
-        --right-side-svg: url("special/svg_collection.svg#AustralisRightSide");
-        --left-side-svg-clipped: url("special/svg_collection.svg#AustralisLeftSideClipped");
-        --right-side-svg-clipped: url("special/svg_collection.svg#AustralisRightSideClipped");
+        --left-side-svg: url("special/tab_shape_collection.svg#AustralisLeftSide");
+        --right-side-svg: url("special/tab_shape_collection.svg#AustralisRightSide");
+        --left-side-svg-clipped: url("special/tab_shape_collection.svg#AustralisLeftSideClipped");
+        --right-side-svg-clipped: url("special/tab_shape_collection.svg#AustralisRightSideClipped");
     }
 }
 
@@ -861,10 +861,10 @@ spacer[part="overflow-end-indicator"]
 {
     :root
     {
-        --left-side-svg: url("special/svg_collection.svg#LegacyChromeLeftSide");
-        --right-side-svg: url("special/svg_collection.svg#LegacyChromeRightSide");
-        --left-side-svg-clipped: url("special/svg_collection.svg#LegacyChromeLeftSideClipped");
-        --right-side-svg-clipped: url("special/svg_collection.svg#LegacyChromeRightSideClipped");
+        --left-side-svg: url("special/tab_shape_collection.svg#LegacyChromeLeftSide");
+        --right-side-svg: url("special/tab_shape_collection.svg#LegacyChromeRightSide");
+        --left-side-svg-clipped: url("special/tab_shape_collection.svg#LegacyChromeLeftSideClipped");
+        --right-side-svg-clipped: url("special/tab_shape_collection.svg#LegacyChromeRightSideClipped");
     }
 }
 
@@ -872,10 +872,10 @@ spacer[part="overflow-end-indicator"]
 {
     :root
     {
-        --left-side-svg: url("special/svg_collection.svg#ChromeLeftSide");
-        --right-side-svg: url("special/svg_collection.svg#ChromeRightSide");
-        --left-side-svg-clipped: url("special/svg_collection.svg#ChromeLeftSideClipped");
-        --right-side-svg-clipped: url("special/svg_collection.svg#ChromeRightSideClipped");
+        --left-side-svg: url("special/tab_shape_collection.svg#ChromeLeftSide");
+        --right-side-svg: url("special/tab_shape_collection.svg#ChromeRightSide");
+        --left-side-svg-clipped: url("special/tab_shape_collection.svg#ChromeLeftSideClipped");
+        --right-side-svg-clipped: url("special/tab_shape_collection.svg#ChromeRightSideClipped");
     }
 }
 
@@ -883,10 +883,10 @@ spacer[part="overflow-end-indicator"]
 {
     :root
     {
-        --left-side-svg: url("special/svg_collection.svg#EdgeLeftSide");
-        --right-side-svg: url("special/svg_collection.svg#EdgeRightSide");
-        --left-side-svg-clipped: url("special/svg_collection.svg#EdgeLeftSideClipped");
-        --right-side-svg-clipped: url("special/svg_collection.svg#EdgeRightSideClipped");
+        --left-side-svg: url("special/tab_shape_collection.svg#EdgeLeftSide");
+        --right-side-svg: url("special/tab_shape_collection.svg#EdgeRightSide");
+        --left-side-svg-clipped: url("special/tab_shape_collection.svg#EdgeLeftSideClipped");
+        --right-side-svg-clipped: url("special/tab_shape_collection.svg#EdgeRightSideClipped");
     }
 }
 
@@ -933,13 +933,6 @@ spacer[part="overflow-end-indicator"]
     .tab-stack::after
     {
         transform: translateX(var(--toolbarbutton-outer-padding));
-    }
-       
-    /* ---------- Density ---------- */
-
-    :root[uidensity="compact"]
-    {
-        --tab-min-height: 28px !important;
     }
 }
 
