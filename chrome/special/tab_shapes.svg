@@ -1,0 +1,309 @@
+<!-- Created by QNetITQ for the WaveFox project -->
+
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 1 1" preserveAspectRatio="none">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- WaveFox -->
+
+<defs>
+    <path id="WaveFoxLeftSide" d=""/>
+    <path id="WaveFoxRightSide" d=""/>
+    <path id="WaveFoxLeftSideClipped" d=""/>
+    <path id="WaveFoxRightSideClipped" d=""/>
+</defs>
+
+<!-- Clip Path Method -->
+
+<clipPath id="ClipPathMethod_WaveFoxLeftSide" clipPathUnits="objectBoundingBox">
+    <use href="#WaveFoxLeftSide"/>
+</clipPath>
+
+<clipPath id="ClipPathMethod_WaveFoxRightSide" clipPathUnits="objectBoundingBox">
+    <use href="#WaveFoxRightSide"/>
+</clipPath>
+
+<clipPath id="ClipPathMethod_WaveFoxLeftSideClipped" clipPathUnits="objectBoundingBox">
+    <use href="#WaveFoxLeftSideClipped"/>
+</clipPath>
+
+<clipPath id="ClipPathMethod_WaveFoxRightSidedClipped" clipPathUnits="objectBoundingBox">
+    <use href="#WaveFoxRightSideClipped"/>
+</clipPath>
+
+<!-- Mask Method -->
+
+<mask id="MaskMethod_WaveFoxLeftSide" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox">
+    <use href="#WaveFoxLeftSide" fill="#ffffff"/>
+</mask>
+
+<mask id="MaskMethod_WaveFoxRightSide" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox">
+    <use href="#WaveFoxRightSide" fill="#ffffff"/>
+</mask>
+
+<mask id="MaskMethod_WaveFoxLeftSideClipped" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox">
+    <use href="#WaveFoxLeftSideClipped" fill="#ffffff"/>
+</mask>
+
+<mask id="MaskMethod_WaveFoxRightSideClipped" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox">
+    <use href="#WaveFoxRightSideClipped" fill="#ffffff"/>
+</mask>
+
+
+
+
+
+
+
+
+
+
+<!-- Australis -->
+
+<defs>
+    <path id="AustralisLeftSide" d=""/>
+    <path id="AustralisRightSide" d=""/>
+    <path id="AustralisLeftSideClipped" d=""/>
+    <path id="AustralisRightSideClipped" d=""/>
+</defs>
+
+<!-- Clip Path Method -->
+
+<clipPath id="ClipPathMethod_AustralisLeftSide" clipPathUnits="objectBoundingBox">
+    <use href="#AustralisLeftSide"/>
+</clipPath>
+
+<clipPath id="ClipPathMethod_AustralisRightSide" clipPathUnits="objectBoundingBox">
+    <use href="#AustralisRightSide"/>
+</clipPath>
+
+<clipPath id="ClipPathMethod_AustralisLeftSideClipped" clipPathUnits="objectBoundingBox">
+    <use href="#AustralisLeftSideClipped"/>
+</clipPath>
+
+<clipPath id="ClipPathMethod_AustralisRightSidedClipped" clipPathUnits="objectBoundingBox">
+    <use href="#AustralisRightSideClipped"/>
+</clipPath>
+
+<!-- Mask Method -->
+
+<mask id="MaskMethod_AustralisLeftSide" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox">
+    <use href="#AustralisLeftSide" fill="#ffffff"/>
+</mask>
+
+<mask id="MaskMethod_AustralisRightSide" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox">
+    <use href="#AustralisRightSide" fill="#ffffff"/>
+</mask>
+
+<mask id="MaskMethod_AustralisLeftSideClipped" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox">
+    <use href="#AustralisLeftSideClipped" fill="#ffffff"/>
+</mask>
+
+<mask id="MaskMethod_AustralisRightSideClipped" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox">
+    <use href="#AustralisRightSideClipped" fill="#ffffff"/>
+</mask>
+
+
+
+
+
+
+
+
+
+
+
+<!-- Chrome (Material 1) -->
+
+<defs>
+    <path id="LegacyChromeLeftSide" d=""/>
+    <path id="LegacyChromeRightSide" d=""/>
+    <path id="LegacyChromeLeftSideClipped" d=""/>
+    <path id="LegacyChromeRightSideClipped" d=""/>
+</defs>
+
+<!-- Clip Path Method -->
+
+<clipPath id="ClipPathMethod_LegacyChromeLeftSide" clipPathUnits="objectBoundingBox">
+    <use href="#LegacyChromeLeftSide"/>
+</clipPath>
+
+<clipPath id="ClipPathMethod_LegacyChromeRightSide" clipPathUnits="objectBoundingBox">
+    <use href="#LegacyChromeRightSide"/>
+</clipPath>
+
+<clipPath id="ClipPathMethod_LegacyChromeLeftSideClipped" clipPathUnits="objectBoundingBox">
+    <use href="#LegacyChromeLeftSideClipped"/>
+</clipPath>
+
+<clipPath id="ClipPathMethod_LegacyChromeRightSidedClipped" clipPathUnits="objectBoundingBox">
+    <use href="#LegacyChromeRightSideClipped"/>
+</clipPath>
+
+<!-- Mask Method -->
+
+<mask id="MaskMethod_LegacyChromeLeftSide" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox">
+    <use href="#LegacyChromeLeftSide" fill="#ffffff"/>
+</mask>
+
+<mask id="MaskMethod_LegacyChromeRightSide" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox">
+    <use href="#LegacyChromeRightSide" fill="#ffffff"/>
+</mask>
+
+<mask id="MaskMethod_LegacyChromeLeftSideClipped" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox">
+    <use href="#LegacyChromeLeftSideClipped" fill="#ffffff"/>
+</mask>
+
+<mask id="MaskMethod_LegacyChromeRightSideClipped" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox">
+    <use href="#LegacyChromeRightSideClipped" fill="#ffffff"/>
+</mask>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Chrome (Material 2) -->
+
+<defs>
+    <path id="ChromeLeftSide" d=""/>
+    <path id="ChromeRightSide" d=""/>
+    <path id="ChromeLeftSideClipped" d=""/>
+    <path id="ChromeRightSideClipped" d=""/>
+</defs>
+
+<!-- Clip Path Method -->
+
+<clipPath id="ClipPathMethod_ChromeLeftSide" clipPathUnits="objectBoundingBox">
+    <use href="#ChromeLeftSide"/>
+</clipPath>
+
+<clipPath id="ClipPathMethod_ChromeRightSide" clipPathUnits="objectBoundingBox">
+    <use href="#ChromeRightSide"/>
+</clipPath>
+
+<clipPath id="ClipPathMethod_ChromeLeftSideClipped" clipPathUnits="objectBoundingBox">
+    <use href="#ChromeLeftSideClipped"/>
+</clipPath>
+
+<clipPath id="ClipPathMethod_ChromeRightSidedClipped" clipPathUnits="objectBoundingBox">
+    <use href="#ChromeRightSideClipped"/>
+</clipPath>
+
+<!-- Mask Method -->
+
+<mask id="MaskMethod_ChromeLeftSide" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox">
+    <use href="#ChromeLeftSide" fill="#ffffff"/>
+</mask>
+
+<mask id="MaskMethod_ChromeRightSide" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox">
+    <use href="#ChromeRightSide" fill="#ffffff"/>
+</mask>
+
+<mask id="MaskMethod_ChromeLeftSideClipped" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox">
+    <use href="#ChromeLeftSideClipped" fill="#ffffff"/>
+</mask>
+
+<mask id="MaskMethod_ChromeRightSideClipped" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox">
+    <use href="#ChromeRightSideClipped" fill="#ffffff"/>
+</mask>
+
+
+
+
+
+
+
+
+
+<!-- Edge -->
+
+<defs>
+    <path id="EdgeLeftSide" d=""/>
+    <path id="EdgeRightSide" d=""/>
+    <path id="EdgeLeftSideClipped" d=""/>
+    <path id="EdgeRightSideClipped" d=""/>
+</defs>
+
+<!-- Clip Path Method -->
+
+<clipPath id="ClipPathMethod_EdgeLeftSide" clipPathUnits="objectBoundingBox">
+    <use href="#EdgeLeftSide"/>
+</clipPath>
+
+<clipPath id="ClipPathMethod_EdgeRightSide" clipPathUnits="objectBoundingBox">
+    <use href="#EdgeRightSide"/>
+</clipPath>
+
+<clipPath id="ClipPathMethod_EdgeLeftSideClipped" clipPathUnits="objectBoundingBox">
+    <use href="#EdgeLeftSideClipped"/>
+</clipPath>
+
+<clipPath id="ClipPathMethod_EdgeRightSidedClipped" clipPathUnits="objectBoundingBox">
+    <use href="#EdgeRightSideClipped"/>
+</clipPath>
+
+<!-- Mask Method -->
+
+<mask id="MaskMethod_EdgeLeftSide" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox">
+    <use href="#EdgeLeftSide" fill="#ffffff"/>
+</mask>
+
+<mask id="MaskMethod_EdgeRightSide" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox">
+    <use href="#EdgeRightSide" fill="#ffffff"/>
+</mask>
+
+<mask id="MaskMethod_EdgeLeftSideClipped" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox">
+    <use href="#EdgeLeftSideClipped" fill="#ffffff"/>
+</mask>
+
+<mask id="MaskMethod_EdgeRightSideClipped" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox">
+    <use href="#EdgeRightSideClipped" fill="#ffffff"/>
+</mask>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</svg>
