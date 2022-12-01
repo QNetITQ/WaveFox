@@ -56,7 +56,7 @@
 ## Optional
 
 ### Windows System Effects
-Works with modern versions of Windows 11 / Windows 10. System effects must be supported on the operating system side. Otherwise, you need third-party software, such as Mica For Everyone. Works only with the system theme.
+Works with modern versions of Windows 11 / Windows 10. System effects must be supported on the operating system side. Otherwise, you need third-party software, such as Mica For Everyone. You also need to disable the accent color in the operating system settings, if it was enabled. Works only with the system theme.
 ![изображение](https://user-images.githubusercontent.com/85301851/160720915-a055134a-357c-44cc-a638-8dd56e869111.png)
 
 Download and install Mica For Everyone from [here](https://github.com/minusium/MicaForEveryone/releases).
