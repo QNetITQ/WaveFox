@@ -839,10 +839,10 @@ spacer[part="overflow-end-indicator"]
 {
     :root
     {
-        --left-side-svg: url("special/tab_shape_collection.svg#WaveFoxLeftSide");
-        --right-side-svg: url("special/tab_shape_collection.svg#WaveFoxRightSide");
-        --left-side-svg-clipped: url("special/tab_shape_collection.svg#WaveFoxLeftSideClipped");
-        --right-side-svg-clipped: url("special/tab_shape_collection.svg#WaveFoxRightSideClipped");
+        --left-side-svg: url("special/tab_shapes.svg#MaskMethod_WaveFoxLeftSide");
+        --right-side-svg: url("special/tab_shapes.svg#MaskMethod_WaveFoxRightSide");
+        --left-side-svg-clipped: url("special/tab_shapes.svg#MaskMethod_WaveFoxLeftSideClipped");
+        --right-side-svg-clipped: url("special/tab_shapes.svg#MaskMethod_WaveFoxRightSideClipped");
     }
 }
 
@@ -850,10 +850,10 @@ spacer[part="overflow-end-indicator"]
 {
     :root
     {
-        --left-side-svg: url("special/tab_shape_collection.svg#AustralisLeftSide");
-        --right-side-svg: url("special/tab_shape_collection.svg#AustralisRightSide");
-        --left-side-svg-clipped: url("special/tab_shape_collection.svg#AustralisLeftSideClipped");
-        --right-side-svg-clipped: url("special/tab_shape_collection.svg#AustralisRightSideClipped");
+        --left-side-svg: url("special/tab_shapes.svg#MaskMethod_AustralisLeftSide");
+        --right-side-svg: url("special/tab_shapes.svg#MaskMethod_AustralisRightSide");
+        --left-side-svg-clipped: url("special/tab_shapes.svg#MaskMethod_AustralisLeftSideClipped");
+        --right-side-svg-clipped: url("special/tab_shapes.svg#MaskMethod_AustralisRightSideClipped");
     }
 }
 
@@ -861,10 +861,10 @@ spacer[part="overflow-end-indicator"]
 {
     :root
     {
-        --left-side-svg: url("special/tab_shape_collection.svg#LegacyChromeLeftSide");
-        --right-side-svg: url("special/tab_shape_collection.svg#LegacyChromeRightSide");
-        --left-side-svg-clipped: url("special/tab_shape_collection.svg#LegacyChromeLeftSideClipped");
-        --right-side-svg-clipped: url("special/tab_shape_collection.svg#LegacyChromeRightSideClipped");
+        --left-side-svg: url("special/tab_shapes.svg#MaskMethod_LegacyChromeLeftSide");
+        --right-side-svg: url("special/tab_shapes.svg#MaskMethod_LegacyChromeRightSide");
+        --left-side-svg-clipped: url("special/tab_shapes.svg#MaskMethod_LegacyChromeLeftSideClipped");
+        --right-side-svg-clipped: url("special/tab_shapes.svg#MaskMethod_LegacyChromeRightSideClipped");
     }
 }
 
@@ -872,10 +872,10 @@ spacer[part="overflow-end-indicator"]
 {
     :root
     {
-        --left-side-svg: url("special/tab_shape_collection.svg#ChromeLeftSide");
-        --right-side-svg: url("special/tab_shape_collection.svg#ChromeRightSide");
-        --left-side-svg-clipped: url("special/tab_shape_collection.svg#ChromeLeftSideClipped");
-        --right-side-svg-clipped: url("special/tab_shape_collection.svg#ChromeRightSideClipped");
+        --left-side-svg: url("special/tab_shapes.svg#MaskMethod_ChromeLeftSide");
+        --right-side-svg: url("special/tab_shapes.svg#MaskMethod_ChromeRightSide");
+        --left-side-svg-clipped: url("special/tab_shapes.svg#MaskMethod_ChromeLeftSideClipped");
+        --right-side-svg-clipped: url("special/tab_shapes.svg#MaskMethod_ChromeRightSideClipped");
     }
 }
 
@@ -883,10 +883,10 @@ spacer[part="overflow-end-indicator"]
 {
     :root
     {
-        --left-side-svg: url("special/tab_shape_collection.svg#EdgeLeftSide");
-        --right-side-svg: url("special/tab_shape_collection.svg#EdgeRightSide");
-        --left-side-svg-clipped: url("special/tab_shape_collection.svg#EdgeLeftSideClipped");
-        --right-side-svg-clipped: url("special/tab_shape_collection.svg#EdgeRightSideClipped");
+        --left-side-svg: url("special/tab_shapes.svg#MaskMethod_EdgeLeftSide");
+        --right-side-svg: url("special/tab_shapes.svg#MaskMethod_EdgeRightSide");
+        --left-side-svg-clipped: url("special/tab_shapes.svg#MaskMethod_EdgeLeftSideClipped");
+        --right-side-svg-clipped: url("special/tab_shapes.svg#MaskMethod_EdgeRightSideClipped");
     }
 }
 
@@ -1019,13 +1019,13 @@ spacer[part="overflow-end-indicator"]
     .tab-background::before
     {
         right: 100%;
-        clip-path: var(--left-side-svg);
+        mask-image: var(--left-side-svg);
     }
 
     .tab-background::after
     {
         left: 100%;
-        clip-path: var(--right-side-svg);
+        mask-image: var(--right-side-svg);
     }
 
     .tabbrowser-tab[visuallyselected] .tab-background::before,
@@ -1049,18 +1049,18 @@ spacer[part="overflow-end-indicator"]
        
     .tabbrowser-tab[beforeselected-visible] .tab-background::after
     {
-        clip-path: var(--right-side-svg-clipped);
+        mask-image: var(--right-side-svg-clipped);
     }
 
     .tabbrowser-tab[visuallyselected]:not([hidden]) + .tabbrowser-tab .tab-background::before,
     .tabbrowser-tab[visuallyselected] + .tabbrowser-tab[hidden] + .tabbrowser-tab .tab-background::before
     {
-        clip-path: var(--left-side-svg-clipped);
+        mask-image: var(--left-side-svg-clipped);
     }
        
     #tabbrowser-tabs[positionpinnedtabs] .tabbrowser-tab[first-visible-unpinned-tab] .tab-background::before
     {
-        clip-path: var(--left-side-svg) !important;
+        mask-image: var(--left-side-svg) !important;
     }
 }
 
