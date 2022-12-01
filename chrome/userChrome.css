@@ -481,7 +481,8 @@ spacer[part="overflow-end-indicator"]
     --tab-label-mask-size: var(--inline-tab-padding) !important;
     --inline-tab-padding: 10px !important;
     color: inherit !important;
-    overflow-clip-margin: var(--tab-min-height) !important;
+    -moz-box-pack: end !important;
+    overflow: visible !important;
 }
        
 .tabbrowser-tab[visuallyselected]
