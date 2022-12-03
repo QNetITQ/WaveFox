@@ -1,6 +1,6 @@
 <!-- Created by QNetITQ for the WaveFox project -->
 
-<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 1 1" preserveAspectRatio="none">
+<svg xmlns="http://www.w3.org/2000/svg">
 
 <!-- WaveFox -->
 
@@ -32,18 +32,22 @@
 <!-- Mask Method -->
 
 <mask id="MaskMethod_WaveFoxLeftSide" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox">
+    <rect x="0" y="0" width="1" height="1" fill="#000000"/>
     <use href="#WaveFoxLeftSide" fill="#ffffff"/>
 </mask>
 
 <mask id="MaskMethod_WaveFoxRightSide" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox">
+    <rect x="0" y="0" width="1" height="1" fill="#000000"/>
     <use href="#WaveFoxRightSide" fill="#ffffff"/>
 </mask>
 
 <mask id="MaskMethod_WaveFoxLeftSideClipped" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox">
+    <rect x="0" y="0" width="1" height="1" fill="#000000"/>
     <use href="#WaveFoxLeftSideClipped" fill="#ffffff"/>
 </mask>
 
 <mask id="MaskMethod_WaveFoxRightSideClipped" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox">
+    <rect x="0" y="0" width="1" height="1" fill="#000000"/>
     <use href="#WaveFoxRightSideClipped" fill="#ffffff"/>
 </mask>
 
@@ -77,18 +81,22 @@
 <!-- Mask Method -->
 
 <mask id="MaskMethod_AustralisLeftSide" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox">
+    <rect x="0" y="0" width="1" height="1" fill="#000000"/>
     <use href="#AustralisLeftSide" fill="#ffffff"/>
 </mask>
 
 <mask id="MaskMethod_AustralisRightSide" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox">
+    <rect x="0" y="0" width="1" height="1" fill="#000000"/>
     <use href="#AustralisRightSide" fill="#ffffff"/>
 </mask>
 
 <mask id="MaskMethod_AustralisLeftSideClipped" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox">
+    <rect x="0" y="0" width="1" height="1" fill="#000000"/>
     <use href="#AustralisLeftSideClipped" fill="#ffffff"/>
 </mask>
 
 <mask id="MaskMethod_AustralisRightSideClipped" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox">
+    <rect x="0" y="0" width="1" height="1" fill="#000000"/>
     <use href="#AustralisRightSideClipped" fill="#ffffff"/>
 </mask>
 
@@ -122,18 +130,22 @@
 <!-- Mask Method -->
 
 <mask id="MaskMethod_LegacyChromeLeftSide" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox">
+    <rect x="0" y="0" width="1" height="1" fill="#000000"/>
     <use href="#LegacyChromeLeftSide" fill="#ffffff"/>
 </mask>
 
 <mask id="MaskMethod_LegacyChromeRightSide" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox">
+    <rect x="0" y="0" width="1" height="1" fill="#000000"/>
     <use href="#LegacyChromeRightSide" fill="#ffffff"/>
 </mask>
 
 <mask id="MaskMethod_LegacyChromeLeftSideClipped" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox">
+    <rect x="0" y="0" width="1" height="1" fill="#000000"/>
     <use href="#LegacyChromeLeftSideClipped" fill="#ffffff"/>
 </mask>
 
 <mask id="MaskMethod_LegacyChromeRightSideClipped" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox">
+    <rect x="0" y="0" width="1" height="1" fill="#000000"/>
     <use href="#LegacyChromeRightSideClipped" fill="#ffffff"/>
 </mask>
 
@@ -167,18 +179,22 @@
 <!-- Mask Method -->
 
 <mask id="MaskMethod_ChromeLeftSide" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox">
+    <rect x="0" y="0" width="1" height="1" fill="#000000"/>
     <use href="#ChromeLeftSide" fill="#ffffff"/>
 </mask>
 
 <mask id="MaskMethod_ChromeRightSide" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox">
+    <rect x="0" y="0" width="1" height="1" fill="#000000"/>
     <use href="#ChromeRightSide" fill="#ffffff"/>
 </mask>
 
 <mask id="MaskMethod_ChromeLeftSideClipped" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox">
+    <rect x="0" y="0" width="1" height="1" fill="#000000"/>
     <use href="#ChromeLeftSideClipped" fill="#ffffff"/>
 </mask>
 
 <mask id="MaskMethod_ChromeRightSideClipped" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox">
+    <rect x="0" y="0" width="1" height="1" fill="#000000"/>
     <use href="#ChromeRightSideClipped" fill="#ffffff"/>
 </mask>
 
@@ -212,18 +228,22 @@
 <!-- Mask Method -->
 
 <mask id="MaskMethod_EdgeLeftSide" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox">
+    <rect x="0" y="0" width="1" height="1" fill="#000000"/>
     <use href="#EdgeLeftSide" fill="#ffffff"/>
 </mask>
 
 <mask id="MaskMethod_EdgeRightSide" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox">
+    <rect x="0" y="0" width="1" height="1" fill="#000000"/>
     <use href="#EdgeRightSide" fill="#ffffff"/>
 </mask>
 
 <mask id="MaskMethod_EdgeLeftSideClipped" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox">
+    <rect x="0" y="0" width="1" height="1" fill="#000000"/>
     <use href="#EdgeLeftSideClipped" fill="#ffffff"/>
 </mask>
 
 <mask id="MaskMethod_EdgeRightSideClipped" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox">
+    <rect x="0" y="0" width="1" height="1" fill="#000000"/>
     <use href="#EdgeRightSideClipped" fill="#ffffff"/>
 </mask>
 
