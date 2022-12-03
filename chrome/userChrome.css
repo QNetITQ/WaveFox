@@ -660,7 +660,7 @@ spacer[part="overflow-end-indicator"]
 
 .tab-icon-stack:not([crashed]):is([soundplaying], [muted], [activemedia-blocked]) :is(.tab-throbber, .tab-icon-pending, .tab-icon-image, .tab-sharing-icon-overlay)
 {
-    mask-image: url("./special/SVG_Masks/sound_mask_16.svg");
+    mask-image: url("special/tab_icon_masks.svg#SoundMask");
 }
 
 /* ---------- Picture-In-Picture ---------- */
@@ -693,12 +693,12 @@ spacer[part="overflow-end-indicator"]
 
 .tabbrowser-tab[pictureinpicture]:not([busy], [crashed]):not([soundplaying], [muted], [activemedia-blocked]) .tab-icon-stack::before
 {
-    mask-image: url("./special/SVG_Masks/pip_mask_16.svg");
+    mask-image: url("special/tab_icon_masks.svg#PIPMask");
 }
 
 .tabbrowser-tab[pictureinpicture]:not([busy], [crashed]):is([soundplaying], [muted], [activemedia-blocked]) .tab-icon-stack::before
 {
-    mask-image: url("./special/SVG_Masks/sound_pip_mask_16.svg");
+    mask-image: url("special/tab_icon_masks.svg#PIPMaskWithSound");
 }
 
 /* -------------------- Tab Status Bar -------------------- */
