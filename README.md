@@ -1,7 +1,7 @@
 # *WaveFox*
 
 ##### Minimum Requirements
-- Firefox 106
+- Firefox 108
 - Windows
 - MacOS
 - Linux
@@ -12,7 +12,6 @@
 - Go to `about:config` and activate the keys below
 
   - `toolkit.legacyUserProfileCustomizations.stylesheets`
-  - `svg.context-properties.content.enabled`
   - `layout.css.color-mix.enabled`
   
 - Specify the desired shape of the tabs.
