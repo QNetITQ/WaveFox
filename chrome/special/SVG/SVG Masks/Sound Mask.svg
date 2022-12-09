@@ -1,0 +1,16 @@
+<!-- Created by QNetITQ for the WaveFox project -->
+
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 1 1" preserveAspectRatio="none">
+
+    <defs>
+        <circle id="Sound" cx="1" cy="0" r="0.5"/>
+        <rect id="Background" x="0" y="0" width="1" height="1" fill="#000000"/>
+    </defs>
+
+    <clipPath id="ClipPath" clipPathUnits="objectBoundingBox">
+        <use href="#Sound"/>
+    </clipPath>
+
+    <use clip-path="url(#ClipPath)" href="#Background"/>
+
+</svg>
