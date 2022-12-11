@@ -1,16 +1,11 @@
 <!-- Created by QNetITQ for the WaveFox project -->
 
-<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 1 1" preserveAspectRatio="none" >
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 1 1" preserveAspectRatio="none">
 
-    <defs>
-        <path id="LegacyChromeRightSide" d="M 1,1 H 0.75 L 0.25,0 H 0 v 1 z" />
-        <rect id="Background" x="0" y="0" width="1" height="1" fill="context-fill" />
-    </defs>
+    <path id="SVG" d="M 1,1 H 0.75 L 0.25,0 H 0 v 1 z"/>
 
-    <clipPath id="ClipPath" clipPathUnits="objectBoundingBox" >
-        <use href="#LegacyChromeRightSide" />
+    <clipPath id="ClipPath" clipPathUnits="objectBoundingBox">
+        <use href="#SVG"/>
     </clipPath>
-
-    <use clip-path="url(#ClipPath)" href="#Background" />
 
 </svg>
