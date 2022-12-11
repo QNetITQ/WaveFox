@@ -1,16 +1,11 @@
 <!-- Created by QNetITQ for the WaveFox project -->
 
-<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 1 1" preserveAspectRatio="none" >
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 1 1" preserveAspectRatio="none">
 
-    <defs>
-        <path id="AustralisRightSide" d="M 0.05,0 H 0 V 1 H 1 C 0.72917542,0.98171903 0.6146904,0.83141427 0.56500003,0.54806327 0.53180003,0.3585821 0.515,9.9147133e-4 0.05,0 Z" />
-        <rect id="Background" x="0" y="0" width="1" height="1" fill="context-fill" />
-    </defs>
+    <path id="SVG" fill="context-fill" d="M 0.05,0 H 0 V 1 H 1 C 0.72917542,0.98171903 0.6146904,0.83141427 0.56500003,0.54806327 0.53180003,0.3585821 0.515,9.9147133e-4 0.05,0 Z"/>
 
-    <clipPath id="ClipPath" clipPathUnits="objectBoundingBox" >
-        <use href="#AustralisRightSide" />
+    <clipPath id="ClipPath" clipPathUnits="objectBoundingBox">
+        <use href="#SVG"/>
     </clipPath>
-
-    <use clip-path="url(#ClipPath)" href="#Background" />
 
 </svg>
