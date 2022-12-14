@@ -1,0 +1,16 @@
+<!-- Created by QNetITQ for the WaveFox project -->
+
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 1 1" preserveAspectRatio="none">
+
+    <defs>
+        <rect id="Rect1" x="0.5" y="0" width="0.5" height="1"/>
+        <rect id="Rect2" x="0" y="0" width="1" height="1"/>
+    </defs>
+
+    <clipPath id="ClipPath" clipPathUnits="objectBoundingBox">
+        <use href="#Rect1"/>
+    </clipPath>
+
+    <use clip-path="url(#ClipPath)" href="#Rect2" fill="#000000"/>
+
+</svg>
