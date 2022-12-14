@@ -3,7 +3,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 1 1" preserveAspectRatio="none">
 
     <defs>
-        <path id="Path" d=""/>
+        <path id="Path" d="M 0.05,0 H 0 V 1 H 1 C 0.72917542,0.98171903 0.6146904,0.83141427 0.56500003,0.54806327 0.53180003,0.3585821 0.515,9.9147133e-4 0.05,0 Z"/>
     </defs>
 
     <use href="#Path" fill="context-fill"/>
