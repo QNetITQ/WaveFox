@@ -849,10 +849,10 @@ spacer[part="overflow-end-indicator"]
 {
     :root
     {
-        --left-side-svg: url("special/tab_shapes.svg#MaskMethod_WaveFoxLeftSide");
-        --right-side-svg: url("special/tab_shapes.svg#MaskMethod_WaveFoxRightSide");
-        --left-side-svg-clipped: url("special/tab_shapes.svg#MaskMethod_WaveFoxLeftSideClipped");
-        --right-side-svg-clipped: url("special/tab_shapes.svg#MaskMethod_WaveFoxRightSideClipped");
+        --left-side-svg: url("special/SVG/WaveFox/Left_Corners.svg");
+        --right-side-svg: url("special/SVG/WaveFox/Right_Corners.svg");
+        --left-side-svg-clipped: url("special/SVG/WaveFox/Left_Corners_Clipped.svg");
+        --right-side-svg-clipped: url("special/SVG/WaveFox/Right_Corners_Clipped.svg");
     }
 }
 
@@ -860,10 +860,10 @@ spacer[part="overflow-end-indicator"]
 {
     :root
     {
-        --left-side-svg: url("special/tab_shapes.svg#MaskMethod_AustralisLeftSide");
-        --right-side-svg: url("special/tab_shapes.svg#MaskMethod_AustralisRightSide");
-        --left-side-svg-clipped: url("special/tab_shapes.svg#MaskMethod_AustralisLeftSideClipped");
-        --right-side-svg-clipped: url("special/tab_shapes.svg#MaskMethod_AustralisRightSideClipped");
+        --left-side-svg: url("special/SVG/Firefox_(Australis)/Left_Corners.svg");
+        --right-side-svg: url("special/SVG/Firefox_(Australis)/Right_Corners.svg");
+        --left-side-svg-clipped: url("special/SVG/Firefox_(Australis)/Left_Corners_Clipped.svg");
+        --right-side-svg-clipped: url("special/SVG/Firefox_(Australis)/Right_Corners_Clipped.svg");
     }
 }
 
@@ -871,10 +871,10 @@ spacer[part="overflow-end-indicator"]
 {
     :root
     {
-        --left-side-svg: url("special/tab_shapes.svg#MaskMethod_LegacyChromeLeftSide");
-        --right-side-svg: url("special/tab_shapes.svg#MaskMethod_LegacyChromeRightSide");
-        --left-side-svg-clipped: url("special/tab_shapes.svg#MaskMethod_LegacyChromeLeftSideClipped");
-        --right-side-svg-clipped: url("special/tab_shapes.svg#MaskMethod_LegacyChromeRightSideClipped");
+        --left-side-svg: url("special/SVG/Chrome_(Material_1)/Left_Corners.svg");
+        --right-side-svg: url("special/SVG/Chrome_(Material_1)/Right_Corners.svg");
+        --left-side-svg-clipped: url("special/SVG/Chrome_(Material_1)/Left_Corners_Clipped.svg");
+        --right-side-svg-clipped: url("special/SVG/Chrome_(Material_1)/Right_Corners_Clipped.svg");
     }
 }
 
@@ -882,10 +882,10 @@ spacer[part="overflow-end-indicator"]
 {
     :root
     {
-        --left-side-svg: url("special/tab_shapes.svg#MaskMethod_ChromeLeftSide");
-        --right-side-svg: url("special/tab_shapes.svg#MaskMethod_ChromeRightSide");
-        --left-side-svg-clipped: url("special/tab_shapes.svg#MaskMethod_ChromeLeftSideClipped");
-        --right-side-svg-clipped: url("special/tab_shapes.svg#MaskMethod_ChromeRightSideClipped");
+        --left-side-svg: url("special/SVG/Chrome_(Material_2)/Left_Corners.svg");
+        --right-side-svg: url("special/SVG/Chrome_(Material_2)/Right_Corners.svg");
+        --left-side-svg-clipped: url("special/SVG/Chrome_(Material_2)/Left_Corners_Clipped.svg");
+        --right-side-svg-clipped: url("special/SVG/Chrome_(Material_2)/Right_Corners_Clipped.svg");
     }
 }
 
@@ -893,10 +893,10 @@ spacer[part="overflow-end-indicator"]
 {
     :root
     {
-        --left-side-svg: url("special/tab_shapes.svg#MaskMethod_EdgeLeftSide");
-        --right-side-svg: url("special/tab_shapes.svg#MaskMethod_EdgeRightSide");
-        --left-side-svg-clipped: url("special/tab_shapes.svg#MaskMethod_EdgeLeftSideClipped");
-        --right-side-svg-clipped: url("special/tab_shapes.svg#MaskMethod_EdgeRightSideClipped");
+        --left-side-svg: url("special/SVG/Edge_2020_(Fluent)/Left_Corners.svg");
+        --right-side-svg: url("special/SVG/Edge_2020_(Fluent)/Right_Corners.svg");
+        --left-side-svg-clipped: url("special/SVG/Edge_2020_(Fluent)/Left_Corners_Clipped.svg");
+        --right-side-svg-clipped: url("special/SVG/Edge_2020_(Fluent)/Right_Corners_Clipped.svg");
     }
 }
 
