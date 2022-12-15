@@ -236,7 +236,7 @@
     .tabbrowser-tab[usercontextid] .tab-background::before,
     .tabbrowser-tab[usercontextid] .tab-background::after
     {
-        background-color: color-mix(in srgb, var(--identity-icon-color) 25%, transparent);
+        fill: color-mix(in srgb, var(--identity-icon-color) 25%, transparent);
     }
 
     .tabbrowser-tab[usercontextid] .tab-stack::before,
@@ -481,8 +481,7 @@ spacer[part="overflow-end-indicator"]
     --tab-label-mask-size: var(--inline-tab-padding) !important;
     --inline-tab-padding: 10px !important;
     color: inherit !important;
-    -moz-box-pack: end !important;
-    overflow: visible !important;
+    overflow-clip-margin: var(--tab-min-height) !important;
 }
        
 .tabbrowser-tab[visuallyselected]
@@ -523,6 +522,16 @@ spacer[part="overflow-end-indicator"]
     width: 24px !important;
     padding: 7px !important;
     border-radius: 50% !important;
+}
+
+.close-icon:hover
+{
+    background-color: var(--toolbarbutton-hover-background) !important;
+}
+
+.close-icon:hover:active
+{
+    background-color: var(--toolbarbutton-active-background) !important;
 }
 
 .tabbrowser-tab[pinned] .tab-content
@@ -1014,54 +1023,56 @@ spacer[part="overflow-end-indicator"]
         display: block;
         position: absolute;
         bottom: 0%;
+        fill: transparent;
+        background-size: 100% 100%;
         pointer-events: none;
+        -moz-context-properties: fill;
     }
 
     .tab-background::before
     {
         right: 100%;
-        mask-image: var(--left-side-svg);
+        background-image: var(--left-side-svg);
     }
 
     .tab-background::after
     {
         left: 100%;
-        mask-image: var(--right-side-svg);
+        background-image: var(--right-side-svg);
     }
 
     .tabbrowser-tab[visuallyselected] .tab-background::before,
     .tabbrowser-tab[visuallyselected] .tab-background::after
     {
-        background-color: var(--toolbar-bgcolor) !important;
-        background-image: var(--toolbar-bgimage) !important;
+        fill: var(--toolbar-bgcolor) !important;
     }
 
     .tabbrowser-tab:hover .tab-background::before,
     .tabbrowser-tab:hover .tab-background::after
     {
-        background-color: var(--toolbarbutton-hover-background);
+        fill: var(--toolbarbutton-hover-background);
     }
 
     .tabbrowser-tab[multiselected] .tab-background::before,
     .tabbrowser-tab[multiselected] .tab-background::after
     {
-        background-color: var(--toolbarbutton-active-background);
+        fill: var(--toolbarbutton-active-background);
     }
        
     .tabbrowser-tab[beforeselected-visible] .tab-background::after
     {
-        mask-image: var(--right-side-svg-clipped);
+        background-image: var(--right-side-svg-clipped);
     }
 
     .tabbrowser-tab[visuallyselected]:not([hidden]) + .tabbrowser-tab .tab-background::before,
     .tabbrowser-tab[visuallyselected] + .tabbrowser-tab[hidden] + .tabbrowser-tab .tab-background::before
     {
-        mask-image: var(--left-side-svg-clipped);
+        background-image: var(--left-side-svg-clipped);
     }
        
     #tabbrowser-tabs[positionpinnedtabs] .tabbrowser-tab[first-visible-unpinned-tab] .tab-background::before
     {
-        mask-image: var(--left-side-svg) !important;
+        background-image: var(--left-side-svg) !important;
     }
 }
 
