@@ -2,15 +2,11 @@
 
 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 1 1" preserveAspectRatio="none">
 
-    <defs>
-        <rect id="Rect1" x="0.5" y="0.5" width="0.5" height="0.5"/>
-        <rect id="Rect2" x="0" y="0" width="1" height="1"/>
-    </defs>
+    <mask id="Mask" maskContentUnits="objectBoundingBox">
+        <rect x="0" y="0" width="1" height="1" fill="#ffffff"/>
+        <rect x="0.5" y="0.5" width="0.5" height="0.5" fill="#000000"/>
+    </mask>
 
-    <clipPath id="ClipPath" clipPathUnits="objectBoundingBox">
-        <use href="#Rect1"/>
-    </clipPath>
-
-    <use clip-path="url(#ClipPath)" href="#Rect2" fill="#000000"/>
+    <rect x="0" y="0" width="1" height="1" fill="#000000" mask="url(#Mask)"/>
 
 </svg>
