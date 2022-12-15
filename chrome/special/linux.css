@@ -1,5 +1,11 @@
 @media (-moz-platform: linux)
 {
+
+    :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) .tabbrowser-tab[visuallyselected] .tab-background::before,
+    :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) .tabbrowser-tab[visuallyselected] .tab-background::after
+    {
+        fill: color-mix(in srgb, var(--toolbar-bgcolor), white 7.5%) !important;
+    }
     
     @supports -moz-bool-pref("userChrome.RegularMenuIcons-Enabled") or
               -moz-bool-pref("userChrome.FilledMenuIcons-Enabled")
