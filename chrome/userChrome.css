@@ -222,6 +222,7 @@
     background-color: var(--toolbarbutton-active-background) !important;
     background-image: none !important;
     box-shadow: none !important;
+    outline: none !important;
 }
 
 /* ---------------------------------------- Additional Container Indicator ---------------------------------------- */
@@ -521,7 +522,6 @@ spacer[part="overflow-end-indicator"]
 {
     width: 24px !important;
     padding: 7px !important;
-    border-radius: 50% !important;
 }
 
 .close-icon:hover
@@ -1154,6 +1154,19 @@ spacer[part="overflow-end-indicator"]
     .tabbrowser-tab[last-visible-tab]
     {
         margin-right: calc(var(--tab-min-height) / 4) !important;
+    }
+}
+
+/* ---------------------------------------- Rounded Elements ---------------------------------------- */
+
+@supports -moz-bool-pref("userChrome.WaveFoxTabs-Enabled") or
+          -moz-bool-pref("userChrome.AustralisTabs-Enabled") or
+          -moz-bool-pref("userChrome.LegacyChromeTabs-Enabled") or
+          -moz-bool-pref("userChrome.ChromeTabs-Enabled")
+{
+    #TabsToolbar :is(#tabs-newtab-button, #new-tab-button, #firefox-view-button > .toolbarbutton-icon, .tab-close-button)
+    {
+        border-radius: 50% !important;
     }
 }
 
