@@ -239,14 +239,6 @@
     {
         fill: color-mix(in srgb, var(--identity-icon-color) 25%, transparent);
     }
-
-    .tabbrowser-tab[usercontextid] .tab-stack::before,
-    .tabbrowser-tab[usercontextid] .tab-stack::after,
-    .tabbrowser-tab[usercontextid] + .tabbrowser-tab .tab-stack::before,
-    .tabbrowser-tab[usercontextid] + .tabbrowser-tab[hidden] + .tabbrowser-tab .tab-stack::before
-    {
-        opacity: 0 !important;
-    }
 }
 
 /* ---------------------------------------- Selected Tab Highlight / Container Indicators ---------------------------------------- */
@@ -482,7 +474,7 @@ spacer[part="overflow-end-indicator"]
     --tab-label-mask-size: var(--inline-tab-padding) !important;
     --inline-tab-padding: 10px !important;
     color: inherit !important;
-    overflow-clip-margin: var(--tab-min-height) !important;
+    overflow: visible !important;
 }
        
 .tabbrowser-tab[visuallyselected]
