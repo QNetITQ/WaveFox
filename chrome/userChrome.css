@@ -781,6 +781,7 @@ spacer[part="overflow-end-indicator"]
 }
 
 .tabbrowser-tab[first-visible-tab] .tab-stack::before,
+#tabbrowser-tabs[positionpinnedtabs] .tabbrowser-tab[first-visible-unpinned-tab] .tab-stack::before,
 .tab-stack::after
 {
     content: "";
@@ -813,11 +814,6 @@ spacer[part="overflow-end-indicator"]
     .tabbrowser-tab[beforehovered],
     .tabbrowser-tab[multiselected],
     .tabbrowser-tab[before-multiselected]) .tab-stack::after
-{
-    opacity: 0 !important;
-}
-
-#tabbrowser-tabs[overflow] .tabbrowser-tab[last-visible-tab] .tab-stack::after
 {
     opacity: 0 !important;
 }
