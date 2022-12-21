@@ -780,8 +780,6 @@ spacer[part="overflow-end-indicator"]
     margin-right: 1px !important;
 }
 
-.tabbrowser-tab[first-visible-tab] .tab-stack::before,
-#tabbrowser-tabs[positionpinnedtabs] .tabbrowser-tab[first-visible-unpinned-tab] .tab-stack::before,
 .tab-stack::after
 {
     content: "";
@@ -795,25 +793,18 @@ spacer[part="overflow-end-indicator"]
     box-sizing: border-box;
 }
     
-.tab-stack::before
-{
-    right: 100%;
-}
-    
 .tab-stack::after
 {
     left: 100%;
 }
 
 :is(.tabbrowser-tab[selected],
-    .tabbrowser-tab:hover,
-    .tabbrowser-tab[multiselected]) .tab-stack::before,
-:is(.tabbrowser-tab[selected],
     .tabbrowser-tab[beforeselected-visible],
     .tabbrowser-tab:hover,
     .tabbrowser-tab[beforehovered],
     .tabbrowser-tab[multiselected],
-    .tabbrowser-tab[before-multiselected]) .tab-stack::after
+    .tabbrowser-tab[before-multiselected],
+    #tabbrowser-tabs[overflow] .tabbrowser-tab[last-visible-tab]) .tab-stack::after
 {
     opacity: 0 !important;
 }
@@ -893,7 +884,7 @@ spacer[part="overflow-end-indicator"]
     #tabbrowser-tabs[positionpinnedtabs],
     #tabbrowser-tabs[overflow] .tabbrowser-tab[first-visible-unpinned-tab]
     {
-        margin-left: calc(var(--toolbar-start-end-padding) - var(--toolbarbutton-outer-padding) + 1px) !important;
+        margin-left: calc(var(--toolbar-start-end-padding) - var(--toolbarbutton-outer-padding)) !important;
     }
 
     .tabbrowser-tab[last-visible-tab]
@@ -939,7 +930,7 @@ spacer[part="overflow-end-indicator"]
     #tabbrowser-tabs[positionpinnedtabs],
     #tabbrowser-tabs[overflow] .tabbrowser-tab[first-visible-unpinned-tab]
     {
-        margin-left: calc(var(--toolbar-start-end-padding) + 1px) !important;
+        margin-left: var(--toolbar-start-end-padding) !important;
     }
 
     .tabbrowser-tab[last-visible-tab]
@@ -1100,7 +1091,7 @@ spacer[part="overflow-end-indicator"]
     #tabbrowser-tabs[positionpinnedtabs],
     #tabbrowser-tabs[overflow] .tabbrowser-tab[first-visible-unpinned-tab]
     {
-        margin-left: calc(var(--tab-min-height) / 2 + 1px) !important;
+        margin-left: calc(var(--tab-min-height) / 2) !important;
     }
 
     .tabbrowser-tab[last-visible-tab]
@@ -1144,7 +1135,7 @@ spacer[part="overflow-end-indicator"]
     #tabbrowser-tabs[positionpinnedtabs],
     #tabbrowser-tabs[overflow] .tabbrowser-tab[first-visible-unpinned-tab]
     {
-        margin-left: calc(var(--tab-min-height) / 4 + 1px) !important;
+        margin-left: calc(var(--tab-min-height) / 4) !important;
     }
 
     .tabbrowser-tab[last-visible-tab]
