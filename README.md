@@ -100,7 +100,6 @@ It is also possible to turn on the border and the shadow at the same time.
 - `userChrome.MediumShadowSaturation-Enabled`
 - `userChrome.HighShadowSaturation-Enabled`
 - `userChrome.VeryHighShadowSaturation-Enabled`
-  - `userChrome.IncreaseShadowBlur-Enabled` (Increases shadow blur above the default value)
 
 ### Tab Separators
 ![изображение](https://user-images.githubusercontent.com/85301851/152351312-f6ad4578-e7d5-40b7-8b2d-49388a750f54.png)
