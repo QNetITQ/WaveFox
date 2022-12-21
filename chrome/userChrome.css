@@ -104,21 +104,13 @@
 
 /* ---------- Tab Bar Shadow ---------- */
 
-@supports -moz-bool-pref("userChrome.IncreaseShadowBlur-Enabled")
-{
-    :root
-    {
-        --increased-shadow-blur: 8px;
-    }
-}
-
 @media (prefers-color-scheme: light)
 {
     @supports -moz-bool-pref("userChrome.LowShadowSaturation-Enabled")
     {
         :root
         {
-            --additional-shadow-blur: var(--increased-shadow-blur, 4px);
+            --additional-shadow-blur: 4px;
             --additional-shadow-color: rgba(0,0,0,0.1);
         }
     }
@@ -127,7 +119,7 @@
     {
         :root
         {
-            --additional-shadow-blur: var(--increased-shadow-blur, 4px);
+            --additional-shadow-blur: 4px;
             --additional-shadow-color: rgba(0,0,0,0.15);
         }
     }
@@ -136,7 +128,7 @@
     {
         :root
         {
-            --additional-shadow-blur: var(--increased-shadow-blur, 4px);
+            --additional-shadow-blur: 4px;
             --additional-shadow-color: rgba(0,0,0,0.2);
         }
     }
@@ -145,7 +137,7 @@
     {
         :root
         {
-            --additional-shadow-blur: var(--increased-shadow-blur, 4px);
+            --additional-shadow-blur: 4px;
             --additional-shadow-color: rgba(0,0,0,0.25);
         }
     }
@@ -157,7 +149,7 @@
     {
         :root
         {
-            --additional-shadow-blur: var(--increased-shadow-blur, 4px);
+            --additional-shadow-blur: 4px;
             --additional-shadow-color: rgba(0,0,0,0.25);
         }
     }
@@ -166,7 +158,7 @@
     {
         :root
         {
-            --additional-shadow-blur: var(--increased-shadow-blur, 4px);
+            --additional-shadow-blur: 4px;
             --additional-shadow-color: rgba(0,0,0,0.5);
         }
     }
@@ -175,7 +167,7 @@
     {
         :root
         {
-            --additional-shadow-blur: var(--increased-shadow-blur, 4px);
+            --additional-shadow-blur: 4px;
             --additional-shadow-color: rgba(0,0,0,0.75);
         }
     }
@@ -184,7 +176,7 @@
     {
         :root
         {
-            --additional-shadow-blur: var(--increased-shadow-blur, 4px);
+            --additional-shadow-blur: 4px;
             --additional-shadow-color: rgb(0,0,0);
         }
     }
@@ -289,8 +281,9 @@
     
     :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) :is(#titlebar, #nav-bar, #PersonalToolbar)
     {
-        --toolbar-bgcolor: color-mix(in srgb, var(--tab-selected-bgcolor, var(--lwt-selected-tab-background-color, Field)) 75%, transparent) !important;
-        --toolbar-field-background-color: var(--toolbar-bgcolor) !important;
+        --custom-toolbar-bgcolor: color-mix(in srgb, var(--toolbar-bgcolor) 50%, transparent);
+        --toolbar-bgcolor: var(--custom-toolbar-bgcolor) !important;
+        --toolbar-field-background-color: var(--custom-toolbar-bgcolor) !important;
     }
 }
 
