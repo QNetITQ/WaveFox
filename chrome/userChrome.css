@@ -946,6 +946,14 @@ spacer[part="overflow-end-indicator"]
     {
         margin-right: var(--toolbar-start-end-padding) !important;
     }
+
+    /* ---------- Tab Scroll Animation ---------- */
+
+    #tabbrowser-tabs[overflow]:not([movingtab]) .tabbrowser-tab:not([pinned])
+    {
+        padding-inline: var(--toolbar-start-end-padding) !important;
+        margin-inline: calc(-1 * var(--toolbar-start-end-padding)) !important;
+    }
 }
 
 /* -------------------- WaveFox / Photon / Australis / Chrome / Chrome-Old / Edge -------------------- */
