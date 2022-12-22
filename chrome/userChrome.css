@@ -437,7 +437,7 @@ spacer[part="overflow-end-indicator"]
     {
         --drag-space: 8px;
     }
-       
+
     @supports -moz-bool-pref("userChrome.IncreasedDragSpaceAboveTabsWindowedMode-Enabled")
     {
         :root[sizemode="normal"][tabsintitlebar]
