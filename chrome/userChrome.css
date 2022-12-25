@@ -326,6 +326,7 @@
 
 :root
 {
+    --tab-shadow-max-size: 0px !important;
     --tabs-navbar-shadow-size: 0px !important;
 }
 
