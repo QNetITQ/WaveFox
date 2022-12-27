@@ -910,6 +910,7 @@ spacer[part="overflow-end-indicator"]
     .tabbrowser-tab
     {
         padding-inline: var(--toolbarbutton-outer-padding) !important;
+        overflow-clip-margin: calc(var(--toolbar-start-end-padding) - var(--toolbarbutton-outer-padding)) !important;
     }
 
     /* ---------- Separators ---------- */
@@ -937,6 +938,13 @@ spacer[part="overflow-end-indicator"]
 
 @supports -moz-bool-pref("userChrome.PhotonTabs-Enabled")
 {
+    /* ---------- Tabs ---------- */
+
+    .tabbrowser-tab
+    {
+        overflow-clip-margin: var(--toolbar-start-end-padding) !important;
+    }
+
     /* ---------- Indents ---------- */
 
     #tabbrowser-tabs:not([overflow]) .tabbrowser-tab[first-visible-tab],
@@ -1087,6 +1095,11 @@ spacer[part="overflow-end-indicator"]
     }
 
     /* ---------- Tabs ---------- */
+
+    .tabbrowser-tab
+    {
+        overflow-clip-margin: calc(var(--tab-min-height) / 2) !important;
+    }
        
     .tabbrowser-tab[pinned] .tab-content
     {
@@ -1136,6 +1149,11 @@ spacer[part="overflow-end-indicator"]
     }
 
     /* ---------- Tabs ---------- */
+
+    .tabbrowser-tab
+    {
+        overflow-clip-margin: calc(var(--tab-min-height) / 4) !important;
+    }
 
     .tab-background
     {
