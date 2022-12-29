@@ -1225,6 +1225,16 @@ spacer[part="overflow-end-indicator"]
     {
         border-radius: 50% !important;
     }
+
+    :root
+    {
+        --urlbar-icon-border-radius: 50px !important;
+    }
+
+    #urlbar:not([open]) #urlbar-background, #searchbar
+    {
+        border-radius: 50px !important;
+    }
 }
 
 /* ---------------------------------------- One Line ---------------------------------------- */
