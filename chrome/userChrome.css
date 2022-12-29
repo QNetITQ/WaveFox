@@ -468,7 +468,6 @@ spacer[part="overflow-end-indicator"]
     --tab-label-mask-size: var(--inline-tab-padding) !important;
     --inline-tab-padding: 10px !important;
     color: inherit !important;
-    box-sizing: content-box !important;
     overflow-x: clip !important;
     overflow-y: visible !important;
 }
@@ -932,6 +931,11 @@ spacer[part="overflow-end-indicator"]
         padding-inline: var(--toolbar-start-end-padding) !important;
         margin-inline: calc(-1 * (var(--toolbar-start-end-padding) - var(--toolbarbutton-outer-padding))) !important;
     }
+       
+    #tabbrowser-tabs[overflow] .tabbrowser-tab:not([pinned])
+    {
+        box-sizing: content-box !important;
+    }
 }
 
 /* -------------------- Photon -------------------- */
@@ -1188,6 +1192,7 @@ spacer[part="overflow-end-indicator"]
 #tabbrowser-tabs[overflow]:not([movingtab]) .tabbrowser-tab:not([pinned])
 {
     pointer-events: none !important;
+    box-sizing: content-box !important;
 }
 
 #tabbrowser-tabs[overflow]:not([movingtab]) .tabbrowser-tab:not([pinned]) .tab-stack
