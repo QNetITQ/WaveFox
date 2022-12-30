@@ -775,7 +775,7 @@ spacer[part="overflow-end-indicator"]
     margin-right: 1px !important;
 }
 
-.tabbrowser-tab[first-visible-tab] .tab-stack::before,
+/* .tabbrowser-tab[first-visible-tab] .tab-stack::before, */
 #tabbrowser-tabs[positionpinnedtabs] .tabbrowser-tab[first-visible-unpinned-tab] .tab-stack::before,
 .tab-stack::after
 {
@@ -817,7 +817,7 @@ spacer[part="overflow-end-indicator"]
 {
     :root
     {
-        --separators-color-saturation: 0.5;
+        --separators-color-saturation: 0.15;
     }
 }
 
