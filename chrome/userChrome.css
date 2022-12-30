@@ -817,7 +817,7 @@ spacer[part="overflow-end-indicator"]
 {
     :root
     {
-        --separators-color-saturation: 0.15;
+        --separators-color-saturation: 0.2;
     }
 }
 
