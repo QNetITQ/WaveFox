@@ -770,6 +770,22 @@ spacer[part="overflow-end-indicator"]
 
 /* ---------------------------------------- Separators ---------------------------------------- */
 
+@supports -moz-bool-pref("userChrome.TabSeparatorsLowSaturation-Enabled")
+{
+    :root
+    {
+        --separators-color-saturation: 0.25;
+    }
+}
+
+@supports -moz-bool-pref("userChrome.TabSeparatorsRegularSaturation-Enabled")
+{
+    :root
+    {
+        --separators-color-saturation: 0.5;
+    }
+}
+
 .tab-stack
 {
     margin-right: 1px !important;
@@ -810,15 +826,7 @@ spacer[part="overflow-end-indicator"]
     .tabbrowser-tab[multiselected],
     .tabbrowser-tab[before-multiselected]) .tab-stack::after
 {
-    opacity: 0 !important;
-}
-
-@supports -moz-bool-pref("userChrome.TabSeparators-Enabled")
-{
-    :root
-    {
-        --separators-color-saturation: 0.2;
-    }
+    opacity: 0;
 }
 
 /* ---------------------------------------- Derived Styles ---------------------------------------- */
