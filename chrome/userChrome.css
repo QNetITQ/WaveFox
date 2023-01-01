@@ -791,8 +791,8 @@ spacer[part="overflow-end-indicator"]
     margin-right: 1px !important;
 }
 
-/* .tabbrowser-tab[first-visible-tab] .tab-stack::before, */
-#tabbrowser-tabs[positionpinnedtabs] .tabbrowser-tab[first-visible-unpinned-tab] .tab-stack::before,
+#tabbrowser-tabs:not(:first-child) .tabbrowser-tab[first-visible-tab] .tab-stack::before,
+#tabbrowser-tabs[overflow] .tabbrowser-tab[first-visible-unpinned-tab] .tab-stack::before,
 .tab-stack::after
 {
     content: "";
@@ -826,7 +826,7 @@ spacer[part="overflow-end-indicator"]
     .tabbrowser-tab[multiselected],
     .tabbrowser-tab[before-multiselected]) .tab-stack::after
 {
-    opacity: 0;
+    opacity: 0 !important;
 }
 
 /* ---------------------------------------- Derived Styles ---------------------------------------- */
