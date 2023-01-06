@@ -217,6 +217,11 @@
     outline: none !important;
 }
 
+#TabsToolbar #firefox-view-button:hover:not([open]) > .toolbarbutton-icon
+{
+    background-color: var(--toolbarbutton-hover-background) !important;
+}
+
 /* ---------------------------------------- Additional Container Indicator ---------------------------------------- */
 
 @supports -moz-bool-pref("userChrome.AdditionalContainerIndicator-Enabled")
