@@ -104,9 +104,8 @@ It is also possible to turn on the border and the shadow at the same time.
 ### Tab Separators
 ![изображение](https://user-images.githubusercontent.com/85301851/152351312-f6ad4578-e7d5-40b7-8b2d-49388a750f54.png)
 
-- `userChrome.TabSeparators-Enabled` (v1.5.108)
-- `userChrome.TabSeparatorsLowSaturation-Enabled` (v1.5.109)
-- `userChrome.TabSeparatorsRegularSaturation-Enabled` (v1.5.109)
+- `userChrome.TabSeparatorsLowSaturation-Enabled`
+- `userChrome.TabSeparatorsMediumSaturation-Enabled`
 
 ### Menu Density
 By default context menus follow the selected interface density, but it is possible to set a fixed size.
