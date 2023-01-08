@@ -783,7 +783,7 @@ spacer[part="overflow-end-indicator"]
     }
 }
 
-@supports -moz-bool-pref("userChrome.TabSeparatorsRegularSaturation-Enabled")
+@supports -moz-bool-pref("userChrome.TabSeparatorsMediumSaturation-Enabled")
 {
     :root
     {
