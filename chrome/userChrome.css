@@ -897,14 +897,14 @@ spacer[part="overflow-end-indicator"]
 {
     /* ---------- Indents ---------- */
 
-    #tabbrowser-tabs:not([overflow]) .tabbrowser-tab[first-visible-tab],
+    #tabbrowser-tabs:not([overflow]) .tabbrowser-tab:first-of-type,
     #tabbrowser-tabs[positionpinnedtabs],
     #tabbrowser-tabs[overflow] .tabbrowser-tab[first-visible-unpinned-tab]
     {
         margin-left: calc(var(--toolbar-start-end-padding) - var(--toolbarbutton-outer-padding)) !important;
     }
 
-    .tabbrowser-tab[last-visible-tab]
+    .tabbrowser-tab:last-of-type
     {
         margin-right: calc(var(--toolbar-start-end-padding) - var(--toolbarbutton-outer-padding)) !important;
     }
@@ -964,14 +964,14 @@ spacer[part="overflow-end-indicator"]
 
     /* ---------- Indents ---------- */
 
-    #tabbrowser-tabs:not([overflow]) .tabbrowser-tab[first-visible-tab],
+    #tabbrowser-tabs:not([overflow]) .tabbrowser-tab:first-of-type,
     #tabbrowser-tabs[positionpinnedtabs],
     #tabbrowser-tabs[overflow] .tabbrowser-tab[first-visible-unpinned-tab]
     {
         margin-left: var(--toolbar-start-end-padding) !important;
     }
 
-    .tabbrowser-tab[last-visible-tab]
+    .tabbrowser-tab:last-of-type
     {
         margin-right: var(--toolbar-start-end-padding) !important;
     }
@@ -1130,14 +1130,14 @@ spacer[part="overflow-end-indicator"]
        
     /* ---------- Indents ---------- */
 
-    #tabbrowser-tabs:not([overflow]) .tabbrowser-tab[first-visible-tab],
+    #tabbrowser-tabs:not([overflow]) .tabbrowser-tab:first-of-type,
     #tabbrowser-tabs[positionpinnedtabs],
     #tabbrowser-tabs[overflow] .tabbrowser-tab[first-visible-unpinned-tab]
     {
         margin-left: calc(var(--tab-min-height) / 2) !important;
     }
 
-    .tabbrowser-tab[last-visible-tab]
+    .tabbrowser-tab:last-of-type
     {
         margin-right: calc(var(--tab-min-height) / 2) !important;
     }
@@ -1179,14 +1179,14 @@ spacer[part="overflow-end-indicator"]
        
     /* ---------- Indents ---------- */
 
-    #tabbrowser-tabs:not([overflow]) .tabbrowser-tab[first-visible-tab],
+    #tabbrowser-tabs:not([overflow]) .tabbrowser-tab:first-of-type,
     #tabbrowser-tabs[positionpinnedtabs],
     #tabbrowser-tabs[overflow] .tabbrowser-tab[first-visible-unpinned-tab]
     {
         margin-left: calc(var(--tab-min-height) / 4) !important;
     }
 
-    .tabbrowser-tab[last-visible-tab]
+    .tabbrowser-tab:last-of-type
     {
         margin-right: calc(var(--tab-min-height) / 4) !important;
     }
@@ -1218,7 +1218,7 @@ spacer[part="overflow-end-indicator"]
     margin-left: 0px !important;
 }
 
-#tabbrowser-tabs[overflow]:not([movingtab]) .tabbrowser-tab[last-visible-tab]
+#tabbrowser-tabs[overflow]:not([movingtab]) .tabbrowser-tab:last-of-type
 {
     margin-right: 0px !important;
 }
