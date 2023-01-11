@@ -236,6 +236,14 @@
     {
         fill: color-mix(in srgb, var(--identity-icon-color) 25%, transparent);
     }
+
+    .tabbrowser-tab[usercontextid] .tab-stack::before,
+    .tabbrowser-tab[usercontextid] .tab-stack::after,
+    .tabbrowser-tab[usercontextid] + .tabbrowser-tab .tab-stack::before,
+    .tabbrowser-tab[usercontextid] + .tabbrowser-tab[hidden] + .tabbrowser-tab .tab-stack::before
+    {
+        opacity: 0 !important;
+    }
 }
 
 /* ---------------------------------------- Selected Tab Highlight / Container Indicators ---------------------------------------- */
@@ -793,6 +801,63 @@ spacer[part="overflow-end-indicator"]
 
 .tab-stack
 {
+    margin-left: 1px !important;
+}
+
+.tab-stack::before,
+.tabbrowser-tab:last-of-type .tab-stack::after
+{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 1px;
+    height: 50%;
+    border-left: 1px solid currentColor;
+    top: 25%;
+    opacity: var(--separators-color-saturation, 0);
+    box-sizing: border-box;
+}
+    
+.tab-stack::before
+{
+    right: 100%;
+}
+    
+.tab-stack::after
+{
+    left: 100%;
+}
+
+.tabbrowser-tab:is(
+        [selected],
+        [selected]:not([hidden]) + .tabbrowser-tab,
+        [selected] + .tabbrowser-tab[hidden] + .tabbrowser-tab,
+        :hover,
+        :hover + .tabbrowser-tab,
+        :hover + .tabbrowser-tab[hidden] + .tabbrowser-tab,
+        [multiselected],
+        [multiselected] + .tabbrowser-tab,
+        [multiselected] + .tabbrowser-tab[hidden] + .tabbrowser-tab) .tab-stack::before,
+.tabbrowser-tab:is(
+        [selected],
+        :hover,
+        [multiselected]) .tab-stack::after
+{
+    opacity: 0 !important;
+}
+
+.tabbrowser-tab:first-of-type .tab-stack::before,
+.tabbrowser-tab[pinned]:last-of-type .tab-stack::after,
+#tabbrowser-tabs[overflow] .tabbrowser-tab[first-visible-unpinned-tab] .tab-stack::before,
+#tabbrowser-tabs[overflow] .tab-stack::after
+{
+    opacity: 0 !important;
+}
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+.tab-stack
+{
     margin-right: 1px !important;
 }
 
@@ -833,6 +898,8 @@ spacer[part="overflow-end-indicator"]
 {
     opacity: 0 !important;
 }
+
+*/
 
 /* ---------------------------------------- Derived Styles ---------------------------------------- */
 
