@@ -227,24 +227,44 @@
 .tabbrowser-tab[hidden]
 {
     display: -moz-box !important;
-    z-index: -1 !important;
+    pointer-events: none !important;
+}
+
+#tabbrowser-tabs[overflow]:not([movingtab]) .tabbrowser-tab[hidden]:not([pinned]) .tab-stack
+{
+    pointer-events: none !important;
 }
 
 .tabbrowser-tab[hidden] .tab-close-button
 {
-    display: none !important;
+    display: revert !important;
+    pointer-events: auto !important;
 }
 
-.tabbrowser-tab[hidden][visuallyselected] .tab-background
+.tabbrowser-tab[hidden]:not([visuallyselected]) .tab-close-button
 {
-    background-color: var(--toolbarbutton-active-background) !important;
-    background-image: none !important;
+    animation-name: MyHiddenTabAnimation;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
 }
 
-.tabbrowser-tab[hidden][visuallyselected] .tab-background::before,
-.tabbrowser-tab[hidden][visuallyselected] .tab-background::after
+@keyframes MyHiddenTabAnimation
 {
-    fill: var(--toolbarbutton-active-background) !important;
+    0%
+    {
+        background-color: transparent;
+    }
+
+    50%
+    {
+        background-color: color-mix(in srgb, var(--toolbar-field-focus-border-color), transparent);
+    }
+
+    100%
+    {
+        background-color: transparent;
+    }
 }
 
 /* ---------------------------------------- Additional Container Indicator ---------------------------------------- */
