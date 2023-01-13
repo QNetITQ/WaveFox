@@ -848,8 +848,8 @@ spacer[part="overflow-end-indicator"]
     margin-left: 1px !important;
 }
 
-.tab-stack::before,
-.tabbrowser-tab:last-of-type .tab-stack::after
+#tabbrowser-tabs:not([movingtab]) .tab-stack::before,
+#tabbrowser-tabs:not([movingtab]) .tabbrowser-tab:last-of-type .tab-stack::after
 {
     content: "";
     display: block;
