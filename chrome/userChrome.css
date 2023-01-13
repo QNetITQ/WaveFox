@@ -284,8 +284,7 @@
 
     .tabbrowser-tab[usercontextid] .tab-stack::before,
     .tabbrowser-tab[usercontextid] .tab-stack::after,
-    .tabbrowser-tab[usercontextid] + .tabbrowser-tab .tab-stack::before,
-    .tabbrowser-tab[usercontextid] + .tabbrowser-tab[hidden] + .tabbrowser-tab .tab-stack::before
+    .tabbrowser-tab[usercontextid] + .tabbrowser-tab .tab-stack::before
     {
         opacity: 0 !important;
     }
@@ -875,14 +874,11 @@ spacer[part="overflow-end-indicator"]
 
 .tabbrowser-tab:is(
         [selected],
-        [selected]:not([hidden]) + .tabbrowser-tab,
-        [selected] + .tabbrowser-tab[hidden] + .tabbrowser-tab,
+        [selected] + .tabbrowser-tab,
         :hover,
         :hover + .tabbrowser-tab,
-        :hover + .tabbrowser-tab[hidden] + .tabbrowser-tab,
         [multiselected],
-        [multiselected] + .tabbrowser-tab,
-        [multiselected] + .tabbrowser-tab[hidden] + .tabbrowser-tab) .tab-stack::before,
+        [multiselected] + .tabbrowser-tab) .tab-stack::before,
 .tabbrowser-tab:is(
         [selected],
         :hover,
@@ -891,12 +887,14 @@ spacer[part="overflow-end-indicator"]
     opacity: 0 !important;
 }
 
-.tabbrowser-tab:first-of-type .tab-stack::before,
-.tabbrowser-tab[pinned]:last-of-type .tab-stack::after,
-#tabbrowser-tabs[overflow] .tabbrowser-tab[first-visible-unpinned-tab] .tab-stack::before,
-#tabbrowser-tabs[overflow] .tab-stack::after
+#tabbrowser-tabs:first-child .tabbrowser-tab:first-of-type .tab-stack::before
 {
     opacity: 0 !important;
+}
+
+#tabbrowser-tabs[overflow] .tabbrowser-tab[first-visible-unpinned-tab]:not([selected], :hover, [multiselected]) .tab-stack::before
+{
+    opacity: var(--separators-color-saturation, 0) !important;
 }
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
