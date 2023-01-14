@@ -66,15 +66,6 @@
         }
     }
 
-    @media (prefers-contrast)
-    {
-        :root:not(:-moz-lwtheme) .tabbrowser-tab[visuallyselected] .tab-background::before,
-        :root:not(:-moz-lwtheme) .tabbrowser-tab[visuallyselected] .tab-background::after
-        {
-            fill: color-mix(in srgb, var(--toolbar-bgcolor), white 15%) !important;
-        }
-    }
-
     @supports -moz-bool-pref("userChrome.RegularMenuIcons-Enabled") or
               -moz-bool-pref("userChrome.FilledMenuIcons-Enabled")
     {
