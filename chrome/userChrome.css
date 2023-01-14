@@ -533,6 +533,8 @@ spacer[part="overflow-end-indicator"]
 {
     --tab-loading-fill: var(--toolbar-field-focus-border-color) !important;
     color: var(--lwt-tab-text, var(--toolbar-color)) !important;
+    position: relative;
+    z-index: 2;
 }
 
 .tabbrowser-tab[visuallyselected] .tab-background
