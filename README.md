@@ -85,9 +85,13 @@ Requires Linux with transparency support. Tested on Linux Manjaro KDE + ForceBlu
 
 - `userChrome.AdditionalContainerIndicator-Enabled`
 
-### Tab Bar Highlight
-It is also possible to turn on the border and the shadow at the same time.
+
+
+### Tab Frame
 ![изображение](https://user-images.githubusercontent.com/85301851/152011749-4d5619b3-0fd8-40f9-a3dc-96be31839971.png)
+
+##### v1.5.109
+It is also possible to turn on the border and the shadow at the same time.
 
 ##### Border
 - `userChrome.LowBorderSaturation-Enabled`
@@ -100,6 +104,39 @@ It is also possible to turn on the border and the shadow at the same time.
 - `userChrome.MediumShadowSaturation-Enabled`
 - `userChrome.HighShadowSaturation-Enabled`
 - `userChrome.VeryHighShadowSaturation-Enabled`
+
+##### v1.5.110
+The tab frame consists of type, color, and saturation. The settings are different for light and dark theme. Doesn't work with AMO themes.
+
+##### Light Theme
+
+###### TabFrameType
+- `userChrome.LightTheme.TabFrameType.Border.Enabled`
+- `userChrome.LightTheme.TabFrameType.Shadow.Enabled`
+###### TabFrameColor
+- `userChrome.LightTheme.TabFrameColor.Auto.Enabled`
+- `userChrome.LightTheme.TabFrameColor.White.Enabled`
+- `userChrome.LightTheme.TabFrameColor.Black.Enabled`
+###### TabFrameSaturation
+- `userChrome.LightTheme.TabFrameSaturation.Low.Enabled`
+- `userChrome.LightTheme.TabFrameSaturation.Medium.Enabled`
+- `userChrome.LightTheme.TabFrameSaturation.High.Enabled`
+- `userChrome.LightTheme.TabFrameSaturation.VeryHigh.Enabled`
+
+##### Dark Theme
+
+###### TabFrameType
+- `userChrome.DarkTheme.TabFrameType.Border.Enabled`
+- `userChrome.DarkTheme.TabFrameType.Shadow.Enabled`
+###### TabFrameColor
+- `userChrome.DarkTheme.TabFrameColor.Auto.Enabled`
+- `userChrome.DarkTheme.TabFrameColor.White.Enabled`
+- `userChrome.DarkTheme.TabFrameColor.Black.Enabled`
+###### TabFrameSaturation
+- `userChrome.DarkTheme.TabFrameSaturation.Low.Enabled`
+- `userChrome.DarkTheme.TabFrameSaturation.Medium.Enabled`
+- `userChrome.DarkTheme.TabFrameSaturation.High.Enabled`
+- `userChrome.DarkTheme.TabFrameSaturation.VeryHigh.Enabled`
 
 ### Tab Separators
 ![изображение](https://user-images.githubusercontent.com/85301851/152351312-f6ad4578-e7d5-40b7-8b2d-49388a750f54.png)
