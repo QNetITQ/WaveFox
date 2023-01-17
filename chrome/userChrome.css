@@ -29,31 +29,9 @@ and
            -moz-bool-pref("userChrome.LightTheme.TabFrameSaturation.VeryHigh.Enabled")
           )
           )
-or
-          (
-          (
-           -moz-bool-pref("userChrome.DarkTheme.TabFrameType.Border.Enabled")           or
-           -moz-bool-pref("userChrome.DarkTheme.TabFrameType.Shadow.Enabled")
-          )
-and
-          (
-           -moz-bool-pref("userChrome.DarkTheme.TabFrameColor.Auto.Enabled")            or
-           -moz-bool-pref("userChrome.DarkTheme.TabFrameColor.White.Enabled")           or
-           -moz-bool-pref("userChrome.DarkTheme.TabFrameColor.Black.Enabled")
-          )
-and
-          (
-           -moz-bool-pref("userChrome.DarkTheme.TabFrameSaturation.Low.Enabled")        or
-           -moz-bool-pref("userChrome.DarkTheme.TabFrameSaturation.Medium.Enabled")     or
-           -moz-bool-pref("userChrome.DarkTheme.TabFrameSaturation.High.Enabled")       or
-           -moz-bool-pref("userChrome.DarkTheme.TabFrameSaturation.VeryHigh.Enabled")
-          )
-          )
 {
     :root:is(:not(:-moz-lwtheme),
-             [lwt-default-theme-in-dark-mode],
-             [style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"],
-             [style*="--lwt-accent-color: rgb(28, 27, 34); --lwt-text-color: rgba(251, 251, 254);"])
+             [style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"])
     {
         --inner-shadow: inset
                         0
@@ -149,6 +127,44 @@ and
                 --shadow-saturation: 100%;
             }
         }
+    }
+}
+
+@supports (
+          (
+           -moz-bool-pref("userChrome.DarkTheme.TabFrameType.Border.Enabled")           or
+           -moz-bool-pref("userChrome.DarkTheme.TabFrameType.Shadow.Enabled")
+          )
+and
+          (
+           -moz-bool-pref("userChrome.DarkTheme.TabFrameColor.Auto.Enabled")            or
+           -moz-bool-pref("userChrome.DarkTheme.TabFrameColor.White.Enabled")           or
+           -moz-bool-pref("userChrome.DarkTheme.TabFrameColor.Black.Enabled")
+          )
+and
+          (
+           -moz-bool-pref("userChrome.DarkTheme.TabFrameSaturation.Low.Enabled")        or
+           -moz-bool-pref("userChrome.DarkTheme.TabFrameSaturation.Medium.Enabled")     or
+           -moz-bool-pref("userChrome.DarkTheme.TabFrameSaturation.High.Enabled")       or
+           -moz-bool-pref("userChrome.DarkTheme.TabFrameSaturation.VeryHigh.Enabled")
+          )
+          )
+{
+    :root:is([lwt-default-theme-in-dark-mode],
+             [style*="--lwt-accent-color: rgb(28, 27, 34); --lwt-text-color: rgba(251, 251, 254);"])
+    {
+        --inner-shadow: inset
+                        0
+                        calc(-1 * var(--shadow-blur))
+                        var(--shadow-blur)
+                        calc(-1 * var(--shadow-blur))
+                        color-mix(in srgb, var(--shadow-color) var(--shadow-saturation), transparent);
+
+        --outer-shadow: drop-shadow(
+                        0
+                        0
+                        calc(var(--shadow-blur) / 2)
+                        color-mix(in srgb, var(--shadow-color) var(--shadow-saturation), transparent));
     }
 
     @media (prefers-color-scheme: dark)
@@ -593,7 +609,7 @@ spacer[part="overflow-end-indicator"]
 {
     background-color: var(--toolbar-bgcolor) !important;
     background-image: var(--toolbar-bgimage) !important;
-    filter: var(--outer-shadow) !important;
+    filter: var(--outer-shadow, none);
 }
 
 .tab-background
@@ -850,7 +866,7 @@ spacer[part="overflow-end-indicator"]
     left: 0%;
     bottom: 0%;
     z-index: 2;
-    box-shadow: var(--inner-shadow);
+    box-shadow: var(--inner-shadow, none);
     background-repeat: no-repeat;
     pointer-events: none;
 }
