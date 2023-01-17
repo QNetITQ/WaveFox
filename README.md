@@ -85,8 +85,6 @@ Requires Linux with transparency support. Tested on Linux Manjaro KDE + ForceBlu
 
 - `userChrome.AdditionalContainerIndicator-Enabled`
 
-
-
 ### Tab Frame
 ![изображение](https://user-images.githubusercontent.com/85301851/152011749-4d5619b3-0fd8-40f9-a3dc-96be31839971.png)
 
@@ -107,6 +105,7 @@ It is also possible to turn on the border and the shadow at the same time.
 
 ##### v1.5.110
 The tab frame consists of type, color, and saturation. Doesn't work with AMO themes.
+**In order to activate the tab frame on a dark theme in Linux, you must first activate it on a light theme**
 
 ##### Light Theme
 
