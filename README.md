@@ -106,18 +106,18 @@ It is also possible to turn on the border and the shadow at the same time.
 - `userChrome.VeryHighShadowSaturation-Enabled`
 
 ##### v1.5.110
-The tab frame consists of type, color, and saturation. The settings are different for light and dark theme. Doesn't work with AMO themes.
+The tab frame consists of type, color, and saturation. Doesn't work with AMO themes.
 
 ##### Light Theme
 
-###### TabFrameType
+###### Type
 - `userChrome.LightTheme.TabFrameType.Border.Enabled`
 - `userChrome.LightTheme.TabFrameType.Shadow.Enabled`
-###### TabFrameColor
+###### Color
 - `userChrome.LightTheme.TabFrameColor.Auto.Enabled`
 - `userChrome.LightTheme.TabFrameColor.White.Enabled`
 - `userChrome.LightTheme.TabFrameColor.Black.Enabled`
-###### TabFrameSaturation
+###### Saturation
 - `userChrome.LightTheme.TabFrameSaturation.Low.Enabled`
 - `userChrome.LightTheme.TabFrameSaturation.Medium.Enabled`
 - `userChrome.LightTheme.TabFrameSaturation.High.Enabled`
@@ -125,14 +125,14 @@ The tab frame consists of type, color, and saturation. The settings are differen
 
 ##### Dark Theme
 
-###### TabFrameType
+###### Type
 - `userChrome.DarkTheme.TabFrameType.Border.Enabled`
 - `userChrome.DarkTheme.TabFrameType.Shadow.Enabled`
-###### TabFrameColor
+###### Color
 - `userChrome.DarkTheme.TabFrameColor.Auto.Enabled`
 - `userChrome.DarkTheme.TabFrameColor.White.Enabled`
 - `userChrome.DarkTheme.TabFrameColor.Black.Enabled`
-###### TabFrameSaturation
+###### Saturation
 - `userChrome.DarkTheme.TabFrameSaturation.Low.Enabled`
 - `userChrome.DarkTheme.TabFrameSaturation.Medium.Enabled`
 - `userChrome.DarkTheme.TabFrameSaturation.High.Enabled`
