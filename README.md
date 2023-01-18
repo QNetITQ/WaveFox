@@ -104,8 +104,7 @@ It is also possible to turn on the border and the shadow at the same time.
 - `userChrome.VeryHighShadowSaturation-Enabled`
 
 ##### v1.5.110
-The tab frame consists of type, color, and saturation. Doesn't work with AMO themes.
-**In order to activate the tab frame on a dark theme in Linux, you must first activate it on a light theme**
+The tab frame consists of type, color, and saturation. Not compatible with themes that use a translucent toolbar.
 
 ##### Light Theme
 
