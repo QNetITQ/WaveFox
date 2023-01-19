@@ -517,7 +517,7 @@ and
 
 /* ---------------------------------------- Drag Space ---------------------------------------- */
 
-@supports -moz-bool-pref("userChrome.LeftSideDragSpace-Disabled")
+@supports -moz-bool-pref("userChrome.DragSpace.Left.Disabled")
 {
     .titlebar-spacer[type="pre-tabs"]
     {
@@ -525,11 +525,35 @@ and
     }
 }
 
-@supports -moz-bool-pref("userChrome.RightSideDragSpace-Disabled")
+@supports -moz-bool-pref("userChrome.DragSpace.Right.Disabled")
 {
     .titlebar-spacer[type="post-tabs"]
     {
         display: none !important;
+    }
+}
+
+@supports -moz-bool-pref("userChrome.DragSpace.Top.Windowed.Enabled")
+{
+    :root[sizemode="normal"]
+    {
+        --drag-space: 8px;
+    }
+}
+
+@supports -moz-bool-pref("userChrome.DragSpace.Top.Maximized.Enabled")
+{
+    :root[sizemode="maximized"]
+    {
+        --drag-space: 8px;
+    }
+}
+
+@supports -moz-bool-pref("userChrome.DragSpace.Top.Fullscreen.Enabled")
+{
+    :root[sizemode="fullscreen"]
+    {
+        --drag-space: 8px;
     }
 }
 
@@ -551,24 +575,6 @@ spacer[part="overflow-start-indicator"],
 spacer[part="overflow-end-indicator"]
 {
     margin-top: var(--margin-top, revert) !important;
-}
-
-/* -------------------- Windowed Mode -------------------- */
-
-@supports not -moz-bool-pref("userChrome.DragSpaceAboveTabsWindowedMode-Disabled")
-{
-    :root[sizemode="normal"][tabsintitlebar]
-    {
-        --drag-space: 8px;
-    }
-
-    @supports -moz-bool-pref("userChrome.IncreasedDragSpaceAboveTabsWindowedMode-Enabled")
-    {
-        :root[sizemode="normal"][tabsintitlebar]
-        {
-            --drag-space: 16px;
-        }
-    }
 }
 
 /* ---------------------------------------- Titlebar ---------------------------------------- */
@@ -1178,24 +1184,6 @@ spacer[part="overflow-end-indicator"]
     {
         margin-block: 0 !important;
         border-radius: 0 !important;
-    }
-
-    /* ---------- Drag Space ---------- */
-
-    @supports -moz-bool-pref("userChrome.DragSpaceAboveTabsMaximizedMode-Enabled")
-    {
-        :root[sizemode="maximized"][tabsintitlebar]
-        {
-            --drag-space: 8px;
-        }
-    }
-
-    @supports -moz-bool-pref("userChrome.DragSpaceAboveTabsFullscreenMode-Enabled")
-    {
-        :root[sizemode="fullscreen"][tabsintitlebar]
-        {
-            --drag-space: 8px;
-        }
     }
 
     /* ---------- Tab Icon Indicator ---------- */
