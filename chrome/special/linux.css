@@ -45,25 +45,6 @@
             appearance: -moz-window-titlebar;
         }
     }
-
-    /* ---------- Drag Space ---------- */
-    
-    @supports -moz-bool-pref("userChrome.ProtonTabs-Enabled")
-    {
-        #toolbar-menubar:not([inactive]) + #TabsToolbar
-        {
-            --drag-space: 0px !important;
-        }
-    }
-
-    @supports not -moz-bool-pref("userChrome.ProtonTabs-Enabled")
-    {
-        :root:not([tabsintitlebar]),
-        #toolbar-menubar:not([inactive]) + #TabsToolbar
-        {
-            --drag-space: 8px !important;
-        }
-    }
     
     @supports -moz-bool-pref("userChrome.OneLine-Enabled") and
               -moz-bool-pref("userChrome.ProtonTabs-Enabled")
