@@ -11,16 +11,6 @@
         transform: translateY(0px) !important;
         z-index: 1 !important;
     }
-
-    /* ---------- Drag Space ---------- */
-
-    @supports not -moz-bool-pref("userChrome.ProtonTabs-Enabled")
-    {
-        :root:not([tabsintitlebar])
-        {
-            --drag-space: 8px !important;
-        }
-    }
     
     /* One Line */
     
