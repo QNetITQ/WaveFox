@@ -46,22 +46,9 @@
                 background-color: transparent !important;
             }
 
-            :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) .titlebar-buttonbox
+            :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) .titlebar-buttonbox:not(:hover, :hover:active)
             {
-                background-color: var(--toolbar-bgcolor) !important;
-                border-bottom-left-radius: 8px !important;
-                filter: var(--special-main-outer-shadow) var(--special-additional-outer-shadow) !important;
                 opacity: 0 !important;
-            }
-
-            :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) .titlebar-buttonbox:hover
-            {
-                opacity: 1 !important;
-            }
-
-            :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) .titlebar-min
-            {
-                border-bottom-left-radius: 8px !important;
             }
         }
     }
@@ -81,25 +68,6 @@
         menupopup[needsgutter] menuitem:not([checked="true"], [icon], .menuitem-iconic)
         {
             padding-inline-start: 1em !important;
-        }
-    }
-    
-    /* ---------- Drag Space ---------- */
-    
-    @supports -moz-bool-pref("userChrome.ProtonTabs-Enabled")
-    {
-        #toolbar-menubar:not([inactive]) + #TabsToolbar
-        {
-            --drag-space: 0px !important;
-        }
-    }
-
-    @supports not -moz-bool-pref("userChrome.ProtonTabs-Enabled")
-    {
-        :root:not([tabsintitlebar]),
-        #toolbar-menubar:not([inactive]) + #TabsToolbar
-        {
-            --drag-space: 8px !important;
         }
     }
     
