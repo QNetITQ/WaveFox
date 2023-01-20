@@ -612,7 +612,6 @@ spacer[part="overflow-end-indicator"]
 .tabbrowser-tab[visuallyselected] .tab-background
 {
     background-color: var(--toolbar-bgcolor) !important;
-    background-image: var(--toolbar-bgimage) !important;
     filter: var(--outer-shadow, none);
 }
 
