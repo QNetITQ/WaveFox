@@ -195,8 +195,13 @@ By default context menus follow the selected interface density, but it is possib
 The toolbar uses as much space as is needed for its contents. Leave only the most necessary elements. Place the optional ones in the hidden menu.
 ![Снимок](https://user-images.githubusercontent.com/85301851/181300272-d1ecfc93-898a-4eb3-80b9-9974fc471b45.PNG)
 
+##### v1.5.109
 - `userChrome.OneLine-Enabled` (Proton Tabs Only)
   - `userChrome.ResponsiveBookmarksBar-Enabled` (In this mode, the bookmarks bar will never take up more than 20% of the available screen space)
+  
+##### v1.5.110
+- `userChrome.OneLine.TabBarFirst.Enabled`
+- `userChrome.OneLine.NavBarFirst.Enabled`
 
 ### Tabs On Bottom
 ![изображение](https://user-images.githubusercontent.com/85301851/182421633-3ec6948a-85cb-47ac-8b6d-6e92293e4ca3.png)
