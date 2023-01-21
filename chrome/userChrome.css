@@ -1417,41 +1417,49 @@ spacer[part="overflow-end-indicator"]
 
 /* ---------------------------------------- One Line ---------------------------------------- */
 
-@supports -moz-bool-pref("userChrome.OneLine-Enabled") and
-          -moz-bool-pref("userChrome.ProtonTabs-Enabled")
+@supports -moz-bool-pref("userChrome.OneLine.TabBarFirst.Enabled")
 {
     #navigator-toolbox
     {
-        display: flex !important;
-        flex-direction: row !important;
-        flex-wrap: nowrap !important;
-        position: relative !important;
-        border-bottom: none !important;
-        -moz-window-dragging: drag !important;
+        grid-template-columns: auto min-content !important;
     }
 
     #titlebar
     {
-        flex-basis: 100% !important;
+        grid-area: 1 / 1 / span 1 / span 1 !important;
+    }
+}
+
+@supports -moz-bool-pref("userChrome.OneLine.NavBarFirst.Enabled")
+{
+    #navigator-toolbox
+    {
+        grid-template-columns: min-content auto !important;
     }
 
-    /* -------------------- Tab Bar -------------------- */
-
-    #TabsToolbar::before
+    #nav-bar
     {
-        display: none;
+        grid-area: 1 / 1 / span 1 / span 1 !important;
+    }
+}
+
+@supports -moz-bool-pref("userChrome.OneLine.TabBarFirst.Enabled") or
+          -moz-bool-pref("userChrome.OneLine.NavBarFirst.Enabled")
+{
+    #navigator-toolbox
+    {
+        display: grid !important;
     }
 
     /* -------------------- Nav Bar -------------------- */
 
     #nav-bar
     {
-        min-width: fit-content !important;
-        margin: calc(var(--tab-block-margin) + var(--drag-space, 0px)) var(--tab-block-margin) var(--tab-block-margin) !important;
-        border-radius: var(--tab-border-radius) !important;
         -moz-box-align: center !important;
-        filter: var(--special-main-outer-shadow) var(--special-additional-outer-shadow) !important;
-        z-index: 1 !important;
+        background-color: transparent !important;
+        box-shadow: var(--inner-shadow, none) !important;
+        color: inherit !important;
+        --toolbarbutton-icon-fill: currentColor !important;
     }
 
     #urlbar-container,
@@ -1470,55 +1478,14 @@ spacer[part="overflow-end-indicator"]
         --urlbar-toolbar-height: var(--tab-min-height) !important;
     }
 
-    /* -------------------- Bookmarks Bar -------------------- */
-
-    #PersonalToolbar
-    {
-        min-width: fit-content !important;
-        max-height: 100% !important;
-        margin: calc(var(--tab-block-margin) + var(--drag-space, 0px)) var(--tab-block-margin) var(--tab-block-margin) !important;
-        border-radius: var(--tab-border-radius) !important;
-        filter: var(--special-main-outer-shadow) var(--special-additional-outer-shadow) !important;
-        order: 2 !important;
-    }
-
-    #PersonalToolbar .bookmark-item .toolbarbutton-icon
-    {
-        margin-right: 0px !important;
-    }
-
-    #PersonalToolbar .bookmark-item .toolbarbutton-text
-    {
-        display: none !important;
-    }
-       
-    @supports -moz-bool-pref("userChrome.ResponsiveBookmarksBar-Enabled")
-    {
-        #PersonalToolbar
-        {
-            max-width: 20vw !important;
-        }
-    }
-
-    /* -------------------- Customizing Mode -------------------- */
-
-    #customization-panelWrapper
-    {
-        --panel-arrow-offset: 0px !important;
-    }
-       
-    /* -------------------- Notifications -------------------- */
+    /* -------------------- Bookmarks Bar / Notifications -------------------- */
     
-    #navigator-toolbox > :is(named-deck, div)
+    #navigator-toolbox > *:not(#titlebar, #nav-bar)
     {
-        position: absolute !important;
-        width: 100% !important;
-        top: 100% !important;
-        left: 0% !important;
-        z-index: 1 !important;
+        grid-column: 1 / span 2 !important;
     }
 }
-       
+
 /* ---------------------------------------- Tabs On Bottom ---------------------------------------- */
 
 @supports -moz-bool-pref("userChrome.TabsOnBottom-Enabled")
