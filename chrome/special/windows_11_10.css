@@ -4,25 +4,27 @@
     {
         @media (-moz-windows-accent-color-in-titlebar: 1)
         {
-            :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not(:-moz-window-inactive) #navigator-toolbox-background
+            :root[tabsintitlebar]:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not(:-moz-window-inactive) #navigator-toolbox-background
             {
                 background-color: AccentColor !important;
             }
 
-            :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not(:-moz-window-inactive) #navigator-toolbox
+            :root[tabsintitlebar]:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not(:-moz-window-inactive) #navigator-toolbox
             {
                 background-color: transparent !important;
             }
 
-            :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not(:-moz-window-inactive) .titlebar-color
+            :root[tabsintitlebar]:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not(:-moz-window-inactive) .titlebar-color
             {
                 color: AccentColorText !important;
             }
-        }
+            
+            /* One Line */
 
-        .titlebar-buttonbox-container
-        {
-            -moz-box-align: start !important;
+            :root[tabsintitlebar]:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not(:-moz-window-inactive) #nav-bar
+            {
+                color: AccentColorText !important;
+            }
         }
 
         .titlebar-button:not(.titlebar-close):hover
@@ -73,23 +75,6 @@
         menupopup[needsgutter] menuitem:not([checked="true"], [icon], .menuitem-iconic)
         {
             padding-inline-start: 1em !important;
-        }
-    }
-    
-    /* One Line */
-
-    @supports -moz-bool-pref("userChrome.OneLine-Enabled") and
-              -moz-bool-pref("userChrome.ProtonTabs-Enabled")
-    {
-        #titlebar
-        {
-            appearance: none !important;
-            order: 3 !important;
-        }
-        
-        #nav-bar
-        {
-            order: 1 !important;
         }
     }
 
