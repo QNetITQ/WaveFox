@@ -1549,7 +1549,6 @@ spacer[part="overflow-end-indicator"]
     #TabsToolbar :is(.tabbrowser-tab, .toolbarbutton-1, separator, #personal-bookmarks, #search-container, .accessibility-indicator, .private-browsing-indicator, #private-browsing-indicator-with-label)
     {
         margin-top: 0px !important;
-        margin-bottom: 0px !important;
     }
 
     #TabsToolbar::before
@@ -1562,7 +1561,6 @@ spacer[part="overflow-end-indicator"]
     #tabbrowser-arrowscrollbox
     {
         --margin-top: 0px !important;
-        --margin-bottom: 0px !important;
     }
 
     #scrollbutton-up,
@@ -1571,7 +1569,6 @@ spacer[part="overflow-end-indicator"]
     spacer[part="overflow-end-indicator"]
     {
         margin-top: var(--margin-top, revert) !important;
-        margin-bottom: var(--margin-bottom, revert) !important;
     }
 
     @supports not (-moz-bool-pref("userChrome.ProtonTabs-Enabled") or
