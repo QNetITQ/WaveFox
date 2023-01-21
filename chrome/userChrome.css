@@ -1525,20 +1525,21 @@ spacer[part="overflow-end-indicator"]
 {
     #navigator-toolbox
     {
-        border-bottom: none !important;
+        display: flex !important;
+        flex-direction: column !important;
+        flex-wrap: nowrap !important;
     }
 
     /* -------------------- Title Bar -------------------- */
 
     #titlebar
     {
-        -moz-box-ordinal-group: 2 !important;
+        order: 1 !important;
     }
 
     #toolbar-menubar
     {
         background-color: var(--toolbar-bgcolor) !important;
-        background-image: var(--toolbar-bgimage) !important;
         color: var(--toolbar-color) !important;
         appearance: none !important;
     }
@@ -1548,7 +1549,7 @@ spacer[part="overflow-end-indicator"]
     #TabsToolbar :is(.tabbrowser-tab, .toolbarbutton-1, separator, #personal-bookmarks, #search-container, .accessibility-indicator, .private-browsing-indicator, #private-browsing-indicator-with-label)
     {
         margin-top: 0px !important;
-        margin-bottom: var(--drag-space, 0px) !important;
+        margin-bottom: 0px !important;
     }
 
     #TabsToolbar::before
@@ -1561,7 +1562,7 @@ spacer[part="overflow-end-indicator"]
     #tabbrowser-arrowscrollbox
     {
         --margin-top: 0px !important;
-        --margin-bottom: var(--drag-space, 0px) !important;
+        --margin-bottom: 0px !important;
     }
 
     #scrollbutton-up,
