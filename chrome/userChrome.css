@@ -604,7 +604,7 @@ spacer[part="overflow-end-indicator"]
 .tabbrowser-tab[visuallyselected]
 {
     --tab-loading-fill: var(--toolbar-field-focus-border-color) !important;
-    color: var(--lwt-tab-text, var(--toolbar-color)) !important;
+    color: var(--toolbar-color) !important;
     position: relative;
     z-index: 2;
 }
@@ -1546,41 +1546,17 @@ spacer[part="overflow-end-indicator"]
 
     /* -------------------- Tab Bar -------------------- */
 
-    #TabsToolbar :is(.tabbrowser-tab, .toolbarbutton-1, separator, #personal-bookmarks, #search-container, .accessibility-indicator, .private-browsing-indicator, #private-browsing-indicator-with-label)
-    {
-        margin-top: 0px !important;
-    }
-
     #TabsToolbar::before
     {
         transform: rotateX(180deg);
     }
 
-    /* ---------- Shadow DOM ---------- */
+    /* ---------- Rounded Corners (SVG) ---------- */
 
-    #tabbrowser-arrowscrollbox
+    .tab-background::before,
+    .tab-background::after
     {
-        --margin-top: 0px !important;
-    }
-
-    #scrollbutton-up,
-    #scrollbutton-down,
-    spacer[part="overflow-start-indicator"],
-    spacer[part="overflow-end-indicator"]
-    {
-        margin-top: var(--margin-top, revert) !important;
-    }
-
-    @supports not (-moz-bool-pref("userChrome.ProtonTabs-Enabled") or
-                   -moz-bool-pref("userChrome.PhotonTabs-Enabled"))
-    {
-        /* ---------- Rounded Corners (SVG) ---------- */
-
-        .tab-background::before,
-        .tab-background::after
-        {
-            transform: rotateX(180deg);
-        }
+        transform: rotateX(180deg);
     }
 }
 
