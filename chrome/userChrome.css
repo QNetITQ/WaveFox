@@ -73,7 +73,7 @@ and
         {
             :root
             {
-                --shadow-color: var(--lwt-tab-text, var(--toolbar-color));
+                --shadow-color: var(--toolbar-color);
             }
         }
 
@@ -192,7 +192,7 @@ and
         {
             :root
             {
-                --shadow-color: var(--lwt-tab-text, var(--toolbar-color));
+                --shadow-color: var(--toolbar-color);
             }
         }
 
