@@ -1425,6 +1425,17 @@ spacer[part="overflow-end-indicator"]
     {
         grid-area: 1 / 1 / span 1 / span 1 !important;
     }
+
+    #TabsToolbar::before
+    {
+        box-shadow: var(--inner-shadow, none),
+                    inset
+                    calc(-1 * var(--shadow-blur, 0px))
+                    0
+                    var(--shadow-blur, 0px)
+                    calc(-1 * var(--shadow-blur, 0px))
+                    color-mix(in srgb, var(--shadow-color, transparent) var(--shadow-saturation, 0%), transparent);
+    }
 }
 
 @supports -moz-bool-pref("userChrome.OneLine.NavBarFirst.Enabled")
@@ -1438,6 +1449,17 @@ spacer[part="overflow-end-indicator"]
     {
         grid-area: 1 / 1 / span 1 / span 1 !important;
     }
+
+    #TabsToolbar::before
+    {
+        box-shadow: var(--inner-shadow, none),
+                    inset
+                    var(--shadow-blur, 0px)
+                    0
+                    var(--shadow-blur, 0px)
+                    calc(-1 * var(--shadow-blur, 0px))
+                    color-mix(in srgb, var(--shadow-color, transparent) var(--shadow-saturation, 0%), transparent);
+    }
 }
 
 @supports -moz-bool-pref("userChrome.OneLine.TabBarFirst.Enabled") or
@@ -1450,25 +1472,10 @@ spacer[part="overflow-end-indicator"]
 
     /* -------------------- Nav Bar -------------------- */
 
-    #nav-bar
-    {
-        -moz-box-align: center !important;
-    }
-
     #urlbar-container,
     #search-container
     {
         padding-block: 0px !important;
-    }
-
-    #urlbar-container
-    {
-        --urlbar-container-height: var(--tab-min-height) !important;
-    }
-
-    #urlbar
-    {
-        --urlbar-toolbar-height: var(--tab-min-height) !important;
     }
 
     /* -------------------- Bookmarks Bar / Notifications -------------------- */
