@@ -23,34 +23,6 @@
             --align-menu-icons: 0 -22px 0 2px;
         }
     }
-
-    /* One Line */
-
-    @supports -moz-bool-pref("userChrome.OneLine-Enabled") and
-              -moz-bool-pref("userChrome.ProtonTabs-Enabled")
-    {
-        #titlebar
-        {
-            appearance: none !important;
-            order: 3 !important;
-        }
-        
-        #nav-bar
-        {
-            order: 1 !important;
-        }
-           
-        :root[tabsintitlebar][sizemode="maximized"] #navigator-toolbox
-        {
-            margin-top: 8px !important;
-        }
-
-        .toolbar-items
-        {
-            margin-top: 0px !important;
-            padding-top: 0px !important;
-        }
-    }
        
     @supports -moz-bool-pref("userChrome.TabsOnBottom-Enabled")
     {
