@@ -202,7 +202,7 @@ The toolbar uses as much space as is needed for its contents. Leave only the mos
 ##### v1.5.110
 - `userChrome.OneLine.TabBarFirst.Enabled`
 - `userChrome.OneLine.NavBarFirst.Enabled`
-- `browser.tabs.inTitlebar` (May be required in some situations. Set the value to 0)
+- `browser.tabs.inTitlebar` (Enable this key if there are problems with window control buttons. Set the value to 0)
 
 ### Tabs On Bottom
 ![изображение](https://user-images.githubusercontent.com/85301851/182421633-3ec6948a-85cb-47ac-8b6d-6e92293e4ca3.png)
