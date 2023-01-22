@@ -45,19 +45,5 @@
             appearance: -moz-window-titlebar;
         }
     }
-    
-    @supports -moz-bool-pref("userChrome.OneLine-Enabled") and
-              -moz-bool-pref("userChrome.ProtonTabs-Enabled")
-    {
-        #titlebar
-        {
-            order: 3 !important;
-        }
-        
-        #nav-bar
-        {
-            order: 1 !important;
-        }
-    }
 
 }
