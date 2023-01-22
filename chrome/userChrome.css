@@ -1453,10 +1453,6 @@ spacer[part="overflow-end-indicator"]
     #nav-bar
     {
         -moz-box-align: center !important;
-        background-color: transparent !important;
-        box-shadow: var(--inner-shadow, none) !important;
-        color: inherit !important;
-        --toolbarbutton-icon-fill: currentColor !important;
     }
 
     #urlbar-container,
