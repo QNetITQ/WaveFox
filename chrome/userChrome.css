@@ -435,14 +435,6 @@ and
     {
         filter: var(--special-main-outer-shadow) var(--special-additional-outer-shadow) !important;
     }
-
-    @supports -moz-bool-pref("userChrome.OneLine-Enabled")
-    {
-        :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) :is(#nav-bar, #PersonalToolbar)
-        {
-            filter: none !important;
-        }
-    }
 }
 
 /* ---------------------------------------- Main Window ---------------------------------------- */
@@ -579,7 +571,10 @@ spacer[part="overflow-end-indicator"]
 
 /* ---------------------------------------- Titlebar ---------------------------------------- */
 
-.titlebar-color
+:root:is(:not(:-moz-lwtheme),
+         [lwt-default-theme-in-dark-mode],
+         [style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"],
+         [style*="--lwt-accent-color: rgb(28, 27, 34); --lwt-text-color: rgba(251, 251, 254);"]) .titlebar-color
 {
     color: inherit !important;
     --toolbarbutton-icon-fill: currentColor !important;
