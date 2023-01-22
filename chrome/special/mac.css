@@ -11,21 +11,5 @@
         transform: translateY(0px) !important;
         z-index: 1 !important;
     }
-    
-    /* One Line */
-    
-    @supports -moz-bool-pref("userChrome.OneLine-Enabled") and
-              -moz-bool-pref("userChrome.ProtonTabs-Enabled")
-    {
-        #titlebar
-        {
-            order: 1 !important;
-        }
-        
-        #nav-bar
-        {
-            order: 3 !important;
-        }
-    }
 
 }
