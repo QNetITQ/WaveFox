@@ -1472,10 +1472,25 @@ spacer[part="overflow-end-indicator"]
 
     /* -------------------- Nav Bar -------------------- */
 
+    #nav-bar
+    {
+        -moz-box-align: center !important;
+    }
+
     #urlbar-container,
     #search-container
     {
         padding-block: 0px !important;
+    }
+
+    #urlbar-container
+    {
+        --urlbar-container-height: var(--tab-min-height) !important;
+    }
+
+    #urlbar
+    {
+        --urlbar-toolbar-height: var(--tab-min-height) !important;
     }
 
     /* -------------------- Bookmarks Bar / Notifications -------------------- */
