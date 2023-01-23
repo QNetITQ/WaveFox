@@ -1382,10 +1382,10 @@ spacer[part="overflow-end-indicator"]
 
 /* ---------------------------------------- Rounded Elements ---------------------------------------- */
 
-@supports -moz-bool-pref("userChrome.WaveFoxTabs-Enabled") or
+@supports -moz-bool-pref("userChrome.WaveFoxTabs-Enabled")   or
           -moz-bool-pref("userChrome.AustralisTabs-Enabled") or
-          -moz-bool-pref("userChrome.LegacyChromeTabs-Enabled") or
-          -moz-bool-pref("userChrome.ChromeTabs-Enabled")
+          -moz-bool-pref("userChrome.ChromeTabs-Enabled")    or
+          -moz-bool-pref("userChrome.EdgeTabs-Enabled")
 {
     #TabsToolbar :is(#tabs-newtab-button > .toolbarbutton-icon,
                      #new-tab-button > .toolbarbutton-icon,
@@ -1421,15 +1421,19 @@ spacer[part="overflow-end-indicator"]
         grid-area: 1 / 1 / span 1 / span 1 !important;
     }
 
-    #TabsToolbar::before
+    @supports -moz-bool-pref("userChrome.PhotonTabs-Enabled")       or
+              -moz-bool-pref("userChrome.LegacyChromeTabs-Enabled")
     {
-        box-shadow: var(--inner-shadow, none),
-                    inset
-                    calc(-1 * var(--shadow-blur, 0px))
-                    0
-                    var(--shadow-blur, 0px)
-                    calc(-1 * var(--shadow-blur, 0px))
-                    color-mix(in srgb, var(--shadow-color, transparent) var(--shadow-saturation, 0%), transparent);
+        #TabsToolbar::before
+        {
+            box-shadow: var(--inner-shadow, none),
+                        inset
+                        calc(-1 * var(--shadow-blur, 0px))
+                        0
+                        var(--shadow-blur, 0px)
+                        calc(-1 * var(--shadow-blur, 0px))
+                        color-mix(in srgb, var(--shadow-color, transparent) var(--shadow-saturation, 0%), transparent);
+        }
     }
 }
 
@@ -1445,15 +1449,19 @@ spacer[part="overflow-end-indicator"]
         grid-area: 1 / 1 / span 1 / span 1 !important;
     }
 
-    #TabsToolbar::before
+    @supports -moz-bool-pref("userChrome.PhotonTabs-Enabled")       or
+              -moz-bool-pref("userChrome.LegacyChromeTabs-Enabled")
     {
-        box-shadow: var(--inner-shadow, none),
-                    inset
-                    var(--shadow-blur, 0px)
-                    0
-                    var(--shadow-blur, 0px)
-                    calc(-1 * var(--shadow-blur, 0px))
-                    color-mix(in srgb, var(--shadow-color, transparent) var(--shadow-saturation, 0%), transparent);
+        #TabsToolbar::before
+        {
+            box-shadow: var(--inner-shadow, none),
+                        inset
+                        var(--shadow-blur, 0px)
+                        0
+                        var(--shadow-blur, 0px)
+                        calc(-1 * var(--shadow-blur, 0px))
+                        color-mix(in srgb, var(--shadow-color, transparent) var(--shadow-saturation, 0%), transparent);
+        }
     }
 }
 
@@ -1463,6 +1471,13 @@ spacer[part="overflow-end-indicator"]
     #navigator-toolbox
     {
         display: grid !important;
+    }
+
+    /* -------------------- Menu Bar -------------------- */
+
+    #toolbar-menubar
+    {
+        display: none !important;
     }
 
     /* -------------------- Nav Bar -------------------- */
@@ -1493,6 +1508,61 @@ spacer[part="overflow-end-indicator"]
     #navigator-toolbox > *:not(#titlebar, #nav-bar)
     {
         grid-column: 1 / span 2 !important;
+    }
+
+    @supports -moz-bool-pref("userChrome.ProtonTabs-Enabled")    or
+              -moz-bool-pref("userChrome.WaveFoxTabs-Enabled")   or
+              -moz-bool-pref("userChrome.AustralisTabs-Enabled") or
+              -moz-bool-pref("userChrome.ChromeTabs-Enabled")    or
+              -moz-bool-pref("userChrome.EdgeTabs-Enabled")
+    {
+        #navigator-toolbox
+        {
+            -moz-window-dragging: drag !important;
+        }
+
+        #navigator-toolbox::before
+        {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: var(--my-tab-min-height);
+            top: 0%;
+            left: 0%;
+            box-shadow: var(--inner-shadow, none);
+            pointer-events: none;
+        }
+
+        /* -------------------- Tab Bar -------------------- */
+
+        #TabsToolbar::before
+        {
+            display: none;
+        }
+
+        @supports not -moz-bool-pref("userChrome.ProtonTabs-Enabled")
+        {
+            :root
+            {
+                --my-tab-min-height: calc(var(--tab-min-height) + var(--tab-block-margin) * 2);
+            }
+
+            #tabbrowser-tabs
+            {
+                --tab-min-height: var(--my-tab-min-height) !important;
+            }
+        }
+
+        /* -------------------- Nav Bar -------------------- */
+
+        #nav-bar
+        {
+            margin: var(--tab-block-margin) !important;
+            border-radius: var(--tab-border-radius) !important;
+            filter: var(--outer-shadow, none) !important;
+            z-index: 1 !important;
+        }
     }
 }
 
