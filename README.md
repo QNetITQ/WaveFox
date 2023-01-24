@@ -193,7 +193,6 @@ By default context menus follow the selected interface density, but it is possib
 
 ### One Line
 The toolbar uses as much space as is needed for its contents. Leave only the most necessary elements. Place the optional ones in the hidden menu.
-The menu bar is disabled. Before enabling, drag and drop items to the main toolbar.
 ![Снимок](https://user-images.githubusercontent.com/85301851/181300272-d1ecfc93-898a-4eb3-80b9-9974fc471b45.PNG)
 
 ##### v1.5.109
