@@ -1608,9 +1608,9 @@ spacer[part="overflow-end-indicator"]
         appearance: none !important;
     }
 
-    /* -------------------- Tab Bar -------------------- */
+    /* -------------------- Nav Bar -------------------- */
 
-    #TabsToolbar::before
+    #nav-bar::before
     {
         transform: rotateX(180deg);
     }
