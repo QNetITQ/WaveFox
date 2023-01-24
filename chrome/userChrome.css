@@ -1436,21 +1436,6 @@ spacer[part="overflow-end-indicator"]
     {
         grid-area: 1 / 1 / span 1 / span 1 !important;
     }
-
-    @supports -moz-bool-pref("userChrome.PhotonTabs-Enabled")       or
-              -moz-bool-pref("userChrome.LegacyChromeTabs-Enabled")
-    {
-        #TabsToolbar::before
-        {
-            box-shadow: var(--inner-shadow, none),
-                        inset
-                        calc(-1 * var(--shadow-blur, 0px))
-                        0
-                        var(--shadow-blur, 0px)
-                        calc(-1 * var(--shadow-blur, 0px))
-                        color-mix(in srgb, var(--shadow-color, transparent) var(--shadow-saturation, 0%), transparent);
-        }
-    }
 }
 
 @supports -moz-bool-pref("userChrome.OneLine.NavBarFirst.Enabled")
@@ -1463,21 +1448,6 @@ spacer[part="overflow-end-indicator"]
     #nav-bar
     {
         grid-area: 1 / 1 / span 1 / span 1 !important;
-    }
-
-    @supports -moz-bool-pref("userChrome.PhotonTabs-Enabled")       or
-              -moz-bool-pref("userChrome.LegacyChromeTabs-Enabled")
-    {
-        #TabsToolbar::before
-        {
-            box-shadow: var(--inner-shadow, none),
-                        inset
-                        var(--shadow-blur, 0px)
-                        0
-                        var(--shadow-blur, 0px)
-                        calc(-1 * var(--shadow-blur, 0px))
-                        color-mix(in srgb, var(--shadow-color, transparent) var(--shadow-saturation, 0%), transparent);
-        }
     }
 }
 
@@ -1512,12 +1482,50 @@ spacer[part="overflow-end-indicator"]
         --urlbar-toolbar-height: var(--tab-min-height) !important;
     }
 
+    @supports -moz-bool-pref("userChrome.PhotonTabs-Enabled")       or
+              -moz-bool-pref("userChrome.LegacyChromeTabs-Enabled")
+    {
+        #nav-bar
+        {
+            z-index: 1 !important;
+        }
+
+        #nav-bar::before
+        {
+            clip-path: inset(0 calc(-1 * var(--shadow-blur, 0px)));
+        }
+    }
+
+    /* -------------------- Bookmarks Bar -------------------- */
+
+    #PersonalToolbar
+    {
+        position: relative !important;
+        overflow: visible !important;
+    }
+
+    #PersonalToolbar::before
+    {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0%;
+        left: 0%;
+        box-shadow: var(--outer-box-shadow, none);
+        pointer-events: none;
+        clip-path: inset(calc(-1 * var(--shadow-blur, 0px)) 0 0);
+    }
+
     /* -------------------- Bookmarks Bar / Notifications -------------------- */
     
     #navigator-toolbox > *:not(#titlebar, #nav-bar)
     {
         grid-column: 1 / span 2 !important;
     }
+
+    /* -------------------- Proton / WaveFox / Australis / Chrome / Edge -------------------- */
 
     @supports -moz-bool-pref("userChrome.ProtonTabs-Enabled")    or
               -moz-bool-pref("userChrome.WaveFoxTabs-Enabled")   or
@@ -1557,28 +1565,6 @@ spacer[part="overflow-end-indicator"]
         #nav-bar::before
         {
             display: none !important;
-        }
-
-        /* -------------------- Bookmarks Bar -------------------- */
-
-        #PersonalToolbar
-        {
-            position: relative !important;
-            overflow: visible !important;
-        }
-
-        #PersonalToolbar::before
-        {
-            content: "";
-            display: block;
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0%;
-            left: 0%;
-            box-shadow: var(--outer-box-shadow, none);
-            pointer-events: none;
-            clip-path: inset(calc(-1 * var(--shadow-blur, 0px)) 0 0);
         }
     }
 }
