@@ -35,7 +35,7 @@ and
         --outer-box-shadow: 0
                             0
                             var(--shadow-blur)
-                            color-mix(in srgb, var(--shadow-color) var(--shadow-saturation), transparent));
+                            color-mix(in srgb, var(--shadow-color) var(--shadow-saturation), transparent);
         
         --inner-box-shadow: inset
                             0
@@ -159,7 +159,7 @@ and
         --outer-box-shadow: 0
                             0
                             var(--shadow-blur)
-                            color-mix(in srgb, var(--shadow-color) var(--shadow-saturation), transparent));
+                            color-mix(in srgb, var(--shadow-color) var(--shadow-saturation), transparent);
         
         --inner-box-shadow: inset
                             0
