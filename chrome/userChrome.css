@@ -590,6 +590,29 @@ spacer[part="overflow-end-indicator"]
     --toolbarbutton-icon-fill: currentColor !important;
 }
 
+/* ---------------------------------------- Nav Bar ---------------------------------------- */
+
+#nav-bar
+{
+    position: relative !important;
+    overflow: visible !important;
+}
+
+#nav-bar::before
+{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+    box-shadow: var(--outer-box-shadow, none);
+    pointer-events: none;
+    clip-path: inset(calc(-1 * var(--shadow-blur, 0px)) 0 0);
+    z-index: 1;
+}
+
 /* ---------------------------------------- Tabs ---------------------------------------- */
 
 .tabbrowser-tab
@@ -858,22 +881,6 @@ spacer[part="overflow-end-indicator"]
 #TabsToolbar
 {
     --toolbarbutton-inner-padding: inherit !important;
-    position: relative !important;
-    clip-path: inset(0px) !important;
-}
-
-#TabsToolbar::before
-{
-    content: "";
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0%;
-    bottom: 0%;
-    z-index: 2;
-    box-shadow: var(--inner-box-shadow, none);
-    pointer-events: none;
 }
 
 #TabsToolbar #search-container
