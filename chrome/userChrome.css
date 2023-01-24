@@ -32,18 +32,23 @@ and
 {
     :root
     {
-        --inner-shadow: inset
-                        0
-                        calc(-1 * var(--shadow-blur))
-                        var(--shadow-blur)
-                        calc(-1 * var(--shadow-blur))
-                        color-mix(in srgb, var(--shadow-color) var(--shadow-saturation), transparent);
+        --outer-box-shadow: 0
+                            0
+                            var(--shadow-blur)
+                            color-mix(in srgb, var(--shadow-color) var(--shadow-saturation), transparent));
+        
+        --inner-box-shadow: inset
+                            0
+                            calc(-1 * var(--shadow-blur))
+                            var(--shadow-blur)
+                            calc(-1 * var(--shadow-blur))
+                            color-mix(in srgb, var(--shadow-color) var(--shadow-saturation), transparent);
 
-        --outer-shadow: drop-shadow(
-                        0
-                        0
-                        calc(var(--shadow-blur) / 2)
-                        color-mix(in srgb, var(--shadow-color) var(--shadow-saturation), transparent));
+        --outer-drop-shadow: drop-shadow(
+                             0
+                             0
+                             calc(var(--shadow-blur) / 2)
+                             color-mix(in srgb, var(--shadow-color) var(--shadow-saturation), transparent));
     }
 
     @media (prefers-color-scheme: light)
@@ -151,18 +156,23 @@ and
 {
     :root
     {
-        --inner-shadow: inset
-                        0
-                        calc(-1 * var(--shadow-blur))
-                        var(--shadow-blur)
-                        calc(-1 * var(--shadow-blur))
-                        color-mix(in srgb, var(--shadow-color) var(--shadow-saturation), transparent);
+        --outer-box-shadow: 0
+                            0
+                            var(--shadow-blur)
+                            color-mix(in srgb, var(--shadow-color) var(--shadow-saturation), transparent));
+        
+        --inner-box-shadow: inset
+                            0
+                            calc(-1 * var(--shadow-blur))
+                            var(--shadow-blur)
+                            calc(-1 * var(--shadow-blur))
+                            color-mix(in srgb, var(--shadow-color) var(--shadow-saturation), transparent);
 
-        --outer-shadow: drop-shadow(
-                        0
-                        0
-                        calc(var(--shadow-blur) / 2)
-                        color-mix(in srgb, var(--shadow-color) var(--shadow-saturation), transparent));
+        --outer-drop-shadow: drop-shadow(
+                             0
+                             0
+                             calc(var(--shadow-blur) / 2)
+                             color-mix(in srgb, var(--shadow-color) var(--shadow-saturation), transparent));
     }
 
     @media (prefers-color-scheme: dark)
@@ -604,7 +614,7 @@ spacer[part="overflow-end-indicator"]
 .tabbrowser-tab[visuallyselected] .tab-background
 {
     background-color: var(--toolbar-bgcolor) !important;
-    filter: var(--outer-shadow, none);
+    filter: var(--outer-drop-shadow, none);
 }
 
 .tab-background
@@ -855,14 +865,14 @@ spacer[part="overflow-end-indicator"]
 #TabsToolbar::before
 {
     content: "";
+    display: block;
     position: absolute;
     width: 100%;
     height: 100%;
     left: 0%;
     bottom: 0%;
     z-index: 2;
-    box-shadow: var(--inner-shadow, none);
-    background-repeat: no-repeat;
+    box-shadow: var(--inner-box-shadow, none);
     pointer-events: none;
 }
 
