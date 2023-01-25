@@ -1613,6 +1613,54 @@ spacer[part="overflow-end-indicator"]
         transform: rotateX(180deg);
     }
 
+    /* -------------------- Menu Bar / Bookmarks Bar -------------------- */
+
+    #toolbar-menubar
+    {
+        position: relative !important;
+    }
+
+    #PersonalToolbar
+    {
+        position: relative !important;
+        overflow: visible !important;
+    }
+
+    #toolbar-menubar::before,
+    #PersonalToolbar::before
+    {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0%;
+        left: 0%;
+        box-shadow: var(--outer-box-shadow, none);
+        pointer-events: none;
+        clip-path: inset(0 0 calc(-1 * var(--shadow-blur, 0px)));
+    }
+
+    /* -------------------- Tabs -------------------- */
+
+    @supports -moz-bool-pref("userChrome.PhotonTabs-Enabled")
+    {
+        clip-path: inset(0 calc(-1 * var(--toolbar-start-end-padding))) !important;
+    }
+
+    @supports -moz-bool-pref("userChrome.WaveFoxTabs-Enabled")      or
+              -moz-bool-pref("userChrome.AustralisTabs-Enabled")    or
+              -moz-bool-pref("userChrome.LegacyChromeTabs-Enabled")
+    {
+        clip-path: inset(0 calc(-1 * var(--tab-min-height) / 2)) !important;
+    }
+
+    @supports -moz-bool-pref("userChrome.ChromeTabs-Enabled") or
+              -moz-bool-pref("userChrome.EdgeTabs-Enabled")
+    {
+        clip-path: inset(0 calc(-1 * var(--tab-min-height) / 4)) !important;
+    }
+
     /* ---------- Rounded Corners (SVG) ---------- */
 
     .tab-background::before,
