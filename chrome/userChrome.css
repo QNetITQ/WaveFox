@@ -1114,10 +1114,6 @@ spacer[part="overflow-end-indicator"]
     {
         padding-inline: var(--toolbarbutton-outer-padding) !important;
         overflow-clip-margin: calc(var(--toolbar-start-end-padding) - var(--toolbarbutton-outer-padding)) !important;
-        clip-path: inset(calc(-1 * var(--shadow-blur, 0px))
-                         calc(-1 * (var(--toolbar-start-end-padding) - var(--toolbarbutton-outer-padding)))
-                         0
-                        ) !important;
     }
 
     /* ---------- Separators ---------- */
