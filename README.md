@@ -200,6 +200,7 @@ The toolbar uses as much space as is needed for its contents. Leave only the mos
   - `userChrome.ResponsiveBookmarksBar-Enabled` (In this mode, the bookmarks bar will never take up more than 20% of the available screen space)
   
 ##### v1.5.110
+Photon and Legacy Chrome styles have a compact look.
 - `userChrome.OneLine.TabBarFirst.Enabled`
 - `userChrome.OneLine.NavBarFirst.Enabled`
 - `browser.tabs.inTitlebar` (Enable this key if there are problems with window control buttons. Set the value to 0)
