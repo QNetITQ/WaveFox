@@ -1114,6 +1114,10 @@ spacer[part="overflow-end-indicator"]
     {
         padding-inline: var(--toolbarbutton-outer-padding) !important;
         overflow-clip-margin: calc(var(--toolbar-start-end-padding) - var(--toolbarbutton-outer-padding)) !important;
+        clip-path: inset(calc(-1 * var(--shadow-blur, 0px))
+                         calc(-1 * (var(--toolbar-start-end-padding) - var(--toolbarbutton-outer-padding)))
+                         0
+                        ) !important;
     }
 
     /* ---------- Separators ---------- */
@@ -1151,6 +1155,10 @@ spacer[part="overflow-end-indicator"]
     .tabbrowser-tab
     {
         overflow-clip-margin: var(--toolbar-start-end-padding) !important;
+        clip-path: inset(calc(-1 * var(--shadow-blur, 0px))
+                         calc(-1 * var(--toolbar-start-end-padding))
+                         0
+                        ) !important;
     }
 
     /* ---------- Indents ---------- */
@@ -1289,6 +1297,10 @@ spacer[part="overflow-end-indicator"]
     .tabbrowser-tab
     {
         overflow-clip-margin: calc(var(--tab-min-height) / 2) !important;
+        clip-path: inset(calc(-1 * var(--shadow-blur, 0px))
+                         calc(-1 * var(--tab-min-height) / 2)
+                         0
+                        ) !important;
     }
        
     .tabbrowser-tab[pinned] .tab-content
@@ -1343,6 +1355,10 @@ spacer[part="overflow-end-indicator"]
     .tabbrowser-tab
     {
         overflow-clip-margin: calc(var(--tab-min-height) / 4) !important;
+        clip-path: inset(calc(-1 * var(--shadow-blur, 0px))
+                         calc(-1 * var(--tab-min-height) / 4)
+                         0
+                        ) !important;
     }
 
     .tab-background
