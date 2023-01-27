@@ -66,8 +66,15 @@ Download and install Mica For Everyone from [here](https://github.com/minusium/M
 Works only with the system theme.
 ![изображение](https://user-images.githubusercontent.com/85301851/165526704-4f7486c4-f330-4c86-a25d-6ed8ab2affe4.png)
 
+##### v1.5.109
 - `userChrome.SemiTransparentToolbar-Enabled`
 - `userChrome.TransparentToolbar-Enabled` (Proton Tabs Only)
+
+##### v1.5.110
+- `userChrome.Toolbar.Transparency.Low.Enabled`
+- `userChrome.Toolbar.Transparency.Medium.Enabled`
+- `userChrome.Toolbar.Transparency.High.Enabled`
+- `userChrome.Toolbar.Transparency.VeryHigh.Enabled` (Proton Tabs Only)
 
 ### Linux Transparency
 Requires Linux with transparency support. Tested on Linux Manjaro KDE + ForceBlur. Transparency is active for all modes, but does not work everywhere. This may change with future browser updates. Works only with the system theme.
