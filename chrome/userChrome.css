@@ -450,6 +450,11 @@ and
     {
         box-shadow: var(--outer-box-shadow, none) !important;
     }
+
+    :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) #nav-bar::before
+    {
+        display: none !important;
+    }
 }
 
 /* ---------------------------------------- Main Window ---------------------------------------- */
