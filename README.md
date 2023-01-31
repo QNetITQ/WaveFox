@@ -60,7 +60,11 @@ Works with modern versions of Windows 11 / Windows 10. System effects must be su
 
 Download and install Mica For Everyone from [here](https://github.com/minusium/MicaForEveryone/releases).
 
+##### v1.5.109
 - `userChrome.WindowsSystemEffects-Enabled`
+
+##### v1.5.110
+- `userChrome.Windows.SystemEffects.Enabled`
 
 ### Toolbar Transparency
 Works only with the system theme.
