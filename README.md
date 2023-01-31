@@ -85,7 +85,12 @@ Requires Linux with transparency support. Tested on Linux Manjaro KDE + ForceBlu
 
 ![изображение](https://user-images.githubusercontent.com/85301851/173119832-e82bc2f7-eda7-4167-9dcd-ccca50383816.png)
 
+##### v1.5.109
 - `userChrome.LinuxTransparency-Enabled`
+- `gfx.webrender.all` (Required key)
+
+##### v1.5.110
+- `userChrome.Linux.Transparency.Enabled`
 - `gfx.webrender.all` (Required key)
 
 ### Colorways
