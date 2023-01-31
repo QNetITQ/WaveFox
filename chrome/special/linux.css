@@ -9,9 +9,9 @@
         }
     }
 
-    @supports -moz-bool-pref("userChrome.LinuxTransparency-Enabled")
+    @supports -moz-bool-pref("userChrome.Linux.Transparency.Enabled")
     {
-        #main-window:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode])
+        #main-window[tabsintitlebar]:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode])
         {
             background-color: transparent !important;
         }
@@ -20,30 +20,5 @@
         {
             appearance: none !important;
         }
-
-        :root:not([tabsintitlebar]):is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) .titlebar-color
-        {
-            appearance: none !important;
-        }
-
-        :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) #navigator-toolbox-background::before
-        {
-            content: "";
-            display: block;
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            left: 0%;
-            top: 0%;
-            opacity: 0.5;
-            z-index: -1;
-            appearance: -moz-window-titlebar-maximized;
-        }
-
-        :root[tabsintitlebar][sizemode="normal"]:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) #navigator-toolbox-background::before
-        {
-            appearance: -moz-window-titlebar;
-        }
     }
-
 }
