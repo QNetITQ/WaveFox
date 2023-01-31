@@ -35,13 +35,13 @@
     {
         @media (-moz-windows-accent-color-in-titlebar: 0)
         {
-            #main-window[tabsintitlebar]:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not([sizemode="fullscreen"])
+            #main-window[tabsintitlebar]:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode])
             {
                 appearance: -moz-win-borderless-glass !important;
                 background-color: transparent !important;
             }
 
-            :root[tabsintitlebar]:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not([sizemode="fullscreen"]) #navigator-toolbox
+            :root[tabsintitlebar]:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) #navigator-toolbox
             {
                 background-color: transparent !important;
             }
