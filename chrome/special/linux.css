@@ -11,12 +11,12 @@
 
     @supports -moz-bool-pref("userChrome.Linux.Transparency.Enabled")
     {
-        #main-window[tabsintitlebar]:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode])
+        #main-window[tabsintitlebar]:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not(:-moz-window-inactive)
         {
             background-color: transparent !important;
         }
 
-        :root[tabsintitlebar]:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) #navigator-toolbox-background
+        :root[tabsintitlebar]:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not(:-moz-window-inactive) #navigator-toolbox-background
         {
             appearance: none !important;
         }
