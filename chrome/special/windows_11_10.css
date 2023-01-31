@@ -31,22 +31,22 @@
         }
     }
 
-    @supports -moz-bool-pref("userChrome.WindowsSystemEffects-Enabled")
+    @supports -moz-bool-pref("userChrome.Windows.SystemEffects.Enabled")
     {
         @media (-moz-windows-accent-color-in-titlebar: 0)
         {
-            #main-window:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode])
+            #main-window[tabsintitlebar]:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not([sizemode="fullscreen"])
             {
                 appearance: -moz-win-borderless-glass !important;
                 background-color: transparent !important;
             }
 
-            :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) #navigator-toolbox
+            :root[tabsintitlebar]:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not([sizemode="fullscreen"]) #navigator-toolbox
             {
                 background-color: transparent !important;
             }
 
-            :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) .titlebar-buttonbox:not(:hover, :hover:active)
+            :root[tabsintitlebar]:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not([sizemode="fullscreen"]) .titlebar-buttonbox:not(:hover, :hover:active)
             {
                 opacity: 0 !important;
             }
