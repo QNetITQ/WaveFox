@@ -1478,29 +1478,15 @@ spacer[part="overflow-end-indicator"]
     #navigator-toolbox
     {
         display: grid !important;
+        align-items: end !important;
     }
 
     /* -------------------- Nav Bar -------------------- */
-
-    #nav-bar
-    {
-        -moz-box-align: center !important;
-    }
 
     #urlbar-container,
     #search-container
     {
         padding-block: 0px !important;
-    }
-
-    #urlbar-container
-    {
-        --urlbar-container-height: var(--tab-min-height) !important;
-    }
-
-    #urlbar
-    {
-        --urlbar-toolbar-height: var(--tab-min-height) !important;
     }
 
     @supports -moz-bool-pref("userChrome.PhotonTabs-Enabled")       or
