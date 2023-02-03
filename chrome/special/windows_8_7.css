@@ -1,7 +1,6 @@
 @media (-moz-platform: windows-win8),
        (-moz-platform: windows-win7)
 {
-
     @media (-moz-windows-glass)
     {
         :root:not(:-moz-lwtheme) #titlebar
@@ -10,9 +9,12 @@
         }
     }
 
-    .titlebar-color
+    @media (-moz-windows-default-theme)
     {
-        background-image: none !important;
+        #TabsToolbar:not(:-moz-lwtheme)
+        {
+            background-image: none !important;
+        }
     }
 
     @supports -moz-bool-pref("userChrome.RegularMenuIcons-Enabled") or
@@ -52,5 +54,4 @@
             padding-top: 0px !important;
         }
     }
-
 }
