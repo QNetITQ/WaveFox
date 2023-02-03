@@ -11,7 +11,7 @@
 
     @media (-moz-windows-default-theme)
     {
-        #TabsToolbar:not(:-moz-lwtheme)
+        #TabsToolbar
         {
             background-image: none !important;
         }
@@ -29,20 +29,9 @@
     @supports -moz-bool-pref("userChrome.OneLine.TabBarFirst.Enabled") or
               -moz-bool-pref("userChrome.OneLine.NavBarFirst.Enabled")
     {
-        #titlebar
+        :root[tabsintitlebar] #nav-bar
         {
-            appearance: none !important;
-        }
-
-        :root[tabsintitlebar][sizemode="maximized"] #navigator-toolbox
-        {
-            margin-top: 8px !important;
-        }
-
-        .toolbar-items
-        {
-            margin-top: 0px !important;
-            padding-top: 0px !important;
+            margin-top: 12px !important;
         }
     }
        
