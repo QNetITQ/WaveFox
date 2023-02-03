@@ -25,15 +25,6 @@
             --align-menu-icons: 0 -22px 0 2px;
         }
     }
-
-    @supports -moz-bool-pref("userChrome.OneLine.TabBarFirst.Enabled") or
-              -moz-bool-pref("userChrome.OneLine.NavBarFirst.Enabled")
-    {
-        :root[tabsintitlebar] #nav-bar
-        {
-            margin-top: 12px !important;
-        }
-    }
        
     @supports -moz-bool-pref("userChrome.TabsOnBottom-Enabled")
     {
