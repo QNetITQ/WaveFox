@@ -1422,8 +1422,7 @@ spacer[part="overflow-end-indicator"]
 
 @supports -moz-bool-pref("userChrome.WaveFoxTabs-Enabled")   or
           -moz-bool-pref("userChrome.AustralisTabs-Enabled") or
-          -moz-bool-pref("userChrome.ChromeTabs-Enabled")    or
-          -moz-bool-pref("userChrome.EdgeTabs-Enabled")
+          -moz-bool-pref("userChrome.ChromeTabs-Enabled")
 {
     #TabsToolbar :is(#tabs-newtab-button > .toolbarbutton-icon,
                      #new-tab-button > .toolbarbutton-icon,
