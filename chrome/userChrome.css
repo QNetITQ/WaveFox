@@ -1308,11 +1308,6 @@ spacer[part="overflow-end-indicator"]
                          0
                         ) !important;
     }
-       
-    .tabbrowser-tab[pinned] .tab-content
-    {
-        padding: 0 calc((var(--tab-min-height) - 16px) / 2 + 2px + var(--pinned-tabs-width-offset, 0px)) !important;
-    }
 
     .tab-background
     {
@@ -1489,6 +1484,16 @@ spacer[part="overflow-end-indicator"]
         padding-block: 0px !important;
     }
 
+    #urlbar-container
+    {
+        --urlbar-container-height: var(--tab-min-height) !important;
+    }
+
+    #urlbar
+    {
+        --urlbar-toolbar-height: var(--tab-min-height) !important;
+    }
+
     @supports -moz-bool-pref("userChrome.PhotonTabs-Enabled")       or
               -moz-bool-pref("userChrome.LegacyChromeTabs-Enabled")
     {
@@ -1640,20 +1645,29 @@ spacer[part="overflow-end-indicator"]
 
     @supports -moz-bool-pref("userChrome.PhotonTabs-Enabled")
     {
-        clip-path: inset(0 calc(-1 * var(--toolbar-start-end-padding))) !important;
+        .tabbrowser-tab
+        {
+            clip-path: inset(0 calc(-1 * var(--toolbar-start-end-padding))) !important;
+        }
     }
 
     @supports -moz-bool-pref("userChrome.WaveFoxTabs-Enabled")      or
               -moz-bool-pref("userChrome.AustralisTabs-Enabled")    or
               -moz-bool-pref("userChrome.LegacyChromeTabs-Enabled")
     {
-        clip-path: inset(0 calc(-1 * var(--tab-min-height) / 2)) !important;
+        .tabbrowser-tab
+        {
+            clip-path: inset(0 calc(-1 * var(--tab-min-height) / 2)) !important;
+        }
     }
 
     @supports -moz-bool-pref("userChrome.ChromeTabs-Enabled") or
               -moz-bool-pref("userChrome.EdgeTabs-Enabled")
     {
-        clip-path: inset(0 calc(-1 * var(--tab-min-height) / 4)) !important;
+        .tabbrowser-tab
+        {
+            clip-path: inset(0 calc(-1 * var(--tab-min-height) / 4)) !important;
+        }
     }
 
     /* ---------- Rounded Corners (SVG) ---------- */
