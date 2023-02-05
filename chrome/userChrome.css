@@ -366,7 +366,7 @@ and
     }
 }
 
-/* ---------------------------------------- Selected Tab Highlight / Container Indicators ---------------------------------------- */
+/* ---------------------------------------- Container Indicators ---------------------------------------- */
 
 .tab-context-line
 {
@@ -374,32 +374,20 @@ and
     height: var(--tab-min-height) !important;
     border-radius: 0px !important;
     margin: 0px !important;
-    background-position: center top, center bottom !important;
-    background-repeat: no-repeat, no-repeat !important;
+    background-position: center bottom !important;
+    background-repeat: no-repeat !important;
 }
 
 .tabbrowser-tab[pinned] .tab-context-line
 {
-    background-image: radial-gradient(circle at center, var(--tab-highlight, transparent) 2px, transparent 2px),
-                      radial-gradient(circle at center, var(--identity-icon-color, transparent) 2px, transparent 2px) !important;
-    background-size: 4px 4px, 4px 4px !important;
+    background-image: radial-gradient(circle at center, var(--identity-icon-color, transparent) 2px, transparent 2px) !important;
+    background-size: 4px 4px !important;
 }
 
 .tabbrowser-tab:not([pinned]) .tab-context-line
 {
-    background-image: linear-gradient(to right, transparent, var(--tab-highlight, transparent), transparent),
-                      linear-gradient(to right, transparent, var(--identity-icon-color, transparent), transparent) !important;
-    background-size: 100% 2px, 100% 2px !important;
-}
-
-/* -------------------- Selected Tab Highlight -------------------- */
-
-@supports -moz-bool-pref("userChrome.SelectedTabHighlight-Enabled")
-{
-    .tabbrowser-tab[visuallyselected] .tab-context-line
-    {
-        --tab-highlight: var(--tab-loading-fill) !important;
-    }
+    background-image: linear-gradient(to right, transparent, var(--identity-icon-color, transparent), transparent) !important;
+    background-size: 100% 2px !important;
 }
 
 /* ---------------------------------------- Toolbar Transparency ---------------------------------------- */
