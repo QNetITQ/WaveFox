@@ -196,11 +196,6 @@ By default context menus follow the selected interface density, but it is possib
 - `userChrome.DragSpace.Top.Maximized.Enabled`
 - `userChrome.DragSpace.Top.Fullscreen.Enabled`
 
-### Selected Tab Highlight
-![изображение](https://user-images.githubusercontent.com/85301851/170877154-44db11c2-02ce-4aab-821e-c3cc68f26a2d.png)
-
-- `userChrome.SelectedTabHighlight-Enabled`
-
 ### Pinned Tabs Width
 ![Снимок](https://user-images.githubusercontent.com/85301851/185612113-7bb0445f-8993-45bd-916d-d066e88ea7f4.PNG)
 
