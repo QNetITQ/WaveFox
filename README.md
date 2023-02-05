@@ -60,21 +60,12 @@ Works with modern versions of Windows 11 / Windows 10. System effects must be su
 
 Download and install Mica For Everyone from [here](https://github.com/minusium/MicaForEveryone/releases).
 
-##### v1.5.109
-- `userChrome.WindowsSystemEffects-Enabled`
-
-##### v1.5.110
 - `userChrome.Windows.SystemEffects.Enabled`
 
 ### Toolbar Transparency
 Works only with the system theme.
 ![изображение](https://user-images.githubusercontent.com/85301851/165526704-4f7486c4-f330-4c86-a25d-6ed8ab2affe4.png)
 
-##### v1.5.109
-- `userChrome.SemiTransparentToolbar-Enabled`
-- `userChrome.TransparentToolbar-Enabled` (Proton Tabs Only)
-
-##### v1.5.110
 - `userChrome.Toolbar.Transparency.Low.Enabled`
 - `userChrome.Toolbar.Transparency.Medium.Enabled`
 - `userChrome.Toolbar.Transparency.High.Enabled`
@@ -85,16 +76,8 @@ Requires Linux with transparency support. Tested on Linux Manjaro KDE + ForceBlu
 
 ![изображение](https://user-images.githubusercontent.com/85301851/173119832-e82bc2f7-eda7-4167-9dcd-ccca50383816.png)
 
-##### v1.5.109
-- `userChrome.LinuxTransparency-Enabled`
-- `gfx.webrender.all` (Required key)
-
-##### v1.5.110
 - `userChrome.Linux.Transparency.Enabled`
 - `gfx.webrender.all` (Required key)
-
-### Colorways
-[Bringing back your preferred colorways](https://redd.it/uq26ao)
 
 ### Additional Container Indicator
 ![изображение](https://user-images.githubusercontent.com/85301851/161597087-fc818bc5-c60e-48a9-8eb9-1bcafc030607.png)
@@ -102,25 +85,8 @@ Requires Linux with transparency support. Tested on Linux Manjaro KDE + ForceBlu
 - `userChrome.AdditionalContainerIndicator-Enabled`
 
 ### Tab Frame
-![изображение](https://user-images.githubusercontent.com/85301851/152011749-4d5619b3-0fd8-40f9-a3dc-96be31839971.png)
-
-##### v1.5.109
-It is also possible to turn on the border and the shadow at the same time.
-
-##### Border
-- `userChrome.LowBorderSaturation-Enabled`
-- `userChrome.MediumBorderSaturation-Enabled`
-- `userChrome.HighBorderSaturation-Enabled`
-- `userChrome.VeryHighBorderSaturation-Enabled`
-
-##### Shadow
-- `userChrome.LowShadowSaturation-Enabled`
-- `userChrome.MediumShadowSaturation-Enabled`
-- `userChrome.HighShadowSaturation-Enabled`
-- `userChrome.VeryHighShadowSaturation-Enabled`
-
-##### v1.5.110
 The tab frame consists of type, color and saturation. Not compatible with themes that use a translucent toolbar.
+![изображение](https://user-images.githubusercontent.com/85301851/152011749-4d5619b3-0fd8-40f9-a3dc-96be31839971.png)
 
 ##### Light Theme
 
@@ -181,15 +147,6 @@ By default context menus follow the selected interface density, but it is possib
 ### Drag Space
 ![изображение](https://user-images.githubusercontent.com/85301851/152680229-43547df0-1d2c-4384-b024-950e7aa56ca6.png)
 
-##### v1.5.109
-- `userChrome.LeftSideDragSpace-Disabled`
-- `userChrome.RightSideDragSpace-Disabled`
-- `userChrome.DragSpaceAboveTabsWindowedMode-Disabled`
-- `userChrome.IncreasedDragSpaceAboveTabsWindowedMode-Enabled`
-- `userChrome.DragSpaceAboveTabsMaximizedMode-Enabled`
-- `userChrome.DragSpaceAboveTabsFullscreenMode-Enabled`
-
-##### v1.5.110
 - `userChrome.DragSpace.Left.Disabled`
 - `userChrome.DragSpace.Right.Disabled`
 - `userChrome.DragSpace.Top.Windowed.Enabled`
@@ -203,15 +160,9 @@ By default context menus follow the selected interface density, but it is possib
 - `userChrome.PinnedTabsWidthHighIncrease-Enabled`
 
 ### One Line
-The toolbar uses as much space as is needed for its contents. Leave only the most necessary elements. Place the optional ones in the hidden menu.
+The toolbar uses as much space as is needed for its contents. Leave only the most necessary elements. Place the optional ones in the hidden menu. Photon and Legacy Chrome styles have a compact look.
 ![Снимок](https://user-images.githubusercontent.com/85301851/181300272-d1ecfc93-898a-4eb3-80b9-9974fc471b45.PNG)
 
-##### v1.5.109
-- `userChrome.OneLine-Enabled` (Proton Tabs Only)
-  - `userChrome.ResponsiveBookmarksBar-Enabled` (In this mode, the bookmarks bar will never take up more than 20% of the available screen space)
-  
-##### v1.5.110
-Photon and Legacy Chrome styles have a compact look.
 - `userChrome.OneLine.TabBarFirst.Enabled`
 - `userChrome.OneLine.NavBarFirst.Enabled`
 - `browser.tabs.inTitlebar` (Enable this key if there are problems with window control buttons. Set the value to 0)
