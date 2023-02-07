@@ -1431,17 +1431,26 @@ spacer[part="overflow-end-indicator"]
 
 @supports -moz-bool-pref("userChrome.OneLine.NavBarWidth.Low.Enabled")
 {
-    --navbar-width: 20%;
+    :root
+    {
+        --navbar-width: 20%;
+    }
 }
 
 @supports -moz-bool-pref("userChrome.OneLine.NavBarWidth.Medium.Enabled")
 {
-    --navbar-width: 30%;
+    :root
+    {
+        --navbar-width: 30%;
+    }
 }
 
 @supports -moz-bool-pref("userChrome.OneLine.NavBarWidth.High.Enabled")
 {
-    --navbar-width: 40%;
+    :root
+    {
+        --navbar-width: 40%;
+    }
 }
 
 @supports -moz-bool-pref("userChrome.OneLine.TabBarFirst.Enabled")
