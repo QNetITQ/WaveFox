@@ -35,7 +35,7 @@
     {
         @media (-moz-windows-accent-color-in-titlebar: 0)
         {
-            #main-window[tabsintitlebar]:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode])
+            #main-window[tabsintitlebar]:is(:not(:-moz-lwtheme):not([sizemode="fullscreen"]), [lwt-default-theme-in-dark-mode])
             {
                 appearance: -moz-win-borderless-glass !important;
                 background-color: transparent !important;
