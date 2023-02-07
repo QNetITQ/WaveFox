@@ -1429,11 +1429,26 @@ spacer[part="overflow-end-indicator"]
 
 /* ---------------------------------------- One Line ---------------------------------------- */
 
+@supports -moz-bool-pref("userChrome.OneLine.NavBarWidth.Low.Enabled")
+{
+    --navbar-width: 20%;
+}
+
+@supports -moz-bool-pref("userChrome.OneLine.NavBarWidth.Medium.Enabled")
+{
+    --navbar-width: 30%;
+}
+
+@supports -moz-bool-pref("userChrome.OneLine.NavBarWidth.High.Enabled")
+{
+    --navbar-width: 40%;
+}
+
 @supports -moz-bool-pref("userChrome.OneLine.TabBarFirst.Enabled")
 {
     #navigator-toolbox
     {
-        grid-template-columns: auto auto !important;
+        grid-template-columns: auto var(--navbar-width, 50%) !important;
     }
 
     #titlebar
@@ -1446,7 +1461,7 @@ spacer[part="overflow-end-indicator"]
 {
     #navigator-toolbox
     {
-        grid-template-columns: auto auto !important;
+        grid-template-columns: var(--navbar-width, 50%) auto !important;
     }
 
     #nav-bar
@@ -1469,6 +1484,7 @@ spacer[part="overflow-end-indicator"]
     #urlbar-container,
     #search-container
     {
+        min-width: auto !important;
         padding-block: 0px !important;
     }
 
