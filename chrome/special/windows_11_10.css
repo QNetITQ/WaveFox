@@ -20,6 +20,11 @@
             }
         }
 
+        .titlebar-buttonbox-container
+        {
+            -moz-box-align: start !important;
+        }
+
         .titlebar-button:not(.titlebar-close):hover
         {
             background-color: var(--toolbarbutton-hover-background) !important;
