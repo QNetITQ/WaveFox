@@ -8,7 +8,5 @@
     :root[tabsintitlebar]:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) #navigator-toolbox
     {
         background-color: transparent !important;
-        transform: translateY(0px) !important;
-        z-index: 1 !important;
     }
 }
