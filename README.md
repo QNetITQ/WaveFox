@@ -79,7 +79,7 @@ Requires Linux with transparency support. Tested on Linux Manjaro KDE + ForceBlu
 - `userChrome.Linux.Transparency.Enabled`
 - `gfx.webrender.all` (Required key)
 
-### Additional Container Indicator
+### Additional Container Indicator (Deprecated v1.5.111)
 ![изображение](https://user-images.githubusercontent.com/85301851/161597087-fc818bc5-c60e-48a9-8eb9-1bcafc030607.png)
 
 - `userChrome.AdditionalContainerIndicator-Enabled`
