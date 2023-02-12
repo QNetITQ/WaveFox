@@ -343,51 +343,18 @@ and
     }
 }
 
-/* ---------------------------------------- Additional Container Indicator ---------------------------------------- */
-
-@supports -moz-bool-pref("userChrome.AdditionalContainerIndicator-Enabled")
-{
-    .tabbrowser-tab[usercontextid] .tab-background
-    {
-        background-color: color-mix(in srgb, var(--identity-icon-color) 25%, transparent);
-    }
-
-    .tabbrowser-tab[usercontextid] .tab-background::before,
-    .tabbrowser-tab[usercontextid] .tab-background::after
-    {
-        fill: color-mix(in srgb, var(--identity-icon-color) 25%, transparent);
-    }
-
-    .tabbrowser-tab[usercontextid] .tab-stack::before,
-    .tabbrowser-tab[usercontextid] .tab-stack::after,
-    .tabbrowser-tab[usercontextid] + .tabbrowser-tab .tab-stack::before
-    {
-        opacity: 0 !important;
-    }
-}
-
 /* ---------------------------------------- Container Indicators ---------------------------------------- */
 
-.tab-context-line
+.tabbrowser-tab[usercontextid] .tab-context-line
 {
-    background-color: transparent !important;
-    height: var(--tab-min-height) !important;
-    border-radius: 0px !important;
-    margin: 0px !important;
-    background-position: center bottom !important;
-    background-repeat: no-repeat !important;
+    height: 3px !important;
+    margin-block: calc(var(--tab-min-height) - 3px) 0px !important;
+    border-radius: var(--tab-border-radius) !important;
 }
 
-.tabbrowser-tab[pinned] .tab-context-line
+.tabbrowser-tab[usercontextid]:not([pinned]) .tab-context-line
 {
-    background-image: radial-gradient(circle at center, var(--identity-icon-color, transparent) 2px, transparent 2px) !important;
-    background-size: 4px 4px !important;
-}
-
-.tabbrowser-tab:not([pinned]) .tab-context-line
-{
-    background-image: linear-gradient(to right, transparent, var(--identity-icon-color, transparent), transparent) !important;
-    background-size: 100% 2px !important;
+    margin-inline: 0px !important;
 }
 
 /* ---------------------------------------- Toolbar Transparency ---------------------------------------- */
@@ -1138,6 +1105,13 @@ spacer[part="overflow-end-indicator"]
     {
         box-sizing: content-box !important;
     }
+
+    /* ---------- Container Indicators ---------- */
+
+    .tabbrowser-tab[usercontextid][pinned] .tab-context-line
+    {
+        margin-inline: calc((var(--tab-min-height) - 16px) / 2 + var(--pinned-tabs-width-offset, 0px)) !important;
+    }
 }
 
 /* -------------------- Photon -------------------- */
@@ -1175,6 +1149,13 @@ spacer[part="overflow-end-indicator"]
     {
         padding-inline: var(--toolbar-start-end-padding) !important;
         margin-inline: calc(-1 * var(--toolbar-start-end-padding)) !important;
+    }
+
+    /* ---------- Container Indicators ---------- */
+
+    .tabbrowser-tab[usercontextid][pinned] .tab-context-line
+    {
+        margin-inline: calc((var(--tab-min-height) - 16px) / 2 + var(--pinned-tabs-width-offset, 0px)) !important;
     }
 }
 
@@ -1323,6 +1304,13 @@ spacer[part="overflow-end-indicator"]
         padding-inline: calc(var(--tab-min-height) / 2) !important;
         margin-inline: calc(-1 * var(--tab-min-height) / 2) !important;
     }
+
+    /* ---------- Container Indicators ---------- */
+
+    .tabbrowser-tab[pinned] .tab-context-line
+    {
+        margin-inline: calc(var(--tab-min-height) / -2 + (var(--tab-min-height) - 16px) / 2 + var(--pinned-tabs-width-offset, 0px)) !important;
+    }
 }
 
 /* -------------------- Chrome / Edge -------------------- */
@@ -1375,6 +1363,13 @@ spacer[part="overflow-end-indicator"]
     {
         padding-inline: calc(var(--tab-min-height) / 4) !important;
         margin-inline: calc(-1 * var(--tab-min-height) / 4) !important;
+    }
+
+    /* ---------- Container Indicators ---------- */
+
+    .tabbrowser-tab[pinned] .tab-context-line
+    {
+        margin-inline: calc(var(--tab-min-height) / -4 + (var(--tab-min-height) - 16px) / 2 + var(--pinned-tabs-width-offset, 0px)) !important;
     }
 }
 
