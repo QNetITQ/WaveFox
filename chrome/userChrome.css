@@ -350,11 +350,7 @@ and
     height: 3px !important;
     margin-block: calc(var(--tab-min-height) - 3px) 0px !important;
     border-radius: var(--tab-border-radius) !important;
-}
-
-.tabbrowser-tab[usercontextid]:not([pinned]) .tab-context-line
-{
-    margin-inline: 0px !important;
+    z-index: 1 !important;
 }
 
 /* ---------------------------------------- Toolbar Transparency ---------------------------------------- */
