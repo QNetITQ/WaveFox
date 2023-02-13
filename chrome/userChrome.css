@@ -1112,6 +1112,11 @@ spacer[part="overflow-end-indicator"]
     {
         margin-inline: calc((var(--tab-min-height) - 16px) / 2 + var(--pinned-tabs-width-offset, 0px)) !important;
     }
+
+    .tabbrowser-tab[usercontextid]:not([pinned]) .tab-context-line
+    {
+        margin-inline: calc((var(--tab-min-height) - 16px) / 2 + var(--pinned-tabs-width-offset, 0px)) !important;
+    }
 }
 
 /* -------------------- Photon -------------------- */
@@ -1154,6 +1159,11 @@ spacer[part="overflow-end-indicator"]
     /* ---------- Container Indicators ---------- */
 
     .tabbrowser-tab[usercontextid][pinned] .tab-context-line
+    {
+        margin-inline: calc((var(--tab-min-height) - 16px) / 2 + var(--pinned-tabs-width-offset, 0px)) !important;
+    }
+
+    .tabbrowser-tab[usercontextid]:not([pinned]) .tab-context-line
     {
         margin-inline: calc((var(--tab-min-height) - 16px) / 2 + var(--pinned-tabs-width-offset, 0px)) !important;
     }
@@ -1311,6 +1321,11 @@ spacer[part="overflow-end-indicator"]
     {
         margin-inline: calc(var(--tab-min-height) / -2 + (var(--tab-min-height) - 16px) / 2 + var(--pinned-tabs-width-offset, 0px)) !important;
     }
+
+    .tabbrowser-tab[usercontextid]:not([pinned]) .tab-context-line
+    {
+        margin-inline: 0px !important;
+    }
 }
 
 /* -------------------- Chrome / Edge -------------------- */
@@ -1370,6 +1385,11 @@ spacer[part="overflow-end-indicator"]
     .tabbrowser-tab[pinned] .tab-context-line
     {
         margin-inline: calc(var(--tab-min-height) / -4 + (var(--tab-min-height) - 16px) / 2 + var(--pinned-tabs-width-offset, 0px)) !important;
+    }
+
+    .tabbrowser-tab[usercontextid]:not([pinned]) .tab-context-line
+    {
+        margin-inline: 0px !important;
     }
 }
 
