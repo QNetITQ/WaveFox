@@ -78,7 +78,7 @@ and
         {
             :root
             {
-                --shadow-color: var(--lwt-tab-text, var(--toolbar-color));
+                --shadow-color: var(--toolbar-color);
             }
         }
 
@@ -202,7 +202,7 @@ and
         {
             :root
             {
-                --shadow-color: var(--lwt-tab-text, var(--toolbar-color));
+                --shadow-color: var(--toolbar-color);
             }
         }
 
@@ -423,8 +423,6 @@ and
 {
     --button-hover-bgcolor: color-mix(in srgb, currentColor 10%, transparent) !important;
     --button-active-bgcolor: color-mix(in srgb, currentColor 20%, transparent) !important;
-    --tab-selected-bgcolor: unset !important;
-    --lwt-selected-tab-background-color: unset !important;
 }
 
 /* ---------------------------------------- Density ---------------------------------------- */
@@ -591,14 +589,14 @@ spacer[part="overflow-end-indicator"]
 .tabbrowser-tab[visuallyselected]
 {
     --tab-loading-fill: var(--toolbar-field-focus-border-color) !important;
-    color: var(--lwt-tab-text, var(--toolbar-color)) !important;
+    color: var(--toolbar-color) !important;
     position: relative;
     z-index: 2;
 }
 
 .tabbrowser-tab[visuallyselected] .tab-background
 {
-    background-color: var(--tab-selected-bgcolor, var(--lwt-selected-tab-background-color, var(--toolbar-bgcolor))) !important;
+    background-color: var(--toolbar-bgcolor) !important;
     filter: var(--outer-drop-shadow, none);
 }
 
@@ -1228,7 +1226,7 @@ spacer[part="overflow-end-indicator"]
     .tabbrowser-tab[visuallyselected] .tab-background::before,
     .tabbrowser-tab[visuallyselected] .tab-background::after
     {
-        fill: var(--tab-selected-bgcolor, var(--lwt-selected-tab-background-color, var(--toolbar-bgcolor))) !important;
+        fill: var(--toolbar-bgcolor) !important;
     }
 
     .tabbrowser-tab:hover .tab-background::before,
