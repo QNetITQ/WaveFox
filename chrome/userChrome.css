@@ -579,8 +579,7 @@ spacer[part="overflow-end-indicator"]
 {
     --tab-loading-fill: currentColor !important;
     --tab-attention-icon-color: currentColor !important;
-    --tab-label-mask-size: var(--inline-tab-padding) !important;
-    --inline-tab-padding: 10px !important;
+    --tab-label-mask-size: 10px !important;
     color: inherit !important;
     overflow-x: clip !important;
     overflow-y: visible !important;
@@ -622,8 +621,10 @@ spacer[part="overflow-end-indicator"]
 
 .tab-close-button
 {
-    width: 24px !important;
-    padding: 7px !important;
+    width: 16px !important;
+    height: 16px !important;
+    padding: 3px !important;
+    margin: 0px !important;
 }
 
 .close-icon:hover
@@ -636,7 +637,7 @@ spacer[part="overflow-end-indicator"]
     background-color: var(--toolbarbutton-active-background) !important;
 }
 
-.tabbrowser-tab[pinned] .tab-content
+.tab-content
 {
     padding: 0 calc((var(--tab-min-height) - 16px) / 2 + var(--pinned-tabs-width-offset, 0px)) !important;
 }
@@ -766,7 +767,7 @@ spacer[part="overflow-end-indicator"]
 
 .tabbrowser-tab:not([pinned]) :is(.tab-throbber, .tab-icon-pending, .tab-icon-image, .tab-sharing-icon-overlay, .tab-icon-overlay)
 {
-    margin-inline-end: var(--inline-tab-padding) !important;
+    margin-inline-end: 10px !important;
 }
 
 .tab-icon-stack:not([crashed]):is([soundplaying], [muted], [activemedia-blocked]) :is(.tab-throbber, .tab-icon-pending, .tab-icon-image, .tab-sharing-icon-overlay)
