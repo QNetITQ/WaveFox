@@ -619,12 +619,23 @@ spacer[part="overflow-end-indicator"]
     background-color: var(--toolbarbutton-active-background) !important;
 }
 
-.tab-close-button
+.tabbrowser-tab:not([pinned]) .tab-close-button
 {
+    -moz-box-ordinal-group: 0 !important;
+    display: revert !important;
+    position: relative !important;
     width: 16px !important;
     height: 16px !important;
     padding: 3px !important;
-    margin: 0px !important;
+    margin-inline: -8px !important;
+    margin-block: 16px 0px !important;
+    z-index: 1 !important;
+}
+
+.tabbrowser-tab:not([pinned], [pictureinpicture]) :is(.tab-throbber, .tab-icon-pending, .tab-icon-image, .tab-sharing-icon-overlay),
+.tabbrowser-tab[pictureinpicture]:not([pinned]) .tab-icon-stack::before
+{
+    clip-path: url("special/SVG/Additional_Elements/Tab_Close_Button.svg#ClipPath");
 }
 
 .close-icon:hover
