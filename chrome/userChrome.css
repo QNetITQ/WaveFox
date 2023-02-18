@@ -627,6 +627,7 @@ spacer[part="overflow-end-indicator"]
     width: 16px !important;
     height: 16px !important;
     padding: 3px !important;
+    border-radius: 50% !important;
     margin-inline: -8px !important;
     margin-block: 16px 0px !important;
     z-index: 1 !important;
@@ -1433,8 +1434,7 @@ spacer[part="overflow-end-indicator"]
     #TabsToolbar :is(#tabs-newtab-button > .toolbarbutton-icon,
                      #new-tab-button > .toolbarbutton-icon,
                      #firefox-view-button > .toolbarbutton-icon,
-                     #alltabs-button > .toolbarbutton-badge-stack,
-                     .tab-close-button)
+                     #alltabs-button > .toolbarbutton-badge-stack)
     {
         border-radius: 50% !important;
     }
