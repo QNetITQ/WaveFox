@@ -12,8 +12,4 @@
         <use href="#Path"/>
     </clipPath>
 
-    <mask id="Mask" maskContentUnits="objectBoundingBox">
-        <use href="#Path" fill="#ffffff"/>
-    </mask>
-
 </svg>
