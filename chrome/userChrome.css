@@ -619,24 +619,12 @@ spacer[part="overflow-end-indicator"]
     background-color: var(--toolbarbutton-active-background) !important;
 }
 
-.tabbrowser-tab:not([pinned]) .tab-close-button
+.tab-close-button
 {
-    -moz-box-ordinal-group: 0 !important;
-    display: revert !important;
-    position: relative !important;
     width: 16px !important;
     height: 16px !important;
     padding: 3px !important;
-    border-radius: 50% !important;
-    margin-inline: -8px !important;
-    margin-block: 16px 0px !important;
-    z-index: 1 !important;
-}
-
-.tabbrowser-tab:not([pinned], [pictureinpicture]) :is(.tab-throbber, .tab-icon-pending, .tab-icon-image, .tab-sharing-icon-overlay),
-.tabbrowser-tab[pictureinpicture]:not([pinned]) .tab-icon-stack::before
-{
-    clip-path: url("special/SVG/Additional_Elements/Tab_Close_Button.svg#ClipPath");
+    margin: 0px !important;
 }
 
 .close-icon:hover
@@ -1434,7 +1422,8 @@ spacer[part="overflow-end-indicator"]
     #TabsToolbar :is(#tabs-newtab-button > .toolbarbutton-icon,
                      #new-tab-button > .toolbarbutton-icon,
                      #firefox-view-button > .toolbarbutton-icon,
-                     #alltabs-button > .toolbarbutton-badge-stack)
+                     #alltabs-button > .toolbarbutton-badge-stack,
+                     .tab-close-button)
     {
         border-radius: 50% !important;
     }
