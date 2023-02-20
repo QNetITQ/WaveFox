@@ -656,39 +656,9 @@ spacer[part="overflow-end-indicator"]
     fill: currentColor !important;
 }
 
-/* -------------------- Tab Icon Image -------------------- */
-
-.tab-icon-image:not([src], [pinned], [crashed], [pictureinpicture], [busy])[selected],
-.tab-icon-image:not([src], [pinned], [crashed], [sharing], [pictureinpicture], [busy])
-{
-    display: revert !important;
-    animation-name: HideGlobeIconAtStart;
-    animation-duration: 200ms;
-    animation-timing-function: linear;
-}
-       
-@keyframes HideGlobeIconAtStart
-{
-    0%
-    {
-        opacity: 0;
-    }
-
-    50%
-    {
-        opacity: 0;
-    }
-
-    100%
-    {
-        opacity: 1;
-    }
-}
-
 /* -------------------- Media Icons -------------------- */
 
-.tab-icon-overlay:not([crashed]):is([pinned], [sharing]):is([soundplaying], [muted], [activemedia-blocked]),
-.tab-icon-overlay[indicator-replaces-favicon]
+.tab-icon-overlay:not([crashed])
 {
     stroke: transparent !important;
     background-color: transparent !important;
@@ -697,26 +667,28 @@ spacer[part="overflow-end-indicator"]
     fill: currentColor !important;
     fill-opacity: 1 !important;
     z-index: 1 !important;
-    top: -8px !important;
-    inset-inline-end: -8px !important;
-}
-       
-.tab-icon-overlay[indicator-replaces-favicon],
-.tab-icon-stack[indicator-replaces-favicon] > :not(.tab-icon-overlay)
-{
-    opacity: 1 !important;
 }
 
-.tab-icon-overlay:not([crashed]):is([pinned], [sharing]):is([soundplaying], [muted], [activemedia-blocked]):hover,
-.tab-icon-overlay[indicator-replaces-favicon]:hover
+.tab-icon-overlay:not([crashed]):hover
 {
     background-color: var(--toolbarbutton-hover-background) !important;
 }
 
-.tab-icon-overlay:not([crashed]):is([pinned], [sharing]):is([soundplaying], [muted], [activemedia-blocked]):hover:active,
-.tab-icon-overlay[indicator-replaces-favicon]:hover:active
+.tab-icon-overlay:not([crashed]):hover:active
 {
     background-color: var(--toolbarbutton-active-background) !important;
+}
+
+.tabbrowser-tab:is([pinned], [image], [sharing]):not([crashed]) .tab-icon-overlay
+{
+    top: -8px !important;
+    inset-inline-end: -8px !important;
+}
+
+.tab-icon-overlay[indicator-replaces-favicon],
+.tab-icon-stack[indicator-replaces-favicon] > :not(.tab-icon-overlay)
+{
+    opacity: 1 !important;
 }
 
 .tabbrowser-tab:not([pinned]) :is(.tab-throbber, .tab-icon-pending, .tab-icon-image, .tab-sharing-icon-overlay, .tab-icon-overlay)
@@ -724,7 +696,7 @@ spacer[part="overflow-end-indicator"]
     margin-inline-end: 10px !important;
 }
 
-.tab-icon-stack:not([crashed]):is([soundplaying], [muted], [activemedia-blocked]) :is(.tab-throbber, .tab-icon-pending, .tab-icon-image, .tab-sharing-icon-overlay)
+.tabbrowser-tab:is([pinned], [image], [sharing]):not([crashed]) .tab-icon-stack:is([soundplaying], [muted], [activemedia-blocked]) :is(.tab-throbber, .tab-icon-pending, .tab-icon-image, .tab-sharing-icon-overlay)
 {
     mask-image: url("special/SVG/Additional_Elements/Media.svg");
     mask-size: 100% 100%;
