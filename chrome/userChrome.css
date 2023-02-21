@@ -696,7 +696,12 @@ spacer[part="overflow-end-indicator"]
     margin-inline-end: 10px !important;
 }
 
-.tabbrowser-tab:is([pinned], [image], [sharing]):is([soundplaying], [muted], [activemedia-blocked]):not([crashed]) :is(.tab-throbber, .tab-icon-pending, .tab-icon-image, .tab-sharing-icon-overlay)
+.tabbrowser-tab[busy] .tab-icon-overlay
+{
+    display: none !important;
+}
+
+.tabbrowser-tab:is([pinned], [image], [sharing]):is([soundplaying], [muted], [activemedia-blocked]):not([busy], [crashed]) :is(.tab-throbber, .tab-icon-pending, .tab-icon-image, .tab-sharing-icon-overlay)
 {
     mask-image: url("special/SVG/Additional_Elements/Media.svg");
     mask-size: 100% 100%;
