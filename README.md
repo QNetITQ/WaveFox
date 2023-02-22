@@ -13,7 +13,7 @@
 
   - `toolkit.legacyUserProfileCustomizations.stylesheets`
   - `layout.css.color-mix.enabled`
-  - `svg.context-properties.content.enabled` (Activate this key if the menu icons do not follow the general design color. Previously seen only on MacOS)
+  - `svg.context-properties.content.enabled` (Activate this key if the menu icons / tab corners do not follow the general design color. Previously seen only on MacOS)
   
 - Specify the desired shape of the tabs.
 
