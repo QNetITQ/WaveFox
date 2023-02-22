@@ -679,7 +679,7 @@ spacer[part="overflow-end-indicator"]
     background-color: var(--toolbarbutton-active-background) !important;
 }
 
-.tabbrowser-tab:is([pinned], [image], [sharing]):not([crashed]) .tab-icon-overlay
+.tabbrowser-tab:is([pinned], [image], [sharing], [pictureinpicture]):not([crashed]) .tab-icon-overlay
 {
     top: -8px !important;
     inset-inline-end: -8px !important;
@@ -701,7 +701,7 @@ spacer[part="overflow-end-indicator"]
     display: none !important;
 }
 
-.tabbrowser-tab:is([pinned], [image], [sharing]):is([soundplaying], [muted], [activemedia-blocked]):not([busy], [crashed]) :is(.tab-throbber, .tab-icon-pending, .tab-icon-image, .tab-sharing-icon-overlay)
+.tabbrowser-tab:is([pinned], [image], [sharing], [pictureinpicture]):is([soundplaying], [muted], [activemedia-blocked]):not([busy], [crashed]) :is(.tab-throbber, .tab-icon-pending, .tab-icon-image, .tab-sharing-icon-overlay)
 {
     mask-image: url("special/SVG/Additional_Elements/Media.svg");
     mask-size: 100% 100%;
