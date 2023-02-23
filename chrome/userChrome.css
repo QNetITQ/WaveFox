@@ -644,6 +644,52 @@ spacer[part="overflow-end-indicator"]
 
 /* -------------------- Tab Loading Burst -------------------- */
 
+@media (prefers-reduced-motion: no-preference)
+{
+    .tabbrowser-tab:is([pinned], [image]):is([bursting], [bursting][notselectedsinceload]) .tab-icon-stack::after
+    {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 26px;
+        height: 26px;
+        top: -5px;
+        left: -5px;
+        background-image: radial-gradient(circle at center, var(--tab-loading-fill) 2px, transparent 2px),
+                          radial-gradient(circle at center, var(--tab-loading-fill) 2px, transparent 2px),
+                          radial-gradient(circle at center, var(--tab-loading-fill) 2px, transparent 2px),
+                          radial-gradient(circle at center, var(--tab-loading-fill) 2px, transparent 2px);
+        background-size: 4px 4px;
+        background-repeat: no-repeat;
+        background-position: center top, center bottom, left center, right center;
+        opacity: 0;
+        animation-name: TabLoadingBurst;
+        animation-duration: 375ms;
+        animation-timing-function: linear;
+    }
+
+    @keyframes TabLoadingBurst
+    {
+        0%
+        {
+            transform: rotateZ(0deg);
+            opacity: 0;
+        }
+
+        50%
+        {
+            transform: rotateZ(180deg);
+            opacity: 1;
+        }
+
+        100%
+        {
+            transform: rotateZ(360deg);
+            opacity: 0;
+        }
+    }
+}
+
 .tab-loading-burst
 {
     opacity: 0 !important;
