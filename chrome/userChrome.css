@@ -707,6 +707,46 @@ spacer[part="overflow-end-indicator"]
     mask-size: 100% 100%;
 }
 
+/* ---------- Picture-In-Picture ---------- */
+
+.tabbrowser-tab[pictureinpicture]:not([busy], [crashed]) .tab-icon-stack::before
+{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-image: url("chrome://global/skin/media/picture-in-picture-open.svg");
+    background-size: 16px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    fill: currentColor;
+    -moz-context-properties: fill;
+}
+
+.tabbrowser-tab[pictureinpicture]:not([busy], [crashed]) :is(.tab-throbber, .tab-icon-pending, .tab-icon-image, .tab-sharing-icon-overlay)
+{
+    position: relative !important;
+    padding: 2px !important;
+    left: 8px !important;
+    top: 8px !important;
+    mask-image: none !important;
+    box-sizing: border-box !important;
+    z-index: 1 !important;
+}
+
+.tabbrowser-tab[pictureinpicture]:not([busy], [crashed]):not([soundplaying], [muted], [activemedia-blocked]) .tab-icon-stack::before
+{
+    mask-image: url("special/SVG/Additional_Elements/PIP.svg");
+    mask-size: 100% 100%;
+}
+
+.tabbrowser-tab[pictureinpicture]:not([busy], [crashed]):is([soundplaying], [muted], [activemedia-blocked]) .tab-icon-stack::before
+{
+    mask-image: url("special/SVG/Additional_Elements/PIP_Sound.svg");
+    mask-size: 100% 100%;
+}
+
 /* -------------------- Tab Status Bar -------------------- */
 
 .tab-label-container
