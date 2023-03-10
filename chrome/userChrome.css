@@ -797,6 +797,9 @@ spacer[part="overflow-end-indicator"]
 
 .tab-label-container
 {
+    display: flex !important;
+    flex-direction: column-reverse !important;
+    flex-wrap: nowrap !important;
     height: var(--tab-min-height) !important;
 }
 
@@ -808,7 +811,6 @@ spacer[part="overflow-end-indicator"]
 
 .tab-secondary-label
 {
-    -moz-box-ordinal-group: 0 !important;
     height: 16px !important;
     line-height: 16px !important;
     margin-block: 0px -4px !important;
