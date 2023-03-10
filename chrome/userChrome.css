@@ -30,29 +30,28 @@ and
           )
           )
 {
-    :root
-    {
-        --outer-box-shadow: 0
-                            0
-                            var(--shadow-blur)
-                            color-mix(in srgb, var(--shadow-color) var(--shadow-saturation), transparent);
-        
-        --inner-box-shadow: inset
-                            0
-                            calc(-1 * var(--shadow-blur))
-                            var(--shadow-blur)
-                            calc(-1 * var(--shadow-blur))
-                            color-mix(in srgb, var(--shadow-color) var(--shadow-saturation), transparent);
-
-        --outer-drop-shadow: drop-shadow(
-                             0
-                             0
-                             calc(var(--shadow-blur) / 2)
-                             color-mix(in srgb, var(--shadow-color) var(--shadow-saturation), transparent));
-    }
-
     @media (prefers-color-scheme: light)
     {
+        :root
+        {
+            --outer-box-shadow: 0
+                                0
+                                var(--shadow-blur)
+                                color-mix(in srgb, var(--shadow-color) var(--shadow-saturation), transparent);
+
+            --inner-box-shadow: inset
+                                0
+                                calc(-1 * var(--shadow-blur))
+                                var(--shadow-blur)
+                                calc(-1 * var(--shadow-blur))
+                                color-mix(in srgb, var(--shadow-color) var(--shadow-saturation), transparent);
+
+            --outer-drop-shadow: drop-shadow(
+                                 0
+                                 0
+                                 calc(var(--shadow-blur) / 2)
+                                 color-mix(in srgb, var(--shadow-color) var(--shadow-saturation), transparent));
+        }
 
         /* ---------- Tab Frame Type ---------- */
 
@@ -154,29 +153,28 @@ and
           )
           )
 {
-    :root
-    {
-        --outer-box-shadow: 0
-                            0
-                            var(--shadow-blur)
-                            color-mix(in srgb, var(--shadow-color) var(--shadow-saturation), transparent);
-        
-        --inner-box-shadow: inset
-                            0
-                            calc(-1 * var(--shadow-blur))
-                            var(--shadow-blur)
-                            calc(-1 * var(--shadow-blur))
-                            color-mix(in srgb, var(--shadow-color) var(--shadow-saturation), transparent);
-
-        --outer-drop-shadow: drop-shadow(
-                             0
-                             0
-                             calc(var(--shadow-blur) / 2)
-                             color-mix(in srgb, var(--shadow-color) var(--shadow-saturation), transparent));
-    }
-
     @media (prefers-color-scheme: dark)
     {
+        :root
+        {
+            --outer-box-shadow: 0
+                                0
+                                var(--shadow-blur)
+                                color-mix(in srgb, var(--shadow-color) var(--shadow-saturation), transparent);
+
+            --inner-box-shadow: inset
+                                0
+                                calc(-1 * var(--shadow-blur))
+                                var(--shadow-blur)
+                                calc(-1 * var(--shadow-blur))
+                                color-mix(in srgb, var(--shadow-color) var(--shadow-saturation), transparent);
+
+            --outer-drop-shadow: drop-shadow(
+                                 0
+                                 0
+                                 calc(var(--shadow-blur) / 2)
+                                 color-mix(in srgb, var(--shadow-color) var(--shadow-saturation), transparent));
+        }
 
         /* ---------- Tab Frame Type ---------- */
 
