@@ -810,8 +810,8 @@ spacer[part="overflow-end-indicator"]
 .tab-secondary-label
 {
     width: 100%;
-    height: 16px;
-    line-height: 16px;
+    height: 12px;
+    line-height: 12px;
     margin: 0px !important;
     order: -1;
 }
@@ -819,8 +819,8 @@ spacer[part="overflow-end-indicator"]
 .tab-secondary-label > *
 {
     width: 100%;
-    height: 16px !important;
-    line-height: 16px;
+    height: 12px !important;
+    line-height: 12px;
     overflow: hidden;
     text-overflow: ellipsis;
 }
