@@ -22,7 +22,7 @@
 
         .titlebar-buttonbox-container
         {
-            -moz-box-align: start !important;
+            align-items: flex-start !important;
         }
 
         .titlebar-button:not(.titlebar-close):hover
