@@ -300,7 +300,7 @@ and
 
 .tabbrowser-tab[hidden]
 {
-    display: -moz-box !important;
+    display: block !important;
     pointer-events: none !important;
 }
 
