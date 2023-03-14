@@ -814,7 +814,7 @@ spacer[part="overflow-end-indicator"]
     height: 16px;
     line-height: 16px;
     margin: 0px !important;
-    order: -1;
+    /* order: -1; */
 }
 
 .tab-secondary-label > *
@@ -1476,7 +1476,7 @@ spacer[part="overflow-end-indicator"]
     #navigator-toolbox
     {
         display: grid !important;
-        align-items: flex-end !important;
+        align-items: end !important;
     }
 
     /* -------------------- Nav Bar -------------------- */
