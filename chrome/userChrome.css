@@ -806,6 +806,7 @@ spacer[part="overflow-end-indicator"]
     line-height: 16px !important;
     overflow: hidden;
     text-overflow: ellipsis;
+    margin-block: 0px !important;
 }
 
 .tab-secondary-label
