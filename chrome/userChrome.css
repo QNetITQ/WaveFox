@@ -995,7 +995,9 @@ spacer[part="overflow-end-indicator"]
 {
     /* ---------- Indents ---------- */
 
-    #tabbrowser-tabs:not([overflow]) .tabbrowser-tab:first-of-type,
+    #tabbrowser-tabs:not([overflow]) .tabbrowser-tab:not([hidden]):first-of-type,
+    #tabbrowser-tabs:not([overflow]) .tabbrowser-tab[hidden]:first-of-type + .tabbrowser-tab:not([hidden]),
+    #tabbrowser-tabs:not([overflow]) .tabbrowser-tab[hidden]:first-of-type ~ .tabbrowser-tab[hidden] + .tabbrowser-tab:not([hidden]),
     #tabbrowser-tabs[positionpinnedtabs],
     #tabbrowser-tabs[overflow] .tabbrowser-tab[first-visible-unpinned-tab]
     {
@@ -1075,7 +1077,9 @@ spacer[part="overflow-end-indicator"]
 
     /* ---------- Indents ---------- */
 
-    #tabbrowser-tabs:not([overflow]) .tabbrowser-tab:first-of-type,
+    #tabbrowser-tabs:not([overflow]) .tabbrowser-tab:not([hidden]):first-of-type,
+    #tabbrowser-tabs:not([overflow]) .tabbrowser-tab[hidden]:first-of-type + .tabbrowser-tab:not([hidden]),
+    #tabbrowser-tabs:not([overflow]) .tabbrowser-tab[hidden]:first-of-type ~ .tabbrowser-tab[hidden] + .tabbrowser-tab:not([hidden]),
     #tabbrowser-tabs[positionpinnedtabs],
     #tabbrowser-tabs[overflow] .tabbrowser-tab[first-visible-unpinned-tab]
     {
@@ -1231,7 +1235,9 @@ spacer[part="overflow-end-indicator"]
        
     /* ---------- Indents ---------- */
 
-    #tabbrowser-tabs:not([overflow]) .tabbrowser-tab:first-of-type,
+    #tabbrowser-tabs:not([overflow]) .tabbrowser-tab:not([hidden]):first-of-type,
+    #tabbrowser-tabs:not([overflow]) .tabbrowser-tab[hidden]:first-of-type + .tabbrowser-tab:not([hidden]),
+    #tabbrowser-tabs:not([overflow]) .tabbrowser-tab[hidden]:first-of-type ~ .tabbrowser-tab[hidden] + .tabbrowser-tab:not([hidden]),
     #tabbrowser-tabs[positionpinnedtabs],
     #tabbrowser-tabs[overflow] .tabbrowser-tab[first-visible-unpinned-tab]
     {
@@ -1298,7 +1304,9 @@ spacer[part="overflow-end-indicator"]
        
     /* ---------- Indents ---------- */
 
-    #tabbrowser-tabs:not([overflow]) .tabbrowser-tab:first-of-type,
+    #tabbrowser-tabs:not([overflow]) .tabbrowser-tab:not([hidden]):first-of-type,
+    #tabbrowser-tabs:not([overflow]) .tabbrowser-tab[hidden]:first-of-type + .tabbrowser-tab:not([hidden]),
+    #tabbrowser-tabs:not([overflow]) .tabbrowser-tab[hidden]:first-of-type ~ .tabbrowser-tab[hidden] + .tabbrowser-tab:not([hidden]),
     #tabbrowser-tabs[positionpinnedtabs],
     #tabbrowser-tabs[overflow] .tabbrowser-tab[first-visible-unpinned-tab]
     {
