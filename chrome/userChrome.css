@@ -296,51 +296,6 @@ and
     background-color: var(--toolbarbutton-hover-background) !important;
 }
 
-/* -------------------- Firefox View Tab (Temporary solution) -------------------- */
-
-.tabbrowser-tab[hidden]
-{
-    display: block !important;
-    pointer-events: none !important;
-}
-
-#tabbrowser-tabs[overflow]:not([movingtab]) .tabbrowser-tab[hidden]:not([pinned]) .tab-stack
-{
-    pointer-events: none !important;
-}
-
-.tabbrowser-tab[hidden] .tab-close-button
-{
-    display: revert !important;
-    pointer-events: auto !important;
-}
-
-.tabbrowser-tab[hidden]:not([visuallyselected]) .tab-close-button
-{
-    animation-name: MyHiddenTabAnimation;
-    animation-duration: 1s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-}
-
-@keyframes MyHiddenTabAnimation
-{
-    0%
-    {
-        background-color: transparent;
-    }
-
-    50%
-    {
-        background-color: color-mix(in srgb, var(--toolbar-field-focus-border-color), transparent);
-    }
-
-    100%
-    {
-        background-color: transparent;
-    }
-}
-
 /* ---------------------------------------- Container Indicators ---------------------------------------- */
 
 .tabbrowser-tab[usercontextid] .tab-context-line
@@ -815,7 +770,7 @@ spacer[part="overflow-end-indicator"]
     height: 16px;
     line-height: 16px;
     margin: 0px !important;
-    /* order: -1; */
+    order: -1;
 }
 
 .tab-secondary-label > *
