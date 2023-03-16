@@ -13,6 +13,7 @@
 
   - `toolkit.legacyUserProfileCustomizations.stylesheets`
   - `layout.css.color-mix.enabled`
+  - `layout.css.has-selector.enabled` (Firefox 113+ && v1.5.113 Beta)
   - `svg.context-properties.content.enabled` (Activate this key if the menu icons / tab corners do not follow the general design color. Previously seen only on MacOS)
   
 - Specify the desired shape of the tabs.
