@@ -929,6 +929,34 @@ spacer[part="overflow-end-indicator"]
 {
     opacity: 0 !important;
 }
+       
+       
+       
+       
+.tabbrowser-tab[selected]:not([hidden]) .tab-stack::after,
+.tabbrowser-tab:not([hidden]):has(+ .tabbrowser-tab[selected]:not([hidden])) .tab-stack::after,
+.tabbrowser-tab:not([hidden]):has(+ .tabbrowser-tab[hidden] ~ .tabbrowser-tab[selected]:not([hidden])) .tab-stack::after,
+
+.tabbrowser-tab:hover .tab-stack::after,
+.tabbrowser-tab:not([hidden]):has(+ .tabbrowser-tab:hover) .tab-stack::after,
+.tabbrowser-tab:not([hidden]):has(+ .tabbrowser-tab[hidden] ~ .tabbrowser-tab:hover) .tab-stack::after,
+
+.tabbrowser-tab[multiselected] .tab-stack::after
+{
+    opacity: 0 !important;
+}
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
 
 */
 
