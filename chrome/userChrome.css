@@ -933,7 +933,7 @@ spacer[part="overflow-end-indicator"]
        
        
        
-.tabbrowser-tab[selected]:not([hidden]) .tab-stack::after,
+.tabbrowser-tab[selected] .tab-stack::after,
 .tabbrowser-tab:not([hidden]):has(+ .tabbrowser-tab[selected]:not([hidden])) .tab-stack::after,
 .tabbrowser-tab:not([hidden]):has(+ .tabbrowser-tab[hidden] ~ .tabbrowser-tab[selected]:not([hidden])) .tab-stack::after,
 
