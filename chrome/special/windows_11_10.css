@@ -58,9 +58,16 @@
             
             :root[tabsintitlebar]:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not([sizemode="fullscreen"]) .titlebar-buttonbox:is(:hover, :hover:active)
             {
-                background-color: Field !important;
-                box-shadow: var(--outer-box-shadow, none) !important;
+            opacity: 0.8 !important;
             }
+		.titlebar-button>.toolbarbutton-icon {
+			margin-top: -14px !important;
+			opacity: 0 !important;
+		}
+		.titlebar-close>.toolbarbutton-icon {
+			margin-top: -14px !important;
+			opacity: 1 !important;
+		}
         }
     }
 
