@@ -831,6 +831,7 @@ spacer[part="overflow-end-indicator"]
     }
 }
 
+       /*
 .tab-stack
 {
     margin-left: 1px !important;
@@ -884,16 +885,17 @@ spacer[part="overflow-end-indicator"]
 {
     opacity: var(--separators-color-saturation, 0) !important;
 }
+*/
+       
 
-/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 .tab-stack
 {
     margin-right: 1px !important;
 }
 
-#tabbrowser-tabs:not(:first-child) .tabbrowser-tab[first-visible-tab] .tab-stack::before,
-#tabbrowser-tabs[overflow] .tabbrowser-tab[first-visible-unpinned-tab] .tab-stack::before,
+/*#tabbrowser-tabs:not(:first-child) .tabbrowser-tab[first-visible-tab] .tab-stack::before,
+#tabbrowser-tabs[overflow] .tabbrowser-tab[first-visible-unpinned-tab] .tab-stack::before,*/
 .tab-stack::after
 {
     content: "";
@@ -915,19 +917,6 @@ spacer[part="overflow-end-indicator"]
 .tab-stack::after
 {
     left: 100%;
-}
-
-:is(.tabbrowser-tab[selected],
-    .tabbrowser-tab:hover,
-    .tabbrowser-tab[multiselected]) .tab-stack::before,
-:is(.tabbrowser-tab[selected],
-    .tabbrowser-tab[beforeselected-visible],
-    .tabbrowser-tab:hover,
-    .tabbrowser-tab[beforehovered],
-    .tabbrowser-tab[multiselected],
-    .tabbrowser-tab[before-multiselected]) .tab-stack::after
-{
-    opacity: 0 !important;
 }
        
        
@@ -958,7 +947,7 @@ spacer[part="overflow-end-indicator"]
        
        
 
-*/
+
 
 /* ---------------------------------------- Derived Styles ---------------------------------------- */
 
