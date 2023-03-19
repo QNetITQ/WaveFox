@@ -921,7 +921,7 @@ spacer[part="overflow-end-indicator"]
        
        
        
-       
+     /*  
 .tabbrowser-tab[selected] .tab-stack::after,
 .tabbrowser-tab:not([hidden]):has(+ .tabbrowser-tab[selected]:not([hidden])) .tab-stack::after,
 .tabbrowser-tab:not([hidden]):has(+ .tabbrowser-tab[hidden] ~ .tabbrowser-tab[selected]:not([hidden])) .tab-stack::after,
@@ -934,10 +934,17 @@ spacer[part="overflow-end-indicator"]
 {
     opacity: 0 !important;
 }
+       */
        
        
-       
-       
+.tabbrowser-tab:not([hidden]):is(
+                                 :is([selected], :hover, [multiselected]),
+                                 :has(+ .tabbrowser-tab:not([hidden]):is([selected], :hover, [multiselected])),
+                                 :has(+ .tabbrowser-tab[hidden] ~ .tabbrowser-tab:not([hidden]):is([selected], :hover, [multiselected]))
+                                ) .tab-stack::after
+{
+    opacity: 0 !important;
+}
        
        
        
