@@ -849,11 +849,7 @@ spacer[part="overflow-end-indicator"]
     left: 100%;
 }
 
-#tabbrowser-tabs:first-child .tabbrowser-tab:is(
-                                                :not([hidden]):first-of-type,
-                                                [hidden]:first-of-type + .tabbrowser-tab:not([hidden]),
-                                                [hidden]:first-of-type ~ .tabbrowser-tab[hidden] + .tabbrowser-tab:not([hidden])
-                                               ) .tab-stack::before
+#tabbrowser-tabs:first-child .tab-stack::before
 {
     opacity: 0;
 }
