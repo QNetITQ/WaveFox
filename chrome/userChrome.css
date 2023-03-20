@@ -586,6 +586,19 @@ spacer[part="overflow-end-indicator"]
     padding: 0 calc((var(--tab-min-height) - 16px) / 2 + var(--pinned-tabs-width-offset, 0px)) !important;
 }
 
+/* -------------------- Container Indicators -------------------- */
+
+.tab-context-line
+{
+    opacity: 0 !important;
+    margin: 0px !important;
+}
+
+.tabbrowser-tab[usercontextid] .tab-background
+{
+    background-color: color-mix(in srgb, var(--identity-icon-color), transparent);
+}
+
 /* -------------------- Tab Loading Burst -------------------- */
 
 @media (prefers-reduced-motion: no-preference)
@@ -1126,6 +1139,14 @@ spacer[part="overflow-end-indicator"]
     {
         background-image: var(--left-side-svg) !important;
     } */
+
+    /* ---------- Container Indicators ---------- */
+
+    .tabbrowser-tab[usercontextid]:not(:hover, [multiselected]) .tab-background::before,
+    .tabbrowser-tab[usercontextid]:not(:hover, [multiselected]) .tab-background::after
+    {
+        fill: color-mix(in srgb, var(--identity-icon-color), transparent);
+    }
 }
 
 /* ---------- WaveFox / Australis / Chrome-Old ---------- */
