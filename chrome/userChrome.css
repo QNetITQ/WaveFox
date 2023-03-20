@@ -858,12 +858,12 @@ spacer[part="overflow-end-indicator"]
 }
 
 .tabbrowser-tab:not([hidden]):is(
-                                 [selected], :hover, [multiselected]
+                                 [selected], :hover, [multiselected], [usercontextid]
                                 ) .tab-stack::before,
 .tabbrowser-tab:not([hidden]):is(
-                                 [selected], :hover, [multiselected],
-                                 :has(+ .tabbrowser-tab:not([hidden]):is([selected], :hover, [multiselected])),
-                                 :has(+ .tabbrowser-tab[hidden] ~ .tabbrowser-tab:not([hidden]):is([selected], :hover, [multiselected]))
+                                 [selected], :hover, [multiselected], [usercontextid],
+                                 :has(+ .tabbrowser-tab:not([hidden]):is([selected], :hover, [multiselected], [usercontextid])),
+                                 :has(+ .tabbrowser-tab[hidden] ~ .tabbrowser-tab:not([hidden]):is([selected], :hover, [multiselected], [usercontextid]))
                                 ) .tab-stack::after
 {
     opacity: 0 !important;
