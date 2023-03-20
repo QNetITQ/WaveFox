@@ -58,7 +58,7 @@
             
             :root[tabsintitlebar]:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not([sizemode="fullscreen"]) .titlebar-buttonbox:is(:hover, :hover:active)
             {
-            opacity: 0.8 !important;
+            opacity: 1 !important;
             }
 		.titlebar-button>.toolbarbutton-icon {
 			margin-top: -14px !important;
