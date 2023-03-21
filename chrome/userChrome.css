@@ -522,7 +522,7 @@ spacer[part="overflow-end-indicator"]
 {
     --tab-loading-fill: currentColor !important;
     --tab-attention-icon-color: currentColor !important;
-    --tab-label-mask-size: 0px !important;
+    --tab-label-mask-size: 10px !important;
     color: inherit !important;
     overflow-x: clip !important;
     overflow-y: visible !important;
@@ -531,7 +531,6 @@ spacer[part="overflow-end-indicator"]
 .tabbrowser-tab[visuallyselected]
 {
     --tab-loading-fill: var(--toolbar-field-focus-border-color) !important;
-    --tab-label-mask-size: 10px !important;
     color: var(--toolbar-color) !important;
     position: relative;
     z-index: 2;
