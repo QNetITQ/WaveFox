@@ -852,7 +852,8 @@ spacer[part="overflow-end-indicator"]
     left: 100%;
 }
 
-#tabbrowser-tabs:first-child .tab-stack::before
+#tabbrowser-tabs:is([movingtab], :first-child) .tab-stack::before,
+#tabbrowser-tabs[movingtab] .tab-stack::after
 {
     opacity: 0;
 }
