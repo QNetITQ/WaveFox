@@ -1123,22 +1123,22 @@ spacer[part="overflow-end-indicator"]
     {
         fill: var(--toolbarbutton-active-background);
     }
-       
-    /* .tabbrowser-tab[beforeselected-visible] .tab-background::after
+
+    .tabbrowser-tab:not([hidden]):is(
+                                     :has(+ .tabbrowser-tab[visuallyselected]:not([hidden])),
+                                     :has(+ .tabbrowser-tab[hidden] ~ .tabbrowser-tab[visuallyselected]:not([hidden]))
+                                    ) .tab-background::after
     {
         background-image: var(--right-side-svg-clipped);
     }
 
-    .tabbrowser-tab[visuallyselected]:not([hidden]) + .tabbrowser-tab .tab-background::before,
-    .tabbrowser-tab[visuallyselected] + .tabbrowser-tab[hidden] + .tabbrowser-tab .tab-background::before
+    .tabbrowser-tab[visuallyselected]:not([hidden]) + :is(
+                                                          .tabbrowser-tab:not([hidden]),
+                                                          .tabbrowser-tab[hidden] ~ .tabbrowser-tab:not([hidden])
+                                                         ) .tab-background::before
     {
         background-image: var(--left-side-svg-clipped);
     }
-       
-    #tabbrowser-tabs[positionpinnedtabs] .tabbrowser-tab[first-visible-unpinned-tab] .tab-background::before
-    {
-        background-image: var(--left-side-svg) !important;
-    } */
 
     /* ---------- Container Indicators ---------- */
 
