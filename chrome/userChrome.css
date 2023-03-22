@@ -893,8 +893,8 @@ spacer[part="overflow-end-indicator"]
     {
         --left-side-svg: url("special/SVG/WaveFox/Left_Corners.svg");
         --right-side-svg: url("special/SVG/WaveFox/Right_Corners.svg");
-        /* --left-side-svg-clipped: url("special/SVG/WaveFox/Left_Corners_Clipped.svg");
-           --right-side-svg-clipped: url("special/SVG/WaveFox/Right_Corners_Clipped.svg"); */
+        --left-side-svg-clipped: url("special/SVG/WaveFox/Left_Corners_Clipped.svg");
+        --right-side-svg-clipped: url("special/SVG/WaveFox/Right_Corners_Clipped.svg");
     }
 }
 
@@ -904,8 +904,8 @@ spacer[part="overflow-end-indicator"]
     {
         --left-side-svg: url("special/SVG/Firefox_(Australis)/Left_Corners.svg");
         --right-side-svg: url("special/SVG/Firefox_(Australis)/Right_Corners.svg");
-        /* --left-side-svg-clipped: url("special/SVG/Firefox_(Australis)/Left_Corners_Clipped.svg");
-           --right-side-svg-clipped: url("special/SVG/Firefox_(Australis)/Right_Corners_Clipped.svg"); */
+        --left-side-svg-clipped: url("special/SVG/Firefox_(Australis)/Left_Corners_Clipped.svg");
+        --right-side-svg-clipped: url("special/SVG/Firefox_(Australis)/Right_Corners_Clipped.svg");
     }
 }
 
@@ -915,8 +915,8 @@ spacer[part="overflow-end-indicator"]
     {
         --left-side-svg: url("special/SVG/Chrome_(Material_1)/Left_Corners.svg");
         --right-side-svg: url("special/SVG/Chrome_(Material_1)/Right_Corners.svg");
-        /* --left-side-svg-clipped: url("special/SVG/Chrome_(Material_1)/Left_Corners_Clipped.svg");
-           --right-side-svg-clipped: url("special/SVG/Chrome_(Material_1)/Right_Corners_Clipped.svg"); */
+        --left-side-svg-clipped: url("special/SVG/Chrome_(Material_1)/Left_Corners_Clipped.svg");
+        --right-side-svg-clipped: url("special/SVG/Chrome_(Material_1)/Right_Corners_Clipped.svg");
     }
 }
 
@@ -926,8 +926,8 @@ spacer[part="overflow-end-indicator"]
     {
         --left-side-svg: url("special/SVG/Chrome_(Material_2)/Left_Corners.svg");
         --right-side-svg: url("special/SVG/Chrome_(Material_2)/Right_Corners.svg");
-        /* --left-side-svg-clipped: url("special/SVG/Chrome_(Material_2)/Left_Corners_Clipped.svg");
-           --right-side-svg-clipped: url("special/SVG/Chrome_(Material_2)/Right_Corners_Clipped.svg"); */
+        --left-side-svg-clipped: url("special/SVG/Chrome_(Material_2)/Left_Corners_Clipped.svg");
+        --right-side-svg-clipped: url("special/SVG/Chrome_(Material_2)/Right_Corners_Clipped.svg");
     }
 }
 
@@ -937,8 +937,8 @@ spacer[part="overflow-end-indicator"]
     {
         --left-side-svg: url("special/SVG/Edge_2020_(Fluent)/Left_Corners.svg");
         --right-side-svg: url("special/SVG/Edge_2020_(Fluent)/Right_Corners.svg");
-        /* --left-side-svg-clipped: url("special/SVG/Edge_2020_(Fluent)/Left_Corners_Clipped.svg");
-           --right-side-svg-clipped: url("special/SVG/Edge_2020_(Fluent)/Right_Corners_Clipped.svg"); */
+        --left-side-svg-clipped: url("special/SVG/Edge_2020_(Fluent)/Left_Corners_Clipped.svg");
+        --right-side-svg-clipped: url("special/SVG/Edge_2020_(Fluent)/Right_Corners_Clipped.svg");
     }
 }
 
