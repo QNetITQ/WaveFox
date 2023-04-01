@@ -1,0 +1,15 @@
+<!-- Created by QNetITQ for the WaveFox project -->
+
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 1 1" preserveAspectRatio="none">
+
+    <defs>
+        <path id="Path" d="M 0.5,0.5 0.75,1 H 1 V 0 H 0.75 Z"/>
+    </defs>
+
+    <use href="#Path" fill="context-fill"/>
+
+    <clipPath id="ClipPath" clipPathUnits="objectBoundingBox">
+        <use href="#Path"/>
+    </clipPath>
+
+</svg>
