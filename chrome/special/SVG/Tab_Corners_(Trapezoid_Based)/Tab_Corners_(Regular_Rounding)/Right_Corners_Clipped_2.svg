@@ -2,6 +2,6 @@
 
 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" preserveAspectRatio="none">
 
-    <path fill="context-fill" d="" />
+    <path fill="context-fill" d="M 16,16 V 32 H 0 V 0 c 3.999996,0 7.999415,-3.5089965e-4 10.5,2 2.500585,2.000351 3.500651,6.0006546 4.333984,9.333984 z" />
 
 </svg>
