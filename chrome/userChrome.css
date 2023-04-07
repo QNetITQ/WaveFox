@@ -7,6 +7,147 @@
        (-moz-platform: linux),
        (-moz-platform: macos)
 {
+       
+       
+       
+       
+       
+/* ---------------------------------------- Floating Tabs ---------------------------------------- */
+
+/* -------------------- Rectangle Based Tabs -------------------- */
+
+@supports -moz-bool-pref("userChrome.FloatingTabs.TabCorners.RectangleBased.NoRounding.Enabled")
+{
+    :root
+    {
+        --left-side-svg: url("special/SVG/Tab_Corners_(Rectangle_Based)/Tab_Corners_(No_Rounding)/Left_Right_Corners.svg");
+        --right-side-svg: url("special/SVG/Tab_Corners_(Rectangle_Based)/Tab_Corners_(No_Rounding)/Left_Right_Corners.svg");
+
+        --margin-left: calc(var(--toolbar-start-end-padding) - var(--toolbarbutton-outer-padding));
+        --margin-right: calc(var(--toolbar-start-end-padding) - var(--toolbarbutton-outer-padding));
+    }
+}
+
+@supports -moz-bool-pref("userChrome.FloatingTabs.TabCorners.RectangleBased.SlightRounding.Enabled")
+{
+    :root
+    {
+        --left-side-svg: url("special/SVG/Tab_Corners_(Rectangle_Based)/Tab_Corners_(Slight_Rounding)/Left_Corners_Clipped.svg");
+        --right-side-svg: url("special/SVG/Tab_Corners_(Rectangle_Based)/Tab_Corners_(Slight_Rounding)/Right_Corners_Clipped.svg");
+
+        --margin-left: calc(var(--toolbar-start-end-padding) - var(--toolbarbutton-outer-padding));
+        --margin-right: calc(var(--toolbar-start-end-padding) - var(--toolbarbutton-outer-padding));
+    }
+}
+
+@supports -moz-bool-pref("userChrome.FloatingTabs.TabCorners.RectangleBased.RegularRounding.Enabled")
+{
+    :root
+    {
+        --left-side-svg: url("special/SVG/Tab_Corners_(Rectangle_Based)/Tab_Corners_(Regular_Rounding)/Left_Corners_Clipped.svg");
+        --right-side-svg: url("special/SVG/Tab_Corners_(Rectangle_Based)/Tab_Corners_(Regular_Rounding)/Right_Corners_Clipped.svg");
+
+        --margin-left: calc(var(--toolbar-start-end-padding) - var(--toolbarbutton-outer-padding));
+        --margin-right: calc(var(--toolbar-start-end-padding) - var(--toolbarbutton-outer-padding));
+    }
+}
+
+@supports -moz-bool-pref("userChrome.FloatingTabs.TabCorners.RectangleBased.LargeRounding.Enabled")
+{
+    :root
+    {
+        --left-side-svg: url("special/SVG/Tab_Corners_(Rectangle_Based)/Tab_Corners_(Large_Rounding)/Left_Corners_Clipped.svg");
+        --right-side-svg: url("special/SVG/Tab_Corners_(Rectangle_Based)/Tab_Corners_(Large_Rounding)/Right_Corners_Clipped.svg");
+
+        --margin-left: calc(var(--toolbar-start-end-padding) - var(--toolbarbutton-outer-padding));
+        --margin-right: calc(var(--toolbar-start-end-padding) - var(--toolbarbutton-outer-padding));
+    }
+}
+
+@supports -moz-bool-pref("userChrome.FloatingTabs.TabCorners.RectangleBased.VeryLargeRounding.Enabled")
+{
+    :root
+    {
+        --left-side-svg: url("special/SVG/Tab_Corners_(Rectangle_Based)/Tab_Corners_(Very_Large_Rounding)/Left_Corners_Clipped.svg");
+        --right-side-svg: url("special/SVG/Tab_Corners_(Rectangle_Based)/Tab_Corners_(Very_Large_Rounding)/Right_Corners_Clipped.svg");
+
+        --margin-left: calc(var(--toolbar-start-end-padding) - var(--toolbarbutton-outer-padding));
+        --margin-right: calc(var(--toolbar-start-end-padding) - var(--toolbarbutton-outer-padding));
+    }
+}
+
+/* ------------------------------ Trapezoid Based Tabs ------------------------------ */
+
+@supports -moz-bool-pref("userChrome.FloatingTabs.TabCorners.TrapezoidBased.NoRounding.Enabled")
+{
+    :root
+    {
+        --left-side-svg: url("special/SVG/Tab_Corners_(Trapezoid_Based)/Tab_Corners_(No_Rounding)/Left_Right_Corners.svg");
+        --right-side-svg: url("special/SVG/Tab_Corners_(Trapezoid_Based)/Tab_Corners_(No_Rounding)/Left_Right_Corners.svg");
+
+        --margin-left: calc(var(--toolbar-start-end-padding) - var(--toolbarbutton-outer-padding));
+        --margin-right: calc(var(--toolbar-start-end-padding) - var(--toolbarbutton-outer-padding));
+    }
+}
+
+@supports -moz-bool-pref("userChrome.FloatingTabs.TabCorners.TrapezoidBased.SlightRounding.Enabled")
+{
+    :root
+    {
+        --left-side-svg: url("special/SVG/Tab_Corners_(Trapezoid_Based)/Tab_Corners_(Slight_Rounding)/Left_Corners_Clipped.svg");
+        --right-side-svg: url("special/SVG/Tab_Corners_(Trapezoid_Based)/Tab_Corners_(Slight_Rounding)/Right_Corners_Clipped.svg");
+
+        --margin-left: calc(var(--toolbar-start-end-padding) - var(--toolbarbutton-outer-padding));
+        --margin-right: calc(var(--toolbar-start-end-padding) - var(--toolbarbutton-outer-padding));
+    }
+}
+
+@supports -moz-bool-pref("userChrome.FloatingTabs.TabCorners.TrapezoidBased.RegularRounding.Enabled")
+{
+    :root
+    {
+        --left-side-svg: url("special/SVG/Tab_Corners_(Trapezoid_Based)/Tab_Corners_(Regular_Rounding)/Left_Corners_Clipped.svg");
+        --right-side-svg: url("special/SVG/Tab_Corners_(Trapezoid_Based)/Tab_Corners_(Regular_Rounding)/Right_Corners_Clipped.svg");
+
+        --margin-left: calc(var(--toolbar-start-end-padding) - var(--toolbarbutton-outer-padding));
+        --margin-right: calc(var(--toolbar-start-end-padding) - var(--toolbarbutton-outer-padding));
+    }
+}
+
+@supports -moz-bool-pref("userChrome.FloatingTabs.TabCorners.TrapezoidBased.LargeRounding.Enabled")
+{
+    :root
+    {
+        --left-side-svg: url("special/SVG/Tab_Corners_(Trapezoid_Based)/Tab_Corners_(Large_Rounding)/Left_Corners_Clipped.svg");
+        --right-side-svg: url("special/SVG/Tab_Corners_(Trapezoid_Based)/Tab_Corners_(Large_Rounding)/Right_Corners_Clipped.svg");
+
+        --margin-left: calc(var(--toolbar-start-end-padding) - var(--toolbarbutton-outer-padding));
+        --margin-right: calc(var(--toolbar-start-end-padding) - var(--toolbarbutton-outer-padding));
+    }
+}
+
+@supports -moz-bool-pref("userChrome.FloatingTabs.TabCorners.TrapezoidBased.VeryLargeRounding.Enabled")
+{
+    :root
+    {
+        --left-side-svg: url("special/SVG/Tab_Corners_(Trapezoid_Based)/Tab_Corners_(Very_Large_Rounding)/Left_Corners_Clipped.svg");
+        --right-side-svg: url("special/SVG/Tab_Corners_(Trapezoid_Based)/Tab_Corners_(Very_Large_Rounding)/Right_Corners_Clipped.svg");
+
+        --margin-left: calc(var(--toolbar-start-end-padding) - var(--toolbarbutton-outer-padding));
+        --margin-right: calc(var(--toolbar-start-end-padding) - var(--toolbarbutton-outer-padding));
+    }
+}
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
 
 /* ---------------------------------------- Tab Frame ---------------------------------------- */
 
@@ -886,61 +1027,6 @@ spacer[part="overflow-end-indicator"]
 }
 
 /* ---------------------------------------- Derived Styles ---------------------------------------- */
-
-@supports -moz-bool-pref("userChrome.WaveFoxTabs-Enabled")
-{
-    :root
-    {
-        --left-side-svg: url("special/SVG/WaveFox/Left_Corners.svg");
-        --right-side-svg: url("special/SVG/WaveFox/Right_Corners.svg");
-        --left-side-svg-clipped: url("special/SVG/WaveFox/Left_Corners_Clipped.svg");
-        --right-side-svg-clipped: url("special/SVG/WaveFox/Right_Corners_Clipped.svg");
-    }
-}
-
-@supports -moz-bool-pref("userChrome.AustralisTabs-Enabled")
-{
-    :root
-    {
-        --left-side-svg: url("special/SVG/Firefox_(Australis)/Left_Corners.svg");
-        --right-side-svg: url("special/SVG/Firefox_(Australis)/Right_Corners.svg");
-        --left-side-svg-clipped: url("special/SVG/Firefox_(Australis)/Left_Corners_Clipped.svg");
-        --right-side-svg-clipped: url("special/SVG/Firefox_(Australis)/Right_Corners_Clipped.svg");
-    }
-}
-
-@supports -moz-bool-pref("userChrome.LegacyChromeTabs-Enabled")
-{
-    :root
-    {
-        --left-side-svg: url("special/SVG/Chrome_(Material_1)/Left_Corners.svg");
-        --right-side-svg: url("special/SVG/Chrome_(Material_1)/Right_Corners.svg");
-        --left-side-svg-clipped: url("special/SVG/Chrome_(Material_1)/Left_Corners_Clipped.svg");
-        --right-side-svg-clipped: url("special/SVG/Chrome_(Material_1)/Right_Corners_Clipped.svg");
-    }
-}
-
-@supports -moz-bool-pref("userChrome.ChromeTabs-Enabled")
-{
-    :root
-    {
-        --left-side-svg: url("special/SVG/Chrome_(Material_2)/Left_Corners.svg");
-        --right-side-svg: url("special/SVG/Chrome_(Material_2)/Right_Corners.svg");
-        --left-side-svg-clipped: url("special/SVG/Chrome_(Material_2)/Left_Corners_Clipped.svg");
-        --right-side-svg-clipped: url("special/SVG/Chrome_(Material_2)/Right_Corners_Clipped.svg");
-    }
-}
-
-@supports -moz-bool-pref("userChrome.EdgeTabs-Enabled")
-{
-    :root
-    {
-        --left-side-svg: url("special/SVG/Edge_2020_(Fluent)/Left_Corners.svg");
-        --right-side-svg: url("special/SVG/Edge_2020_(Fluent)/Right_Corners.svg");
-        --left-side-svg-clipped: url("special/SVG/Edge_2020_(Fluent)/Left_Corners_Clipped.svg");
-        --right-side-svg-clipped: url("special/SVG/Edge_2020_(Fluent)/Right_Corners_Clipped.svg");
-    }
-}
 
 /* -------------------- Proton -------------------- */
 
