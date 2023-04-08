@@ -22,6 +22,17 @@
     {
         --left-side-svg: url("special/SVG/Tab_Corners_(Rectangle_Based)/Tab_Corners_(No_Rounding)/Left_Right_Corners.svg");
         --right-side-svg: url("special/SVG/Tab_Corners_(Rectangle_Based)/Tab_Corners_(No_Rounding)/Left_Right_Corners.svg");
+           
+           
+           
+                   --tab-left-margin: 4px;
+        --tab-icon-indicator-position: 50% var(--tab-block-margin);
+           
+           
+           
+           
+           
+           
 
         --margin-left: calc(var(--toolbar-start-end-padding) - var(--toolbarbutton-outer-padding));
         --margin-right: calc(var(--toolbar-start-end-padding) - var(--toolbarbutton-outer-padding));
@@ -971,6 +982,29 @@ spacer[part="overflow-end-indicator"]
     fill: currentColor !important;
 }
 
+       
+       
+       
+       
+       
+       
+       
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+.tabbrowser-tab:is([image], [pinned]) .tab-content[attention]:not([selected]),
+.tab-content[pinned][titlechanged]:not([selected])
+{
+    background-position: center top !important;
+}
+       
+       
+       
+       
+       
+       
+       
+       
+
 /* -------------------- Media Icons -------------------- */
 
 .tab-icon-overlay:not([crashed])
@@ -1127,6 +1161,45 @@ spacer[part="overflow-end-indicator"]
 {
     margin-left: 0px !important;
 }
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+#tabbrowser-tabs:not([overflow]) .tabbrowser-tab:not([hidden]):first-of-type,
+#tabbrowser-tabs:not([overflow]) .tabbrowser-tab[hidden]:first-of-type + .tabbrowser-tab:not([hidden]),
+#tabbrowser-tabs:not([overflow]) .tabbrowser-tab[hidden]:first-of-type ~ .tabbrowser-tab[hidden] + .tabbrowser-tab:not([hidden]),
+#tabbrowser-tabs[positionpinnedtabs],
+#tabbrowser-tabs[overflow] .tabbrowser-tab[first-visible-unpinned-tab]
+{
+    margin-left: calc(var(--tab-min-height) / 2) !important;
+}
+
+.tabbrowser-tab:not([hidden]):last-of-type,
+.tabbrowser-tab:not([hidden]):has(+ .tabbrowser-tab[hidden]:last-of-type),
+.tabbrowser-tab:not([hidden]):has(+ .tabbrowser-tab[hidden] ~ .tabbrowser-tab[hidden]:last-of-type)
+{
+    margin-right: calc(var(--tab-min-height) / 2) !important;
+}
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
 
 /* ---------------------------------------- Separators ---------------------------------------- */
 
@@ -1163,6 +1236,28 @@ spacer[part="overflow-end-indicator"]
 {
     left: 100%;
 }
+       
+       
+       
+       
+       /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+    .tab-stack::before
+    {
+        transform: translateX(-2px);
+    }
+
+    .tab-stack::after
+    {
+        transform: translateX(2px);
+    }
+       
+       
+       
+       
+       
+       
+       
+       
 
 #tabbrowser-tabs:is([movingtab], :first-child) .tab-stack::before,
 #tabbrowser-tabs[movingtab] .tab-stack::after
@@ -1224,51 +1319,6 @@ spacer[part="overflow-end-indicator"]
 
 @supports -moz-bool-pref("userChrome.ProtonTabs-Enabled")
 {
-    /* ---------- Indents ---------- */
-
-    #tabbrowser-tabs:not([overflow]) .tabbrowser-tab:not([hidden]):first-of-type,
-    #tabbrowser-tabs:not([overflow]) .tabbrowser-tab[hidden]:first-of-type + .tabbrowser-tab:not([hidden]),
-    #tabbrowser-tabs:not([overflow]) .tabbrowser-tab[hidden]:first-of-type ~ .tabbrowser-tab[hidden] + .tabbrowser-tab:not([hidden]),
-    #tabbrowser-tabs[positionpinnedtabs],
-    #tabbrowser-tabs[overflow] .tabbrowser-tab[first-visible-unpinned-tab]
-    {
-        margin-left: calc(var(--toolbar-start-end-padding) - var(--toolbarbutton-outer-padding)) !important;
-    }
-
-    .tabbrowser-tab:not([hidden]):last-of-type,
-    .tabbrowser-tab:not([hidden]):has(+ .tabbrowser-tab[hidden]:last-of-type),
-    .tabbrowser-tab:not([hidden]):has(+ .tabbrowser-tab[hidden] ~ .tabbrowser-tab[hidden]:last-of-type)
-    {
-        margin-right: calc(var(--toolbar-start-end-padding) - var(--toolbarbutton-outer-padding)) !important;
-    }
-
-    /* ---------- Tab Icon Indicator ---------- */
-
-    .tabbrowser-tab:is([image], [pinned]) .tab-content[attention]:not([selected]),
-    .tab-content[pinned][titlechanged]:not([selected])
-    {
-        background-position: center var(--tab-block-margin) !important;
-    }
-
-    /* ---------- Tabs ---------- */
-
-    .tabbrowser-tab
-    {
-        padding-inline: var(--toolbarbutton-outer-padding) !important;
-    }
-
-    /* ---------- Separators ---------- */
-       
-    .tab-stack::before
-    {
-        transform: translateX(calc(-1 * var(--toolbarbutton-outer-padding)));
-    }
-
-    .tab-stack::after
-    {
-        transform: translateX(var(--toolbarbutton-outer-padding));
-    }
-       
     /* ---------- Tab Scroll Animation ---------- */
 
     #tabbrowser-tabs[overflow]:not([movingtab]) .tabbrowser-tab:not([pinned])
@@ -1297,14 +1347,6 @@ spacer[part="overflow-end-indicator"]
     .tab-background
     {
         margin-block: 0 !important;
-    }
-
-    /* ---------- Tab Icon Indicator ---------- */
-
-    .tabbrowser-tab:is([image], [pinned]) .tab-content[attention]:not([selected]),
-    .tab-content[pinned][titlechanged]:not([selected])
-    {
-        background-position: center top !important;
     }
 }
 
@@ -1420,24 +1462,6 @@ spacer[part="overflow-end-indicator"]
                      calc(-1 * var(--tab-min-height) / 2)
                      0px
                     ) !important;
-}
-
-/* ---------- Indents ---------- */
-
-#tabbrowser-tabs:not([overflow]) .tabbrowser-tab:not([hidden]):first-of-type,
-#tabbrowser-tabs:not([overflow]) .tabbrowser-tab[hidden]:first-of-type + .tabbrowser-tab:not([hidden]),
-#tabbrowser-tabs:not([overflow]) .tabbrowser-tab[hidden]:first-of-type ~ .tabbrowser-tab[hidden] + .tabbrowser-tab:not([hidden]),
-#tabbrowser-tabs[positionpinnedtabs],
-#tabbrowser-tabs[overflow] .tabbrowser-tab[first-visible-unpinned-tab]
-{
-    margin-left: calc(var(--tab-min-height) / 2) !important;
-}
-
-.tabbrowser-tab:not([hidden]):last-of-type,
-.tabbrowser-tab:not([hidden]):has(+ .tabbrowser-tab[hidden]:last-of-type),
-.tabbrowser-tab:not([hidden]):has(+ .tabbrowser-tab[hidden] ~ .tabbrowser-tab[hidden]:last-of-type)
-{
-    margin-right: calc(var(--tab-min-height) / 2) !important;
 }
 
 /* ---------- Tab Scroll Animation ---------- */
