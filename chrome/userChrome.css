@@ -1471,63 +1471,6 @@ spacer[part="overflow-end-indicator"]
     }
 }
 
-/* -------------------- Chrome / Edge -------------------- */
-
-@supports -moz-bool-pref("userChrome.ChromeTabs-Enabled") or
-          -moz-bool-pref("userChrome.EdgeTabs-Enabled")
-{
-    /* ---------- Rounded Corners (SVG) ---------- */
-
-    .tab-background::before,
-    .tab-background::after
-    {
-        width: calc(var(--tab-min-height) / 2);
-        height: var(--tab-min-height);
-    }
-
-    /* ---------- Tabs ---------- */
-
-    .tabbrowser-tab
-    {
-        overflow-clip-margin: calc(var(--tab-min-height) / 4) !important;
-        clip-path: inset(calc(-1 * var(--shadow-blur, 0px))
-                         calc(-1 * var(--tab-min-height) / 4)
-                         0
-                        ) !important;
-    }
-
-    .tab-background
-    {
-        margin-inline: calc(var(--tab-min-height) / 4) !important;
-    }
-       
-    /* ---------- Indents ---------- */
-
-    #tabbrowser-tabs:not([overflow]) .tabbrowser-tab:not([hidden]):first-of-type,
-    #tabbrowser-tabs:not([overflow]) .tabbrowser-tab[hidden]:first-of-type + .tabbrowser-tab:not([hidden]),
-    #tabbrowser-tabs:not([overflow]) .tabbrowser-tab[hidden]:first-of-type ~ .tabbrowser-tab[hidden] + .tabbrowser-tab:not([hidden]),
-    #tabbrowser-tabs[positionpinnedtabs],
-    #tabbrowser-tabs[overflow] .tabbrowser-tab[first-visible-unpinned-tab]
-    {
-        margin-left: calc(var(--tab-min-height) / 4) !important;
-    }
-
-    .tabbrowser-tab:not([hidden]):last-of-type,
-    .tabbrowser-tab:not([hidden]):has(+ .tabbrowser-tab[hidden]:last-of-type),
-    .tabbrowser-tab:not([hidden]):has(+ .tabbrowser-tab[hidden] ~ .tabbrowser-tab[hidden]:last-of-type)
-    {
-        margin-right: calc(var(--tab-min-height) / 4) !important;
-    }
-
-    /* ---------- Tab Scroll Animation ---------- */
-
-    #tabbrowser-tabs[overflow]:not([movingtab]) .tabbrowser-tab:not([pinned])
-    {
-        padding-inline: calc(var(--tab-min-height) / 4) !important;
-        margin-inline: calc(-1 * var(--tab-min-height) / 4) !important;
-    }
-}
-
 /* ---------------------------------------- Tab Scroll Animation ---------------------------------------- */
 
 #tabbrowser-tabs[overflow]:not([movingtab]) .tabbrowser-tab:not([pinned])
