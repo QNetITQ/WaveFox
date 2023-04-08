@@ -830,8 +830,7 @@ spacer[part="overflow-end-indicator"]
     --tab-attention-icon-color: currentColor !important;
     --tab-label-mask-size: 10px !important;
     color: inherit !important;
-    overflow-x: clip !important;
-    overflow-y: visible !important;
+    overflow: visible !important;
 }
        
 .tabbrowser-tab[visuallyselected]
@@ -856,6 +855,8 @@ spacer[part="overflow-end-indicator"]
     opacity: 1 !important;
     border: none !important;
     outline: none !important;
+    margin-inline: calc(var(--tab-min-height) / 2) !important;
+    border-radius: 0px !important;
 }
 
 .tabbrowser-tab:hover:not([visuallyselected],[multiselected]) .tab-background
@@ -902,6 +903,12 @@ spacer[part="overflow-end-indicator"]
 .tabbrowser-tab[usercontextid] .tab-background
 {
     background-color: color-mix(in srgb, var(--identity-icon-color), transparent);
+}
+
+.tabbrowser-tab[usercontextid]:not(:hover, [multiselected]) .tab-background::before,
+.tabbrowser-tab[usercontextid]:not(:hover, [multiselected]) .tab-background::after
+{
+    fill: color-mix(in srgb, var(--identity-icon-color), transparent);
 }
 
 /* -------------------- Tab Loading Burst -------------------- */
