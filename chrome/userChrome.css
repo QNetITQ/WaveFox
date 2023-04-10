@@ -7,6 +7,87 @@
        (-moz-platform: linux),
        (-moz-platform: macos)
 {
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       /* ---------------------------------------- Floating Tabs ---------------------------------------- */
+
+/* -------------------- Rectangle Based -------------------- */
+
+@supports -moz-bool-pref("userChrome.FloatingTabs.TabCorners.RectangleBased.VeryLargeRounding.Enabled")
+{
+    :root
+    {
+        --left-side-svg: url("special/SVG/Tab_Corners_(Rectangle_Based)/Tab_Corners_(Very_Large_Rounding)/Left_Corners_Clipped.svg");
+        --right-side-svg: url("special/SVG/Tab_Corners_(Rectangle_Based)/Tab_Corners_(Very_Large_Rounding)/Right_Corners_Clipped.svg");
+
+        --tab-first-last-margin: calc(var(--toolbar-start-end-padding) - var(--toolbarbutton-outer-padding));
+        --tab-separators-offset: 2px;
+        --tab-attention-indicator-position: 50% var(--tab-block-margin);
+        --tab-clip-path: var(--shadow-blur);
+
+    }
+}
+
+/* ------------------------------ Trapezoid Based ------------------------------ */
+
+
+
+
+
+
+/* ---------------------------------------- Attached Tabs ---------------------------------------- */
+
+/* -------------------- Rectangle Based -------------------- */
+
+@supports -moz-bool-pref("userChrome.AttachedTabs.TabCorners.RectangleBased.VeryLargeRounding.Enabled")
+{
+    :root
+    {
+        --left-side-svg: url("special/SVG/Tab_Corners_(Rectangle_Based)/Tab_Corners_(Very_Large_Rounding)/Left_Corners.svg");
+        --right-side-svg: url("special/SVG/Tab_Corners_(Rectangle_Based)/Tab_Corners_(Very_Large_Rounding)/Right_Corners.svg");
+
+        --left-side-svg-clipped: url("special/SVG/Tab_Corners_(Rectangle_Based)/Tab_Corners_(Very_Large_Rounding)/Left_Corners_Clipped.svg");
+        --right-side-svg-clipped: url("special/SVG/Tab_Corners_(Rectangle_Based)/Tab_Corners_(Very_Large_Rounding)/Right_Corners_Clipped.svg");
+    }
+}
+
+/* ------------------------------ Trapezoid Based ------------------------------ */
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
 
 /* ---------------------------------------- Tab Frame ---------------------------------------- */
 
