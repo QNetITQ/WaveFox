@@ -591,7 +591,7 @@ spacer[part="overflow-end-indicator"]
     color: inherit !important;
     overflow: visible !important;
 }
-       
+
 .tabbrowser-tab[visuallyselected]
 {
     --tab-loading-fill: var(--toolbar-field-focus-border-color) !important;
@@ -730,28 +730,11 @@ spacer[part="overflow-end-indicator"]
     fill: currentColor !important;
 }
 
-       
-       
-       
-       
-       
-       
-       
-/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
-
 .tabbrowser-tab:is([image], [pinned]) .tab-content[attention]:not([selected]),
 .tab-content[pinned][titlechanged]:not([selected])
 {
-    background-position: center top !important;
+    background-position: var(--tab-attention-indicator-position) !important;
 }
-       
-       
-       
-       
-       
-       
-       
-       
 
 /* -------------------- Media Icons -------------------- */
 
@@ -909,17 +892,6 @@ spacer[part="overflow-end-indicator"]
 {
     margin-left: 0px !important;
 }
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
 #tabbrowser-tabs:not([overflow]) .tabbrowser-tab:not([hidden]):first-of-type,
 #tabbrowser-tabs:not([overflow]) .tabbrowser-tab[hidden]:first-of-type + .tabbrowser-tab:not([hidden]),
@@ -927,27 +899,15 @@ spacer[part="overflow-end-indicator"]
 #tabbrowser-tabs[positionpinnedtabs],
 #tabbrowser-tabs[overflow] .tabbrowser-tab[first-visible-unpinned-tab]
 {
-    margin-left: calc(var(--tab-min-height) / 2) !important;
+    margin-left: var(--tab-first-last-margin) !important;
 }
 
 .tabbrowser-tab:not([hidden]):last-of-type,
 .tabbrowser-tab:not([hidden]):has(+ .tabbrowser-tab[hidden]:last-of-type),
 .tabbrowser-tab:not([hidden]):has(+ .tabbrowser-tab[hidden] ~ .tabbrowser-tab[hidden]:last-of-type)
 {
-    margin-right: calc(var(--tab-min-height) / 2) !important;
+    margin-right: var(--tab-first-last-margin) !important;
 }
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
 
 /* ---------------------------------------- Separators ---------------------------------------- */
 
@@ -978,34 +938,14 @@ spacer[part="overflow-end-indicator"]
 .tab-stack::before
 {
     right: 100%;
+    transform: translateX(calc(-1 * var(--tab-separators-offset)));
 }
 
 .tab-stack::after
 {
     left: 100%;
+    transform: translateX(var(--tab-separators-offset));
 }
-       
-       
-       
-       
-       /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
-    .tab-stack::before
-    {
-        transform: translateX(-2px);
-    }
-
-    .tab-stack::after
-    {
-        transform: translateX(2px);
-    }
-       
-       
-       
-       
-       
-       
-       
-       
 
 #tabbrowser-tabs:is([movingtab], :first-child) .tab-stack::before,
 #tabbrowser-tabs[movingtab] .tab-stack::after
