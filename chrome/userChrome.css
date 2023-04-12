@@ -79,15 +79,81 @@
        
        
        
-       
-       
-       
-       
-       
-       
-       
-       
-       
+/* ---------------------------------------- Rounded Corners (SVG) ---------------------------------------- */
+
+.tab-background::before,
+.tab-background::after
+{
+    content: "";
+    display: block;
+    position: absolute;
+    width: var(--tab-min-height);
+    height: var(--tab-min-height);
+    bottom: 0%;
+    fill: transparent;
+    background-size: 100% 100%;
+    pointer-events: none;
+    -moz-context-properties: fill;
+}
+
+.tab-background::before
+{
+    right: 100%;
+    background-image: var(--left-side-svg);
+}
+
+.tab-background::after
+{
+    left: 100%;
+    background-image: var(--right-side-svg);
+}
+
+.tabbrowser-tab[visuallyselected] .tab-background::before,
+.tabbrowser-tab[visuallyselected] .tab-background::after
+{
+    fill: var(--toolbar-bgcolor) !important;
+}
+
+.tabbrowser-tab:hover .tab-background::before,
+.tabbrowser-tab:hover .tab-background::after
+{
+    fill: var(--toolbarbutton-hover-background);
+}
+
+.tabbrowser-tab[multiselected] .tab-background::before,
+.tabbrowser-tab[multiselected] .tab-background::after
+{
+    fill: var(--toolbarbutton-active-background);
+}
+
+.tabbrowser-tab:not([hidden]):is(
+                                 :has(+ .tabbrowser-tab[visuallyselected]:not([hidden])),
+                                 :has(+ .tabbrowser-tab[hidden] ~ .tabbrowser-tab[visuallyselected]:not([hidden]))
+                                ) .tab-background::after
+{
+    background-image: var(--right-side-svg-clipped);
+}
+
+.tabbrowser-tab[visuallyselected]:not([hidden]) + :is(
+                                                      .tabbrowser-tab:not([hidden]),
+                                                      .tabbrowser-tab[hidden] ~ .tabbrowser-tab:not([hidden])
+                                                     ) .tab-background::before
+{
+    background-image: var(--left-side-svg-clipped);
+}
+
+#tabbrowser-tabs[overflow] .tabbrowser-tab[first-visible-unpinned-tab] .tab-background::before
+{
+    background-image: var(--left-side-svg);
+}
+
+#tabbrowser-tabs[overflow] .tabbrowser-tab[pinned]:is(
+                                                      :has(+ .tabbrowser-tab[first-visible-unpinned-tab]),
+                                                      :has(+ .tabbrowser-tab[hidden] ~ .tabbrowser-tab[first-visible-unpinned-tab])
+                                                     ) .tab-background::after
+{
+    background-image: var(--right-side-svg);
+}
 
 /* ---------------------------------------- Tab Frame ---------------------------------------- */
 
@@ -1126,88 +1192,6 @@ spacer[part="overflow-end-indicator"]
     .tab-content[pinned][titlechanged]:not([selected])
     {
         background-position: center top !important;
-    }
-}
-
-/* -------------------- WaveFox / Australis / Chrome / Chrome-Old / Edge -------------------- */
-
-@supports not (-moz-bool-pref("userChrome.ProtonTabs-Enabled") or
-               -moz-bool-pref("userChrome.PhotonTabs-Enabled"))
-{
-    /* ---------- Rounded Corners (SVG) ---------- */
-
-    .tab-background::before,
-    .tab-background::after
-    {
-        content: "";
-        display: block;
-        position: absolute;
-        width: var(--tab-min-height);
-        height: var(--tab-min-height);
-        bottom: 0%;
-        fill: transparent;
-        background-size: 100% 100%;
-        pointer-events: none;
-        -moz-context-properties: fill;
-    }
-
-    .tab-background::before
-    {
-        right: 100%;
-        background-image: var(--left-side-svg);
-    }
-
-    .tab-background::after
-    {
-        left: 100%;
-        background-image: var(--right-side-svg);
-    }
-
-    .tabbrowser-tab[visuallyselected] .tab-background::before,
-    .tabbrowser-tab[visuallyselected] .tab-background::after
-    {
-        fill: var(--toolbar-bgcolor) !important;
-    }
-
-    .tabbrowser-tab:hover .tab-background::before,
-    .tabbrowser-tab:hover .tab-background::after
-    {
-        fill: var(--toolbarbutton-hover-background);
-    }
-
-    .tabbrowser-tab[multiselected] .tab-background::before,
-    .tabbrowser-tab[multiselected] .tab-background::after
-    {
-        fill: var(--toolbarbutton-active-background);
-    }
-
-    .tabbrowser-tab:not([hidden]):is(
-                                     :has(+ .tabbrowser-tab[visuallyselected]:not([hidden])),
-                                     :has(+ .tabbrowser-tab[hidden] ~ .tabbrowser-tab[visuallyselected]:not([hidden]))
-                                    ) .tab-background::after
-    {
-        background-image: var(--right-side-svg-clipped);
-    }
-
-    .tabbrowser-tab[visuallyselected]:not([hidden]) + :is(
-                                                          .tabbrowser-tab:not([hidden]),
-                                                          .tabbrowser-tab[hidden] ~ .tabbrowser-tab:not([hidden])
-                                                         ) .tab-background::before
-    {
-        background-image: var(--left-side-svg-clipped);
-    }
-
-    #tabbrowser-tabs[overflow] .tabbrowser-tab[first-visible-unpinned-tab] .tab-background::before
-    {
-        background-image: var(--left-side-svg);
-    }
-
-    #tabbrowser-tabs[overflow] .tabbrowser-tab[pinned]:is(
-                                                          :has(+ .tabbrowser-tab[first-visible-unpinned-tab]),
-                                                          :has(+ .tabbrowser-tab[hidden] ~ .tabbrowser-tab[first-visible-unpinned-tab])
-                                                         ) .tab-background::after
-    {
-        background-image: var(--right-side-svg);
     }
 }
 
