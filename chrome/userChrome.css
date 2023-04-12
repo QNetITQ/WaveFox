@@ -970,6 +970,22 @@ spacer[part="overflow-end-indicator"]
     margin-left: 0px !important;
 }
 
+#tabbrowser-tabs:not([overflow]) .tabbrowser-tab:not([hidden]):first-of-type,
+#tabbrowser-tabs:not([overflow]) .tabbrowser-tab[hidden]:first-of-type + .tabbrowser-tab:not([hidden]),
+#tabbrowser-tabs:not([overflow]) .tabbrowser-tab[hidden]:first-of-type ~ .tabbrowser-tab[hidden] + .tabbrowser-tab:not([hidden]),
+#tabbrowser-tabs[positionpinnedtabs],
+#tabbrowser-tabs[overflow] .tabbrowser-tab[first-visible-unpinned-tab]
+{
+    margin-left: var(--tab-first-last-margin) !important;
+}
+
+.tabbrowser-tab:not([hidden]):last-of-type,
+.tabbrowser-tab:not([hidden]):has(+ .tabbrowser-tab[hidden]:last-of-type),
+.tabbrowser-tab:not([hidden]):has(+ .tabbrowser-tab[hidden] ~ .tabbrowser-tab[hidden]:last-of-type)
+{
+    margin-right: var(--tab-first-last-margin) !important;
+}
+
 /* ---------------------------------------- Separators ---------------------------------------- */
 
 .tab-stack
@@ -1068,24 +1084,6 @@ spacer[part="overflow-end-indicator"]
 
 @supports -moz-bool-pref("userChrome.FloatingTabs.TabCorners.RectangleBased.VeryLargeRounding.Enabled")
 {
-    /* ---------- Indents ---------- */
-
-    #tabbrowser-tabs:not([overflow]) .tabbrowser-tab:not([hidden]):first-of-type,
-    #tabbrowser-tabs:not([overflow]) .tabbrowser-tab[hidden]:first-of-type + .tabbrowser-tab:not([hidden]),
-    #tabbrowser-tabs:not([overflow]) .tabbrowser-tab[hidden]:first-of-type ~ .tabbrowser-tab[hidden] + .tabbrowser-tab:not([hidden]),
-    #tabbrowser-tabs[positionpinnedtabs],
-    #tabbrowser-tabs[overflow] .tabbrowser-tab[first-visible-unpinned-tab]
-    {
-        margin-left: calc(var(--toolbar-start-end-padding) - var(--toolbarbutton-outer-padding)) !important;
-    }
-
-    .tabbrowser-tab:not([hidden]):last-of-type,
-    .tabbrowser-tab:not([hidden]):has(+ .tabbrowser-tab[hidden]:last-of-type),
-    .tabbrowser-tab:not([hidden]):has(+ .tabbrowser-tab[hidden] ~ .tabbrowser-tab[hidden]:last-of-type)
-    {
-        margin-right: calc(var(--toolbar-start-end-padding) - var(--toolbarbutton-outer-padding)) !important;
-    }
-
     /* ---------- Tab Icon Indicator ---------- */
 
     .tabbrowser-tab:is([image], [pinned]) .tab-content[attention]:not([selected]),
@@ -1179,24 +1177,6 @@ spacer[part="overflow-end-indicator"]
                          calc(-1 * var(--tab-min-height) / 2)
                          0
                         ) !important;
-    }
-       
-    /* ---------- Indents ---------- */
-
-    #tabbrowser-tabs:not([overflow]) .tabbrowser-tab:not([hidden]):first-of-type,
-    #tabbrowser-tabs:not([overflow]) .tabbrowser-tab[hidden]:first-of-type + .tabbrowser-tab:not([hidden]),
-    #tabbrowser-tabs:not([overflow]) .tabbrowser-tab[hidden]:first-of-type ~ .tabbrowser-tab[hidden] + .tabbrowser-tab:not([hidden]),
-    #tabbrowser-tabs[positionpinnedtabs],
-    #tabbrowser-tabs[overflow] .tabbrowser-tab[first-visible-unpinned-tab]
-    {
-        margin-left: calc(var(--tab-min-height) / 2) !important;
-    }
-
-    .tabbrowser-tab:not([hidden]):last-of-type,
-    .tabbrowser-tab:not([hidden]):has(+ .tabbrowser-tab[hidden]:last-of-type),
-    .tabbrowser-tab:not([hidden]):has(+ .tabbrowser-tab[hidden] ~ .tabbrowser-tab[hidden]:last-of-type)
-    {
-        margin-right: calc(var(--tab-min-height) / 2) !important;
     }
 
     /* ---------- Tab Scroll Animation ---------- */
