@@ -681,6 +681,12 @@ spacer[part="overflow-end-indicator"]
     background-color: color-mix(in srgb, var(--identity-icon-color), transparent);
 }
 
+.tabbrowser-tab[usercontextid]:not(:hover, [multiselected]) .tab-background::before,
+.tabbrowser-tab[usercontextid]:not(:hover, [multiselected]) .tab-background::after
+{
+    fill: color-mix(in srgb, var(--identity-icon-color), transparent);
+}
+
 /* -------------------- Tab Loading Burst -------------------- */
 
 @media (prefers-reduced-motion: no-preference)
@@ -1136,6 +1142,8 @@ spacer[part="overflow-end-indicator"]
         content: "";
         display: block;
         position: absolute;
+        width: var(--tab-min-height);
+        height: var(--tab-min-height);
         bottom: 0%;
         fill: transparent;
         background-size: 100% 100%;
@@ -1201,14 +1209,6 @@ spacer[part="overflow-end-indicator"]
     {
         background-image: var(--right-side-svg);
     }
-
-    /* ---------- Container Indicators ---------- */
-
-    .tabbrowser-tab[usercontextid]:not(:hover, [multiselected]) .tab-background::before,
-    .tabbrowser-tab[usercontextid]:not(:hover, [multiselected]) .tab-background::after
-    {
-        fill: color-mix(in srgb, var(--identity-icon-color), transparent);
-    }
 }
 
 /* ---------- WaveFox / Australis / Chrome-Old ---------- */
@@ -1217,15 +1217,6 @@ spacer[part="overflow-end-indicator"]
           -moz-bool-pref("userChrome.AustralisTabs-Enabled") or
           -moz-bool-pref("userChrome.LegacyChromeTabs-Enabled")
 {
-    /* ---------- Rounded Corners (SVG) ---------- */
-
-    .tab-background::before,
-    .tab-background::after
-    {
-        width: var(--tab-min-height);
-        height: var(--tab-min-height);
-    }
-
     /* ---------- Tabs ---------- */
 
     .tabbrowser-tab
