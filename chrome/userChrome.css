@@ -813,6 +813,12 @@ spacer[part="overflow-end-indicator"]
     fill: currentColor !important;
 }
 
+.tabbrowser-tab:is([image], [pinned]) .tab-content[attention]:not([selected]),
+.tab-content[pinned][titlechanged]:not([selected])
+{
+    background-position: var(--tab-attention-indicator-position) !important;
+}
+
 /* -------------------- Media Icons -------------------- */
 
 .tab-icon-overlay:not([crashed])
@@ -1084,13 +1090,6 @@ spacer[part="overflow-end-indicator"]
 
 @supports -moz-bool-pref("userChrome.FloatingTabs.TabCorners.RectangleBased.VeryLargeRounding.Enabled")
 {
-    /* ---------- Tab Icon Indicator ---------- */
-
-    .tabbrowser-tab:is([image], [pinned]) .tab-content[attention]:not([selected]),
-    .tab-content[pinned][titlechanged]:not([selected])
-    {
-        background-position: center var(--tab-block-margin) !important;
-    }
 
     /* ---------- Tabs ---------- */
 
@@ -1151,14 +1150,6 @@ spacer[part="overflow-end-indicator"]
     .tab-background
     {
         margin-block: 0 !important;
-    }
-
-    /* ---------- Tab Icon Indicator ---------- */
-
-    .tabbrowser-tab:is([image], [pinned]) .tab-content[attention]:not([selected]),
-    .tab-content[pinned][titlechanged]:not([selected])
-    {
-        background-position: center top !important;
     }
 }
 
