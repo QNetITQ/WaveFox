@@ -37,7 +37,7 @@
         --right-side-svg: url("special/SVG/Tab_Corners_(Rectangle_Based)/Tab_Corners_(Very_Large_Rounding)/Right_Corners_Clipped.svg");
 
         --tab-first-last-margin: calc(var(--toolbar-start-end-padding) - var(--toolbarbutton-outer-padding));
-        --tab-separators-offset: var(--toolbarbutton-outer-padding);
+        --tab-separators-offset: 2px;
         --tab-attention-indicator-position: 50% var(--tab-block-margin);
         --tab-clip-path: var(--shadow-blur);
 
@@ -1083,45 +1083,7 @@ spacer[part="overflow-end-indicator"]
        
        
        
-/* ---------------------------------------- Derived Styles ---------------------------------------- */
-
-
-
-/* -------------------- Proton -------------------- */
-
-@supports -moz-bool-pref("userChrome.FloatingTabs.TabCorners.RectangleBased.VeryLargeRounding.Enabled")
-{
-
-    /* ---------- Tabs ---------- */
-
-    .tabbrowser-tab
-    {
-        padding-inline: var(--toolbarbutton-outer-padding) !important;
-    }
-       
-    /* ---------- Tab Scroll Animation ---------- */
-
-    #tabbrowser-tabs[overflow]:not([movingtab]) .tabbrowser-tab:not([pinned])
-    {
-        padding-inline: var(--toolbar-start-end-padding) !important;
-        margin-inline: calc(-1 * (var(--toolbar-start-end-padding) - var(--toolbarbutton-outer-padding))) !important;
-    }
-       
-    #tabbrowser-tabs[overflow] .tabbrowser-tab:not([pinned])
-    {
-        box-sizing: content-box !important;
-    }
-}
-
-       
-       
-       
-       
-       
-       
-       
-       
-       
+/* ---------------------------------------- Derived Styles ---------------------------------------- */ 
        
        
 
@@ -1155,14 +1117,6 @@ spacer[part="overflow-end-indicator"]
                          calc(-1 * var(--tab-min-height) / 2)
                          0
                         ) !important;
-    }
-
-    /* ---------- Tab Scroll Animation ---------- */
-
-    #tabbrowser-tabs[overflow]:not([movingtab]) .tabbrowser-tab:not([pinned])
-    {
-        padding-inline: calc(var(--tab-min-height) / 2) !important;
-        margin-inline: calc(-1 * var(--tab-min-height) / 2) !important;
     }
 }
 
@@ -1205,6 +1159,17 @@ spacer[part="overflow-end-indicator"]
 #tabbrowser-tabs[overflow]:not([movingtab]) .tabbrowser-tab:not([hidden]):has(+ .tabbrowser-tab[hidden] ~ .tabbrowser-tab[hidden]:last-of-type)
 {
     margin-right: 0px !important;
+}
+
+#tabbrowser-tabs[overflow]:not([movingtab]) .tabbrowser-tab:not([pinned])
+{
+    padding-inline: calc(var(--tab-first-last-margin) + var(--tab-separators-offset, 0px)) !important;
+    margin-inline: calc(-1 * var(--tab-first-last-margin)) !important;
+}
+       
+#tabbrowser-tabs[overflow] .tabbrowser-tab:not([pinned])
+{
+    box-sizing: content-box !important;
 }
 
 /* ---------------------------------------- Rounded Elements ---------------------------------------- */
