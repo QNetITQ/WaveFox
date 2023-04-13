@@ -39,7 +39,7 @@
         --tab-first-last-margin: calc(var(--toolbar-start-end-padding) - var(--toolbarbutton-outer-padding));
         --tab-separators-offset: 2px;
         --tab-attention-indicator-position: 50% var(--tab-block-margin);
-        --tab-clip-path: var(--shadow-blur);
+        --tab-inset-clip-path: 0px -2px;
 
     }
 }
@@ -672,6 +672,7 @@ spacer[part="overflow-end-indicator"]
     --tab-label-mask-size: 10px !important;
     color: inherit !important;
     overflow: visible !important;
+    clip-path: inset(var(--tab-inset-clip-path)) !important;
 }
        
 .tabbrowser-tab[visuallyselected]
@@ -1100,23 +1101,6 @@ spacer[part="overflow-end-indicator"]
     .tab-background
     {
         margin-block: 0 !important;
-    }
-}
-
-/* ---------- WaveFox / Australis / Chrome-Old ---------- */
-
-@supports -moz-bool-pref("userChrome.WaveFoxTabs-Enabled") or
-          -moz-bool-pref("userChrome.AustralisTabs-Enabled") or
-          -moz-bool-pref("userChrome.LegacyChromeTabs-Enabled")
-{
-    /* ---------- Tabs ---------- */
-
-    .tabbrowser-tab
-    {
-        clip-path: inset(calc(-1 * var(--shadow-blur, 0px))
-                         calc(-1 * var(--tab-min-height) / 2)
-                         0
-                        ) !important;
     }
 }
 
