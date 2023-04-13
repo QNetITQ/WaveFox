@@ -1089,10 +1089,9 @@ spacer[part="overflow-end-indicator"]
        
 
 
-@supports not -moz-bool-pref("userChrome.FloatingTabs.TabCorners.RectangleBased.VeryLargeRounding.Enabled")
-{
-    /* ---------- Tabs ---------- */
 
+    /* ---------- Tabs ---------- */
+/*
     .tabbrowser-tab
     {
         padding-inline: 0 !important;
@@ -1102,7 +1101,7 @@ spacer[part="overflow-end-indicator"]
     {
         margin-block: 0 !important;
     }
-}
+*/
 
        
        
