@@ -37,7 +37,7 @@
         --right-side-svg: url("special/SVG/Tab_Corners_(Rectangle_Based)/Tab_Corners_(Very_Large_Rounding)/Right_Corners_Clipped.svg");
 
         --tab-first-last-margin: calc(var(--toolbar-start-end-padding) - var(--toolbarbutton-outer-padding));
-        --tab-separators-offset: 2px;
+        --tab-separators-offset: var(--toolbarbutton-outer-padding);
         --tab-attention-indicator-position: 50% var(--tab-block-margin);
         --tab-clip-path: var(--shadow-blur);
 
@@ -1020,11 +1020,13 @@ spacer[part="overflow-end-indicator"]
 .tab-stack::before
 {
     right: 100%;
+    transform: translateX(calc(-1 * var(--tab-separators-offset, 0px)));
 }
 
 .tab-stack::after
 {
     left: 100%;
+    transform: translateX(var(--tab-separators-offset, 0px));
 }
 
 #tabbrowser-tabs:is([movingtab], :first-child) .tab-stack::before,
@@ -1095,18 +1097,6 @@ spacer[part="overflow-end-indicator"]
     .tabbrowser-tab
     {
         padding-inline: var(--toolbarbutton-outer-padding) !important;
-    }
-
-    /* ---------- Separators ---------- */
-       
-    .tab-stack::before
-    {
-        transform: translateX(calc(-1 * var(--toolbarbutton-outer-padding)));
-    }
-
-    .tab-stack::after
-    {
-        transform: translateX(var(--toolbarbutton-outer-padding));
     }
        
     /* ---------- Tab Scroll Animation ---------- */
