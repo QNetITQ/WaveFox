@@ -368,7 +368,7 @@
 
 /* -------------------- Rectangle Based -------------------- */
 
-@supports -moz-bool-pref("userChrome.AttachedTabs.TabCorners.RectangleBased.SlightRounding.Enabled")
+@supports -moz-bool-pref("userChrome.AttachedTabs2.TabCorners.RectangleBased.SlightRounding.Enabled")
 {
     :root
     {
@@ -383,7 +383,7 @@
     }
 }
 
-@supports -moz-bool-pref("userChrome.AttachedTabs.TabCorners.RectangleBased.RegularRounding.Enabled")
+@supports -moz-bool-pref("userChrome.AttachedTabs2.TabCorners.RectangleBased.RegularRounding.Enabled")
 {
     :root
     {
@@ -398,7 +398,7 @@
     }
 }
 
-@supports -moz-bool-pref("userChrome.AttachedTabs.TabCorners.RectangleBased.LargeRounding.Enabled")
+@supports -moz-bool-pref("userChrome.AttachedTabs2.TabCorners.RectangleBased.LargeRounding.Enabled")
 {
     :root
     {
@@ -413,7 +413,7 @@
     }
 }
 
-@supports -moz-bool-pref("userChrome.AttachedTabs.TabCorners.RectangleBased.VeryLargeRounding.Enabled")
+@supports -moz-bool-pref("userChrome.AttachedTabs2.TabCorners.RectangleBased.VeryLargeRounding.Enabled")
 {
     :root
     {
