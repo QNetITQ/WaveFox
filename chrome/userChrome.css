@@ -88,6 +88,121 @@
         --key-value: var(--tab-block-margin);
     }
 }
+
+@supports -moz-bool-pref("userChrome.TabCorners.Option8.Enabled")
+{
+    :root
+    {
+        --left-side-svg: url("special/Tab_Corners/Option_6/Left_Corners_Clipped.svg");
+        --right-side-svg: url("special/Tab_Corners/Option_6/Right_Corners_Clipped.svg");
+
+        --key-value: var(--tab-block-margin);
+    }
+}
+
+@supports -moz-bool-pref("userChrome.TabCorners.Option9.Enabled")
+{
+    :root
+    {
+        --left-side-svg: url("special/Tab_Corners/Option_1/Left_Corners.svg");
+        --right-side-svg: url("special/Tab_Corners/Option_1/Right_Corners.svg");
+    }
+}
+
+@supports -moz-bool-pref("userChrome.TabCorners.Option10.Enabled")
+{
+    :root
+    {
+        --left-side-svg: url("special/Tab_Corners/Option_2/Left_Corners.svg");
+        --right-side-svg: url("special/Tab_Corners/Option_2/Right_Corners.svg");
+
+        --left-side-svg-clipped: url("special/Tab_Corners/Option_2/Left_Corners_Clipped.svg");
+        --right-side-svg-clipped: url("special/Tab_Corners/Option_2/Right_Corners_Clipped.svg");
+    }
+}
+
+@supports -moz-bool-pref("userChrome.TabCorners.Option11.Enabled")
+{
+    :root
+    {
+        --left-side-svg: url("special/Tab_Corners/Option_3/Left_Corners.svg");
+        --right-side-svg: url("special/Tab_Corners/Option_3/Right_Corners.svg");
+
+        --left-side-svg-clipped: url("special/Tab_Corners/Option_3/Left_Corners_Clipped.svg");
+        --right-side-svg-clipped: url("special/Tab_Corners/Option_3/Right_Corners_Clipped.svg");
+    }
+}
+
+@supports -moz-bool-pref("userChrome.TabCorners.Option12.Enabled")
+{
+    :root
+    {
+        --left-side-svg: url("special/Tab_Corners/Option_4/Left_Corners.svg");
+        --right-side-svg: url("special/Tab_Corners/Option_4/Right_Corners.svg");
+
+        --left-side-svg-clipped: url("special/Tab_Corners/Option_4/Left_Corners_Clipped.svg");
+        --right-side-svg-clipped: url("special/Tab_Corners/Option_4/Right_Corners_Clipped.svg");
+    }
+}
+
+@supports -moz-bool-pref("userChrome.TabCorners.Option13.Enabled")
+{
+    :root
+    {
+        --left-side-svg: url("special/Tab_Corners/Option_5/Left_Corners.svg");
+        --right-side-svg: url("special/Tab_Corners/Option_5/Right_Corners.svg");
+
+        --left-side-svg-clipped: url("special/Tab_Corners/Option_5/Left_Corners_Clipped.svg");
+        --right-side-svg-clipped: url("special/Tab_Corners/Option_5/Right_Corners_Clipped.svg");
+    }
+}
+
+@supports -moz-bool-pref("userChrome.TabCorners.Option14.Enabled")
+{
+    :root
+    {
+        --left-side-svg: url("special/Tab_Corners/Option_6/Left_Corners.svg");
+        --right-side-svg: url("special/Tab_Corners/Option_6/Right_Corners.svg");
+
+        --left-side-svg-clipped: url("special/Tab_Corners/Option_6/Left_Corners_Clipped.svg");
+        --right-side-svg-clipped: url("special/Tab_Corners/Option_6/Right_Corners_Clipped.svg");
+    }
+}
+
+@supports -moz-bool-pref("userChrome.TabCorners.Option15.Enabled")
+{
+    :root
+    {
+        --left-side-svg: url("special/Tab_Corners/Option_7/Left_Corners.svg");
+        --right-side-svg: url("special/Tab_Corners/Option_7/Right_Corners.svg");
+
+        --left-side-svg-clipped: url("special/Tab_Corners/Option_7/Left_Corners_Clipped.svg");
+        --right-side-svg-clipped: url("special/Tab_Corners/Option_7/Right_Corners_Clipped.svg");
+    }
+}
+
+@supports -moz-bool-pref("userChrome.TabCorners.Option16.Enabled")
+{
+    :root
+    {
+        --left-side-svg: url("special/Tab_Corners/Option_8/Left_Corners.svg");
+        --right-side-svg: url("special/Tab_Corners/Option_8/Right_Corners.svg");
+
+        --left-side-svg-clipped: url("special/Tab_Corners/Option_8/Left_Corners_Clipped.svg");
+        --right-side-svg-clipped: url("special/Tab_Corners/Option_8/Right_Corners_Clipped.svg");
+    }
+}
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
        
        
        
