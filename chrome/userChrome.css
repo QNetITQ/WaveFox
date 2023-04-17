@@ -35,7 +35,14 @@
         --left-side-svg: url("special/Tab_Corners/Option_2/Left_Corners_Clipped.svg");
         --right-side-svg: url("special/Tab_Corners/Option_2/Right_Corners_Clipped.svg");
 
-        --key-value: var(--tab-block-margin);
+        --tab-inset-clip-path: 0px calc(-1 * var(--tab-block-margin) / 2);
+        --tab-first-last-inline-margin: calc(var(--tab-block-margin) / 2);
+        --tab-bg-block-margin: var(--tab-block-margin);
+        --tab-bg-inline-padding: calc(var(--tab-block-margin) / 2);
+        --tab-scroll-animation-inline-margin: calc(-1 * var(--tab-block-margin) / 2);
+        --tab-scroll-animation-inline-padding: var(--tab-block-margin);
+        --tab-separator-offset: calc(var(--tab-block-margin) / 2);
+        --tab-attention-indicator-position: center bottom calc(((var(--tab-min-height) - 16px) / 2 - var(--tab-block-margin)) / 2 + var(--tab-block-margin));
     }
 }
 
@@ -46,7 +53,14 @@
         --left-side-svg: url("special/Tab_Corners/Option_3/Left_Corners_Clipped.svg");
         --right-side-svg: url("special/Tab_Corners/Option_3/Right_Corners_Clipped.svg");
 
-        --key-value: var(--tab-block-margin);
+        --tab-inset-clip-path: 0px calc(-1 * var(--tab-block-margin) / 2);
+        --tab-first-last-inline-margin: calc(var(--tab-block-margin) / 2);
+        --tab-bg-block-margin: var(--tab-block-margin);
+        --tab-bg-inline-padding: calc(var(--tab-block-margin) / 2);
+        --tab-scroll-animation-inline-margin: calc(-1 * var(--tab-block-margin) / 2);
+        --tab-scroll-animation-inline-padding: var(--tab-block-margin);
+        --tab-separator-offset: calc(var(--tab-block-margin) / 2);
+        --tab-attention-indicator-position: center bottom calc(((var(--tab-min-height) - 16px) / 2 - var(--tab-block-margin)) / 2 + var(--tab-block-margin));
     }
 }
 
@@ -57,7 +71,14 @@
         --left-side-svg: url("special/Tab_Corners/Option_4/Left_Corners_Clipped.svg");
         --right-side-svg: url("special/Tab_Corners/Option_4/Right_Corners_Clipped.svg");
 
-        --key-value: var(--tab-block-margin);
+        --tab-inset-clip-path: 0px calc(-1 * var(--tab-block-margin) / 2);
+        --tab-first-last-inline-margin: calc(var(--tab-block-margin) / 2);
+        --tab-bg-block-margin: var(--tab-block-margin);
+        --tab-bg-inline-padding: calc(var(--tab-block-margin) / 2);
+        --tab-scroll-animation-inline-margin: calc(-1 * var(--tab-block-margin) / 2);
+        --tab-scroll-animation-inline-padding: var(--tab-block-margin);
+        --tab-separator-offset: calc(var(--tab-block-margin) / 2);
+        --tab-attention-indicator-position: center bottom calc(((var(--tab-min-height) - 16px) / 2 - var(--tab-block-margin)) / 2 + var(--tab-block-margin));
     }
 }
 
@@ -68,7 +89,14 @@
         --left-side-svg: url("special/Tab_Corners/Option_5/Left_Corners_Clipped.svg");
         --right-side-svg: url("special/Tab_Corners/Option_5/Right_Corners_Clipped.svg");
 
-        --key-value: var(--tab-block-margin);
+        --tab-inset-clip-path: 0px calc(-1 * var(--tab-block-margin) / 2);
+        --tab-first-last-inline-margin: calc(var(--tab-block-margin) / 2);
+        --tab-bg-block-margin: var(--tab-block-margin);
+        --tab-bg-inline-padding: calc(var(--tab-block-margin) / 2);
+        --tab-scroll-animation-inline-margin: calc(-1 * var(--tab-block-margin) / 2);
+        --tab-scroll-animation-inline-padding: var(--tab-block-margin);
+        --tab-separator-offset: calc(var(--tab-block-margin) / 2);
+        --tab-attention-indicator-position: center bottom calc(((var(--tab-min-height) - 16px) / 2 - var(--tab-block-margin)) / 2 + var(--tab-block-margin));
     }
 }
 
@@ -79,7 +107,14 @@
         --left-side-svg: url("special/Tab_Corners/Option_9/Left_Corners.svg");
         --right-side-svg: url("special/Tab_Corners/Option_9/Right_Corners.svg");
 
-        --key-value: var(--tab-block-margin);
+        --tab-inset-clip-path: 0px calc(-1 * var(--tab-block-margin) / 2);
+        --tab-first-last-inline-margin: calc(var(--tab-block-margin) / 2);
+        --tab-bg-block-margin: var(--tab-block-margin);
+        --tab-bg-inline-padding: calc(var(--tab-block-margin) / 2);
+        --tab-scroll-animation-inline-margin: calc(-1 * var(--tab-block-margin) / 2);
+        --tab-scroll-animation-inline-padding: var(--tab-block-margin);
+        --tab-separator-offset: calc(var(--tab-block-margin) / 2);
+        --tab-attention-indicator-position: center bottom calc(((var(--tab-min-height) - 16px) / 2 - var(--tab-block-margin)) / 2 + var(--tab-block-margin));
     }
 }
 
@@ -90,7 +125,14 @@
         --left-side-svg: url("special/Tab_Corners/Option_10/Left_Corners.svg");
         --right-side-svg: url("special/Tab_Corners/Option_10/Right_Corners.svg");
 
-        --key-value: var(--tab-block-margin);
+        --tab-inset-clip-path: 0px calc(-1 * var(--tab-block-margin) / 2);
+        --tab-first-last-inline-margin: calc(var(--tab-block-margin) / 2);
+        --tab-bg-block-margin: var(--tab-block-margin);
+        --tab-bg-inline-padding: calc(var(--tab-block-margin) / 2);
+        --tab-scroll-animation-inline-margin: calc(-1 * var(--tab-block-margin) / 2);
+        --tab-scroll-animation-inline-padding: var(--tab-block-margin);
+        --tab-separator-offset: calc(var(--tab-block-margin) / 2);
+        --tab-attention-indicator-position: center bottom calc(((var(--tab-min-height) - 16px) / 2 - var(--tab-block-margin)) / 2 + var(--tab-block-margin));
     }
 }
 
@@ -101,7 +143,14 @@
         --left-side-svg: url("special/Tab_Corners/Option_6/Left_Corners_Clipped.svg");
         --right-side-svg: url("special/Tab_Corners/Option_6/Right_Corners_Clipped.svg");
 
-        --key-value: var(--tab-block-margin);
+        --tab-inset-clip-path: 0px calc(-1 * var(--tab-block-margin) / 2);
+        --tab-first-last-inline-margin: calc(var(--tab-block-margin) / 2);
+        --tab-bg-block-margin: var(--tab-block-margin);
+        --tab-bg-inline-padding: calc(var(--tab-block-margin) / 2);
+        --tab-scroll-animation-inline-margin: calc(-1 * var(--tab-block-margin) / 2);
+        --tab-scroll-animation-inline-padding: var(--tab-block-margin);
+        --tab-separator-offset: calc(var(--tab-block-margin) / 2);
+        --tab-attention-indicator-position: center bottom calc(((var(--tab-min-height) - 16px) / 2 - var(--tab-block-margin)) / 2 + var(--tab-block-margin));
     }
 }
 
@@ -111,6 +160,15 @@
     {
         --left-side-svg: url("special/Tab_Corners/Option_1/Left_Corners.svg");
         --right-side-svg: url("special/Tab_Corners/Option_1/Right_Corners.svg");
+           
+        --tab-inset-clip-path: 0px calc(-1 * var(--tab-block-margin) / 2);
+        --tab-first-last-inline-margin: calc(var(--tab-block-margin) / 2);
+        --tab-bg-block-margin: var(--tab-block-margin);
+        --tab-bg-inline-padding: calc(var(--tab-block-margin) / 2);
+        --tab-scroll-animation-inline-margin: calc(-1 * var(--tab-block-margin) / 2);
+        --tab-scroll-animation-inline-padding: var(--tab-block-margin);
+        --tab-separator-offset: calc(var(--tab-block-margin) / 2);
+        --tab-attention-indicator-position: center bottom calc(((var(--tab-min-height) - 16px) / 2 - var(--tab-block-margin)) / 2 + var(--tab-block-margin));
     }
 }
 
@@ -987,7 +1045,7 @@ spacer[part="overflow-end-indicator"]
 
 .tabbrowser-tab:is([pinned], [image], [sharing], [pictureinpicture]):is([soundplaying], [muted], [activemedia-blocked]):not([busy], [crashed]) .tab-icon-stack > :not(.tab-icon-overlay)
 {
-    mask-image: url("special/SVG/Additional_Elements/Media.svg");
+    mask-image: url("special/Additional_Elements/Media.svg");
     mask-size: 100% 100%;
 }
 
@@ -1021,13 +1079,13 @@ spacer[part="overflow-end-indicator"]
 
 .tabbrowser-tab[pictureinpicture]:not([busy], [crashed]):not([soundplaying], [muted], [activemedia-blocked]) .tab-icon-stack::before
 {
-    mask-image: url("special/SVG/Additional_Elements/PIP.svg");
+    mask-image: url("special/Additional_Elements/PIP.svg");
     mask-size: 100% 100%;
 }
 
 .tabbrowser-tab[pictureinpicture]:not([busy], [crashed]):is([soundplaying], [muted], [activemedia-blocked]) .tab-icon-stack::before
 {
-    mask-image: url("special/SVG/Additional_Elements/PIP_Sound.svg");
+    mask-image: url("special/Additional_Elements/PIP_Sound.svg");
     mask-size: 100% 100%;
 }
 
