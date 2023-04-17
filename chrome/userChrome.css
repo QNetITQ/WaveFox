@@ -792,6 +792,7 @@ spacer[part="overflow-end-indicator"]
     color: inherit !important;
     overflow: visible !important;
     clip-path: inset(var(--tab-inset-clip-path)) !important;
+    padding-inline: var(--tab-bg-inline-padding) !important;
 }
        
 .tabbrowser-tab[visuallyselected]
@@ -1211,11 +1212,6 @@ spacer[part="overflow-end-indicator"]
 
     /* ---------- Tabs ---------- */
 /*
-    .tabbrowser-tab
-    {
-        padding-inline: 0 !important;
-    }
-
     .tab-background
     {
         margin-block: 0 !important;
