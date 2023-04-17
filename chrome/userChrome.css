@@ -16,16 +16,6 @@
     {
         --left-side-svg: url("special/Tab_Corners/Option_1/Left_Corners.svg");
         --right-side-svg: url("special/Tab_Corners/Option_1/Right_Corners.svg");
-
-        --tab-overflow-clip-margin: calc(var(--tab-block-margin) / 2);
-        --tab-inset-clip-path: 0px calc(-1 * var(--tab-block-margin) / 2);
-        --tab-first-last-inline-margin: calc(var(--tab-block-margin) / 2);
-        --tab-bg-block-margin: var(--tab-block-margin);
-        --tab-bg-inline-padding: calc(var(--tab-block-margin) / 2);
-        --tab-scroll-animation-inline-margin: calc(-1 * var(--tab-block-margin) / 2);
-        --tab-scroll-animation-inline-padding: var(--tab-block-margin);
-        --tab-separator-offset: calc(var(--tab-block-margin) / 2);
-        --tab-attention-indicator-position: center bottom calc(((var(--tab-min-height) - 16px) / 2 - var(--tab-block-margin)) / 2 + var(--tab-block-margin));
     }
 }
 
@@ -35,16 +25,6 @@
     {
         --left-side-svg: url("special/Tab_Corners/Option_2/Left_Corners_Clipped.svg");
         --right-side-svg: url("special/Tab_Corners/Option_2/Right_Corners_Clipped.svg");
-
-        --tab-overflow-clip-margin: calc(var(--tab-block-margin) / 2);
-        --tab-inset-clip-path: 0px calc(-1 * var(--tab-block-margin) / 2);
-        --tab-first-last-inline-margin: calc(var(--tab-block-margin) / 2);
-        --tab-bg-block-margin: var(--tab-block-margin);
-        --tab-bg-inline-padding: calc(var(--tab-block-margin) / 2);
-        --tab-scroll-animation-inline-margin: calc(-1 * var(--tab-block-margin) / 2);
-        --tab-scroll-animation-inline-padding: var(--tab-block-margin);
-        --tab-separator-offset: calc(var(--tab-block-margin) / 2);
-        --tab-attention-indicator-position: center bottom calc(((var(--tab-min-height) - 16px) / 2 - var(--tab-block-margin)) / 2 + var(--tab-block-margin));
     }
 }
 
@@ -54,16 +34,6 @@
     {
         --left-side-svg: url("special/Tab_Corners/Option_3/Left_Corners_Clipped.svg");
         --right-side-svg: url("special/Tab_Corners/Option_3/Right_Corners_Clipped.svg");
-
-        --tab-overflow-clip-margin: calc(var(--tab-block-margin) / 2);
-        --tab-inset-clip-path: 0px calc(-1 * var(--tab-block-margin) / 2);
-        --tab-first-last-inline-margin: calc(var(--tab-block-margin) / 2);
-        --tab-bg-block-margin: var(--tab-block-margin);
-        --tab-bg-inline-padding: calc(var(--tab-block-margin) / 2);
-        --tab-scroll-animation-inline-margin: calc(-1 * var(--tab-block-margin) / 2);
-        --tab-scroll-animation-inline-padding: var(--tab-block-margin);
-        --tab-separator-offset: calc(var(--tab-block-margin) / 2);
-        --tab-attention-indicator-position: center bottom calc(((var(--tab-min-height) - 16px) / 2 - var(--tab-block-margin)) / 2 + var(--tab-block-margin));
     }
 }
 
@@ -73,16 +43,6 @@
     {
         --left-side-svg: url("special/Tab_Corners/Option_4/Left_Corners_Clipped.svg");
         --right-side-svg: url("special/Tab_Corners/Option_4/Right_Corners_Clipped.svg");
-
-        --tab-overflow-clip-margin: calc(var(--tab-block-margin) / 2);
-        --tab-inset-clip-path: 0px calc(-1 * var(--tab-block-margin) / 2);
-        --tab-first-last-inline-margin: calc(var(--tab-block-margin) / 2);
-        --tab-bg-block-margin: var(--tab-block-margin);
-        --tab-bg-inline-padding: calc(var(--tab-block-margin) / 2);
-        --tab-scroll-animation-inline-margin: calc(-1 * var(--tab-block-margin) / 2);
-        --tab-scroll-animation-inline-padding: var(--tab-block-margin);
-        --tab-separator-offset: calc(var(--tab-block-margin) / 2);
-        --tab-attention-indicator-position: center bottom calc(((var(--tab-min-height) - 16px) / 2 - var(--tab-block-margin)) / 2 + var(--tab-block-margin));
     }
 }
 
@@ -92,16 +52,6 @@
     {
         --left-side-svg: url("special/Tab_Corners/Option_5/Left_Corners_Clipped.svg");
         --right-side-svg: url("special/Tab_Corners/Option_5/Right_Corners_Clipped.svg");
-
-        --tab-overflow-clip-margin: calc(var(--tab-block-margin) / 2);
-        --tab-inset-clip-path: 0px calc(-1 * var(--tab-block-margin) / 2);
-        --tab-first-last-inline-margin: calc(var(--tab-block-margin) / 2);
-        --tab-bg-block-margin: var(--tab-block-margin);
-        --tab-bg-inline-padding: calc(var(--tab-block-margin) / 2);
-        --tab-scroll-animation-inline-margin: calc(-1 * var(--tab-block-margin) / 2);
-        --tab-scroll-animation-inline-padding: var(--tab-block-margin);
-        --tab-separator-offset: calc(var(--tab-block-margin) / 2);
-        --tab-attention-indicator-position: center bottom calc(((var(--tab-min-height) - 16px) / 2 - var(--tab-block-margin)) / 2 + var(--tab-block-margin));
     }
 }
 
@@ -111,16 +61,6 @@
     {
         --left-side-svg: url("special/Tab_Corners/Option_9/Left_Corners.svg");
         --right-side-svg: url("special/Tab_Corners/Option_9/Right_Corners.svg");
-
-        --tab-overflow-clip-margin: calc(var(--tab-block-margin) / 2);
-        --tab-inset-clip-path: 0px calc(-1 * var(--tab-block-margin) / 2);
-        --tab-first-last-inline-margin: calc(var(--tab-block-margin) / 2);
-        --tab-bg-block-margin: var(--tab-block-margin);
-        --tab-bg-inline-padding: calc(var(--tab-block-margin) / 2);
-        --tab-scroll-animation-inline-margin: calc(-1 * var(--tab-block-margin) / 2);
-        --tab-scroll-animation-inline-padding: var(--tab-block-margin);
-        --tab-separator-offset: calc(var(--tab-block-margin) / 2);
-        --tab-attention-indicator-position: center bottom calc(((var(--tab-min-height) - 16px) / 2 - var(--tab-block-margin)) / 2 + var(--tab-block-margin));
     }
 }
 
@@ -130,16 +70,6 @@
     {
         --left-side-svg: url("special/Tab_Corners/Option_10/Left_Corners.svg");
         --right-side-svg: url("special/Tab_Corners/Option_10/Right_Corners.svg");
-
-        --tab-overflow-clip-margin: calc(var(--tab-block-margin) / 2);
-        --tab-inset-clip-path: 0px calc(-1 * var(--tab-block-margin) / 2);
-        --tab-first-last-inline-margin: calc(var(--tab-block-margin) / 2);
-        --tab-bg-block-margin: var(--tab-block-margin);
-        --tab-bg-inline-padding: calc(var(--tab-block-margin) / 2);
-        --tab-scroll-animation-inline-margin: calc(-1 * var(--tab-block-margin) / 2);
-        --tab-scroll-animation-inline-padding: var(--tab-block-margin);
-        --tab-separator-offset: calc(var(--tab-block-margin) / 2);
-        --tab-attention-indicator-position: center bottom calc(((var(--tab-min-height) - 16px) / 2 - var(--tab-block-margin)) / 2 + var(--tab-block-margin));
     }
 }
 
@@ -149,16 +79,6 @@
     {
         --left-side-svg: url("special/Tab_Corners/Option_6/Left_Corners_Clipped.svg");
         --right-side-svg: url("special/Tab_Corners/Option_6/Right_Corners_Clipped.svg");
-
-        --tab-overflow-clip-margin: calc(var(--tab-block-margin) / 2);
-        --tab-inset-clip-path: 0px calc(-1 * var(--tab-block-margin) / 2);
-        --tab-first-last-inline-margin: calc(var(--tab-block-margin) / 2);
-        --tab-bg-block-margin: var(--tab-block-margin);
-        --tab-bg-inline-padding: calc(var(--tab-block-margin) / 2);
-        --tab-scroll-animation-inline-margin: calc(-1 * var(--tab-block-margin) / 2);
-        --tab-scroll-animation-inline-padding: var(--tab-block-margin);
-        --tab-separator-offset: calc(var(--tab-block-margin) / 2);
-        --tab-attention-indicator-position: center bottom calc(((var(--tab-min-height) - 16px) / 2 - var(--tab-block-margin)) / 2 + var(--tab-block-margin));
     }
 }
 
@@ -168,16 +88,6 @@
     {
         --left-side-svg: url("special/Tab_Corners/Option_1/Left_Corners.svg");
         --right-side-svg: url("special/Tab_Corners/Option_1/Right_Corners.svg");
-           
-        --tab-overflow-clip-margin: calc(var(--tab-block-margin) / 2);
-        --tab-inset-clip-path: 0px calc(-1 * var(--tab-block-margin) / 2);
-        --tab-first-last-inline-margin: calc(var(--tab-block-margin) / 2);
-        --tab-bg-block-margin: var(--tab-block-margin);
-        --tab-bg-inline-padding: calc(var(--tab-block-margin) / 2);
-        --tab-scroll-animation-inline-margin: calc(-1 * var(--tab-block-margin) / 2);
-        --tab-scroll-animation-inline-padding: var(--tab-block-margin);
-        --tab-separator-offset: calc(var(--tab-block-margin) / 2);
-        --tab-attention-indicator-position: center bottom calc(((var(--tab-min-height) - 16px) / 2 - var(--tab-block-margin)) / 2 + var(--tab-block-margin));
     }
 }
 
@@ -262,6 +172,56 @@
 
         --left-side-svg-clipped: url("special/Tab_Corners/Option_8/Left_Corners_Clipped.svg");
         --right-side-svg-clipped: url("special/Tab_Corners/Option_8/Right_Corners_Clipped.svg");
+    }
+}
+
+/* -------------------- Floating Tabs -------------------- */
+
+@supports -moz-bool-pref("userChrome.TabCorners.Option1.Enabled") or
+          -moz-bool-pref("userChrome.TabCorners.Option2.Enabled") or
+          -moz-bool-pref("userChrome.TabCorners.Option3.Enabled") or
+          -moz-bool-pref("userChrome.TabCorners.Option4.Enabled") or
+          -moz-bool-pref("userChrome.TabCorners.Option5.Enabled") or
+          -moz-bool-pref("userChrome.TabCorners.Option6.Enabled") or
+          -moz-bool-pref("userChrome.TabCorners.Option7.Enabled") or
+          -moz-bool-pref("userChrome.TabCorners.Option8.Enabled")
+{
+    :root
+    {
+        --tab-overflow-clip-margin: calc(var(--tab-block-margin) / 2);
+        --tab-inset-clip-path: 0px calc(-1 * var(--tab-block-margin) / 2);
+        --tab-first-last-inline-margin: calc(var(--tab-block-margin) / 2);
+        --tab-bg-block-margin: var(--tab-block-margin);
+        --tab-bg-inline-padding: calc(var(--tab-block-margin) / 2);
+        --tab-scroll-animation-inline-margin: calc(-1 * var(--tab-block-margin) / 2);
+        --tab-scroll-animation-inline-padding: var(--tab-block-margin);
+        --tab-separator-offset: calc(var(--tab-block-margin) / 2);
+        --tab-attention-indicator-position: center bottom calc(((var(--tab-min-height) - 16px) / 2 - var(--tab-block-margin)) / 2 + var(--tab-block-margin));
+    }
+}
+
+/* -------------------- Attached Tabs -------------------- */
+
+@supports -moz-bool-pref("userChrome.TabCorners.Option9.Enabled")  or
+          -moz-bool-pref("userChrome.TabCorners.Option10.Enabled") or
+          -moz-bool-pref("userChrome.TabCorners.Option11.Enabled") or
+          -moz-bool-pref("userChrome.TabCorners.Option12.Enabled") or
+          -moz-bool-pref("userChrome.TabCorners.Option13.Enabled") or
+          -moz-bool-pref("userChrome.TabCorners.Option14.Enabled") or
+          -moz-bool-pref("userChrome.TabCorners.Option15.Enabled") or
+          -moz-bool-pref("userChrome.TabCorners.Option16.Enabled")
+{
+    :root
+    {
+        --tab-overflow-clip-margin: calc(var(--tab-block-margin) / 2);
+        --tab-inset-clip-path: 0px calc(-1 * var(--tab-block-margin) / 2);
+        --tab-first-last-inline-margin: calc(var(--tab-block-margin) / 2);
+        --tab-bg-block-margin: var(--tab-block-margin);
+        --tab-bg-inline-padding: calc(var(--tab-block-margin) / 2);
+        --tab-scroll-animation-inline-margin: calc(-1 * var(--tab-block-margin) / 2);
+        --tab-scroll-animation-inline-padding: var(--tab-block-margin);
+        --tab-separator-offset: calc(var(--tab-block-margin) / 2);
+        --tab-attention-indicator-position: center bottom calc(((var(--tab-min-height) - 16px) / 2 - var(--tab-block-margin)) / 2 + var(--tab-block-margin));
     }
 }
 
