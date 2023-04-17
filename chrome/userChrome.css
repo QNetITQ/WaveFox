@@ -19,6 +19,7 @@
 
         --tab-inset-clip-path: 0px calc(-1 * var(--tab-block-margin) / 2);
         --tab-first-last-inline-margin: calc(var(--tab-block-margin) / 2);
+        --tab-bg-block-margin: var(--tab-block-margin);
         --tab-bg-inline-padding: calc(var(--tab-block-margin) / 2);
         --tab-scroll-animation-inline-margin: calc(-1 * var(--tab-block-margin) / 2);
         --tab-scroll-animation-inline-padding: var(--tab-block-margin);
@@ -816,6 +817,7 @@ spacer[part="overflow-end-indicator"]
     opacity: 1 !important;
     border: none !important;
     outline: none !important;
+    margin-block: var(--tab-bg-block-margin) !important;
     margin-inline: calc(var(--tab-min-height) / 2) !important;
     border-radius: 0px !important;
 }
@@ -1183,56 +1185,6 @@ spacer[part="overflow-end-indicator"]
     }
 }
 
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-/* ---------------------------------------- Derived Styles ---------------------------------------- */ 
-       
-       
-
-
-
-    /* ---------- Tabs ---------- */
-/*
-    .tab-background
-    {
-        margin-block: 0 !important;
-    }
-*/
-
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
 /* ---------------------------------------- Tab Scroll Animation ---------------------------------------- */
 
 #tabbrowser-tabs[overflow]:not([movingtab]) .tabbrowser-tab:not([pinned])
