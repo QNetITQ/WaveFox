@@ -17,6 +17,7 @@
         --left-side-svg: url("special/Tab_Corners/Option_1/Left_Corners.svg");
         --right-side-svg: url("special/Tab_Corners/Option_1/Right_Corners.svg");
 
+        --tab-inset-clip-path: 0px calc(-1 * var(--tab-block-margin) / 2);
         --tab-first-last-inline-margin: calc(var(--tab-block-margin) / 2);
         --tab-bg-inline-padding: calc(var(--tab-block-margin) / 2);
         --tab-scroll-animation-inline-margin: calc(-1 * var(--tab-block-margin) / 2);
