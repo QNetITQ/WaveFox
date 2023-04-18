@@ -192,7 +192,7 @@
         --tab-inset-clip-path: 0px calc(-1 * var(--tab-block-margin) / 2);
         --tab-first-last-inline-margin: calc(var(--tab-block-margin) / 2);
         --tab-bg-block-margin: var(--tab-block-margin);
-        --tab-bg-inline-padding: calc(var(--tab-block-margin) / 2);
+        --tab-inline-padding: calc(var(--tab-block-margin) / 2);
         --tab-scroll-animation-inline-margin: calc(-1 * var(--tab-block-margin) / 2);
         --tab-scroll-animation-inline-padding: var(--tab-block-margin);
         --tab-separator-offset: calc(var(--tab-block-margin) / 2);
@@ -219,11 +219,6 @@
         --tab-inset-clip-path: -4px calc(-1 * var(--tab-first-last-inline-margin)) 0px;
         --tab-scroll-animation-inline-margin: calc(-1 * var(--tab-first-last-inline-margin));
         --tab-scroll-animation-inline-padding: var(--tab-first-last-inline-margin);
-
-        --tab-bg-block-margin: 0px;
-        --tab-bg-inline-padding: 0px;
-        --tab-separator-offset: 0px;
-        --tab-attention-indicator-position: center bottom calc(((var(--tab-min-height) - 16px) / 2 - 4px) / 2);
     }
 }
 
@@ -822,7 +817,7 @@ spacer[part="overflow-end-indicator"]
     overflow-y: visible !important;
     overflow-clip-margin: var(--tab-overflow-clip-margin) !important;
     clip-path: inset(var(--tab-inset-clip-path)) !important;
-    padding-inline: var(--tab-bg-inline-padding) !important;
+    padding-inline: var(--tab-inline-padding, 0px) !important;
 }
        
 .tabbrowser-tab[visuallyselected]
@@ -847,7 +842,7 @@ spacer[part="overflow-end-indicator"]
     opacity: 1 !important;
     border: none !important;
     outline: none !important;
-    margin-block: var(--tab-bg-block-margin) !important;
+    margin-block: var(--tab-bg-block-margin, 0px) !important;
     margin-inline: calc(var(--tab-min-height) / 2) !important;
     border-radius: 0px !important;
 }
@@ -967,7 +962,7 @@ spacer[part="overflow-end-indicator"]
 .tabbrowser-tab:is([image], [pinned]) .tab-content[attention]:not([selected]),
 .tab-content[pinned][titlechanged]:not([selected])
 {
-    background-position: var(--tab-attention-indicator-position) !important;
+    background-position: var(--tab-attention-indicator-position, center bottom calc(((var(--tab-min-height) - 16px) / 2 - 4px) / 2)) !important;
 }
 
 /* -------------------- Media Icons -------------------- */
