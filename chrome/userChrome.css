@@ -213,15 +213,17 @@
 {
     :root
     {
-        --tab-overflow-clip-margin: calc(var(--tab-block-margin) / 2);
-        --tab-inset-clip-path: 0px calc(-1 * var(--tab-block-margin) / 2);
-        --tab-first-last-inline-margin: calc(var(--tab-block-margin) / 2);
-        --tab-bg-block-margin: var(--tab-block-margin);
-        --tab-bg-inline-padding: calc(var(--tab-block-margin) / 2);
-        --tab-scroll-animation-inline-margin: calc(-1 * var(--tab-block-margin) / 2);
-        --tab-scroll-animation-inline-padding: var(--tab-block-margin);
-        --tab-separator-offset: calc(var(--tab-block-margin) / 2);
-        --tab-attention-indicator-position: center bottom calc(((var(--tab-min-height) - 16px) / 2 - var(--tab-block-margin)) / 2 + var(--tab-block-margin));
+        --tab-first-last-inline-margin: calc(var(--tab-min-height) / 2);
+
+        --tab-overflow-clip-margin: var(--tab-first-last-inline-margin);
+        --tab-inset-clip-path: -4px calc(-1 * var(--tab-first-last-inline-margin)) 0px;
+        --tab-scroll-animation-inline-margin: calc(-1 * var(--tab-first-last-inline-margin));
+        --tab-scroll-animation-inline-padding: var(--tab-first-last-inline-margin);
+
+        --tab-bg-block-margin: 0px;
+        --tab-bg-inline-padding: 0px;
+        --tab-separator-offset: 0px;
+        --tab-attention-indicator-position: center bottom calc(((var(--tab-min-height) - 16px) / 2 - 4px) / 2);
     }
 }
 
