@@ -190,7 +190,7 @@
     {
         --tab-first-last-inline-margin: calc(var(--tab-block-margin) / 2);
         --tab-overflow-clip-margin: var(--tab-first-last-inline-margin);
-        --tab-inset-clip-path: -4px calc(-1 * var(--tab-first-last-inline-margin)) 0px;
+        --tab-inset-clip-path: 0px calc(-1 * var(--tab-first-last-inline-margin));
         --tab-scroll-animation-inline-margin: calc(-1 * var(--tab-first-last-inline-margin));
         --tab-scroll-animation-inline-padding: var(--tab-first-last-inline-margin);
         --tab-bg-block-margin: var(--tab-block-margin);
@@ -814,6 +814,7 @@ spacer[part="overflow-end-indicator"]
     --tab-attention-icon-color: currentColor !important;
     --tab-label-mask-size: 10px !important;
     color: inherit !important;
+    overflow-x: clip !important;
     overflow-y: visible !important;
     overflow-clip-margin: var(--tab-overflow-clip-margin) !important;
     clip-path: inset(var(--tab-inset-clip-path)) !important;
