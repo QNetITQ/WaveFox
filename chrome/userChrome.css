@@ -1355,8 +1355,8 @@ spacer[part="overflow-end-indicator"]
         --urlbar-toolbar-height: var(--tab-min-height) !important;
     }
 
-    @supports -moz-bool-pref("userChrome.PhotonTabs-Enabled")       or
-              -moz-bool-pref("userChrome.LegacyChromeTabs-Enabled")
+    @supports -moz-bool-pref("userChrome.TabCorners.Option8.Enabled") or
+              -moz-bool-pref("userChrome.TabCorners.Option9.Enabled")
     {
         #nav-bar
         {
@@ -1400,11 +1400,8 @@ spacer[part="overflow-end-indicator"]
 
     /* -------------------- Proton / WaveFox / Australis / Chrome / Edge -------------------- */
 
-    @supports -moz-bool-pref("userChrome.ProtonTabs-Enabled")    or
-              -moz-bool-pref("userChrome.WaveFoxTabs-Enabled")   or
-              -moz-bool-pref("userChrome.AustralisTabs-Enabled") or
-              -moz-bool-pref("userChrome.ChromeTabs-Enabled")    or
-              -moz-bool-pref("userChrome.EdgeTabs-Enabled")
+    @supports not (-moz-bool-pref("userChrome.TabCorners.Option8.Enabled") or
+                   -moz-bool-pref("userChrome.TabCorners.Option9.Enabled"))
     {
         #navigator-toolbox
         {
@@ -1413,7 +1410,16 @@ spacer[part="overflow-end-indicator"]
 
         /* -------------------- Tab Bar -------------------- */
 
-        @supports not -moz-bool-pref("userChrome.ProtonTabs-Enabled")
+        @supports not (
+                       -moz-bool-pref("userChrome.TabCorners.Option1.Enabled") or
+                       -moz-bool-pref("userChrome.TabCorners.Option2.Enabled") or
+                       -moz-bool-pref("userChrome.TabCorners.Option3.Enabled") or
+                       -moz-bool-pref("userChrome.TabCorners.Option4.Enabled") or
+                       -moz-bool-pref("userChrome.TabCorners.Option5.Enabled") or
+                       -moz-bool-pref("userChrome.TabCorners.Option6.Enabled") or
+                       -moz-bool-pref("userChrome.TabCorners.Option7.Enabled") or
+                       -moz-bool-pref("userChrome.TabCorners.Option8.Enabled")
+                      )
         {
             :root
             {
