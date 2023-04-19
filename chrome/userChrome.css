@@ -88,6 +88,8 @@
     {
         --left-side-svg: url("special/Tab_Corners/Option_1/Left_Corners.svg");
         --right-side-svg: url("special/Tab_Corners/Option_1/Right_Corners.svg");
+
+        --tab-first-last-inline-margin: calc(var(--tab-min-height) / 4);
     }
 }
 
@@ -100,6 +102,8 @@
 
         --left-side-svg-clipped: url("special/Tab_Corners/Option_2/Left_Corners_Clipped.svg");
         --right-side-svg-clipped: url("special/Tab_Corners/Option_2/Right_Corners_Clipped.svg");
+
+        --tab-first-last-inline-margin: calc(var(--tab-min-height) / 4);
     }
 }
 
@@ -112,6 +116,8 @@
 
         --left-side-svg-clipped: url("special/Tab_Corners/Option_3/Left_Corners_Clipped.svg");
         --right-side-svg-clipped: url("special/Tab_Corners/Option_3/Right_Corners_Clipped.svg");
+
+        --tab-first-last-inline-margin: calc(var(--tab-min-height) / 4);
     }
 }
 
@@ -124,6 +130,8 @@
 
         --left-side-svg-clipped: url("special/Tab_Corners/Option_4/Left_Corners_Clipped.svg");
         --right-side-svg-clipped: url("special/Tab_Corners/Option_4/Right_Corners_Clipped.svg");
+
+        --tab-first-last-inline-margin: calc(var(--tab-min-height) / 2);
     }
 }
 
@@ -136,6 +144,8 @@
 
         --left-side-svg-clipped: url("special/Tab_Corners/Option_5/Left_Corners_Clipped.svg");
         --right-side-svg-clipped: url("special/Tab_Corners/Option_5/Right_Corners_Clipped.svg");
+
+        --tab-first-last-inline-margin: calc(var(--tab-min-height) / 2);
     }
 }
 
@@ -148,6 +158,8 @@
 
         --left-side-svg-clipped: url("special/Tab_Corners/Option_6/Left_Corners_Clipped.svg");
         --right-side-svg-clipped: url("special/Tab_Corners/Option_6/Right_Corners_Clipped.svg");
+
+        --tab-first-last-inline-margin: calc(var(--tab-min-height) / 2);
     }
 }
 
@@ -160,6 +172,8 @@
 
         --left-side-svg-clipped: url("special/Tab_Corners/Option_7/Left_Corners_Clipped.svg");
         --right-side-svg-clipped: url("special/Tab_Corners/Option_7/Right_Corners_Clipped.svg");
+
+        --tab-first-last-inline-margin: calc(var(--tab-min-height) / 2);
     }
 }
 
@@ -172,6 +186,8 @@
 
         --left-side-svg-clipped: url("special/Tab_Corners/Option_8/Left_Corners_Clipped.svg");
         --right-side-svg-clipped: url("special/Tab_Corners/Option_8/Right_Corners_Clipped.svg");
+
+        --tab-first-last-inline-margin: calc(var(--tab-min-height) / 2);
     }
 }
 
@@ -213,8 +229,6 @@
 {
     :root
     {
-        --tab-first-last-inline-margin: calc(var(--tab-min-height) / 2);
-
         --tab-overflow-clip-margin: var(--tab-first-last-inline-margin);
         --tab-inset-clip-path: -4px calc(-1 * var(--tab-first-last-inline-margin)) 0px;
         --tab-scroll-animation-inline-margin: calc(-1 * var(--tab-first-last-inline-margin));
@@ -274,7 +288,7 @@
                                  :has(+ .tabbrowser-tab[hidden] ~ .tabbrowser-tab[visuallyselected]:not([hidden]))
                                 ) .tab-background::after
 {
-    background-image: var(--right-side-svg-clipped);
+    background-image: var(--right-side-svg-clipped, var(--right-side-svg));
 }
 
 .tabbrowser-tab[visuallyselected]:not([hidden]) + :is(
@@ -282,7 +296,7 @@
                                                       .tabbrowser-tab[hidden] ~ .tabbrowser-tab:not([hidden])
                                                      ) .tab-background::before
 {
-    background-image: var(--left-side-svg-clipped);
+    background-image: var(--left-side-svg-clipped, var(--left-side-svg));
 }
 
 #tabbrowser-tabs[overflow] .tabbrowser-tab[first-visible-unpinned-tab] .tab-background::before
