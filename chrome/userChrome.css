@@ -1504,31 +1504,9 @@ spacer[part="overflow-end-indicator"]
 
     /* -------------------- Tabs -------------------- */
 
-    @supports -moz-bool-pref("userChrome.PhotonTabs-Enabled")
+    .tabbrowser-tab
     {
-        .tabbrowser-tab
-        {
-            clip-path: inset(0 calc(-1 * var(--toolbar-start-end-padding))) !important;
-        }
-    }
-
-    @supports -moz-bool-pref("userChrome.WaveFoxTabs-Enabled")      or
-              -moz-bool-pref("userChrome.AustralisTabs-Enabled")    or
-              -moz-bool-pref("userChrome.LegacyChromeTabs-Enabled")
-    {
-        .tabbrowser-tab
-        {
-            clip-path: inset(0 calc(-1 * var(--tab-min-height) / 2)) !important;
-        }
-    }
-
-    @supports -moz-bool-pref("userChrome.ChromeTabs-Enabled") or
-              -moz-bool-pref("userChrome.EdgeTabs-Enabled")
-    {
-        .tabbrowser-tab
-        {
-            clip-path: inset(0 calc(-1 * var(--tab-min-height) / 4)) !important;
-        }
+        --tab-inset-clip-path: 0px calc(-1 * var(--tab-first-last-inline-margin));
     }
 
     /* ---------- Rounded Corners (SVG) ---------- */
