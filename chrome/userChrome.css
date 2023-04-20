@@ -1159,6 +1159,7 @@ spacer[part="overflow-end-indicator"]
 }
 
 /* ---------------------------------------- Separators ---------------------------------------- */
+
 .tab-stack
 {
     margin-left: 1px !important;
@@ -1190,17 +1191,30 @@ spacer[part="overflow-end-indicator"]
     transform: translateX(var(--tab-separator-offset, 0px));
 }
 
-.tabbrowser-tab:is(
-        [selected],
-        [selected] + .tabbrowser-tab,
-        :hover,
-        :hover + .tabbrowser-tab,
-        [multiselected],
-        [multiselected] + .tabbrowser-tab) .tab-stack::before,
-.tabbrowser-tab:is(
-        [selected],
-        :hover,
-        [multiselected]) .tab-stack::after
+.tabbrowser-tab:not([hidden]):is(
+                                 [selected],
+                                 [selected] + .tabbrowser-tab:not([hidden]),
+                                 [selected] + .tabbrowser-tab[hidden] ~ .tabbrowser-tab:not([hidden]),
+                                 :hover,
+                                 :hover + .tabbrowser-tab:not([hidden]),
+                                 :hover + .tabbrowser-tab[hidden] ~ .tabbrowser-tab:not([hidden]),
+                                 [multiselected],
+                                 [multiselected] + .tabbrowser-tab:not([hidden]),
+                                 [multiselected] + .tabbrowser-tab[hidden] ~ .tabbrowser-tab:not([hidden])
+                                ) .tab-stack::before,
+.tabbrowser-tab:not([hidden]):is(
+                                 [selected],
+                                 :hover,
+                                 [multiselected]
+                                ) .tab-stack::after
+{
+    opacity: 0 !important;
+} 
+
+.tabbrowser-tab[usercontextid] .tab-stack::before,
+.tabbrowser-tab[usercontextid] + .tabbrowser-tab:not([hidden]) .tab-stack::before,
+.tabbrowser-tab[usercontextid] + .tabbrowser-tab[hidden] ~ .tabbrowser-tab:not([hidden]) .tab-stack::before,
+.tabbrowser-tab[usercontextid] .tab-stack::after
 {
     opacity: 0 !important;
 }
