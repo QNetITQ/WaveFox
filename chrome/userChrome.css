@@ -1265,9 +1265,14 @@ spacer[part="overflow-end-indicator"]
 
 /* ---------------------------------------- Rounded Elements ---------------------------------------- */
 
-@supports -moz-bool-pref("userChrome.WaveFoxTabs-Enabled")   or
-          -moz-bool-pref("userChrome.AustralisTabs-Enabled") or
-          -moz-bool-pref("userChrome.ChromeTabs-Enabled")
+@supports -moz-bool-pref("userChrome.TabCorners.Option3.Enabled")  or
+          -moz-bool-pref("userChrome.TabCorners.Option4.Enabled")  or
+          -moz-bool-pref("userChrome.TabCorners.Option5.Enabled")  or
+          -moz-bool-pref("userChrome.TabCorners.Option11.Enabled") or
+          -moz-bool-pref("userChrome.TabCorners.Option12.Enabled") or
+          -moz-bool-pref("userChrome.TabCorners.Option13.Enabled") or
+          -moz-bool-pref("userChrome.TabCorners.Option15.Enabled") or
+          -moz-bool-pref("userChrome.TabCorners.Option16.Enabled")
 {
     #TabsToolbar :is(#tabs-newtab-button > .toolbarbutton-icon,
                      #new-tab-button > .toolbarbutton-icon,
@@ -1369,8 +1374,8 @@ spacer[part="overflow-end-indicator"]
         --urlbar-toolbar-height: var(--tab-min-height) !important;
     }
 
-    @supports -moz-bool-pref("userChrome.TabCorners.Option8.Enabled") or
-              -moz-bool-pref("userChrome.TabCorners.Option9.Enabled")
+    @supports -moz-bool-pref("userChrome.TabCorners.Option9.Enabled") or
+              -moz-bool-pref("userChrome.TabCorners.Option14.Enabled")
     {
         #nav-bar
         {
@@ -1412,10 +1417,9 @@ spacer[part="overflow-end-indicator"]
         grid-column: 1 / span 2 !important;
     }
 
-    /* -------------------- Proton / WaveFox / Australis / Chrome / Edge -------------------- */
-
-    @supports not (-moz-bool-pref("userChrome.TabCorners.Option8.Enabled") or
-                   -moz-bool-pref("userChrome.TabCorners.Option9.Enabled"))
+    /* ----------------------------------------------------------------------- */
+    @supports not (-moz-bool-pref("userChrome.TabCorners.Option9.Enabled") or
+                   -moz-bool-pref("userChrome.TabCorners.Option14.Enabled"))
     {
         #navigator-toolbox
         {
