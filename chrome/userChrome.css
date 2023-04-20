@@ -236,7 +236,7 @@
     }
 }
 
-/* ---------------------------------------- Rounded Corners (SVG) ---------------------------------------- */
+/* ---------------------------------------- Tab Corners (SVG) ---------------------------------------- */
 
 .tab-background::before,
 .tab-background::after
@@ -1159,6 +1159,63 @@ spacer[part="overflow-end-indicator"]
 }
 
 /* ---------------------------------------- Separators ---------------------------------------- */
+.tab-stack
+{
+    margin-left: 1px !important;
+}
+
+#tabbrowser-tabs:not([movingtab]) .tab-stack::before,
+#tabbrowser-tabs:not([movingtab]) .tabbrowser-tab:last-of-type .tab-stack::after
+{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 1px;
+    height: 50%;
+    border-left: 1px solid currentColor;
+    top: 25%;
+    opacity: var(--separators-color-saturation, 0);
+    box-sizing: border-box;
+}
+    
+.tab-stack::before
+{
+    right: 100%;
+    transform: translateX(calc(-1 * var(--tab-separator-offset, 0px)));
+}
+    
+.tab-stack::after
+{
+    left: 100%;
+    transform: translateX(var(--tab-separator-offset, 0px));
+}
+
+.tabbrowser-tab:is(
+        [selected],
+        [selected] + .tabbrowser-tab,
+        :hover,
+        :hover + .tabbrowser-tab,
+        [multiselected],
+        [multiselected] + .tabbrowser-tab) .tab-stack::before,
+.tabbrowser-tab:is(
+        [selected],
+        :hover,
+        [multiselected]) .tab-stack::after
+{
+    opacity: 0 !important;
+}
+
+#tabbrowser-tabs:first-child .tabbrowser-tab:first-of-type .tab-stack::before
+{
+    opacity: 0 !important;
+}
+
+#tabbrowser-tabs[overflow] .tabbrowser-tab[first-visible-unpinned-tab]:not([selected], :hover, [multiselected]) .tab-stack::before
+{
+    opacity: var(--separators-color-saturation, 0) !important;
+}
+       
+/*
 
 .tab-stack
 {
@@ -1213,6 +1270,8 @@ spacer[part="overflow-end-indicator"]
 {
     opacity: 0 !important;
 }
+       
+*/
 
 @supports -moz-bool-pref("userChrome.TabSeparatorsLowSaturation-Enabled")
 {
