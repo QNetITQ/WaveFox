@@ -600,7 +600,7 @@ and
     background-color: var(--toolbarbutton-hover-background) !important;
 }
 
-#firefox-view-button[attention]
+#TabsToolbar #firefox-view-button[attention]
 {
     --tab-attention-icon-color: currentColor !important;
     background-position: var(--tab-attention-indicator-position, center bottom calc(((var(--tab-min-height) - 16px) / 2 - 4px) / 2)) !important;
