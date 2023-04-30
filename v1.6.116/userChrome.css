@@ -602,21 +602,9 @@ spacer[part="overflow-end-indicator"]
 
 /* -------------------- Container Indicators -------------------- */
 
-.tab-context-line
-{
-    opacity: 0 !important;
-    margin: 0px !important;
-}
-
 .tabbrowser-tab[usercontextid] .tab-background
 {
     background-color: color-mix(in srgb, var(--identity-icon-color), transparent);
-}
-
-.tabbrowser-tab[usercontextid]:not(:hover, [multiselected]) .tab-background::before,
-.tabbrowser-tab[usercontextid]:not(:hover, [multiselected]) .tab-background::after
-{
-    fill: color-mix(in srgb, var(--identity-icon-color), transparent);
 }
 
 /* -------------------- Tab Loading Burst -------------------- */
@@ -1005,6 +993,8 @@ spacer[part="overflow-end-indicator"]
 
 /* ---------------------------------------- Tab Scroll Animation ---------------------------------------- */
        
+/*
+       
 #tabbrowser-tabs[overflow] .tabbrowser-tab:not([pinned])
 {
     box-sizing: content-box !important;
@@ -1035,6 +1025,8 @@ spacer[part="overflow-end-indicator"]
 {
     margin-right: 0px !important;
 }
+       
+*/
 
 /* ---------------------------------------- Rounded Elements ---------------------------------------- */
 
