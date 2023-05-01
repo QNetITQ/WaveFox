@@ -26,38 +26,6 @@
   ![изображение](https://user-images.githubusercontent.com/85301851/180253209-3e6965a9-641a-4ac2-bf3d-242ac8b3451c.png)
   </details>
 
-  ## v1.5.111
-  
-  ##### Proton
-  ![Proton](https://user-images.githubusercontent.com/85301851/180247798-3685fad6-cc4e-49ad-9b0e-7664354233ff.PNG)
-  - `userChrome.ProtonTabs-Enabled`
-  
-  ##### Photon
-  ![Photon](https://user-images.githubusercontent.com/85301851/180248812-8aecba52-77bd-4ee5-9e04-e6f07276dfa4.PNG)
-  - `userChrome.PhotonTabs-Enabled`
-
-  ##### WaveFox
-  ![WaveFox](https://user-images.githubusercontent.com/85301851/180248857-fee4dd92-6d6c-4c34-8615-bf69e740f2bd.PNG)
-  - `userChrome.WaveFoxTabs-Enabled`
-
-  ##### Chrome
-  ![Modern Chrome](https://user-images.githubusercontent.com/85301851/180248907-bdcf4ffc-fd4a-4923-b97d-a0b0b0cf5ee2.PNG)
-  - `userChrome.ChromeTabs-Enabled`
-
-  ##### Edge
-  ![Edge](https://user-images.githubusercontent.com/85301851/180248952-faa55898-0243-4cdf-ba6a-33513184398f.PNG)
-  - `userChrome.EdgeTabs-Enabled`
-
-  ##### Australis
-  ![Australis](https://user-images.githubusercontent.com/85301851/180248996-2f21d3b0-e33b-4feb-bbfc-2859df714344.PNG)
-  - `userChrome.AustralisTabs-Enabled`
-
-  ##### Chrome (Legacy)
-  ![Legacy Chrome](https://user-images.githubusercontent.com/85301851/180249039-350dd21d-51ee-432b-a79d-0c82861e7d43.PNG)
-  - `userChrome.LegacyChromeTabs-Enabled`
-  
-  ## v1.6.113 Beta
-  
   ##### Tab Corners Option 1
   ![1](https://user-images.githubusercontent.com/85301851/233114797-1495824d-9f46-474f-aeb2-a8dcc5608066.PNG)
   - `userChrome.TabCorners.Option1.Enabled`
@@ -139,7 +107,7 @@ Works only with the system theme.
 - `userChrome.Toolbar.Transparency.Low.Enabled`
 - `userChrome.Toolbar.Transparency.Medium.Enabled`
 - `userChrome.Toolbar.Transparency.High.Enabled`
-- `userChrome.Toolbar.Transparency.VeryHigh.Enabled` (Proton Tabs Only)
+- `userChrome.Toolbar.Transparency.VeryHigh.Enabled`
 
 ### Linux Transparency
 Requires Linux with transparency support. Tested on Linux Manjaro KDE + ForceBlur. Transparency is active for all modes, but does not work everywhere. This may change with future browser updates. Works only with the system theme.
