@@ -1,7 +1,7 @@
 # *WaveFox*
 
 ##### Minimum Requirements
-- Firefox 110
+- Firefox 113
 - Windows
 - MacOS
 - Linux
