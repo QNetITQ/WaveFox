@@ -723,14 +723,16 @@ spacer[part="overflow-end-indicator"]
 
 .tabbrowser-tab[visuallyselected] .tab-background
 {
-    background-color: var(--toolbar-bgcolor) !important;
     filter: var(--outer-drop-shadow, none);
+}
+
+.tabbrowser-tab:not([visuallyselected]) .tab-background
+{
+    background-image: none !important;
 }
 
 .tab-background
 {
-    position: relative !important;
-    background-image: none !important;
     box-shadow: none !important;
     opacity: 1 !important;
     border: none !important;
@@ -743,6 +745,8 @@ spacer[part="overflow-end-indicator"]
     mask-size: var(--tab-min-height) var(--tab-min-height), calc(100% - var(--tab-min-height) * 2) var(--tab-min-height), var(--tab-min-height) var(--tab-min-height);
     mask-position: left center, center center, right center;
     mask-repeat: no-repeat, no-repeat, no-repeat;
+
+    pointer-events: none !important;
 }
 
 .tabbrowser-tab:hover:not([visuallyselected],[multiselected]) .tab-background
