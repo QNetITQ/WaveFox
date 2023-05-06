@@ -521,12 +521,6 @@ and
         background-color: Field !important;
     }
 
-    :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) .tabbrowser-tab[visuallyselected] .tab-background::before,
-    :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) .tabbrowser-tab[visuallyselected] .tab-background::after
-    {
-        fill: Field !important;
-    }
-
     :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) #urlbar:not([focused], [open]) > #urlbar-background,
     :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) #searchbar:focus-within
     {
