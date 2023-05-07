@@ -8,7 +8,7 @@
        (-moz-platform: macos)
 {
 
-/* ---------------------------------------- Tab Corners ---------------------------------------- */
+/* ---------------------------------------- Tabs ---------------------------------------- */
 
 @supports -moz-bool-pref("userChrome.Tabs.Option1.Enabled")
 {
@@ -700,6 +700,26 @@ spacer[part="overflow-end-indicator"]
 
 /* ---------------------------------------- Tabs ---------------------------------------- */
 
+#tabbrowser-tabs:not([movingtab]) .tabbrowser-tab[visuallyselected] .tab-background
+{
+    background-attachment: scroll, fixed !important;
+    background-color: transparent !important;
+    background-image: linear-gradient(var(--toolbar-bgcolor), var(--toolbar-bgcolor)), var(--lwt-header-image, none) !important;
+    background-position: 0 0, right top !important;
+    background-repeat: repeat-x, no-repeat !important;
+    background-size: auto 100%, auto auto !important;
+}
+
+.tabbrowser-tab:not([visuallyselected]) .tab-background
+{
+    background-image: none !important;
+}
+
+#tabbrowser-tabs[movingtab] .tabbrowser-tab:is([visuallyselected], [multiselected]) .tab-background
+{
+    background-color: var(--focus-outline-color) !important;
+}
+
 .tabbrowser-tab
 {
     --tab-loading-fill: currentColor !important;
@@ -719,16 +739,7 @@ spacer[part="overflow-end-indicator"]
     color: var(--toolbar-color) !important;
     position: relative;
     z-index: 2;
-}
-
-.tabbrowser-tab[visuallyselected] .tab-background
-{
     filter: var(--outer-drop-shadow, none);
-}
-
-.tabbrowser-tab:not([visuallyselected]) .tab-background
-{
-    background-image: none !important;
 }
 
 .tab-background
@@ -740,16 +751,14 @@ spacer[part="overflow-end-indicator"]
     margin-block: var(--tab-bg-block-margin, 0px) !important;
     margin-inline: calc(-1 * (var(--tab-min-height) / 2)) !important;
     border-radius: 0px !important;
-
     mask-image: var(--left-svg), var(--center-svg), var(--right-svg);
     mask-size: var(--tab-min-height) var(--tab-min-height), calc(100% - var(--tab-min-height) * 2) var(--tab-min-height), var(--tab-min-height) var(--tab-min-height);
     mask-position: left center, center center, right center;
     mask-repeat: no-repeat, no-repeat, no-repeat;
-
     pointer-events: none !important;
 }
 
-.tabbrowser-tab:hover:not([visuallyselected],[multiselected]) .tab-background
+.tabbrowser-tab:hover:not([visuallyselected], [multiselected]) .tab-background
 {
     background-color: var(--toolbarbutton-hover-background) !important;
 }
