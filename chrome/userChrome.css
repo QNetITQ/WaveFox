@@ -8,7 +8,7 @@
        (-moz-platform: macos)
 {
 
-/* ---------------------------------------- Tabs ---------------------------------------- */
+/* ---------------------------------------- Tabs (SVG) ---------------------------------------- */
 
 @supports -moz-bool-pref("userChrome.Tabs.Option1.Enabled")
 {
@@ -700,26 +700,6 @@ spacer[part="overflow-end-indicator"]
 
 /* ---------------------------------------- Tabs ---------------------------------------- */
 
-#tabbrowser-tabs:not([movingtab]) .tabbrowser-tab[visuallyselected] .tab-background
-{
-    background-attachment: scroll, fixed !important;
-    background-color: transparent !important;
-    background-image: linear-gradient(var(--toolbar-bgcolor), var(--toolbar-bgcolor)), var(--lwt-header-image, none) !important;
-    background-position: 0 0, right top !important;
-    background-repeat: repeat-x, no-repeat !important;
-    background-size: auto 100%, auto auto !important;
-}
-
-.tabbrowser-tab:not([visuallyselected]) .tab-background
-{
-    background-image: none !important;
-}
-
-#tabbrowser-tabs[movingtab] .tabbrowser-tab:is([visuallyselected], [multiselected]) .tab-background
-{
-    background-color: var(--focus-outline-color) !important;
-}
-
 .tabbrowser-tab
 {
     --tab-loading-fill: currentColor !important;
@@ -732,7 +712,7 @@ spacer[part="overflow-end-indicator"]
     clip-path: inset(var(--tab-inset-clip-path)) !important;
     padding-inline: var(--tab-inline-padding, 0px) !important;
 }
-       
+
 .tabbrowser-tab[visuallyselected]
 {
     --tab-loading-fill: var(--toolbar-field-focus-border-color) !important;
@@ -744,6 +724,36 @@ spacer[part="overflow-end-indicator"]
 
 .tab-background
 {
+    --gradient-background-image: linear-gradient(var(--toolbar-bgcolor), var(--toolbar-bgcolor));
+    --gradient-background-attachment: scroll;
+    --gradient-background-size: auto 100%;
+    --gradient-background-position: 0 0;
+    --gradient-background-repeat: repeat-x;
+
+    --amo-background-image-1: var(--lwt-header-image, none);
+    --amo-background-attachment-1: fixed;
+    --amo-background-size-1: auto auto;
+    --amo-background-position-1: right top;
+    --amo-background-repeat-1: no-repeat;
+
+    --amo-background-image-2: var(--lwt-additional-images, none);
+    --amo-background-attachment-2: fixed, fixed, fixed;
+    --amo-background-size-2: auto auto, auto auto, auto auto;
+    --amo-background-position-2: var(--lwt-background-alignment);
+    --amo-background-repeat-2: var(--lwt-background-tiling);
+
+    --svg-mask-image: var(--left-svg), var(--center-svg), var(--right-svg);
+    --svg-mask-origin: border-box;
+    --svg-mask-size: auto 100%, calc(100% - var(--tab-min-height) * 2) 100%, auto 100%;
+    --svg-mask-position: left center, center center, right center;
+    --svg-mask-repeat: no-repeat, no-repeat, no-repeat;
+
+    mask-image: var(--svg-mask-image);
+    mask-origin: var(--svg-mask-origin);
+    mask-size: var(--svg-mask-size);
+    mask-position: var(--svg-mask-position);
+    mask-repeat: var(--svg-mask-repeat);
+    
     box-shadow: none !important;
     opacity: 1 !important;
     border: none !important;
@@ -751,11 +761,27 @@ spacer[part="overflow-end-indicator"]
     margin-block: var(--tab-bg-block-margin, 0px) !important;
     margin-inline: calc(-1 * (var(--tab-min-height) / 2)) !important;
     border-radius: 0px !important;
-    mask-image: var(--left-svg), var(--center-svg), var(--right-svg);
-    mask-size: var(--tab-min-height) var(--tab-min-height), calc(100% - var(--tab-min-height) * 2) var(--tab-min-height), var(--tab-min-height) var(--tab-min-height);
-    mask-position: left center, center center, right center;
-    mask-repeat: no-repeat, no-repeat, no-repeat;
     pointer-events: none !important;
+}
+
+#tabbrowser-tabs:not([movingtab]) .tabbrowser-tab[visuallyselected] .tab-background
+{
+    background-image: var(--gradient-background-image), var(--amo-background-image-1), var(--amo-background-image-2) !important;
+    background-attachment: var(--gradient-background-attachment), var(--amo-background-attachment-1), var(--amo-background-attachment-2) !important;
+    background-size: var(--gradient-background-size), var(--amo-background-size-1), var(--amo-background-size-2) !important;
+    background-position: var(--gradient-background-position), var(--amo-background-position-1), var(--amo-background-position-2) !important;
+    background-repeat: var(--gradient-background-repeat), var(--amo-background-repeat-1), var(--amo-background-repeat-2) !important;
+    background-color: transparent !important;
+}
+
+.tabbrowser-tab:not([visuallyselected]) .tab-background
+{
+    background-image: none !important;
+}
+
+#tabbrowser-tabs[movingtab] .tabbrowser-tab:is([visuallyselected], [multiselected]) .tab-background
+{
+    background-color: var(--focus-outline-color) !important;
 }
 
 .tabbrowser-tab:hover:not([visuallyselected], [multiselected]) .tab-background
@@ -800,7 +826,7 @@ spacer[part="overflow-end-indicator"]
 
 .tabbrowser-tab[usercontextid] .tab-background
 {
-    background-color: color-mix(in srgb, var(--identity-icon-color), transparent);
+    background-color: color-mix(in srgb, var(--identity-icon-color) 25%, transparent);
 }
 
 /* -------------------- Tab Icon Indicators -------------------- */
