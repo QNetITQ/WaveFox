@@ -1457,10 +1457,7 @@ spacer[part="overflow-end-indicator"]
         --tab-inset-clip-path: 0px calc(-1 * var(--tab-first-last-inline-margin));
     }
 
-    /* ---------- Rounded Corners (SVG) ---------- */
-
-    .tab-background::before,
-    .tab-background::after
+    .tab-background
     {
         transform: rotateX(180deg);
     }
