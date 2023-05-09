@@ -1301,8 +1301,8 @@ spacer[part="overflow-end-indicator"]
         --urlbar-toolbar-height: var(--tab-min-height) !important;
     }
 
-    @supports -moz-bool-pref("userChrome.TabCorners.Option9.Enabled") or
-              -moz-bool-pref("userChrome.TabCorners.Option14.Enabled")
+    @supports -moz-bool-pref("userChrome.Tabs.Option6.Enabled") or
+              -moz-bool-pref("userChrome.Tabs.Option10.Enabled")
     {
         #nav-bar
         {
@@ -1345,8 +1345,8 @@ spacer[part="overflow-end-indicator"]
     }
 
     /* ----------------------------------------------------------------------- */
-    @supports not (-moz-bool-pref("userChrome.TabCorners.Option9.Enabled") or
-                   -moz-bool-pref("userChrome.TabCorners.Option14.Enabled"))
+    @supports not (-moz-bool-pref("userChrome.Tabs.Option6.Enabled") or
+                   -moz-bool-pref("userChrome.Tabs.Option10.Enabled"))
     {
         #navigator-toolbox
         {
@@ -1356,14 +1356,11 @@ spacer[part="overflow-end-indicator"]
         /* -------------------- Tab Bar -------------------- */
 
         @supports not (
-                       -moz-bool-pref("userChrome.TabCorners.Option1.Enabled") or
-                       -moz-bool-pref("userChrome.TabCorners.Option2.Enabled") or
-                       -moz-bool-pref("userChrome.TabCorners.Option3.Enabled") or
-                       -moz-bool-pref("userChrome.TabCorners.Option4.Enabled") or
-                       -moz-bool-pref("userChrome.TabCorners.Option5.Enabled") or
-                       -moz-bool-pref("userChrome.TabCorners.Option6.Enabled") or
-                       -moz-bool-pref("userChrome.TabCorners.Option7.Enabled") or
-                       -moz-bool-pref("userChrome.TabCorners.Option8.Enabled")
+                       -moz-bool-pref("userChrome.Tabs.Option1.Enabled") or
+                       -moz-bool-pref("userChrome.Tabs.Option2.Enabled") or
+                       -moz-bool-pref("userChrome.Tabs.Option3.Enabled") or
+                       -moz-bool-pref("userChrome.Tabs.Option4.Enabled") or
+                       -moz-bool-pref("userChrome.Tabs.Option5.Enabled")
                       )
         {
             :root
