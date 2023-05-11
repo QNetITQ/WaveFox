@@ -61,13 +61,17 @@
             opacity: 1 !important;
             }
 			.titlebar-button>.toolbarbutton-icon {
-				margin-top: -14px !important;
-				margin-right: 2px !important;
+				margin-top: 1px !important;
+				margin-bottom: 1px !important;
+				margin-right: 1px !important;
 				opacity: 0 !important;
 			}
 			.titlebar-close:hover>.toolbarbutton-icon {
 				opacity: 1 !important;
 			}
+			.titlebar-close:hover {
+				background-color: hsl(5, 75%, 44%) !important 
+}
         }
     }
 
