@@ -522,7 +522,7 @@ and
     }
 
     :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) #urlbar:not([focused], [open]) > #urlbar-background,
-    :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) #searchbar:focus-within
+    :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) #searchbar:not(:focus-within)
     {
         box-shadow: var(--outer-box-shadow, none) !important;
     }
