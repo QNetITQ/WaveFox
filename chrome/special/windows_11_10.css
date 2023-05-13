@@ -51,27 +51,38 @@
                 background-color: transparent !important;
             }
 
-            :root[tabsintitlebar]:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not([sizemode="fullscreen"]) .titlebar-buttonbox:not(:hover, :hover:active)
+            /* System window control buttons */
+
+            :root[tabsintitlebar]:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not([sizemode="fullscreen"]) .titlebar-button:not(.titlebar-close:hover, .titlebar-close:hover:active) .toolbarbutton-icon
             {
                 opacity: 0 !important;
             }
-            
-            :root[tabsintitlebar]:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not([sizemode="fullscreen"]) .titlebar-buttonbox:is(:hover, :hover:active)
+
+            :root[tabsintitlebar]:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not([sizemode="fullscreen"]) .titlebar-button:not(.titlebar-close)
             {
-            opacity: 1 !important;
+                margin-inline-end: 1px !important;
             }
-			.titlebar-button>.toolbarbutton-icon {
-				margin-top: 1px !important;
-				margin-bottom: 1px !important;
-				margin-right: 1px !important;
-				opacity: 0 !important;
-			}
-			.titlebar-close:hover>.toolbarbutton-icon {
-				opacity: 1 !important;
-			}
-			.titlebar-close:hover {
-				background-color: hsl(5, 75%, 44%) !important 
-}
+
+            :root[sizemode="normal"][tabsintitlebar]:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not([sizemode="fullscreen"]) .titlebar-button
+            {
+                padding: 9px 16px !important;
+            }
+
+            :root[sizemode="normal"][tabsintitlebar]:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not([sizemode="fullscreen"]) .titlebar-close
+            {
+                padding-inline: 17px !important;
+            }
+
+            :root[sizemode="maximized"][tabsintitlebar]:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not([sizemode="fullscreen"]) .titlebar-button
+            {
+                padding: 8px 16px !important;
+            }
+
+            :root[sizemode="maximized"][tabsintitlebar]:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not([sizemode="fullscreen"]) .titlebar-close
+            {
+                margin-inline-end: 2px !important;
+                padding-inline: 17px !important;
+            }
         }
     }
 
