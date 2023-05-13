@@ -182,6 +182,10 @@
         --tab-inset-clip-path: -4px calc(-1 * var(--tab-first-last-inline-margin)) 0px;
         --tab-scroll-animation-inline-margin: calc(-1 * var(--tab-first-last-inline-margin));
         --tab-scroll-animation-inline-padding: var(--tab-first-last-inline-margin);
+        --tab-bg-block-margin: 0px;
+        --tab-inline-padding: 0px;
+        --tab-separator-offset: 0px;
+        --tab-attention-indicator-position: center bottom calc(((var(--tab-min-height) - 16px) / 2 - 4px) / 2);
     }
 }
 
@@ -476,7 +480,7 @@ and
 #TabsToolbar #firefox-view-button[attention]
 {
     --tab-attention-icon-color: currentColor !important;
-    background-position: var(--tab-attention-indicator-position, center bottom calc(((var(--tab-min-height) - 16px) / 2 - 4px) / 2)) !important;
+    background-position: var(--tab-attention-indicator-position) !important;
 }
 
 /* ---------------------------------------- Toolbar Transparency ---------------------------------------- */
@@ -710,7 +714,7 @@ spacer[part="overflow-end-indicator"]
     overflow-y: visible !important;
     overflow-clip-margin: var(--tab-overflow-clip-margin) !important;
     clip-path: inset(var(--tab-inset-clip-path)) !important;
-    padding-inline: var(--tab-inline-padding, 0px) !important;
+    padding-inline: var(--tab-inline-padding) !important;
 }
 
 .tabbrowser-tab[visuallyselected]
@@ -758,7 +762,7 @@ spacer[part="overflow-end-indicator"]
     opacity: 1 !important;
     border: none !important;
     outline: none !important;
-    margin-block: var(--tab-bg-block-margin, 0px) !important;
+    margin-block: var(--tab-bg-block-margin) !important;
     margin-inline: calc(-1 * (var(--tab-min-height) / 2)) !important;
     border-radius: 0px !important;
     pointer-events: none !important;
@@ -854,7 +858,7 @@ spacer[part="overflow-end-indicator"]
 .tabbrowser-tab:is([image], [pinned]) .tab-content[attention]:not([selected]),
 .tab-content[pinned][titlechanged]:not([selected])
 {
-    background-position: var(--tab-attention-indicator-position, center bottom calc(((var(--tab-min-height) - 16px) / 2 - 4px) / 2)) !important;
+    background-position: var(--tab-attention-indicator-position) !important;
 }
 
 /* -------------------- Media Icons -------------------- */
@@ -1054,13 +1058,13 @@ spacer[part="overflow-end-indicator"]
 .tab-stack::before
 {
     right: 100%;
-    transform: translateX(calc(-1 * var(--tab-separator-offset, 0px)));
+    transform: translateX(calc(-1 * var(--tab-separator-offset)));
 }
     
 .tab-stack::after
 {
     left: 100%;
-    transform: translateX(var(--tab-separator-offset, 0px));
+    transform: translateX(var(--tab-separator-offset));
 }
 
 .tabbrowser-tab:not([hidden]):is(
@@ -1130,13 +1134,13 @@ spacer[part="overflow-end-indicator"]
 .tab-stack::before
 {
     right: 100%;
-    transform: translateX(calc(-1 * var(--tab-separator-offset, 0px)));
+    transform: translateX(calc(-1 * var(--tab-separator-offset)));
 }
 
 .tab-stack::after
 {
     left: 100%;
-    transform: translateX(var(--tab-separator-offset, 0px));
+    transform: translateX(var(--tab-separator-offset));
 }
 
 #tabbrowser-tabs:is([movingtab], :first-child) .tab-stack::before,
