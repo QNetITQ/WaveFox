@@ -51,7 +51,57 @@
                 background-color: transparent !important;
             }
 
+            :root[sizemode="normal"][tabsintitlebar]:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) #navigator-toolbox
+            {
+                margin-block-start: 1px !important;
+            }
+
             /* System window control buttons */
+
+            @media (min-resolution: 1dppx)
+            {
+                .titlebar-buttonbox-container
+                {
+                    --titlebar-button-inline-padding: 16px;
+                    --titlebar-close-inline-padding: 17px;
+                }
+            }
+
+            @media (min-resolution: 1.25dppx)
+            {
+                .titlebar-buttonbox-container
+                {
+                    --titlebar-button-inline-padding: 17px;
+                    --titlebar-close-inline-padding: 18px;
+                }
+            }
+
+            @media (min-resolution: 1.5dppx)
+            {
+                .titlebar-buttonbox-container
+                {
+                    --titlebar-button-inline-padding: 17px;
+                    --titlebar-close-inline-padding: 17px;
+                }
+            }
+
+            @media (min-resolution: 1.75dppx)
+            {
+                .titlebar-buttonbox-container
+                {
+                    --titlebar-button-inline-padding: 17px;
+                    --titlebar-close-inline-padding: 17px;
+                }
+            }
+
+            @media (min-resolution: 2dppx)
+            {
+                .titlebar-buttonbox-container
+                {
+                    --titlebar-button-inline-padding: 16px;
+                    --titlebar-close-inline-padding: 17px;
+                }
+            }
 
             :root[tabsintitlebar]:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not([sizemode="fullscreen"]) .titlebar-button:not(.titlebar-close:hover, .titlebar-close:hover:active) .toolbarbutton-icon
             {
@@ -63,25 +113,25 @@
                 margin-inline-end: 1px !important;
             }
 
-            :root[sizemode="normal"][tabsintitlebar]:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not([sizemode="fullscreen"]) .titlebar-button
+            :root[sizemode="normal"][tabsintitlebar]:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) .titlebar-button
             {
-                padding: 9px 16px !important;
+                padding-inline: var(--titlebar-button-inline-padding) !important;
             }
 
-            :root[sizemode="normal"][tabsintitlebar]:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not([sizemode="fullscreen"]) .titlebar-close
+            :root[sizemode="normal"][tabsintitlebar]:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) .titlebar-close
             {
-                padding-inline: 17px !important;
+                padding-inline: var(--titlebar-close-inline-padding) !important;
             }
 
-            :root[sizemode="maximized"][tabsintitlebar]:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not([sizemode="fullscreen"]) .titlebar-button
+            :root[sizemode="maximized"][tabsintitlebar]:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) .titlebar-button
             {
-                padding: 8px 16px !important;
+                padding-inline: var(--titlebar-button-inline-padding) !important;
             }
 
-            :root[sizemode="maximized"][tabsintitlebar]:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not([sizemode="fullscreen"]) .titlebar-close
+            :root[sizemode="maximized"][tabsintitlebar]:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) .titlebar-close
             {
                 margin-inline-end: 2px !important;
-                padding-inline: 17px !important;
+                padding-inline: var(--titlebar-close-inline-padding) !important;
             }
         }
     }
