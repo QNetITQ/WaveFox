@@ -1311,7 +1311,7 @@ spacer[part="overflow-end-indicator"]
     #urlbar-container,
     #search-container
     {
-        min-width: auto !important;
+        flex-shrink: 1 !important;
         padding-block: 0px !important;
     }
 
