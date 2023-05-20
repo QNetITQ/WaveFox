@@ -708,7 +708,7 @@ spacer[part="overflow-end-indicator"]
 {
     --tab-loading-fill: currentColor !important;
     --tab-attention-icon-color: currentColor !important;
-    --tab-label-mask-size: 10px !important;
+    --tab-label-mask-size: 0px !important;
     color: inherit !important;
     overflow-x: clip !important;
     overflow-y: visible !important;
@@ -768,7 +768,7 @@ spacer[part="overflow-end-indicator"]
     pointer-events: none !important;
 }
 
-#tabbrowser-tabs:not([movingtab]) .tabbrowser-tab[visuallyselected] .tab-background
+.tabbrowser-tab[visuallyselected] .tab-background
 {
     background-image: var(--gradient-background-image), var(--amo-background-image-1), var(--amo-background-image-2) !important;
     background-attachment: var(--gradient-background-attachment), var(--amo-background-attachment-1), var(--amo-background-attachment-2) !important;
@@ -785,7 +785,7 @@ spacer[part="overflow-end-indicator"]
 
 #tabbrowser-tabs[movingtab] .tabbrowser-tab:is([visuallyselected], [multiselected]) .tab-background
 {
-    background-color: var(--focus-outline-color) !important;
+    --toolbar-bgcolor: var(--focus-outline-color);
 }
 
 .tabbrowser-tab:hover:not([visuallyselected], [multiselected]) .tab-background
@@ -804,16 +804,6 @@ spacer[part="overflow-end-indicator"]
     height: 16px !important;
     padding: 2px !important;
     margin: 0px !important;
-}
-
-.close-icon:hover
-{
-    background-color: var(--toolbarbutton-hover-background) !important;
-}
-
-.close-icon:hover:active
-{
-    background-color: var(--toolbarbutton-active-background) !important;
 }
 
 .tab-content
@@ -1058,6 +1048,7 @@ spacer[part="overflow-end-indicator"]
     top: 25%;
     opacity: var(--separators-color-saturation, 0);
     box-sizing: border-box;
+    pointer-events: none;
 }
     
 .tab-stack::before
@@ -1134,6 +1125,7 @@ spacer[part="overflow-end-indicator"]
     top: 25%;
     opacity: var(--separators-color-saturation, 0);
     box-sizing: border-box;
+    pointer-events: none;
 }
 
 .tab-stack::before
