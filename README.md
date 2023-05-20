@@ -12,9 +12,9 @@
 - Go to `about:config` and activate the keys below
 
   - `toolkit.legacyUserProfileCustomizations.stylesheets`
-  - `layout.css.color-mix.enabled`
+  - `layout.css.color-mix.enabled` (Not relevant for Firefox 113+)
   - `layout.css.has-selector.enabled`
-  - `svg.context-properties.content.enabled` (Activate this key if the menu icons / tab corners do not follow the general design color. Previously seen only on MacOS)
+  - `svg.context-properties.content.enabled` (Activate this key if the menu icons don't follow the general design color. Previously seen only on MacOS)
   
 - Specify the desired shape of the tabs.
 
