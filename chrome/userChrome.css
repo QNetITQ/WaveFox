@@ -786,6 +786,7 @@ spacer[part="overflow-end-indicator"]
 #tabbrowser-tabs[movingtab] .tabbrowser-tab:is([visuallyselected], [multiselected]) .tab-background
 {
     --toolbar-bgcolor: var(--focus-outline-color);
+    background-color: var(--focus-outline-color) !important;
 }
 
 .tabbrowser-tab:hover:not([visuallyselected], [multiselected]) .tab-background
