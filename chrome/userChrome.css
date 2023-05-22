@@ -897,7 +897,7 @@ spacer[part="overflow-end-indicator"]
 .tabbrowser-tab:is([pinned], [image], [sharing], [pictureinpicture]):is([soundplaying], [muted], [activemedia-blocked]):not([busy], [crashed]) .tab-icon-stack > :not(.tab-icon-overlay)
 {
     mask-image: url("special/Additional_Elements/Media.svg");
-    mask-size: 100% 100%;
+    mask-size: 16px 16px;
 }
 
 /* ---------- Picture-In-Picture ---------- */
