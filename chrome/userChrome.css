@@ -1029,8 +1029,7 @@ spacer[part="overflow-end-indicator"]
     margin-left: 1px !important;
 }
 
-#tabbrowser-tabs:not([movingtab]) .tab-stack::before,
-#tabbrowser-tabs:not([movingtab]) .tabbrowser-tab:last-of-type .tab-stack::after
+#tabbrowser-tabs:not([movingtab]) .tab-stack::before
 {
     content: "";
     display: block;
@@ -1049,12 +1048,6 @@ spacer[part="overflow-end-indicator"]
     right: 100%;
     transform: translateX(calc(-1 * var(--tab-separator-offset)));
 }
-    
-.tab-stack::after
-{
-    left: 100%;
-    transform: translateX(var(--tab-separator-offset));
-}
 
 .tabbrowser-tab:not([hidden]):is(
                                  [selected],
@@ -1066,34 +1059,30 @@ spacer[part="overflow-end-indicator"]
                                  [multiselected],
                                  [multiselected] + .tabbrowser-tab:not([hidden]),
                                  [multiselected] + .tabbrowser-tab[hidden] ~ .tabbrowser-tab:not([hidden])
-                                ) .tab-stack::before,
-.tabbrowser-tab:not([hidden]):is(
-                                 [selected],
-                                 :hover,
-                                 [multiselected]
-                                ) .tab-stack::after
+                                ) .tab-stack::before
 {
     opacity: 0 !important;
 } 
 
 .tabbrowser-tab[usercontextid] .tab-stack::before,
 .tabbrowser-tab[usercontextid] + .tabbrowser-tab:not([hidden]) .tab-stack::before,
-.tabbrowser-tab[usercontextid] + .tabbrowser-tab[hidden] ~ .tabbrowser-tab:not([hidden]) .tab-stack::before,
-.tabbrowser-tab[usercontextid] .tab-stack::after
+.tabbrowser-tab[usercontextid] + .tabbrowser-tab[hidden] ~ .tabbrowser-tab:not([hidden]) .tab-stack::before
 {
     opacity: 0 !important;
 }
 
-#tabbrowser-tabs:first-child .tabbrowser-tab:first-of-type .tab-stack::before
+.tabbrowser-tab:not([hidden]):first-of-type .tab-stack::before,
+.tabbrowser-tab[hidden]:first-of-type + .tabbrowser-tab:not([hidden]) .tab-stack::before,
+.tabbrowser-tab[hidden]:first-of-type + .tabbrowser-tab[hidden] ~ .tabbrowser-tab:not([hidden]) .tab-stack::before
 {
     opacity: 0 !important;
 }
 
-#tabbrowser-tabs[overflow] .tabbrowser-tab[first-visible-unpinned-tab]:not([selected], :hover, [multiselected]) .tab-stack::before
+#tabbrowser-tabs[overflow] .tabbrowser-tab[first-visible-unpinned-tab] .tab-stack::before
 {
-    opacity: var(--separators-color-saturation, 0) !important;
+    opacity: 0 !important;
 }
-       
+
 /*
 
 .tab-stack
