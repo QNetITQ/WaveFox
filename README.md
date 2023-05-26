@@ -12,7 +12,6 @@
 - Go to `about:config` and activate the keys below
 
   - `toolkit.legacyUserProfileCustomizations.stylesheets`
-  - `layout.css.color-mix.enabled` (Not relevant for Firefox 113+)
   - `layout.css.has-selector.enabled`
   - `svg.context-properties.content.enabled` (Activate this key if the menu icons don't follow the general design color. Previously seen only on MacOS)
   
@@ -25,8 +24,6 @@
   ![изображение](https://user-images.githubusercontent.com/85301851/180253017-22325fad-2f53-47f5-b409-618ca7fe6084.png)
   ![изображение](https://user-images.githubusercontent.com/85301851/180253209-3e6965a9-641a-4ac2-bf3d-242ac8b3451c.png)
   </details>
-
-  ### v1.6.114 Beta
   
   ##### Tabs (Option 1)
   ![1](https://user-images.githubusercontent.com/85301851/233114797-1495824d-9f46-474f-aeb2-a8dcc5608066.PNG)
@@ -75,72 +72,6 @@
   ##### Tabs (Option 12)
   ![16](https://user-images.githubusercontent.com/85301851/233115285-feb26903-ab9f-4e38-b28a-7207b0459ebe.PNG)
   - `userChrome.Tabs.Option12.Enabled`
-
-  ### v1.6.113
-
-  ##### Tab Corners Option 1
-  ![1](https://user-images.githubusercontent.com/85301851/233114797-1495824d-9f46-474f-aeb2-a8dcc5608066.PNG)
-  - `userChrome.TabCorners.Option1.Enabled`
-  
-  ##### Tab Corners Option 2
-  ![2](https://user-images.githubusercontent.com/85301851/233114845-1904b615-7c6b-43c4-9422-ae6b2ed6e3b1.PNG)
-  - `userChrome.TabCorners.Option2.Enabled`
-  
-  ##### Tab Corners Option 3
-  ![3](https://user-images.githubusercontent.com/85301851/233114878-baae0abb-2779-453a-9a2f-30e6fd015952.PNG)
-  - `userChrome.TabCorners.Option3.Enabled`
-  
-  ##### Tab Corners Option 4
-  ![4](https://user-images.githubusercontent.com/85301851/233114921-b386502c-2b73-496b-9536-5350227ae78b.PNG)
-  - `userChrome.TabCorners.Option4.Enabled`
-  
-  ##### Tab Corners Option 5
-  ![5](https://user-images.githubusercontent.com/85301851/233114950-68595ae9-27dc-4384-8f71-61ae873b1a3b.PNG)
-  - `userChrome.TabCorners.Option5.Enabled`
-  
-  ##### Tab Corners Option 6
-  ![6](https://user-images.githubusercontent.com/85301851/233114977-6fc1976d-d8c9-4155-a1ce-c7176b1fac7a.PNG)
-  - `userChrome.TabCorners.Option6.Enabled`
-  
-  ##### Tab Corners Option 7
-  ![7](https://user-images.githubusercontent.com/85301851/233115010-ee5d1c70-a52a-40dd-9650-8b3a68265519.PNG)
-  - `userChrome.TabCorners.Option7.Enabled`
-  
-  ##### Tab Corners Option 8
-  ![8](https://user-images.githubusercontent.com/85301851/233115034-a8f8d3e0-e167-4c78-b8a0-7461f5121a94.PNG)
-  - `userChrome.TabCorners.Option8.Enabled`
-  
-  ##### Tab Corners Option 9
-  ![9](https://user-images.githubusercontent.com/85301851/233115069-913b318e-5503-4d54-916e-e3cbd3626c96.PNG)
-  - `userChrome.TabCorners.Option9.Enabled`
-  
-  ##### Tab Corners Option 10
-  ![10](https://user-images.githubusercontent.com/85301851/233115104-2a4e527f-15cf-47f9-9a8f-60159a5bb570.PNG)
-  - `userChrome.TabCorners.Option10.Enabled`
-  
-  ##### Tab Corners Option 11
-  ![11](https://user-images.githubusercontent.com/85301851/233115136-eba3fb57-1591-4318-86ee-ecdf673609b7.PNG)
-  - `userChrome.TabCorners.Option11.Enabled`
-  
-  ##### Tab Corners Option 12
-  ![12](https://user-images.githubusercontent.com/85301851/233115162-1cd61c70-5826-4712-8692-603b04147660.PNG)
-  - `userChrome.TabCorners.Option12.Enabled`
-  
-  ##### Tab Corners Option 13
-  ![13](https://user-images.githubusercontent.com/85301851/233115198-e839b15f-2a27-4ea1-87a1-2c22b284ffc9.PNG)
-  - `userChrome.TabCorners.Option13.Enabled`
-  
-  ##### Tab Corners Option 14
-  ![14](https://user-images.githubusercontent.com/85301851/233115224-fbada5b2-35f8-41bb-81c7-52552e62d829.PNG)
-  - `userChrome.TabCorners.Option14.Enabled`
-  
-  ##### Tab Corners Option 15
-  ![15](https://user-images.githubusercontent.com/85301851/233115260-c6cb7c9a-192c-4a20-9327-392c6afae755.PNG)
-  - `userChrome.TabCorners.Option15.Enabled`
-  
-  ##### Tab Corners Option 16
-  ![16](https://user-images.githubusercontent.com/85301851/233115285-feb26903-ab9f-4e38-b28a-7207b0459ebe.PNG)
-  - `userChrome.TabCorners.Option16.Enabled`
 
 ## Optional
 
@@ -244,7 +175,7 @@ By default context menus follow the selected interface density, but it is possib
 - `userChrome.PinnedTabsWidthLowIncrease-Enabled`
 - `userChrome.PinnedTabsWidthHighIncrease-Enabled`
 
-### Selected Tab Indicator (v1.6.114 Beta)
+### Selected Tab Indicator
 ![изображение](https://github.com/QNetITQ/WaveFox/assets/85301851/c5b7c4b8-81d2-4ca2-9944-574af7e88f1d)
 
 - `userChrome.Tabs.SelectedTabIndicator.Enabled`
