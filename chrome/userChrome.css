@@ -1513,6 +1513,7 @@ spacer[part="overflow-end-indicator"]
         --pause: url("./icons/pause_20_regular.svg");
         --search: url("./icons/search_20_regular.svg");
         --tab-desktop-image: url("./icons/tab_desktop_image_20_regular.svg");
+        --translate: url("./icons/translate_20_regular.svg");
     }
 }
 
@@ -1566,6 +1567,7 @@ spacer[part="overflow-end-indicator"]
         --pause: url("./icons/pause_20_filled.svg");
         --search: url("./icons/search_20_filled.svg");
         --tab-desktop-image: url("./icons/tab_desktop_image_20_filled.svg");
+        --translate: url("./icons/translate_20_filled.svg");
     }
 }
 
@@ -1589,6 +1591,7 @@ spacer[part="overflow-end-indicator"]
         #appMenu-print-button2,
         #appMenu-save-file-button2,
         #appMenu-find-button2,
+        #appMenu-translate-button,
         #appMenu-settings-button,
         #appMenu-help-button2,
 
@@ -1702,6 +1705,11 @@ spacer[part="overflow-end-indicator"]
     #appMenu-find-button2::before
     {
         background-image: var(--document-search);
+    }
+
+    #appMenu-translate-button::before
+    {
+        background-image: var(--translate);
     }
 
     #appMenu-settings-button::before
