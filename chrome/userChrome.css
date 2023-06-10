@@ -1041,63 +1041,83 @@ spacer[part="overflow-end-indicator"]
 
 /* ---------------------------------------- Separators ---------------------------------------- */
 
-.tab-stack
+@supports -moz-bool-pref("userChrome.TabSeparatorsLowSaturation-Enabled")    or
+          -moz-bool-pref("userChrome.TabSeparatorsMediumSaturation-Enabled")
 {
-    margin-left: 1px !important;
-}
+    .tab-stack
+    {
+        margin-left: 1px !important;
+    }
 
-#tabbrowser-tabs:not([movingtab]) .tab-stack::before
-{
-    content: "";
-    display: block;
-    position: absolute;
-    width: 1px;
-    height: 50%;
-    border-left: 1px solid currentColor;
-    top: 25%;
-    opacity: var(--separators-color-saturation, 0);
-    box-sizing: border-box;
-    pointer-events: none;
-}
-    
-.tab-stack::before
-{
-    right: 100%;
-    transform: translateX(calc(-1 * var(--tab-separator-offset)));
-}
+    #tabbrowser-tabs:not([movingtab]) .tab-stack::before
+    {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 1px;
+        height: 50%;
+        border-left: 1px solid currentColor;
+        top: 25%;
+        opacity: var(--separators-color-saturation);
+        box-sizing: border-box;
+        pointer-events: none;
+    }
 
-.tabbrowser-tab:not([hidden]):is(
-                                 [selected],
-                                 [selected] + .tabbrowser-tab:not([hidden]),
-                                 [selected] + .tabbrowser-tab[hidden] ~ .tabbrowser-tab:not([hidden]),
-                                 :hover,
-                                 :hover + .tabbrowser-tab:not([hidden]),
-                                 :hover + .tabbrowser-tab[hidden] ~ .tabbrowser-tab:not([hidden]),
-                                 [multiselected],
-                                 [multiselected] + .tabbrowser-tab:not([hidden]),
-                                 [multiselected] + .tabbrowser-tab[hidden] ~ .tabbrowser-tab:not([hidden])
-                                ) .tab-stack::before
-{
-    opacity: 0 !important;
-} 
+    .tab-stack::before
+    {
+        right: 100%;
+        transform: translateX(calc(-1 * var(--tab-separator-offset)));
+    }
 
-.tabbrowser-tab[usercontextid] .tab-stack::before,
-.tabbrowser-tab[usercontextid] + .tabbrowser-tab:not([hidden]) .tab-stack::before,
-.tabbrowser-tab[usercontextid] + .tabbrowser-tab[hidden] ~ .tabbrowser-tab:not([hidden]) .tab-stack::before
-{
-    opacity: 0 !important;
-}
+    .tabbrowser-tab:not([hidden]):is(
+                                     [selected],
+                                     [selected] + .tabbrowser-tab:not([hidden]),
+                                     [selected] + .tabbrowser-tab[hidden] ~ .tabbrowser-tab:not([hidden]),
+                                     :hover,
+                                     :hover + .tabbrowser-tab:not([hidden]),
+                                     :hover + .tabbrowser-tab[hidden] ~ .tabbrowser-tab:not([hidden]),
+                                     [multiselected],
+                                     [multiselected] + .tabbrowser-tab:not([hidden]),
+                                     [multiselected] + .tabbrowser-tab[hidden] ~ .tabbrowser-tab:not([hidden])
+                                    ) .tab-stack::before
+    {
+        opacity: 0 !important;
+    }
 
-.tabbrowser-tab:not([hidden]):first-of-type .tab-stack::before,
-.tabbrowser-tab[hidden]:first-of-type + .tabbrowser-tab:not([hidden]) .tab-stack::before,
-.tabbrowser-tab[hidden]:first-of-type + .tabbrowser-tab[hidden] ~ .tabbrowser-tab:not([hidden]) .tab-stack::before
-{
-    opacity: 0 !important;
-}
+    .tabbrowser-tab[usercontextid] .tab-stack::before,
+    .tabbrowser-tab[usercontextid] + .tabbrowser-tab:not([hidden]) .tab-stack::before,
+    .tabbrowser-tab[usercontextid] + .tabbrowser-tab[hidden] ~ .tabbrowser-tab:not([hidden]) .tab-stack::before
+    {
+        opacity: 0 !important;
+    }
 
-#tabbrowser-tabs[overflow] .tabbrowser-tab[first-visible-unpinned-tab] .tab-stack::before
-{
-    opacity: 0 !important;
+    .tabbrowser-tab:not([hidden]):first-of-type .tab-stack::before,
+    .tabbrowser-tab[hidden]:first-of-type + .tabbrowser-tab:not([hidden]) .tab-stack::before,
+    .tabbrowser-tab[hidden]:first-of-type + .tabbrowser-tab[hidden] ~ .tabbrowser-tab:not([hidden]) .tab-stack::before
+    {
+        opacity: 0 !important;
+    }
+
+    #tabbrowser-tabs[overflow] .tabbrowser-tab[first-visible-unpinned-tab] .tab-stack::before
+    {
+        opacity: 0 !important;
+    }
+
+    @supports -moz-bool-pref("userChrome.TabSeparatorsLowSaturation-Enabled")
+    {
+        :root
+        {
+            --separators-color-saturation: 0.25;
+        }
+    }
+
+    @supports -moz-bool-pref("userChrome.TabSeparatorsMediumSaturation-Enabled")
+    {
+        :root
+        {
+            --separators-color-saturation: 0.5;
+        }
+    }
 }
 
 /*
@@ -1158,22 +1178,6 @@ spacer[part="overflow-end-indicator"]
 }
        
 */
-
-@supports -moz-bool-pref("userChrome.TabSeparatorsLowSaturation-Enabled")
-{
-    :root
-    {
-        --separators-color-saturation: 0.25;
-    }
-}
-
-@supports -moz-bool-pref("userChrome.TabSeparatorsMediumSaturation-Enabled")
-{
-    :root
-    {
-        --separators-color-saturation: 0.5;
-    }
-}
 
 /* ---------------------------------------- Tab Scroll Animation ---------------------------------------- */
        
