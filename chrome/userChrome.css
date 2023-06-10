@@ -824,6 +824,23 @@ spacer[part="overflow-end-indicator"]
     }
 }
 
+/* -------------------- Tab Counter -------------------- */
+
+#tabbrowser-tabs
+{
+    counter-reset: TabCounter;
+}
+
+.tabbrowser-tab
+{
+    counter-increment: TabCounter;
+}
+
+#tabbrowser-tabs ~ #alltabs-button::after
+{
+    content: counter(TabCounter);
+}
+
 /* -------------------- Container Indicators -------------------- */
 
 .tab-context-line
