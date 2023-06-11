@@ -1018,16 +1018,14 @@ spacer[part="overflow-end-indicator"]
     margin-right: calc(var(--toolbar-start-end-padding) - var(--toolbarbutton-outer-padding)) !important;
 }
 
-#tabbrowser-tabs:not([overflow]) .tabbrowser-tab[first-visible-unpinned-tab]
+#tabbrowser-tabs:not([overflow]) .tabbrowser-tab:nth-child(1 of :not([pinned], [hidden]))
 {
     margin-left: 0px !important;
 }
 
-#tabbrowser-tabs:not([overflow]) .tabbrowser-tab:not([hidden]):first-of-type,
-#tabbrowser-tabs:not([overflow]) .tabbrowser-tab[hidden]:first-of-type + .tabbrowser-tab:not([hidden]),
-#tabbrowser-tabs:not([overflow]) .tabbrowser-tab[hidden]:first-of-type ~ .tabbrowser-tab[hidden] + .tabbrowser-tab:not([hidden]),
-#tabbrowser-tabs[positionpinnedtabs],
-#tabbrowser-tabs[overflow] .tabbrowser-tab[first-visible-unpinned-tab]
+#tabbrowser-tabs:not([overflow]) .tabbrowser-tab:nth-child(1 of :not([hidden])),
+#tabbrowser-tabs[overflow] .tabbrowser-tab:nth-child(1 of :not([pinned], [hidden])),
+#tabbrowser-tabs[overflow][haspinnedtabs]
 {
     margin-left: var(--tab-first-last-inline-margin) !important;
 }
@@ -1098,7 +1096,7 @@ spacer[part="overflow-end-indicator"]
         opacity: 0 !important;
     }
 
-    #tabbrowser-tabs[overflow] .tabbrowser-tab[first-visible-unpinned-tab] .tab-stack::before
+    #tabbrowser-tabs[overflow] .tabbrowser-tab:nth-child(1 of :not([pinned], [hidden])) .tab-stack::before
     {
         opacity: 0 !important;
     }
@@ -1200,7 +1198,7 @@ spacer[part="overflow-end-indicator"]
     pointer-events: auto !important;
 }
 
-#tabbrowser-tabs[overflow]:not([movingtab]) .tabbrowser-tab[first-visible-unpinned-tab]
+#tabbrowser-tabs[overflow]:not([movingtab]) .tabbrowser-tab:nth-child(1 of :not([pinned], [hidden]))
 {
     margin-left: 0px !important;
 }
