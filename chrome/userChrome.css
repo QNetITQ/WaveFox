@@ -1044,7 +1044,7 @@ spacer[part="overflow-end-indicator"]
 {
     .tab-stack
     {
-        margin-left: 1px !important;
+        margin-inline-start: 1px !important;
     }
 
     #tabbrowser-tabs:not([movingtab]) .tab-stack::before
@@ -1054,7 +1054,7 @@ spacer[part="overflow-end-indicator"]
         position: absolute;
         width: 1px;
         height: 50%;
-        border-left: 1px solid currentColor;
+        border-inline-start: 1px solid currentColor;
         top: 25%;
         opacity: var(--separators-color-saturation);
         box-sizing: border-box;
@@ -1063,7 +1063,7 @@ spacer[part="overflow-end-indicator"]
 
     .tab-stack::before
     {
-        right: 100%;
+        inset-inline-end: 100%;
         transform: translateX(calc(-1 * var(--tab-separator-offset)));
     }
 
