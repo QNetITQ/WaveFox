@@ -1009,32 +1009,32 @@ spacer[part="overflow-end-indicator"]
 #TabsToolbar-customization-target > :is(toolbarbutton, toolbaritem):first-child,
 #TabsToolbar-customization-target > toolbarpaletteitem:first-child > :is(toolbarbutton, toolbaritem)
 {
-    margin-left: calc(var(--toolbar-start-end-padding) - var(--toolbarbutton-outer-padding)) !important;
+    margin-inline-start: calc(var(--toolbar-start-end-padding) - var(--toolbarbutton-outer-padding)) !important;
 }
 
 #TabsToolbar-customization-target > :is(toolbarbutton, toolbaritem):last-child,
 #TabsToolbar-customization-target > toolbarpaletteitem:last-child > :is(toolbarbutton, toolbaritem)
 {
-    margin-right: calc(var(--toolbar-start-end-padding) - var(--toolbarbutton-outer-padding)) !important;
+    margin-inline-end: calc(var(--toolbar-start-end-padding) - var(--toolbarbutton-outer-padding)) !important;
 }
 
 #tabbrowser-tabs:not([overflow]) .tabbrowser-tab:nth-child(1 of :not([pinned], [hidden]))
 {
-    margin-left: 0px !important;
+    margin-inline-start: 0px !important;
 }
 
 #tabbrowser-tabs:not([overflow]) .tabbrowser-tab:nth-child(1 of :not([hidden])),
 #tabbrowser-tabs[overflow] .tabbrowser-tab:nth-child(1 of :not([pinned], [hidden])),
 #tabbrowser-tabs[overflow][haspinnedtabs]
 {
-    margin-left: var(--tab-first-last-inline-margin) !important;
+    margin-inline-start: var(--tab-first-last-inline-margin) !important;
 }
 
 .tabbrowser-tab:not([hidden]):last-of-type,
 .tabbrowser-tab:not([hidden]):has(+ .tabbrowser-tab[hidden]:last-of-type),
 .tabbrowser-tab:not([hidden]):has(+ .tabbrowser-tab[hidden] ~ .tabbrowser-tab[hidden]:last-of-type)
 {
-    margin-right: var(--tab-first-last-inline-margin) !important;
+    margin-inline-end: var(--tab-first-last-inline-margin) !important;
 }
 
 /* ---------------------------------------- Separators ---------------------------------------- */
@@ -1200,14 +1200,14 @@ spacer[part="overflow-end-indicator"]
 
 #tabbrowser-tabs[overflow]:not([movingtab]) .tabbrowser-tab:nth-child(1 of :not([pinned], [hidden]))
 {
-    margin-left: 0px !important;
+    margin-inline-start: 0px !important;
 }
 
 #tabbrowser-tabs[overflow]:not([movingtab]) .tabbrowser-tab:not([hidden]):last-of-type,
 #tabbrowser-tabs[overflow]:not([movingtab]) .tabbrowser-tab:not([hidden]):has(+ .tabbrowser-tab[hidden]:last-of-type),
 #tabbrowser-tabs[overflow]:not([movingtab]) .tabbrowser-tab:not([hidden]):has(+ .tabbrowser-tab[hidden] ~ .tabbrowser-tab[hidden]:last-of-type)
 {
-    margin-right: 0px !important;
+    margin-inline-end: 0px !important;
 }
 
 /* ---------------------------------------- Rounded Elements ---------------------------------------- */
