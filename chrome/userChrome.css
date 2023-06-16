@@ -1977,7 +1977,8 @@ spacer[part="overflow-end-indicator"]
         background-size: 20px;
         background-repeat: no-repeat;
         background-position: center;
-        margin: var(--align-menu-icons);
+        margin-block: -2px;
+        margin-inline: var(--align-menu-icons);
         fill: currentColor;
         -moz-context-properties: fill;
     }
