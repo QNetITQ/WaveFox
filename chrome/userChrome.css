@@ -917,6 +917,11 @@ spacer[part="overflow-end-indicator"]
     mask-size: 16px 16px;
 }
 
+:root:-moz-locale-dir(rtl) .tabbrowser-tab:is([pinned], [image], [sharing], [pictureinpicture]):is([soundplaying], [muted], [activemedia-blocked]):not([busy], [crashed]) .tab-icon-stack > :not(.tab-icon-overlay)
+{
+    mask-image: url("special/Additional_Elements/Media_rtl.svg");
+}
+
 /* ---------- Picture-In-Picture ---------- */
 
 .tabbrowser-tab[pictureinpicture]:not([busy], [crashed]) .tab-icon-stack::before
@@ -938,7 +943,7 @@ spacer[part="overflow-end-indicator"]
 {
     position: relative !important;
     padding: 2px !important;
-    left: 8px !important;
+    inset-inline-start: 8px !important;
     top: 8px !important;
     mask-image: none !important;
     box-sizing: border-box !important;
@@ -955,6 +960,16 @@ spacer[part="overflow-end-indicator"]
 {
     mask-image: url("special/Additional_Elements/PIP_Sound.svg");
     mask-size: 100% 100%;
+}
+
+:root:-moz-locale-dir(rtl) .tabbrowser-tab[pictureinpicture]:not([busy], [crashed]):not([soundplaying], [muted], [activemedia-blocked]) .tab-icon-stack::before
+{
+    mask-image: url("special/Additional_Elements/PIP_rtl.svg");
+}
+
+:root:-moz-locale-dir(rtl) .tabbrowser-tab[pictureinpicture]:not([busy], [crashed]):is([soundplaying], [muted], [activemedia-blocked]) .tab-icon-stack::before
+{
+    mask-image: url("special/Additional_Elements/PIP_Sound_rtl.svg");
 }
 
 /* -------------------- Tab Text -------------------- */
