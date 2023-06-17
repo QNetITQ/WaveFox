@@ -775,6 +775,11 @@ spacer[part="overflow-end-indicator"]
     background-image: none !important;
 }
 
+#tabbrowser-tabs[movingtab] .tabbrowser-tab:is([visuallyselected], [multiselected])
+{
+    color: rgb(0,0,0) !important;
+}
+
 #tabbrowser-tabs[movingtab] .tabbrowser-tab:is([visuallyselected], [multiselected]) .tab-background
 {
     --toolbar-bgcolor: var(--warning-icon-bgcolor);
@@ -801,7 +806,7 @@ spacer[part="overflow-end-indicator"]
 
 .tab-content
 {
-    padding: 0 calc((var(--tab-min-height) - 16px) / 2 + var(--pinned-tabs-width-offset, 0px)) !important;
+    padding-inline: calc((var(--tab-min-height) - 16px) / 2 + var(--pinned-tabs-width-offset, 0px)) !important;
 }
 
 .tabbrowser-tab[pending] .tab-content
@@ -937,6 +942,11 @@ spacer[part="overflow-end-indicator"]
     background-repeat: no-repeat;
     fill: currentColor;
     -moz-context-properties: fill;
+}
+
+:root:-moz-locale-dir(rtl) .tabbrowser-tab[pictureinpicture]:not([busy], [crashed]) .tab-icon-stack::before
+{
+    transform: rotateY(180deg);
 }
 
 .tabbrowser-tab[pictureinpicture]:not([busy], [crashed]) .tab-icon-stack > :not(.tab-icon-overlay)
