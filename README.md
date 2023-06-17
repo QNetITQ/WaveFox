@@ -183,8 +183,8 @@ By default context menus follow the selected interface density, but it is possib
 ### One Line
 ![Снимок](https://user-images.githubusercontent.com/85301851/181300272-d1ecfc93-898a-4eb3-80b9-9974fc471b45.PNG)
 
-- `userChrome.OneLine.TabBarFirst.Enabled` (For right-to-left languages it gives the opposite result)
-- `userChrome.OneLine.NavBarFirst.Enabled` (For right-to-left languages it gives the opposite result)
+- `userChrome.OneLine.TabBarFirst.Enabled`
+- `userChrome.OneLine.NavBarFirst.Enabled`
 - `browser.tabs.inTitlebar` (Enable this key if there are problems with window control buttons. Set the value to 0)
 
 Low values are more suitable for high resolution monitors.
