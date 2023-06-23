@@ -2097,76 +2097,46 @@ spacer[part="overflow-end-indicator"]
 
     /* ----- Urlbar Menu ----- */
 
-    menupopup.textbox-contextmenu:nth-child(3) > menuitem:nth-child(1)::before
+    #text-action-undo::before
     {
         background-image: var(--arrow-undo);
     }
 
-    menupopup.textbox-contextmenu:nth-child(3) > menuitem:nth-child(2)::before
+    #text-action-redo::before
     {
         background-image: var(--arrow-redo);
     }
 
-    menupopup.textbox-contextmenu:nth-child(3) > menuitem:nth-child(4)::before
+    #text-action-cut::before
     {
         background-image: var(--cut);
     }
 
-    menupopup.textbox-contextmenu:nth-child(3) > menuitem:nth-child(5)::before
+    #text-action-copy::before
     {
         background-image: var(--copy);
     }
 
-    menupopup.textbox-contextmenu:nth-child(3) > menuitem:nth-child(6)::before
+    #text-action-paste::before
     {
         background-image: var(--clipboard-paste);
     }
 
-    menupopup.textbox-contextmenu:nth-child(3) > menuitem:nth-child(7)::before
+    #paste-and-go::before
     {
         background-image: var(--clipboard-search);
     }
 
-    menupopup.textbox-contextmenu:nth-child(3) > menuitem:nth-child(8)::before
+    #text-action-delete::before
     {
         background-image: var(--delete);
     }
 
     /* ----- Searchbar Menu ----- */
 
-    menupopup.textbox-contextmenu:nth-child(4) > menuitem:nth-child(1)::before
-    {
-        background-image: var(--arrow-undo);
-    }
-
-    menupopup.textbox-contextmenu:nth-child(4) > menuitem:nth-child(2)::before
-    {
-        background-image: var(--arrow-redo);
-    }
-
-    menupopup.textbox-contextmenu:nth-child(4) > menuitem:nth-child(4)::before
-    {
-        background-image: var(--cut);
-    }
-
-    menupopup.textbox-contextmenu:nth-child(4) > menuitem:nth-child(5)::before
-    {
-        background-image: var(--copy);
-    }
-
-    menupopup.textbox-contextmenu:nth-child(4) > menuitem:nth-child(6)::before
-    {
-        background-image: var(--clipboard-paste);
-    }
-
-    menupopup.textbox-contextmenu:nth-child(4) > menuitem:nth-child(7)::before
+    #searchbar-paste-and-search::before
     {
         background-image: var(--clipboard-search);
-    }
-
-    menupopup.textbox-contextmenu:nth-child(4) > menuitem:nth-child(8)::before
-    {
-        background-image: var(--delete);
     }
 
     /* ----- PersonalToolbar Menu ----- */
