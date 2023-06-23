@@ -1892,23 +1892,17 @@ spacer[part="overflow-end-indicator"]
 
         /* ----- Urlbar Menu ----- */
 
-        menupopup.textbox-contextmenu:nth-child(3) > menuitem:nth-child(1),
-        menupopup.textbox-contextmenu:nth-child(3) > menuitem:nth-child(2),
-        menupopup.textbox-contextmenu:nth-child(3) > menuitem:nth-child(4),
-        menupopup.textbox-contextmenu:nth-child(3) > menuitem:nth-child(5),
-        menupopup.textbox-contextmenu:nth-child(3) > menuitem:nth-child(6),
-        menupopup.textbox-contextmenu:nth-child(3) > menuitem:nth-child(7),
-        menupopup.textbox-contextmenu:nth-child(3) > menuitem:nth-child(8),
+        #text-action-undo,
+        #text-action-redo,
+        #text-action-cut,
+        #text-action-copy,
+        #text-action-paste,
+        #paste-and-go,
+        #text-action-delete,
 
         /* ----- Searchbar Menu ----- */
 
-        menupopup.textbox-contextmenu:nth-child(4) > menuitem:nth-child(1),
-        menupopup.textbox-contextmenu:nth-child(4) > menuitem:nth-child(2),
-        menupopup.textbox-contextmenu:nth-child(4) > menuitem:nth-child(4),
-        menupopup.textbox-contextmenu:nth-child(4) > menuitem:nth-child(5),
-        menupopup.textbox-contextmenu:nth-child(4) > menuitem:nth-child(6),
-        menupopup.textbox-contextmenu:nth-child(4) > menuitem:nth-child(7),
-        menupopup.textbox-contextmenu:nth-child(4) > menuitem:nth-child(8),
+        #searchbar-paste-and-search,
 
         /* ----- PersonalToolbar Menu ----- */
 
