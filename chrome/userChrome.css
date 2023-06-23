@@ -1897,7 +1897,7 @@ spacer[part="overflow-end-indicator"]
         menupopup.textbox-contextmenu:nth-child(3) > menuitem:nth-child(4),
         menupopup.textbox-contextmenu:nth-child(3) > menuitem:nth-child(5),
         menupopup.textbox-contextmenu:nth-child(3) > menuitem:nth-child(7),
-        #paste-and-go,
+        menupopup.textbox-contextmenu:nth-child(3) > menuitem:nth-child(8),
         menupopup.textbox-contextmenu:nth-child(3) > menuitem:nth-child(9),
 
         /* ----- Searchbar Menu ----- */
@@ -1907,7 +1907,7 @@ spacer[part="overflow-end-indicator"]
         menupopup.textbox-contextmenu:nth-child(4) > menuitem:nth-child(4),
         menupopup.textbox-contextmenu:nth-child(4) > menuitem:nth-child(5),
         menupopup.textbox-contextmenu:nth-child(4) > menuitem:nth-child(6),
-        .searchbar-paste-and-search,
+        menupopup.textbox-contextmenu:nth-child(4) > menuitem:nth-child(7),
         menupopup.textbox-contextmenu:nth-child(4) > menuitem:nth-child(8),
 
         /* ----- PersonalToolbar Menu ----- */
@@ -2128,7 +2128,7 @@ spacer[part="overflow-end-indicator"]
         background-image: var(--clipboard-paste);
     }
 
-    #paste-and-go::before
+    menupopup.textbox-contextmenu:nth-child(3) > menuitem:nth-child(8)::before
     {
         background-image: var(--clipboard-search);
     }
@@ -2165,7 +2165,7 @@ spacer[part="overflow-end-indicator"]
         background-image: var(--clipboard-paste);
     }
 
-    #searchbar-paste-and-search::before
+    menupopup.textbox-contextmenu:nth-child(4) > menuitem:nth-child(7)::before
     {
         background-image: var(--clipboard-search);
     }
