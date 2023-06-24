@@ -179,21 +179,3 @@ By default context menus follow the selected interface density, but it is possib
 ![изображение](https://github.com/QNetITQ/WaveFox/assets/85301851/c5b7c4b8-81d2-4ca2-9944-574af7e88f1d)
 
 - `userChrome.Tabs.SelectedTabIndicator.Enabled`
-
-### One Line
-![Снимок](https://user-images.githubusercontent.com/85301851/181300272-d1ecfc93-898a-4eb3-80b9-9974fc471b45.PNG)
-
-- `userChrome.OneLine.TabBarFirst.Enabled`
-- `userChrome.OneLine.NavBarFirst.Enabled`
-- `browser.tabs.inTitlebar` (Enable this key if there are problems with window control buttons. Set the value to 0)
-
-Low values are more suitable for high resolution monitors.
-- `userChrome.OneLine.NavBarWidth.Low.Enabled`
-- `userChrome.OneLine.NavBarWidth.Medium.Enabled`
-- `userChrome.OneLine.NavBarWidth.High.Enabled`
-
-### Tabs On Bottom
-![изображение](https://user-images.githubusercontent.com/85301851/182421633-3ec6948a-85cb-47ac-8b6d-6e92293e4ca3.png)
-
-- `userChrome.TabsOnBottom-Enabled`
-- `browser.tabs.inTitlebar` (Required key. Set the value to 0)
