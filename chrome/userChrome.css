@@ -763,6 +763,11 @@ spacer[part="overflow-end-indicator"]
     background-color: var(--warning-icon-bgcolor) !important;
 }
 
+#tabbrowser-tabs[movingtab] .tabbrowser-tab:not([visuallyselected])
+{
+    z-index: auto !important;
+}
+
 .tabbrowser-tab:hover:not([visuallyselected], [multiselected]) .tab-background
 {
     background-color: var(--toolbarbutton-hover-background) !important;
