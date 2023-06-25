@@ -1,8 +1,10 @@
 # *WaveFox*
 
 ##### Minimum Requirements
-- Firefox 115 - <a href="https://github.com/QNetITQ/WaveFox/releases/tag/v1.6.115">Download WaveFox</a>
-- Firefox 115 ESR - <a href="https://github.com/QNetITQ/WaveFox/releases/tag/v1.6.115">Download WaveFox</a> / <a href="https://github.com/QNetITQ/WaveFox/tree/v1.6.115">Installation and available options</a>
+- Firefox 115
+  - <a href="https://github.com/QNetITQ/WaveFox/releases/tag/v1.6.115">Download WaveFox</a>
+- Firefox 115 ESR
+  - <a href="https://github.com/QNetITQ/WaveFox/releases/tag/v1.6.115">Download WaveFox</a> / <a href="https://github.com/QNetITQ/WaveFox/tree/v1.6.115">Installation and available options</a>
 - Windows
 - MacOS
 - Linux
