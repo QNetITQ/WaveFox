@@ -7,14 +7,9 @@
 - MacOS
 - Linux
 
-<details>
-  <summary>Have a question not related to this project?</summary>
+###### Have a question not related to this project? These resources will help you
   
-  [Firefox (Former r/firefox)](https://fedia.io/m/firefox)
-  
-  [Firefox CSS (Former r/Firefox CSS)](https://lemmy.world/c/firefoxcss)
-
-</details>
+[Firefox community (Former r/firefox)](https://fedia.io/m/firefox) / [Firefox CSS community (Former r/Firefox CSS)](https://lemmy.world/c/firefoxcss)
 
 ##### Installation
 
