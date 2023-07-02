@@ -7,6 +7,15 @@
 - MacOS
 - Linux
 
+<details>
+  <summary>Have a question not related to this project?</summary>
+  
+  [Firefox (Former r/firefox)](https://fedia.io/m/firefox)
+  
+  [Firefox CSS (Former r/Firefox CSS)](https://lemmy.world/c/firefoxcss)
+
+</details>
+
 ##### Installation
 
 [Download Firefox](https://www.mozilla.org/en-US/firefox/all/#product-desktop-release) / [Download WaveFox](https://github.com/QNetITQ/WaveFox/releases)
