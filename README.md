@@ -9,12 +9,12 @@
 
 ###### Have a question not related to this project? These resources will help you
   
-[Firefox community (Former r/firefox)](https://fedia.io/m/firefox) / [Firefox CSS community (Former r/Firefox CSS)](https://lemmy.world/c/firefoxcss)
+- [Firefox community (Former r/firefox)](https://fedia.io/m/firefox)
+- [Firefox CSS community (Former r/Firefox CSS)](https://lemmy.world/c/firefoxcss)
 
 ##### Installation
 
-[Download Firefox](https://www.mozilla.org/en-US/firefox/all/#product-desktop-release) / [Download WaveFox](https://github.com/QNetITQ/WaveFox/releases)
-
+- [Download Firefox](https://www.mozilla.org/en-US/firefox/all/#product-desktop-release) / [Download WaveFox](https://github.com/QNetITQ/WaveFox/releases)
 - Download the `chrome` folder and put it in your user profile folder. For convenience, use `about:profiles`
 - Go to `about:config` and activate the keys below
 
