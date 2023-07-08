@@ -603,6 +603,23 @@ and
     }
 }
 
+/* Extensions menu */
+
+#unified-extensions-panel
+{
+    --uei-icon-size: 16px !important;
+}
+
+#unified-extensions-panel :is(
+                              .unified-extensions-item-name,
+                              .unified-extensions-item-message-deck > *
+                             )
+{
+    overflow: clip !important;
+    white-space: nowrap !important;
+    text-overflow: ellipsis !important;
+}
+
 /* ---------------------------------------- Drag Space ---------------------------------------- */
 
 @supports -moz-bool-pref("userChrome.DragSpace.Left.Disabled")
