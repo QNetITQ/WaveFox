@@ -605,11 +605,6 @@ and
 
 /* Extensions menu */
 
-#unified-extensions-panel
-{
-    --uei-icon-size: 16px !important;
-}
-
 #unified-extensions-panel .unified-extensions-item
 {
     margin-block: 0px !important;
