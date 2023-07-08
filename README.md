@@ -9,10 +9,10 @@
 
 ###### Have a question not related to this project? These resources will help you
 - [Reddit (New)](https://www.reddit.com/r/MozillaFirefox)
-- [Reddit (Old)](https://www.reddit.com/r/firefox)
+- [Reddit (Old / Read only)](https://www.reddit.com/r/firefox)
 - [Fedia](https://fedia.io/m/firefox)
 - [Reddit (CSS)](https://www.reddit.com/r/FirefoxCSS)
-- [Lemmy (CSS)](https://lemmy.world/c/firefoxcss)
+- [Fedia (CSS)](https://fedia.io/m/FirefoxCSS)
 
 ##### Installation
 
