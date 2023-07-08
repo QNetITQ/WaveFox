@@ -568,12 +568,14 @@ and
 {
     :root
     {
-        --arrowpanel-menuitem-margin: 0 var(--browser-context-menu-margin-padding) !important;
-        --arrowpanel-menuitem-padding-block: var(--browser-context-menu-margin-padding) !important;
+        --arrowpanel-menuitem-margin-block:   0px !important;
+        --arrowpanel-menuitem-margin-inline:  var(--browser-context-menu-margin-padding) !important;
+        --arrowpanel-menuitem-padding-block:  var(--browser-context-menu-margin-padding) !important;
         --arrowpanel-menuitem-padding-inline: var(--browser-context-menu-margin-padding) !important;
-        --panel-separator-margin-vertical: var(--browser-context-menu-margin-padding) !important;
-        --panel-separator-margin-horizontal: var(--browser-context-menu-margin-padding) !important;
-        --panel-subview-body-padding: var(--browser-context-menu-margin-padding) 0 !important;
+        --panel-separator-margin-horizontal:  var(--browser-context-menu-margin-padding) !important;
+        --panel-separator-margin-vertical:    var(--browser-context-menu-margin-padding) !important;
+        --panel-subview-body-padding-block:   var(--browser-context-menu-margin-padding) !important;
+        --panel-subview-body-padding-inline:  0px !important;
     }
 }
 
