@@ -603,7 +603,12 @@ and
     }
 }
 
-/* Extensions menu */
+/* -------------------- Extensions menu -------------------- */
+
+#unified-extensions-panel
+{
+    --uei-icon-size: 24px !important;
+}
 
 #unified-extensions-panel .unified-extensions-item
 {
@@ -615,7 +620,7 @@ and
                               .unified-extensions-item-message-deck > *
                              )
 {
-    overflow: clip !important;
+    overflow: hidden !important;
     white-space: nowrap !important;
     text-overflow: ellipsis !important;
 }
