@@ -983,34 +983,35 @@ spacer[part="overflow-end-indicator"]
 .tab-label-container
 {
     height: var(--tab-min-height) !important;
+    font-size: 12px !important;
 }
 
 .tab-label
 {
-    width: 100%;
-    height: 16px;
-    line-height: 16px !important;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    width: 100% !important;
+    height: 20px !important;
+    line-height: 20px !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
     margin-block: 0px !important;
 }
 
 .tab-secondary-label
 {
-    width: 100%;
-    height: 16px;
-    line-height: 16px;
-    margin: 0px !important;
-    order: -1;
+    width: 100% !important;
+    height: 12px !important;
+    line-height: 12px !important;
+    margin-block: 4px 0px !important;
+    order: -1 !important;
 }
 
 .tab-secondary-label > *
 {
-    width: 100%;
-    height: 16px !important;
-    line-height: 16px;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    width: 100% !important;
+    height: 12px !important;
+    line-height: 12px !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
 }
 
 /* ---------------------------------------- Tab Bar ---------------------------------------- */
