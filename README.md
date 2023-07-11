@@ -8,6 +8,7 @@
 - Linux
 
 ###### Have a question not related to this project? These resources will help you
+- [Mozilla support](https://support.mozilla.org/en-US/)
 - [Reddit (New)](https://www.reddit.com/r/MozillaFirefox)
 - [Reddit (Old / Read only)](https://www.reddit.com/r/firefox)
 - [Fedia](https://fedia.io/m/firefox)
