@@ -996,6 +996,12 @@ spacer[part="overflow-end-indicator"]
     margin-block: 0px !important;
 }
 
+#tabbrowser-tabs[secondarytext-unsupported] .tab-label
+{
+    height: var(--tab-min-height) !important;
+    line-height: var(--tab-min-height) !important;
+}
+
 .tab-secondary-label
 {
     width: 100% !important;
