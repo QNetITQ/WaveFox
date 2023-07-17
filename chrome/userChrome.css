@@ -103,7 +103,7 @@
         --center-svg: url("special/tabs/option_8/center.svg");
         --right-svg:  url("special/tabs/option_8/right_corners.svg");
         
-        --tab-first-last-inline-margin: calc(var(--tab-min-height) / 2);
+        --tab-first-last-inline-margin: calc(var(--tab-min-height) / 2 - 6px);
     }
 }
 
@@ -989,8 +989,8 @@ spacer[part="overflow-end-indicator"]
 .tab-label
 {
     width: 100% !important;
-    height: 20px !important;
-    line-height: 20px !important;
+    height: 16px !important;
+    line-height: 16px !important;
     overflow: hidden !important;
     text-overflow: ellipsis !important;
     margin-block: 0px !important;
@@ -1007,7 +1007,7 @@ spacer[part="overflow-end-indicator"]
     width: 100% !important;
     height: 12px !important;
     line-height: 12px !important;
-    margin-block: 4px 0px !important;
+    margin-block: 0px !important;
     order: -1 !important;
 }
 
