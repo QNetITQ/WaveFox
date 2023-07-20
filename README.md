@@ -1,7 +1,7 @@
 # *WaveFox*
 
 ##### Minimum Requirements
-- Firefox 115
+- Firefox 116
 - Firefox 115 ESR
 - Windows
 - MacOS
@@ -11,9 +11,9 @@
 - [Mozilla support](https://support.mozilla.org/en-US/)
 - [Reddit (New)](https://www.reddit.com/r/MozillaFirefox)
 - [Reddit (Old / Read only)](https://www.reddit.com/r/firefox)
-- [Fedia](https://fedia.io/m/firefox)
+- [Fedia](https://www.fedia.io/m/firefox)
 - [Reddit (CSS)](https://www.reddit.com/r/FirefoxCSS)
-- [Fedia (CSS)](https://fedia.io/m/FirefoxCSS)
+- [Fedia (CSS)](https://www.fedia.io/m/FirefoxCSS)
 
 ##### Installation
 
