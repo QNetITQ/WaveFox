@@ -1,0 +1,53 @@
+@media (-moz-platform: windows)
+{
+    @media (-moz-windows-default-theme: 1)
+    {
+        @media (-moz-windows-accent-color-in-titlebar: 1)
+        {
+            :root[tabsintitlebar]:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not(:-moz-window-inactive) #navigator-toolbox-background
+            {
+                background-color: AccentColor !important;
+            }
+
+            :root[tabsintitlebar]:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not(:-moz-window-inactive) #navigator-toolbox
+            {
+                background-color: transparent !important;
+            }
+
+            :root[tabsintitlebar]:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not(:-moz-window-inactive) .titlebar-color
+            {
+                color: AccentColorText !important;
+            }
+        }
+
+        .titlebar-buttonbox-container
+        {
+            align-items: flex-start !important;
+        }
+
+        .titlebar-button:not(.titlebar-close):hover
+        {
+            background-color: var(--toolbarbutton-hover-background) !important;
+        }
+
+        .titlebar-button:not(.titlebar-close):hover:active
+        {
+            background-color: var(--toolbarbutton-active-background) !important;
+        }
+    }
+
+    @supports -moz-bool-pref("userChrome.RegularMenuIcons-Enabled") or
+              -moz-bool-pref("userChrome.FilledMenuIcons-Enabled")
+    {
+        :root
+        {
+            --align-menu-icons: -2px 6px;
+        }
+    }
+
+    menupopup[needsgutter] menu:not([icon], .menu-iconic),
+    menupopup[needsgutter] menuitem:not([checked="true"], [icon], .menuitem-iconic)
+    {
+        padding-inline-start: 1em !important;
+    }
+}
