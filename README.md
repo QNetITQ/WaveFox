@@ -19,23 +19,32 @@
 
 - [Download Firefox](https://www.mozilla.org/en-US/firefox/all/#product-desktop-release) / [Download WaveFox](https://github.com/QNetITQ/WaveFox/releases)
   - [Installation and available options for Firefox 115 ESR](https://github.com/QNetITQ/WaveFox/tree/v1.6.115#installation)
-- Download the `chrome` folder and put it in your user profile folder. For convenience, use `about:profiles`
+
+- Download the `chrome` folder and put it in your user profile folder
+
+  <details>
+  <summary>How to access user profile folder?</summary>
+
+  ![Profile](https://github.com/QNetITQ/WaveFox/assets/85301851/d2b893ea-a62e-4d96-9385-108f83025075)
+  ![Profile 2](https://github.com/QNetITQ/WaveFox/assets/85301851/2817ee70-793b-40e6-a77e-8e62f9bfa87e)
+
+  </details>
+  
 - Go to `about:config` and activate the keys below
 
   - `toolkit.legacyUserProfileCustomizations.stylesheets`
   - `layout.css.has-selector.enabled`
-  - `svg.context-properties.content.enabled` (Activate this key if the menu icons don't follow the general design color. Previously seen only on MacOS)
+  - `svg.context-properties.content.enabled` (Activate this key if the menu icons don't follow the general design color)
   
-- Specify the desired shape of the tabs.
+- Specify the desired shape of the tabs
 
   <details>
-  <summary>Creation of keys</summary>
-  Restart your browser for the changes to take effect.
-  
-  ![изображение](https://user-images.githubusercontent.com/85301851/180253017-22325fad-2f53-47f5-b409-618ca7fe6084.png)
-  ![изображение](https://user-images.githubusercontent.com/85301851/180253209-3e6965a9-641a-4ac2-bf3d-242ac8b3451c.png)
+  <summary>How to create keys?</summary>
+
+  ![Keys](https://github.com/QNetITQ/WaveFox/assets/85301851/9a3673d1-0d95-49fd-911c-dc91b366bc8b)
+
   </details>
-  
+
   ##### Tabs (Option 1)
   ![1](https://user-images.githubusercontent.com/85301851/233114797-1495824d-9f46-474f-aeb2-a8dcc5608066.PNG)
   - `userChrome.Tabs.Option1.Enabled`
