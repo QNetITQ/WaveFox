@@ -17,7 +17,8 @@
 
 ##### Installation
 
-- [Download Firefox](https://www.mozilla.org/en-US/firefox/all/#product-desktop-release) / [Download WaveFox](https://github.com/QNetITQ/WaveFox/releases) / [Installation and available options for Firefox 115 ESR](https://github.com/QNetITQ/WaveFox/tree/v1.6.115#installation)
+- [Download Firefox](https://www.mozilla.org/en-US/firefox/all/#product-desktop-release) / [Download WaveFox](https://github.com/QNetITQ/WaveFox/releases)
+  - [Installation and available options for Firefox 115 ESR](https://github.com/QNetITQ/WaveFox/tree/v1.6.115#installation)
 - Download the `chrome` folder and put it in your user profile folder. For convenience, use `about:profiles`
 - Go to `about:config` and activate the keys below
 
