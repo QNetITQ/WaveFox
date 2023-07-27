@@ -1,6 +1,6 @@
 @media (-moz-platform: windows)
 {
-    @media (-moz-windows-default-theme: 1)
+    @media not (prefers-contrast)
     {
         :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not(:-moz-window-inactive) #navigator-toolbox-background
         {
