@@ -96,7 +96,7 @@
 ## Optional
 
 ### Tab Frame
-The tab frame consists of type, color and saturation. Not compatible with themes that use a translucent toolbar.
+The tab frame consists of type, color and saturation.
 ![изображение](https://user-images.githubusercontent.com/85301851/152011749-4d5619b3-0fd8-40f9-a3dc-96be31839971.png)
 
 ##### Light Theme
