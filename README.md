@@ -15,7 +15,7 @@
 - [Reddit (CSS)](https://www.reddit.com/r/FirefoxCSS)
 - [Fedia (CSS)](https://www.fedia.io/m/FirefoxCSS)
 
-##### Installation
+## Installation
 
 - [Download Firefox](https://www.mozilla.org/en-US/firefox/all/#product-desktop-release) / [Download WaveFox](https://github.com/QNetITQ/WaveFox/releases)
   - [Installation and available options for Firefox 115 ESR](https://github.com/QNetITQ/WaveFox/tree/v1.6.115#installation)
