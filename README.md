@@ -36,7 +36,7 @@
   - `layout.css.has-selector.enabled`
   - `svg.context-properties.content.enabled` (Activate this key if the menu icons don't follow the general design color)
   
-- Specify the desired shape of the tabs
+- Specify the desired shape of the tabs and restart the browser
 
   <details>
   <summary>How to create keys?</summary>
