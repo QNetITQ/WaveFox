@@ -805,11 +805,6 @@ spacer[part="overflow-end-indicator"]
     margin: 0px !important;
 }
 
-.tabbrowser-tab[usercontextid] .tab-background
-{
-    background-color: color-mix(in srgb, var(--identity-icon-color) 25%, transparent);
-}
-
 /* -------------------- Tab Icon Indicators -------------------- */
 
 .tabbrowser-tab:not([visuallyselected]) .tab-icon-stack[busy] .tab-throbber::before
@@ -1067,13 +1062,6 @@ spacer[part="overflow-end-indicator"]
                                      [multiselected] + .tabbrowser-tab:not([hidden]),
                                      [multiselected] + .tabbrowser-tab[hidden] ~ .tabbrowser-tab:not([hidden])
                                     ) .tab-stack::before
-    {
-        opacity: 0 !important;
-    }
-
-    .tabbrowser-tab[usercontextid] .tab-stack::before,
-    .tabbrowser-tab[usercontextid] + .tabbrowser-tab:not([hidden]) .tab-stack::before,
-    .tabbrowser-tab[usercontextid] + .tabbrowser-tab[hidden] ~ .tabbrowser-tab:not([hidden]) .tab-stack::before
     {
         opacity: 0 !important;
     }
