@@ -1,11 +1,8 @@
-@media (-moz-platform: linux)
+@supports -moz-bool-pref("userChrome.RegularMenuIcons-Enabled") or
+          -moz-bool-pref("userChrome.FilledMenuIcons-Enabled")
 {
-    @supports -moz-bool-pref("userChrome.RegularMenuIcons-Enabled") or
-              -moz-bool-pref("userChrome.FilledMenuIcons-Enabled")
+    :root
     {
-        :root
-        {
-            --align-menu-icons: -2px -18px;
-        }
+        --align-menu-icons: -2px -18px;
     }
 }
