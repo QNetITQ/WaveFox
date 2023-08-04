@@ -1,6 +1,6 @@
-@import "special/windows.css";
-@import "special/linux.css";
-@import "special/mac.css";
+@import "special/windows.css" (-moz-platform: windows);
+@import "special/linux.css" (-moz-platform: linux);
+@import "special/mac.css" (-moz-platform: macos);
 
 @media (-moz-platform: windows),
        (-moz-platform: linux),
