@@ -1,55 +1,52 @@
-@media (-moz-platform: windows)
+@media not (prefers-contrast)
 {
-    @media not (prefers-contrast)
+    :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not(:-moz-window-inactive) #navigator-toolbox-background
     {
-        :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not(:-moz-window-inactive) #navigator-toolbox-background
-        {
-            background-color: ActiveCaption !important;
-        }
-
-        :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not(:-moz-window-inactive) .titlebar-color
-        {
-            color: CaptionText !important;
-        }
-
-        :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):-moz-window-inactive #navigator-toolbox-background
-        {
-            background-color: InActiveCaption !important;
-        }
-
-        :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) #navigator-toolbox
-        {
-            background-color: transparent !important;
-        }
-
-        .titlebar-buttonbox-container
-        {
-            align-items: flex-start !important;
-        }
-
-        .titlebar-button:not(.titlebar-close):hover
-        {
-            background-color: var(--toolbarbutton-hover-background) !important;
-        }
-
-        .titlebar-button:not(.titlebar-close):hover:active
-        {
-            background-color: var(--toolbarbutton-active-background) !important;
-        }
+        background-color: ActiveCaption !important;
     }
 
-    @supports -moz-bool-pref("userChrome.RegularMenuIcons-Enabled") or
-              -moz-bool-pref("userChrome.FilledMenuIcons-Enabled")
+    :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not(:-moz-window-inactive) .titlebar-color
     {
-        :root
-        {
-            --align-menu-icons: -2px 6px;
-        }
+        color: CaptionText !important;
     }
 
-    menupopup[needsgutter] menu:not([icon], .menu-iconic),
-    menupopup[needsgutter] menuitem:not([checked="true"], [icon], .menuitem-iconic)
+    :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):-moz-window-inactive #navigator-toolbox-background
     {
-        padding-inline-start: 1em !important;
+        background-color: InActiveCaption !important;
     }
+
+    :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) #navigator-toolbox
+    {
+        background-color: transparent !important;
+    }
+
+    .titlebar-buttonbox-container
+    {
+        align-items: flex-start !important;
+    }
+
+    .titlebar-button:not(.titlebar-close):hover
+    {
+        background-color: var(--toolbarbutton-hover-background) !important;
+    }
+
+    .titlebar-button:not(.titlebar-close):hover:active
+    {
+        background-color: var(--toolbarbutton-active-background) !important;
+    }
+}
+
+@supports -moz-bool-pref("userChrome.RegularMenuIcons-Enabled") or
+          -moz-bool-pref("userChrome.FilledMenuIcons-Enabled")
+{
+    :root
+    {
+        --align-menu-icons: -2px 6px;
+    }
+}
+
+menupopup[needsgutter] menu:not([icon], .menu-iconic),
+menupopup[needsgutter] menuitem:not([checked="true"], [icon], .menuitem-iconic)
+{
+    padding-inline-start: 1em !important;
 }
