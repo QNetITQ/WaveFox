@@ -15,6 +15,12 @@
 - [Reddit (CSS)](https://www.reddit.com/r/FirefoxCSS)
 - [Fedia (CSS)](https://www.fedia.io/m/FirefoxCSS)
 
+## Attention!
+- Do not use the beta version of the style as it may be unstable
+- There are 2 styles available - regular and ESR. ESR style is for Firefox 115 ESR only. The regular style is for the specified browser version, but generally works with newer versions as well
+- The installation steps and available options are different for each style. For example, ESR style supports transparency on Linux and Windows. The regular style does not support this feature, but may be able to do something else.
+- All the necessary information is in the releases section. As a rule, this is a description of the changes and a link to up-to-date information - installation and available options
+
 ## Installation
 
 - [Download Firefox](https://www.mozilla.org/en-US/firefox/all/#product-desktop-release) / [Download WaveFox](https://github.com/QNetITQ/WaveFox/releases)
