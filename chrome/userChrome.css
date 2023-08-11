@@ -469,22 +469,22 @@ and
     {
         --toolbar-bgcolor: transparent !important;
         --toolbar-field-background-color: Field !important;
-    }
-       
-    & .tabbrowser-tab[visuallyselected] .tab-background
-    {
-        --toolbar-bgcolor: Field !important;
-    }
 
-    & #urlbar:not([focused], [open]) > #urlbar-background,
-    & #searchbar:not(:focus-within)
-    {
-        box-shadow: var(--outer-box-shadow, none) !important;
-    }
+        .tabbrowser-tab[visuallyselected] .tab-background
+        {
+            --toolbar-bgcolor: Field !important;
+        }
 
-    & #TabsToolbar::before
-    {
-        display: none !important;
+        #urlbar:not([focused], [open]) > #urlbar-background,
+        #searchbar:not(:focus-within)
+        {
+            box-shadow: var(--outer-box-shadow, none) !important;
+        }
+
+        #TabsToolbar::before
+        {
+            display: none !important;
+        }
     }
 }
 
