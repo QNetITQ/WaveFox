@@ -443,6 +443,51 @@ and
     background-position: var(--tab-attention-indicator-position) !important;
 }
 
+/* ---------------------------------------- Toolbar Transparency ---------------------------------------- */
+
+:root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode])
+{
+    @supports -moz-bool-pref("userChrome.Toolbar.Transparency.Low.Enabled")
+    {
+        --toolbar-bgcolor: color-mix(in srgb, -moz-Dialog 75%, transparent) !important;
+        --toolbar-field-background-color: color-mix(in srgb, Field 75%, transparent) !important;
+    }
+
+    @supports -moz-bool-pref("userChrome.Toolbar.Transparency.Medium.Enabled")
+    {
+        --toolbar-bgcolor: color-mix(in srgb, -moz-Dialog 50%, transparent) !important;
+        --toolbar-field-background-color: color-mix(in srgb, Field 50%, transparent) !important;
+    }
+
+    @supports -moz-bool-pref("userChrome.Toolbar.Transparency.High.Enabled")
+    {
+        --toolbar-bgcolor: color-mix(in srgb, -moz-Dialog 25%, transparent) !important;
+        --toolbar-field-background-color: color-mix(in srgb, Field 25%, transparent) !important;
+    }
+
+    @supports -moz-bool-pref("userChrome.Toolbar.Transparency.VeryHigh.Enabled")
+    {
+        --toolbar-bgcolor: transparent !important;
+        --toolbar-field-background-color: Field !important;
+    }
+       
+    & .tabbrowser-tab[visuallyselected] .tab-background
+    {
+        --toolbar-bgcolor: Field !important;
+    }
+
+    & #urlbar:not([focused], [open]) > #urlbar-background,
+    & #searchbar:not(:focus-within)
+    {
+        box-shadow: var(--outer-box-shadow, none) !important;
+    }
+
+    & #TabsToolbar::before
+    {
+        display: none !important;
+    }
+}
+
 /* ---------------------------------------- Main Window ---------------------------------------- */
 
 :root
