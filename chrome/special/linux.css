@@ -6,3 +6,37 @@
         --align-menu-icons: -2px -18px;
     }
 }
+
+@supports -moz-bool-pref("userChrome.Linux.Transparency.Low.Enabled")      or
+          -moz-bool-pref("userChrome.Linux.Transparency.Medium.Enabled")   or
+          -moz-bool-pref("userChrome.Linux.Transparency.High.Enabled")     or
+          -moz-bool-pref("userChrome.Linux.Transparency.VeryHigh.Enabled")
+{
+    :root[tabsintitlebar]:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not(:-moz-window-inactive)
+    {
+        @supports -moz-bool-pref("userChrome.Linux.Transparency.Low.Enabled")
+        {
+            background-color: color-mix(in srgb, ActiveCaption 75%, transparent) !important;
+        }
+
+        @supports -moz-bool-pref("userChrome.Linux.Transparency.Medium.Enabled")
+        {
+            background-color: color-mix(in srgb, ActiveCaption 50%, transparent) !important;
+        }
+
+        @supports -moz-bool-pref("userChrome.Linux.Transparency.High.Enabled")
+        {
+            background-color: color-mix(in srgb, ActiveCaption 25%, transparent) !important;
+        }
+
+        @supports -moz-bool-pref("userChrome.Linux.Transparency.VeryHigh.Enabled")
+        {
+            background-color: transparent !important;
+        }
+
+        #navigator-toolbox-background
+        {
+            appearance: none !important;
+        }
+    }
+}
