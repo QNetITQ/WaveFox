@@ -101,6 +101,17 @@
 
 ## Optional
 
+### Linux Transparency
+Requires Linux with transparency support. Tested on Manjaro KDE + [ForceBlur](https://github.com/esjeon/kwin-forceblur). Works only with the system theme.
+
+![Снимок5](https://github.com/QNetITQ/WaveFox/assets/85301851/3b4dcfc8-217d-48a1-aba7-1621f9375f67)
+
+- `userChrome.Linux.Transparency.Low.Enabled`
+- `userChrome.Linux.Transparency.Medium.Enabled`
+- `userChrome.Linux.Transparency.High.Enabled`
+- `userChrome.Linux.Transparency.VeryHigh.Enabled`
+- `gfx.webrender.all` (Required key)
+
 ### Toolbar Transparency
 Works only with the system theme.
 ![изображение](https://user-images.githubusercontent.com/85301851/165526704-4f7486c4-f330-4c86-a25d-6ed8ab2affe4.png)
