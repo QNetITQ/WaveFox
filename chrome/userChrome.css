@@ -1075,15 +1075,7 @@ spacer[part="overflow-end-indicator"]
         opacity: 0 !important;
     }
 
-    .tabbrowser-tab:is(
-                       :not([hidden]):first-of-type,
-                       [hidden]:first-of-type + .tabbrowser-tab:not([hidden]),
-                       [hidden]:first-of-type ~ .tabbrowser-tab[hidden] + .tabbrowser-tab:not([hidden])
-                      ) .tab-stack::before
-    {
-        opacity: 0 !important;
-    }
-
+    .tabbrowser-tab:nth-child(1 of :not([hidden])) .tab-stack::before,
     #tabbrowser-tabs[overflow] .tabbrowser-tab:nth-child(1 of :not([pinned], [hidden])) .tab-stack::before
     {
         opacity: 0 !important;
