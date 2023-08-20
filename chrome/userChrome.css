@@ -451,8 +451,8 @@ and
 {
     :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode])
     {
-        --toolbar-bgcolor: color-mix(in srgb, -moz-Dialog, transparent var(--background-opacity)) !important;
-        --toolbar-field-background-color: color-mix(in srgb, Field, transparent var(--background-opacity)) !important;
+        --toolbar-bgcolor: color-mix(in srgb, -moz-Dialog, transparent var(--transparency)) !important;
+        --toolbar-field-background-color: color-mix(in srgb, Field, transparent var(--transparency)) !important;
         --outer-drop-shadow: none !important;
         --inner-box-shadow: none !important;
 
