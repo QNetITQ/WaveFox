@@ -1067,6 +1067,11 @@ spacer[part="overflow-end-indicator"]
         transform: translateX(calc(-1 * var(--tab-separator-offset)));
     }
 
+    :root:-moz-locale-dir(rtl) .tab-stack::before
+    {
+        transform: translateX(var(--tab-separator-offset));
+    }
+
     .tabbrowser-tab:is(
                        [selected]:not([hidden]),
                        [selected]:not([hidden]) + .tabbrowser-tab:not([hidden]),
