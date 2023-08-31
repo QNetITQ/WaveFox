@@ -676,7 +676,7 @@ spacer[part="overflow-end-indicator"]
 {
     --tab-loading-fill: var(--toolbar-field-focus-border-color) !important;
     color: var(--toolbar-color) !important;
-    position: relative !important;
+    position: relative;
     z-index: 2 !important;
     filter: var(--outer-drop-shadow, none);
 }
