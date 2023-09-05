@@ -683,36 +683,12 @@ spacer[part="overflow-end-indicator"]
 
 .tab-background
 {
-    --gradient-background-image: linear-gradient(var(--toolbar-bgcolor), var(--toolbar-bgcolor));
-    --gradient-background-attachment: scroll;
-    --gradient-background-size: auto 100%;
-    --gradient-background-position: 0 0;
-    --gradient-background-repeat: repeat-x;
-
-    --amo-background-image-1: var(--lwt-header-image, none);
-    --amo-background-attachment-1: fixed;
-    --amo-background-size-1: auto auto;
-    --amo-background-position-1: right top;
-    --amo-background-repeat-1: no-repeat;
-
-    --amo-background-image-2: var(--lwt-additional-images, none);
-    --amo-background-attachment-2: fixed, fixed, fixed;
-    --amo-background-size-2: auto auto, auto auto, auto auto;
-    --amo-background-position-2: var(--lwt-background-alignment);
-    --amo-background-repeat-2: var(--lwt-background-tiling);
-
-    --svg-mask-image: var(--left-svg), var(--center-svg), var(--right-svg);
-    --svg-mask-origin: border-box;
-    --svg-mask-size: auto 100%, calc(100% - var(--tab-min-height) * 2) 100%, auto 100%;
-    --svg-mask-position: left center, center center, right center;
-    --svg-mask-repeat: no-repeat, no-repeat, no-repeat;
-
-    mask-image: var(--svg-mask-image);
-    mask-origin: var(--svg-mask-origin);
-    mask-size: var(--svg-mask-size);
-    mask-position: var(--svg-mask-position);
-    mask-repeat: var(--svg-mask-repeat);
-    
+    mask-image: var(--left-svg), var(--center-svg), var(--right-svg);
+    mask-origin: border-box;
+    mask-size: auto 100%, calc(100% - var(--tab-min-height) * 2) 100%, auto 100%;
+    mask-position: left center, center center, right center;
+    mask-repeat: no-repeat, no-repeat, no-repeat;
+    background-image: none !important;
     box-shadow: none !important;
     opacity: 1 !important;
     border: none !important;
@@ -725,28 +701,7 @@ spacer[part="overflow-end-indicator"]
 
 .tabbrowser-tab[visuallyselected] .tab-background
 {
-    background-image: var(--gradient-background-image), var(--amo-background-image-1), var(--amo-background-image-2) !important;
-    background-attachment: var(--gradient-background-attachment), var(--amo-background-attachment-1), var(--amo-background-attachment-2) !important;
-    background-size: var(--gradient-background-size), var(--amo-background-size-1), var(--amo-background-size-2) !important;
-    background-position: var(--gradient-background-position), var(--amo-background-position-1), var(--amo-background-position-2) !important;
-    background-repeat: var(--gradient-background-repeat), var(--amo-background-repeat-1), var(--amo-background-repeat-2) !important;
-    background-color: transparent !important;
-}
-
-.tabbrowser-tab:not([visuallyselected]) .tab-background
-{
-    background-image: none !important;
-}
-
-#tabbrowser-tabs[movingtab] .tabbrowser-tab:is([visuallyselected], [multiselected])
-{
-    color: rgb(0,0,0) !important;
-}
-
-#tabbrowser-tabs[movingtab] .tabbrowser-tab:is([visuallyselected], [multiselected]) .tab-background
-{
-    --toolbar-bgcolor: var(--warning-icon-bgcolor);
-    background-color: var(--warning-icon-bgcolor) !important;
+    background-color: var(--toolbar-bgcolor) !important;
 }
 
 #tabbrowser-tabs[movingtab] .tabbrowser-tab:not([visuallyselected])
