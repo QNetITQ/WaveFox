@@ -1205,6 +1205,62 @@ spacer[part="overflow-end-indicator"]
     margin-inline-end: 0px !important;
 }
 
+/* ---------------------------------------- Tabs On Bottom ---------------------------------------- */
+
+@supports -moz-bool-pref("userChrome.Tabs.TabsOnBottom.Enabled")
+{
+    /* -------------------- Title Bar -------------------- */
+
+    #titlebar
+    {
+        order: 2 !important;
+    }
+
+    #toolbar-menubar
+    {
+        --toolbarbutton-icon-fill: inherit !important;
+        background-color: var(--toolbar-bgcolor) !important;
+        color: var(--toolbar-color) !important;
+        appearance: none !important;
+    }
+
+    #TabsToolbar::before
+    {
+        transform: rotateX(180deg);
+    }
+
+    /* -------------------- Nav Bar -------------------- */
+
+    #nav-bar
+    {
+        order: 0 !important;
+    }
+
+    /* -------------------- Personal Bar -------------------- */
+
+    #PersonalToolbar
+    {
+        order: 1 !important;
+    }
+
+    /* -------------------- Tabs -------------------- */
+
+    :root
+    {
+        --drag-space: 0px !important;
+    }
+
+    .tabbrowser-tab
+    {
+        --tab-inset-clip-path: 0px calc(-1 * var(--tab-first-last-inline-margin));
+    }
+
+    .tab-background
+    {
+        transform: rotateX(180deg);
+    }
+}
+
 /* ---------------------------------------- Menu Icons ---------------------------------------- */
 
 /* ---------- Regular Icons ---------- */
