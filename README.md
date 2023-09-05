@@ -200,3 +200,9 @@ By default context menus follow the selected interface density, but it is possib
 ![изображение](https://github.com/QNetITQ/WaveFox/assets/85301851/c5b7c4b8-81d2-4ca2-9944-574af7e88f1d)
 
 - `userChrome.Tabs.SelectedTabIndicator.Enabled`
+
+### Tabs On Bottom
+![Снимок](https://github.com/QNetITQ/WaveFox/assets/85301851/514cf30d-a417-48cb-bfd1-0e77c9df1bf4)
+
+- `userChrome.Tabs.TabsOnBottom.Enabled`
+- `browser.tabs.inTitlebar` (Required key. Set the value to 0)
