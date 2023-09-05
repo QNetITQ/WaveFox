@@ -684,10 +684,10 @@ spacer[part="overflow-end-indicator"]
 .tab-background
 {
     mask-image: var(--left-svg), var(--center-svg), var(--right-svg);
-    mask-origin: border-box;
     mask-size: auto 100%, calc(100% - var(--tab-min-height) * 2) 100%, auto 100%;
     mask-position: left center, center center, right center;
     mask-repeat: no-repeat, no-repeat, no-repeat;
+    background-color: transparent !important;
     background-image: none !important;
     box-shadow: none !important;
     opacity: 1 !important;
