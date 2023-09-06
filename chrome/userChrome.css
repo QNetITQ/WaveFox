@@ -79,7 +79,7 @@
         --center-svg: url("special/tabs/option_8/center.svg");
         --right-svg:  url("special/tabs/option_8/right_corners.svg");
         
-        --tab-first-last-inline-margin: calc(var(--tab-min-height) / 2 - 6px);
+        --tab-first-last-inline-margin: calc(var(--tab-min-height) / 2);
     }
 
     @supports -moz-bool-pref("userChrome.Tabs.Option10.Enabled")
