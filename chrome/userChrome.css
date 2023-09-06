@@ -1216,6 +1216,187 @@ spacer[part="overflow-end-indicator"]
     }
 }
 
+/* ---------------------------------------- One Line ---------------------------------------- */
+
+@supports -moz-bool-pref("userChrome.OneLine.TabBarFirst.Enabled") or
+          -moz-bool-pref("userChrome.OneLine.NavBarFirst.Enabled")
+{
+    :root
+    {
+        @supports -moz-bool-pref("userChrome.OneLine.NavBarWidth.Low.Enabled")
+        {
+            --navbar-width: 20%;
+        }
+
+        @supports -moz-bool-pref("userChrome.OneLine.NavBarWidth.Medium.Enabled")
+        {
+            --navbar-width: 30%;
+        }
+
+        @supports -moz-bool-pref("userChrome.OneLine.NavBarWidth.High.Enabled")
+        {
+            --navbar-width: 40%;
+        }
+    }
+
+    @supports -moz-bool-pref("userChrome.OneLine.TabBarFirst.Enabled")
+    {
+        #navigator-toolbox
+        {
+            grid-template-columns: auto var(--navbar-width, 50%) !important;
+        }
+
+        #titlebar
+        {
+            grid-area: 1 / 1 / span 1 / span 1 !important;
+        }
+    }
+
+    @supports -moz-bool-pref("userChrome.OneLine.NavBarFirst.Enabled")
+    {
+        #navigator-toolbox
+        {
+            grid-template-columns: var(--navbar-width, 50%) auto !important;
+        }
+
+        #nav-bar
+        {
+            grid-area: 1 / 1 / span 1 / span 1 !important;
+        }
+    }
+
+    #navigator-toolbox
+    {
+        display: grid !important;
+        align-items: end !important;
+        -moz-window-dragging: drag !important;
+    }
+
+    #TabsToolbar::before
+    {
+        display: none !important;
+    }
+
+    /* -------------------- Nav Bar -------------------- */
+
+    #nav-bar
+    {
+        overflow: visible !important;
+        position: relative !important;
+        background-color: transparent !important;
+        z-index: 2 !important;
+    }
+
+    #nav-bar::before
+    {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        inset-block-end: 0px;
+        inset-inline-start: 0px;
+        background-image: var(--left-svg), var(--center-svg), var(--right-svg);
+        background-repeat: no-repeat, no-repeat, no-repeat;
+        fill: var(--toolbar-bgcolor);
+        -moz-context-properties: fill;
+        z-index: -1;
+        pointer-events: none;
+        filter: var(--outer-drop-shadow, none);
+    }
+
+    #urlbar-container,
+    #search-container
+    {
+        flex-shrink: 1 !important;
+        padding-block: 0px !important;
+    }
+
+    #urlbar-container
+    {
+        --urlbar-container-height: var(--tab-min-height) !important;
+    }
+
+    #urlbar
+    {
+        --urlbar-toolbar-height: var(--tab-min-height) !important;
+    }
+
+    /* -------------------- Bookmarks Bar -------------------- */
+
+    #PersonalToolbar
+    {
+        position: relative !important;
+        overflow: visible !important;
+    }
+
+    #PersonalToolbar::before
+    {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        inset-block-start: 0px;
+        inset-inline-start: 0px;
+        box-shadow: var(--outer-box-shadow, none);
+        pointer-events: none;
+        clip-path: inset(-4px 0px 0px 0px);
+    }
+
+    /* -------------------- Bookmarks Bar / Notifications -------------------- */
+
+    #navigator-toolbox > *:not(#titlebar, #nav-bar)
+    {
+        grid-column: 1 / span 2 !important;
+    }
+
+    /* -------------------- Floating Tabs -------------------- */
+
+    @supports -moz-bool-pref("userChrome.Tabs.Option1.Enabled") or
+              -moz-bool-pref("userChrome.Tabs.Option2.Enabled") or
+              -moz-bool-pref("userChrome.Tabs.Option3.Enabled") or
+              -moz-bool-pref("userChrome.Tabs.Option4.Enabled") or
+              -moz-bool-pref("userChrome.Tabs.Option5.Enabled")
+    {
+        #nav-bar
+        {
+            margin: var(--tab-block-margin) !important;
+        }
+
+        #nav-bar::before
+        {
+            background-size: auto 100%, calc(100% - var(--tab-min-height)) 100%, auto 100%;
+            background-position: left calc(-1 * var(--tab-min-height) / 2) center,
+                                 center center,
+                                 right calc(-1 * var(--tab-min-height) / 2) center;
+        }
+    }
+
+    /* -------------------- Attached Tabs -------------------- */
+
+    @supports -moz-bool-pref("userChrome.Tabs.Option6.Enabled")  or
+              -moz-bool-pref("userChrome.Tabs.Option7.Enabled")  or
+              -moz-bool-pref("userChrome.Tabs.Option8.Enabled")  or
+              -moz-bool-pref("userChrome.Tabs.Option9.Enabled")  or
+              -moz-bool-pref("userChrome.Tabs.Option10.Enabled") or
+              -moz-bool-pref("userChrome.Tabs.Option11.Enabled") or
+              -moz-bool-pref("userChrome.Tabs.Option12.Enabled")
+    {
+        #nav-bar
+        {
+            padding-inline: calc(var(--tab-min-height) / 2);
+        }
+
+        #nav-bar::before
+        {
+            background-size: auto 100%, calc(100% - var(--tab-min-height) * 2) 100%, auto 100%;
+            background-position: left center, center center, right center;
+            clip-path: inset(-4px 0px 0px 0px);
+        }
+    }
+}
+
 /* ---------------------------------------- Menu Icons ---------------------------------------- */
 
 /* ---------- Regular Icons ---------- */
