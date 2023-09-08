@@ -445,6 +445,27 @@ and
 
 /* ---------------------------------------- Toolbar Transparency ---------------------------------------- */
 
+@supports -moz-bool-pref("userChrome.Toolbar.Transparency.Low.Enabled")      or
+          -moz-bool-pref("userChrome.Toolbar.Transparency.Medium.Enabled")   or
+          -moz-bool-pref("userChrome.Toolbar.Transparency.High.Enabled")     or
+          -moz-bool-pref("userChrome.Toolbar.Transparency.VeryHigh.Enabled")
+{
+    :root[sizemode="normal"]:not([gtktiledwindow="true"]):is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode])
+    {
+        appearance: none !important;
+    }
+
+    :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode])
+    {
+        background-color: var(--toolbar-bgcolor) !important;
+
+        #navigator-toolbox
+        {
+            appearance: none !important;
+        }
+    }
+}
+
 @supports -moz-bool-pref("userChrome.Toolbar.Transparency.Low.Enabled")    or
           -moz-bool-pref("userChrome.Toolbar.Transparency.Medium.Enabled") or
           -moz-bool-pref("userChrome.Toolbar.Transparency.High.Enabled")
