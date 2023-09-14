@@ -1,6 +1,11 @@
-@import "special/windows.css" (-moz-platform: windows);
-@import "special/linux.css" (-moz-platform: linux);
-@import "special/mac.css" (-moz-platform: macos);
+@layer LowPriority, HighPriority;
+
+@import "special/windows.css" layer(HighPriority) (-moz-platform: windows);
+@import "special/linux.css"   layer(HighPriority) (-moz-platform: linux);
+@import "special/mac.css"     layer(HighPriority) (-moz-platform: macos);
+
+@layer LowPriority
+{
 
 @media (-moz-platform: windows),
        (-moz-platform: linux),
@@ -1423,21 +1428,10 @@ spacer[part="overflow-end-indicator"]
 {
     #TabsToolbar :is(#tabs-newtab-button > .toolbarbutton-icon,
                      #new-tab-button > .toolbarbutton-icon,
-                     #firefox-view-button > .toolbarbutton-icon,
                      #alltabs-button > .toolbarbutton-badge-stack,
                      .tab-close-button)
     {
         border-radius: 50% !important;
-    }
-
-    :root
-    {
-        --urlbar-icon-border-radius: 50px !important;
-    }
-
-    #urlbar:not([open]) #urlbar-background, #searchbar
-    {
-        border-radius: 50px !important;
     }
 }
 
@@ -2345,6 +2339,8 @@ spacer[part="overflow-end-indicator"]
     }
 
   }
+
+}
 
 }
 
