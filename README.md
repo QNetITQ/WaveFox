@@ -99,6 +99,11 @@
 
 ## Optional
 
+### Accent Color / Windows 11 / Windows 10
+![изображение](https://github.com/QNetITQ/WaveFox/assets/85301851/55b01904-6620-4e36-9b6d-91b092db725c)
+
+- `widget.windows.titlebar-accent.enabled`
+
 ### Linux Transparency
 Requires Linux with transparency support. Tested on Manjaro KDE + [ForceBlur](https://github.com/esjeon/kwin-forceblur). Works only with the system theme.
 
