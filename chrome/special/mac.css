@@ -1,9 +1,4 @@
-:root[tabsintitlebar]:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) #navigator-toolbox-background
+:root[tabsintitlebar]:not(:-moz-lwtheme)
 {
     appearance: -moz-mac-source-list !important;
-}
-
-:root[tabsintitlebar]:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]) #navigator-toolbox
-{
-    background-color: transparent !important;
 }
