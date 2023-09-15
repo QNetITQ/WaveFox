@@ -219,14 +219,6 @@ and
 
         /* ---------- Tab Frame Color ---------- */
 
-        @supports -moz-bool-pref("userChrome.LightTheme.TabFrameColor.Auto.Enabled")
-        {
-            :root
-            {
-                --shadow-color: var(--toolbar-color);
-            }
-        }
-
         @supports -moz-bool-pref("userChrome.LightTheme.TabFrameColor.White.Enabled")
         {
             :root
@@ -341,14 +333,6 @@ and
         }
 
         /* ---------- Tab Frame Color ---------- */
-
-        @supports -moz-bool-pref("userChrome.DarkTheme.TabFrameColor.Auto.Enabled")
-        {
-            :root
-            {
-                --shadow-color: var(--toolbar-color);
-            }
-        }
 
         @supports -moz-bool-pref("userChrome.DarkTheme.TabFrameColor.White.Enabled")
         {
