@@ -134,7 +134,6 @@ The tab frame consists of type, color and saturation.
 - `userChrome.LightTheme.TabFrameType.Border.Enabled`
 - `userChrome.LightTheme.TabFrameType.Shadow.Enabled`
 ###### Color
-- `userChrome.LightTheme.TabFrameColor.Auto.Enabled`
 - `userChrome.LightTheme.TabFrameColor.White.Enabled`
 - `userChrome.LightTheme.TabFrameColor.Black.Enabled`
 ###### Saturation
@@ -149,7 +148,6 @@ The tab frame consists of type, color and saturation.
 - `userChrome.DarkTheme.TabFrameType.Border.Enabled`
 - `userChrome.DarkTheme.TabFrameType.Shadow.Enabled`
 ###### Color
-- `userChrome.DarkTheme.TabFrameColor.Auto.Enabled`
 - `userChrome.DarkTheme.TabFrameColor.White.Enabled`
 - `userChrome.DarkTheme.TabFrameColor.Black.Enabled`
 ###### Saturation
