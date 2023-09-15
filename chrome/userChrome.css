@@ -653,6 +653,7 @@ spacer[part="overflow-end-indicator"]
     &[visuallyselected]
     {
         position: relative;
+        color: var(--toolbar-color) !important;
         z-index: 2 !important;
         filter: var(--outer-drop-shadow, none);
     }
