@@ -455,24 +455,24 @@ and
 {
     :root:not(:-moz-lwtheme)
     {
-        --toolbar-bgcolor: color-mix(in srgb, -moz-Dialog, transparent var(--transparency)) !important;
-        --toolbar-field-background-color: color-mix(in srgb, Field, transparent var(--transparency)) !important;
+        --toolbar-bgcolor: color-mix(in srgb, -moz-Dialog, transparent var(--toolbar-transparency)) !important;
+        --toolbar-field-background-color: color-mix(in srgb, Field, transparent var(--toolbar-transparency)) !important;
         --outer-drop-shadow: none !important;
         --inner-box-shadow: none !important;
 
         @supports -moz-bool-pref("userChrome.Toolbar.Transparency.Low.Enabled")
         {
-            --transparency: 25%;
+            --toolbar-transparency: 25%;
         }
 
         @supports -moz-bool-pref("userChrome.Toolbar.Transparency.Medium.Enabled")
         {
-            --transparency: 50%;
+            --toolbar-transparency: 50%;
         }
 
         @supports -moz-bool-pref("userChrome.Toolbar.Transparency.High.Enabled")
         {
-            --transparency: 75%;
+            --toolbar-transparency: 75%;
         }
     }
 }
