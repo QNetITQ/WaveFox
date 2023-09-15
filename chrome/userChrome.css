@@ -660,8 +660,6 @@ spacer[part="overflow-end-indicator"]
 
 .tabbrowser-tab
 {
-    --tab-loading-fill: currentColor !important;
-    --tab-attention-icon-color: currentColor !important;
     --tab-label-mask-size: 0px !important;
     color: inherit !important;
     overflow-x: clip !important;
@@ -672,7 +670,6 @@ spacer[part="overflow-end-indicator"]
 
     &[visuallyselected]
     {
-        --tab-loading-fill: var(--toolbar-field-focus-border-color) !important;
         color: var(--toolbar-color) !important;
         position: relative;
         z-index: 2 !important;
@@ -778,11 +775,6 @@ spacer[part="overflow-end-indicator"]
 }
 
 /* -------------------- Tab Icon Indicators -------------------- */
-
-.tabbrowser-tab:not([visuallyselected]) .tab-icon-stack[busy] .tab-throbber::before
-{
-    fill: currentColor !important;
-}
 
 .tabbrowser-tab:is([image], [pinned]) .tab-content[attention]:not([selected]),
 .tab-content[pinned][titlechanged]:not([selected])
