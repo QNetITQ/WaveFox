@@ -12,44 +12,28 @@
           -moz-bool-pref("userChrome.Linux.Transparency.High.Enabled")     or
           -moz-bool-pref("userChrome.Linux.Transparency.VeryHigh.Enabled")
 {
-    :root[tabsintitlebar][sizemode="normal"]:not([gtktiledwindow="true"]):is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not(:-moz-window-inactive)
+    :root[tabsintitlebar]:not(:-moz-lwtheme:-moz-window-inactive) #navigator-toolbox
     {
-        appearance: none !important;
-    }
+        background-color: var(--titlebar-bgcolor) !important;
 
-    :root[tabsintitlebar]:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode]):not(:-moz-window-inactive)
-    {
         @supports -moz-bool-pref("userChrome.Linux.Transparency.Low.Enabled")
         {
-            --titlebar-bgcolor: color-mix(in srgb, ActiveCaption 75%, transparent);
+            --titlebar-bgcolor: color-mix(in srgb, ActiveCaption, transparent 25%);
         }
 
         @supports -moz-bool-pref("userChrome.Linux.Transparency.Medium.Enabled")
         {
-            --titlebar-bgcolor: color-mix(in srgb, ActiveCaption 50%, transparent);
+            --titlebar-bgcolor: color-mix(in srgb, ActiveCaption, transparent 50%);
         }
 
         @supports -moz-bool-pref("userChrome.Linux.Transparency.High.Enabled")
         {
-            --titlebar-bgcolor: color-mix(in srgb, ActiveCaption 25%, transparent);
+            --titlebar-bgcolor: color-mix(in srgb, ActiveCaption, transparent 75%);
         }
 
         @supports -moz-bool-pref("userChrome.Linux.Transparency.VeryHigh.Enabled")
         {
             --titlebar-bgcolor: transparent;
-        }
-
-        background-color: var(--titlebar-bgcolor) !important;
-
-        #navigator-toolbox
-        {
-            appearance: none !important;
-            background-color: var(--titlebar-bgcolor) !important;
-        }
-
-        #navigator-toolbox-background
-        {
-            appearance: none !important;
         }
     }
 }
