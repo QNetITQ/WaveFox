@@ -12,7 +12,7 @@
           -moz-bool-pref("userChrome.Linux.Transparency.High.Enabled")     or
           -moz-bool-pref("userChrome.Linux.Transparency.VeryHigh.Enabled")
 {
-    :root[tabsintitlebar]:not(:-moz-lwtheme:-moz-window-inactive) #navigator-toolbox
+    :root[tabsintitlebar]:not(:-moz-lwtheme, :-moz-window-inactive) #navigator-toolbox
     {
         background-color: color-mix(in srgb, ActiveCaption, transparent var(--toolbox-transparency)) !important;
 
