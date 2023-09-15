@@ -660,7 +660,6 @@ spacer[part="overflow-end-indicator"]
 .tabbrowser-tab
 {
     --tab-label-mask-size: 0px !important;
-    color: inherit !important;
     overflow-x: clip !important;
     overflow-y: visible !important;
     overflow-clip-margin: var(--tab-overflow-clip-margin) !important;
@@ -669,7 +668,6 @@ spacer[part="overflow-end-indicator"]
 
     &[visuallyselected]
     {
-        color: var(--toolbar-color) !important;
         position: relative;
         z-index: 2 !important;
         filter: var(--outer-drop-shadow, none);
