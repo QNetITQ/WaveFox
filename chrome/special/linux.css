@@ -14,26 +14,26 @@
 {
     :root[tabsintitlebar]:not(:-moz-lwtheme:-moz-window-inactive) #navigator-toolbox
     {
-        background-color: var(--titlebar-bgcolor) !important;
+        background-color: color-mix(in srgb, ActiveCaption, transparent var(--toolbox-transparency)) !important;
 
         @supports -moz-bool-pref("userChrome.Linux.Transparency.Low.Enabled")
         {
-            --titlebar-bgcolor: color-mix(in srgb, ActiveCaption, transparent 25%);
+            --toolbox-transparency: 25%;
         }
 
         @supports -moz-bool-pref("userChrome.Linux.Transparency.Medium.Enabled")
         {
-            --titlebar-bgcolor: color-mix(in srgb, ActiveCaption, transparent 50%);
+            --toolbox-transparency: 50%;
         }
 
         @supports -moz-bool-pref("userChrome.Linux.Transparency.High.Enabled")
         {
-            --titlebar-bgcolor: color-mix(in srgb, ActiveCaption, transparent 75%);
+            --toolbox-transparency: 75%;
         }
 
         @supports -moz-bool-pref("userChrome.Linux.Transparency.VeryHigh.Enabled")
         {
-            --titlebar-bgcolor: transparent;
+            --toolbox-transparency: 100%;
         }
     }
 }
