@@ -444,7 +444,6 @@ and
 
 #TabsToolbar #firefox-view-button[attention]
 {
-    --tab-attention-icon-color: currentColor !important;
     background-position: var(--tab-attention-indicator-position) !important;
 }
 
@@ -721,6 +720,7 @@ spacer[part="overflow-end-indicator"]
 {
     width: 16px !important;
     height: 16px !important;
+    border-radius: 50% !important;
     padding: 2px !important;
     margin: 0px !important;
 }
@@ -1416,8 +1416,7 @@ spacer[part="overflow-end-indicator"]
 {
     #TabsToolbar :is(#tabs-newtab-button > .toolbarbutton-icon,
                      #new-tab-button > .toolbarbutton-icon,
-                     #alltabs-button > .toolbarbutton-badge-stack,
-                     .tab-close-button)
+                     #alltabs-button > .toolbarbutton-badge-stack)
     {
         border-radius: 50% !important;
     }
