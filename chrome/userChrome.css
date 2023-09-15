@@ -675,6 +675,8 @@ spacer[part="overflow-end-indicator"]
 
     &:not([visuallyselected])
     {
+        color: inherit !important;
+
         .tab-background
         {
             background-color: transparent !important;
