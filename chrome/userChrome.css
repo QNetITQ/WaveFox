@@ -507,6 +507,8 @@ and
 
 :root
 {
+    --tab-selected-bgcolor: initial !important;
+    --lwt-selected-tab-background-color: initial !important;
     --tab-shadow-max-size: 0px !important;
     --tabs-navbar-shadow-size: 0px !important;
     --button-hover-bgcolor: color-mix(in srgb, currentColor 10%, transparent) !important;
