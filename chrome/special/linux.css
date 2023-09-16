@@ -15,6 +15,7 @@
     :root[tabsintitlebar]:not(:-moz-lwtheme, :-moz-window-inactive) #navigator-toolbox
     {
         background-color: color-mix(in srgb, ActiveCaption, transparent var(--toolbox-transparency)) !important;
+        background-image: none !important;
 
         @supports -moz-bool-pref("userChrome.Linux.Transparency.Low.Enabled")
         {
