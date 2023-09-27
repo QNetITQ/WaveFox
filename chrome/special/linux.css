@@ -34,15 +34,9 @@
             --toolbox-transparency: 100%;
         }
 
-        &[tabsintitlebar]:not(:-moz-lwtheme, :-moz-window-inactive)
+        &[tabsintitlebar]:not(:-moz-lwtheme, :-moz-window-inactive) #navigator-toolbox
         {
             background-color: color-mix(in srgb, ActiveCaption, transparent var(--toolbox-transparency)) !important;
-
-            #navigator-toolbox
-            {
-                background-color: transparent !important;
-                background-image: none !important;
-            }
         }
     }
 }
