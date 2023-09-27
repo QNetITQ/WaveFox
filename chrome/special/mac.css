@@ -1,4 +1,9 @@
 :root[tabsintitlebar]:not(:-moz-lwtheme)
 {
     appearance: -moz-mac-source-list !important;
+
+    #navigator-toolbox
+    {
+        background-color: transparent !important;
+    }
 }
