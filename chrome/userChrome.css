@@ -881,7 +881,6 @@ spacer[part="overflow-end-indicator"]
 {
     height: var(--tab-min-height) !important;
     font-size: 12px !important;
-    opacity: 1 !important;
 }
 
 .tab-label
@@ -892,7 +891,6 @@ spacer[part="overflow-end-indicator"]
     overflow: hidden !important;
     text-overflow: ellipsis !important;
     margin-block: 0px !important;
-    opacity: 1 !important;
 }
 
 #tabbrowser-tabs[secondarytext-unsupported] .tab-label
@@ -908,7 +906,6 @@ spacer[part="overflow-end-indicator"]
     line-height: 16px !important;
     margin-block: 0px !important;
     order: -1 !important;
-    opacity: 1 !important;
 }
 
 .tab-secondary-label > *
