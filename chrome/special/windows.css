@@ -30,3 +30,29 @@ menupopup[needsgutter] menuitem:not([checked="true"], [icon], .menuitem-iconic)
 {
     padding-inline-start: 1em !important;
 }
+
+/* Light-Dark Function bug 1853524 */
+
+@supports -moz-bool-pref("userChrome.Tabs.TabsOnBottom.Enabled")
+{
+    @media not (prefers-contrast)
+    {
+        :root:not(:-moz-lwtheme) #toolbar-menubar
+        {
+            background-color: light-dark(#f9f9fb, rgb(43, 42, 51)) !important;
+            color: light-dark(rgb(21, 20, 26), rgb(251, 251, 254)) !important;
+        }
+    }
+}
+
+@supports -moz-bool-pref("userChrome.OneLine.TabBarFirst.Enabled") or
+          -moz-bool-pref("userChrome.OneLine.NavBarFirst.Enabled")
+{
+    @media not (prefers-contrast)
+    {
+        :root:not(:-moz-lwtheme) #nav-bar::before
+        {
+            fill: light-dark(#f9f9fb, rgb(43, 42, 51));
+        }
+    }
+}
