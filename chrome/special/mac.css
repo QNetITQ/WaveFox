@@ -7,3 +7,17 @@
         background-color: transparent !important;
     }
 }
+
+/* Light-Dark Function bug 1853524 */
+
+@supports -moz-bool-pref("userChrome.OneLine.TabBarFirst.Enabled") or
+          -moz-bool-pref("userChrome.OneLine.NavBarFirst.Enabled")
+{
+    @media not (prefers-contrast)
+    {
+        :root:not(:-moz-lwtheme) #nav-bar::before
+        {
+            fill: light-dark(#f9f9fb, rgb(43, 42, 51));
+        }
+    }
+}
