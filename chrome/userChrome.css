@@ -639,6 +639,13 @@ spacer[part="overflow-end-indicator"]
     margin-top: var(--margin-top, revert) !important;
 }
 
+/* ---------------------------------------- Titlebar ---------------------------------------- */
+
+.titlebar-color
+{
+    --toolbarbutton-icon-fill: currentColor !important;
+}
+
 /* ---------------------------------------- Tabs ---------------------------------------- */
 
 .tabbrowser-tab
