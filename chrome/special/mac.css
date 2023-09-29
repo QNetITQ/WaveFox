@@ -8,16 +8,22 @@
     }
 }
 
-/* Light-Dark Function bug 1853524 */
+/* System Theme / Light-Dark Function bug 1853524 */
 
-@supports -moz-bool-pref("userChrome.OneLine.TabBarFirst.Enabled") or
-          -moz-bool-pref("userChrome.OneLine.NavBarFirst.Enabled")
+@media not (prefers-contrast)
 {
-    @media not (prefers-contrast)
+    :root:not(:-moz-lwtheme)
     {
-        :root:not(:-moz-lwtheme) #nav-bar::before
+        @media (prefers-color-scheme: light)
         {
-            fill: light-dark(#f9f9fb, rgb(43, 42, 51));
+            --toolbar-bgcolor: #f9f9fb !important;
+            --toolbar-color: rgb(21, 20, 26) !important;
+        }
+
+        @media (prefers-color-scheme: dark)
+        {
+            --toolbar-bgcolor: rgb(43, 42, 51) !important;
+            --toolbar-color: rgb(251, 251, 254) !important;
         }
     }
 }
