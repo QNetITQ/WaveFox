@@ -386,6 +386,23 @@ and
     }
 }
 
+/* ---------------------------------------- System Theme Only ---------------------------------------- */
+
+@media not (prefers-contrast)
+{
+    :root[tabsintitlebar]:not(:-moz-lwtheme)
+    {
+        --toolbarbutton-hover-background: color-mix(in srgb, currentColor 10%, transparent) !important;
+        --toolbarbutton-active-background: color-mix(in srgb, currentColor 20%, transparent) !important;
+
+        .titlebar-color
+        {
+            --toolbarbutton-icon-fill: currentColor !important;
+            color: inherit !important;
+        }
+    }
+}
+
 /* ---------------------------------------- Pinned Tabs Width ---------------------------------------- */
 
 @supports -moz-bool-pref("userChrome.PinnedTabsWidthLowIncrease-Enabled")
@@ -494,10 +511,6 @@ and
     --lwt-selected-tab-background-color: initial !important;
     --tab-shadow-max-size: 0px !important;
     --tabs-navbar-shadow-size: 0px !important;
-    --button-hover-bgcolor: color-mix(in srgb, currentColor 10%, transparent) !important;
-    --button-active-bgcolor: color-mix(in srgb, currentColor 20%, transparent) !important;
-    --toolbarbutton-hover-background: var(--button-hover-bgcolor) !important;
-    --toolbarbutton-active-background: var(--button-active-bgcolor) !important;
 }
 
 /* ---------------------------------------- Density ---------------------------------------- */
@@ -637,13 +650,6 @@ spacer[part="overflow-start-indicator"],
 spacer[part="overflow-end-indicator"]
 {
     margin-top: var(--margin-top, revert) !important;
-}
-
-/* ---------------------------------------- Titlebar ---------------------------------------- */
-
-.titlebar-color
-{
-    --toolbarbutton-icon-fill: currentColor !important;
 }
 
 /* ---------------------------------------- Tabs ---------------------------------------- */
