@@ -22,13 +22,13 @@
         @media (prefers-color-scheme: light)
         {
             --toolbar-non-lwt-bgcolor: #f9f9fb !important;
-            --toolbar-non-lwt-textcolor: rgb(21, 20, 26) !important;
+            --toolbar-color: rgb(21, 20, 26) !important;
         }
 
         @media (prefers-color-scheme: dark)
         {
             --toolbar-non-lwt-bgcolor: rgb(43, 42, 51) !important;
-            --toolbar-non-lwt-textcolor: rgb(251, 251, 254) !important;
+            --toolbar-color: rgb(251, 251, 254) !important;
         }
     }
 }
