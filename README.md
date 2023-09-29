@@ -39,6 +39,7 @@
 
   - `toolkit.legacyUserProfileCustomizations.stylesheets`
   - `layout.css.has-selector.enabled`
+  - `svg.context-properties.content.enabled`
   
 - Specify the desired shape of the tabs and restart the browser
 
