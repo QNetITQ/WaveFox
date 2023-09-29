@@ -447,6 +447,7 @@ and
 
 #TabsToolbar #firefox-view-button[attention]
 {
+    --tab-attention-icon-color: currentColor !important;
     background-position: var(--tab-attention-indicator-position) !important;
 }
 
@@ -675,6 +676,8 @@ spacer[part="overflow-end-indicator"]
 
     &:not([visuallyselected])
     {
+        --tab-loading-fill: currentColor !important;
+        --tab-attention-icon-color: currentColor !important;
         color: inherit !important;
 
         .tab-background
