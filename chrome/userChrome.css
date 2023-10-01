@@ -716,6 +716,16 @@ spacer[part="overflow-end-indicator"]
     z-index: auto !important;
 }
 
+.tabbrowser-tab[pending] .tab-content
+{
+    opacity: 0.75 !important;
+}
+
+.tab-content
+{
+    padding-inline: calc((var(--tab-min-height) - 16px) / 2 + var(--pinned-tabs-width-offset, 0px)) !important;
+}
+
 .tab-close-button
 {
     width: 16px !important;
@@ -725,14 +735,14 @@ spacer[part="overflow-end-indicator"]
     margin: 0px !important;
 }
 
-.tab-content
+.tab-close-button:hover
 {
-    padding-inline: calc((var(--tab-min-height) - 16px) / 2 + var(--pinned-tabs-width-offset, 0px)) !important;
+    background-color: var(--toolbarbutton-hover-background) !important;
 }
 
-.tabbrowser-tab[pending] .tab-content
+.tab-close-button:hover:active
 {
-    opacity: 0.5 !important;
+    background-color: var(--toolbarbutton-active-background) !important;
 }
 
 /* -------------------- Selected Tab Indicator -------------------- */
