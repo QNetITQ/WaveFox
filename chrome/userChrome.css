@@ -390,17 +390,20 @@ and
 
 @media not (prefers-contrast)
 {
-    :root[tabsintitlebar]:not(:-moz-lwtheme)
+    :root:not(:-moz-lwtheme)
     {
-        --button-hover-bgcolor: color-mix(in srgb, currentColor 10%, transparent) !important;
-        --button-active-bgcolor: color-mix(in srgb, currentColor 20%, transparent) !important;
-        --toolbarbutton-hover-background: color-mix(in srgb, currentColor 10%, transparent) !important;
-        --toolbarbutton-active-background: color-mix(in srgb, currentColor 20%, transparent) !important;
-
-        .titlebar-color
+        .tabbrowser-tab[visuallyselected] .tab-background
         {
-            --toolbarbutton-icon-fill: currentColor !important;
+            background-color: var(--toolbar-bgcolor) !important;
+            color: var(--toolbar-color) !important;
+        }
+
+        &[tabsintitlebar] .titlebar-color
+        {
             color: inherit !important;
+            --toolbarbutton-icon-fill: currentColor !important;
+            --toolbarbutton-hover-background: color-mix(in srgb, currentColor 10%, transparent) !important;
+            --toolbarbutton-active-background: color-mix(in srgb, currentColor 20%, transparent) !important;
         }
     }
 }
@@ -509,8 +512,6 @@ and
 
 :root
 {
-    --tab-selected-bgcolor: initial !important;
-    --lwt-selected-tab-background-color: initial !important;
     --tab-shadow-max-size: 0px !important;
     --tabs-navbar-shadow-size: 0px !important;
 }
@@ -668,7 +669,6 @@ spacer[part="overflow-end-indicator"]
     &[visuallyselected]
     {
         position: relative;
-        color: var(--toolbar-color) !important;
         z-index: 2 !important;
         filter: var(--outer-drop-shadow, none);
     }
