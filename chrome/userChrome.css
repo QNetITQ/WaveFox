@@ -459,7 +459,7 @@ and
           -moz-bool-pref("userChrome.Toolbar.Transparency.Medium.Enabled") or
           -moz-bool-pref("userChrome.Toolbar.Transparency.High.Enabled")
 {
-    :root:not(:-moz-lwtheme)
+    :root[tabsintitlebar]:not(:-moz-lwtheme)
     {
         --toolbar-bgcolor: color-mix(in srgb, -moz-Dialog, transparent var(--toolbar-transparency)) !important;
         --toolbar-field-background-color: color-mix(in srgb, Field, transparent var(--toolbar-transparency)) !important;
@@ -489,7 +489,7 @@ and
 
 @supports -moz-bool-pref("userChrome.Toolbar.Transparency.VeryHigh.Enabled")
 {
-    :root:not(:-moz-lwtheme)
+    :root[tabsintitlebar]:not(:-moz-lwtheme)
     {
         --toolbar-bgcolor: transparent !important;
         --toolbar-field-background-color: Field !important;
