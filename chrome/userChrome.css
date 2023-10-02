@@ -386,7 +386,7 @@ and
     }
 }
 
-/* ---------------------------------------- System Theme Only ---------------------------------------- */
+/* ---------------------------------------- System Theme ---------------------------------------- */
 
 @media not (prefers-contrast)
 {
@@ -406,6 +406,18 @@ and
             --toolbarbutton-active-background: color-mix(in srgb, currentColor 20%, transparent) !important;
         }
     }
+}
+
+/* ---------------------------------------- Light Theme / Dark Theme ---------------------------------------- */
+
+:root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26)"] .tabbrowser-tab[visuallyselected] .tab-background
+{
+    --tab-selected-bgcolor: initial;
+}
+
+:root[style*="--lwt-accent-color: rgb(28, 27, 34); --lwt-text-color: rgba(251, 251, 254)"] .tabbrowser-tab[visuallyselected] .tab-background
+{
+    --lwt-selected-tab-background-color: initial;
 }
 
 /* ---------------------------------------- Pinned Tabs Width ---------------------------------------- */
