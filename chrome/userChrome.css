@@ -392,10 +392,14 @@ and
 {
     :root:not(:-moz-lwtheme)
     {
-        .tabbrowser-tab[visuallyselected] .tab-background
+        .tabbrowser-tab[visuallyselected]
         {
-            background-color: var(--toolbar-bgcolor) !important;
             color: var(--toolbar-color) !important;
+
+            .tab-background
+            {
+                background-color: var(--toolbar-bgcolor) !important;
+            }
         }
 
         &[tabsintitlebar] .titlebar-color
@@ -1436,7 +1440,9 @@ spacer[part="overflow-end-indicator"]
 
 /* ---------------------------------------- Rounded Elements ---------------------------------------- */
 
-@supports -moz-bool-pref("userChrome.Tabs.Option5.Enabled")  or
+@supports -moz-bool-pref("userChrome.Tabs.Option3.Enabled")  or
+          -moz-bool-pref("userChrome.Tabs.Option4.Enabled")  or
+          -moz-bool-pref("userChrome.Tabs.Option5.Enabled")  or
           -moz-bool-pref("userChrome.Tabs.Option8.Enabled")  or
           -moz-bool-pref("userChrome.Tabs.Option9.Enabled")  or
           -moz-bool-pref("userChrome.Tabs.Option11.Enabled") or
