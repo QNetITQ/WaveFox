@@ -1,7 +1,7 @@
 # *WaveFox*
 
 ##### Minimum Requirements
-- Firefox 117
+- Firefox 119
 - Firefox 115 ESR
 - Windows
 - MacOS
