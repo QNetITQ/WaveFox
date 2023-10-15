@@ -7,27 +7,3 @@
         background-color: transparent !important;
     }
 }
-
-/* System Theme / Light-Dark Function bug 1853524 */
-
-@media not (prefers-contrast)
-{
-    :root:not(:-moz-lwtheme)
-    {
-        @media (prefers-color-scheme: light)
-        {
-            --toolbar-non-lwt-bgcolor: #f9f9fb !important;
-            --toolbar-color: rgb(21, 20, 26) !important;
-            --button-hover-bgcolor: rgba(207, 207, 216, .66) !important;
-            --button-active-bgcolor: rgb(207, 207, 216) !important;
-        }
-
-        @media (prefers-color-scheme: dark)
-        {
-            --toolbar-non-lwt-bgcolor: rgb(43, 42, 51) !important;
-            --toolbar-color: rgb(251, 251, 254) !important;
-            --button-hover-bgcolor: rgb(82, 82, 94) !important;
-            --button-active-bgcolor: rgb(91, 91, 102) !important;
-        }
-    }
-}
