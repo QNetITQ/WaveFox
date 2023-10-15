@@ -1019,6 +1019,8 @@ spacer[part="overflow-end-indicator"]
 
 /* ---------------------------------------- Separators ---------------------------------------- */
 
+       /*
+
 @supports -moz-bool-pref("userChrome.TabSeparatorsLowSaturation-Enabled")    or
           -moz-bool-pref("userChrome.TabSeparatorsMediumSaturation-Enabled")
 {
@@ -1093,7 +1095,10 @@ spacer[part="overflow-end-indicator"]
     }
 }
 
-/*
+       */
+
+
+
 
 .tab-stack
 {
@@ -1115,7 +1120,7 @@ spacer[part="overflow-end-indicator"]
     height: 50%;
     border-left: 1px solid currentColor;
     top: 25%;
-    opacity: var(--separators-color-saturation, 0);
+    opacity: var(--separators-color-saturation, 0.5);
     box-sizing: border-box;
     pointer-events: none;
 }
@@ -1150,7 +1155,7 @@ spacer[part="overflow-end-indicator"]
     opacity: 0 !important;
 }
        
-*/
+
 
 /* ---------------------------------------- Tab Scroll Animation ---------------------------------------- */
        
