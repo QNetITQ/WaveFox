@@ -1019,82 +1019,6 @@ spacer[part="overflow-end-indicator"]
 
 /* ---------------------------------------- Separators ---------------------------------------- */
 
-/*
-
-@supports -moz-bool-pref("userChrome.TabSeparatorsLowSaturation-Enabled")    or
-          -moz-bool-pref("userChrome.TabSeparatorsMediumSaturation-Enabled")
-{
-    .tab-stack
-    {
-        margin-inline-start: 1px !important;
-    }
-
-    #tabbrowser-tabs:not([movingtab]) .tab-stack::before
-    {
-        content: "";
-        display: block;
-        position: absolute;
-        width: 1px;
-        height: 50%;
-        border-inline-start: 1px solid currentColor;
-        top: 25%;
-        opacity: var(--separators-color-saturation);
-        box-sizing: border-box;
-        pointer-events: none;
-    }
-
-    .tab-stack::before
-    {
-        inset-inline-end: 100%;
-        transform: translateX(calc(-1 * var(--tab-separator-offset)));
-    }
-
-    :root:-moz-locale-dir(rtl) .tab-stack::before
-    {
-        transform: translateX(var(--tab-separator-offset));
-    }
-
-    .tabbrowser-tab:is(
-                       [selected]:not([hidden]),
-                       [selected]:not([hidden]) + .tabbrowser-tab:not([hidden]),
-                       [selected]:not([hidden]) + .tabbrowser-tab[hidden] + .tabbrowser-tab:not([hidden]),
-                       [selected]:not([hidden]) + .tabbrowser-tab[hidden] ~ .tabbrowser-tab[hidden] + .tabbrowser-tab:not([hidden]),
-                       :hover:not([hidden]),
-                       :hover:not([hidden]) + .tabbrowser-tab:not([hidden]),
-                       :hover:not([hidden]) + .tabbrowser-tab[hidden] + .tabbrowser-tab:not([hidden]),
-                       :hover:not([hidden]) + .tabbrowser-tab[hidden] ~ .tabbrowser-tab[hidden] + .tabbrowser-tab:not([hidden]),
-                       [multiselected]:not([hidden]),
-                       [multiselected]:not([hidden]) + .tabbrowser-tab:not([hidden]),
-                       [multiselected]:not([hidden]) + .tabbrowser-tab[hidden] + .tabbrowser-tab:not([hidden]),
-                       [multiselected]:not([hidden]) + .tabbrowser-tab[hidden] ~ .tabbrowser-tab[hidden] + .tabbrowser-tab:not([hidden])
-                      ) .tab-stack::before
-    {
-        opacity: 0 !important;
-    }
-
-    .tabbrowser-tab:nth-child(1 of :not([hidden])) .tab-stack::before,
-    #tabbrowser-tabs[overflow] .tabbrowser-tab:nth-child(1 of :not([pinned], [hidden])) .tab-stack::before
-    {
-        opacity: 0 !important;
-    }
-
-    @supports -moz-bool-pref("userChrome.TabSeparatorsLowSaturation-Enabled")
-    {
-        :root
-        {
-            --separators-color-saturation: 0.25;
-        }
-    }
-
-    @supports -moz-bool-pref("userChrome.TabSeparatorsMediumSaturation-Enabled")
-    {
-        :root
-        {
-            --separators-color-saturation: 0.5;
-        }
-    }
-}                                      */
-
 @supports -moz-bool-pref("userChrome.TabSeparatorsLowSaturation-Enabled")    or
           -moz-bool-pref("userChrome.TabSeparatorsMediumSaturation-Enabled")
 {
@@ -1118,7 +1042,7 @@ spacer[part="overflow-end-indicator"]
         box-sizing: border-box;
         pointer-events: none;
     }
-    
+
     .tab-stack::before
     {
         inset-inline-end: 100%;
@@ -1150,6 +1074,13 @@ spacer[part="overflow-end-indicator"]
         opacity: 0 !important;
     }
 
+    .tabbrowser-tab[pinned]:not([selected], :hover, [multiselected]):has(+ .tabbrowser-tab:nth-child(1 of :not([pinned], [hidden]))) .tab-stack::after,
+    .tabbrowser-tab[pinned]:not([selected], :hover, [multiselected]):has(+ .tabbrowser-tab[hidden] + .tabbrowser-tab:nth-child(1 of :not([pinned], [hidden]))) .tab-stack::after,
+    .tabbrowser-tab[pinned]:not([selected], :hover, [multiselected]):has(+ .tabbrowser-tab[hidden] ~ .tabbrowser-tab[hidden] + .tabbrowser-tab:nth-child(1 of :not([pinned], [hidden]))) .tab-stack::after
+    {
+        opacity: var(--separators-color-saturation) !important;
+    }
+
     @supports -moz-bool-pref("userChrome.TabSeparatorsLowSaturation-Enabled")
     {
         :root
@@ -1165,8 +1096,7 @@ spacer[part="overflow-end-indicator"]
             --separators-color-saturation: 0.5;
         }
     }
-}       
-
+}
 
 /* ---------------------------------------- Tab Scroll Animation ---------------------------------------- */
        
