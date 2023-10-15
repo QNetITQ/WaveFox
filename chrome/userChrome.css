@@ -1019,7 +1019,7 @@ spacer[part="overflow-end-indicator"]
 
 /* ---------------------------------------- Separators ---------------------------------------- */
 
-       /*
+/*
 
 @supports -moz-bool-pref("userChrome.TabSeparatorsLowSaturation-Enabled")    or
           -moz-bool-pref("userChrome.TabSeparatorsMediumSaturation-Enabled")
@@ -1093,68 +1093,79 @@ spacer[part="overflow-end-indicator"]
             --separators-color-saturation: 0.5;
         }
     }
-}
+}                                      */
 
-       */
-
-
-
-
-.tab-stack
+@supports -moz-bool-pref("userChrome.TabSeparatorsLowSaturation-Enabled")    or
+          -moz-bool-pref("userChrome.TabSeparatorsMediumSaturation-Enabled")
 {
-    margin-right: 1px !important;
-}
+    .tab-stack
+    {
+        margin-inline-end: 1px !important;
+    }
 
-.tabbrowser-tab:is(
-                   :not([hidden]):first-of-type,
-                   [hidden]:first-of-type + .tabbrowser-tab:not([hidden]),
-                   [hidden]:first-of-type ~ .tabbrowser-tab[hidden] + .tabbrowser-tab:not([hidden])
-                  ) .tab-stack::before,
-#tabbrowser-tabs[overflow] .tabbrowser-tab[first-visible-unpinned-tab] .tab-stack::before,
-.tab-stack::after
-{
-    content: "";
-    display: block;
-    position: absolute;
-    width: 1px;
-    height: 50%;
-    border-left: 1px solid currentColor;
-    top: 25%;
-    opacity: var(--separators-color-saturation, 0.5);
-    box-sizing: border-box;
-    pointer-events: none;
-}
+    #tabbrowser-tabs:not([movingtab]) .tabbrowser-tab:nth-child(1 of :not([hidden])) .tab-stack::before,
+    #tabbrowser-tabs[overflow][haspinnedtabs]:not([movingtab]) .tabbrowser-tab:nth-child(1 of :not([pinned], [hidden])) .tab-stack::before,
+    #tabbrowser-tabs:not([movingtab]) .tab-stack::after
+    {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 1px;
+        height: 50%;
+        border-inline-end: 1px solid currentColor;
+        top: 25%;
+        opacity: var(--separators-color-saturation);
+        box-sizing: border-box;
+        pointer-events: none;
+    }
+    
+    .tab-stack::before
+    {
+        inset-inline-end: 100%;
+        transform: translateX(calc(-1 * var(--tab-separator-offset)));
+    }
 
-.tab-stack::before
-{
-    right: 100%;
-    transform: translateX(calc(-1 * var(--tab-separator-offset)));
-}
+    :root:-moz-locale-dir(rtl) .tab-stack::before
+    {
+        transform: translateX(var(--tab-separator-offset));
+    }
 
-.tab-stack::after
-{
-    left: 100%;
-    transform: translateX(var(--tab-separator-offset));
-}
+    .tab-stack::after
+    {
+        inset-inline-start: 100%;
+        transform: translateX(var(--tab-separator-offset));
+    }
 
-#tabbrowser-tabs:is([movingtab], :first-child) .tab-stack::before,
-#tabbrowser-tabs[movingtab] .tab-stack::after
-{
-    opacity: 0;
-}
+    :root:-moz-locale-dir(rtl) .tab-stack::after
+    {
+        transform: translateX(calc(-1 * var(--tab-separator-offset)));
+    }
 
-.tabbrowser-tab:not([hidden]):is(
-                                 [selected], :hover, [multiselected], [usercontextid]
-                                ) .tab-stack::before,
-.tabbrowser-tab:not([hidden]):is(
-                                 [selected], :hover, [multiselected], [usercontextid],
-                                 :has(+ .tabbrowser-tab:not([hidden]):is([selected], :hover, [multiselected], [usercontextid])),
-                                 :has(+ .tabbrowser-tab[hidden] ~ .tabbrowser-tab:not([hidden]):is([selected], :hover, [multiselected], [usercontextid]))
-                                ) .tab-stack::after
-{
-    opacity: 0 !important;
-}
-       
+    .tabbrowser-tab:not([hidden]):is([selected], :hover, [multiselected]) .tab-stack::before,
+    .tabbrowser-tab:not([hidden]):is([selected], :hover, [multiselected]) .tab-stack::after,
+    .tabbrowser-tab:not([hidden]):has(+ .tabbrowser-tab:is([selected], :hover, [multiselected]):not([hidden])) .tab-stack::after,
+    .tabbrowser-tab:not([hidden]):has(+ .tabbrowser-tab[hidden] + .tabbrowser-tab:is([selected], :hover, [multiselected]):not([hidden])) .tab-stack::after,
+    .tabbrowser-tab:not([hidden]):has(+ .tabbrowser-tab[hidden] ~ .tabbrowser-tab[hidden] + .tabbrowser-tab:is([selected], :hover, [multiselected]):not([hidden])) .tab-stack::after
+    {
+        opacity: 0 !important;
+    }
+
+    @supports -moz-bool-pref("userChrome.TabSeparatorsLowSaturation-Enabled")
+    {
+        :root
+        {
+            --separators-color-saturation: 0.25;
+        }
+    }
+
+    @supports -moz-bool-pref("userChrome.TabSeparatorsMediumSaturation-Enabled")
+    {
+        :root
+        {
+            --separators-color-saturation: 0.5;
+        }
+    }
+}       
 
 
 /* ---------------------------------------- Tab Scroll Animation ---------------------------------------- */
