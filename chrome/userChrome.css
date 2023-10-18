@@ -401,27 +401,28 @@ and
                 background-color: var(--toolbar-bgcolor) !important;
             }
         }
-
-        &[tabsintitlebar] .titlebar-color
-        {
-            color: inherit !important;
-            --toolbarbutton-icon-fill: currentColor !important;
-            --toolbarbutton-hover-background: color-mix(in srgb, currentColor 10%, transparent) !important;
-            --toolbarbutton-active-background: color-mix(in srgb, currentColor 20%, transparent) !important;
-        }
     }
 }
 
-/* ---------------------------------------- Light Theme / Dark Theme ---------------------------------------- */
+/* ---------------------------------------- Light Theme / Dark Theme / Alpenglow ---------------------------------------- */
 
-:root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26)"] .tabbrowser-tab[visuallyselected] .tab-background
+:root:is(
+         [style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26)"],
+         [style*="--lwt-accent-color: rgb(28, 27, 34); --lwt-text-color: rgba(251, 251, 254)"],
+         [style*="--lwt-accent-color: rgb(249, 249, 251); --lwt-text-color: rgba(32, 18, 59)"],
+         [style*="--lwt-accent-color: rgb(249, 249, 251); --lwt-text-color: rgba(232, 224, 255)"]
+        )
 {
-    --tab-selected-bgcolor: initial;
-}
+    .tabbrowser-tab[visuallyselected]
+    {
+        color: var(--toolbar-color) !important;
 
-:root[style*="--lwt-accent-color: rgb(28, 27, 34); --lwt-text-color: rgba(251, 251, 254)"] .tabbrowser-tab[visuallyselected] .tab-background
-{
-    --lwt-selected-tab-background-color: initial;
+        .tab-background
+        {
+            background-color: var(--toolbar-bgcolor) !important;
+            background-image: none !important;
+        }
+    }
 }
 
 /* ---------------------------------------- Pinned Tabs Width ---------------------------------------- */
