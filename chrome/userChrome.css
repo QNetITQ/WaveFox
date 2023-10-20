@@ -2,7 +2,7 @@
 
 @import "special/windows.css" layer(HighPriority) (-moz-platform: windows);
 @import "special/linux.css"   layer(HighPriority) (-moz-platform: linux);
-@import "special/mac.css"     layer(HighPriority) (-moz-platform: macos);
+@import "special/mac.css"     layer(HighPriority) supports(appearance: -moz-mac-source-list) (-moz-platform: macos);
 
 @layer LowPriority
 {
