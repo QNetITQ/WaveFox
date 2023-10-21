@@ -171,9 +171,9 @@ By default context menus follow the selected interface density, but it is possib
 |---------|--------|-------|
 | ![изображение](https://user-images.githubusercontent.com/85301851/152645825-7d351e3e-b938-4fa1-a460-1f699ed1c3c6.png) | ![изображение](https://user-images.githubusercontent.com/85301851/152645878-d917e841-837a-4a11-8fc1-ce0fc2262aef.png) | ![изображение](https://user-images.githubusercontent.com/85301851/152645915-833c1b22-e320-445f-817e-408ea26f7605.png) |
 
-- `userChrome.CompactContextMenu-Enabled`
-- `userChrome.NormalContextMenu-Enabled`
-- `userChrome.TouchContextMenu-Enabled`
+- `userChrome.Menu.Size.Compact.Enabled`
+- `userChrome.Menu.Size.Normal.Enabled`
+- `userChrome.Menu.Size.Touch.Enabled`
 
 ### Icons
 
