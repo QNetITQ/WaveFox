@@ -197,8 +197,8 @@ By default context menus follow the selected interface density, but it is possib
 ### Pinned Tabs Width
 ![Снимок](https://user-images.githubusercontent.com/85301851/185612113-7bb0445f-8993-45bd-916d-d066e88ea7f4.PNG)
 
-- `userChrome.PinnedTabsWidthLowIncrease-Enabled`
-- `userChrome.PinnedTabsWidthHighIncrease-Enabled`
+- `userChrome.Tabs.Pinned.Width.LowOffset.Enabled`
+- `userChrome.Tabs.Pinned.Width.HighOffset.Enabled`
 
 ### Selected Tab Indicator
 ![изображение](https://github.com/QNetITQ/WaveFox/assets/85301851/c5b7c4b8-81d2-4ca2-9944-574af7e88f1d)
