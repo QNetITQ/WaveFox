@@ -16,42 +16,42 @@
 
 :root
 {
-    @supports -moz-bool-pref("userChrome.Tabs.Option1.Enabled")
+    @media (-moz-bool-pref: "userChrome.Tabs.Option1.Enabled")
     {
         --left-svg:   url("special/tabs/option_1/left_corners.svg");
         --center-svg: url("special/tabs/option_1/center.svg");
         --right-svg:  url("special/tabs/option_1/right_corners.svg");
     }
 
-    @supports -moz-bool-pref("userChrome.Tabs.Option2.Enabled")
+    @media (-moz-bool-pref: "userChrome.Tabs.Option2.Enabled")
     {
         --left-svg:   url("special/tabs/option_2/left_corners.svg");
         --center-svg: url("special/tabs/option_2/center.svg");
         --right-svg:  url("special/tabs/option_2/right_corners.svg");
     }
 
-    @supports -moz-bool-pref("userChrome.Tabs.Option3.Enabled")
+    @media (-moz-bool-pref: "userChrome.Tabs.Option3.Enabled")
     {
         --left-svg:   url("special/tabs/option_3/left_corners.svg");
         --center-svg: url("special/tabs/option_3/center.svg");
         --right-svg:  url("special/tabs/option_3/right_corners.svg");
     }
 
-    @supports -moz-bool-pref("userChrome.Tabs.Option4.Enabled")
+    @media (-moz-bool-pref: "userChrome.Tabs.Option4.Enabled")
     {
         --left-svg:   url("special/tabs/option_4/left_corners.svg");
         --center-svg: url("special/tabs/option_4/center.svg");
         --right-svg:  url("special/tabs/option_4/right_corners.svg");
     }
 
-    @supports -moz-bool-pref("userChrome.Tabs.Option5.Enabled")
+    @media (-moz-bool-pref: "userChrome.Tabs.Option5.Enabled")
     {
         --left-svg:   url("special/tabs/option_5/left_corners.svg");
         --center-svg: url("special/tabs/option_5/center.svg");
         --right-svg:  url("special/tabs/option_5/right_corners.svg");
     }
 
-    @supports -moz-bool-pref("userChrome.Tabs.Option6.Enabled")
+    @media (-moz-bool-pref: "userChrome.Tabs.Option6.Enabled")
     {
         --left-svg:   url("special/tabs/option_1/left_corners.svg");
         --center-svg: url("special/tabs/option_1/center.svg");
@@ -60,7 +60,7 @@
         --tab-first-last-inline-margin: calc(var(--tab-min-height) / 4);
     }
 
-    @supports -moz-bool-pref("userChrome.Tabs.Option7.Enabled")
+    @media (-moz-bool-pref: "userChrome.Tabs.Option7.Enabled")
     {
         --left-svg:   url("special/tabs/option_6/left_corners.svg");
         --center-svg: url("special/tabs/option_6/center.svg");
@@ -69,7 +69,7 @@
         --tab-first-last-inline-margin: calc(var(--tab-min-height) / 4);
     }
 
-    @supports -moz-bool-pref("userChrome.Tabs.Option8.Enabled")
+    @media (-moz-bool-pref: "userChrome.Tabs.Option8.Enabled")
     {
         --left-svg:   url("special/tabs/option_7/left_corners.svg");
         --center-svg: url("special/tabs/option_7/center.svg");
@@ -78,7 +78,7 @@
         --tab-first-last-inline-margin: calc(var(--tab-min-height) / 4);
     }
 
-    @supports -moz-bool-pref("userChrome.Tabs.Option9.Enabled")
+    @media (-moz-bool-pref: "userChrome.Tabs.Option9.Enabled")
     {
         --left-svg:   url("special/tabs/option_8/left_corners.svg");
         --center-svg: url("special/tabs/option_8/center.svg");
@@ -87,7 +87,7 @@
         --tab-first-last-inline-margin: calc(var(--tab-min-height) / 2);
     }
 
-    @supports -moz-bool-pref("userChrome.Tabs.Option10.Enabled")
+    @media (-moz-bool-pref: "userChrome.Tabs.Option10.Enabled")
     {
         --left-svg:   url("special/tabs/option_9/left_corners.svg");
         --center-svg: url("special/tabs/option_9/center.svg");
@@ -96,7 +96,7 @@
         --tab-first-last-inline-margin: calc(var(--tab-min-height) / 2);
     }
 
-    @supports -moz-bool-pref("userChrome.Tabs.Option11.Enabled")
+    @media (-moz-bool-pref: "userChrome.Tabs.Option11.Enabled")
     {
         --left-svg:   url("special/tabs/option_10/left_corners.svg");
         --center-svg: url("special/tabs/option_10/center.svg");
@@ -105,7 +105,7 @@
         --tab-first-last-inline-margin: calc(var(--tab-min-height) / 2);
     }
 
-    @supports -moz-bool-pref("userChrome.Tabs.Option12.Enabled")
+    @media (-moz-bool-pref: "userChrome.Tabs.Option12.Enabled")
     {
         --left-svg:   url("special/tabs/option_11/left_corners.svg");
         --center-svg: url("special/tabs/option_11/center.svg");
@@ -116,11 +116,11 @@
 
     /* -------------------- Floating Tabs -------------------- */
 
-    @supports -moz-bool-pref("userChrome.Tabs.Option1.Enabled") or
-              -moz-bool-pref("userChrome.Tabs.Option2.Enabled") or
-              -moz-bool-pref("userChrome.Tabs.Option3.Enabled") or
-              -moz-bool-pref("userChrome.Tabs.Option4.Enabled") or
-              -moz-bool-pref("userChrome.Tabs.Option5.Enabled")
+    @media (-moz-bool-pref: "userChrome.Tabs.Option1.Enabled") or
+           (-moz-bool-pref: "userChrome.Tabs.Option2.Enabled") or
+           (-moz-bool-pref: "userChrome.Tabs.Option3.Enabled") or
+           (-moz-bool-pref: "userChrome.Tabs.Option4.Enabled") or
+           (-moz-bool-pref: "userChrome.Tabs.Option5.Enabled")
     {
         --tab-first-last-inline-margin: calc(var(--tab-block-margin) / 2);
         --tab-overflow-clip-margin: var(--tab-first-last-inline-margin);
@@ -135,13 +135,13 @@
 
     /* -------------------- Attached Tabs -------------------- */
 
-    @supports -moz-bool-pref("userChrome.Tabs.Option6.Enabled")  or
-              -moz-bool-pref("userChrome.Tabs.Option7.Enabled")  or
-              -moz-bool-pref("userChrome.Tabs.Option8.Enabled")  or
-              -moz-bool-pref("userChrome.Tabs.Option9.Enabled")  or
-              -moz-bool-pref("userChrome.Tabs.Option10.Enabled") or
-              -moz-bool-pref("userChrome.Tabs.Option11.Enabled") or
-              -moz-bool-pref("userChrome.Tabs.Option12.Enabled")
+    @media (-moz-bool-pref: "userChrome.Tabs.Option6.Enabled")  or
+           (-moz-bool-pref: "userChrome.Tabs.Option7.Enabled")  or
+           (-moz-bool-pref: "userChrome.Tabs.Option8.Enabled")  or
+           (-moz-bool-pref: "userChrome.Tabs.Option9.Enabled")  or
+           (-moz-bool-pref: "userChrome.Tabs.Option10.Enabled") or
+           (-moz-bool-pref: "userChrome.Tabs.Option11.Enabled") or
+           (-moz-bool-pref: "userChrome.Tabs.Option12.Enabled")
     {
         --tab-overflow-clip-margin: var(--tab-first-last-inline-margin);
         --tab-inset-clip-path: -4px calc(-1 * var(--tab-first-last-inline-margin)) 0px;
