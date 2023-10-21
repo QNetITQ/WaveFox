@@ -1357,7 +1357,7 @@ spacer[part="overflow-end-indicator"]
 
 /* ---------- Regular Icons ---------- */
 
-@media (-moz-bool-pref: "userChrome.Icons.Regular.Enabled")
+@media (-moz-bool-pref: "userChrome.Menu.Icons.Regular.Enabled")
 {
     :root
     {
@@ -1411,7 +1411,7 @@ spacer[part="overflow-end-indicator"]
 
 /* ---------- Filled Icons ---------- */
 
-@media (-moz-bool-pref: "userChrome.Icons.Filled.Enabled")
+@media (-moz-bool-pref: "userChrome.Menu.Icons.Filled.Enabled")
 {
     :root
     {
@@ -1465,8 +1465,8 @@ spacer[part="overflow-end-indicator"]
 
 /* ---------- Native Browser Menus ---------- */
 
-@media (-moz-bool-pref: "userChrome.Icons.Regular.Enabled") or
-       (-moz-bool-pref: "userChrome.Icons.Filled.Enabled")
+@media (-moz-bool-pref: "userChrome.Menu.Icons.Regular.Enabled") or
+       (-moz-bool-pref: "userChrome.Menu.Icons.Filled.Enabled")
 {
     :is(
 
