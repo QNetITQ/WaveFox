@@ -615,7 +615,7 @@ and
 
 /* ---------------------------------------- Drag Space ---------------------------------------- */
 
-@supports -moz-bool-pref("userChrome.DragSpace.Left.Disabled")
+@media (-moz-bool-pref: "userChrome.DragSpace.Left.Disabled")
 {
     .titlebar-spacer[type="pre-tabs"]
     {
@@ -623,7 +623,7 @@ and
     }
 }
 
-@supports -moz-bool-pref("userChrome.DragSpace.Right.Disabled")
+@media (-moz-bool-pref: "userChrome.DragSpace.Right.Disabled")
 {
     .titlebar-spacer[type="post-tabs"]
     {
@@ -631,7 +631,7 @@ and
     }
 }
 
-@supports -moz-bool-pref("userChrome.DragSpace.Top.Windowed.Enabled")
+@media (-moz-bool-pref: "userChrome.DragSpace.Top.Windowed.Enabled")
 {
     :root[sizemode="normal"]
     {
@@ -639,7 +639,7 @@ and
     }
 }
 
-@supports -moz-bool-pref("userChrome.DragSpace.Top.Maximized.Enabled")
+@media (-moz-bool-pref: "userChrome.DragSpace.Top.Maximized.Enabled")
 {
     :root[sizemode="maximized"]
     {
@@ -647,7 +647,7 @@ and
     }
 }
 
-@supports -moz-bool-pref("userChrome.DragSpace.Top.Fullscreen.Enabled")
+@media (-moz-bool-pref: "userChrome.DragSpace.Top.Fullscreen.Enabled")
 {
     :root[sizemode="fullscreen"]
     {
@@ -767,7 +767,7 @@ spacer[part="overflow-end-indicator"]
 
 /* -------------------- Selected Tab Indicator -------------------- */
 
-@supports -moz-bool-pref("userChrome.Tabs.SelectedTabIndicator.Enabled")
+@media (-moz-bool-pref: "userChrome.Tabs.SelectedTabIndicator.Enabled")
 {
     .tabbrowser-tab[visuallyselected][usercontextid] .tab-background
     {
@@ -918,7 +918,6 @@ spacer[part="overflow-end-indicator"]
 .tab-label-container
 {
     height: var(--tab-min-height) !important;
-    font-size: 12px !important;
 }
 
 .tab-label
@@ -1017,8 +1016,8 @@ spacer[part="overflow-end-indicator"]
 
 /* ---------------------------------------- Separators ---------------------------------------- */
 
-@supports -moz-bool-pref("userChrome.TabSeparatorsLowSaturation-Enabled")    or
-          -moz-bool-pref("userChrome.TabSeparatorsMediumSaturation-Enabled")
+@media (-moz-bool-pref: "userChrome.TabSeparators.Saturation.Low.Enabled")    or
+       (-moz-bool-pref: "userChrome.TabSeparators.Saturation.Medium.Enabled")
 {
     .tab-stack
     {
@@ -1079,7 +1078,7 @@ spacer[part="overflow-end-indicator"]
         opacity: var(--separators-color-saturation) !important;
     }
 
-    @supports -moz-bool-pref("userChrome.TabSeparatorsLowSaturation-Enabled")
+    @media (-moz-bool-pref: "userChrome.TabSeparators.Saturation.Low.Enabled")
     {
         :root
         {
@@ -1087,7 +1086,7 @@ spacer[part="overflow-end-indicator"]
         }
     }
 
-    @supports -moz-bool-pref("userChrome.TabSeparatorsMediumSaturation-Enabled")
+    @media (-moz-bool-pref: "userChrome.TabSeparators.Saturation.Medium.Enabled")
     {
         :root
         {
