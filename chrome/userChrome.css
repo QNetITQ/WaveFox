@@ -156,25 +156,22 @@
 
 /* ---------------------------------------- Tab Frame ---------------------------------------- */
 
-@supports (
-          (
-           -moz-bool-pref("userChrome.LightTheme.TabFrameType.Border.Enabled")          or
-           -moz-bool-pref("userChrome.LightTheme.TabFrameType.Shadow.Enabled")
-          )
+@media (
+       (-moz-bool-pref: "userChrome.LightTheme.TabFrameType.Border.Enabled")          or
+       (-moz-bool-pref: "userChrome.LightTheme.TabFrameType.Shadow.Enabled")
+       )
 and
-          (
-           -moz-bool-pref("userChrome.LightTheme.TabFrameColor.Auto.Enabled")           or
-           -moz-bool-pref("userChrome.LightTheme.TabFrameColor.White.Enabled")          or
-           -moz-bool-pref("userChrome.LightTheme.TabFrameColor.Black.Enabled")
-          )
+       (
+       (-moz-bool-pref: "userChrome.LightTheme.TabFrameColor.White.Enabled")          or
+       (-moz-bool-pref: "userChrome.LightTheme.TabFrameColor.Black.Enabled")
+       )
 and
-          (
-           -moz-bool-pref("userChrome.LightTheme.TabFrameSaturation.Low.Enabled")       or
-           -moz-bool-pref("userChrome.LightTheme.TabFrameSaturation.Medium.Enabled")    or
-           -moz-bool-pref("userChrome.LightTheme.TabFrameSaturation.High.Enabled")      or
-           -moz-bool-pref("userChrome.LightTheme.TabFrameSaturation.VeryHigh.Enabled")
-          )
-          )
+       (
+       (-moz-bool-pref: "userChrome.LightTheme.TabFrameSaturation.Low.Enabled")       or
+       (-moz-bool-pref: "userChrome.LightTheme.TabFrameSaturation.Medium.Enabled")    or
+       (-moz-bool-pref: "userChrome.LightTheme.TabFrameSaturation.High.Enabled")      or
+       (-moz-bool-pref: "userChrome.LightTheme.TabFrameSaturation.VeryHigh.Enabled")
+       )
 {
     @media (prefers-color-scheme: light)
     {
@@ -197,73 +194,49 @@ and
                                  0
                                  calc(var(--shadow-blur) / 2)
                                  color-mix(in srgb, var(--shadow-color) var(--shadow-saturation), transparent));
-        }
 
-        /* ---------- Tab Frame Type ---------- */
+            /* ---------- Tab Frame Type ---------- */
 
-        @supports -moz-bool-pref("userChrome.LightTheme.TabFrameType.Border.Enabled")
-        {
-            :root
+            @supports -moz-bool-pref("userChrome.LightTheme.TabFrameType.Border.Enabled")
             {
                 --shadow-blur: 2px;
             }
-        }
 
-        @supports -moz-bool-pref("userChrome.LightTheme.TabFrameType.Shadow.Enabled")
-        {
-            :root
+            @supports -moz-bool-pref("userChrome.LightTheme.TabFrameType.Shadow.Enabled")
             {
                 --shadow-blur: 4px;
             }
-        }
 
-        /* ---------- Tab Frame Color ---------- */
+            /* ---------- Tab Frame Color ---------- */
 
-        @supports -moz-bool-pref("userChrome.LightTheme.TabFrameColor.White.Enabled")
-        {
-            :root
+            @supports -moz-bool-pref("userChrome.LightTheme.TabFrameColor.White.Enabled")
             {
                 --shadow-color: rgb(255,255,255);
             }
-        }
 
-        @supports -moz-bool-pref("userChrome.LightTheme.TabFrameColor.Black.Enabled")
-        {
-            :root
+            @supports -moz-bool-pref("userChrome.LightTheme.TabFrameColor.Black.Enabled")
             {
                 --shadow-color: rgb(0,0,0);
             }
-        }
 
-        /* ---------- Tab Frame Saturation ---------- */
+            /* ---------- Tab Frame Saturation ---------- */
 
-        @supports -moz-bool-pref("userChrome.LightTheme.TabFrameSaturation.Low.Enabled")
-        {
-            :root
+            @supports -moz-bool-pref("userChrome.LightTheme.TabFrameSaturation.Low.Enabled")
             {
                 --shadow-saturation: 10%;
             }
-        }
 
-        @supports -moz-bool-pref("userChrome.LightTheme.TabFrameSaturation.Medium.Enabled")
-        {
-            :root
+            @supports -moz-bool-pref("userChrome.LightTheme.TabFrameSaturation.Medium.Enabled")
             {
                 --shadow-saturation: 25%;
             }
-        }
 
-        @supports -moz-bool-pref("userChrome.LightTheme.TabFrameSaturation.High.Enabled")
-        {
-            :root
+            @supports -moz-bool-pref("userChrome.LightTheme.TabFrameSaturation.High.Enabled")
             {
                 --shadow-saturation: 50%;
             }
-        }
 
-        @supports -moz-bool-pref("userChrome.LightTheme.TabFrameSaturation.VeryHigh.Enabled")
-        {
-            :root
+            @supports -moz-bool-pref("userChrome.LightTheme.TabFrameSaturation.VeryHigh.Enabled")
             {
                 --shadow-saturation: 100%;
             }
