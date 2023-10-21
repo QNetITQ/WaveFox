@@ -1,7 +1,7 @@
 # *WaveFox*
 
 ##### Minimum Requirements
-- Firefox 119
+- Firefox 120
 - Firefox 115 ESR
 - Windows
 - MacOS
@@ -9,9 +9,8 @@
 
 ###### Have a question not related to this project? These resources will help you
 - [Mozilla support](https://support.mozilla.org/en-US/)
-- [Reddit (New)](https://www.reddit.com/r/MozillaFirefox)
-- [Reddit (Old / Restricted?)](https://www.reddit.com/r/firefox)
-- [Fedia](https://www.fedia.io/m/firefox)
+- [Reddit (Main)](https://www.reddit.com/r/firefox)
+- [Reddit (Alt)](https://www.reddit.com/r/MozillaFirefox)
 - [Reddit (CSS)](https://www.reddit.com/r/FirefoxCSS)
 
 ## Attention!
@@ -180,8 +179,8 @@ By default context menus follow the selected interface density, but it is possib
 |---------|--------|
 | ![изображение](https://user-images.githubusercontent.com/85301851/151192118-0cbdb5a7-a77f-4275-8841-2ac321657c86.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151192708-5ae7691c-ce07-49d8-b4fb-fc58692b63fe.png) |
 
-- `userChrome.RegularMenuIcons-Enabled`
-- `userChrome.FilledMenuIcons-Enabled`
+- `userChrome.Icons.Regular.Enabled`
+- `userChrome.Icons.Filled.Enabled`
 - `svg.context-properties.content.enabled` (Required key)
 
 ### Drag Space
