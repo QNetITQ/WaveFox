@@ -1,5 +1,7 @@
 # *WaveFox*
 
+### <i>This page contains a description of the beta version of the style</i>
+
 ##### Minimum Requirements
 - Firefox 120
 - Firefox 115 ESR
