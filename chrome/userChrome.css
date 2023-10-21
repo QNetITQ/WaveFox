@@ -1130,7 +1130,7 @@ spacer[part="overflow-end-indicator"]
 
 /* ---------------------------------------- Tabs On Bottom ---------------------------------------- */
 
-@supports -moz-bool-pref("userChrome.Tabs.TabsOnBottom.Enabled")
+@media (-moz-bool-pref: "userChrome.Tabs.TabsOnBottom.Enabled")
 {
     /* -------------------- Title Bar -------------------- */
 
@@ -1186,28 +1186,28 @@ spacer[part="overflow-end-indicator"]
 
 /* ---------------------------------------- One Line ---------------------------------------- */
 
-@supports -moz-bool-pref("userChrome.OneLine.TabBarFirst.Enabled") or
-          -moz-bool-pref("userChrome.OneLine.NavBarFirst.Enabled")
+@media (-moz-bool-pref: "userChrome.OneLine.TabBarFirst.Enabled") or
+       (-moz-bool-pref: "userChrome.OneLine.NavBarFirst.Enabled")
 {
     :root
     {
-        @supports -moz-bool-pref("userChrome.OneLine.NavBarWidth.Low.Enabled")
+        @media (-moz-bool-pref: "userChrome.OneLine.NavBarWidth.Low.Enabled")
         {
             --navbar-width: 20%;
         }
 
-        @supports -moz-bool-pref("userChrome.OneLine.NavBarWidth.Medium.Enabled")
+        @media (-moz-bool-pref: "userChrome.OneLine.NavBarWidth.Medium.Enabled")
         {
             --navbar-width: 30%;
         }
 
-        @supports -moz-bool-pref("userChrome.OneLine.NavBarWidth.High.Enabled")
+        @media (-moz-bool-pref: "userChrome.OneLine.NavBarWidth.High.Enabled")
         {
             --navbar-width: 40%;
         }
     }
 
-    @supports -moz-bool-pref("userChrome.OneLine.TabBarFirst.Enabled")
+    @media (-moz-bool-pref: "userChrome.OneLine.TabBarFirst.Enabled")
     {
         #navigator-toolbox
         {
@@ -1220,7 +1220,7 @@ spacer[part="overflow-end-indicator"]
         }
     }
 
-    @supports -moz-bool-pref("userChrome.OneLine.NavBarFirst.Enabled")
+    @media (-moz-bool-pref: "userChrome.OneLine.NavBarFirst.Enabled")
     {
         #navigator-toolbox
         {
@@ -1321,11 +1321,11 @@ spacer[part="overflow-end-indicator"]
 
     /* -------------------- Floating Tabs -------------------- */
 
-    @supports -moz-bool-pref("userChrome.Tabs.Option1.Enabled") or
-              -moz-bool-pref("userChrome.Tabs.Option2.Enabled") or
-              -moz-bool-pref("userChrome.Tabs.Option3.Enabled") or
-              -moz-bool-pref("userChrome.Tabs.Option4.Enabled") or
-              -moz-bool-pref("userChrome.Tabs.Option5.Enabled")
+    @media (-moz-bool-pref: "userChrome.Tabs.Option1.Enabled") or
+           (-moz-bool-pref: "userChrome.Tabs.Option2.Enabled") or
+           (-moz-bool-pref: "userChrome.Tabs.Option3.Enabled") or
+           (-moz-bool-pref: "userChrome.Tabs.Option4.Enabled") or
+           (-moz-bool-pref: "userChrome.Tabs.Option5.Enabled")
     {
         #nav-bar
         {
@@ -1343,9 +1343,9 @@ spacer[part="overflow-end-indicator"]
 
     /* -------------------- Attached Tabs -------------------- */
 
-    @supports -moz-bool-pref("userChrome.Tabs.Option6.Enabled") or
-              -moz-bool-pref("userChrome.Tabs.Option7.Enabled") or
-              -moz-bool-pref("userChrome.Tabs.Option8.Enabled")
+    @media (-moz-bool-pref: "userChrome.Tabs.Option6.Enabled") or
+           (-moz-bool-pref: "userChrome.Tabs.Option7.Enabled") or
+           (-moz-bool-pref: "userChrome.Tabs.Option8.Enabled")
     {
         #nav-bar
         {
@@ -1362,10 +1362,10 @@ spacer[part="overflow-end-indicator"]
         }
     }
 
-    @supports -moz-bool-pref("userChrome.Tabs.Option9.Enabled")  or
-              -moz-bool-pref("userChrome.Tabs.Option10.Enabled") or
-              -moz-bool-pref("userChrome.Tabs.Option11.Enabled") or
-              -moz-bool-pref("userChrome.Tabs.Option12.Enabled")
+    @media (-moz-bool-pref: "userChrome.Tabs.Option9.Enabled")  or
+           (-moz-bool-pref: "userChrome.Tabs.Option10.Enabled") or
+           (-moz-bool-pref: "userChrome.Tabs.Option11.Enabled") or
+           (-moz-bool-pref: "userChrome.Tabs.Option12.Enabled")
     {
         #nav-bar
         {
@@ -1383,13 +1383,13 @@ spacer[part="overflow-end-indicator"]
 
 /* ---------------------------------------- Rounded Elements ---------------------------------------- */
 
-@supports -moz-bool-pref("userChrome.Tabs.Option3.Enabled")  or
-          -moz-bool-pref("userChrome.Tabs.Option4.Enabled")  or
-          -moz-bool-pref("userChrome.Tabs.Option5.Enabled")  or
-          -moz-bool-pref("userChrome.Tabs.Option8.Enabled")  or
-          -moz-bool-pref("userChrome.Tabs.Option9.Enabled")  or
-          -moz-bool-pref("userChrome.Tabs.Option11.Enabled") or
-          -moz-bool-pref("userChrome.Tabs.Option12.Enabled")
+@media (-moz-bool-pref: "userChrome.Tabs.Option3.Enabled")  or
+       (-moz-bool-pref: "userChrome.Tabs.Option4.Enabled")  or
+       (-moz-bool-pref: "userChrome.Tabs.Option5.Enabled")  or
+       (-moz-bool-pref: "userChrome.Tabs.Option8.Enabled")  or
+       (-moz-bool-pref: "userChrome.Tabs.Option9.Enabled")  or
+       (-moz-bool-pref: "userChrome.Tabs.Option11.Enabled") or
+       (-moz-bool-pref: "userChrome.Tabs.Option12.Enabled")
 {
     #tabs-newtab-button > .toolbarbutton-icon
     {
@@ -1401,7 +1401,7 @@ spacer[part="overflow-end-indicator"]
 
 /* ---------- Regular Icons ---------- */
 
-@supports -moz-bool-pref("userChrome.RegularMenuIcons-Enabled")
+@media (-moz-bool-pref: "userChrome.Icons.Regular.Enabled")
 {
     :root
     {
@@ -1455,7 +1455,7 @@ spacer[part="overflow-end-indicator"]
 
 /* ---------- Filled Icons ---------- */
 
-@supports -moz-bool-pref("userChrome.FilledMenuIcons-Enabled")
+@media (-moz-bool-pref: "userChrome.Icons.Filled.Enabled")
 {
     :root
     {
@@ -1509,8 +1509,8 @@ spacer[part="overflow-end-indicator"]
 
 /* ---------- Native Browser Menus ---------- */
 
-@supports -moz-bool-pref("userChrome.RegularMenuIcons-Enabled") or
-          -moz-bool-pref("userChrome.FilledMenuIcons-Enabled")
+@media (-moz-bool-pref: "userChrome.Icons.Regular.Enabled") or
+       (-moz-bool-pref: "userChrome.Icons.Filled.Enabled")
 {
     :is(
 
