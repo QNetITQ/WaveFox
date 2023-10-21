@@ -1,5 +1,5 @@
-@supports -moz-bool-pref("userChrome.RegularMenuIcons-Enabled") or
-          -moz-bool-pref("userChrome.FilledMenuIcons-Enabled")
+@media (-moz-bool-pref: "userChrome.Icons.Regular.Enabled") or
+       (-moz-bool-pref: "userChrome.Icons.Filled.Enabled")
 {
     :root
     {
@@ -7,10 +7,10 @@
     }
 }
 
-@supports -moz-bool-pref("userChrome.Linux.Transparency.Low.Enabled")      or
-          -moz-bool-pref("userChrome.Linux.Transparency.Medium.Enabled")   or
-          -moz-bool-pref("userChrome.Linux.Transparency.High.Enabled")     or
-          -moz-bool-pref("userChrome.Linux.Transparency.VeryHigh.Enabled")
+@media (-moz-bool-pref: "userChrome.Linux.Transparency.Low.Enabled")      or
+       (-moz-bool-pref: "userChrome.Linux.Transparency.Medium.Enabled")   or
+       (-moz-bool-pref: "userChrome.Linux.Transparency.High.Enabled")     or
+       (-moz-bool-pref: "userChrome.Linux.Transparency.VeryHigh.Enabled")
 {
     :root
     {
