@@ -478,9 +478,9 @@ and
 
 /* ---------------------------------------- Toolbar Transparency ---------------------------------------- */
 
-@supports -moz-bool-pref("userChrome.Toolbar.Transparency.Low.Enabled")    or
-          -moz-bool-pref("userChrome.Toolbar.Transparency.Medium.Enabled") or
-          -moz-bool-pref("userChrome.Toolbar.Transparency.High.Enabled")
+@media (-moz-bool-pref: "userChrome.Toolbar.Transparency.Low.Enabled")    or
+       (-moz-bool-pref: "userChrome.Toolbar.Transparency.Medium.Enabled") or
+       (-moz-bool-pref: "userChrome.Toolbar.Transparency.High.Enabled")
 {
     :root[tabsintitlebar]:not(:-moz-lwtheme)
     {
@@ -493,24 +493,24 @@ and
         --urlbar-box-hover-bgcolor: color-mix(in srgb, currentColor 10%, transparent) !important;
         --urlbar-box-active-bgcolor: color-mix(in srgb, currentColor 20%, transparent) !important;
 
-        @supports -moz-bool-pref("userChrome.Toolbar.Transparency.Low.Enabled")
+        @media (-moz-bool-pref: "userChrome.Toolbar.Transparency.Low.Enabled")
         {
             --toolbar-transparency: 25%;
         }
 
-        @supports -moz-bool-pref("userChrome.Toolbar.Transparency.Medium.Enabled")
+        @media (-moz-bool-pref: "userChrome.Toolbar.Transparency.Medium.Enabled")
         {
             --toolbar-transparency: 50%;
         }
 
-        @supports -moz-bool-pref("userChrome.Toolbar.Transparency.High.Enabled")
+        @media (-moz-bool-pref: "userChrome.Toolbar.Transparency.High.Enabled")
         {
             --toolbar-transparency: 75%;
         }
     }
 }
 
-@supports -moz-bool-pref("userChrome.Toolbar.Transparency.VeryHigh.Enabled")
+@media (-moz-bool-pref: "userChrome.Toolbar.Transparency.VeryHigh.Enabled")
 {
     :root[tabsintitlebar]:not(:-moz-lwtheme)
     {
@@ -557,11 +557,11 @@ and
     --tab-min-height: 40px !important;
 }
 
-/* ---------------------------------------- Context Menus (Not System Related) ---------------------------------------- */
+/* ---------------------------------------- Context Menu (Not System Related) ---------------------------------------- */
 
-@supports -moz-bool-pref("userChrome.CompactContextMenu-Enabled") or
-          -moz-bool-pref("userChrome.NormalContextMenu-Enabled") or
-          -moz-bool-pref("userChrome.TouchContextMenu-Enabled")
+@media (-moz-bool-pref: "userChrome.Menu.Size.Compact.Enabled") or
+       (-moz-bool-pref: "userChrome.Menu.Size.Normal.Enabled")  or
+       (-moz-bool-pref: "userChrome.Menu.Size.Touch.Enabled")
 {
     :root
     {
@@ -573,30 +573,21 @@ and
         --panel-separator-margin-vertical:    var(--browser-context-menu-margin-padding) !important;
         --panel-subview-body-padding-block:   var(--browser-context-menu-margin-padding) !important;
         --panel-subview-body-padding-inline:  0px !important;
-    }
-}
 
-@supports -moz-bool-pref("userChrome.CompactContextMenu-Enabled")
-{
-    :root
-    {
-        --browser-context-menu-margin-padding: 4px;
-    }
-}
+        @media (-moz-bool-pref: "userChrome.Menu.Size.Compact.Enabled")
+        {
+            --browser-context-menu-margin-padding: 4px;
+        }
 
-@supports -moz-bool-pref("userChrome.NormalContextMenu-Enabled")
-{
-    :root
-    {
-        --browser-context-menu-margin-padding: 6px;
-    }
-}
+        @media (-moz-bool-pref: "userChrome.Menu.Size.Normal.Enabled")
+        {
+            --browser-context-menu-margin-padding: 6px;
+        }
 
-@supports -moz-bool-pref("userChrome.TouchContextMenu-Enabled")
-{
-    :root
-    {
-        --browser-context-menu-margin-padding: 8px;
+        @media (-moz-bool-pref: "userChrome.Menu.Size.Touch.Enabled")
+        {
+            --browser-context-menu-margin-padding: 8px;
+        }
     }
 }
 
