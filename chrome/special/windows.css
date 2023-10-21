@@ -16,8 +16,8 @@
     }
 }
 
-@media (-moz-bool-pref: "userChrome.Icons.Regular.Enabled") or
-       (-moz-bool-pref: "userChrome.Icons.Filled.Enabled")
+@media (-moz-bool-pref: "userChrome.Menu.Icons.Regular.Enabled") or
+       (-moz-bool-pref: "userChrome.Menu.Icons.Filled.Enabled")
 {
     :root
     {
