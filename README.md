@@ -161,8 +161,8 @@ The tab frame consists of type, color and saturation.
 ### Tab Separators
 ![изображение](https://user-images.githubusercontent.com/85301851/152351312-f6ad4578-e7d5-40b7-8b2d-49388a750f54.png)
 
-- `userChrome.TabSeparatorsLowSaturation-Enabled`
-- `userChrome.TabSeparatorsMediumSaturation-Enabled`
+- `userChrome.TabSeparators.Saturation.Low.Enabled`
+- `userChrome.TabSeparators.Saturation.Medium.Enabled`
 
 ### Menu Density
 By default context menus follow the selected interface density, but it is possible to set a fixed size.
