@@ -1,13 +1,7 @@
 # *WaveFox*
 
-### <i>This page contains a description of the beta version of the style</i>
-
-##### Minimum Requirements
-- Firefox 120
-- Firefox 115 ESR
-- Windows
-- MacOS
-- Linux
+## Attention!
+- All the necessary information is in the [releases section](https://github.com/QNetITQ/WaveFox/releases)
 
 ###### Have a question not related to this project? These resources will help you
 - [Mozilla support](https://support.mozilla.org/en-US/)
@@ -15,14 +9,13 @@
 - [Reddit (Alt)](https://www.reddit.com/r/MozillaFirefox)
 - [Reddit (CSS)](https://www.reddit.com/r/FirefoxCSS)
 
-## Attention!
-- Do not use the Beta version of the style as it may be unstable
-- There are 3 styles available - Beta, Regular and ESR. ESR style is for Firefox 115 ESR only. The Regular style is for the specified browser version, but generally works with newer versions as well. Beta style is only for a future version of the browser.
-- The ESR style is updated only when needed. The regular style is updated once a month. Updates contain various fixes, compatibility with the new version of the browser, removal of obsolete code and the addition of new options
-- The installation steps and available options are different for each style
-- All the necessary information is in the [releases section](https://github.com/QNetITQ/WaveFox/releases)
-
 ## Installation
+
+##### Minimum Requirements
+- Firefox 120
+- Windows
+- MacOS
+- Linux
 
 - [Download Firefox](https://www.mozilla.org/en-US/firefox/all/#product-desktop-release) / [Download WaveFox](https://github.com/QNetITQ/WaveFox/releases)
 
