@@ -1,7 +1,9 @@
 # *WaveFox*
 
-## Attention!
-- All the necessary information is in the [releases section](https://github.com/QNetITQ/WaveFox/releases)
+## Releases
+- [All available releases](https://github.com/QNetITQ/WaveFox/releases)
+- [Main Page / WaveFox for Firefox 119](https://github.com/QNetITQ/WaveFox/tree/v1.6.119)
+- [Main Page / WaveFox for Firefox 115 ESR](https://github.com/QNetITQ/WaveFox/tree/v1.6.115)
 
 ###### Have a question not related to this project? These resources will help you
 - [Mozilla support](https://support.mozilla.org/en-US/)
