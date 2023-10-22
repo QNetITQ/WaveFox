@@ -11,12 +11,12 @@
 
 ## Installation
 
-##### Minimum Requirements
-- Firefox 120
-- Windows
-- MacOS
-- Linux
-----------------------------------------------------------------------------------------------------------------------------------------------------------
+- ##### Minimum Requirements
+  - Firefox 120
+  - Windows
+  - MacOS
+  - Linux
+
 - [Download Firefox](https://www.mozilla.org/en-US/firefox/all/#product-desktop-release) / [Download WaveFox](https://github.com/QNetITQ/WaveFox/releases)
 
 - Download the `chrome` folder and put it in your user profile folder
