@@ -9,7 +9,7 @@
 ## Installation
 
 - ##### Minimum Requirements
-  - Firefox 120 (This page)
+  - Firefox 120 Beta (This page)
   - [Firefox 119 (Home page, installation, available options)](https://github.com/QNetITQ/WaveFox/tree/v1.6.119)
   - [Firefox 115 ESR (Home page, installation, available options)](https://github.com/QNetITQ/WaveFox/tree/v1.6.115)
   - Windows
