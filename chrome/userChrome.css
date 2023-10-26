@@ -1328,32 +1328,6 @@ spacer[part="overflow-end-indicator"]
     }
 }
 
-/* ---------------------------------------- Rounded Elements ---------------------------------------- */
-
-@media (-moz-bool-pref: "userChrome.Tabs.Option3.Enabled")  or
-       (-moz-bool-pref: "userChrome.Tabs.Option4.Enabled")  or
-       (-moz-bool-pref: "userChrome.Tabs.Option5.Enabled")  or
-       (-moz-bool-pref: "userChrome.Tabs.Option8.Enabled")  or
-       (-moz-bool-pref: "userChrome.Tabs.Option9.Enabled")  or
-       (-moz-bool-pref: "userChrome.Tabs.Option11.Enabled") or
-       (-moz-bool-pref: "userChrome.Tabs.Option12.Enabled")
-{
-    #tabs-newtab-button > .toolbarbutton-icon
-    {
-        border-radius: 50% !important;
-    }
-
-    :root
-    {
-        --urlbar-icon-border-radius: 50px !important;
-    }
-
-    #urlbar:not([open]) #urlbar-background, #searchbar
-    {
-        border-radius: 50px !important;
-    }
-}
-
 /* ---------------------------------------- Menu Icons ---------------------------------------- */
 
 /* ---------- Regular Icons ---------- */
