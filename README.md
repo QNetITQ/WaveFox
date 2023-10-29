@@ -124,7 +124,7 @@ Works only with the system theme.
 - `userChrome.Toolbar.Transparency.VeryHigh.Enabled`
 
 ### Tab Frame
-Two tab frames are available. Both consist of type, color and saturation. Can be used individually or simultaneously. In most cases there is no point in using both. However, it can be useful if there is not enough contrast.
+Two tab frames are available. Both consist of type, color and saturation. Can be used individually or simultaneously. In most cases there is no point in using both. However, it can be useful if there is not enough contrast. Not compatible with themes using translucent surfaces.
 ![изображение](https://user-images.githubusercontent.com/85301851/152011749-4d5619b3-0fd8-40f9-a3dc-96be31839971.png)
 
 ##### Light Theme
