@@ -622,10 +622,6 @@ and
     {
         --toolbar-bgcolor: color-mix(in srgb, -moz-Dialog, transparent var(--toolbar-transparency)) !important;
         --toolbar-field-background-color: color-mix(in srgb, Field, transparent var(--toolbar-transparency)) !important;
-        --outer-drop-shadow: none !important;
-        --inner-box-shadow: none !important;
-        --additional-outer-drop-shadow: none !important;
-        --additional-inner-box-shadow: none !important;
         --toolbarbutton-hover-background: color-mix(in srgb, currentColor 10%, transparent) !important;
         --toolbarbutton-active-background: color-mix(in srgb, currentColor 20%, transparent) !important;
         --urlbar-box-hover-bgcolor: color-mix(in srgb, currentColor 10%, transparent) !important;
@@ -829,8 +825,8 @@ spacer[part="overflow-end-indicator"]
     {
         position: relative;
         z-index: 2 !important;
-        filter: var(--additional-outer-drop-shadow, 0 0 0 transparent)
-                var(--outer-drop-shadow, 0 0 0 transparent);
+        filter: var(--additional-outer-drop-shadow, drop-shadow(0 0 0 transparent))
+                var(--outer-drop-shadow, drop-shadow(0 0 0 transparent));
     }
 
     &:not([visuallyselected])
@@ -1411,8 +1407,8 @@ spacer[part="overflow-end-indicator"]
         -moz-context-properties: fill;
         z-index: -1;
         pointer-events: none;
-        filter: var(--additional-outer-drop-shadow, 0 0 0 transparent)
-                var(--outer-drop-shadow, 0 0 0 transparent);
+        filter: var(--additional-outer-drop-shadow, drop-shadow(0 0 0 transparent))
+                var(--outer-drop-shadow, drop-shadow(0 0 0 transparent));
     }
 
     #urlbar-container,
