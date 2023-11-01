@@ -460,23 +460,6 @@ and
                 background-color: var(--toolbar-bgcolor) !important;
             }
         }
-
-        &[tabsintitlebar] .titlebar-color
-        {
-            --toolbarbutton-icon-fill: currentColor !important;
-            --toolbarbutton-hover-background: color-mix(in srgb, currentColor 10%, transparent) !important;
-            --toolbarbutton-active-background: color-mix(in srgb, currentColor 20%, transparent) !important;
-        }
-
-        &[tabsintitlebar] .tab-label-container
-        {
-            opacity: 1 !important;
-
-            *
-            {
-                opacity: 1 !important;
-            }
-        }
     }
 }
 
@@ -556,10 +539,10 @@ and
     {
         --toolbar-bgcolor: color-mix(in srgb, -moz-Dialog, transparent var(--toolbar-transparency)) !important;
         --toolbar-field-background-color: color-mix(in srgb, Field, transparent var(--toolbar-transparency)) !important;
-        --toolbarbutton-hover-background: color-mix(in srgb, currentColor 10%, transparent) !important;
-        --toolbarbutton-active-background: color-mix(in srgb, currentColor 20%, transparent) !important;
-        --urlbar-box-hover-bgcolor: color-mix(in srgb, currentColor 10%, transparent) !important;
-        --urlbar-box-active-bgcolor: color-mix(in srgb, currentColor 20%, transparent) !important;
+        --toolbarbutton-hover-background: color-mix(in srgb, currentColor 17%, transparent) !important;
+        --toolbarbutton-active-background: color-mix(in srgb, currentColor 30%, transparent) !important;
+        --urlbar-box-hover-bgcolor: color-mix(in srgb, currentColor 17%, transparent) !important;
+        --urlbar-box-active-bgcolor: color-mix(in srgb, currentColor 30%, transparent) !important;
 
         @media (-moz-bool-pref: "userChrome.Toolbar.Transparency.Low.Enabled")
         {
@@ -584,8 +567,8 @@ and
     {
         --toolbar-bgcolor: transparent !important;
         --toolbar-field-background-color: Field !important;
-        --toolbarbutton-hover-background: color-mix(in srgb, currentColor 10%, transparent) !important;
-        --toolbarbutton-active-background: color-mix(in srgb, currentColor 20%, transparent) !important;
+        --toolbarbutton-hover-background: color-mix(in srgb, currentColor 17%, transparent) !important;
+        --toolbarbutton-active-background: color-mix(in srgb, currentColor 30%, transparent) !important;
 
         .tabbrowser-tab[visuallyselected] .tab-background
         {
