@@ -1,14 +1,1 @@
-:root[tabsintitlebar]:not(:-moz-lwtheme)
-{
-    appearance: -moz-mac-source-list !important;
 
-    #navigator-toolbox
-    {
-        background-color: transparent !important;
-    }
-
-    .tab-content:not(:hover):-moz-window-inactive
-    {
-        opacity: 0.5 !important;
-    }
-}
