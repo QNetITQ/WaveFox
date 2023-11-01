@@ -267,180 +267,46 @@
     }
 }
 
-/* ---------------------------------------- Additional Tab Frame ---------------------------------------- */
+/* ---------------------------------------- Tab Bar Borders ---------------------------------------- */
 
-@media (
-       (-moz-bool-pref: "userChrome.LightTheme.AdditionalTabFrameType.Border.Enabled")          or
-       (-moz-bool-pref: "userChrome.LightTheme.AdditionalTabFrameType.Shadow.Enabled")
-       )
-and
-       (
-       (-moz-bool-pref: "userChrome.LightTheme.AdditionalTabFrameColor.White.Enabled")          or
-       (-moz-bool-pref: "userChrome.LightTheme.AdditionalTabFrameColor.Black.Enabled")
-       )
-and
-       (
-       (-moz-bool-pref: "userChrome.LightTheme.AdditionalTabFrameSaturation.Low.Enabled")       or
-       (-moz-bool-pref: "userChrome.LightTheme.AdditionalTabFrameSaturation.Medium.Enabled")    or
-       (-moz-bool-pref: "userChrome.LightTheme.AdditionalTabFrameSaturation.High.Enabled")      or
-       (-moz-bool-pref: "userChrome.LightTheme.AdditionalTabFrameSaturation.VeryHigh.Enabled")
-       )
+@media (-moz-bool-pref: "userChrome.LightTheme.Tabs.Borders.Enabled")
 {
     @media (prefers-color-scheme: light)
     {
         :root
         {
-            --additional-outer-box-shadow: 0
-                                           0
-                                           var(--additional-shadow-blur)
-                                           color-mix(in srgb, var(--additional-shadow-color) var(--additional-shadow-saturation), transparent);
+            --border-width: 1px;
+            --border-color: var(--lwt-tab-line-color, var(--focus-outline-color));
 
-            --additional-inner-box-shadow: inset
-                                           0
-                                           calc(-1 * var(--additional-shadow-blur))
-                                           var(--additional-shadow-blur)
-                                           calc(-1 * var(--additional-shadow-blur))
-                                           color-mix(in srgb, var(--additional-shadow-color) var(--additional-shadow-saturation), transparent);
+            --outer-box-border: 0 0 0 var(--border-width) var(--border-color);
 
-            --additional-outer-drop-shadow: drop-shadow(
-                                            0
-                                            0
-                                            calc(var(--additional-shadow-blur) / 2)
-                                            color-mix(in srgb, var(--additional-shadow-color) var(--additional-shadow-saturation), transparent));
+            --inner-box-border: inset 0 calc(-1 * var(--border-width)) 0 var(--border-color);
 
-            /* ---------- Tab Frame Type ---------- */
-
-            @media (-moz-bool-pref: "userChrome.LightTheme.AdditionalTabFrameType.Border.Enabled")
-            {
-                --additional-shadow-blur: 2px;
-            }
-
-            @media (-moz-bool-pref: "userChrome.LightTheme.AdditionalTabFrameType.Shadow.Enabled")
-            {
-                --additional-shadow-blur: 4px;
-            }
-
-            /* ---------- Tab Frame Color ---------- */
-
-            @media (-moz-bool-pref: "userChrome.LightTheme.AdditionalTabFrameColor.White.Enabled")
-            {
-                --additional-shadow-color: rgb(255,255,255);
-            }
-
-            @media (-moz-bool-pref: "userChrome.LightTheme.AdditionalTabFrameColor.Black.Enabled")
-            {
-                --additional-shadow-color: rgb(0,0,0);
-            }
-
-            /* ---------- Tab Frame Saturation ---------- */
-
-            @media (-moz-bool-pref: "userChrome.LightTheme.AdditionalTabFrameSaturation.Low.Enabled")
-            {
-                --additional-shadow-saturation: 10%;
-            }
-
-            @media (-moz-bool-pref: "userChrome.LightTheme.AdditionalTabFrameSaturation.Medium.Enabled")
-            {
-                --additional-shadow-saturation: 25%;
-            }
-
-            @media (-moz-bool-pref: "userChrome.LightTheme.AdditionalTabFrameSaturation.High.Enabled")
-            {
-                --additional-shadow-saturation: 50%;
-            }
-
-            @media (-moz-bool-pref: "userChrome.LightTheme.AdditionalTabFrameSaturation.VeryHigh.Enabled")
-            {
-                --additional-shadow-saturation: 100%;
-            }
+            --outer-drop-border: drop-shadow(0 calc(-1 * var(--border-width)) 0 var(--border-color))
+                                 drop-shadow(var(--border-width) 0 0 var(--border-color))
+                                 drop-shadow(0 var(--border-width) 0 var(--border-color))
+                                 drop-shadow(calc(-1 * var(--border-width)) 0 0 var(--border-color));
         }
     }
 }
 
-@media (
-       (-moz-bool-pref: "userChrome.DarkTheme.AdditionalTabFrameType.Border.Enabled")          or
-       (-moz-bool-pref: "userChrome.DarkTheme.AdditionalTabFrameType.Shadow.Enabled")
-       )
-and
-       (
-       (-moz-bool-pref: "userChrome.DarkTheme.AdditionalTabFrameColor.White.Enabled")          or
-       (-moz-bool-pref: "userChrome.DarkTheme.AdditionalTabFrameColor.Black.Enabled")
-       )
-and
-       (
-       (-moz-bool-pref: "userChrome.DarkTheme.AdditionalTabFrameSaturation.Low.Enabled")       or
-       (-moz-bool-pref: "userChrome.DarkTheme.AdditionalTabFrameSaturation.Medium.Enabled")    or
-       (-moz-bool-pref: "userChrome.DarkTheme.AdditionalTabFrameSaturation.High.Enabled")      or
-       (-moz-bool-pref: "userChrome.DarkTheme.AdditionalTabFrameSaturation.VeryHigh.Enabled")
-       )
+@media (-moz-bool-pref: "userChrome.DarkTheme.Tabs.Borders.Enabled")
 {
-    @media (prefers-color-scheme: light)
+    @media (prefers-color-scheme: dark)
     {
         :root
         {
-            --additional-outer-box-shadow: 0
-                                           0
-                                           var(--additional-shadow-blur)
-                                           color-mix(in srgb, var(--additional-shadow-color) var(--additional-shadow-saturation), transparent);
+            --border-width: 1px;
+            --border-color: var(--lwt-tab-line-color, var(--focus-outline-color));
 
-            --additional-inner-box-shadow: inset
-                                           0
-                                           calc(-1 * var(--additional-shadow-blur))
-                                           var(--additional-shadow-blur)
-                                           calc(-1 * var(--additional-shadow-blur))
-                                           color-mix(in srgb, var(--additional-shadow-color) var(--additional-shadow-saturation), transparent);
+            --outer-box-border: 0 0 0 var(--border-width) var(--border-color);
 
-            --additional-outer-drop-shadow: drop-shadow(
-                                            0
-                                            0
-                                            calc(var(--additional-shadow-blur) / 2)
-                                            color-mix(in srgb, var(--additional-shadow-color) var(--additional-shadow-saturation), transparent));
+            --inner-box-border: inset 0 calc(-1 * var(--border-width)) 0 var(--border-color);
 
-            /* ---------- Tab Frame Type ---------- */
-
-            @media (-moz-bool-pref: "userChrome.DarkTheme.AdditionalTabFrameType.Border.Enabled")
-            {
-                --additional-shadow-blur: 2px;
-            }
-
-            @media (-moz-bool-pref: "userChrome.DarkTheme.AdditionalTabFrameType.Shadow.Enabled")
-            {
-                --additional-shadow-blur: 4px;
-            }
-
-            /* ---------- Tab Frame Color ---------- */
-
-            @media (-moz-bool-pref: "userChrome.DarkTheme.AdditionalTabFrameColor.White.Enabled")
-            {
-                --additional-shadow-color: rgb(255,255,255);
-            }
-
-            @media (-moz-bool-pref: "userChrome.DarkTheme.AdditionalTabFrameColor.Black.Enabled")
-            {
-                --additional-shadow-color: rgb(0,0,0);
-            }
-
-            /* ---------- Tab Frame Saturation ---------- */
-
-            @media (-moz-bool-pref: "userChrome.DarkTheme.AdditionalTabFrameSaturation.Low.Enabled")
-            {
-                --additional-shadow-saturation: 25%;
-            }
-
-            @media (-moz-bool-pref: "userChrome.DarkTheme.AdditionalTabFrameSaturation.Medium.Enabled")
-            {
-                --additional-shadow-saturation: 50%;
-            }
-
-            @media (-moz-bool-pref: "userChrome.DarkTheme.AdditionalTabFrameSaturation.High.Enabled")
-            {
-                --additional-shadow-saturation: 75%;
-            }
-
-            @media (-moz-bool-pref: "userChrome.DarkTheme.AdditionalTabFrameSaturation.VeryHigh.Enabled")
-            {
-                --additional-shadow-saturation: 100%;
-            }
+            --outer-drop-border: drop-shadow(0 calc(-1 * var(--border-width)) 0 var(--border-color))
+                                 drop-shadow(var(--border-width) 0 0 var(--border-color))
+                                 drop-shadow(0 var(--border-width) 0 var(--border-color))
+                                 drop-shadow(calc(-1 * var(--border-width)) 0 0 var(--border-color));
         }
     }
 }
