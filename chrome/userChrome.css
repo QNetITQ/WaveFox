@@ -1,8 +1,8 @@
 @layer LowPriority, HighPriority;
 
-@import "special/windows.css" layer(HighPriority) (-moz-platform: windows);
-@import "special/linux.css"   layer(HighPriority) (-moz-platform: linux);
-@import "special/mac.css"     layer(HighPriority) supports(appearance: -moz-mac-source-list) (-moz-platform: macos);
+@import "special/windows.css" layer(HighPriority) /* supports() */ (-moz-platform: windows);
+@import "special/linux.css"   layer(HighPriority) /* supports() */ (-moz-platform: linux);
+@import "special/mac.css"     layer(HighPriority) /* supports() */ (-moz-platform: macos);
 @import "third_party_custom_styles.css" (-moz-bool-pref: "userChrome.Style.ThirdParty.Enabled");
 
 @layer LowPriority
