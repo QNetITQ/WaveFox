@@ -529,66 +529,6 @@ and
     background-position: var(--tab-attention-indicator-position) !important;
 }
 
-/* ---------------------------------------- Toolbar Transparency ---------------------------------------- */
-
-@media (-moz-bool-pref: "userChrome.Toolbar.Transparency.Low.Enabled")    or
-       (-moz-bool-pref: "userChrome.Toolbar.Transparency.Medium.Enabled") or
-       (-moz-bool-pref: "userChrome.Toolbar.Transparency.High.Enabled")
-{
-    :root[tabsintitlebar]:not(:-moz-lwtheme)
-    {
-        --toolbar-bgcolor: color-mix(in srgb, -moz-Dialog, transparent var(--toolbar-transparency)) !important;
-        --toolbar-field-background-color: color-mix(in srgb, Field, transparent var(--toolbar-transparency)) !important;
-        --toolbarbutton-hover-background: color-mix(in srgb, currentColor 17%, transparent) !important;
-        --toolbarbutton-active-background: color-mix(in srgb, currentColor 30%, transparent) !important;
-        --urlbar-box-hover-bgcolor: color-mix(in srgb, currentColor 17%, transparent) !important;
-        --urlbar-box-active-bgcolor: color-mix(in srgb, currentColor 30%, transparent) !important;
-
-        @media (-moz-bool-pref: "userChrome.Toolbar.Transparency.Low.Enabled")
-        {
-            --toolbar-transparency: 25%;
-        }
-
-        @media (-moz-bool-pref: "userChrome.Toolbar.Transparency.Medium.Enabled")
-        {
-            --toolbar-transparency: 50%;
-        }
-
-        @media (-moz-bool-pref: "userChrome.Toolbar.Transparency.High.Enabled")
-        {
-            --toolbar-transparency: 75%;
-        }
-    }
-}
-
-@media (-moz-bool-pref: "userChrome.Toolbar.Transparency.VeryHigh.Enabled")
-{
-    :root[tabsintitlebar]:not(:-moz-lwtheme)
-    {
-        --toolbar-bgcolor: transparent !important;
-        --toolbar-field-background-color: Field !important;
-        --toolbarbutton-hover-background: color-mix(in srgb, currentColor 17%, transparent) !important;
-        --toolbarbutton-active-background: color-mix(in srgb, currentColor 30%, transparent) !important;
-
-        .tabbrowser-tab[visuallyselected] .tab-background
-        {
-            --toolbar-bgcolor: Field !important;
-        }
-
-        #urlbar:not([focused], [open]) > #urlbar-background,
-        #searchbar:not(:focus-within)
-        {
-            box-shadow: var(--additional-outer-box-shadow, 0 0 0 transparent),
-                        var(--outer-box-shadow, 0 0 0 transparent) !important;
-        }
-
-        #TabsToolbar::before
-        {
-            display: none !important;
-        }
-    }
-}
-
 /* ---------------------------------------- Main Window ---------------------------------------- */
 
 :root
