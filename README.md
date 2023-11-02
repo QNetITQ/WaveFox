@@ -114,17 +114,20 @@ Requires Linux with transparency support. Tested on Manjaro KDE + [ForceBlur](ht
 - `userChrome.Linux.Transparency.VeryHigh.Enabled`
 - `gfx.webrender.all` (Required key)
 
-### Tab Bar Shadows
+### Tab Bar Borders and Shadows
 Not compatible with themes using translucent toolbar.
 ![изображение](https://user-images.githubusercontent.com/85301851/152011749-4d5619b3-0fd8-40f9-a3dc-96be31839971.png)
 
-##### Light Theme
+##### Borders
+- `userChrome.Tabs.Borders.Enabled`
+
+##### Shadows (Light Theme)
 - `userChrome.LightTheme.Tabs.Shadows.Saturation.Low.Enabled`
 - `userChrome.LightTheme.Tabs.Shadows.Saturation.Medium.Enabled`
 - `userChrome.LightTheme.Tabs.Shadows.Saturation.High.Enabled`
 - `userChrome.LightTheme.Tabs.Shadows.Saturation.VeryHigh.Enabled`
 
-##### Dark Theme
+##### Shadows (Dark Theme)
 - `userChrome.DarkTheme.Tabs.Shadows.Saturation.Low.Enabled`
 - `userChrome.DarkTheme.Tabs.Shadows.Saturation.Medium.Enabled`
 - `userChrome.DarkTheme.Tabs.Shadows.Saturation.High.Enabled`
