@@ -1206,7 +1206,7 @@ spacer[part="overflow-end-indicator"]
     {
         #nav-bar
         {
-            padding-inline: calc(var(--tab-min-height) / 4);
+            padding-inline: calc(var(--tab-min-height) / 4) !important;
         }
 
         #nav-bar::before
@@ -1226,7 +1226,7 @@ spacer[part="overflow-end-indicator"]
     {
         #nav-bar
         {
-            padding-inline: calc(var(--tab-min-height) / 2);
+            padding-inline: calc(var(--tab-min-height) / 2) !important;
         }
 
         #nav-bar::before
