@@ -269,45 +269,40 @@
 
 /* ---------------------------------------- Tab Bar Borders ---------------------------------------- */
 
-@media (-moz-bool-pref: "userChrome.LightTheme.Tabs.Borders.Enabled")
+@media (-moz-bool-pref: "userChrome.Tabs.Borders.Enabled")
 {
-    @media (prefers-color-scheme: light)
+    :root
     {
-        :root
-        {
-            --border-width: 1px;
-            --border-color: var(--lwt-tab-line-color, var(--focus-outline-color));
+        --my-border-width: 1px;
+        --my-border-color: var(--chrome-content-separator-color);
 
-            --outer-box-border: 0 0 0 var(--border-width) var(--border-color);
+        --outer-box-border: 0 0 0 var(--my-border-width) var(--my-border-color);
 
-            --inner-box-border: inset 0 calc(-1 * var(--border-width)) 0 var(--border-color);
+        --inner-box-border: inset 0 calc(-1 * var(--my-border-width)) 0 var(--my-border-color);
 
-            --outer-drop-border: drop-shadow(0 calc(-1 * var(--border-width)) 0 var(--border-color))
-                                 drop-shadow(var(--border-width) 0 0 var(--border-color))
-                                 drop-shadow(0 var(--border-width) 0 var(--border-color))
-                                 drop-shadow(calc(-1 * var(--border-width)) 0 0 var(--border-color));
-        }
-    }
-}
+        --outer-drop-border: drop-shadow(
+                             0
+                             calc(-1 * var(--my-border-width))
+                             0
+                             var(--my-border-color))
 
-@media (-moz-bool-pref: "userChrome.DarkTheme.Tabs.Borders.Enabled")
-{
-    @media (prefers-color-scheme: dark)
-    {
-        :root
-        {
-            --border-width: 1px;
-            --border-color: var(--lwt-tab-line-color, var(--focus-outline-color));
+                             drop-shadow(
+                             var(--my-border-width)
+                             0
+                             0
+                             var(--my-border-color))
 
-            --outer-box-border: 0 0 0 var(--border-width) var(--border-color);
+                             drop-shadow(
+                             0
+                             var(--my-border-width)
+                             0
+                             var(--my-border-color))
 
-            --inner-box-border: inset 0 calc(-1 * var(--border-width)) 0 var(--border-color);
-
-            --outer-drop-border: drop-shadow(0 calc(-1 * var(--border-width)) 0 var(--border-color))
-                                 drop-shadow(var(--border-width) 0 0 var(--border-color))
-                                 drop-shadow(0 var(--border-width) 0 var(--border-color))
-                                 drop-shadow(calc(-1 * var(--border-width)) 0 0 var(--border-color));
-        }
+                             drop-shadow(
+                             calc(-1 * var(--my-border-width))
+                             0
+                             0
+                             var(--my-border-color));
     }
 }
 
@@ -548,7 +543,7 @@ spacer[part="overflow-end-indicator"]
     {
         position: relative;
         z-index: 2 !important;
-        filter: var(--additional-outer-drop-shadow, drop-shadow(0 0 0 transparent))
+        filter: var(--outer-drop-border, drop-shadow(0 0 0 transparent))
                 var(--outer-drop-shadow, drop-shadow(0 0 0 transparent));
     }
 
@@ -830,7 +825,7 @@ spacer[part="overflow-end-indicator"]
     height: 100%;
     bottom: 0px;
     inset-inline-start: 0px;
-    box-shadow: var(--additional-inner-box-shadow, inset 0 0 0 transparent),
+    box-shadow: var(--inner-box-border, inset 0 0 0 transparent),
                 var(--inner-box-shadow, inset 0 0 0 transparent);
     pointer-events: none;
     z-index: 2;
@@ -1130,7 +1125,7 @@ spacer[part="overflow-end-indicator"]
         -moz-context-properties: fill;
         z-index: -1;
         pointer-events: none;
-        filter: var(--additional-outer-drop-shadow, drop-shadow(0 0 0 transparent))
+        filter: var(--outer-drop-border, drop-shadow(0 0 0 transparent))
                 var(--outer-drop-shadow, drop-shadow(0 0 0 transparent));
     }
 
@@ -1168,7 +1163,7 @@ spacer[part="overflow-end-indicator"]
         height: 100%;
         inset-block-start: 0px;
         inset-inline-start: 0px;
-        box-shadow: var(--additional-outer-box-shadow, 0 0 0 transparent),
+        box-shadow: var(--outer-box-border, 0 0 0 transparent),
                     var(--outer-box-shadow, 0 0 0 transparent);
         pointer-events: none;
         clip-path: inset(-4px 0px 0px 0px);
