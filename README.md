@@ -118,8 +118,11 @@ Requires Linux with transparency support. Tested on Manjaro KDE + [ForceBlur](ht
 Not compatible with themes using translucent toolbar.
 ![изображение](https://user-images.githubusercontent.com/85301851/152011749-4d5619b3-0fd8-40f9-a3dc-96be31839971.png)
 
-##### Borders
-- `userChrome.Tabs.Borders.Enabled`
+##### Borders (Light Theme)
+- `userChrome.LightTheme.Tabs.Borders.Enabled`
+
+##### Borders (Dark Theme)
+- `userChrome.DarkTheme.Tabs.Borders.Enabled`
 
 ##### Shadows (Light Theme)
 - `userChrome.LightTheme.Tabs.Shadows.Saturation.Low.Enabled`
