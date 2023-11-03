@@ -68,6 +68,7 @@
         --right-svg:  url("special/tabs/option_6/right_corners.svg");
         
         --tab-first-last-inline-margin: calc(var(--tab-min-height) / 4);
+        --outer-drop-border-offset: 1px;
     }
 
     @media (-moz-bool-pref: "userChrome.Tabs.Option8.Enabled")
@@ -77,6 +78,7 @@
         --right-svg:  url("special/tabs/option_7/right_corners.svg");
         
         --tab-first-last-inline-margin: calc(var(--tab-min-height) / 4);
+        --outer-drop-border-offset: 1px;
     }
 
     @media (-moz-bool-pref: "userChrome.Tabs.Option9.Enabled")
@@ -86,6 +88,7 @@
         --right-svg:  url("special/tabs/option_8/right_corners.svg");
         
         --tab-first-last-inline-margin: calc(var(--tab-min-height) / 2);
+        --outer-drop-border-offset: 1px;
     }
 
     @media (-moz-bool-pref: "userChrome.Tabs.Option10.Enabled")
@@ -95,6 +98,7 @@
         --right-svg:  url("special/tabs/option_9/right_corners.svg");
         
         --tab-first-last-inline-margin: calc(var(--tab-min-height) / 2);
+        --outer-drop-border-offset: 1px;
     }
 
     @media (-moz-bool-pref: "userChrome.Tabs.Option11.Enabled")
@@ -104,6 +108,7 @@
         --right-svg:  url("special/tabs/option_10/right_corners.svg");
         
         --tab-first-last-inline-margin: calc(var(--tab-min-height) / 2);
+        --outer-drop-border-offset: 1px;
     }
 
     @media (-moz-bool-pref: "userChrome.Tabs.Option12.Enabled")
@@ -113,6 +118,7 @@
         --right-svg:  url("special/tabs/option_11/right_corners.svg");
         
         --tab-first-last-inline-margin: calc(var(--tab-min-height) / 2);
+        --outer-drop-border-offset: 1px;
     }
 
     /* -------------------- Floating Tabs -------------------- */
@@ -288,7 +294,7 @@
 
                              drop-shadow(
                              var(--my-border-width)
-                             0
+                             var(--outer-drop-border-offset, 0)
                              0
                              var(--my-border-color))
 
@@ -300,7 +306,7 @@
 
                              drop-shadow(
                              calc(-1 * var(--my-border-width))
-                             0
+                             var(--outer-drop-border-offset, 0)
                              0
                              var(--my-border-color));
     }
