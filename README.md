@@ -115,7 +115,7 @@ Requires Linux with transparency support. Tested on Manjaro KDE + [ForceBlur](ht
 - `gfx.webrender.all` (Required key)
 
 ### Tab Bar Borders and Shadows
-Not compatible with themes using translucent toolbar.
+Incompatible with AMO themes.
 ![изображение](https://user-images.githubusercontent.com/85301851/152011749-4d5619b3-0fd8-40f9-a3dc-96be31839971.png)
 
 ##### Borders (Light Theme)
