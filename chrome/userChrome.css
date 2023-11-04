@@ -373,13 +373,11 @@
     }
 }
 
-/* ---------------------------------------- Light Theme / Dark Theme / Alpenglow Theme ---------------------------------------- */
+/* ---------------------------------------- Light Theme / Dark Theme ---------------------------------------- */
 
 :root:is(
          [style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26)"],
-         [style*="--lwt-accent-color: rgb(28, 27, 34); --lwt-text-color: rgba(251, 251, 254)"],
-         [style*="--lwt-accent-color: rgb(249, 249, 251); --lwt-text-color: rgba(32, 18, 59)"],
-         [style*="--lwt-accent-color: rgb(249, 249, 251); --lwt-text-color: rgba(232, 224, 255)"]
+         [style*="--lwt-accent-color: rgb(28, 27, 34); --lwt-text-color: rgba(251, 251, 254)"]
         )
 {
     .tabbrowser-tab[visuallyselected]
