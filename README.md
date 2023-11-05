@@ -115,6 +115,7 @@ Requires Linux with transparency support. Tested on Manjaro KDE + [ForceBlur](ht
 - `userChrome.Linux.Transparency.High.Enabled`
 - `userChrome.Linux.Transparency.VeryHigh.Enabled`
 - `gfx.webrender.all` (Required key)
+- `browser.tabs.inTitlebar` > `1` (Required key)
 
 ### Tab Bar Borders and Shadows
 Incompatible with AMO themes.
