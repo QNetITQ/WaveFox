@@ -94,9 +94,11 @@
 ## Optional
 
 ### Adding third-party styles
-Create a file `third_party_custom_styles.css`, add the desired styles inside and put it in the `chrome` folder. Please note that this file has maximum execution priority. It will overwrite all styles, regardless of selector specificity. I make no guarantees of compatibility and will not resolve any style conflicts you may encounter. If the style doesn't support the feature you want, try looking for it in the [MrOtherGuy's repository](https://github.com/MrOtherGuy/firefox-csshacks). I will also post code that will not be part of the style in the [discussions](https://github.com/QNetITQ/WaveFox/discussions) section.
+Create a file `third_party_custom_styles.css`, add the desired styles inside and put it in the `chrome` folder. Please note that this file has maximum execution priority. It will overwrite all styles, regardless of selector specificity. I make no guarantees of compatibility and will not resolve any style conflicts you may encounter.
 
 - `userChrome.Style.ThirdParty.Enabled`
+
+<i>If the style doesn't support the feature you want, try looking for it in the [MrOtherGuy's repository](https://github.com/MrOtherGuy/firefox-csshacks). I will also post code that will not be part of the style in the [discussions](https://github.com/QNetITQ/WaveFox/discussions) section.</i>
 
 ### Windows Accent Color
 ![изображение](https://github.com/QNetITQ/WaveFox/assets/85301851/55b01904-6620-4e36-9b6d-91b092db725c)
