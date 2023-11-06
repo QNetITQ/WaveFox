@@ -34,7 +34,7 @@
   - `layout.css.has-selector.enabled`
   - `svg.context-properties.content.enabled`
   
-- Specify the desired shape of the tabs and restart the browser
+- Specify the desired shape of the tabs
 
   <details>
   <summary>How to create keys?</summary>
