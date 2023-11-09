@@ -1,6 +1,6 @@
 # *WaveFox*
 
-![WaveFoxPreview](https://github.com/QNetITQ/WaveFox/assets/85301851/88089927-4cf8-45b4-9bc4-06f975139fc4)
+![WaveFox_Preview](https://github.com/QNetITQ/WaveFox/assets/85301851/268bda8c-b987-45d1-966b-59992c18e66e)
 
 ###### Have a question not related to this project? These resources will help you
 - [Mozilla support](https://support.mozilla.org/en-US/)
