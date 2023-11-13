@@ -1034,6 +1034,19 @@ spacer[part="overflow-end-indicator"]
 
 @media (-moz-bool-pref: "userChrome.Tabs.TabsOnBottom.Enabled")
 {
+    @media (-moz-bool-pref: "userChrome.Tabs.Option7.Enabled")  or
+           (-moz-bool-pref: "userChrome.Tabs.Option8.Enabled")  or
+           (-moz-bool-pref: "userChrome.Tabs.Option9.Enabled")  or
+           (-moz-bool-pref: "userChrome.Tabs.Option10.Enabled") or
+           (-moz-bool-pref: "userChrome.Tabs.Option11.Enabled") or
+           (-moz-bool-pref: "userChrome.Tabs.Option12.Enabled")
+    {
+        :root
+        {
+            --outer-drop-border-offset: -1px;
+        }
+    }
+
     /* -------------------- Title Bar -------------------- */
 
     #titlebar
