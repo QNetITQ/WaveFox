@@ -108,7 +108,7 @@ Create a file `third_party_custom_styles.css`, add the desired styles inside and
 - `browser.theme.windows.accent-color-in-tabs.enabled`
 
 ### Linux Transparency
-Requires Linux with transparency support. Tested on Manjaro KDE + [ForceBlur](https://github.com/esjeon/kwin-forceblur). Works only with the system theme.
+Requires Linux with transparency support. Tested on Manjaro KDE + [ForceBlur](https://github.com/esjeon/kwin-forceblur). Works only with the system theme. If you encounter a ghosting effect, increase the blur ([Issue #102](https://github.com/QNetITQ/WaveFox/issues/102)).
 
 ![Снимок5](https://github.com/QNetITQ/WaveFox/assets/85301851/3b4dcfc8-217d-48a1-aba7-1621f9375f67)
 
