@@ -421,7 +421,7 @@
 #TabsToolbar #firefox-view-button[open] > .toolbarbutton-icon
 {
     background-color: var(--toolbarbutton-active-background) !important;
-    background-image: none !important;
+    color: inherit !important;
     box-shadow: none !important;
     outline: none !important;
 }
