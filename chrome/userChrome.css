@@ -2,7 +2,7 @@
 
 @import "special/windows.css" layer(HighPriority) /* supports() */ (-moz-platform: windows);
 @import "special/linux.css"   layer(HighPriority) /* supports() */ (-moz-platform: linux);
-@import "special/mac.css"     layer(HighPriority) supports(appearance: -moz-mac-source-list) (-moz-platform: macos);
+@import "special/mac.css"     layer(HighPriority) /* supports() */ (-moz-platform: macos);
 @import "third_party_custom_styles.css" (-moz-bool-pref: "userChrome.Style.ThirdParty.Enabled");
 
 @layer LowPriority
@@ -387,7 +387,6 @@
         .tab-background
         {
             background-color: var(--toolbar-bgcolor) !important;
-            background-image: none !important;
         }
     }
 }
@@ -598,12 +597,6 @@ spacer[part="overflow-end-indicator"]
     {
         color: inherit !important;
 
-        .tab-background
-        {
-            background-color: transparent !important;
-            background-image: none !important;
-        }
-
         &:hover .tab-background
         {
             background-color: var(--toolbarbutton-hover-background) !important;
@@ -622,8 +615,6 @@ spacer[part="overflow-end-indicator"]
         mask-position: left center, center center, right center;
         mask-repeat: no-repeat, no-repeat, no-repeat;
         box-shadow: none !important;
-        opacity: 1 !important;
-        border: none !important;
         outline: none !important;
         margin-block: var(--tab-bg-block-margin) !important;
         margin-inline: calc(-1 * (var(--tab-min-height) / 2)) !important;
