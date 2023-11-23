@@ -915,8 +915,8 @@ spacer[part="overflow-end-indicator"]
         margin-inline-end: 1px !important;
     }
 
-    #tabbrowser-tabs:not([movingtab]) .tabbrowser-tab:nth-child(1 of :not([hidden])) .tab-stack::before,
-    #tabbrowser-tabs[overflow][haspinnedtabs]:not([movingtab]) .tabbrowser-tab:nth-child(1 of :not([pinned], [hidden])) .tab-stack::before,
+    #tabbrowser-tabs:not([movingtab]) .tabbrowser-tab:nth-child(1 of .tabbrowser-tab:not([hidden])) .tab-stack::before,
+    #tabbrowser-tabs[overflow][haspinnedtabs]:not([movingtab]) .tabbrowser-tab:nth-child(1 of .tabbrowser-tab:not([pinned], [hidden])) .tab-stack::before,
     #tabbrowser-tabs:not([movingtab]) .tab-stack::after
     {
         content: "";
@@ -962,9 +962,9 @@ spacer[part="overflow-end-indicator"]
         opacity: 0 !important;
     }
 
-    #tabbrowser-tabs[overflow] .tabbrowser-tab[pinned]:not([selected], :hover, [multiselected]):has(+ .tabbrowser-tab:nth-child(1 of :not([pinned], [hidden]))) .tab-stack::after,
-    #tabbrowser-tabs[overflow] .tabbrowser-tab[pinned]:not([selected], :hover, [multiselected]):has(+ .tabbrowser-tab[hidden] + .tabbrowser-tab:nth-child(1 of :not([pinned], [hidden]))) .tab-stack::after,
-    #tabbrowser-tabs[overflow] .tabbrowser-tab[pinned]:not([selected], :hover, [multiselected]):has(+ .tabbrowser-tab[hidden] ~ .tabbrowser-tab[hidden] + .tabbrowser-tab:nth-child(1 of :not([pinned], [hidden]))) .tab-stack::after
+    #tabbrowser-tabs[overflow] .tabbrowser-tab[pinned]:not([selected], :hover, [multiselected]):has(+ .tabbrowser-tab:nth-child(1 of .tabbrowser-tab:not([pinned], [hidden]))) .tab-stack::after,
+    #tabbrowser-tabs[overflow] .tabbrowser-tab[pinned]:not([selected], :hover, [multiselected]):has(+ .tabbrowser-tab[hidden] + .tabbrowser-tab:nth-child(1 of .tabbrowser-tab:not([pinned], [hidden]))) .tab-stack::after,
+    #tabbrowser-tabs[overflow] .tabbrowser-tab[pinned]:not([selected], :hover, [multiselected]):has(+ .tabbrowser-tab[hidden] ~ .tabbrowser-tab[hidden] + .tabbrowser-tab:nth-child(1 of .tabbrowser-tab:not([pinned], [hidden]))) .tab-stack::after
     {
         opacity: var(--separators-color-saturation) !important;
     }
@@ -1460,7 +1460,7 @@ spacer[part="overflow-end-indicator"]
 
     )::before
     {
-        content: "";
+        content: "" !important;
         display: block;
         position: relative;
         width: 20px;
@@ -1774,7 +1774,7 @@ spacer[part="overflow-end-indicator"]
 
     )::before
     {
-        content: "";
+        content: "" !important;
         display: block;
         position: relative;
         width: 20px;
