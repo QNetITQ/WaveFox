@@ -420,10 +420,10 @@
 
 #TabsToolbar #firefox-view-button[open] > .toolbarbutton-icon
 {
-    background-color: var(--toolbar-bgcolor) !important;
-    color: var(--toolbar-color) !important;
-    box-shadow: var(--outer-box-border, 0 0 0 transparent),
-                var(--outer-box-shadow, 0 0 0 transparent) !important;
+    background-color: var(--toolbarbutton-active-background) !important;
+    color: inherit !important;
+    box-shadow: none !important;
+    outline: none !important;
 }
 
 #TabsToolbar #firefox-view-button:hover:not([open]) > .toolbarbutton-icon
@@ -663,12 +663,12 @@ spacer[part="overflow-end-indicator"]
 {
     .tabbrowser-tab[visuallyselected][usercontextid] .tab-background
     {
-        box-shadow: inset 0 -2px 0 var(--lwt-tab-line-color, var(--lwt-tabs-border-color, var(--tab-loading-fill))) !important;
+        box-shadow: inset 0 -2px 0 var(--tab-loading-fill) !important;
     }
 
     .tabbrowser-tab[visuallyselected]:not([usercontextid]) .tab-background
     {
-        box-shadow: inset 0 2px 0 var(--lwt-tab-line-color, var(--lwt-tabs-border-color, var(--tab-loading-fill))) !important;
+        box-shadow: inset 0 2px 0 var(--tab-loading-fill) !important;
     }
 }
 
