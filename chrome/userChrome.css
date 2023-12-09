@@ -623,6 +623,11 @@ spacer[part="overflow-end-indicator"]
     }
 }
 
+.tab-drop-indicator
+{
+    opacity: 0 !important;
+}
+
 #tabbrowser-tabs[movingtab] .tabbrowser-tab:not([visuallyselected])
 {
     z-index: auto !important;
