@@ -12,7 +12,6 @@
 
 - ##### Minimum Requirements
   - Firefox 121 + [WaveFox v1.6.121](https://github.com/QNetITQ/WaveFox/tree/v1.6.121)
-  - Firefox 120 + [WaveFox v1.6.120](https://github.com/QNetITQ/WaveFox/tree/v1.6.120)
   - Firefox 115 ESR + [WaveFox v1.6.115.0.3](https://github.com/QNetITQ/WaveFox/tree/v1.6.115)
   - Windows
   - MacOS
