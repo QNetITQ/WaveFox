@@ -919,6 +919,17 @@ spacer[part="overflow-end-indicator"]
     margin-inline-end: var(--tab-first-last-inline-margin) !important;
 }
 
+#tabs-newtab-button
+{
+    margin-inline-start: calc(-1 * var(--tab-first-last-inline-margin)) !important;
+}
+
+.toolbarbutton-1:has(+ #tabbrowser-tabs)
+{
+    margin-inline-end: calc(-1 * var(--tab-first-last-inline-margin) + 1px) !important;
+    z-index: 0 !important;
+}
+
 /* ---------------------------------------- Separators ---------------------------------------- */
 
 @media (-moz-bool-pref: "userChrome.TabSeparators.Saturation.Low.Enabled")    or
