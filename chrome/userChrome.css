@@ -87,7 +87,7 @@
         --center-svg: url("special/tabs/option_8/center.svg");
         --right-svg:  url("special/tabs/option_8/right_corners.svg");
         
-        --tab-first-last-inline-margin: calc(var(--tab-min-height) / 2);
+        --tab-first-last-inline-margin: calc(var(--tab-min-height) / 2 - 6px);
         --outer-drop-border-offset: 1px;
     }
 
