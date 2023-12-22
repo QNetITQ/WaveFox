@@ -449,7 +449,7 @@
 :root[tabsintitlebar]:-moz-window-inactive #titlebar
 {
     opacity: 1 !important;
-    color: color-mix(in srgb, currentColor var(--inactive-titlebar-opacity), transparent) !important;
+    color: color-mix(in srgb, currentColor 60%, transparent) !important;
     --toolbarbutton-icon-fill: currentColor !important;
 }
 
