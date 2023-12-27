@@ -1,1 +1,9 @@
+:root[tabsintitlebar]:not(:-moz-lwtheme, :-moz-window-inactive)
+{
+    appearance: menupopup !important;
 
+    #navigator-toolbox
+    {
+        background-color: transparent !important;
+    }
+}
