@@ -121,6 +121,16 @@
         --outer-drop-border-offset: 1px;
     }
 
+    @media (-moz-bool-pref: "userChrome.Tabs.Option13.Enabled")
+    {
+        --left-svg:   url("special/tabs/option_12/left_corners.svg");
+        --center-svg: url("special/tabs/option_12/center.svg");
+        --right-svg:  url("special/tabs/option_12/right_corners.svg");
+        
+        --tab-first-last-inline-margin: calc(var(--tab-min-height) / 2);
+        --outer-drop-border-offset: 1px;
+    }
+
     /* -------------------- Floating Tabs -------------------- */
 
     @media (-moz-bool-pref: "userChrome.Tabs.Option1.Enabled") or
@@ -148,7 +158,8 @@
            (-moz-bool-pref: "userChrome.Tabs.Option9.Enabled")  or
            (-moz-bool-pref: "userChrome.Tabs.Option10.Enabled") or
            (-moz-bool-pref: "userChrome.Tabs.Option11.Enabled") or
-           (-moz-bool-pref: "userChrome.Tabs.Option12.Enabled")
+           (-moz-bool-pref: "userChrome.Tabs.Option12.Enabled") or
+           (-moz-bool-pref: "userChrome.Tabs.Option13.Enabled")
     {
         --tab-overflow-clip-margin: var(--tab-first-last-inline-margin);
         --tab-inset-clip-path: -4px calc(-1 * var(--tab-first-last-inline-margin)) 0px;
@@ -446,11 +457,18 @@
 
 /* ---------------------------------------- Titlebar ---------------------------------------- */
 
-:root[tabsintitlebar]:-moz-window-inactive .titlebar-color
+:root[tabsintitlebar]:-moz-window-inactive
 {
-    opacity: 1 !important;
-    color: color-mix(in srgb, currentColor 60%, transparent) !important;
-    --toolbarbutton-icon-fill: currentColor !important;
+    #titlebar
+    {
+        opacity: 1 !important;
+    }
+
+    .titlebar-color
+    {
+        color: color-mix(in srgb, currentColor 60%, transparent) !important;
+        --toolbarbutton-icon-fill: currentColor !important;
+    }
 }
 
 /* ---------------------------------------- Density ---------------------------------------- */
@@ -1052,7 +1070,8 @@ spacer[part="overflow-end-indicator"]
            (-moz-bool-pref: "userChrome.Tabs.Option9.Enabled")  or
            (-moz-bool-pref: "userChrome.Tabs.Option10.Enabled") or
            (-moz-bool-pref: "userChrome.Tabs.Option11.Enabled") or
-           (-moz-bool-pref: "userChrome.Tabs.Option12.Enabled")
+           (-moz-bool-pref: "userChrome.Tabs.Option12.Enabled") or
+           (-moz-bool-pref: "userChrome.Tabs.Option13.Enabled")
     {
         :root
         {
@@ -1295,7 +1314,8 @@ spacer[part="overflow-end-indicator"]
     @media (-moz-bool-pref: "userChrome.Tabs.Option9.Enabled")  or
            (-moz-bool-pref: "userChrome.Tabs.Option10.Enabled") or
            (-moz-bool-pref: "userChrome.Tabs.Option11.Enabled") or
-           (-moz-bool-pref: "userChrome.Tabs.Option12.Enabled")
+           (-moz-bool-pref: "userChrome.Tabs.Option12.Enabled") or
+           (-moz-bool-pref: "userChrome.Tabs.Option13.Enabled")
     {
         #nav-bar
         {
