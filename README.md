@@ -92,6 +92,10 @@
   ![16](https://user-images.githubusercontent.com/85301851/233115285-feb26903-ab9f-4e38-b28a-7207b0459ebe.PNG)
   - `userChrome.Tabs.Option12.Enabled`
 
+  ##### Tabs (Option 13)
+  ![изображение](https://github.com/QNetITQ/WaveFox/assets/85301851/906299f9-94e6-4a69-9191-202c94525ae6)
+  - `userChrome.Tabs.Option13.Enabled`
+
 ## Optional
 
 ### Adding third-party styles
