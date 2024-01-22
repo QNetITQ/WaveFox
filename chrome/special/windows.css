@@ -1,32 +1,25 @@
-@media not (prefers-contrast)
-{
-    .titlebar-buttonbox-container
-    {
-        align-items: flex-start !important;
+@media not (prefers-contrast) {
+    .titlebar-buttonbox-container {
+        align-items: flex-start;
     }
 
-    .titlebar-button:not(.titlebar-close):hover
-    {
-        background-color: var(--toolbarbutton-hover-background) !important;
+    .titlebar-button:not(.titlebar-close):hover {
+        background-color: var(--toolbarbutton-hover-background);
     }
 
-    .titlebar-button:not(.titlebar-close):hover:active
-    {
-        background-color: var(--toolbarbutton-active-background) !important;
+    .titlebar-button:not(.titlebar-close):hover:active {
+        background-color: var(--toolbarbutton-active-background);
     }
 }
 
 @media (-moz-bool-pref: "userChrome.Menu.Icons.Regular.Enabled") or
-       (-moz-bool-pref: "userChrome.Menu.Icons.Filled.Enabled")
-{
-    :root
-    {
+       (-moz-bool-pref: "userChrome.Menu.Icons.Filled.Enabled") {
+    :root {
         --align-menu-icons: -2px 6px;
     }
 }
 
 menupopup[needsgutter] menu:not([icon], .menu-iconic),
-menupopup[needsgutter] menuitem:not([checked="true"], [icon], .menuitem-iconic)
-{
-    padding-inline-start: 1em !important;
+menupopup[needsgutter] menuitem:not([checked="true"], [icon], .menuitem-iconic) {
+    padding-inline-start: 1em;
 }
