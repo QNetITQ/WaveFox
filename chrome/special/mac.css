@@ -6,4 +6,10 @@
     {
         background-color: transparent !important;
     }
+
+    .titlebar-color
+    {
+        --toolbarbutton-hover-background: color-mix(in srgb, currentColor 17%, transparent) !important;
+        --toolbarbutton-active-background: color-mix(in srgb, currentColor 30%, transparent) !important;
+    }
 }
