@@ -959,9 +959,9 @@ spacer[part="overflow-end-indicator"]
         margin-inline-end: 1px !important;
     }
 
-    #tabbrowser-tabs:not([movingtab]) .tabbrowser-tab:nth-child(1 of .tabbrowser-tab:not([hidden])) .tab-stack::before,
-    #tabbrowser-tabs[overflow][haspinnedtabs]:not([movingtab]) .tabbrowser-tab:nth-child(1 of .tabbrowser-tab:not([pinned], [hidden])) .tab-stack::before,
-    #tabbrowser-tabs:not([movingtab]) .tab-stack::after
+    .tabbrowser-tab:nth-child(1 of .tabbrowser-tab:not([hidden])) .tab-stack::before,
+    #tabbrowser-tabs[overflow][haspinnedtabs] .tabbrowser-tab:nth-child(1 of .tabbrowser-tab:not([pinned], [hidden])) .tab-stack::before,
+    .tab-stack::after
     {
         content: "";
         display: block;
