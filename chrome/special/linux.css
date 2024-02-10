@@ -34,7 +34,7 @@
             --toolbox-transparency: 100%;
         }
 
-        &[tabsintitlebar]:not(:-moz-lwtheme, :-moz-window-inactive) #navigator-toolbox
+        &[tabsintitlebar]:not(:-moz-lwtheme) #navigator-toolbox
         {
             background-color: color-mix(in srgb, ActiveCaption, transparent var(--toolbox-transparency)) !important;
         }
