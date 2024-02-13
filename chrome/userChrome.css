@@ -1,4 +1,4 @@
-@layer LowPriority, HighPriority;
+@layer LowPriority, HighPriority; 
 
 @import "special/windows.css" layer(HighPriority) /* supports() */ (-moz-platform: windows);
 @import "special/linux.css"   layer(HighPriority) /* supports() */ (-moz-platform: linux);
