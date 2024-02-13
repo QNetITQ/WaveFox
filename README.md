@@ -4,8 +4,7 @@
 
 ###### Have a question not related to this project? These resources will help you
 - [Mozilla support](https://support.mozilla.org/en-US/)
-- [Reddit (Main)](https://www.reddit.com/r/firefox)
-- [Reddit (Alt)](https://www.reddit.com/r/MozillaFirefox)
+- [Reddit](https://www.reddit.com/r/firefox)
 - [Reddit (CSS)](https://www.reddit.com/r/FirefoxCSS)
 
 ## Installation
