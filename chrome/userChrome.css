@@ -370,7 +370,7 @@
 
 @media not (prefers-contrast)
 {
-    :root:not(:-moz-lwtheme)
+    :root:not([lwtheme])
     {
         .tabbrowser-tab[visuallyselected]
         {
