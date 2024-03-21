@@ -1,4 +1,4 @@
-:root[tabsintitlebar]:not(:-moz-lwtheme, :-moz-window-inactive)
+:root[tabsintitlebar]:not([lwtheme], :-moz-window-inactive)
 {
     appearance: menupopup !important;
 
