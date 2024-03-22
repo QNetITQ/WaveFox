@@ -803,7 +803,7 @@ spacer[part="overflow-end-indicator"]
     height: 16px;
     background-color: currentColor;
     mask-image: url("special/Additional_Elements/PIP_Icon.svg");
-    mask-size: 16px;
+    mask-size: 16px 16px;
     mask-position: center center;
     mask-repeat: no-repeat;
 }
@@ -1511,7 +1511,7 @@ spacer[part="overflow-end-indicator"]
         width: 20px;
         height: 20px;
         background-color: currentColor;
-        mask-size: 20px;
+        mask-size: 20px 20px;
         mask-repeat: no-repeat;
         mask-position: center center;
         margin-block: -2px;
@@ -1824,7 +1824,7 @@ spacer[part="overflow-end-indicator"]
         width: 20px;
         height: 20px;
         background-color: currentColor;
-        mask-size: 20px;
+        mask-size: 20px 20px;
         mask-repeat: no-repeat;
         mask-position: center center;
         margin-block: -2px;
