@@ -801,12 +801,11 @@ spacer[part="overflow-end-indicator"]
     position: absolute;
     width: 16px;
     height: 16px;
-    background-image: url("chrome://global/skin/media/picture-in-picture-open.svg");
-    background-size: 16px;
-    background-position: center center;
-    background-repeat: no-repeat;
-    fill: currentColor;
-    -moz-context-properties: fill;
+    background-color: currentColor;
+    mask-image: url("special/Additional_Elements/PIP_Icon.svg");
+    mask-size: 16px;
+    mask-position: center center;
+    mask-repeat: no-repeat;
 }
 
 :root:-moz-locale-dir(rtl) .tabbrowser-tab[pictureinpicture]:not([busy], [crashed]) .tab-icon-stack::before
