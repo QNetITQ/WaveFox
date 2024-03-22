@@ -32,7 +32,6 @@
 - Go to `about:config` and activate the keys below
 
   - `toolkit.legacyUserProfileCustomizations.stylesheets`
-  - `svg.context-properties.content.enabled`
   
 - Specify the desired shape of the tabs
 
@@ -168,7 +167,6 @@ By default context menus follow the selected interface density, but it is possib
 
 - `userChrome.Menu.Icons.Regular.Enabled`
 - `userChrome.Menu.Icons.Filled.Enabled`
-- `svg.context-properties.content.enabled` (Required key)
 
 ### Drag Space
 ![изображение](https://user-images.githubusercontent.com/85301851/152680229-43547df0-1d2c-4384-b024-950e7aa56ca6.png)
