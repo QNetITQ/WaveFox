@@ -1511,180 +1511,179 @@ spacer[part="overflow-end-indicator"]
         position: relative;
         width: 20px;
         height: 20px;
-        background-size: 20px;
-        background-repeat: no-repeat;
-        background-position: center;
+        background-color: currentColor;
+        mask-size: 20px;
+        mask-repeat: no-repeat;
+        mask-position: center center;
         margin-block: -2px;
         margin-inline: -2px 6px;
-        fill: currentColor;
-        -moz-context-properties: fill;
     }
 
     /* ----- Main Menu ----- */
     
     #appMenu-new-tab-button2::before
     {
-        background-image: var(--tab-new-page);
+        mask-image: var(--tab-new-page);
     }
     
     #appMenu-new-window-button2::before
     {
-        background-image: var(--window);
+        mask-image: var(--window);
     }
     
     #appMenu-new-private-window-button2::before
     {
-        background-image: var(--window-inprivate-account);
+        mask-image: var(--window-inprivate-account);
     }
     
     #appMenu-bookmarks-button::before
     {
-        background-image: var(--star-line-horizontal);
+        mask-image: var(--star-line-horizontal);
     }
     
     #appMenu-history-button::before
     {
-        background-image: var(--history);
+        mask-image: var(--history);
     }
     
     #appMenu-downloads-button::before
     {
-        background-image: var(--arrow-download);
+        mask-image: var(--arrow-download);
     }
     
     #appMenu-passwords-button::before
     {
-        background-image: var(--key);
+        mask-image: var(--key);
     }
     
     #appMenu-extensions-themes-button::before
     {
-        background-image: var(--puzzle-piece);
+        mask-image: var(--puzzle-piece);
     }
 
     #appMenu-print-button2::before
     {
-        background-image: var(--print);
+        mask-image: var(--print);
     }
 
     #appMenu-save-file-button2::before
     {
-        background-image: var(--save-edit);
+        mask-image: var(--save-edit);
     }
 
     #appMenu-find-button2::before
     {
-        background-image: var(--document-search);
+        mask-image: var(--document-search);
     }
 
     #appMenu-translate-button::before
     {
-        background-image: var(--translate);
+        mask-image: var(--translate);
     }
 
     #appMenu-settings-button::before
     {
-        background-image: var(--settings);
+        mask-image: var(--settings);
     }
 
     #appMenu-help-button2::before
     {
-        background-image: var(--question-circle);
+        mask-image: var(--question-circle);
     }
 
     /* ----- Main Menu (Submenus) ----- */
 
     #appmenu-moreTools-button::before
     {
-        background-image: var(--color);
+        mask-image: var(--color);
     }
 
     #appmenu-developer-tools-view > toolbarbutton:nth-child(1)::before
     {
-        background-image: var(--window-dev-tools);
+        mask-image: var(--window-dev-tools);
     }
 
     #appMenu_menu_openHelp::before
     {
-        background-image: var(--question-circle);
+        mask-image: var(--question-circle);
     }
 
     #appMenu_feedbackPage::before
     {
-        background-image: var(--person-feedback);
+        mask-image: var(--person-feedback);
     }
 
     #appMenu_menu_HelpPopup_reportPhishingtoolmenu::before
     {
-        background-image: var(--warning);
+        mask-image: var(--warning);
     }
 
     /* ----- Bookmark Menu ----- */
 
     #panelMenuBookmarkThisPage::before
     {
-        background-image: var(--star-add);
+        mask-image: var(--star-add);
     }
 
     #panelMenuBookmarkThisPage[starred]::before
     {
-        background-image: var(--star);
-        fill: var(--toolbar-field-icon-fill-attention) !important;
+        mask-image: var(--star);
+        background-color: var(--toolbar-field-icon-fill-attention) !important;
     }
 
     :is(#panelMenu_showAllBookmarks, #BMB_bookmarksShowAllTop, #BMB_bookmarksShowAll)::before
     {
-        background-image: var(--star-line-horizontal);
+        mask-image: var(--star-line-horizontal);
     }
 
     /* ----- History Menu ----- */
 
     #PanelUI-historyMore::before
     {
-        background-image: var(--history);
+        mask-image: var(--history);
     }
 
     /* ----- Library Menu ----- */
 
     #appMenu-library-bookmarks-button::before
     {
-        background-image: var(--star-line-horizontal);
+        mask-image: var(--star-line-horizontal);
     }
 
     #appMenu-library-history-button::before
     {
-        background-image: var(--history);
+        mask-image: var(--history);
     }
 
     #appMenu-library-downloads-button::before
     {
-        background-image: var(--arrow-download);
+        mask-image: var(--arrow-download);
     }
 
     /* ----- Downloads Menu ----- */
 
     #downloadsHistory::before
     {
-        background-image: var(--arrow-download);
+        mask-image: var(--arrow-download);
     }
 
     /* ----- Developer Menu ----- */
 
     #PanelUI-developer-tools-view > toolbarbutton:nth-child(1)::before
     {
-        background-image: var(--window-dev-tools);
+        mask-image: var(--window-dev-tools);
     }
 
     /* ----- Sidebar Menu ----- */
 
     #sidebar-switcher-bookmarks::before
     {
-        background-image: var(--star-line-horizontal);
+        mask-image: var(--star-line-horizontal);
     }
 
     #sidebar-switcher-history::before
     {
-        background-image: var(--history);
+        mask-image: var(--history);
     }
 
     /* ---------- Non-Native Browser Menus ---------- */
@@ -1825,413 +1824,412 @@ spacer[part="overflow-end-indicator"]
         position: relative;
         width: 20px;
         height: 20px;
-        background-size: 20px;
-        background-repeat: no-repeat;
-        background-position: center;
+        background-color: currentColor;
+        mask-size: 20px;
+        mask-repeat: no-repeat;
+        mask-position: center center;
         margin-block: -2px;
         margin-inline: var(--align-menu-icons);
-        fill: currentColor;
-        -moz-context-properties: fill;
     }
 
     /* ----- Toolbar Menubar Menu ----- */
 
     menuitem.viewCustomizeToolbar::before
     {
-        background-image: var(--color);
+        mask-image: var(--color);
     }
 
     /* ----- TabsToolbar Menu ----- */
 
     #toolbar-context-openANewTab::before
     {
-        background-image: var(--tab-new-page);
+        mask-image: var(--tab-new-page);
     }
 
     #toolbar-context-reloadSelectedTab::before
     {
-        background-image: var(--arrow-clockwise);
+        mask-image: var(--arrow-clockwise);
     }
 
     #toolbar-context-bookmarkSelectedTab::before
     {
-        background-image: var(--star-add);
+        mask-image: var(--star-add);
     }
 
     /* ----- Tab Menu ----- */
 
     #context_openANewTab::before
     {
-        background-image: var(--tab-new-page);
+        mask-image: var(--tab-new-page);
     }
 
     #context_reloadTab::before
     {
-        background-image: var(--arrow-clockwise);
+        mask-image: var(--arrow-clockwise);
     }
 
     #context_toggleMuteTab::before
     {
-        background-image: var(--speaker-mute);
+        mask-image: var(--speaker-mute);
     }
 
     #context_toggleMuteTab[muted]::before
     {
-        background-image: var(--speaker-2);
+        mask-image: var(--speaker-2);
     }
 
     :is(#context_pinTab, #context_unpinTab)::before
     {
-        background-image: var(--pin);
+        mask-image: var(--pin);
     }
 
     #context_duplicateTab::before
     {
-        background-image: var(--tab-desktop-copy);
+        mask-image: var(--tab-desktop-copy);
     }
 
     #context_bookmarkTab::before
     {
-        background-image: var(--star-add);
+        mask-image: var(--star-add);
     }
 
     #context_openTabInWindow::before
     {
-        background-image: var(--window);
+        mask-image: var(--window);
     }
 
     #context_closeTab::before
     {
-        background-image: var(--dismiss);
+        mask-image: var(--dismiss);
     }
 
     /* ----- Tabs Menu ----- */
 
     #context_reloadSelectedTabs::before
     {
-        background-image: var(--arrow-clockwise);
+        mask-image: var(--arrow-clockwise);
     }
 
     #context_toggleMuteSelectedTabs::before
     {
-        background-image: var(--speaker-mute);
+        mask-image: var(--speaker-mute);
     }
 
     #context_toggleMuteSelectedTabs[muted]::before
     {
-        background-image: var(--speaker-2);
+        mask-image: var(--speaker-2);
     }
 
     :is(#context_pinSelectedTabs, #context_unpinSelectedTabs)::before
     {
-        background-image: var(--pin);
+        mask-image: var(--pin);
     }
 
     #context_duplicateTabs::before
     {
-        background-image: var(--tab-desktop-copy);
+        mask-image: var(--tab-desktop-copy);
     }
 
     #context_bookmarkSelectedTabs::before
     {
-        background-image: var(--star-add);
+        mask-image: var(--star-add);
     }
 
     /* ----- Urlbar Menu ----- */
 
     menupopup.textbox-contextmenu:nth-child(3) > menuitem:nth-child(1)::before
     {
-        background-image: var(--arrow-undo);
+        mask-image: var(--arrow-undo);
     }
 
     menupopup.textbox-contextmenu:nth-child(3) > menuitem:nth-child(2)::before
     {
-        background-image: var(--arrow-redo);
+        mask-image: var(--arrow-redo);
     }
 
     menupopup.textbox-contextmenu:nth-child(3) > menuitem:nth-child(4)::before
     {
-        background-image: var(--cut);
+        mask-image: var(--cut);
     }
 
     menupopup.textbox-contextmenu:nth-child(3) > menuitem:nth-child(5)::before
     {
-        background-image: var(--copy);
+        mask-image: var(--copy);
     }
 
     menupopup.textbox-contextmenu:nth-child(3) > menuitem:nth-child(7)::before
     {
-        background-image: var(--clipboard-paste);
+        mask-image: var(--clipboard-paste);
     }
 
     menupopup.textbox-contextmenu:nth-child(3) > menuitem:nth-child(8)::before
     {
-        background-image: var(--clipboard-search);
+        mask-image: var(--clipboard-search);
     }
 
     menupopup.textbox-contextmenu:nth-child(3) > menuitem:nth-child(9)::before
     {
-        background-image: var(--delete);
+        mask-image: var(--delete);
     }
 
     /* ----- Searchbar Menu ----- */
 
     menupopup.textbox-contextmenu:nth-child(4) > menuitem:nth-child(1)::before
     {
-        background-image: var(--arrow-undo);
+        mask-image: var(--arrow-undo);
     }
 
     menupopup.textbox-contextmenu:nth-child(4) > menuitem:nth-child(2)::before
     {
-        background-image: var(--arrow-redo);
+        mask-image: var(--arrow-redo);
     }
 
     menupopup.textbox-contextmenu:nth-child(4) > menuitem:nth-child(4)::before
     {
-        background-image: var(--cut);
+        mask-image: var(--cut);
     }
 
     menupopup.textbox-contextmenu:nth-child(4) > menuitem:nth-child(5)::before
     {
-        background-image: var(--copy);
+        mask-image: var(--copy);
     }
 
     menupopup.textbox-contextmenu:nth-child(4) > menuitem:nth-child(6)::before
     {
-        background-image: var(--clipboard-paste);
+        mask-image: var(--clipboard-paste);
     }
 
     menupopup.textbox-contextmenu:nth-child(4) > menuitem:nth-child(7)::before
     {
-        background-image: var(--clipboard-search);
+        mask-image: var(--clipboard-search);
     }
 
     menupopup.textbox-contextmenu:nth-child(4) > menuitem:nth-child(8)::before
     {
-        background-image: var(--delete);
+        mask-image: var(--delete);
     }
 
     /* ----- PersonalToolbar Menu ----- */
 
     #placesContext_openBookmarkContainer\:tabs::before
     {
-        background-image: var(--tab-desktop);
+        mask-image: var(--tab-desktop);
     }
 
     #placesContext_new\:bookmark::before
     {
-        background-image: var(--star-add);
+        mask-image: var(--star-add);
     }
 
     #placesContext_new\:folder::before
     {
-        background-image: var(--folder-add);
+        mask-image: var(--folder-add);
     }
 
     #placesContext_paste::before
     {
-        background-image: var(--clipboard-paste);
+        mask-image: var(--clipboard-paste);
     }
 
     #placesContext_showAllBookmarks::before
     {
-        background-image: var(--star-line-horizontal);
+        mask-image: var(--star-line-horizontal);
     }
 
     /* ----- Bookmarks Menu ----- */
 
     #placesContext_open\:newtab::before
     {
-        background-image: var(--tab-new-page);
+        mask-image: var(--tab-new-page);
     }
 
     #placesContext_open\:newwindow::before
     {
-        background-image: var(--window);
+        mask-image: var(--window);
     }
 
     #placesContext_open\:newprivatewindow::before
     {
-        background-image: var(--window-inprivate-account);
+        mask-image: var(--window-inprivate-account);
     }
 
     #placesContext_show_bookmark\:info::before
     {
-        background-image: var(--edit);
+        mask-image: var(--edit);
     }
 
     #placesContext_deleteBookmark::before
     {
-        background-image: var(--delete);
+        mask-image: var(--delete);
     }
 
     #placesContext_cut::before
     {
-        background-image: var(--cut);
+        mask-image: var(--cut);
     }
 
     #placesContext_copy::before
     {
-        background-image: var(--copy);
+        mask-image: var(--copy);
     }
 
     #placesContext_paste_group::before
     {
-        background-image: var(--clipboard-paste);
+        mask-image: var(--clipboard-paste);
     }
 
     /* ----- Folder Menu ----- */
 
     #placesContext_show_folder\:info::before
     {
-        background-image: var(--edit);
+        mask-image: var(--edit);
     }
 
     #placesContext_deleteFolder::before
     {
-        background-image: var(--delete);
+        mask-image: var(--delete);
     }
 
     /* ---------- Web Menu ---------- */
 
     #context-savepage::before
     {
-        background-image: var(--save-edit);
+        mask-image: var(--save-edit);
     }
 
     #context-take-screenshot::before
     {
-        background-image: var(--camera-edit);
+        mask-image: var(--camera-edit);
     }
 
     #context-inspect::before
     {
-        background-image: var(--cursor-hover);
+        mask-image: var(--cursor-hover);
     }
 
     #context-copy::before
     {
-        background-image: var(--copy);
+        mask-image: var(--copy);
     }
 
     #context-print-selection::before
     {
-        background-image: var(--print);
+        mask-image: var(--print);
     }
 
     #context-searchselect::before
     {
-        background-image: var(--search);
+        mask-image: var(--search);
     }
 
     #context-viewimage::before
     {
-        background-image: var(--tab-desktop-image);
+        mask-image: var(--tab-desktop-image);
     }
 
     #context-saveimage::before
     {
-        background-image: var(--image-edit);
+        mask-image: var(--image-edit);
     }
 
     #context-copyimage-contents::before
     {
-        background-image: var(--image-copy);
+        mask-image: var(--image-copy);
     }
 
     #context-openlinkintab::before
     {
-        background-image: var(--tab-desktop);
+        mask-image: var(--tab-desktop);
     }
 
     #context-openlink::before
     {
-        background-image: var(--window);
+        mask-image: var(--window);
     }
 
     #context-openlinkprivate::before
     {
-        background-image: var(--window-inprivate-account);
+        mask-image: var(--window-inprivate-account);
     }
 
     #context-bookmarklink::before
     {
-        background-image: var(--star-add);
+        mask-image: var(--star-add);
     }
 
     #context-savelink::before
     {
-        background-image: var(--save-edit);
+        mask-image: var(--save-edit);
     }
 
     #context-copylink::before
     {
-        background-image: var(--link);
+        mask-image: var(--link);
     }
 
     #context-undo::before
     {
-        background-image: var(--arrow-undo);
+        mask-image: var(--arrow-undo);
     }
 
     #context-redo::before
     {
-        background-image: var(--arrow-redo);
+        mask-image: var(--arrow-redo);
     }
 
     #context-cut::before
     {
-        background-image: var(--cut);
+        mask-image: var(--cut);
     }
 
     #context-copy::before
     {
-        background-image: var(--copy);
+        mask-image: var(--copy);
     }
 
     #context-paste::before
     {
-        background-image: var(--clipboard-paste);
+        mask-image: var(--clipboard-paste);
     }
 
     #context-delete::before
     {
-        background-image: var(--delete);
+        mask-image: var(--delete);
     }
 
     #context-keywordfield::before
     {
-        background-image: var(--star-add);
+        mask-image: var(--star-add);
     }
 
     #context-media-play::before
     {
-        background-image: var(--play);
+        mask-image: var(--play);
     }
 
     #context-media-pause::before
     {
-        background-image: var(--pause);
+        mask-image: var(--pause);
     }
 
     #context-media-mute::before
     {
-        background-image: var(--speaker-mute);
+        mask-image: var(--speaker-mute);
     }
 
     #context-media-unmute::before
     {
-        background-image: var(--speaker-2);
+        mask-image: var(--speaker-2);
     }
 
     #context-viewvideo::before
     {
-        background-image: var(--tab-desktop);
+        mask-image: var(--tab-desktop);
     }
 
     #context-savevideo::before
     {
-        background-image: var(--save-edit);
+        mask-image: var(--save-edit);
     }
 
   }
