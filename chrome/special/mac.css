@@ -1,15 +1,18 @@
-:root[tabsintitlebar]:not([lwtheme], :-moz-window-inactive)
+@media (-moz-bool-pref: "userChrome.MacOS.Vibrancy.Enabled")
 {
-    appearance: menupopup !important;
-
-    #navigator-toolbox
+    :root[tabsintitlebar]:not([lwtheme], :-moz-window-inactive)
     {
-        background-color: transparent !important;
-    }
+        appearance: menupopup !important;
 
-    .titlebar-color
-    {
-        --toolbarbutton-hover-background: color-mix(in srgb, currentColor 17%, transparent) !important;
-        --toolbarbutton-active-background: color-mix(in srgb, currentColor 30%, transparent) !important;
+        #navigator-toolbox
+        {
+            background-color: transparent !important;
+        }
+
+        .titlebar-color
+        {
+            --toolbarbutton-hover-background: color-mix(in srgb, currentColor 17%, transparent) !important;
+            --toolbarbutton-active-background: color-mix(in srgb, currentColor 30%, transparent) !important;
+        }
     }
 }
