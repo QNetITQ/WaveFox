@@ -802,7 +802,6 @@ spacer[part="overflow-end-indicator"]
     width: 16px;
     height: 16px;
     background-color: currentColor;
-    mask-image: url("special/Additional_Elements/PIP_Icon.svg");
     mask-size: 16px 16px;
     mask-position: center center;
     mask-repeat: no-repeat;
@@ -827,13 +826,11 @@ spacer[part="overflow-end-indicator"]
 .tabbrowser-tab[pictureinpicture]:not([busy], [crashed]):not([soundplaying], [muted], [activemedia-blocked]) .tab-icon-stack::before
 {
     mask-image: url("special/Additional_Elements/PIP.svg");
-    mask-size: 100% 100%;
 }
 
 .tabbrowser-tab[pictureinpicture]:not([busy], [crashed]):is([soundplaying], [muted], [activemedia-blocked]) .tab-icon-stack::before
 {
     mask-image: url("special/Additional_Elements/PIP_Sound.svg");
-    mask-size: 100% 100%;
 }
 
 /* -------------------- Tab Text -------------------- */
