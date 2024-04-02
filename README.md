@@ -110,7 +110,7 @@ Create a file `third_party_custom_styles.css`, add the desired styles inside and
 
 ### MacOS Vibrancy / Tinting
 
-- `userChrome.MacOS.Vibrancy.Enabled` (Tinting key activation required)
+- `widget.macos.titlebar-blend-mode.behind-window`
 - `browser.theme.macos.native-theme` (MacOS 11+)
 
 ### Linux Transparency
