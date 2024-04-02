@@ -1,7 +1,1 @@
-@media (-moz-bool-pref: "userChrome.MacOS.Vibrancy.Enabled")
-{
-    :root[tabsintitlebar]:not([lwtheme], :-moz-window-inactive)
-    {
-        -moz-default-appearance: menupopup !important;
-    }
-}
+
