@@ -1327,6 +1327,103 @@ spacer[part="overflow-end-indicator"]
     }
 }
 
+/* ---------------------------------------- One Line (Experemental) ---------------------------------------- */
+
+@media (-moz-bool-pref: "userChrome.OneLine(Experemental).TabBarFirst.Enabled") or
+       (-moz-bool-pref: "userChrome.OneLine(Experemental).NavBarFirst.Enabled")
+{
+    @media (-moz-bool-pref: "userChrome.OneLine(Experemental).TabBarFirst.Enabled")
+    {
+        #titlebar
+        {
+            order: 0 !important;
+        }
+        
+        #nav-bar
+        {
+            order: 2 !important;
+        }
+    }
+
+    @media (-moz-bool-pref: "userChrome.OneLine(Experemental).NavBarFirst.Enabled")
+    {
+        #titlebar
+        {
+            order: 2 !important;
+        }
+
+        #nav-bar
+        {
+            order: 0 !important;
+        }
+    }
+
+    #navigator-toolbox
+    {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        border-block-end-width: 0px !important;
+        -moz-window-dragging: drag !important;
+    }
+
+    #TabsToolbar::before
+    {
+        display: none !important;
+    }
+    
+    /* -------------------- Title Bar -------------------- */
+    
+    #titlebar
+    {
+        flex-basis: 100% !important;
+    }
+
+    /* -------------------- Nav Bar -------------------- */
+
+    #nav-bar
+    {
+        min-width: fit-content !important;
+        margin: var(--tab-block-margin) !important;
+        border-radius: var(--toolbarbutton-border-radius) !important;
+        box-shadow: var(--outer-box-border, 0 0 0 transparent),
+                    var(--outer-box-shadow, 0 0 0 transparent) !important;
+    }
+
+    #urlbar-container
+    {
+        --urlbar-container-height: var(--tab-min-height) !important;
+    }
+
+    #urlbar
+    {
+        --urlbar-toolbar-height: var(--tab-min-height) !important;
+    }
+
+    /* -------------------- Bookmarks Bar -------------------- */
+
+    #PersonalToolbar
+    {
+        margin-block: var(--tab-block-margin) !important;
+        border-radius: var(--toolbarbutton-border-radius) !important;
+        box-shadow: var(--outer-box-border, 0 0 0 transparent),
+                    var(--outer-box-shadow, 0 0 0 transparent) !important;
+        order: 1 !important;
+        flex-basis: 25% !important;
+        max-width: fit-content !important;
+    }
+    
+    #PersonalToolbar .bookmark-item > .toolbarbutton-icon
+    {
+        margin-inline-end: 0px !important;
+    }
+    
+    #PersonalToolbar .bookmark-item > .toolbarbutton-text
+    {
+        display: none !important;
+    }
+}
+
 /* ---------------------------------------- Menu Icons ---------------------------------------- */
 
 /* ---------- Regular Icons ---------- */
