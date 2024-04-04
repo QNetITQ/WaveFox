@@ -457,14 +457,16 @@
 
 /* ---------------------------------------- Titlebar ---------------------------------------- */
 
-:root[tabsintitlebar]:-moz-window-inactive
+:root[tabsintitlebar]
 {
     #titlebar
     {
+        will-change: auto !important;
+        transition: none !important;
         opacity: 1 !important;
     }
 
-    .titlebar-color
+    &:-moz-window-inactive .titlebar-color
     {
         color: color-mix(in srgb, currentColor 60%, transparent) !important;
         --toolbarbutton-icon-fill: currentColor !important;
