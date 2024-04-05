@@ -1200,29 +1200,10 @@ spacer[part="overflow-end-indicator"]
 
     #nav-bar
     {
-        overflow: visible !important;
-        position: relative !important;
-        background-color: transparent !important;
-        z-index: 2 !important;
-    }
-
-    #nav-bar::before
-    {
-        content: "";
-        display: block;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        inset-block-end: 0px;
-        inset-inline-start: 0px;
-        background-image: var(--left-svg), var(--center-svg), var(--right-svg);
-        background-repeat: no-repeat, no-repeat, no-repeat;
-        fill: var(--toolbar-bgcolor);
-        -moz-context-properties: fill;
-        z-index: -1;
-        pointer-events: none;
-        filter: var(--outer-drop-border, drop-shadow(0 0 0 transparent))
-                var(--outer-drop-shadow, drop-shadow(0 0 0 transparent));
+        margin: var(--tab-block-margin) !important;
+        border-radius: var(--tab-border-radius) !important;
+        box-shadow: var(--outer-box-border, 0 0 0 transparent),
+                    var(--outer-box-shadow, 0 0 0 transparent) !important;
     }
 
     #urlbar-container,
@@ -1246,23 +1227,9 @@ spacer[part="overflow-end-indicator"]
 
     #PersonalToolbar
     {
-        position: relative !important;
-        overflow: visible !important;
-    }
-
-    #PersonalToolbar::before
-    {
-        content: "";
-        display: block;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        inset-block-start: 0px;
-        inset-inline-start: 0px;
         box-shadow: var(--outer-box-border, 0 0 0 transparent),
-                    var(--outer-box-shadow, 0 0 0 transparent);
-        pointer-events: none;
-        clip-path: inset(-4px 0px 0px 0px);
+                    var(--outer-box-shadow, 0 0 0 transparent) !important;
+        clip-path: inset(calc(-1 * var(--tab-block-margin)) 0px 0px) !important;
     }
 
     /* -------------------- Bookmarks Bar / Notifications -------------------- */
