@@ -1196,6 +1196,13 @@ spacer[part="overflow-end-indicator"]
         display: none !important;
     }
 
+    /* -------------------- Menu Bar -------------------- */
+
+    #toolbar-menubar
+    {
+        margin-inline-start: -50vw !important;
+    }
+
     /* -------------------- Nav Bar -------------------- */
 
     #nav-bar
@@ -1213,23 +1220,19 @@ spacer[part="overflow-end-indicator"]
         padding-block: 0px !important;
     }
 
-    #urlbar-container
-    {
-        --urlbar-container-height: var(--tab-min-height) !important;
-    }
-
-    #urlbar
-    {
-        --urlbar-toolbar-height: var(--tab-min-height) !important;
-    }
-
     /* -------------------- Bookmarks Bar -------------------- */
 
     #PersonalToolbar
     {
+        margin-inline: var(--tab-block-margin) !important;
+        border-radius: var(--tab-border-radius) !important;
         box-shadow: var(--outer-box-border, 0 0 0 transparent),
                     var(--outer-box-shadow, 0 0 0 transparent) !important;
-        clip-path: inset(calc(-1 * var(--tab-block-margin)) 0px 0px) !important;
+    }
+
+    #PersonalToolbar[collapsed="false"]
+    {
+        margin-bottom: var(--tab-block-margin) !important;
     }
 
     /* -------------------- Bookmarks Bar / Notifications -------------------- */
@@ -1237,6 +1240,13 @@ spacer[part="overflow-end-indicator"]
     #navigator-toolbox > *:not(#titlebar, #nav-bar)
     {
         grid-column: 1 / span 2 !important;
+    }
+
+    /* -------------------- Customization -------------------- */
+
+    #customization-panelWrapper
+    {
+        --panel-arrow-offset: 0px !important;
     }
 
     /* -------------------- Floating Tabs -------------------- */
@@ -1247,57 +1257,41 @@ spacer[part="overflow-end-indicator"]
            (-moz-bool-pref: "userChrome.Tabs.Option4.Enabled") or
            (-moz-bool-pref: "userChrome.Tabs.Option5.Enabled")
     {
-        #nav-bar
+        #urlbar-container
         {
-            margin: var(--tab-block-margin) !important;
-        }
-
-        #nav-bar::before
-        {
-            background-size: auto 100%, calc(100% - var(--tab-min-height)) 100%, auto 100%;
-            background-position: left calc(-1 * var(--tab-min-height) / 2) center,
-                                 center center,
-                                 right calc(-1 * var(--tab-min-height) / 2) center;
+            --urlbar-container-height: var(--tab-min-height) !important;
         }
     }
 
     /* -------------------- Attached Tabs -------------------- */
 
-    @media (-moz-bool-pref: "userChrome.Tabs.Option6.Enabled") or
-           (-moz-bool-pref: "userChrome.Tabs.Option7.Enabled") or
-           (-moz-bool-pref: "userChrome.Tabs.Option8.Enabled")
-    {
-        #nav-bar
-        {
-            padding-inline: calc(var(--tab-min-height) / 4) !important;
-        }
-
-        #nav-bar::before
-        {
-            background-size: auto 100%, calc(100% - var(--tab-min-height) - var(--tab-min-height) / 2) 100%, auto 100%;
-            background-position: left calc(-1 * var(--tab-min-height) / 4) center,
-                                 center center,
-                                 right calc(-1 * var(--tab-min-height) / 4) center;
-            clip-path: inset(-4px 0px 0px 0px);
-        }
-    }
-
-    @media (-moz-bool-pref: "userChrome.Tabs.Option9.Enabled")  or
+    @media (-moz-bool-pref: "userChrome.Tabs.Option6.Enabled")  or
+           (-moz-bool-pref: "userChrome.Tabs.Option7.Enabled")  or
+           (-moz-bool-pref: "userChrome.Tabs.Option8.Enabled")  or
+           (-moz-bool-pref: "userChrome.Tabs.Option9.Enabled")  or
            (-moz-bool-pref: "userChrome.Tabs.Option10.Enabled") or
            (-moz-bool-pref: "userChrome.Tabs.Option11.Enabled") or
            (-moz-bool-pref: "userChrome.Tabs.Option12.Enabled") or
            (-moz-bool-pref: "userChrome.Tabs.Option13.Enabled")
     {
-        #nav-bar
+        :root
         {
-            padding-inline: calc(var(--tab-min-height) / 2) !important;
+            --tab-min-height: 44px !important;
+
+            &[uidensity="compact"]
+            {
+                --tab-min-height: 40px !important;
+            }
+
+            &[uidensity="touch"]
+            {
+                --tab-min-height: 48px !important;
+            }
         }
 
-        #nav-bar::before
+        #urlbar-container
         {
-            background-size: auto 100%, calc(100% - var(--tab-min-height) * 2) 100%, auto 100%;
-            background-position: left center, center center, right center;
-            clip-path: inset(-4px 0px 0px 0px);
+            --urlbar-container-height: calc(var(--tab-min-height) - var(--tab-block-margin) * 2) !important;
         }
     }
 }
