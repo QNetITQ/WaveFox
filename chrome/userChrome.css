@@ -147,7 +147,6 @@
         --tab-bg-block-margin: var(--tab-block-margin);
         --tab-inline-padding: var(--tab-first-last-inline-margin);
         --tab-separator-offset: var(--tab-first-last-inline-margin);
-        --tab-attention-indicator-position: center bottom calc(((var(--tab-min-height) - 16px) / 2 - 4px) / 2 + var(--tab-block-margin));
     }
 
     /* -------------------- Attached Tabs -------------------- */
@@ -168,7 +167,6 @@
         --tab-bg-block-margin: 0px;
         --tab-inline-padding: 0px;
         --tab-separator-offset: 0px;
-        --tab-attention-indicator-position: center bottom calc(((var(--tab-min-height) - 16px) / 2 - 4px) / 2);
     }
 }
 
@@ -452,6 +450,7 @@
 :root
 {
     --tab-shadow-max-size: 0px !important;
+    --tab-attention-indicator-position: 50% calc(50% + 12px);
 }
 
 /* ---------------------------------------- Nav Bar ---------------------------------------- */
@@ -656,6 +655,16 @@ spacer[part="overflow-end-indicator"]
         border-radius: 0px !important;
         pointer-events: none !important;
     }
+
+    &[pinned] .tab-content
+    {
+        padding-inline: calc((var(--tab-min-height) - 16px) / 2 + var(--pinned-tabs-width-offset, 0px)) !important;
+    }
+
+    &:not([pinned]) .tab-content
+    {
+        padding-inline: 10px !important;
+    }
 }
 
 .tab-drop-indicator
@@ -671,11 +680,6 @@ spacer[part="overflow-end-indicator"]
 .tabbrowser-tab[pending] .tab-icon-image
 {
     opacity: 0.5 !important;
-}
-
-.tab-content
-{
-    padding-inline: calc((var(--tab-min-height) - 16px) / 2 + var(--pinned-tabs-width-offset, 0px)) !important;
 }
 
 .tab-close-button
