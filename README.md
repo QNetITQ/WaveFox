@@ -204,9 +204,3 @@ By default context menus follow the selected interface density, but it is possib
 
 - `userChrome.OneLine.TabBarFirst.Enabled`
 - `userChrome.OneLine.NavBarFirst.Enabled`
-- `browser.tabs.inTitlebar` (Enable this key if there are problems with window control buttons. Set the value to 0)
-
-Low values are better for ultra widescreen monitors
-- `userChrome.OneLine.NavBarWidth.Low.Enabled`
-- `userChrome.OneLine.NavBarWidth.Medium.Enabled`
-- `userChrome.OneLine.NavBarWidth.High.Enabled`
