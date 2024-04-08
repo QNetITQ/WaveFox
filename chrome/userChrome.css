@@ -1144,29 +1144,11 @@ spacer[part="overflow-end-indicator"]
 @media (-moz-bool-pref: "userChrome.OneLine.TabBarFirst.Enabled") or
        (-moz-bool-pref: "userChrome.OneLine.NavBarFirst.Enabled")
 {
-    :root
-    {
-        @media (-moz-bool-pref: "userChrome.OneLine.NavBarWidth.Low.Enabled")
-        {
-            --navbar-width: 20%;
-        }
-
-        @media (-moz-bool-pref: "userChrome.OneLine.NavBarWidth.Medium.Enabled")
-        {
-            --navbar-width: 30%;
-        }
-
-        @media (-moz-bool-pref: "userChrome.OneLine.NavBarWidth.High.Enabled")
-        {
-            --navbar-width: 40%;
-        }
-    }
-
     @media (-moz-bool-pref: "userChrome.OneLine.TabBarFirst.Enabled")
     {
         #navigator-toolbox
         {
-            grid-template-columns: auto var(--navbar-width, 50%) !important;
+            grid-template-columns: auto min-content !important;
         }
 
         #titlebar
@@ -1179,7 +1161,7 @@ spacer[part="overflow-end-indicator"]
     {
         #navigator-toolbox
         {
-            grid-template-columns: var(--navbar-width, 50%) auto !important;
+            grid-template-columns: min-content auto !important;
         }
 
         #nav-bar
@@ -1191,20 +1173,12 @@ spacer[part="overflow-end-indicator"]
     #navigator-toolbox
     {
         display: grid !important;
-        align-items: end !important;
         -moz-window-dragging: drag !important;
     }
 
     #TabsToolbar::before
     {
         display: none !important;
-    }
-
-    /* -------------------- Menu Bar -------------------- */
-
-    #toolbar-menubar
-    {
-        margin-inline-start: -50vw !important;
     }
 
     /* -------------------- Nav Bar -------------------- */
@@ -1220,7 +1194,6 @@ spacer[part="overflow-end-indicator"]
     #urlbar-container,
     #search-container
     {
-        flex-shrink: 1 !important;
         padding-block: 0px !important;
     }
 
