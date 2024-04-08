@@ -1170,6 +1170,11 @@ spacer[part="overflow-end-indicator"]
         }
     }
 
+    :root
+    {
+        --drag-space: 0px !important;
+    }
+
     #navigator-toolbox
     {
         display: grid !important;
