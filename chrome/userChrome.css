@@ -1226,20 +1226,6 @@ spacer[part="overflow-end-indicator"]
         --panel-arrow-offset: 0px !important;
     }
 
-    /* -------------------- Floating Tabs -------------------- */
-
-    @media (-moz-bool-pref: "userChrome.Tabs.Option1.Enabled") or
-           (-moz-bool-pref: "userChrome.Tabs.Option2.Enabled") or
-           (-moz-bool-pref: "userChrome.Tabs.Option3.Enabled") or
-           (-moz-bool-pref: "userChrome.Tabs.Option4.Enabled") or
-           (-moz-bool-pref: "userChrome.Tabs.Option5.Enabled")
-    {
-        #urlbar-container
-        {
-            --urlbar-container-height: var(--tab-min-height) !important;
-        }
-    }
-
     /* -------------------- Attached Tabs -------------------- */
 
     @media (-moz-bool-pref: "userChrome.Tabs.Option6.Enabled")  or
@@ -1264,11 +1250,6 @@ spacer[part="overflow-end-indicator"]
             {
                 --tab-min-height: 48px !important;
             }
-        }
-
-        #urlbar-container
-        {
-            --urlbar-container-height: calc(var(--tab-min-height) - var(--tab-block-margin) * 2) !important;
         }
     }
 }
