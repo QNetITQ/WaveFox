@@ -3,7 +3,7 @@
 @import "special/windows.css" layer(HighPriority) /* supports() */ (-moz-platform: windows);
 @import "special/linux.css"   layer(HighPriority) /* supports() */ (-moz-platform: linux);
 @import "special/mac.css"     layer(HighPriority) /* supports() */ (-moz-platform: macos);
-@import "Lepton_Icons/icons/Lepton_Icons.css"                      (-moz-bool-pref: "userChrome.Icons.LeptonIcons.Enabled");
+@import "Lepton_Icons/icons/Lepton_Icons.css"                      (-moz-bool-pref: "userChrome.Menu.Icons.LeptonIcons.Enabled");
 @import "third_party_custom_styles.css"                            (-moz-bool-pref: "userChrome.Style.ThirdParty.Enabled");
 
 @layer LowPriority
