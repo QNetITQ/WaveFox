@@ -1,0 +1,3605 @@
+/** Icons *********************************************************************/
+@media not (-moz-bool-pref: "userChrome.icon.disabled") {
+  /** Icons - List **************************************************************/
+  :root {
+    --uc-folder-icon: url("chrome://global/skin/icons/folder.svg");
+    --uc-tab-icon: url("../icons/tab.svg");
+    --uc-tab-copy-icon: url("../icons/tab-copy.svg");
+    --uc-tab-unload-icon: url("../icons/tab-unload.svg");
+    --uc-tab-multiple-icon: url("../icons/tab-desktop-multiple.svg");
+    --uc-new-tab-icon: url("../icons/new-tab.svg");
+    --uc-new-tab-forward-icon: url("../icons/new-tab-forward.svg");
+    --uc-new-tab-skip-forward-icon: url("../icons/new-tab-skip-forward.svg");
+    --uc-new-tab-multiple-icon: url("../icons/new-tab-multiple.svg");
+    --uc-sidebar-icon: url("chrome://browser/skin/sidebars.svg");
+    --uc-sidebar-icon-reverse: url("chrome://browser/skin/sidebars-right.svg");
+  }
+  /** Library - Icons Replace ***************************************************/
+  /** Panel - Icons *************************************************************/
+  /** Menu - Icons Layout *******************************************************/
+  /** Icons - 1.25px Stroke Width ***********************************************/
+  /** Icons for fork browsers ***************************************************/
+  /*= Waterfox =================================================================*/
+  /*= Tor Browser ==============================================================*/
+  /*= Floorp Browser ===========================================================*/
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.library") {
+  :root {
+    --uc-folder-icon: url("../icons/folder.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.tab.connect_to_window") {
+  :root {
+    --uc-tab-icon: url("../icons/tab-photon.svg");
+    --uc-tab-copy-icon: url("../icons/tab-copy-photon.svg");
+    --uc-tab-unload-icon: url("../icons/tab-unload-photon.svg");
+    --uc-tab-multiple-icon: url("../icons/tab-multiple.svg");
+    --uc-new-tab-icon: url("../icons/new-tab-photon.svg");
+    --uc-new-tab-forward-icon: url("../icons/new-tab-forward-photon.svg");
+    --uc-new-tab-skip-forward-icon: url("../icons/new-tab-skip-forward-photon.svg");
+  }
+}
+@media not (-moz-bool-pref: "userChrome.icon.disabled") {
+  @supports selector(:has(a)) {
+    :root:has(#sidebar-box[positionend="true"]) {
+      --uc-sidebar-icon: url("chrome://browser/skin/sidebars-right.svg");
+      --uc-sidebar-icon-reverse: url("chrome://browser/skin/sidebars.svg");
+    }
+  }
+}
+@media not (-moz-bool-pref: "userChrome.icon.disabled") {
+  #TabsToolbar #new-tab-button {
+    --uc-new-tab-icon: url(chrome://global/skin/icons/plus.svg);
+  }
+}
+@media not (-moz-bool-pref: "userChrome.icon.disabled") {
+  .urlbarView-row[source="tabs"] > .urlbarView-row-inner > .urlbarView-no-wrap > .urlbarView-favicon,
+  #urlbar-engine-one-off-item-tabs {
+    list-style-image: var(--uc-tab-icon) !important;
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.library") {
+  /*= Standard Folder - More Visible ===========================================*/
+  /* on Toolbar and Menus */
+  :-moz-any(#PlacesToolbar, #BMB_bookmarksPopup, #bookmarksMenu)
+    .bookmark-item[container="true"]:not([query="true"], [tagContainer], [dayContainer]),
+  :-moz-any(#bookmarks-view, #historyTree, #editBMPanel_folderTree, #placesList, #placeContent)
+    treechildren::-moz-tree-image(title, container),
+  #editBMPanel_folderMenuList:not([selectedGuid="toolbar_____"], [selectedGuid="menu________"]),
+  #editBMPanel_folderMenuList .folder-icon:not([id]),
+  .downloadIconShow > .button-box > .button-icon {
+    list-style-image: var(--uc-folder-icon) !important;
+  }
+  /* Standard Folder - Open */
+  :-moz-any(#PlacesToolbar, #BMB_bookmarksPopup, #bookmarksMenu)
+    .bookmark-item[container="true"]:not([query="true"], [tagContainer], [dayContainer])[open="true"],
+  :-moz-any(#bookmarks-view, #historyTree, #editBMPanel_folderTree, #placesList, #placeContent)
+    treechildren::-moz-tree-image(title, container, open) {
+    list-style-image: url("../icons/folder-open.svg") !important;
+  }
+  /*= Other Folder - Inbox Icon ================================================*/
+  /* on Menus */
+  #PlacesToolbar #OtherBookmarks,
+  #BMB_bookmarksPopup #BMB_unsortedBookmarks,
+  #bookmarksMenuPopup #menu_unsortedBookmarks,
+  :-moz-any(#bookmarks-view, #editBMPanel_folderTree, #placesList, #placeContent)
+    treechildren::-moz-tree-image(container, OrganizerQuery_UnfiledBookmarks),
+  :-moz-any(#bookmarks-view, #editBMPanel_folderTree, #placesList, #placeContent)
+    treechildren::-moz-tree-image(container, queryFolder_unfiled_____),
+  #editBMPanel_unfiledRootItem,
+  #editBMPanel_folderMenuList[selectedGuid="unfiled_____"] {
+    list-style-image: url("../icons/mail-inbox-all.svg") !important;
+  }
+  /* Other Folder - Open */
+  #PlacesToolbar #OtherBookmarks[open="true"],
+  #BMB_bookmarksPopup #BMB_unsortedBookmarks[open="true"],
+  #bookmarksMenuPopup #menu_unsortedBookmarks[open="true"],
+  :-moz-any(#bookmarks-view, #editBMPanel_folderTree, #placesList, #placeContent)
+    treechildren::-moz-tree-image(container, open, OrganizerQuery_UnfiledBookmarks),
+  :-moz-any(#bookmarks-view, #editBMPanel_folderTree, #placesList, #placeContent)
+    treechildren::-moz-tree-image(container, open, queryFolder_unfiled_____) {
+    list-style-image: url("../icons/mail-inbox.svg") !important;
+  }
+  /*= Default Icon - Override ===================================================*/
+  /* https://github.com/mozilla/gecko-dev/blob/master/browser/themes/shared/places/tree-icons.css */
+  /* Query */
+  :-moz-any(#historyTree, #placesList, #placeContent) treechildren::-moz-tree-image(title, query) {
+    list-style-image: url("chrome://browser/skin/places/folder-smart.svg") !important;
+  }
+  /* History */
+  :-moz-any(#historyTree, #placesList, #placeContent) treechildren::-moz-tree-image(title, query, dayContainer),
+  :-moz-any(#historyTree, #placesList, #placeContent)
+    treechildren::-moz-tree-image(query, OrganizerQuery_history____v) {
+    list-style-image: url("chrome://browser/skin/history.svg") !important;
+  }
+  /* Downloads */
+  :-moz-any(#placesList, #placeContent) treechildren::-moz-tree-image(query, OrganizerQuery_downloads__v) {
+    list-style-image: url("chrome://browser/skin/downloads/downloads.svg") !important;
+  }
+  /* Tag */
+  :-moz-any(#placesList, #placeContent) treechildren::-moz-tree-image(title, query, tagContainer),
+  :-moz-any(#placesList, #placeContent) treechildren::-moz-tree-image(query, OrganizerQuery_tags_______v),
+  .bookmark-item[query][tagContainer] {
+    list-style-image: url("../icons/tag.svg") !important;
+  }
+  /* Bookmark */
+  :-moz-any(#placesList, #placeContent) treechildren::-moz-tree-image(query, OrganizerQuery_allbms_____v) {
+    list-style-image: url("chrome://browser/skin/bookmark.svg") !important;
+  }
+  /* Bookmark Toolbar */
+  #BMB_bookmarksPopup #BMB_bookmarksToolbar,
+  #bookmarksMenuPopup #bookmarksToolbarFolderMenu,
+  :-moz-any(#bookmarks-view, #editBMPanel_folderTree, #placesList, #placeContent)
+    treechildren::-moz-tree-image(container, queryFolder_toolbar_____),
+  #editBMPanel_folderMenuList[selectedGuid="toolbar_____"],
+  #editBMPanel_toolbarFolderItem,
+  #bookmarksToolbarFolderMenu,
+  #BMB_bookmarksToolbar,
+  #panelMenu_bookmarksToolbar,
+  #bookmarks-toolbar-button,
+  #bookmarks-toolbar-placeholder {
+    list-style-image: url("../icons/bookmarks-toolbar-alt.svg") !important;
+  }
+  /* Bookmark Menu */
+  :-moz-any(#bookmarks-view, #editBMPanel_folderTree, #placesList, #placeContent)
+    treechildren::-moz-tree-image(container, queryFolder_menu________) {
+    list-style-image: url("chrome://browser/skin/places/bookmarksMenu.svg") !important;
+  }
+  /*= Default Icon - Open ======================================================*/
+  /* Query */
+  :-moz-any(#PlacesToolbar, #BMB_bookmarksPopup, #bookmarksMenu)
+    .bookmark-item[container="true"][query="true"]:not([tagContainer])[open="true"]
+    > .menu-iconic-left
+    > .menu-iconic-icon {
+    transform: rotate(15deg) !important;
+  }
+  /* History */
+  :-moz-any(#historyTree, #placesList, #placeContent) treechildren::-moz-tree-image(title, query, open, dayContainer),
+  :-moz-any(#historyTree, #placesList, #placeContent)
+    treechildren::-moz-tree-image(query, open, OrganizerQuery_history____v) {
+    list-style-image: url("../icons/history-reverse.svg") !important;
+  }
+  /* Tag */
+  :-moz-any(#PlacesToolbar, #BMB_bookmarksPopup, #bookmarksMenu)
+    .bookmark-item[container="true"][tagContainer="true"][open="true"],
+  :-moz-any(#placesList, #placeContent) treechildren::-moz-tree-image(title, query, open, tagContainer),
+  :-moz-any(#placesList, #placeContent) treechildren::-moz-tree-image(query, open, OrganizerQuery_tags_______v) {
+    list-style-image: url("../icons/tag-open.svg") !important;
+  }
+  /* Bookmark */
+  :-moz-any(#placesList, #placeContent) treechildren::-moz-tree-image(query, open, OrganizerQuery_allbms_____v) {
+    list-style-image: url("chrome://browser/skin/bookmark-hollow.svg") !important;
+  }
+  /* Bookmark Toolbar */
+  #BMB_bookmarksPopup #BMB_bookmarksToolbar[open="true"],
+  #bookmarksMenuPopup #bookmarksToolbarFolderMenu[open="true"],
+  :-moz-any(#bookmarks-view, #editBMPanel_folderTree, #placesList, #placeContent)
+    treechildren::-moz-tree-image(container, open, queryFolder_toolbar_____) {
+    list-style-image: url("../icons/bookmarksToolbar-open-alt.svg") !important;
+  }
+  /* Bookmark Menu */
+  :-moz-any(#bookmarks-view, #editBMPanel_folderTree, #placesList, #placeContent)
+    treechildren::-moz-tree-image(container, open, queryFolder_menu________) {
+    list-style-image: url("../icons/bookmarksMenu-open.svg") !important; /* or bookmarksMenu-open2.svg" */
+  }
+  @-moz-document url("chrome://browser/content/places/places.xhtml")
+  {
+    @media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.library") and (-moz-gtk-csd-available) {
+      /*= Menubar - Icons ==========================================================*/
+      #organizeButton,
+      #viewMenu,
+      #maintenanceButton,
+      #back-button,
+      #forward-button,
+      #clearDownloadsButton {
+        fill: currentColor !important;
+        -moz-context-properties: fill, fill-opacity, stroke !important;
+      }
+      /* Add */
+      #organizeButton {
+        list-style-image: url("chrome://global/skin/icons/settings.svg") !important;
+      }
+      #viewMenu {
+        list-style-image: url("../icons/sort.svg") !important;
+      }
+      #maintenanceButton {
+        list-style-image: url("../icons/import-export.svg") !important;
+      }
+      #clearDownloadsButton {
+        list-style-image: url("chrome://global/skin/icons/delete.svg") !important;
+      }
+      #clearDownloadsButton > .toolbarbutton-icon {
+        display: inline-flex !important;
+        display: -moz-inline-box !important;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-inline-start: 0;
+        margin-inline-end: 2px;
+      }
+      /* Replace */
+      #back-button {
+        list-style-image: url("chrome://browser/skin/back.svg") !important;
+      }
+      #forward-button {
+        list-style-image: url("chrome://browser/skin/forward.svg") !important;
+      }
+      #back-button:-moz-locale-dir(rtl) > .toolbarbutton-icon,
+      #forward-button:-moz-locale-dir(rtl) > .toolbarbutton-icon {
+        transform: scaleX(-1) !important;
+      }
+    }
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  /*= Padding ==================================================================*/
+  :root {
+    --arrowpanel-menuicon-padding: 8px;
+    --arrowpanel-menublank-padding: calc(
+      var(--arrowpanel-menuicon-padding) * 2 + var(--arrowpanel-menuitem-padding-inline)
+    ) !important;
+    --arrowpanel-menuimageblank-padding: calc(var(--arrowpanel-menuitem-padding-inline) - 2px) !important;
+    --arrowpanel-menuimageblank-padding-block: calc(var(--arrowpanel-menuitem-padding-block) - 2px) !important;
+  }
+  .subviewbutton > .toolbarbutton-icon {
+    width: 16px;
+  }
+  /* Icons Color */
+  /*= Panel - Main =============================================================*/
+  /*= Panel - Account ==========================================================*/
+  /* Default */
+  /* Change Separator */
+  /*= Panel - Bookmark =========================================================*/
+  /*= Panel - History ==========================================================*/
+  /*= Panel - More tools =======================================================*/
+  /* Web Developer Tools */
+  /* Task Manager */
+  /* Remote Debugging - Edge bug.svg */
+  /* Browser Toolbox - Edge webdeveloper.svg */
+  /* Browser Content Toolbox */
+  /* Browser Console */
+  /* Responsive Design Mode */
+  /* Eyedropper */
+  /* Page Source - Edge file-search.svg */
+  /* Extensions for Devel */
+  /*= Panel - Help =============================================================*/
+  /*= Panel - Library ==========================================================*/
+  /*= Panel - Downloads ========================================================*/
+  /*= Toolbar - Overflow Menu ==================================================*/
+  /*= Tabbar - All Tab Menu ====================================================*/
+  /*= BMB_bookmarksPopup =======================================================*/
+  /* BMB_bookmarksToolbarPopup */
+  /*= protections-popup ========================================================*/
+  /*= identity-popup ===========================================================*/
+  /*= sidebarMenu-popup ========================================================*/
+  /*= unified-extensions-view ===================================================*/
+  /*= Compatibility ============================================================*/
+  /*= Tab Mix Plus =============================================================*/
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") and (not (-moz-bool-pref: "userChrome.icon.panel_full")) {
+  :root {
+    /* Global */
+    --arrowpanel-menuicon-paddingx2: calc(var(--arrowpanel-menuicon-padding) * 2);
+    /* General Panel */
+    --arrowpanel-menublank-padding: calc(var(--arrowpanel-menuicon-paddingx2) + 8px) !important;
+    --arrowpanel-menuimageblank-padding: calc(var(--arrowpanel-menuitem-padding-inline) - 2px) !important;
+    /* Blank Menu Left Padding */
+    --arrowpanel-menuimageblank-padding-horizontal: calc(
+      var(--arrowpanel-menuicon-paddingx2) + var(--arrowpanel-menuitem-padding-inline)
+    );
+    --arrowpanel-menuitemblank-padding: calc(var(--arrowpanel-menuitem-padding-block) + 1px);
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #downloadsHistory .button-text,
+  .subviewbutton > .toolbarbutton-text {
+    padding-inline-start: var(--arrowpanel-menuicon-padding) !important;
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  .toolbaritem-combined-buttons:not(.unified-extensions-item)
+    > .subviewbutton:not(.subviewbutton-iconic)
+    > .toolbarbutton-text {
+    padding-inline-start: 0 !important;
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #panelMenu_bookmarksMenu .subviewbutton[disabled="true"] .toolbarbutton-text,
+  #appMenu_historyMenu .subviewbutton[disabled="true"] .toolbarbutton-text {
+    padding-inline-start: var(--arrowpanel-menublank-padding) !important;
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #appMenu-proton-update-banner .toolbarbutton-text {
+    margin-inline-start: 0 !important;
+    padding-inline-start: 0 !important; /* FF v107 */
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #appMenu-multiView .subviewbutton::before,
+  #appMenu-proton-update-banner::before {
+    display: inline-flex;
+    display: -moz-inline-box;
+    margin-inline-end: var(--arrowpanel-menuicon-padding);
+    width: 16px;
+    height: 16px;
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #appMenu-proton-update-banner {
+    margin-bottom: 2px !important;
+    padding-inline-start: var(--arrowpanel-menuitem-padding-inline) !important;
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #appMenu-fxa-status2,
+  #appMenu-zoom-controls2,
+  #appMenu-zoom-controls {
+    align-items: center;
+    padding-top: var(--arrowpanel-menuimageblank-padding-block) !important;
+    padding-bottom: var(--arrowpanel-menuimageblank-padding-block) !important;
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #appMenu-zoom-controls2::before,
+  #appMenu-zoom-controls::before {
+    margin-inline-end: 0 !important;
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #appMenu-zoomReduce-button2,
+  #appMenu-zoomReset-button2,
+  #appMenu-zoomEnlarge-button2,
+  #appMenu-fullscreen-button2 {
+    --arrowpanel-menuitem-padding-block: 0px;
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  .subviewbutton[type="checkbox"]:not([checked="true"], #allTabsMenu_sortTabsButton) > .toolbarbutton-text {
+    margin-left: 16px !important;
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #appMenu-multiView .subviewbutton::before,
+  #appMenu-proton-update-banner::before,
+  #downloadsHistory .button-icon,
+  .subviewbutton:not(#appMenu-proton-update-banner) > image {
+    fill: currentColor !important;
+    fill-opacity: var(--toolbarbutton-icon-fill-opacity) !important;
+    -moz-context-properties: fill, fill-opacity, stroke !important;
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #appMenu-zoomReduce-button2 > .toolbarbutton-icon,
+  #appMenu-zoomEnlarge-button2 > .toolbarbutton-icon {
+    stroke: var(--zoom-controls-bgcolor, var(--button-bgcolor, ButtonFace)) !important;
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #appMenu-zoomReduce-button2:not([disabled], [open], :active):is(:hover) > .toolbarbutton-icon,
+  #appMenu-zoomEnlarge-button2:not([disabled], [open], :active):is(:hover) > .toolbarbutton-icon {
+    stroke: var(--button-hover-bgcolor) !important;
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  .subviewbutton[disabled="true"] > image {
+    /* Ghost icons when disabled */
+    opacity: 0.4;
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #appMenu-proton-addon-banners > .addon-banner-item > .toolbarbutton-icon {
+    display: inline-flex !important;
+    display: -moz-inline-box !important;
+    margin-inline-start: var(--arrowpanel-menuicon-padding);
+    order: -1 !important;
+    -moz-box-ordinal-group: 0 !important;
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #appMenu-proton-update-banner::before {
+    content: url("../icons/whatsnew.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #appMenu-fxa-status2::before {
+    /* Don't exist img tag */
+    content: url("chrome://browser/skin/fxa/avatar-empty.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #appMenu-fxa-status2:is([fxastatus="signedin"], [fxastatus="unverified"], [fxastatus="login-failed"])::before {
+    display: none;
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #appMenu-fxa-status2:is([fxastatus="signedin"], [fxastatus="unverified"], [fxastatus="login-failed"])
+    #appMenu-fxa-label2::before {
+    /* url("https://profile.accounts.firefox.com/v1/avatar/a") */
+    content: "";
+    border-radius: 50% !important;
+    background-size: 16px !important;
+    background-image: var(--avatar-image-url) !important;
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #new-tab-button {
+    list-style-image: var(--uc-new-tab-icon) !important;
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") and (-moz-bool-pref: "userChrome.icon.panel_full"),
+  (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") and (-moz-bool-pref: "userChrome.icon.panel_photon") {
+  #appMenu-new-tab-button2 {
+    list-style-image: var(--uc-new-tab-icon);
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") and (-moz-bool-pref: "userChrome.icon.panel_photon") {
+  #appMenu-save-file-button2,
+  #appMenu-find-button2,
+  #appMenu-more-button2 {
+    padding-top: var(--arrowpanel-menuitemblank-padding) !important;
+    padding-bottom: var(--arrowpanel-menuitemblank-padding) !important;
+  }
+  #appMenu-zoom-controls2,
+  #appMenu-zoom-controls {
+    padding-inline-start: var(--arrowpanel-menuimageblank-padding-horizontal) !important;
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") and (not (-moz-bool-pref: "userChrome.icon.panel_photon")) and (not (-moz-bool-pref: "userChrome.icon.panel_full")) {
+  #appMenu-new-tab-button2,
+  #appMenu-passwords-button,
+  #appMenu-extensions-themes-button,
+  #appMenu-save-file-button2,
+  #appMenu-find-button2,
+  #appMenu-more-button2,
+  #appMenu-help-button2,
+  #appMenu-quit-button2 {
+    padding-top: var(--arrowpanel-menuitemblank-padding-block) !important;
+    padding-bottom: var(--arrowpanel-menuitemblank-padding-block) !important;
+  }
+  #appMenu-zoom-controls2,
+  #appMenu-zoom-controls {
+    padding-inline-start: var(--arrowpanel-menuimageblank-padding-horizontal) !important;
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #appMenu-new-window-button2 {
+    list-style-image: url("chrome://browser/skin/window.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #appMenu-new-private-window-button2 {
+    list-style-image: url("chrome://browser/skin/privateBrowsing.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #appMenu-bookmarks-button {
+    list-style-image: url("chrome://browser/skin/bookmark.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #appMenu-history-button {
+    list-style-image: url("chrome://browser/skin/history.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #appMenu-downloads-button {
+    list-style-image: url("chrome://browser/skin/downloads/downloads.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") and (-moz-bool-pref: "userChrome.icon.panel_full"),
+  (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") and (-moz-bool-pref: "userChrome.icon.panel_photon") {
+  #appMenu-passwords-button {
+    list-style-image: url("chrome://browser/skin/login.svg");
+  }
+  #appMenu-extensions-themes-button {
+    list-style-image: url("chrome://mozapps/skin/extensions/extension.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #appMenu-print-button2 {
+    list-style-image: url("chrome://global/skin/icons/print.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") and (-moz-bool-pref: "userChrome.icon.panel_full") {
+  #appMenu-save-file-button2 {
+    list-style-image: url("../icons/toolbarButton-download.svg");
+  }
+  #appMenu-find-button2 {
+    list-style-image: url("chrome://global/skin/icons/search-glass.svg");
+  }
+  #appMenu-translate-button {
+    list-style-image: url("../icons/translations.svg");
+  }
+  #appMenu-zoom-controls2::before,
+  #appMenu-zoom-controls::before {
+    content: url("../icons/screenshot.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #save-page-button {
+    list-style-image: url("../icons/toolbarButton-download.svg") !important;
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #open-file-button {
+    list-style-image: url("../icons/toolbarButton-upload.svg") !important;
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #cut-button {
+    list-style-image: url("../icons/edit-cut.svg") !important;
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #copy-button {
+    list-style-image: url("../icons/edit-copy.svg") !important;
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #paste-button {
+    list-style-image: url("../icons/edit-paste.svg") !important;
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #characterencoding-button {
+    list-style-image: url("../icons/characterEncoding.svg") !important;
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #screenshot-button {
+    list-style-image: url("../icons/screenshot-1.svg") !important;
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #email-link-button {
+    list-style-image: url("../icons/mail.svg") !important;
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #panic-button {
+    list-style-image: url("../icons/forget.svg") !important;
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #profiler-button-button > .toolbarbutton-icon {
+    list-style-image: url("../icons/performance.svg") !important;
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #developer-button {
+    list-style-image: url("../icons/wrench-filled.svg") !important;
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #appMenu-settings-button {
+    list-style-image: url("chrome://global/skin/icons/settings.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") and (-moz-bool-pref: "userChrome.icon.panel_full") {
+  #appMenu-more-button2 {
+    list-style-image: url("../icons/ion.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") and (-moz-bool-pref: "userChrome.icon.panel_full"),
+  (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") and (-moz-bool-pref: "userChrome.icon.panel_photon") {
+  #appMenu-help-button2 {
+    list-style-image: url("chrome://global/skin/icons/help.svg");
+  }
+  #appMenu-quit-button2 {
+    list-style-image: url("../icons/quit.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #PanelUI-fxa-menu-connect-device-button .toolbarbutton-icon,
+  #PanelUI-fxa-menu-account-signout-button .toolbarbutton-icon {
+    width: 16px !important;
+    height: 16px !important;
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #fxa-manage-account-button::before {
+    content: "";
+    display: inline-flex;
+    display: -moz-inline-box;
+    width: 32px !important;
+    height: 32px !important;
+    border-radius: 50%;
+    background-size: 32px;
+    background-image: var(--avatar-image-url);
+    margin-inline-end: var(--arrowpanel-menuicon-padding);
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") and (-moz-bool-pref: "userChrome.icon.account_image_to_right") {
+  #fxa-manage-account-button::before {
+    order: 2 !important;
+    -moz-box-ordinal-group: 2 !important;
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") and (-moz-bool-pref: "userChrome.icon.account_label_to_right") {
+  #fxa-menu-header-title,
+  #fxa-menu-header-description {
+    text-align: right;
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  .syncNowBtn {
+    visibility: visible !important;
+    order: -1 !important;
+    -moz-box-ordinal-group: 0 !important;
+    margin-inline-end: var(--arrowpanel-menuicon-padding);
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #PanelUI-fxa-menu-setup-sync-button {
+    list-style-image: url("chrome://browser/skin/sync.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #PanelUI-fxa-menu-connect-device-button {
+    list-style-image: url("../icons/add-device.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #PanelUI-fxa-menu-sendtab-button {
+    list-style-image: url("../icons/send-to-device.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #PanelUI-fxa-menu-sync-prefs-button {
+    list-style-image: url("chrome://global/skin/icons/settings.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #PanelUI-fxa-menu-account-signout-button {
+    list-style-image: url("../icons/sign-out.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #PanelUI-remotetabs-view-managedevices::before {
+    /* Box */
+    content: "";
+    padding-inline-end: 16px;
+    padding-block: 1px;
+    margin-inline-end: var(--arrowpanel-menuicon-padding);
+    /* Color */
+    fill: currentColor;
+    fill-opacity: var(--toolbarbutton-icon-fill-opacity);
+    -moz-context-properties: fill, fill-opacity, stroke;
+    background-size: 16px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-image: url("chrome://global/skin/icons/settings.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  .PanelUI-remotetabs-notabsforclient-label {
+    margin-inline-start: calc(
+      var(--arrowpanel-menuicon-padding) + var(--arrowpanel-menuitem-padding-inline)
+    ) !important;
+    padding-inline-start: var(--arrowpanel-menublank-padding) !important;
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #PanelUI-fxa-menu::before {
+    content: "";
+    display: flex;
+    display: -moz-box;
+    border-bottom: 1px solid var(--panel-separator-color);
+    margin: var(--panel-separator-margin);
+    padding: 0;
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #PanelUI-fxa-menu > :first-child {
+    order: -1;
+    -moz-box-ordinal-group: 0;
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #PanelUI-sign-out-separator {
+    display: none;
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  .pageAction-sendToDevice-device.subviewbutton.sync-menuitem.sendtab-target[clientType=""],
+  .sendToDevice-device.subviewbutton.sync-menuitem.sendtab-target[clientType=""] {
+    list-style-image: url("../icons/send-to-device.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  .pageAction-sendToDevice-device.subviewbutton.sync-menuitem.sendtab-target:not([clientType]),
+  .sendToDevice-device.subviewbutton.sync-menuitem.sendtab-target:not([clientType]) {
+    list-style-image: url("chrome://global/skin/icons/settings.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #panelMenuBookmarkThisPage {
+    list-style-image: url("chrome://browser/skin/bookmark-hollow.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  panelMenuBookmarkThisPage[starred] {
+    list-style-image: url("chrome://browser/skin/bookmark.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #panelMenu_searchBookmarks {
+    list-style-image: url("chrome://global/skin/icons/search-glass.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #panelMenu_viewBookmarksToolbar {
+    list-style-image: url("../icons/bookmarks-toolbar-alt.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #panelMenu_showAllBookmarks {
+    list-style-image: url("chrome://browser/skin/bookmark-star-on-tray.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #appMenuRecentlyClosedTabs {
+    list-style-image: var(--uc-tab-icon);
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #appMenuRecentlyClosedWindows {
+    list-style-image: url("chrome://browser/skin/window.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #appMenuSearchHistory {
+    list-style-image: url("chrome://global/skin/icons/search-glass.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #appMenuRestoreSession,
+  #appMenu-restoreSession {
+    list-style-image: url("../icons/restore-session.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #appMenuClearRecentHistory {
+    list-style-image: url("../icons/forget.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #PanelUI-historyMore {
+    list-style-image: url("chrome://browser/skin/history.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #appMenu-library-recentlyClosedTabs {
+    list-style-image: url("../icons/movetowindow-16.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #appMenu-library-recentlyClosedWindows {
+    list-style-image: url("../icons/restore-session.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #appmenu-moreTools-button {
+    list-style-image: url("chrome://browser/skin/customize.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #appmenu-developer-tools-view .subviewbutton:nth-child(1),
+  #PanelUI-developer-tools-view .subviewbutton:nth-child(1) {
+    list-style-image: url("../icons/developer.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #appmenu-developer-tools-view .subviewbutton:nth-child(2),
+  #PanelUI-developer-tools-view .subviewbutton:nth-child(2) {
+    list-style-image: url("../icons/performance.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #appmenu-developer-tools-view .subviewbutton:nth-child(3),
+  #PanelUI-developer-tools-view .subviewbutton:nth-child(3) {
+    list-style-image: url("../icons/bug.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #appmenu-developer-tools-view .subviewbutton:nth-child(4),
+  #PanelUI-developer-tools-view .subviewbutton:nth-child(4) {
+    list-style-image: url("../icons/window-dev-tools.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #appmenu-developer-tools-view .subviewbutton:nth-child(5),
+  #PanelUI-developer-tools-view .subviewbutton:nth-child(5) {
+    list-style-image: url("../icons/command-frames.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #appmenu-developer-tools-view .subviewbutton:nth-last-child(5),
+  #PanelUI-developer-tools-view .subviewbutton:nth-last-child(5) {
+    list-style-image: url("../icons/command-console.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #appmenu-developer-tools-view .subviewbutton:nth-last-child(4),
+  #PanelUI-developer-tools-view .subviewbutton:nth-last-child(4) {
+    list-style-image: url("../icons/command-responsivemode.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #appmenu-developer-tools-view .subviewbutton:nth-last-child(3),
+  #PanelUI-developer-tools-view .subviewbutton:nth-last-child(3) {
+    list-style-image: url("../icons/command-eyedropper.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #appmenu-developer-tools-view .subviewbutton:nth-last-child(2),
+  #PanelUI-developer-tools-view .subviewbutton:nth-last-child(2) {
+    list-style-image: url("../icons/document-search.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #appmenu-developer-tools-view .subviewbutton:nth-last-child(1),
+  #PanelUI-developer-tools-view .subviewbutton:nth-last-child(1) {
+    list-style-image: url("chrome://mozapps/skin/extensions/extension.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #appmenu-developer-tools-view .subviewbutton:last-child {
+    margin-bottom: 6px !important;
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #appMenu_menu_openHelp {
+    list-style-image: url("chrome://global/skin/icons/help.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #appMenu_feedbackPage {
+    list-style-image: url("../icons/send.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #appMenu_helpSafeMode {
+    list-style-image: url("chrome://devtools/skin/images/debugging-workers.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #appMenu_troubleShooting {
+    list-style-image: url("chrome://global/skin/icons/more.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #appMenu-report-broken-site-button,
+  #appMenu_help_reportSiteIssue {
+    list-style-image: url("chrome://global/skin/icons/lightbulb.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #appMenu_menu_HelpPopup_reportPhishingtoolmenu {
+    list-style-image: url("chrome://global/skin/icons/warning.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #appMenu_helpSwitchDevice {
+    list-style-image: url("../icons/add-device.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #appMenu_aboutName {
+    list-style-image: url("chrome://global/skin/icons/info.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #appMenu-library-bookmarks-button {
+    list-style-image: url("chrome://browser/skin/bookmark.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #appMenu-library-history-button {
+    list-style-image: url("chrome://browser/skin/history.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #appMenu-library-downloads-button {
+    list-style-image: url("chrome://browser/skin/downloads/downloads.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #downloadsHistory {
+    list-style-image: url("chrome://browser/skin/downloads/downloads.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #downloadsHistory .box-inherit.button-box {
+    display: inline-flex !important;
+    display: -moz-inline-box !important;
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #overflowMenu-customize-button {
+    list-style-image: url("chrome://browser/skin/customize.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #allTabsMenu-undoCloseTab {
+    list-style-image: url("../icons/undo.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #allTabsMenu-searchTabs {
+    list-style-image: url("chrome://global/skin/icons/search-glass.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #allTabsMenu-containerTabsButton {
+    list-style-image: url("../icons/container-openin-16.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #allTabsMenu-hiddenTabsButton {
+    list-style-image: url("../icons/eye-hide.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #allTabsMenu-containerTabsView .subviewbutton:last-child {
+    list-style-image: url("chrome://global/skin/icons/settings.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #BMB_viewBookmarksSidebar {
+    --menuitem-image: var(--uc-sidebar-icon);
+  }
+  #BMB_viewBookmarksSidebar[data-l10n-args='{"isVisible":true}'] {
+    --menuitem-image: url("chrome://global/skin/icons/close.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #BMB_searchBookmarks {
+    --menuitem-image: url("chrome://global/skin/icons/search-glass.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #BMB_bookmarksShowAllTop,
+  #BMB_bookmarksShowAll {
+    --menuitem-image: url("chrome://browser/skin/bookmark-star-on-tray.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #BMB_bookmarksToolbar {
+    --menuitem-image: url("../icons/bookmarks-toolbar-alt.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") and (-moz-bool-pref: "layout.css.osx-font-smoothing.enabled") {
+  #BMB_bookmarksShowAllTop {
+    list-style-image: url("chrome://browser/skin/bookmark-star-on-tray.svg") !important;
+  }
+  #BMB_bookmarksShowAllTop > .menu-iconic-left {
+    display: flex !important;
+    display: -moz-box !important;
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #BMB_viewBookmarksToolbar[data-l10n-args='{"isVisible":true}'] {
+    --menuitem-image: url("../icons/eye-hide.svg");
+  }
+  #BMB_viewBookmarksToolbar[data-l10n-args='{"isVisible":false}'] {
+    --menuitem-image: url("../icons/eye-show.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #protections-popup-settings-button > .protections-popup-settings-icon,
+  #protections-popup-show-report-button > .protections-popup-show-report-icon {
+    -moz-context-properties: fill, fill-opacity, stroke;
+    fill: currentColor;
+    margin-inline-end: 1em;
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #protections-popup-settings-button > .protections-popup-settings-icon,
+  #protections-popup-multiView .panel-subview-footer-button {
+    list-style-image: url("chrome://global/skin/icons/settings.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #protections-popup-show-report-button > .protections-popup-show-report-icon {
+    /* chrome://browser/skin/controlcenter/dashboard.svg */
+    list-style-image: url("../icons/dashboard.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #identity-popup-clear-sitedata-button,
+  #identity-popup-more-info {
+    padding-inline: 5px !important;
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #identity-popup-securityView-body {
+    margin-inline-start: 32px !important; /* Original: 10px */
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #identity-popup-clear-sitedata-button {
+    list-style-image: url("../icons/broom.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #identity-popup-more-info.subviewbutton {
+    list-style-image: url("chrome://global/skin/icons/info.svg");
+  }
+  #identity-popup-more-info:is(menuitem) {
+    --menuitem-image: url("chrome://global/skin/icons/info.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #sidebar-switcher-bookmarks.subviewbutton {
+    list-style-image: url("chrome://browser/skin/bookmark.svg");
+  }
+  #sidebar-switcher-bookmarks:is(menuitem) {
+    --menuitem-image: url("chrome://browser/skin/bookmark.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #sidebar-switcher-history.subviewbutton {
+    list-style-image: url("chrome://browser/skin/history.svg");
+  }
+  #sidebar-switcher-history:is(menuitem) {
+    --menuitem-image: url("chrome://browser/skin/history.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #sidebar-switcher-tabs.subviewbutton {
+    list-style-image: url("../icons/synced-tabs.svg");
+  }
+  #sidebar-switcher-tabs:is(menuitem) {
+    --menuitem-image: url("../icons/synced-tabs.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #sidebar-reverse-position.subviewbutton {
+    list-style-image: var(--uc-sidebar-icon-reverse);
+  }
+  #sidebar-reverse-position:is(menuitem) {
+    --menuitem-image: var(--uc-sidebar-icon-reverse);
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #sidebarMenu-popup > *.subviewbutton[data-l10n-id="sidebar-menu-close"] {
+    list-style-image: url("chrome://global/skin/icons/close.svg");
+  }
+  #sidebarMenu-popup > *:is(menuitem)[data-l10n-id="sidebar-menu-close"] {
+    --menuitem-image: url("chrome://global/skin/icons/close.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #unified-extensions-manage-extensions {
+    list-style-image: url("chrome://mozapps/skin/extensions/extension.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  .sync-engine-tabs .checkbox-icon,
+  .sync-engine-tabs.sync-engine-image,
+  #sidebar-box[sidebarcommand="viewTabsSidebar"] > #sidebar-header > #sidebar-switcher-target > #sidebar-icon,
+  #sync-button {
+    list-style-image: url("../icons/synced-tabs.svg") !important;
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #allTabsMenu_sortTabsButton {
+    list-style-image: url("../icons/text-sort-ascending.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") {
+  menupopup menuitem:not([type="checkbox"][checked="true"], [type="radio"]),
+  menupopup menu:not([type="checkbox"][checked="true"], [type="radio"]),
+  menupopup menuitem:not([type="checkbox"][checked="true"], [type="radio"]) > .menu-iconic-left > .menu-iconic-icon,
+  menupopup menu:not([type="checkbox"][checked="true"], [type="radio"]) > .menu-iconic-left > .menu-iconic-icon,
+  #main-menubar > menu {
+    -moz-appearance: none !important; /* Linux: menulist */
+  }
+  /* Icon */
+  #main-menubar > menu,
+  :not(menu, #ContentSelectDropdown)
+    > menupopup:not(.in-menulist)
+    > menuitem:not(.menuitem-iconic, .bookmark-item, .in-menulist, [checked="true"]),
+  :not(menu, #ContentSelectDropdown)
+    > menupopup:not(.in-menulist)
+    > menu:not(.menu-iconic, .in-menulist, [checked="true"]),
+  menupopup:is(
+      #menu_FilePopup,
+      #menu_EditPopup,
+      #menu_viewPopup,
+      #goPopup,
+      #historyMenuPopup,
+      #bookmarksMenuPopup,
+      #menu_ToolsPopup,
+      #windowPopup,
+      #menu_HelpPopup,
+      #usercssloader-menupopup
+    )
+    menuitem:not(.menuitem-iconic, .bookmark-item, .in-menulist, [checked="true"]),
+  menupopup:is(
+      #menu_FilePopup,
+      #menu_EditPopup,
+      #menu_viewPopup,
+      #goPopup,
+      #historyMenuPopup,
+      #bookmarksMenuPopup,
+      #menu_ToolsPopup,
+      #windowPopup,
+      #menu_HelpPopup,
+      #usercssloader-menupopup
+    )
+    menu:not(.menu-iconic, .in-menulist, [checked="true"]),
+  menupopup:is(#organizeButtonPopup, #maintenanceButtonPopup)
+    > menuitem:not(.menuitem-iconic, .bookmark-item, .in-menulist, [checked="true"]),
+  menupopup:is(#viewMenuPopup, #maintenanceButtonPopup) > menu:not(.menu-iconic, .in-menulist, [checked="true"]),
+  menupopup:is(
+      #context_sendTabToDevicePopupMenu,
+      #context-sendpagetodevice-popup,
+      #context-sendlinktodevice-popup,
+      #frame > menupopup,
+      #spell-dictionaries-menu
+    )
+    > menuitem:not([type="checkbox"][checked="true"], [type="radio"]),
+  .openintabs-menuitem,
+  #blockedPopupDontShowMessage,
+  #BMB_viewBookmarksToolbar,
+  #sidebarMenu-popup:is(menupopup),
+  #context_openANewTab.tabmix-newtab-menu-icon {
+    /* Color */
+    -moz-context-properties: fill, fill-opacity, stroke !important;
+    fill: currentColor !important;
+    stroke: currentColor;
+    /* Layout */
+    background-size: 16px !important;
+    background-repeat: no-repeat !important;
+    background-image: var(--menuitem-image);
+  }
+  #tabContextMenu > .tabmix-newtab-menu-icon {
+    -moz-context-properties: fill, fill-opacity, stroke !important;
+    fill: currentColor !important;
+  }
+  /* For native context menus */
+  /* Padding */
+  /* Menubar */
+  /* Padding - Non Native */
+  /* Padding - Windows */
+  /* Padding - Linux */
+  /* Padding - Mac */
+  /*= Bookmark Menu - Layout ===================================================*/
+  /* #goPopup(Legacy of historyMenuPopup), #historyMenuPopup, #bookmarksMenuPopup: looks like global menu
+     * #BMB_bookmarksPopup: looks like arrow panel
+     */
+  /* Empty Menu */
+  /* Bookmark Popup - As Arrow Panel */
+  /* Windows */
+  /* Windows 7, 8 */
+  /* Linux */
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "widget.macos.native-context-menus"),
+  (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "widget.gtk.native-context-menus") {
+  :not(menu, #ContentSelectDropdown)
+    > menupopup:not(.in-menulist)
+    > menuitem:not(.menuitem-iconic, .bookmark-item, .in-menulist, [checked="true"]),
+  :not(menu, #ContentSelectDropdown)
+    > menupopup:not(.in-menulist)
+    > menu:not(.menu-iconic, .in-menulist, [checked="true"]) {
+    list-style-image: var(--menuitem-image, url("../icons/blank.svg")) !important;
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") {
+  :root {
+    --uc-menu-background-position: left;
+    --context-menu-background-padding-default: 5px;
+    --context-menu-background-padding: var(--context-menu-background-padding-default);
+  }
+  :root:-moz-locale-dir(rtl) {
+    --uc-menu-background-position: right;
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") {
+  :not(menu, #ContentSelectDropdown, #context-navigation)
+    > menupopup:not(.in-menulist)
+    > menuitem:not(.menuitem-iconic),
+  :not(menu, #ContentSelectDropdown, #context-navigation) > menupopup:not(.in-menulist) > menu:not(.menu-iconic),
+  :not(menu, #ContentSelectDropdown, #context-navigation)
+    > menupopup:not(.in-menulist)
+    > menuitem:not(.menuitem-iconic, .bookmark-item, .in-menulist, [checked="true"]),
+  :not(menu, #ContentSelectDropdown, #context-navigation)
+    > menupopup:not(.in-menulist)
+    > menu:not(.menu-iconic, .in-menulist, [checked="true"]),
+  menupopup:is(
+      #menu_FilePopup,
+      #menu_EditPopup,
+      #menu_viewPopup,
+      #goPopup,
+      #historyMenuPopup,
+      #bookmarksMenuPopup,
+      #menu_ToolsPopup,
+      #windowPopup,
+      #menu_HelpPopup,
+      #usercssloader-menupopup
+    )
+    menuitem:not(.menuitem-iconic, .bookmark-item, .in-menulist, [checked="true"]),
+  menupopup:is(
+      #menu_FilePopup,
+      #menu_EditPopup,
+      #menu_viewPopup,
+      #goPopup,
+      #historyMenuPopup,
+      #bookmarksMenuPopup,
+      #menu_ToolsPopup,
+      #windowPopup,
+      #menu_HelpPopup,
+      #usercssloader-menupopup
+    )
+    menu:not(.menu-iconic, .in-menulist, [checked="true"]),
+  menupopup:is(#organizeButtonPopup, #maintenanceButtonPopup)
+    > menuitem:not(.menuitem-iconic, .bookmark-item, .in-menulist, [checked="true"]),
+  menupopup:is(#viewMenuPopup, #maintenanceButtonPopup) > menu:not(.menu-iconic, .in-menulist, [checked="true"]),
+  menupopup:is(
+      #context_sendTabToDevicePopupMenu,
+      #context-sendpagetodevice-popup,
+      #context-sendlinktodevice-popup,
+      #frame > menupopup,
+      #spell-dictionaries-menu
+    )
+    > menuitem:not([type="checkbox"][checked="true"], [type="radio"]),
+  .openintabs-menuitem,
+  #blockedPopupDontShowMessage,
+  #BMB_viewBookmarksToolbar,
+  #sidebarMenu-popup:is(menupopup),
+  #context_openANewTab.tabmix-newtab-menu-icon {
+    background-position: var(--uc-menu-background-position) var(--context-menu-background-padding) center !important;
+    padding-inline-start: var(--context-menu-background-padding) !important;
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") {
+  #sidebarMenu-popup:is(menupopup):not(panel) {
+    --context-menu-background-padding: var(--context-menu-background-padding-default);
+    padding-inline-start: 0 !important;
+  }
+  :not(menu, #ContentSelectDropdown, #context-navigation)
+    > #sidebarMenu-popup:is(menupopup):not(panel)
+    > menuitem:not(.menuitem-iconic, .bookmark-item, .in-menulist, [checked="true"]) {
+    padding-inline-start: 28px !important;
+    margin-inline-start: var(--arrowpanel-menuitem-margin-inline) !important;
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.global_menubar") {
+  #main-menubar > menu {
+    background-position: var(--uc-menu-background-position) var(--context-menu-background-padding-default) center !important;
+    padding-inline-start: calc(16px + var(--context-menu-background-padding-default)) !important;
+    padding-inline-end: 3px;
+  }
+  #main-menubar > menu:first-child {
+    background-position: var(--uc-menu-background-position) calc(3px + var(--context-menu-background-padding-default))
+      center !important;
+    padding-inline-start: calc(19px + var(--context-menu-background-padding-default)) !important;
+  }
+  #main-menubar > menu menupopup {
+    --menuitem-image: none; /* Prevent Image Inheritance */
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.global_menubar") and (not (-moz-bool-pref: "userChrome.padding.global_menubar")) {
+  #main-menubar > menu {
+    padding-block: 2px !important;
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-platform: windows) and (-moz-platform: windows),
+  (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-gtk-csd-available) and (-moz-platform: windows) {
+  :root {
+    --context-menu-background-padding: 1em;
+    --context-menu-text-padding-default: 24px;
+    --context-menu-text-padding: var(--context-menu-text-padding-default);
+    --menu-background-padding-default: calc(var(--context-menu-background-padding) + var(--context-menu-text-padding));
+    --bookmark-menu-icon-align-padding: 0px;
+  }
+  :not(menu, #ContentSelectDropdown, #context-navigation)
+    > menupopup:not(.in-menulist)
+    > menuitem:not(.menuitem-iconic, .bookmark-item, .in-menulist, [checked="true"]),
+  :not(menu, #ContentSelectDropdown, #context-navigation)
+    > menupopup:not(.in-menulist)
+    > menu:not(.menu-iconic, .in-menulist, [checked="true"]),
+  menupopup:is(
+      #menu_FilePopup,
+      #menu_EditPopup,
+      #menu_viewPopup,
+      #goPopup,
+      #historyMenuPopup,
+      #bookmarksMenuPopup,
+      #menu_ToolsPopup,
+      #windowPopup,
+      #menu_HelpPopup,
+      #usercssloader-menupopup
+    )
+    menuitem:not(.menuitem-iconic, .bookmark-item, .in-menulist, [checked="true"]),
+  menupopup:is(
+      #menu_FilePopup,
+      #menu_EditPopup,
+      #menu_viewPopup,
+      #goPopup,
+      #historyMenuPopup,
+      #bookmarksMenuPopup,
+      #menu_ToolsPopup,
+      #windowPopup,
+      #menu_HelpPopup,
+      #usercssloader-menupopup
+    )
+    menu:not(.menu-iconic, .in-menulist, [checked="true"]),
+  menupopup:is(#organizeButtonPopup, #maintenanceButtonPopup)
+    > menuitem:not(.menuitem-iconic, .bookmark-item, .in-menulist, [checked="true"]),
+  menupopup:is(#viewMenuPopup, #maintenanceButtonPopup) > menu:not(.menu-iconic, .in-menulist, [checked="true"]),
+  menupopup:is(
+      #context_sendTabToDevicePopupMenu,
+      #context-sendpagetodevice-popup,
+      #context-sendlinktodevice-popup,
+      #frame > menupopup,
+      #spell-dictionaries-menu
+    )
+    > menuitem:not([type="checkbox"][checked="true"], [type="radio"]),
+  .openintabs-menuitem,
+  #blockedPopupDontShowMessage,
+  #BMB_viewBookmarksToolbar,
+  #sidebarMenu-popup:is(menupopup),
+  #context_openANewTab.tabmix-newtab-menu-icon {
+    padding-inline-start: var(--menu-background-padding-default) !important;
+    margin-left: 0 !important;
+  }
+  .menupopup-arrowscrollbox {
+    padding-inline: 0 !important; /* Original: padding: var(--panel-padding); --panel-padding-block: 4px; */
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-platform: windows) and (-moz-bool-pref: "userChrome.theme.non_native_menu") and (-moz-gtk-csd-available),
+  (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-gtk-csd-available) and (-moz-bool-pref: "userChrome.theme.non_native_menu") and (-moz-gtk-csd-available) {
+  :root {
+    --context-menu-background-padding: 1em;
+    --context-menu-text-padding-default: 24px;
+    --context-menu-text-padding: var(--context-menu-text-padding-default);
+    --menu-background-padding-default: calc(var(--context-menu-background-padding) + var(--context-menu-text-padding));
+    --bookmark-menu-icon-align-padding: 0px;
+  }
+  :not(menu, #ContentSelectDropdown, #context-navigation)
+    > menupopup:not(.in-menulist)
+    > menuitem:not(.menuitem-iconic, .bookmark-item, .in-menulist, [checked="true"]),
+  :not(menu, #ContentSelectDropdown, #context-navigation)
+    > menupopup:not(.in-menulist)
+    > menu:not(.menu-iconic, .in-menulist, [checked="true"]),
+  menupopup:is(
+      #menu_FilePopup,
+      #menu_EditPopup,
+      #menu_viewPopup,
+      #goPopup,
+      #historyMenuPopup,
+      #bookmarksMenuPopup,
+      #menu_ToolsPopup,
+      #windowPopup,
+      #menu_HelpPopup,
+      #usercssloader-menupopup
+    )
+    menuitem:not(.menuitem-iconic, .bookmark-item, .in-menulist, [checked="true"]),
+  menupopup:is(
+      #menu_FilePopup,
+      #menu_EditPopup,
+      #menu_viewPopup,
+      #goPopup,
+      #historyMenuPopup,
+      #bookmarksMenuPopup,
+      #menu_ToolsPopup,
+      #windowPopup,
+      #menu_HelpPopup,
+      #usercssloader-menupopup
+    )
+    menu:not(.menu-iconic, .in-menulist, [checked="true"]),
+  menupopup:is(#organizeButtonPopup, #maintenanceButtonPopup)
+    > menuitem:not(.menuitem-iconic, .bookmark-item, .in-menulist, [checked="true"]),
+  menupopup:is(#viewMenuPopup, #maintenanceButtonPopup) > menu:not(.menu-iconic, .in-menulist, [checked="true"]),
+  menupopup:is(
+      #context_sendTabToDevicePopupMenu,
+      #context-sendpagetodevice-popup,
+      #context-sendlinktodevice-popup,
+      #frame > menupopup,
+      #spell-dictionaries-menu
+    )
+    > menuitem:not([type="checkbox"][checked="true"], [type="radio"]),
+  .openintabs-menuitem,
+  #blockedPopupDontShowMessage,
+  #BMB_viewBookmarksToolbar,
+  #sidebarMenu-popup:is(menupopup),
+  #context_openANewTab.tabmix-newtab-menu-icon {
+    padding-inline-start: var(--menu-background-padding-default) !important;
+    margin-left: 0 !important;
+  }
+  .menupopup-arrowscrollbox {
+    padding-inline: 0 !important; /* Original: padding: var(--panel-padding); --panel-padding-block: 4px; */
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-platform: windows) {
+  :root {
+    --bookmark-menu-icon-text-padding: calc(
+      var(--context-menu-text-padding) + var(--arrowpanel-menuitem-padding-inline)
+    );
+    --bookmark-menu-icon-background-padding: calc(
+      var(--arrowpanel-menuitem-padding-inline) + var(--bookmark-menu-icon-align-padding)
+    );
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-gtk-csd-available) {
+  :root {
+    --context-menu-background-padding-default: 6px;
+    --context-menu-text-padding: 21px;
+  }
+  #main-menubar > menu > .menubar-text {
+    padding-inline-start: 3px;
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "layout.css.osx-font-smoothing.enabled") {
+  :root {
+    --context-menu-background-padding-default: 10px;
+    --context-menu-mac-padding: 21px;
+  }
+  /* context menu width */
+  :not(menu, #ContentSelectDropdown, #context-navigation)
+    > menupopup:not(.in-menulist)
+    > menuitem:not(.menuitem-iconic, .bookmark-item, .in-menulist, [checked="true"]),
+  :not(menu, #ContentSelectDropdown, #context-navigation)
+    > menupopup:not(.in-menulist)
+    > menu:not(.menu-iconic, .in-menulist, [checked="true"]),
+  #blockedPopupDontShowMessage {
+    padding-inline-end: var(--context-menu-background-padding) !important;
+  }
+  /* text position */
+  :not(menu, #ContentSelectDropdown, #context-navigation) > menupopup:not(.in-menulist) > menuitem > .menu-text,
+  :not(menu, #ContentSelectDropdown, #context-navigation) > menupopup:not(.in-menulist) > menu > .menu-text {
+    padding-inline-start: var(--context-menu-mac-padding) !important;
+  }
+  /* Checkbox menuitem, None iconic menu */
+  :not(menu, #ContentSelectDropdown, #context-navigation) > menupopup:not(.in-menulist) > menuitem[type="checkbox"] {
+    padding-inline-start: calc(var(--context-menu-background-padding) + var(--context-menu-mac-padding)) !important;
+  }
+  /* Global Menu */
+  /* Exeptions */
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "layout.css.osx-font-smoothing.enabled") and (-moz-bool-pref: "userChrome.icon.global_menu.mac") {
+  menupopup:is(
+      #menu_FilePopup,
+      #menu_EditPopup,
+      #menu_viewPopup,
+      #goPopup,
+      #historyMenuPopup,
+      #bookmarksMenuPopup,
+      #menu_ToolsPopup,
+      #windowPopup,
+      #menu_HelpPopup,
+      #usercssloader-menupopup
+    )
+    menuitem:not(.menuitem-iconic, .bookmark-item),
+  menupopup:is(
+      #menu_FilePopup,
+      #menu_EditPopup,
+      #menu_viewPopup,
+      #goPopup,
+      #historyMenuPopup,
+      #bookmarksMenuPopup,
+      #menu_ToolsPopup,
+      #windowPopup,
+      #menu_HelpPopup,
+      #usercssloader-menupopup
+    )
+    menu:not(.menu-iconic) {
+    list-style-image: var(--menuitem-image, url("../icons/blank.svg")) !important;
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "layout.css.osx-font-smoothing.enabled") {
+  #unified-extensions-context-menu > menuitem::before {
+    padding-inline: 0 !important;
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "layout.css.osx-font-smoothing.enabled") {
+  :not(menu, #ContentSelectDropdown, #context-navigation)
+    > menupopup:not(.in-menulist)
+    > menuitem:not(.menuitem-iconic, .bookmark-item, .in-menulist, [checked="true"]) {
+    padding-inline-start: 0 !important;
+  }
+  :not(menu, #ContentSelectDropdown, #context-navigation)
+    > menupopup:not(.in-menulist)
+    > menuitem:not(.menuitem-iconic):has(.menu-iconic-left)[checked] {
+    padding-left: 4px !important;
+    background-image: none !important;
+  }
+  :not(menu, #ContentSelectDropdown, #context-navigation)
+    > menupopup:not(.in-menulist)
+    > menuitem:not(.menuitem-iconic):has(.menu-iconic-left)[checked="true"] {
+    padding-left: calc(var(--context-menu-mac-padding) - 8px) !important;
+  }
+  :not(menu, #ContentSelectDropdown, #context-navigation)
+    > menupopup:not(.in-menulist)
+    > menuitem:not(.menuitem-iconic):has(.menu-iconic-left)[checked="true"]
+    .menu-iconic-text {
+    padding-left: 8px !important;
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") {
+  menupopup menupopup[emptyplacesresult] .menu-text,
+  #PersonalToolbar menupopup[emptyplacesresult] .menu-text {
+    margin-inline-start: 0 !important;
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") {
+  #BMB_bookmarksPopup,
+  #PersonalToolbar {
+    --context-menu-background-padding: var(--arrowpanel-menuitem-padding-inline);
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-platform: windows) {
+  /* Bookmark Popup - None icon menu */
+  menupopup:is(#BMB_bookmarksPopup)[placespopup="true"] menuitem:not(.menuitem-iconic, [disabled="true"]),
+  menupopup:is(#BMB_bookmarksPopup)[placespopup="true"] menu:not(.menu-iconic),
+  #PersonalToolbar menupopup[placespopup="true"] menuitem:not(.menuitem-iconic, [disabled="true"]),
+  #PersonalToolbar menupopup[placespopup="true"] menu:not(.menu-iconic) {
+    margin-inline: var(--arrowpanel-menuitem-margin-inline) !important;
+    padding-inline-start: var(--bookmark-menu-icon-text-padding) !important;
+    background-position: var(--uc-menu-background-position) var(--bookmark-menu-icon-background-padding) center !important;
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-gtk-csd-available) {
+  /* Global Menu */
+  menupopup:is(#goPopup, #historyMenuPopup, #bookmarksMenuPopup) .bookmark-item {
+    padding-inline-start: var(--context-menu-background-padding) !important;
+  }
+  /* Bookmark Popup - Iconic menu */
+  #BMB_bookmarksPopup .menu-iconic-text,
+  #PersonalToolbar menupopup[placespopup="true"] .bookmark-item .menu-iconic-text {
+    margin-inline-start: -1px !important;
+  }
+  /* Bookmark Popup - None icon menu */
+  menupopup:is(#BMB_bookmarksPopup)[placespopup="true"] menuitem:not(.menuitem-iconic, [disabled="true"]),
+  menupopup:is(#BMB_bookmarksPopup)[placespopup="true"] menu:not(.menu-iconic),
+  #PersonalToolbar menupopup[placespopup="true"] menuitem:not(.menuitem-iconic, [disabled="true"]),
+  #PersonalToolbar menupopup[placespopup="true"] menu:not(.menu-iconic) {
+    padding-inline-start: calc(var(--context-menu-background-padding) + 2px) !important;
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-gtk-csd-available) and (-moz-bool-pref: "userChrome.theme.non_native_menu") {
+  menupopup:is(#BMB_bookmarksPopup)[placespopup="true"] menuitem:not(.menuitem-iconic, [disabled="true"]),
+  menupopup:is(#BMB_bookmarksPopup)[placespopup="true"] menu:not(.menu-iconic),
+  #PersonalToolbar menupopup[placespopup="true"] menuitem:not(.menuitem-iconic, [disabled="true"]),
+  #PersonalToolbar menupopup[placespopup="true"] menu:not(.menu-iconic) {
+    margin-inline: var(--arrowpanel-menuitem-margin-inline) !important;
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-gtk-csd-available) {
+  menupopup:is(#BMB_bookmarksPopup)[placespopup="true"] menuitem:not(.menuitem-iconic, [disabled="true"]) .menu-text,
+  menupopup:is(#BMB_bookmarksPopup)[placespopup="true"] menu:not(.menu-iconic) .menu-text,
+  #PersonalToolbar menupopup[placespopup="true"] menuitem:not(.menuitem-iconic, [disabled="true"]) .menu-text,
+  #PersonalToolbar menupopup[placespopup="true"] menu:not(.menu-iconic) .menu-text {
+    margin-inline-start: var(--context-menu-text-padding) !important;
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "layout.css.osx-font-smoothing.enabled") {
+  /* Bookmark Popup - As Arrow Panel */
+  #PersonalToolbar menupopup menuitem,
+  #PersonalToolbar menupopup menu {
+    padding-inline: var(--arrowpanel-menuitem-padding-inline) !important;
+  }
+  /* Bookmark Popup - None icon menu */
+  menupopup:is(#BMB_bookmarksPopup)[placespopup="true"] menuitem:not(.menuitem-iconic, [disabled="true"]),
+  menupopup:is(#BMB_bookmarksPopup)[placespopup="true"] menu:not(.menu-iconic) {
+    padding-inline-start: calc(var(--arrowpanel-menuitem-padding-inline) + 3px) !important;
+  }
+  #PersonalToolbar menupopup[placespopup="true"] menuitem:not(.menuitem-iconic, [disabled="true"]),
+  #PersonalToolbar menupopup[placespopup="true"] menu:not(.menu-iconic) {
+    padding-inline-start: calc(var(--arrowpanel-menuitem-padding-inline) + 1px) !important;
+  }
+  menupopup:is(#BMB_bookmarksPopup)[placespopup="true"] menuitem:not(.menuitem-iconic, [disabled="true"]) > .menu-text,
+  menupopup:is(#BMB_bookmarksPopup)[placespopup="true"] menu:not(.menu-iconic) > .menu-text,
+  #PersonalToolbar menupopup[placespopup="true"] menuitem:not(.menuitem-iconic, [disabled="true"]) > .menu-text,
+  #PersonalToolbar menupopup[placespopup="true"] menu:not(.menu-iconic) > .menu-text {
+    padding-inline-start: var(--context-menu-mac-padding) !important;
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  /** Context Menu - Icons ******************************************************/ /*= tabContextMenu ===========================================================*/
+  #context_openANewTab,
+  #treestyletab_piro_sakura_ne_jp-menuitem-_context_newTab,
+  #tabcenter-reborn_ariasuni-menuitem-_newTabContextMenuOpenAlternatePosition,
+  #sidebartabs_asamuzak_jp-menuitem-_newTab {
+    --menuitem-image: var(--uc-new-tab-icon);
+  }
+  #tabcenter-reborn_ariasuni-menuitem-_newTabContextMenuOpenInWindow {
+    --menuitem-image: url("chrome://browser/skin/window.svg");
+  }
+  #tabcenter-reborn_ariasuni-menuitem-_newTabContextMenuOpenInPrivateWindow {
+    --menuitem-image: url("chrome://browser/skin/privateBrowsing.svg");
+  }
+  #context_reloadTab,
+  #context_reloadSelectedTabs,
+  #treestyletab_piro_sakura_ne_jp-menuitem-_context_reloadTab,
+  #treestyletab_piro_sakura_ne_jp-menuitem-_noContextTab\:context_reloadTab,
+  #treestyletab_piro_sakura_ne_jp-menuitem-_grouped\:reloadTree,
+  #tabcenter-reborn_ariasuni-menuitem-_contextMenuReloadTab,
+  #sidebartabs_asamuzak_jp-menuitem-_reloadTab,
+  #sidebartabs_asamuzak_jp-menuitem-_reloadAllTabs {
+    --menuitem-image: url("../icons/reload.svg");
+  }
+  #context_toggleMuteTab,
+  #context_toggleMuteSelectedTabs,
+  #treestyletab_piro_sakura_ne_jp-menuitem-_context_toggleMuteTab-mute,
+  #tabcenter-reborn_ariasuni-menuitem-_contextMenuMuteTab,
+  #sidebartabs_asamuzak_jp-menuitem-_muteTab {
+    --menuitem-image: url("chrome://browser/skin/tabbrowser/tab-audio-muted-small.svg");
+    stroke: transparent !important;
+  }
+  #context_toggleMuteTab[muted],
+  #context_toggleMuteSelectedTabs[muted],
+  #treestyletab_piro_sakura_ne_jp-menuitem-_context_toggleMuteTab-unmute,
+  #tabcenter-reborn_ariasuni-menuitem-_contextMenuMuteTab[label="Unmute Tab"],
+  #sidebartabs_asamuzak_jp-menuitem-_muteTab[label="Unmute Tab"] {
+    --menuitem-image: url("chrome://browser/skin/tabbrowser/tab-audio-playing-small.svg");
+  }
+  #context_pinTab,
+  #context_pinSelectedTabs,
+  #treestyletab_piro_sakura_ne_jp-menuitem-_context_pinTab,
+  #tabcenter-reborn_ariasuni-menuitem-_contextMenuPinTab,
+  #sidebartabs_asamuzak_jp-menuitem-_pinTab {
+    --menuitem-image: url("../icons/pin-tab.svg");
+  }
+  #context_unpinTab,
+  #context_unpinSelectedTabs,
+  #treestyletab_piro_sakura_ne_jp-menuitem-_context_unpinTab,
+  #tabcenter-reborn_ariasuni-menuitem-_contextMenuPinTab[label="Unpin Tab"],
+  #sidebartabs_asamuzak_jp-menuitem-_pinTab[label="Unpin Tab"] {
+    --menuitem-image: url("../icons/unpin-tab.svg");
+  }
+  #context_duplicateTab,
+  #context_duplicateTabs,
+  #treestyletab_piro_sakura_ne_jp-menuitem-_context_duplicateTab,
+  #tabcenter-reborn_ariasuni-menuitem-_contextMenuDuplicateTab,
+  #sidebartabs_asamuzak_jp-menuitem-_dupeTab {
+    --menuitem-image: var(--uc-tab-copy-icon);
+  }
+  #tabcenter-reborn_ariasuni-menuitem-_contextMenuUnloadTab {
+    --menuitem-image: var(--uc-tab-unload-icon);
+  }
+  #context_bookmarkTab,
+  #context_bookmarkSelectedTabs,
+  #treestyletab_piro_sakura_ne_jp-menuitem-_context_bookmarkTab,
+  #treestyletab_piro_sakura_ne_jp-menuitem-_noContextTab\:context_bookmarkSelected,
+  #treestyletab_piro_sakura_ne_jp-menuitem-_grouped\:bookmarkTree,
+  #sidebartabs_asamuzak_jp-menuitem-_bookmarkTab,
+  #sidebartabs_asamuzak_jp-menuitem-_bookmarkAllTabs {
+    --menuitem-image: url("chrome://browser/skin/bookmark.svg");
+  }
+  #context_moveTabOptions,
+  #treestyletab_piro_sakura_ne_jp-menuitem-_context_moveTab,
+  #tabcenter-reborn_ariasuni-menuitem-_contextMenuMoveTab,
+  #sidebartabs_asamuzak_jp-menuitem-_moveTab {
+    --menuitem-image: url("../icons/arrow-swap.svg");
+  }
+  #context_sendTabToDevice,
+  #treestyletab_piro_sakura_ne_jp-menuitem-_context_sendTabsToDevice {
+    --menuitem-image: url("../icons/send-to-device.svg");
+  }
+  #context_sendTabToDevice:is([disabled="true"]) + #context_shareTabURL,
+  #context_sendTabToDevice:is([disabled="true"]) + menuitem.share-tab-url-item {
+    /* At windows */
+    --menuitem-image: url("../icons/share.svg");
+  }
+  /*= new-tab-button-popup =====================================================*/
+  /*= toolbar-context-menu =====================================================*/
+  /*= Tab Mix Plus =============================================================*/
+  /*= contentAreaContextMenu ===================================================*/
+  /*= main-context-menu-frame ==================================================*/
+  /*= Tab Mix Plus =============================================================*/
+  /*= downloadsContextMenu =====================================================*/ /*= placeContext =============================================================*/ /*= Notification =============================================================*/
+  /*= blockedPopupOptions ======================================================*/
+  /*= autohide-context =========================================================*/
+  /*= pictureInPictureToggleContextMenu ========================================*/
+  /*= pageActionContextMenu ====================================================*/
+  /*= customizationPanelItemContextMenu ========================================*/
+  /*= customizationPaletteItemContextMenu ======================================*/
+  /*= customizationPanelContextMenu ============================================*/
+  /*= downloads-button-autohide-panel ==========================================*/
+  /*= SyncedTabsSidebarContext =================================================*/
+  /*= SyncedTabsSidebarTabsFilterContext =======================================*/
+  /*= urlbar-input-container ===================================================*/
+  /*= textbox-contextmenu ======================================================*/
+  /* Browser's Searchbar, Library's Searchbar, Page Info */
+  /* Only searchbar */
+  /*= context_sendTabToDevicePopupMenu =========================================*/
+  /*= unified-extensions-context-menu ==========================================*/
+  /*= urlbarView-result-menu ===================================================*/
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") and (-moz-bool-pref: "userChrome.icon.menu.full") {
+  #context_shareTabURL,
+  menuitem.share-tab-url-item {
+    --menuitem-image: url("../icons/share.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #context_reopenInContainer,
+  #treestyletab_piro_sakura_ne_jp-menuitem-_context_reopenInContainer,
+  #tabcenter-reborn_ariasuni-menuitem-_contextMenuOpenInContextualTab,
+  #sidebartabs_asamuzak_jp-menuitem-_openNewTabInContainer,
+  #sidebartabs_asamuzak_jp-menuitem-_reopenTabInContainer {
+    --menuitem-image: url("../icons/container-openin-16.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #context_selectAllTabs,
+  #treestyletab_piro_sakura_ne_jp-menuitem-_context_selectAllTabs,
+  #treestyletab_piro_sakura_ne_jp-menuitem-_noContextTab\:context_selectAllTabs,
+  #sidebartabs_asamuzak_jp-menuitem-_selectAllTabs {
+    --menuitem-image: var(--uc-tab-multiple-icon);
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #context_closeTab,
+  #treestyletab_piro_sakura_ne_jp-menuitem-_context_closeTab,
+  #treestyletab_piro_sakura_ne_jp-menuitem-_grouped\:closeTree,
+  #tabcenter-reborn_ariasuni-menuitem-_contextMenuCloseTab,
+  #sidebartabs_asamuzak_jp-menuitem-_closeTab {
+    --menuitem-image: url("chrome://global/skin/icons/close.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") and (-moz-bool-pref: "userChrome.icon.menu.full") {
+  #context_closeTabOptions,
+  #treestyletab_piro_sakura_ne_jp-menuitem-_context_closeMultipleTabs,
+  #tabcenter-reborn_ariasuni-menuitem-_contextMenuCloseTabs,
+  #sidebartabs_asamuzak_jp-menuitem-_closeMultipleTabs {
+    --menuitem-image: url("../icons/filter-dismiss.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #context_undoCloseTab,
+  #treestyletab_piro_sakura_ne_jp-menuitem-_context_undoCloseTab,
+  #treestyletab_piro_sakura_ne_jp-menuitem-_noContextTab\:context_undoCloseTab,
+  #tabcenter-reborn_ariasuni-menuitem-_contextMenuUndoCloseTab,
+  #sidebartabs_asamuzak_jp-menuitem-_undoCloseTab {
+    --menuitem-image: url("../icons/undo.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #new-tab-button-popup > menuitem[command="Browser:NewUserContextTab"],
+  .new-tab-popup > menuitem[command="Browser:NewUserContextTab"] {
+    --menuitem-image: url("../icons/container-openin-16.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #new-tab-button-popup > menuitem[command="Browser:OpenAboutContainers"],
+  .new-tab-popup > menuitem[command="Browser:OpenAboutContainers"] {
+    --menuitem-image: url("chrome://global/skin/icons/settings.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  .customize-context-manageExtension {
+    --menuitem-image: url("chrome://global/skin/icons/settings.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  .customize-context-removeExtension {
+    --menuitem-image: url("chrome://global/skin/icons/delete.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  .customize-context-reportExtension {
+    --menuitem-image: url("../icons/send.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  .customize-context-moveToPanel {
+    --menuitem-image: url("chrome://browser/skin/pin-12.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #toolbar-context-autohide-downloads-button {
+    /* checkbox */
+    --menuitem-image: url("../icons/eye-tracking-off.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  .customize-context-removeFromToolbar {
+    --menuitem-image: url("chrome://global/skin/icons/delete.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #toolbar-context-always-open-downloads-panel {
+    /* checkbox */
+    --menuitem-image: url("../icons/drawer-arrow-download.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #toolbar-context-openANewTab {
+    --menuitem-image: var(--uc-new-tab-icon);
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #toolbar-context-reloadSelectedTab,
+  #toolbar-context-reloadSelectedTabs {
+    --menuitem-image: url("../icons/reload.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #toolbar-context-bookmarkSelectedTab,
+  #toolbar-context-bookmarkSelectedTabs {
+    --menuitem-image: url("chrome://browser/skin/bookmark.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #toolbar-context-selectAllTabs {
+    --menuitem-image: var(--uc-tab-multiple-icon);
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #toolbar-context-undoCloseTab {
+    --menuitem-image: url("../icons/undo.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #toggle_toolbar-menubar {
+    /* checkbox */
+    --menuitem-image: url("../icons/calendar-agenda.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #toggle_PersonalToolbar {
+    /* Also placeContext */
+    --menuitem-image: url("../icons/bookmarks-toolbar-alt.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  menuitem.viewCustomizeToolbar {
+    --menuitem-image: url("chrome://browser/skin/customize.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  .fullscreen-context-autohide {
+    /* checkbox */
+    --menuitem-image: url("../icons/eye-tracking-off.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #toolbar-context-menu > menuitem[data-l10n-id="full-screen-exit"] {
+    --menuitem-image: url("chrome://browser/skin/fullscreen-exit.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") and (-moz-platform: windows) {
+  #context_openANewTab.tabmix-newtab-menu-icon .menu-iconic-left {
+    display: none;
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") and (-moz-bool-pref: "userChrome.icon.menu.full") {
+  #tm-duplicateinWin {
+    --menuitem-image: url("../icons/tab-desktop-multiple-bottom.svg");
+  }
+  #tm-mergeWindowsTab {
+    --menuitem-image: url("../icons/merge.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #tm-renameTab {
+    --menuitem-image: url("chrome://global/skin/icons/edit.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #tm-copyTabUrl {
+    --menuitem-image: url("../icons/link.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #tm-autoreloadTab_menu {
+    --menuitem-image: url("../icons/timer10.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #context_reloadTabOptions {
+    --menuitem-image: url("../icons/reload.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") and (-moz-bool-pref: "userChrome.icon.menu.full") {
+  #context_reloadTabOptions {
+    --menuitem-image: url("../icons/filter-reload.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") and (not (-moz-bool-pref: "userChrome.icon.menu.full")) {
+  #context_reloadTabOptions + #context_reloadTab {
+    --menuitem-image: url("../icons/blank.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #tm-docShell {
+    --menuitem-image: url("chrome://browser/skin/permissions.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #tm-freezeTab {
+    --menuitem-image: url("../icons/weather-snowflake.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #tm-protectTab {
+    --menuitem-image: url("../icons/shield-task.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") and (-moz-bool-pref: "userChrome.icon.menu.full") {
+  #tm-lockTab {
+    --menuitem-image: url("../icons/lock-closed.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") and (-moz-bool-pref: "userChrome.icon.menu.full") {
+  #context_bookmarkAllTabs {
+    --menuitem-image: url("../icons/bookmark-multiple.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #context-viewsource-goToLine {
+    --menuitem-image: url("../icons/text-number-format.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #context-viewsource-wrapLongLines {
+    /* checkbox */
+    --menuitem-image: url("../icons/arrow-sort-down-lines.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #context-viewsource-highlightSyntax {
+    /* checkbox */
+    --menuitem-image: url("../icons/highlight.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #spell-no-suggestions {
+    --menuitem-image: url("../icons/text-proofing-tools.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #spell-add-to-dictionary,
+  #spell-add-dictionaries {
+    --menuitem-image: url("../icons/book-add.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #spell-undo-add-to-dictionary {
+    --menuitem-image: url("../icons/undo.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #context-openlinkincurrent {
+    --menuitem-image: url("../icons/link-square.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #context-openlinkincontainertab,
+  #context-openlinkintab {
+    --menuitem-image: var(--uc-new-tab-icon);
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #context-openlinkinusercontext-menu {
+    --menuitem-image: url("../icons/container-openin-16.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #context-openlink {
+    --menuitem-image: url("chrome://browser/skin/window.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #context-openlinkprivate {
+    --menuitem-image: url("chrome://browser/skin/privateBrowsing.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #context-bookmarklink {
+    --menuitem-image: url("chrome://browser/skin/bookmark.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #context-savelink {
+    --menuitem-image: url("../icons/toolbarButton-download.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #context-savelinktopocket {
+    --menuitem-image: url("../icons/pocket-outline.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #context-copyemail {
+    --menuitem-image: url("../icons/mail.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #context-copyphone {
+    --menuitem-image: url("../icons/device-phone.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #context-copylink {
+    --menuitem-image: url("../icons/link.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #context-stripOnShareLink {
+    --menuitem-image: url("../icons/link-no-tracking.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #context-sendlinktodevice {
+    --menuitem-image: url("../icons/send-to-device.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #context-media-play {
+    --menuitem-image: url("chrome://global/skin/media/play-fill.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #context-media-pause {
+    --menuitem-image: url("chrome://global/skin/media/pause-fill.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #context-media-mute {
+    --menuitem-image: url("chrome://global/skin/media/audio-muted.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #context-media-unmute {
+    --menuitem-image: url("chrome://global/skin/media/audio.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #context-media-playbackrate {
+    --menuitem-image: url("../icons/time-picker.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #context-media-loop {
+    /* checkbox */
+    --menuitem-image: url("../icons/arrow-repeat-all.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #context-leave-dom-fullscreen {
+    --menuitem-image: url("chrome://global/skin/media/fullscreenExitButton.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #context-video-fullscreen {
+    --menuitem-image: url("chrome://global/skin/media/fullscreenEnterButton.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #context-media-hidecontrols {
+    --menuitem-image: url("../icons/eye-hide.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #context-media-showcontrols {
+    --menuitem-image: url("../icons/eye-show.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #context-viewvideo {
+    --menuitem-image: url("../icons/video.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #context-video-pictureinpicture {
+    /* checkbox */
+    --menuitem-image: url("chrome://global/skin/media/picture-in-picture-open.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #context-reloadimage {
+    --menuitem-image: url("../icons/image-arrow-counterclockwise.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #context-viewimage {
+    --menuitem-image: url("../icons/image-add.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #context-saveimage {
+    --menuitem-image: url("../icons/image.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #context-video-saveimage {
+    --menuitem-image: url("../icons/video-snapshot.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #context-savevideo {
+    --menuitem-image: url("../icons/video.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #context-saveaudio {
+    --menuitem-image: url("chrome://global/skin/media/audio.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #context-copyimage-contents {
+    --menuitem-image: url("../icons/image-copy.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #context-copyimage,
+  #context-copyvideourl,
+  #context-copyaudiourl {
+    --menuitem-image: url("../icons/link.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #context-sendimage,
+  #context-sendvideo,
+  #context-sendaudio {
+    --menuitem-image: url("../icons/mail.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #context-viewimageinfo {
+    --menuitem-image: url("chrome://global/skin/icons/info.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #context-viewimagedesc {
+    --menuitem-image: url("../icons/image-alt-text.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #context-setDesktopBackground {
+    --menuitem-image: url("../icons/resize-image.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #context-ctp-play {
+    --menuitem-image: url("chrome://global/skin/icons/plugin.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #context-ctp-hide {
+    --menuitem-image: url("chrome://global/skin/icons/plugin-blocked.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #context-savepage {
+    --menuitem-image: url("../icons/toolbarButton-download.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #context-pocket {
+    --menuitem-image: url("../icons/pocket-outline.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #context-sendpagetodevice {
+    --menuitem-image: url("../icons/send-to-device.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #fill-login {
+    --menuitem-image: url("../icons/password.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #fill-login-generated-password {
+    --menuitem-image: url("chrome://browser/skin/login.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #use-relay-mask {
+    --menuitem-image: url("../icons/relay-logo.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #manage-saved-logins {
+    --menuitem-image: url("../icons/key-multiple.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #context-undo,
+  #context-pdfjs-undo {
+    --menuitem-image: url("../icons/undo.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") and (-moz-bool-pref: "userChrome.icon.menu.full") {
+  #context-redo,
+  #context-pdfjs-redo {
+    --menuitem-image: url("../icons/redo.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #context-cut,
+  #context-pdfjs-cut {
+    --menuitem-image: url("../icons/edit-cut.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #context-copy,
+  #context-pdfjs-copy {
+    --menuitem-image: url("../icons/edit-copy.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #context-paste,
+  #context-pdfjs-paste {
+    --menuitem-image: url("../icons/edit-paste.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #context-delete,
+  #context-pdfjs-delete {
+    --menuitem-image: url("chrome://global/skin/icons/delete.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #context-selectall,
+  #context-pdfjs-selectall {
+    --menuitem-image: url("../icons/select-all-on.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #context-reveal-password {
+    --menuitem-image: url("../icons/eye-show.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #context-print-selection {
+    --menuitem-image: url("chrome://global/skin/icons/print.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #context-take-screenshot {
+    --menuitem-image: url("../icons/screenshot-1.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #context-keywordfield {
+    --menuitem-image: url("chrome://browser/skin/bookmark.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #context-searchselect,
+  #context-searchselect-private {
+    --menuitem-image: url("chrome://global/skin/icons/search-glass.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #frame {
+    --menuitem-image: url("../icons/command-frames.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #spell-check-enabled {
+    /* checkbox */
+    --menuitem-image: url("../icons/text-proofing-tools.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #spell-add-dictionaries-main {
+    --menuitem-image: url("../icons/book-add.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #spell-dictionaries {
+    --menuitem-image: url("../icons/book.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #context-bidi-text-direction-toggle {
+    --menuitem-image: url("../icons/text-direction-horizontal-ltr.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #context-bidi-page-direction-toggle {
+    --menuitem-image: url("../icons/document-landscape-split-hint.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #context-viewpartialsource-selection,
+  #context-viewsource {
+    --menuitem-image: url("../icons/document-search.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #context-inspect-a11y {
+    --menuitem-image: url("../icons/tool-accessibility.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #context-inspect {
+    --menuitem-image: url("../icons/command-pick.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #context-media-eme-learnmore {
+    /* iconic */
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") and (-moz-bool-pref: "layout.css.osx-font-smoothing.enabled") {
+  #context-back {
+    --menuitem-image: url("chrome://browser/skin/back.svg");
+  }
+  #context-forward {
+    --menuitem-image: url("chrome://browser/skin/forward.svg");
+  }
+  #context-reload {
+    --menuitem-image: url("../icons/reload.svg");
+  }
+  #context-stop {
+    --menuitem-image: url("chrome://global/skin/icons/close.svg");
+  }
+  #context-bookmarkpage {
+    --menuitem-image: url("chrome://browser/skin/bookmark.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #context-showonlythisframe {
+    --menuitem-image: url("../icons/eye-show.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #context-openframeintab {
+    --menuitem-image: var(--uc-new-tab-icon);
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #context-openframe {
+    --menuitem-image: url("chrome://browser/skin/window.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #context-reloadframe {
+    --menuitem-image: url("../icons/reload.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #context-bookmarkframe {
+    --menuitem-image: url("chrome://browser/skin/bookmark.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #context-saveframe {
+    --menuitem-image: url("../icons/toolbarButton-download.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #context-printframe {
+    --menuitem-image: url("chrome://global/skin/icons/print.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #context-take-frame-screenshot {
+    --menuitem-image: url("../icons/screenshot-1.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #context-viewframesource {
+    --menuitem-image: url("../icons/document-search.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #context-viewframeinfo {
+    --menuitem-image: url("chrome://global/skin/icons/info.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #tm-autoreload_menu {
+    --menuitem-image: url("../icons/timer10.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #tm-linkWithhistory {
+    --menuitem-image: var(--uc-new-tab-skip-forward-icon);
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #tm-openAllLinks {
+    --menuitem-image: var(--uc-new-tab-multiple-icon);
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #tm-openinverselink {
+    --menuitem-image: var(--uc-new-tab-forward-icon);
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #tm-content-closetab {
+    --menuitem-image: url("../icons/dismiss-filled.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #tm-duplicateTabContext {
+    --menuitem-image: var(--uc-tab-copy-icon);
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #tm-duplicateinWinContext {
+    --menuitem-image: url("../icons/tab-desktop-multiple-bottom.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #tm-detachTabContext {
+    --menuitem-image: url("../icons/convert-range.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #tm-mergeWindows {
+    --menuitem-image: url("../icons/merge.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #tm-content-freezeTab {
+    --menuitem-image: url("../icons/weather-snowflake.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #tm-content-protectTab {
+    --menuitem-image: url("../icons/shield-task.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #tm-content-lockTab {
+    --menuitem-image: url("../icons/lock-closed.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #tm-content-undoCloseTab {
+    --menuitem-image: url("../icons/undo.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  .downloadPauseMenuItem {
+    --menuitem-image: url("chrome://global/skin/media/pause-fill.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  .downloadResumeMenuItem {
+    --menuitem-image: url("chrome://global/skin/media/play-fill.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  .downloadUnblockMenuItem {
+    --menuitem-image: url("../icons/checkmark-circle.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  .downloadUseSystemDefaultMenuItem {
+    --menuitem-image: url("../icons/toolbarButton-upload.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  .downloadAlwaysUseSystemDefaultMenuItem {
+    /* checkbox */
+    --menuitem-image: url("../icons/folder-globe.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  .downloadAlwaysOpenSimilarFilesMenuItem {
+    /* checkbox */
+    --menuitem-image: url("../icons/fluid.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  .downloadShowMenuItem {
+    --menuitem-image: var(--uc-folder-icon);
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #downloadsContextMenu > menuitem.downloadOpenReferrerMenuItem,
+  #downloadsContextMenu > menuitem[command="downloadsCmd_openReferrer"] {
+    --menuitem-image: url("../icons/link-square.svg");
+  }
+  #downloadsContextMenu > menuitem.downloadCopyLocationMenuItem,
+  #downloadsContextMenu > menuitem[command="downloadsCmd_copyLocation"] {
+    --menuitem-image: url("../icons/link.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  .downloadDeleteFileMenuItem {
+    --menuitem-image: url("chrome://global/skin/icons/delete.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  .downloadRemoveFromHistoryMenuItem {
+    --menuitem-image: url("../icons/eraser.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #downloadsContextMenu > menuitem[command="downloadsCmd_clearList"],
+  #downloadsContextMenu > menuitem[command="downloadsCmd_clearDownloads"] {
+    --menuitem-image: url("../icons/broom.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #placesContext_open {
+    --menuitem-image: url("../icons/link-square.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #placesContext_openBookmarkContainer\:tabs,
+  #placesContext_openBookmarkLinks\:tabs {
+    --menuitem-image: url("../icons/movetowindow-16.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #placesContext_open\:newtab,
+  #placesContext_openContainer\:tabs,
+  #placesContext_openLinks\:tabs {
+    --menuitem-image: var(--uc-new-tab-icon);
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #placesContext_open\:newcontainertab {
+    --menuitem-image: url("../icons/container-openin-16.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #placesContext_open\:newwindow {
+    --menuitem-image: url("chrome://browser/skin/window.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #placesContext_open\:newprivatewindow {
+    --menuitem-image: url("chrome://browser/skin/privateBrowsing.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #placesContext_show_bookmark\:info,
+  #placesContext_show\:info,
+  #placesContext_show_folder\:info {
+    --menuitem-image: url("chrome://global/skin/icons/edit.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #placesContext_deleteBookmark,
+  #placesContext_deleteFolder,
+  #placesContext_delete,
+  #placesContext_delete_history {
+    --menuitem-image: url("chrome://global/skin/icons/delete.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #placesContext_deleteHost {
+    --menuitem-image: url("../icons/eye-hide.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #placesContext_sortBy\:name {
+    --menuitem-image: url("../icons/text-sort-ascending.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #placesContext_cut {
+    --menuitem-image: url("../icons/edit-cut.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #placesContext_copy {
+    --menuitem-image: url("../icons/edit-copy.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #placesContext_paste_group {
+    --menuitem-image: url("../icons/edit-paste.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #placesContext_new\:bookmark {
+    --menuitem-image: url("chrome://browser/skin/bookmark.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #placesContext_showInFolder,
+  #placesContext_new\:folder {
+    --menuitem-image: var(--uc-folder-icon);
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #placesContext_new\:separator {
+    --menuitem-image: url("../icons/vertical-line.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #placesContext_paste {
+    --menuitem-image: url("../icons/edit-paste.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #placesContext_createBookmark {
+    --menuitem-image: url("chrome://browser/skin/bookmark.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #show-other-bookmarks_PersonalToolbar {
+    /* checkbox */
+    --menuitem-image: url("../icons/star-line-horizontal.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #placesContext_showAllBookmarks {
+    --menuitem-image: url("chrome://browser/skin/bookmark-star-on-tray.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  .openintabs-menuitem {
+    --menuitem-image: url("../icons/movetowindow-16.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #doNotDisturbMenuItem {
+    --menuitem-image: url(chrome://global/skin/media/pause-fill.svg);
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #disableForOriginMenuItem {
+    --menuitem-image: url("chrome://global/skin/icons/blocked.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #openSettingsMenuItem {
+    --menuitem-image: url("chrome://global/skin/icons/settings.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #blockedPopupAllowSite {
+    --menuitem-image: url("chrome://global/skin/icons/check.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #blockedPopupOptions > menuitem[oncommand="gPopupBlockerObserver.editPopupSettings();"] {
+    --menuitem-image: url("chrome://global/skin/icons/edit.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #blockedPopupDontShowMessage {
+    /* checkbox */
+    --menuitem-image: url("chrome://global/skin/icons/blocked.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  menuitem[data-l10n-id="popup-show-popup-menuitem"] {
+    /* checkbox */
+    --menuitem-image: url("../icons/eye-show.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #autohide-context > menuitem[data-l10n-id="full-screen-autohide"] {
+    /* checkbox */
+    --menuitem-image: url("../icons/eye-tracking-off.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #autohide-context > menuitem[data-l10n-id="full-screen-exit"] {
+    --menuitem-image: url("chrome://browser/skin/fullscreen-exit.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #pictureInPictureToggleContextMenu > menuitem[oncommand="PictureInPicture.hideToggle();"] {
+    --menuitem-image: url("../icons/eye-hide.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  .pageActionContextMenuItem.extensionPinned.extensionUnpinned.manageExtensionItem {
+    --menuitem-image: url("chrome://global/skin/icons/settings.svg");
+  }
+  .pageActionContextMenuItem.extensionPinned.extensionUnpinned.removeExtensionItem {
+    --menuitem-image: url("chrome://global/skin/icons/delete.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #customizationPanelItemContextMenuUnpin {
+    --menuitem-image: url("../icons/unpin-tab.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  .customize-context-removeFromPanel {
+    --menuitem-image: url("chrome://global/skin/icons/delete.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  .customize-context-addToToolbar {
+    --menuitem-image: url("chrome://devtools/skin/images/dock-bottom.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  .customize-context-addToPanel {
+    --menuitem-image: url("chrome://browser/skin/menu.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #customizationPanelContextMenu > menuitem[command="cmd_CustomizeToolbars"] {
+    --menuitem-image: url("chrome://browser/skin/customize.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #downloads-button-autohide-checkbox {
+    /* checkbox */
+    --menuitem-image: url("../icons/eye-tracking-off.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #syncedTabsOpenSelected {
+    --menuitem-image: url("../icons/link-square.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #syncedTabsOpenSelectedInTab {
+    --menuitem-image: var(--uc-new-tab-icon);
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #syncedTabsOpenSelectedInWindow {
+    --menuitem-image: url("chrome://browser/skin/window.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #syncedTabsOpenSelectedInPrivateWindow {
+    --menuitem-image: url("chrome://browser/skin/privateBrowsing.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #syncedTabsBookmarkSelected {
+    --menuitem-image: url("chrome://browser/skin/bookmark.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #syncedTabsCopySelected {
+    --menuitem-image: url("../icons/link.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #syncedTabsOpenAllInTabs {
+    --menuitem-image: url("../icons/movetowindow-16.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #syncedTabsManageDevices {
+    --menuitem-image: url("chrome://global/skin/icons/settings.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #syncedTabsRefresh {
+    --menuitem-image: url("chrome://browser/skin/sync.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #SyncedTabsSidebarTabsFilterContext > menuitem[cmd="cmd_undo"] {
+    --menuitem-image: url("../icons/undo.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #SyncedTabsSidebarTabsFilterContext > menuitem[cmd="cmd_cut"] {
+    --menuitem-image: url("../icons/edit-cut.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #SyncedTabsSidebarTabsFilterContext > menuitem[cmd="cmd_copy"] {
+    --menuitem-image: url("../icons/edit-copy.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #SyncedTabsSidebarTabsFilterContext > menuitem[cmd="cmd_paste"] {
+    --menuitem-image: url("../icons/edit-paste.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #SyncedTabsSidebarTabsFilterContext > menuitem[cmd="cmd_delete"] {
+    --menuitem-image: url("chrome://global/skin/icons/delete.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #SyncedTabsSidebarTabsFilterContext > menuitem[cmd="cmd_selectAll"] {
+    --menuitem-image: url("../icons/select-all-on.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #syncedTabsRefreshFilter {
+    --menuitem-image: url("chrome://browser/skin/sync.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #urlbar-input-container .textbox-contextmenu menuitem[cmd="cmd_undo"] {
+    --menuitem-image: url("../icons/undo.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") and (-moz-bool-pref: "userChrome.icon.menu.full") {
+  #urlbar-input-container .textbox-contextmenu menuitem[cmd="cmd_redo"] {
+    --menuitem-image: url("../icons/redo.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #urlbar-input-container .textbox-contextmenu menuitem[cmd="cmd_cut"] {
+    --menuitem-image: url("../icons/edit-cut.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #urlbar-input-container .textbox-contextmenu menuitem[cmd="cmd_copy"] {
+    --menuitem-image: url("../icons/edit-copy.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") and (-moz-bool-pref: "userChrome.icon.menu.full") {
+  #strip-on-share {
+    --menuitem-image: url("../icons/link-no-tracking.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #urlbar-input-container .textbox-contextmenu menuitem[cmd="cmd_paste"] {
+    --menuitem-image: url("../icons/edit-paste.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") and (-moz-bool-pref: "userChrome.icon.menu.full") {
+  #paste-and-go {
+    --menuitem-image: url("../icons/edit-paste-go.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #urlbar-input-container .textbox-contextmenu menuitem[cmd="cmd_delete"] {
+    --menuitem-image: url("chrome://global/skin/icons/delete.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #urlbar-input-container .textbox-contextmenu menuitem[cmd="cmd_selectAll"] {
+    --menuitem-image: url("../icons/select-all-on.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  .textbox-contextmenu > menuitem[data-l10n-id="text-action-undo"] {
+    --menuitem-image: url("../icons/undo.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") and (-moz-bool-pref: "userChrome.icon.menu.full") {
+  .textbox-contextmenu > menuitem[data-l10n-id="text-action-redo"] {
+    --menuitem-image: url("../icons/redo.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  .textbox-contextmenu > menuitem[data-l10n-id="text-action-cut"] {
+    --menuitem-image: url("../icons/edit-cut.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  .textbox-contextmenu > menuitem[data-l10n-id="text-action-copy"] {
+    --menuitem-image: url("../icons/edit-copy.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  .textbox-contextmenu > menuitem[data-l10n-id="text-action-paste"] {
+    --menuitem-image: url("../icons/edit-paste.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  .textbox-contextmenu > menuitem[data-l10n-id="text-action-delete"] {
+    --menuitem-image: url("chrome://global/skin/icons/delete.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  .textbox-contextmenu > menuitem[data-l10n-id="text-action-select-all"] {
+    --menuitem-image: url("../icons/select-all-on.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") and (-moz-bool-pref: "userChrome.icon.menu.full") {
+  menuitem.searchbar-paste-and-search {
+    --menuitem-image: url("../icons/edit-paste-search.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  menuitem.searchbar-clear-history {
+    --menuitem-image: url("../icons/forget.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  .sync-menuitem.sendtab-target[clientType="phone"] {
+    --menuitem-image: url("../icons/device-phone.svg");
+  }
+  .sync-menuitem.sendtab-target[clientType="tablet"] {
+    --menuitem-image: url("../icons/device-tablet.svg");
+  }
+  .sync-menuitem.sendtab-target[clientType="desktop"] {
+    --menuitem-image: url("../icons/device-desktop.svg");
+  }
+  .sync-menuitem.sendtab-target[clientType="tv"] {
+    --menuitem-image: url("../icons/device-tv.svg");
+  }
+  .sync-menuitem.sendtab-target[clientType="vr"] {
+    --menuitem-image: url("../icons/device-vr.svg");
+  }
+  .sync-menuitem.sendtab-target[clientType=""] {
+    --menuitem-image: url("../icons/send-to-device.svg");
+  }
+  .sync-menuitem.sendtab-target:not([clientType]) {
+    --menuitem-image: url("chrome://global/skin/icons/settings.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  #treestyletab_piro_sakura_ne_jp-menuitem-_context_sendTabsToDevice\:manage {
+    --menuitem-image: url("chrome://global/skin/icons/settings.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  .unified-extensions-context-menu-pin-to-toolbar {
+    --menuitem-image: url("../icons/pin-tab.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  .unified-extensions-context-menu-manage-extension {
+    --menuitem-image: url("chrome://global/skin/icons/settings.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  .unified-extensions-context-menu-remove-extension {
+    --menuitem-image: url("chrome://global/skin/icons/delete.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  .unified-extensions-context-menu-report-extension {
+    --menuitem-image: url("../icons/send.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.context_menu") {
+  .urlbarView-result-menuitem[data-command="dismiss"] {
+    --menuitem-image: url("chrome://global/skin/icons/delete.svg");
+  }
+  .urlbarView-result-menuitem[data-command="help"] {
+    --menuitem-image: url("chrome://global/skin/icons/info.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.global_menubar") {
+  /*= main-menubar =============================================================*/
+  #file-menu {
+    --menuitem-image: url("../icons/mail-inbox-all.svg");
+  }
+  #edit-menu {
+    --menuitem-image: url("chrome://global/skin/icons/edit.svg");
+  }
+  #view-menu {
+    --menuitem-image: url("../icons/content-view.svg");
+  }
+  #history-menu {
+    --menuitem-image: url("chrome://browser/skin/history.svg");
+  }
+  #bookmarksMenu {
+    --menuitem-image: url("chrome://browser/skin/bookmark.svg");
+  }
+  #tools-menu {
+    --menuitem-image: url("../icons/toolbox.svg");
+  }
+  #helpMenu {
+    --menuitem-image: url("chrome://global/skin/icons/help.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.global_menu") {
+  /** Global Menu ***************************************************************/
+  /*= menu_FilePopup ===========================================================*/
+  #menu_newNavigatorTab {
+    --menuitem-image: var(--uc-new-tab-icon);
+  }
+  #menu_newUserContext {
+    --menuitem-image: url("../icons/container-openin-16.svg");
+  }
+  #menu_newNavigator {
+    --menuitem-image: url("chrome://browser/skin/window.svg");
+  }
+  #menu_newPrivateWindow {
+    --menuitem-image: url("chrome://browser/skin/privateBrowsing.svg");
+  }
+  #menu_openFile {
+    --menuitem-image: url("../icons/toolbarButton-upload.svg");
+  }
+  #menu_savePage {
+    --menuitem-image: url("../icons/toolbarButton-download.svg");
+  }
+  #menu_sendLink {
+    --menuitem-image: url("../icons/mail.svg");
+  }
+  menu.share-tab-url-item {
+    --menuitem-image: url("chrome://browser/skin/share.svg");
+  }
+  #menu_print {
+    --menuitem-image: url("chrome://global/skin/icons/print.svg");
+  }
+  #menu_importFromAnotherBrowser {
+    --menuitem-image: url("chrome://browser/skin/import.svg");
+  }
+  #goOfflineMenuitem {
+    /* checkbox */
+    --menuitem-image: url("../icons/plug-disconnected.svg");
+  }
+  #menu_FileQuitItem {
+    --menuitem-image: url("../icons/quit.svg");
+  }
+  /* Mange Containers */
+  #menu_newUserContext menupopup menuitem:last-child {
+    --menuitem-image: url("chrome://global/skin/icons/settings.svg");
+  }
+  /*= menu_EditPopup ===========================================================*/
+  #menu_undo {
+    --menuitem-image: url("../icons/undo.svg");
+  }
+  /*= menu_viewPopup ===========================================================*/
+  /* view-menu-popup sub menu */
+  /* viewSidebarMenu sub menu */
+  /* viewFullZoomMenu sub menu */
+  /*= goPopup ==================================================================*/
+  /* sub menu */
+  /*= bookmarksMenuPopup =======================================================*/
+  /*= menu_ToolsPopup ==========================================================*/
+  /* menuWebDeveloperPopup sub menu */
+  /*= windowPopup ==============================================================*/
+  /*= menu_HelpPopup ===========================================================*/
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.global_menu") and (-moz-bool-pref: "userChrome.icon.menu.full") {
+  #menu_redo {
+    --menuitem-image: url("../icons/redo.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.global_menu") {
+  #menu_cut {
+    --menuitem-image: url("../icons/edit-cut.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.global_menu") {
+  #menu_copy {
+    --menuitem-image: url("../icons/edit-copy.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.global_menu") {
+  #menu_paste {
+    --menuitem-image: url("../icons/edit-paste.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.global_menu") {
+  #menu_delete {
+    --menuitem-image: url("chrome://global/skin/icons/delete.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.global_menu") {
+  #menu_selectAll {
+    --menuitem-image: url("../icons/select-all-on.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.global_menu") {
+  #menu_find {
+    --menuitem-image: url("chrome://global/skin/icons/search-glass.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.global_menu") {
+  #menu_preferences {
+    --menuitem-image: url("chrome://global/skin/icons/settings.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.global_menu") {
+  #viewToolbarsMenu {
+    --menuitem-image: url("../icons/toolbar.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.global_menu") {
+  #viewSidebarMenuMenu {
+    --menuitem-image: var(--uc-sidebar-icon);
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.global_menu") {
+  #viewFullZoomMenu {
+    --menuitem-image: url("../icons/screenshot.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.global_menu") {
+  #pageStyleMenu {
+    --menuitem-image: url("../icons/document-css.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.global_menu") {
+  #repair-text-encoding {
+    --menuitem-image: url("../icons/characterEncoding.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.global_menu") {
+  #enterFullScreenItem {
+    --menuitem-image: url("chrome://browser/skin/fullscreen.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.global_menu") {
+  #exitFullScreenItem {
+    --menuitem-image: url("chrome://browser/skin/fullscreen-exit.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.global_menu") {
+  #fullScreenItem {
+    /* checkbox */
+    --menuitem-image: url("chrome://browser/skin/fullscreen.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.global_menu") {
+  #menu_readerModeItem {
+    --menuitem-image: url("chrome://browser/skin/reader-mode.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.global_menu") {
+  #menu_showAllTabs {
+    --menuitem-image: var(--uc-tab-icon);
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.global_menu") {
+  #documentDirection-swap {
+    --menuitem-image: url("../icons/text-direction-horizontal-ltr.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.global_menu") {
+  #menu_customizeToolbars {
+    --menuitem-image: url("chrome://browser/skin/customize.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.global_menu") {
+  #menu_bookmarksSidebar {
+    --menuitem-image: url("chrome://browser/skin/bookmark.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.global_menu") {
+  #menu_historySidebar {
+    --menuitem-image: url("chrome://browser/skin/history.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.global_menu") {
+  #menu_tabsSidebar {
+    --menuitem-image: url("../icons/synced-tabs.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.global_menu") {
+  #menu_zoomEnlarge {
+    --menuitem-image: url("chrome://browser/skin/add-circle-fill.svg");
+    stroke: transparent !important;
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.global_menu") {
+  #menu_zoomReduce {
+    --menuitem-image: url("chrome://browser/skin/subtract-circle-fill.svg");
+    stroke: transparent !important;
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.global_menu") {
+  #menu_zoomReset {
+    --menuitem-image: url("../icons/resize.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.global_menu") {
+  #toggle_zoom {
+    --menuitem-image: url("../icons/screenshot.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.global_menu") {
+  #menu_showAllHistory {
+    --menuitem-image: url("chrome://browser/skin/history.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.global_menu") {
+  #sanitizeItem {
+    --menuitem-image: url("../icons/forget.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.global_menu") {
+  #sync-tabs-menuitem {
+    --menuitem-image: url("chrome://browser/skin/sync.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.global_menu") {
+  #historyRestoreLastSession {
+    --menuitem-image: url("../icons/restore-session.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.global_menu") {
+  #hiddenTabsMenu {
+    --menuitem-image: url("../icons/eye-hide.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.global_menu") {
+  #menu_searchHistory {
+    --menuitem-image: url("chrome://global/skin/icons/search-glass.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.global_menu") {
+  #historyUndoMenu {
+    --menuitem-image: var(--uc-tab-icon);
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.global_menu") {
+  #historyUndoWindowMenu {
+    --menuitem-image: url("chrome://browser/skin/window.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.global_menu") {
+  #historyUndoPopup .restoreallitem {
+    --menuitem-image: url("../icons/movetowindow-16.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.global_menu") {
+  #historyUndoWindowPopup .restoreallitem {
+    --menuitem-image: url("../icons/restore-session.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.global_menu") {
+  #bookmarksShowAll {
+    --menuitem-image: url("chrome://browser/skin/bookmark-star-on-tray.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.global_menu") {
+  #menu_bookmarkThisPage,
+  #menu_bookmarkAllTabs {
+    --menuitem-image: url("chrome://browser/skin/bookmark-hollow.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.global_menu") {
+  #menu_bookmarkThisPage[data-l10n-id="menu-bookmark-edit"] {
+    --menuitem-image: url("chrome://browser/skin/bookmark.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.global_menu") {
+  #menu_searchBookmarks {
+    --menuitem-image: url("chrome://global/skin/icons/search-glass.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.global_menu") {
+  #menu_openDownloads {
+    --menuitem-image: url("chrome://browser/skin/downloads/downloads.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.global_menu") {
+  #menu_openAddons {
+    --menuitem-image: url("chrome://mozapps/skin/extensions/extension.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.global_menu") {
+  #sync-setup {
+    --menuitem-image: url("chrome://browser/skin/fxa/avatar-empty.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.global_menu") {
+  #sync-syncnowitem {
+    --menuitem-image: url("chrome://browser/skin/sync.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.global_menu") {
+  #menu_openFirefoxView {
+    --menuitem-image: url("chrome://branding/content/icon32.png");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.global_menu") {
+  #webDeveloperMenu,
+  #browserToolsMenu {
+    --menuitem-image: url("../icons/developer.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.global_menu") {
+  #menu_pageInfo {
+    --menuitem-image: url("../icons/document-endnote.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.global_menu") {
+  #menu_devToolbox {
+    /* checkbox */
+    --menuitem-image: url("../icons/developer.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.global_menu") {
+  #menu_taskManager {
+    --menuitem-image: url("../icons/performance.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.global_menu") {
+  #menu_devtools_remotedebugging {
+    --menuitem-image: url("../icons/bug.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.global_menu") {
+  #menu_browserToolbox {
+    --menuitem-image: url("../icons/window-dev-tools.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.global_menu") {
+  #menu_browserContentToolbox {
+    --menuitem-image: url("../icons/command-frames.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.global_menu") {
+  #menu_browserConsole {
+    --menuitem-image: url("../icons/command-console.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.global_menu") {
+  #menu_responsiveUI {
+    /* checkbox */
+    --menuitem-image: url("../icons/command-responsivemode.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.global_menu") {
+  #menu_eyedropper {
+    /* checkbox */
+    --menuitem-image: url("../icons/command-eyedropper.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.global_menu") {
+  #menu_pageSource {
+    --menuitem-image: url("../icons/document-search.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.global_menu") {
+  #extensionsForDevelopers {
+    --menuitem-image: url("chrome://mozapps/skin/extensions/extension.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.global_menu") {
+  #windowPopup > menuitem[command="minimizeWindow"] {
+    --menuitem-image: url("../icons/arrow-between-down.svg");
+  }
+  #windowPopup > menuitem[command="zoomWindow"] {
+    --menuitem-image: url("../icons/auto-fit-width.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.global_menu") {
+  #menu_openHelp {
+    --menuitem-image: url("chrome://global/skin/icons/help.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.global_menu") {
+  #help_reportBrokenSite {
+    --menuitem-image: url("chrome://global/skin/icons/lightbulb.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.global_menu") {
+  #feedbackPage {
+    --menuitem-image: url("../icons/send.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.global_menu") {
+  #helpSafeMode {
+    --menuitem-image: url("chrome://devtools/skin/images/debugging-workers.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.global_menu") {
+  #troubleShooting {
+    --menuitem-image: url("chrome://global/skin/icons/more.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.global_menu") {
+  #help_reportSiteIssue {
+    --menuitem-image: url("chrome://global/skin/icons/lightbulb.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.global_menu") {
+  #menu_HelpPopup_reportPhishingtoolmenu {
+    --menuitem-image: url("chrome://global/skin/icons/warning.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.global_menu") {
+  #menu_HelpPopup_reportPhishingErrortoolmenu {
+    --menuitem-image: url("../icons/checkmark-circle.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.global_menu") {
+  #helpSwitchDevice {
+    --menuitem-image: url("../icons/add-device.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.global_menu") {
+  #aboutName {
+    --menuitem-image: url("chrome://global/skin/icons/info.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.library") {
+  /*= organizeButtonPopup ======================================================*/
+  #newbookmark {
+    --menuitem-image: url("chrome://browser/skin/bookmark.svg");
+  }
+  #newfolder {
+    --menuitem-image: var(--uc-folder-icon);
+  }
+  #newseparator {
+    --menuitem-image: url("../icons/vertical-line.svg");
+  }
+  #orgUndo {
+    --menuitem-image: url("../icons/undo.svg");
+  }
+  /*= viewMenuPopup ============================================================*/
+  /*= maintenanceButtonPopup ===================================================*/
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.library") and (-moz-bool-pref: "userChrome.icon.menu.full") {
+  #orgRedo {
+    --menuitem-image: url("../icons/redo.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.library") {
+  #orgCut {
+    --menuitem-image: url("../icons/edit-cut.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.library") {
+  #orgCopy {
+    --menuitem-image: url("../icons/edit-copy.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.library") {
+  #orgPaste {
+    --menuitem-image: url("../icons/edit-paste.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.library") {
+  #orgDelete {
+    --menuitem-image: url("chrome://global/skin/icons/delete.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.library") {
+  #orgSelectAll {
+    --menuitem-image: url("../icons/select-all-on.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.library") {
+  #orgClose {
+    --menuitem-image: url("chrome://global/skin/icons/close.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.library") {
+  #viewColumns {
+    --menuitem-image: url("chrome://global/skin/icons/columnpicker.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.library") {
+  #viewSort {
+    --menuitem-image: url("../icons/text-sort-ascending.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.library") {
+  #backupBookmarks {
+    --menuitem-image: url("../icons/datastore.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.library") and (-moz-bool-pref: "userChrome.icon.menu.full") {
+  #fileRestoreMenu {
+    --menuitem-image: url("../icons/datarestore.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.library") {
+  #fileImport {
+    --menuitem-image: url("../icons/toolbarButton-download.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.library") {
+  #fileExport {
+    --menuitem-image: url("../icons/toolbarButton-upload.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") and (-moz-bool-pref: "userChrome.icon.library") {
+  #browserImport {
+    --menuitem-image: url("chrome://browser/skin/import.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.1-25px_stroke") {
+  #firefox-view-button {
+    list-style-image: url("../icons/firefox-view.svg") !important;
+  }
+  #reset-pbm-toolbar-button {
+    list-style-image: url("../icons/flame.svg") !important;
+  }
+  #translations-button-icon {
+    list-style-image: url("../icons/translations.svg") !important;
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #appMenu-restart-button {
+    list-style-image: url("../icons/refresh-cw.svg") !important;
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") {
+  #menu_FileRestartItem {
+    --menuitem-image: url("../icons/refresh-cw.svg");
+  }
+  #toggle_status-dummybar {
+    --menuitem-image: url("../icons/pulse-square.svg");
+  }
+  menuitem.privatetab-icon {
+    --menuitem-image: url("../icons/private-favicon.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #appMenuNewIdentity {
+    list-style-image: url("chrome://browser/skin/new_identity.svg");
+  }
+  #appMenuNewCircuit {
+    list-style-image: url("chrome://browser/skin/new_circuit.svg");
+  }
+  #appMenu_torBrowserUserManual {
+    list-style-image: url("chrome://browser/skin/onion.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") {
+  #menu_newIdentity {
+    --menuitem-image: url("chrome://browser/skin/new_identity.svg");
+  }
+  #menu_newCircuit {
+    --menuitem-image: url("chrome://browser/skin/new_circuit.svg");
+  }
+  #torBrowserUserManual {
+    --menuitem-image: url("chrome://browser/skin/onion.svg");
+  }
+}
+@media not (-moz-bool-pref: "userChrome.icon.disabled") {
+  #ssbPageAction-image {
+    list-style-image: url("../icons/pwa-install.svg");
+  }
+  #ssbPageAction-image[open-ssb="true"] {
+    list-style-image: url("../icons/pwa-launch.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.panel") {
+  #rebootappmenu {
+    list-style-image: url("../icons/refresh-cw.svg");
+  }
+  #openprofiledir {
+    list-style-image: var(--uc-folder-icon);
+  }
+  #appMenu-ssb-button {
+    list-style-image: url("../icons/pwa-manage.svg");
+  }
+  #appMenu-install-or-open-ssb-current-page-button {
+    list-style-image: url("../icons/pwa-install.svg");
+  }
+  #appMenu-install-or-open-ssb-current-page-button[open-ssb="true"] {
+    list-style-image: url("../icons/pwa-launch.svg");
+  }
+}
+@media (not (-moz-bool-pref: "userChrome.icon.disabled")) and (-moz-bool-pref: "userChrome.icon.menu") {
+  #toggle_sharemode {
+    --menuitem-image: url("chrome://branding/content/about-logo-private.png");
+  }
+  #usercssloader-menu {
+    --menuitem-image: url("../icons/developer.svg");
+  }
+  #usercssloader-menupopup > menu[data-l10n-id="css-menu"] {
+    --menuitem-image: url("../icons/document-css.svg");
+  }
+  #usercssloader-submenupopup > menuitem[data-l10n-id="rebuild-css"] {
+    --menuitem-image: url("chrome://global/skin/icons/reload.svg");
+  }
+  #usercssloader-submenupopup > menuitem[data-l10n-id="make-browsercss-file"] {
+    --menuitem-image: url("chrome://global/skin/icons/edit.svg");
+  }
+  #usercssloader-submenupopup > menuitem[data-l10n-id="open-css-folder"] {
+    --menuitem-image: var(--uc-folder-icon);
+  }
+  #usercssloader-submenupopup > menuitem[data-l10n-id="edit-userChromeCss-editor"] {
+    --menuitem-image: url("chrome://browser/skin/window.svg");
+  }
+  #usercssloader-submenupopup > menuitem[data-l10n-id="edit-userContentCss-editor"] {
+    --menuitem-image: url("chrome://global/skin/icons/page-portrait.svg");
+  }
+  #context_toggleToPrivateContainer,
+  #open_in_private_container {
+    --menuitem-image: url("../icons/private-favicon.svg");
+  }
+  #toggle_statusBar {
+    --menuitem-image: url("../icons/pulse-square.svg");
+  }
+  #muteMenu {
+    --menuitem-image: url("chrome://browser/skin/tabbrowser/tab-audio-muted-small.svg");
+    stroke: transparent !important;
+  }
+  #unloadWebpanelMenu {
+    --menuitem-image: var(--uc-tab-unload-icon);
+  }
+  #changeUAWebpanelMenu {
+    --menuitem-image: url("../icons/command-responsivemode.svg");
+    fill-opacity: 0;
+  }
+  #deleteWebpanelMenu {
+    --menuitem-image: url("chrome://global/skin/icons/delete.svg");
+  }
+  #run-ssb-contextmenu {
+    --menuitem-image: url("../icons/pwa-launch.svg");
+  }
+  #uninstall-ssb-contextmenu {
+    --menuitem-image: url("../icons/pwa-remove.svg");
+  }
+}
