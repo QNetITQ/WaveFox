@@ -97,7 +97,7 @@
 ## Optional
 
 ### Adding third-party styles
-Create a file `third_party_custom_styles.css`, add the desired styles inside and put it in the `chrome` folder. Please note that this file has maximum execution priority. It will overwrite all styles, regardless of selector specificity. I make no guarantees of compatibility and will not resolve any style conflicts you may encounter.
+Go to the `chrome` folder and paste the desired styles inside the `third_party_custom_styles.css` file. Please note that this file has maximum execution priority. It will overwrite all styles, regardless of selector specificity. I make no guarantees of compatibility and will not resolve any style conflicts you may encounter.
 
 - `userChrome.Style.ThirdParty.Enabled`
 
