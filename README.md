@@ -175,6 +175,7 @@ By default context menus follow the selected interface density, but it is possib
 
 Icons from Lepton.css are now available. Please note that this is third-party code. I am not its author and do not support it. I will not solve any problems associated with these icons. They were added at the request of some users and work "As is". I will update this code according to the original source.
 
+- `svg.context-properties.content.enabled`
 - `userChrome.Icons.LeptonIcons.Enabled`
   - `userChrome.icon.panel_full` or `userChrome.icon.panel_photon`
   - `userChrome.icon.library`
