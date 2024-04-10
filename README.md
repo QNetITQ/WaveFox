@@ -10,8 +10,8 @@
 ## Installation
 
 - ##### Minimum Requirements
-  - Firefox 126 Nightly + WaveFox v1.6.126 Beta
-  - Firefox 123/124 + [WaveFox v1.6.123](https://github.com/QNetITQ/WaveFox/tree/v1.6.123)
+  - Firefox 126 Beta + WaveFox v1.6.126 Beta
+  - Firefox 123/124/125 + [WaveFox v1.6.123](https://github.com/QNetITQ/WaveFox/tree/v1.6.123)
   - Firefox 115 ESR + [WaveFox v1.6.115.0.3](https://github.com/QNetITQ/WaveFox/tree/v1.6.115)
   - Windows
   - MacOS
