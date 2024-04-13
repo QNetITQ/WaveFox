@@ -14,6 +14,13 @@
 {
     :root
     {
+        --toolbox-background-color: ActiveCaption;
+
+        &:-moz-window-inactive
+        {
+            --toolbox-background-color: InActiveCaption;
+        }
+
         @media (-moz-bool-pref: "userChrome.Linux.Transparency.Low.Enabled")
         {
             --toolbox-transparency: 25%;
@@ -36,7 +43,7 @@
 
         &[tabsintitlebar]:not([lwtheme]) #navigator-toolbox
         {
-            background-color: color-mix(in srgb, ActiveCaption, transparent var(--toolbox-transparency)) !important;
+            background-color: color-mix(in srgb, var(--toolbox-background-color), transparent var(--toolbox-transparency)) !important;
         }
     }
 }
