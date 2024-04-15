@@ -108,10 +108,10 @@ Go to the `chrome` folder and paste the desired styles inside the `third_party_c
 
 - `browser.theme.windows.accent-color-in-tabs.enabled`
 
-### MacOS Vibrancy / Tinting
+### MacOS Tinting / Vibrancy
 
-- `widget.macos.titlebar-blend-mode.behind-window`
 - `browser.theme.macos.native-theme` (MacOS 11+)
+  - `widget.macos.titlebar-blend-mode.behind-window`
 
 ### Linux Transparency
 Requires Linux with transparency support. Tested on Manjaro KDE [Plasma 5](https://github.com/esjeon/kwin-forceblur) / [Plasma 6](https://github.com/taj-ny/kwin-forceblur). Works only with the system theme. If you encounter a ghosting effect, increase the blur.
