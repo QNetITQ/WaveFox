@@ -1203,6 +1203,11 @@ spacer[part="overflow-end-indicator"]
         padding-block: 0px !important;
     }
 
+    #urlbar-container
+    {
+        --urlbar-container-height: var(--tab-min-height) !important;
+    }
+
     /* -------------------- Bookmarks Bar -------------------- */
 
     #PersonalToolbar
@@ -1256,6 +1261,11 @@ spacer[part="overflow-end-indicator"]
             {
                 --tab-min-height: 48px !important;
             }
+        }
+
+        #urlbar-container
+        {
+            --urlbar-container-height: calc(var(--tab-min-height) - var(--tab-block-margin) * 2) !important;
         }
     }
 }
