@@ -2,6 +2,8 @@
 
 ![WaveFox_Preview](https://github.com/QNetITQ/WaveFox/assets/85301851/268bda8c-b987-45d1-966b-59992c18e66e)
 
+<div align='center'><a href='https://www.websitecounterfree.com'><img src='https://www.websitecounterfree.com/c.php?d=9&id=52856&s=3' border='0' alt='Free Website Counter'></a><br / ><small><a href='https://www.websitecounterfree.com' title="Free Website Counter">Free Website Counter</a></small></div>
+
 ###### Have a question not related to this project? These resources will help you
 - [Mozilla support](https://support.mozilla.org/en-US/)
 - [Reddit](https://www.reddit.com/r/firefox)
@@ -110,8 +112,8 @@ Go to the `chrome` folder and paste the desired styles inside the `third_party_c
 
 ### MacOS Tinting / Vibrancy
 
-- `browser.theme.macos.native-theme` (MacOS 11+)
-  - `widget.macos.titlebar-blend-mode.behind-window`
+- `browser.theme.macos.native-theme` (MacOS 11+ / Tinting)
+  - `widget.macos.titlebar-blend-mode.behind-window` (Vibrancy / Restart required)
 
 ### Linux Transparency
 Requires Linux with transparency support. Tested on Manjaro KDE [Plasma 5](https://github.com/esjeon/kwin-forceblur) / [Plasma 6](https://github.com/taj-ny/kwin-forceblur). Works only with the system theme. If you encounter a ghosting effect, increase the blur.
@@ -173,6 +175,7 @@ By default context menus follow the selected interface density, but it is possib
 - `userChrome.Menu.Icons.Regular.Enabled`
 - `userChrome.Menu.Icons.Filled.Enabled`
 
+### Lepton Icons
 Icons from Lepton.css are now available. Please note that this is third-party code. I am not its author and do not support it. I will not solve any problems associated with these icons. They were added at the request of some users and work "As is". I will update this code according to the original source.
 
 - `svg.context-properties.content.enabled`
@@ -217,6 +220,3 @@ Icons from Lepton.css are now available. Please note that this is third-party co
 
 - `userChrome.OneLine.TabBarFirst.Enabled`
 - `userChrome.OneLine.NavBarFirst.Enabled`
-
-----------------------
-<div align='center'><a href='https://www.websitecounterfree.com'><img src='https://www.websitecounterfree.com/c.php?d=9&id=52856&s=3' border='0' alt='Free Website Counter'></a><br / ><small><a href='https://www.websitecounterfree.com' title="Free Website Counter">Free Website Counter</a></small></div>
