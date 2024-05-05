@@ -365,6 +365,149 @@
     }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+@media (-moz-bool-pref: "userChrome.LightTheme.Tabs.Borders.Saturation.Low.Enabled")      or
+       (-moz-bool-pref: "userChrome.LightTheme.Tabs.Borders.Saturation.Medium.Enabled")   or
+       (-moz-bool-pref: "userChrome.LightTheme.Tabs.Borders.Saturation.High.Enabled")     or
+       (-moz-bool-pref: "userChrome.LightTheme.Tabs.Borders.Saturation.VeryHigh.Enabled")
+{
+    @media (prefers-color-scheme: light)
+    {
+        :root
+        {
+            --additional-shadow-blur: 2px;
+            --additional-shadow-color: rgb(0, 0, 0);
+
+            --additional-outer-box-shadow: 0
+                                           0
+                                           var(--additional-shadow-blur)
+                                           color-mix(in srgb, var(--additional-shadow-color) var(--additional-shadow-saturation), transparent);
+
+            --additional-inner-box-shadow: inset
+                                           0
+                                           calc(-1 * var(--additional-shadow-blur))
+                                           var(--additional-shadow-blur)
+                                           calc(-1 * var(--additional-shadow-blur))
+                                           color-mix(in srgb, var(--additional-shadow-color) var(--additional-shadow-saturation), transparent);
+
+            --additional-outer-drop-shadow: drop-shadow(
+                                            0
+                                            0
+                                            calc(var(--additional-shadow-blur) / 2)
+                                            color-mix(in srgb, var(--additional-shadow-color) var(--additional-shadow-saturation), transparent));
+
+            /* ---------- Saturation ---------- */
+
+            @media (-moz-bool-pref: "userChrome.LightTheme.Tabs.Borders.Saturation.Low.Enabled")
+            {
+                --additional-shadow-saturation: 10%;
+            }
+
+            @media (-moz-bool-pref: "userChrome.LightTheme.Tabs.Borders.Saturation.Medium.Enabled")
+            {
+                --additional-shadow-saturation: 25%;
+            }
+
+            @media (-moz-bool-pref: "userChrome.LightTheme.Tabs.Borders.Saturation.High.Enabled")
+            {
+                --additional-shadow-saturation: 50%;
+            }
+
+            @media (-moz-bool-pref: "userChrome.LightTheme.Tabs.Borders.Saturation.VeryHigh.Enabled")
+            {
+                --additional-shadow-saturation: 100%;
+            }
+        }
+    }
+}
+
+@media (-moz-bool-pref: "userChrome.DarkTheme.Tabs.Borders.Saturation.Low.Enabled")      or
+       (-moz-bool-pref: "userChrome.DarkTheme.Tabs.Borders.Saturation.Medium.Enabled")   or
+       (-moz-bool-pref: "userChrome.DarkTheme.Tabs.Borders.Saturation.High.Enabled")     or
+       (-moz-bool-pref: "userChrome.DarkTheme.Tabs.Borders.Saturation.VeryHigh.Enabled")
+{
+    @media (prefers-color-scheme: dark)
+    {
+        :root
+        {
+            --additional-shadow-blur: 2px;
+            --additional-shadow-color: rgb(0, 0, 0);
+
+            --additional-outer-box-shadow: 0
+                                           0
+                                           var(--additional-shadow-blur)
+                                           color-mix(in srgb, var(--additional-shadow-color) var(--additional-shadow-saturation), transparent);
+
+            --additional-inner-box-shadow: inset
+                                           0
+                                           calc(-1 * var(--additional-shadow-blur))
+                                           var(--additional-shadow-blur)
+                                           calc(-1 * var(--additional-shadow-blur))
+                                           color-mix(in srgb, var(--additional-shadow-color) var(--additional-shadow-saturation), transparent);
+
+            --additional-outer-drop-shadow: drop-shadow(
+                                            0
+                                            0
+                                            calc(var(--additional-shadow-blur) / 2)
+                                            color-mix(in srgb, var(--additional-shadow-color) var(--additional-shadow-saturation), transparent));
+
+            /* ---------- Saturation ---------- */
+
+            @media (-moz-bool-pref: "userChrome.DarkTheme.Tabs.Borders.Saturation.Low.Enabled")
+            {
+                --additional-shadow-saturation: 25%;
+            }
+
+            @media (-moz-bool-pref: "userChrome.DarkTheme.Tabs.Borders.Saturation.Medium.Enabled")
+            {
+                --additional-shadow-saturation: 50%;
+            }
+
+            @media (-moz-bool-pref: "userChrome.DarkTheme.Tabs.Borders.Saturation.High.Enabled")
+            {
+                --additional-shadow-saturation: 75%;
+            }
+
+            @media (-moz-bool-pref: "userChrome.DarkTheme.Tabs.Borders.Saturation.VeryHigh.Enabled")
+            {
+                --additional-shadow-saturation: 100%;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
+
 /* ---------------------------------------- System Theme ---------------------------------------- */
 
 @media not (prefers-contrast)
