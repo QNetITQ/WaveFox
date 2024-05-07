@@ -133,10 +133,16 @@ Incompatible with AMO themes.
 ![изображение](https://user-images.githubusercontent.com/85301851/152011749-4d5619b3-0fd8-40f9-a3dc-96be31839971.png)
 
 ##### Borders (Light Theme)
-- `userChrome.LightTheme.Tabs.Borders.Enabled`
+- `userChrome.LightTheme.Tabs.Borders.Saturation.Low.Enabled`
+- `userChrome.LightTheme.Tabs.Borders.Saturation.Medium.Enabled`
+- `userChrome.LightTheme.Tabs.Borders.Saturation.High.Enabled`
+- `userChrome.LightTheme.Tabs.Borders.Saturation.VeryHigh.Enabled`
 
 ##### Borders (Dark Theme)
-- `userChrome.DarkTheme.Tabs.Borders.Enabled`
+- `userChrome.DarkTheme.Tabs.Borders.Saturation.Low.Enabled`
+- `userChrome.DarkTheme.Tabs.Borders.Saturation.Medium.Enabled`
+- `userChrome.DarkTheme.Tabs.Borders.Saturation.High.Enabled`
+- `userChrome.DarkTheme.Tabs.Borders.Saturation.VeryHigh.Enabled`
 
 ##### Shadows (Light Theme)
 - `userChrome.LightTheme.Tabs.Shadows.Saturation.Low.Enabled`
