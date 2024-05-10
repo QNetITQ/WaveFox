@@ -703,7 +703,7 @@ spacer[part="overflow-end-indicator"]
 
 .tabbrowser-tab[pending] .tab-icon-image
 {
-    opacity: 0.5 !important;
+    filter: saturate(0) !important;
 }
 
 .tab-close-button
