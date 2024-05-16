@@ -495,9 +495,15 @@
         opacity: 1 !important;
     }
 
+    .titlebar-color
+    {
+        will-change: auto !important;
+        transition: color var(--inactive-window-transition) !important;
+    }
+
     &:-moz-window-inactive .titlebar-color
     {
-        color: color-mix(in srgb, currentColor 60%, transparent) !important;
+        color: color-mix(in srgb, currentColor calc(var(--inactive-titlebar-opacity) * 100%), transparent) !important;
         --toolbarbutton-icon-fill: currentColor !important;
     }
 }
