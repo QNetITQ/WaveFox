@@ -109,11 +109,13 @@ Go to the `chrome` folder and paste the desired styles inside the `third_party_c
 <i>Functionality that will not be part of the style will be published in the [discussions](https://github.com/QNetITQ/WaveFox/discussions) section as requests from users.</i>
 
 ### Windows Accent Color
+Works only with the system theme.
 ![изображение](https://github.com/QNetITQ/WaveFox/assets/85301851/55b01904-6620-4e36-9b6d-91b092db725c)
 
 - `browser.theme.windows.accent-color-in-tabs.enabled`
 
 ### MacOS Tinting / Vibrancy
+Works only with the system theme.
 
 - `browser.theme.macos.native-theme` (MacOS 11+ / Tinting)
   - `widget.macos.titlebar-blend-mode.behind-window` (Vibrancy / Restart required)
