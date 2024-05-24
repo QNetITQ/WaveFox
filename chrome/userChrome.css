@@ -394,6 +394,12 @@
 {
     :root:not([lwtheme])
     {
+        .titlebar-color
+        {
+            --toolbarbutton-hover-background: color-mix(in srgb, currentColor 17%, transparent) !important;
+            --toolbarbutton-active-background: color-mix(in srgb, currentColor 30%, transparent) !important;
+        }
+
         .tabbrowser-tab[visuallyselected]
         {
             color: var(--toolbar-color) !important;
@@ -413,6 +419,12 @@
          [style*="--lwt-accent-color: rgb(28, 27, 34); --lwt-text-color: rgba(251, 251, 254)"]
         )
 {
+    .titlebar-color
+    {
+        --toolbarbutton-hover-background: color-mix(in srgb, currentColor 17%, transparent) !important;
+        --toolbarbutton-active-background: color-mix(in srgb, currentColor 30%, transparent) !important;
+    }
+
     .tabbrowser-tab[visuallyselected]
     {
         color: var(--toolbar-color) !important;
