@@ -15,7 +15,7 @@
 ## Installation
 
 - ##### Minimum Requirements
-  - Firefox 127 Beta + WaveFox 1.6.127 Beta
+  - Firefox 127 + WaveFox v1.6.127
   - Firefox 126 + [WaveFox v1.6.126](https://github.com/QNetITQ/WaveFox/tree/v1.6.126)
   - Firefox 115 ESR + [WaveFox v1.6.115.0.3](https://github.com/QNetITQ/WaveFox/tree/v1.6.115)
   - Windows
@@ -129,7 +129,6 @@ Requires Linux with transparency support. Tested on Manjaro KDE [Plasma 5](https
 - `userChrome.Linux.Transparency.Medium.Enabled`
 - `userChrome.Linux.Transparency.High.Enabled`
 - `userChrome.Linux.Transparency.VeryHigh.Enabled`
-- `gfx.webrender.all` (Required key)
 - `browser.tabs.inTitlebar` > `1` (Required key)
 
 ### Tab Bar Borders and Shadows
