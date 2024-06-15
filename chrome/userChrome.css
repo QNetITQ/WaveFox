@@ -1355,16 +1355,21 @@ spacer[part="overflow-end-indicator"]
     {
         #nav-bar
         {
-            position: relative !important;
             background-color: transparent !important;
-            color: inherit !important;
-            --toolbarbutton-icon-fill: currentColor !important;
-            --toolbarbutton-hover-background: color-mix(in srgb, currentColor 17%, transparent) !important;
-            --toolbarbutton-active-background: color-mix(in srgb, currentColor 30%, transparent) !important;
-        
-            &:-moz-window-inactive
+
+            :root:is(:not([lwtheme]),
+                     [style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26)"],
+                     [style*="--lwt-accent-color: rgb(28, 27, 34); --lwt-text-color: rgba(251, 251, 254)"]) &
             {
-                color: color-mix(in srgb, currentColor calc(var(--inactive-titlebar-opacity) * 100%), transparent) !important;
+                color: inherit !important;
+                --toolbarbutton-icon-fill: currentColor !important;
+                --toolbarbutton-hover-background: color-mix(in srgb, currentColor 17%, transparent) !important;
+                --toolbarbutton-active-background: color-mix(in srgb, currentColor 30%, transparent) !important;
+
+                &:-moz-window-inactive
+                {
+                    color: color-mix(in srgb, currentColor calc(var(--inactive-titlebar-opacity) * 100%), transparent) !important;
+                }
             }
         }
         
