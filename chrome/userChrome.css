@@ -1366,26 +1366,28 @@ spacer[part="overflow-end-indicator"]
             {
                 color: color-mix(in srgb, currentColor calc(var(--inactive-titlebar-opacity) * 100%), transparent) !important;
             }
-            
-            &::after
-            {
-                content: "";
-                display: block;
-                position: absolute;
-                height: 50%;
-                width: 1px;
-                border-left: 1px solid color-mix(in srgb, currentColor 50%, transparent);
-                right: 0px;
-                top: 25%;
-                z-index: 10;
-                transform: translateX(1px);
-            }
         }
         
         #PersonalToolbar
         {
-            box-shadow: var(--additional-outer-box-shadow, 0 0 0 transparent),
-                        var(--outer-box-shadow, 0 0 0 transparent) !important;
+            position: relative !important;
+            overflow: visible !important;
+
+            &::before
+            {
+                content: "";
+                display: block;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                inset-inline-start: 0px;
+                inset-block-start: 0px;
+                pointer-events: none;
+                z-index: 0;
+                clip-path: inset(-100% 0 0 0);
+                box-shadow: var(--additional-outer-box-shadow, 0 0 0 transparent),
+                            var(--outer-box-shadow, 0 0 0 transparent);
+            }
         }
     }
 }
