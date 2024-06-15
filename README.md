@@ -15,8 +15,8 @@
 ## Installation
 
 - ##### Minimum Requirements
+  - Firefox 128 Beta + WaveFox v1.6.128 Beta
   - Firefox 127 + [WaveFox v1.6.127](https://github.com/QNetITQ/WaveFox/tree/v1.6.127)
-  - Firefox 126 + [WaveFox v1.6.126](https://github.com/QNetITQ/WaveFox/tree/v1.6.126)
   - Firefox 115 ESR + [WaveFox v1.6.115.0.3](https://github.com/QNetITQ/WaveFox/tree/v1.6.115)
   - Windows
   - MacOS
