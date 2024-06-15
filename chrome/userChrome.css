@@ -481,6 +481,70 @@
     background-position: var(--tab-attention-indicator-position) !important;
 }
 
+/* ---------------------------------------- Toolbar Transparency ---------------------------------------- */
+
+:root[tabsintitlebar]:not([lwtheme])
+{
+    @media (-moz-bool-pref: "userChrome.Toolbar.Transparency.Low.Enabled")
+    {
+        :is(.tabbrowser-tab[visuallyselected] .tab-background, #nav-bar, #PersonalToolbar)
+        {
+            background-color: color-mix(in srgb, var(--toolbar-bgcolor), transparent 25%) !important;
+        }
+
+        :is(#urlbar:not([focused], [open]) > #urlbar-background, #searchbar:not(:focus-within))
+        {
+            background-color: color-mix(in srgb, var(--toolbar-field-background-color), transparent 0%) !important;
+        }
+    }
+
+    @media (-moz-bool-pref: "userChrome.Toolbar.Transparency.Medium.Enabled")
+    {
+        :is(.tabbrowser-tab[visuallyselected] .tab-background, #nav-bar, #PersonalToolbar)
+        {
+            background-color: color-mix(in srgb, var(--toolbar-bgcolor), transparent 50%) !important;
+        }
+        
+        :is(#urlbar:not([focused], [open]) > #urlbar-background, #searchbar:not(:focus-within))
+        {
+            background-color: color-mix(in srgb, var(--toolbar-field-background-color), transparent 25%) !important;
+        }
+    }
+
+    @media (-moz-bool-pref: "userChrome.Toolbar.Transparency.High.Enabled")
+    {
+        :is(.tabbrowser-tab[visuallyselected] .tab-background, #nav-bar, #PersonalToolbar)
+        {
+            background-color: color-mix(in srgb, var(--toolbar-bgcolor), transparent 75%) !important;
+        }
+
+        :is(#urlbar:not([focused], [open]) > #urlbar-background, #searchbar:not(:focus-within))
+        {
+            background-color: color-mix(in srgb, var(--toolbar-field-background-color), transparent 50%) !important;
+        }
+    }
+    
+    @media (-moz-bool-pref: "userChrome.Toolbar.Transparency.VeryHigh.Enabled")
+    {
+        :is(#nav-bar, #PersonalToolbar)
+        {
+            background-color: transparent !important;
+        }
+
+        :is(#urlbar:not([focused], [open]) > #urlbar-background, #searchbar:not(:focus-within))
+        {
+            background-color: var(--toolbar-bgcolor) !important;
+            box-shadow: var(--additional-outer-box-shadow, 0 0 0 transparent),
+                        var(--outer-box-shadow, 0 0 0 transparent) !important;
+        }
+        
+        #TabsToolbar::before
+        {
+            display: none;
+        }
+    }
+}
+
 /* ---------------------------------------- Main Window ---------------------------------------- */
 
 :root
