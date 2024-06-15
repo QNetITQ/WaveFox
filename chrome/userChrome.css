@@ -1285,10 +1285,6 @@ spacer[part="overflow-end-indicator"]
     #nav-bar
     {
         width: fit-content !important;
-        margin: var(--tab-block-margin) !important;
-        border-radius: var(--tab-border-radius) !important;
-        box-shadow: var(--additional-outer-box-shadow, 0 0 0 transparent),
-                    var(--outer-box-shadow, 0 0 0 transparent) !important;
     }
 
     #urlbar-container,
@@ -1300,21 +1296,6 @@ spacer[part="overflow-end-indicator"]
     #urlbar-container
     {
         --urlbar-container-height: var(--tab-min-height) !important;
-    }
-
-    /* -------------------- Bookmarks Bar -------------------- */
-
-    #PersonalToolbar
-    {
-        margin-inline: var(--tab-block-margin) !important;
-        border-radius: var(--tab-border-radius) !important;
-        box-shadow: var(--additional-outer-box-shadow, 0 0 0 transparent),
-                    var(--outer-box-shadow, 0 0 0 transparent) !important;
-    }
-
-    #PersonalToolbar[collapsed="false"]
-    {
-        margin-bottom: var(--tab-block-margin) !important;
     }
 
     /* -------------------- Bookmarks Bar / Notifications -------------------- */
@@ -1331,6 +1312,36 @@ spacer[part="overflow-end-indicator"]
         --panel-arrow-offset: 0px !important;
     }
 
+    /* -------------------- Floating Tabs -------------------- */
+
+    @media (-moz-bool-pref: "userChrome.Tabs.Option1.Enabled") or
+           (-moz-bool-pref: "userChrome.Tabs.Option2.Enabled") or
+           (-moz-bool-pref: "userChrome.Tabs.Option3.Enabled") or
+           (-moz-bool-pref: "userChrome.Tabs.Option4.Enabled") or
+           (-moz-bool-pref: "userChrome.Tabs.Option5.Enabled")
+    {
+        #nav-bar
+        {
+            margin: var(--tab-block-margin) !important;
+            border-radius: var(--tab-border-radius) !important;
+            box-shadow: var(--additional-outer-box-shadow, 0 0 0 transparent),
+                        var(--outer-box-shadow, 0 0 0 transparent) !important;
+        }
+        
+        #PersonalToolbar
+        {
+            margin-inline: var(--tab-block-margin) !important;
+            border-radius: var(--tab-border-radius) !important;
+            box-shadow: var(--additional-outer-box-shadow, 0 0 0 transparent),
+                        var(--outer-box-shadow, 0 0 0 transparent) !important;
+        }
+
+        #PersonalToolbar[collapsed="false"]
+        {
+            margin-bottom: var(--tab-block-margin) !important;
+        }
+    }
+
     /* -------------------- Attached Tabs -------------------- */
 
     @media (-moz-bool-pref: "userChrome.Tabs.Option6.Enabled")  or
@@ -1342,24 +1353,39 @@ spacer[part="overflow-end-indicator"]
            (-moz-bool-pref: "userChrome.Tabs.Option12.Enabled") or
            (-moz-bool-pref: "userChrome.Tabs.Option13.Enabled")
     {
-        :root
+        #nav-bar
         {
-            --tab-min-height: 44px !important;
-
-            &[uidensity="compact"]
+            position: relative !important;
+            background-color: transparent !important;
+            color: inherit !important;
+            --toolbarbutton-icon-fill: currentColor !important;
+            --toolbarbutton-hover-background: color-mix(in srgb, currentColor 17%, transparent) !important;
+            --toolbarbutton-active-background: color-mix(in srgb, currentColor 30%, transparent) !important;
+        
+            &:-moz-window-inactive
             {
-                --tab-min-height: 40px !important;
+                color: color-mix(in srgb, currentColor calc(var(--inactive-titlebar-opacity) * 100%), transparent) !important;
             }
-
-            &[uidensity="touch"]
+            
+            &::after
             {
-                --tab-min-height: 48px !important;
+                content: "";
+                display: block;
+                position: absolute;
+                height: 50%;
+                width: 1px;
+                border-left: 1px solid color-mix(in srgb, currentColor 50%, transparent);
+                right: 0px;
+                top: 25%;
+                z-index: 10;
+                transform: translateX(1px);
             }
         }
-
-        #urlbar-container
+        
+        #PersonalToolbar
         {
-            --urlbar-container-height: calc(var(--tab-min-height) - var(--tab-block-margin) * 2) !important;
+            box-shadow: var(--additional-outer-box-shadow, 0 0 0 transparent),
+                        var(--outer-box-shadow, 0 0 0 transparent) !important;
         }
     }
 }
