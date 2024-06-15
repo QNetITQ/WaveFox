@@ -131,6 +131,15 @@ Requires Linux with transparency support. Tested on Manjaro KDE [Plasma 5](https
 - `userChrome.Linux.Transparency.VeryHigh.Enabled`
 - `browser.tabs.inTitlebar` > `1` (Required key)
 
+### Toolbar Transparency
+Works only with the system theme.
+![изображение](https://user-images.githubusercontent.com/85301851/165526704-4f7486c4-f330-4c86-a25d-6ed8ab2affe4.png)
+
+- `userChrome.Toolbar.Transparency.Low.Enabled`
+- `userChrome.Toolbar.Transparency.Medium.Enabled`
+- `userChrome.Toolbar.Transparency.High.Enabled`
+- `userChrome.Toolbar.Transparency.VeryHigh.Enabled`
+
 ### Tab Bar Borders and Shadows
 Incompatible with AMO themes.
 ![изображение](https://user-images.githubusercontent.com/85301851/152011749-4d5619b3-0fd8-40f9-a3dc-96be31839971.png)
