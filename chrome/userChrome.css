@@ -1275,11 +1275,6 @@ spacer[part="overflow-end-indicator"]
         -moz-window-dragging: drag !important;
     }
 
-    #TabsToolbar::before
-    {
-        display: none !important;
-    }
-
     /* -------------------- Nav Bar -------------------- */
 
     #nav-bar
@@ -1320,6 +1315,11 @@ spacer[part="overflow-end-indicator"]
            (-moz-bool-pref: "userChrome.Tabs.Option4.Enabled") or
            (-moz-bool-pref: "userChrome.Tabs.Option5.Enabled")
     {
+        #TabsToolbar::before
+        {
+            display: none !important;
+        }
+
         #nav-bar
         {
             margin: var(--tab-block-margin) !important;
@@ -1355,26 +1355,6 @@ spacer[part="overflow-end-indicator"]
     {
         #nav-bar
         {
-            background-color: transparent !important;
-
-            :root:is(:not([lwtheme]),
-                     [style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26)"],
-                     [style*="--lwt-accent-color: rgb(28, 27, 34); --lwt-text-color: rgba(251, 251, 254)"]) &
-            {
-                color: inherit !important;
-                --toolbarbutton-icon-fill: currentColor !important;
-                --toolbarbutton-hover-background: color-mix(in srgb, currentColor 17%, transparent) !important;
-                --toolbarbutton-active-background: color-mix(in srgb, currentColor 30%, transparent) !important;
-
-                &:-moz-window-inactive
-                {
-                    color: color-mix(in srgb, currentColor calc(var(--inactive-titlebar-opacity) * 100%), transparent) !important;
-                }
-            }
-        }
-        
-        #PersonalToolbar
-        {
             position: relative !important;
             overflow: visible !important;
 
@@ -1389,7 +1369,7 @@ spacer[part="overflow-end-indicator"]
                 inset-block-start: 0px;
                 pointer-events: none;
                 z-index: 0;
-                clip-path: inset(-100% 0 0 0);
+                clip-path: inset(0 -4px);
                 box-shadow: var(--additional-outer-box-shadow, 0 0 0 transparent),
                             var(--outer-box-shadow, 0 0 0 transparent);
             }
