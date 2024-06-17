@@ -489,6 +489,10 @@
     {
         --shadow-color: transparent !important;
         --additional-shadow-color: transparent !important;
+        --toolbarbutton-hover-background: color-mix(in srgb, currentColor 17%, transparent) !important;
+        --toolbarbutton-active-background: color-mix(in srgb, currentColor 30%, transparent) !important;
+        --urlbar-box-hover-bgcolor: color-mix(in srgb, currentColor 17%, transparent) !important;
+        --urlbar-box-active-bgcolor: color-mix(in srgb, currentColor 30%, transparent) !important;
 
         :is(.tabbrowser-tab[visuallyselected] .tab-background, #nav-bar, #PersonalToolbar)
         {
@@ -497,7 +501,7 @@
 
         :is(#urlbar:not([focused], [open]) > #urlbar-background, #searchbar:not(:focus-within))
         {
-            background-color: color-mix(in srgb, var(--toolbar-field-background-color), transparent 0%) !important;
+            background-color: color-mix(in srgb, var(--toolbar-field-background-color), transparent 25%) !important;
         }
     }
 
@@ -505,6 +509,10 @@
     {
         --shadow-color: transparent !important;
         --additional-shadow-color: transparent !important;
+        --toolbarbutton-hover-background: color-mix(in srgb, currentColor 17%, transparent) !important;
+        --toolbarbutton-active-background: color-mix(in srgb, currentColor 30%, transparent) !important;
+        --urlbar-box-hover-bgcolor: color-mix(in srgb, currentColor 17%, transparent) !important;
+        --urlbar-box-active-bgcolor: color-mix(in srgb, currentColor 30%, transparent) !important;
 
         :is(.tabbrowser-tab[visuallyselected] .tab-background, #nav-bar, #PersonalToolbar)
         {
@@ -513,7 +521,7 @@
         
         :is(#urlbar:not([focused], [open]) > #urlbar-background, #searchbar:not(:focus-within))
         {
-            background-color: color-mix(in srgb, var(--toolbar-field-background-color), transparent 25%) !important;
+            background-color: color-mix(in srgb, var(--toolbar-field-background-color), transparent 50%) !important;
         }
     }
 
@@ -521,6 +529,10 @@
     {
         --shadow-color: transparent !important;
         --additional-shadow-color: transparent !important;
+        --toolbarbutton-hover-background: color-mix(in srgb, currentColor 17%, transparent) !important;
+        --toolbarbutton-active-background: color-mix(in srgb, currentColor 30%, transparent) !important;
+        --urlbar-box-hover-bgcolor: color-mix(in srgb, currentColor 17%, transparent) !important;
+        --urlbar-box-active-bgcolor: color-mix(in srgb, currentColor 30%, transparent) !important;
 
         :is(.tabbrowser-tab[visuallyselected] .tab-background, #nav-bar, #PersonalToolbar)
         {
@@ -529,20 +541,23 @@
 
         :is(#urlbar:not([focused], [open]) > #urlbar-background, #searchbar:not(:focus-within))
         {
-            background-color: color-mix(in srgb, var(--toolbar-field-background-color), transparent 50%) !important;
+            background-color: color-mix(in srgb, var(--toolbar-field-background-color), transparent 75%) !important;
         }
     }
     
     @media (-moz-bool-pref: "userChrome.Toolbar.Transparency.VeryHigh.Enabled")
     {
+        --toolbarbutton-hover-background: color-mix(in srgb, currentColor 17%, transparent) !important;
+        --toolbarbutton-active-background: color-mix(in srgb, currentColor 30%, transparent) !important;
+
         :is(#nav-bar, #PersonalToolbar)
         {
             background-color: transparent !important;
         }
         
-        #TabsToolbar::before
+        #TabsToolbar::before, #nav-bar, #PersonalToolbar
         {
-            display: none;
+            box-shadow: none !important;
         }
     }
 }
