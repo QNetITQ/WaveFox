@@ -487,8 +487,8 @@
 {
     @media (-moz-bool-pref: "userChrome.Toolbar.Transparency.Low.Enabled")
     {
-        --shadow-color: transparent !important;
-        --additional-shadow-color: transparent !important;
+        --shadow-color: transparent;
+        --additional-shadow-color: transparent;
         --toolbarbutton-hover-background: color-mix(in srgb, currentColor 17%, transparent) !important;
         --toolbarbutton-active-background: color-mix(in srgb, currentColor 30%, transparent) !important;
         --urlbar-box-hover-bgcolor: color-mix(in srgb, currentColor 17%, transparent) !important;
@@ -510,8 +510,8 @@
 
     @media (-moz-bool-pref: "userChrome.Toolbar.Transparency.Medium.Enabled")
     {
-        --shadow-color: transparent !important;
-        --additional-shadow-color: transparent !important;
+        --shadow-color: transparent;
+        --additional-shadow-color: transparent;
         --toolbarbutton-hover-background: color-mix(in srgb, currentColor 17%, transparent) !important;
         --toolbarbutton-active-background: color-mix(in srgb, currentColor 30%, transparent) !important;
         --urlbar-box-hover-bgcolor: color-mix(in srgb, currentColor 17%, transparent) !important;
@@ -533,8 +533,8 @@
 
     @media (-moz-bool-pref: "userChrome.Toolbar.Transparency.High.Enabled")
     {
-        --shadow-color: transparent !important;
-        --additional-shadow-color: transparent !important;
+        --shadow-color: transparent;
+        --additional-shadow-color: transparent;
         --toolbarbutton-hover-background: color-mix(in srgb, currentColor 17%, transparent) !important;
         --toolbarbutton-active-background: color-mix(in srgb, currentColor 30%, transparent) !important;
         --urlbar-box-hover-bgcolor: color-mix(in srgb, currentColor 17%, transparent) !important;
@@ -611,7 +611,6 @@
     &:-moz-window-inactive .titlebar-color
     {
         color: color-mix(in srgb, currentColor calc(var(--inactive-titlebar-opacity) * 100%), transparent) !important;
-        --toolbarbutton-icon-fill: currentColor !important;
     }
 }
 
