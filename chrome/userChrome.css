@@ -494,12 +494,15 @@
         --urlbar-box-hover-bgcolor: color-mix(in srgb, currentColor 17%, transparent) !important;
         --urlbar-box-active-bgcolor: color-mix(in srgb, currentColor 30%, transparent) !important;
 
-        :is(.tabbrowser-tab[visuallyselected] .tab-background, #nav-bar, #PersonalToolbar)
+        .tabbrowser-tab[visuallyselected] .tab-background,
+        #nav-bar,
+        #PersonalToolbar
         {
             background-color: color-mix(in srgb, var(--toolbar-bgcolor), transparent 25%) !important;
         }
 
-        :is(#urlbar:not([focused], [open]) > #urlbar-background, #searchbar:not(:focus-within))
+        #urlbar:not([focused], [open]) > #urlbar-background,
+        #searchbar:not(:focus-within)
         {
             background-color: color-mix(in srgb, var(--toolbar-field-background-color), transparent 25%) !important;
         }
@@ -514,12 +517,15 @@
         --urlbar-box-hover-bgcolor: color-mix(in srgb, currentColor 17%, transparent) !important;
         --urlbar-box-active-bgcolor: color-mix(in srgb, currentColor 30%, transparent) !important;
 
-        :is(.tabbrowser-tab[visuallyselected] .tab-background, #nav-bar, #PersonalToolbar)
+        .tabbrowser-tab[visuallyselected] .tab-background,
+        #nav-bar,
+        #PersonalToolbar
         {
             background-color: color-mix(in srgb, var(--toolbar-bgcolor), transparent 50%) !important;
         }
         
-        :is(#urlbar:not([focused], [open]) > #urlbar-background, #searchbar:not(:focus-within))
+        #urlbar:not([focused], [open]) > #urlbar-background,
+        #searchbar:not(:focus-within)
         {
             background-color: color-mix(in srgb, var(--toolbar-field-background-color), transparent 50%) !important;
         }
@@ -534,12 +540,15 @@
         --urlbar-box-hover-bgcolor: color-mix(in srgb, currentColor 17%, transparent) !important;
         --urlbar-box-active-bgcolor: color-mix(in srgb, currentColor 30%, transparent) !important;
 
-        :is(.tabbrowser-tab[visuallyselected] .tab-background, #nav-bar, #PersonalToolbar)
+        .tabbrowser-tab[visuallyselected] .tab-background,
+        #nav-bar,
+        #PersonalToolbar
         {
             background-color: color-mix(in srgb, var(--toolbar-bgcolor), transparent 75%) !important;
         }
 
-        :is(#urlbar:not([focused], [open]) > #urlbar-background, #searchbar:not(:focus-within))
+        #urlbar:not([focused], [open]) > #urlbar-background,
+        #searchbar:not(:focus-within)
         {
             background-color: color-mix(in srgb, var(--toolbar-field-background-color), transparent 75%) !important;
         }
@@ -549,8 +558,13 @@
     {
         --toolbarbutton-hover-background: color-mix(in srgb, currentColor 17%, transparent) !important;
         --toolbarbutton-active-background: color-mix(in srgb, currentColor 30%, transparent) !important;
+        --urlbar-box-hover-bgcolor: color-mix(in srgb, currentColor 17%, transparent) !important;
+        --urlbar-box-active-bgcolor: color-mix(in srgb, currentColor 30%, transparent) !important;
 
-        :is(#nav-bar, #PersonalToolbar)
+        #nav-bar,
+        #urlbar:not([focused], [open]) > #urlbar-background,
+        #searchbar:not(:focus-within),
+        #PersonalToolbar
         {
             background-color: transparent !important;
         }
