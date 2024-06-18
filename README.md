@@ -207,6 +207,10 @@ Icons from Lepton.css are now available. Please note that this is third-party co
   - `userChrome.icon.global_menu`
   - `userChrome.icon.global_menubar`
   - `userChrome.icon.1-25px_stroke`
+  - `userChrome.icon.account_image_to_right`
+  - `userChrome.icon.account_label_to_right`
+  - `userChrome.icon.menu.full`
+  - `userChrome.icon.global_menu.mac`
 
 ### Drag Space
 ![изображение](https://user-images.githubusercontent.com/85301851/152680229-43547df0-1d2c-4384-b024-950e7aa56ca6.png)
