@@ -775,8 +775,8 @@ spacer[part="overflow-end-indicator"]
     {
         position: relative;
         z-index: 2 !important;
-        filter: var(--additional-outer-drop-shadow, drop-shadow(0 0 0 transparent))
-                var(--outer-drop-shadow, drop-shadow(0 0 0 transparent));
+        filter: var(--additional-outer-drop-shadow)
+                var(--outer-drop-shadow);
     }
 
     &:not([visuallyselected])
@@ -1055,8 +1055,8 @@ spacer[part="overflow-end-indicator"]
     height: 100%;
     bottom: 0px;
     inset-inline-start: 0px;
-    box-shadow: var(--additional-inner-box-shadow, inset 0 0 0 transparent),
-                var(--inner-box-shadow, inset 0 0 0 transparent);
+    box-shadow: var(--additional-inner-box-shadow),
+                var(--inner-box-shadow);
     pointer-events: none;
     z-index: 2;
 }
@@ -1368,16 +1368,16 @@ spacer[part="overflow-end-indicator"]
         {
             margin: var(--tab-block-margin) !important;
             border-radius: var(--tab-border-radius) !important;
-            box-shadow: var(--additional-outer-box-shadow, 0 0 0 transparent),
-                        var(--outer-box-shadow, 0 0 0 transparent) !important;
+            box-shadow: var(--additional-outer-box-shadow),
+                        var(--outer-box-shadow) !important;
         }
         
         #PersonalToolbar
         {
             margin-inline: var(--tab-block-margin) !important;
             border-radius: var(--tab-border-radius) !important;
-            box-shadow: var(--additional-outer-box-shadow, 0 0 0 transparent),
-                        var(--outer-box-shadow, 0 0 0 transparent) !important;
+            box-shadow: var(--additional-outer-box-shadow),
+                        var(--outer-box-shadow) !important;
         }
 
         #PersonalToolbar[collapsed="false"]
@@ -1414,8 +1414,8 @@ spacer[part="overflow-end-indicator"]
                 pointer-events: none;
                 z-index: 0;
                 clip-path: inset(0 -4px);
-                box-shadow: var(--additional-outer-box-shadow, 0 0 0 transparent),
-                            var(--outer-box-shadow, 0 0 0 transparent);
+                box-shadow: var(--additional-outer-box-shadow),
+                            var(--outer-box-shadow);
             }
         }
     }
