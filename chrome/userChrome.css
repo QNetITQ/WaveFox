@@ -754,12 +754,17 @@
 
 /* ---------- Shadow DOM ---------- */
 
+#tabbrowser-arrowscrollbox
+{
+    --drag-space-only-tabs: var(--drag-space) !important;
+}
+
 #scrollbutton-up,
 #scrollbutton-down,
 spacer[part="overflow-start-indicator"],
 spacer[part="overflow-end-indicator"]
 {
-    margin-top: var(--drag-space) !important;
+    margin-top: var(--drag-space-only-tabs, revert) !important;
 }
 
 /* ---------------------------------------- Tabs ---------------------------------------- */
