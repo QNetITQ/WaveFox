@@ -14,7 +14,7 @@
        (-moz-platform: macos)
 {
 
-/* ---------------------------------------- Custom Variables ---------------------------------------- */
+/* ---------------------------------------- Custom Properties ---------------------------------------- */
 
 @property --outer-box-shadow              @property --inner-box-shadow              @property --outer-drop-shadow
 {                                         {                                         {
@@ -29,6 +29,13 @@
     inherits: false;                          inherits: false;                          inherits: false;
     initial-value: 0 0 0 transparent;         initial-value: 0 0 0 transparent;         initial-value: drop-shadow(0 0 0 transparent);
 }                                         }                                         }
+
+@property --drag-space
+{
+    syntax: "<length>";
+    inherits: false;
+    initial-value: 0px;
+}
 
 /* ---------------------------------------- Tabs (SVG) ---------------------------------------- */
 
@@ -742,22 +749,17 @@
 
 #TabsToolbar :is(.tabbrowser-tab, .toolbarbutton-1, separator, #personal-bookmarks, #search-container, .accessibility-indicator, .private-browsing-indicator, #private-browsing-indicator-with-label)
 {
-    margin-top: var(--drag-space, 0px) !important;
+    margin-top: var(--drag-space) !important;
 }
 
 /* ---------- Shadow DOM ---------- */
-
-#tabbrowser-arrowscrollbox
-{
-    --margin-top: var(--drag-space, 0px) !important;
-}
 
 #scrollbutton-up,
 #scrollbutton-down,
 spacer[part="overflow-start-indicator"],
 spacer[part="overflow-end-indicator"]
 {
-    margin-top: var(--margin-top, revert) !important;
+    margin-top: var(--drag-space) !important;
 }
 
 /* ---------------------------------------- Tabs ---------------------------------------- */
