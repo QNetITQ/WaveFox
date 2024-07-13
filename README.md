@@ -118,7 +118,7 @@ Works only with the system theme.
 Works only with the system theme.
 
 - `browser.theme.macos.native-theme` (MacOS 11+ / Tinting)
-  - `widget.macos.titlebar-blend-mode.behind-window` (Vibrancy / Restart required)
+  - `widget.macos.titlebar-blend-mode.behind-window` and/or `widget.macos.sidebar-blend-mode.behind-window` (Vibrancy / Restart required)
 
 ### Linux Transparency
 Requires Linux with transparency support. Tested on Manjaro KDE [Plasma 5](https://github.com/esjeon/kwin-forceblur) / [Plasma 6](https://github.com/taj-ny/kwin-forceblur). Works only with the system theme. If you encounter a ghosting effect, increase the blur.
