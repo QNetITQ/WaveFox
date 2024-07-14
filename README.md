@@ -242,3 +242,24 @@ Icons from Lepton.css are now available. Please note that this is third-party co
 - `userChrome.OneLine.NavBarFirst.Enabled`
 
 </details>
+
+
+
+
+
+
+
+
+<details>
+  <summary>WaveFox v1.6.128(ESR)</summary>
+</details>
+
+<details>
+  <summary>WaveFox v1.6.115.0.3(ESR)</summary>
+</details>
+
+
+
+
+
+
