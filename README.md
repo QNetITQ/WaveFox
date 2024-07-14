@@ -41,27 +41,9 @@
 - [Download Firefox](https://www.mozilla.org/en-US/firefox/all/#product-desktop-release) / [Download WaveFox](https://github.com/QNetITQ/WaveFox/releases)
 
 - Download the `chrome` folder and put it in your user profile folder
-
-  <details>
-  <summary>How to access user profile folder?</summary>
-
-  ![Profile](https://github.com/QNetITQ/WaveFox/assets/85301851/d2b893ea-a62e-4d96-9385-108f83025075)
-  ![Profile 2](https://github.com/QNetITQ/WaveFox/assets/85301851/2817ee70-793b-40e6-a77e-8e62f9bfa87e)
-
-  </details>
-  
 - Go to `about:config` and activate the keys below
-
   - `toolkit.legacyUserProfileCustomizations.stylesheets`
-  
 - Specify the desired shape of the tabs
-
-  <details>
-  <summary>How to create keys?</summary>
-
-  ![Keys](https://github.com/QNetITQ/WaveFox/assets/85301851/9a3673d1-0d95-49fd-911c-dc91b366bc8b)
-
-  </details>
 
   ##### Tabs (Option 1)
   ![1](https://user-images.githubusercontent.com/85301851/233114797-1495824d-9f46-474f-aeb2-a8dcc5608066.PNG)
