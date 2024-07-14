@@ -33,10 +33,10 @@
 [Download Firefox](https://www.mozilla.org/en-US/firefox/all/#product-desktop-release) / [Download WaveFox](https://github.com/QNetITQ/WaveFox/releases)
 
 <details>
-  <summary>WaveFox v1.6.128 / v1.6.129 Beta</summary>
+  <summary>WaveFox v1.6.128 / v1.6.129+</summary>
 
 - ##### Minimum Requirements
-  - Firefox 128 / 129 Beta
+  - Firefox 128 / 129+
   - Windows / MacOS / Linux
 
 - Download the `chrome` folder and put it in your user profile folder
