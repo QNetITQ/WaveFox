@@ -30,19 +30,17 @@
 
 ## Installation
 
-- ##### Minimum Requirements
-  - Firefox 129 Beta + WaveFox v1.6.129 Beta
-  - Firefox 128 (ESR) + [WaveFox v1.6.128](https://github.com/QNetITQ/WaveFox/tree/v1.6.128)
-  - Firefox 115 ESR + [WaveFox v1.6.115.0.3](https://github.com/QNetITQ/WaveFox/tree/v1.6.115)
-  - Windows
-  - MacOS
-  - Linux
-
 - [Download Firefox](https://www.mozilla.org/en-US/firefox/all/#product-desktop-release) / [Download WaveFox](https://github.com/QNetITQ/WaveFox/releases)
 
+<details>
+  <summary>WaveFox v1.6.128 / v1.6.129 Beta</summary>
+
+- ##### Minimum Requirements
+  - Firefox 128 / 129 Beta
+  - Windows / MacOS / Linux
+
 - Download the `chrome` folder and put it in your user profile folder
-- Go to `about:config` and activate the keys below
-  - `toolkit.legacyUserProfileCustomizations.stylesheets`
+- Go to `about:config` and activate the key `toolkit.legacyUserProfileCustomizations.stylesheets`
 - Specify the desired shape of the tabs
 
   ##### Tabs (Option 1)
@@ -242,3 +240,5 @@ Icons from Lepton.css are now available. Please note that this is third-party co
 
 - `userChrome.OneLine.TabBarFirst.Enabled`
 - `userChrome.OneLine.NavBarFirst.Enabled`
+
+</details>
