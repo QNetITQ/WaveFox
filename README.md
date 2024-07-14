@@ -7,6 +7,23 @@
     <div align='center'><a href='https://www.websitecounterfree.com'><img src='https://www.websitecounterfree.com/c.php?d=9&id=52856&s=3' border='0' alt='Free Website Counter'></a><br / ><small><a href='https://www.websitecounterfree.com' title="Free Website Counter">Free Website Counter</a></small></div>
 </details>
 
+## FAQ
+
+<details>
+  <summary>How to find/open user profile folder?</summary>
+
+  ![Profile](https://github.com/QNetITQ/WaveFox/assets/85301851/d2b893ea-a62e-4d96-9385-108f83025075)
+  ![Profile 2](https://github.com/QNetITQ/WaveFox/assets/85301851/2817ee70-793b-40e6-a77e-8e62f9bfa87e)
+
+</details>
+
+<details>
+  <summary>How to create custom keys?</summary>
+
+  ![Keys](https://github.com/QNetITQ/WaveFox/assets/85301851/9a3673d1-0d95-49fd-911c-dc91b366bc8b)
+
+</details>
+
 ###### Have a question not related to this project? These resources will help you
 - [Mozilla support](https://support.mozilla.org/en-US/)
 - [Reddit](https://www.reddit.com/r/firefox)
