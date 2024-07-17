@@ -2,31 +2,7 @@
 
 ![WaveFox_Preview](https://github.com/QNetITQ/WaveFox/assets/85301851/268bda8c-b987-45d1-966b-59992c18e66e)
 
-<details>
-  <summary>Counter</summary>
-    <div align='center'><a href='https://www.websitecounterfree.com'><img src='https://www.websitecounterfree.com/c.php?d=9&id=52856&s=3' border='0' alt='Free Website Counter'></a><br / ><small><a href='https://www.websitecounterfree.com' title="Free Website Counter">Free Website Counter</a></small></div>
-</details>
-
-## FAQ
-
-<details>
-  <summary>How to find/open user profile folder?</summary>
-
-  ![Profile](https://github.com/QNetITQ/WaveFox/assets/85301851/d2b893ea-a62e-4d96-9385-108f83025075)
-
-</details>
-
-<details>
-  <summary>How to create custom keys?</summary>
-
-  ![Keys](https://github.com/QNetITQ/WaveFox/assets/85301851/9a3673d1-0d95-49fd-911c-dc91b366bc8b)
-
-</details>
-
-###### Have a question not related to this project? These resources will help you
-- [Mozilla support](https://support.mozilla.org/en-US/)
-- [Reddit](https://www.reddit.com/r/firefox)
-- [Reddit (CSS)](https://www.reddit.com/r/FirefoxCSS)
+<div align='center'><a href='https://www.websitecounterfree.com'><img src='https://www.websitecounterfree.com/c.php?d=9&id=52856&s=3' border='0' alt='Free Website Counter'></a><br / ><small><a href='https://www.websitecounterfree.com' title="Free Website Counter">Free Website Counter</a></small></div>
 
 ## Installation
 
@@ -243,6 +219,8 @@ Icons from Lepton.css are now available. Please note that this is third-party co
 
 </details>
 
+<hr>
+
 <details>
   <summary>WaveFox v1.6.128 ESR</summary>
 
@@ -453,6 +431,8 @@ Icons from Lepton.css are now available. Please note that this is third-party co
 
 </details>
 
+<hr>
+
 <details>
   <summary>WaveFox v1.6.115.0.3 ESR</summary>
 
@@ -641,3 +621,24 @@ Low values are more suitable for high resolution monitors.
 - `browser.tabs.inTitlebar` (Required key. Set the value to 0)
 
 </details>
+
+## FAQ
+
+<details>
+  <summary>How to find/open user profile folder?</summary>
+
+  ![Profile](https://github.com/QNetITQ/WaveFox/assets/85301851/d2b893ea-a62e-4d96-9385-108f83025075)
+
+</details>
+
+<details>
+  <summary>How to create custom keys?</summary>
+
+  ![Keys](https://github.com/QNetITQ/WaveFox/assets/85301851/9a3673d1-0d95-49fd-911c-dc91b366bc8b)
+
+</details>
+
+###### Have a question not related to this project? These resources will help you
+- [Mozilla support](https://support.mozilla.org/en-US/)
+- [Reddit](https://www.reddit.com/r/firefox)
+- [Reddit (CSS)](https://www.reddit.com/r/FirefoxCSS)
