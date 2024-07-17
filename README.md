@@ -219,8 +219,6 @@ Icons from Lepton.css are now available. Please note that this is third-party co
 
 </details>
 
-<hr>
-
 <details>
   <summary>WaveFox v1.6.128 ESR</summary>
 
