@@ -19,49 +19,49 @@
 @property --outer-box-shadow
 {
     syntax: "*";
-    inherits: false;
+    inherits: true;
     initial-value: 0 0 0 transparent;
 }
 
 @property --inner-box-shadow
 {
     syntax: "*";
-    inherits: false;
+    inherits: true;
     initial-value: 0 0 0 transparent;
 }
 
 @property --outer-drop-shadow
 {
     syntax: "*";
-    inherits: false;
+    inherits: true;
     initial-value: drop-shadow(0 0 0 transparent);
 }
 
 @property --additional-outer-box-shadow
 {
     syntax: "*";
-    inherits: false;
+    inherits: true;
     initial-value: 0 0 0 transparent;
 }
 
 @property --additional-inner-box-shadow
 {
     syntax: "*";
-    inherits: false;
+    inherits: true;
     initial-value: 0 0 0 transparent;
 }
 
 @property --additional-outer-drop-shadow
 {
     syntax: "*";
-    inherits: false;
+    inherits: true;
     initial-value: drop-shadow(0 0 0 transparent);
 }
 
 @property --drag-space
 {
     syntax: "<length>";
-    inherits: false;
+    inherits: true;
     initial-value: 0px;
 }
 
