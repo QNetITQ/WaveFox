@@ -16,19 +16,47 @@
 
 /* ---------------------------------------- Custom Properties ---------------------------------------- */
 
-@property --outer-box-shadow              @property --inner-box-shadow              @property --outer-drop-shadow
-{                                         {                                         {
-    syntax: "*";                              syntax: "*";                              syntax: "*";
-    inherits: false;                          inherits: false;                          inherits: false;
-    initial-value: 0 0 0 transparent;         initial-value: 0 0 0 transparent;         initial-value: drop-shadow(0 0 0 transparent);
-}                                         }                                         }
+@property --outer-box-shadow
+{
+    syntax: "*";
+    inherits: false;
+    initial-value: 0 0 0 transparent;
+}
 
-@property --additional-outer-box-shadow   @property --additional-inner-box-shadow   @property --additional-outer-drop-shadow
-{                                         {                                         {
-    syntax: "*";                              syntax: "*";                              syntax: "*";
-    inherits: false;                          inherits: false;                          inherits: false;
-    initial-value: 0 0 0 transparent;         initial-value: 0 0 0 transparent;         initial-value: drop-shadow(0 0 0 transparent);
-}                                         }                                         }
+@property --inner-box-shadow
+{
+    syntax: "*";
+    inherits: false;
+    initial-value: 0 0 0 transparent;
+}
+
+@property --outer-drop-shadow
+{
+    syntax: "*";
+    inherits: false;
+    initial-value: drop-shadow(0 0 0 transparent);
+}
+
+@property --additional-outer-box-shadow
+{
+    syntax: "*";
+    inherits: false;
+    initial-value: 0 0 0 transparent;
+}
+
+@property --additional-inner-box-shadow
+{
+    syntax: "*";
+    inherits: false;
+    initial-value: 0 0 0 transparent;
+}
+
+@property --additional-outer-drop-shadow
+{
+    syntax: "*";
+    inherits: false;
+    initial-value: drop-shadow(0 0 0 transparent);
+}
 
 @property --drag-space
 {
