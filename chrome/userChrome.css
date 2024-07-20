@@ -185,7 +185,6 @@
            (-moz-bool-pref: "userChrome.Tabs.Option5.Enabled")
     {
         --tab-first-last-inline-margin: calc(var(--tab-block-margin) / 2);
-        --tab-inset-clip-path: 0px calc(-1 * var(--tab-first-last-inline-margin));
         --tab-scroll-animation-inline-margin: calc(-1 * var(--tab-first-last-inline-margin));
         --tab-scroll-animation-inline-padding: calc(var(--tab-first-last-inline-margin) * 2);
         --tab-bg-block-margin: var(--tab-block-margin);
@@ -204,7 +203,6 @@
            (-moz-bool-pref: "userChrome.Tabs.Option12.Enabled") or
            (-moz-bool-pref: "userChrome.Tabs.Option13.Enabled")
     {
-        --tab-inset-clip-path: -4px calc(-1 * var(--tab-first-last-inline-margin)) 0px;
         --tab-scroll-animation-inline-margin: calc(-1 * var(--tab-first-last-inline-margin));
         --tab-scroll-animation-inline-padding: var(--tab-first-last-inline-margin);
         --tab-bg-block-margin: 0px;
@@ -799,7 +797,6 @@ spacer[part="overflow-end-indicator"]
 {
     --tab-label-mask-size: 0px !important;
     overflow: visible !important;
-    clip-path: inset(var(--tab-inset-clip-path)) !important;
     padding-inline: var(--tab-inline-padding) !important;
 
     &[visuallyselected]
@@ -1075,6 +1072,7 @@ spacer[part="overflow-end-indicator"]
 {
     --toolbarbutton-inner-padding: inherit !important;
     position: relative !important;
+    clip-path: inset(0px) !important;
 }
 
 #TabsToolbar::before
@@ -1294,11 +1292,6 @@ spacer[part="overflow-end-indicator"]
     :root
     {
         --drag-space: 0px !important;
-    }
-
-    .tabbrowser-tab
-    {
-        --tab-inset-clip-path: 0px calc(-1 * var(--tab-first-last-inline-margin));
     }
 
     .tab-background
