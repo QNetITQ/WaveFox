@@ -797,6 +797,7 @@ spacer[part="overflow-end-indicator"]
 {
     --tab-label-mask-size: 0px !important;
     overflow: visible !important;
+    justify-content: flex-end !important;
     padding-inline: var(--tab-inline-padding) !important;
 
     &[visuallyselected]
