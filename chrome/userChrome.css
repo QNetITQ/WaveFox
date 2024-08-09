@@ -441,12 +441,6 @@
 {
     :root:not([lwtheme])
     {
-        .titlebar-color
-        {
-            --toolbarbutton-hover-background: color-mix(in srgb, currentColor 17%, transparent) !important;
-            --toolbarbutton-active-background: color-mix(in srgb, currentColor 30%, transparent) !important;
-        }
-
         .tabbrowser-tab[visuallyselected]
         {
             color: var(--toolbar-color) !important;
