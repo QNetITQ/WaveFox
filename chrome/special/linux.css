@@ -63,6 +63,10 @@
         :root[tabsintitlebar]:not([lwtheme]) #nav-bar
         {
             --toolbarbutton-icon-fill: currentColor !important;
+        }
+
+        :root[tabsintitlebar]:not([lwtheme], :-moz-window-inactive) #nav-bar
+        {
             color: inherit !important;
         }
     }
