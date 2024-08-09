@@ -52,6 +52,10 @@ menupopup[needsgutter] menuitem:not([checked="true"], [icon], .menuitem-iconic)
                     --toolbarbutton-hover-background: color-mix(in srgb, currentColor 17%, transparent) !important;
                     --toolbarbutton-active-background: color-mix(in srgb, currentColor 30%, transparent) !important;
                     --toolbarbutton-icon-fill: currentColor !important;
+                }
+
+                :root[tabsintitlebar]:not([lwtheme], :-moz-window-inactive) #nav-bar
+                {
                     color: inherit !important;
                 }
             }
