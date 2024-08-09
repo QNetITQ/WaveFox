@@ -1,4 +1,4 @@
-@layer LowPriority, HighPriority; 
+@layer LowPriority, HighPriority;
 
 @import "special/windows.css" layer(HighPriority) /* supports() */ (-moz-platform: windows);
 @import "special/linux.css"   layer(HighPriority) /* supports() */ (-moz-platform: linux);
@@ -466,12 +466,6 @@
          [style*="--lwt-accent-color: rgb(28, 27, 34); --lwt-text-color: rgba(251, 251, 254)"]
         )
 {
-    .titlebar-color
-    {
-        --toolbarbutton-hover-background: color-mix(in srgb, currentColor 17%, transparent) !important;
-        --toolbarbutton-active-background: color-mix(in srgb, currentColor 30%, transparent) !important;
-    }
-
     .tabbrowser-tab[visuallyselected]
     {
         color: var(--toolbar-color) !important;
@@ -1423,24 +1417,19 @@ spacer[part="overflow-end-indicator"]
     {
         #nav-bar
         {
-            position: relative !important;
-            overflow: visible !important;
+            --toolbar-field-background-color: var(--toolbar-bgcolor) !important;
+            --toolbar-field-color: var(--toolbar-color) !important;
+            --toolbar-field-border-color: transparent !important;
+            background-color: transparent !important;
+            box-shadow: var(--additional-inner-box-shadow),
+                        var(--inner-box-shadow) !important;
+        }
 
-            &::before
-            {
-                content: "";
-                display: block;
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                inset-inline-start: 0px;
-                inset-block-start: 0px;
-                pointer-events: none;
-                z-index: 0;
-                clip-path: inset(0 -4px);
-                box-shadow: var(--additional-outer-box-shadow),
-                            var(--outer-box-shadow);
-            }
+        #urlbar:not([focused], [open]) > #urlbar-background,
+        #searchbar:not(:focus-within)
+        {
+            box-shadow: var(--additional-outer-box-shadow),
+                        var(--outer-box-shadow) !important;
         }
     }
 }
