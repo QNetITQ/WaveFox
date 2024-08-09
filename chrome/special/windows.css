@@ -30,3 +30,17 @@ menupopup[needsgutter] menuitem:not([checked="true"], [icon], .menuitem-iconic)
 {
     padding-inline-start: 1em !important;
 }
+
+@media (-moz-bool-pref: "browser.theme.windows.accent-color-in-tabs.enabled")
+{
+    @media (-moz-windows-accent-color-in-titlebar)
+    {
+        :root[tabsintitlebar]:not([lwtheme]) #nav-bar
+        {
+            --toolbarbutton-hover-background: color-mix(in srgb, currentColor 17%, transparent) !important;
+            --toolbarbutton-active-background: color-mix(in srgb, currentColor 30%, transparent) !important;
+            --toolbarbutton-icon-fill: currentColor !important;
+            color: inherit !important;
+        }
+    }
+}
