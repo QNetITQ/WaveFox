@@ -635,7 +635,7 @@ Low values are more suitable for high resolution monitors.
 </details>
 
 <details>
-  <summary>How to enable background blur on Linux?</summary>
+  <summary>How to enable blur on Linux?</summary>
 
 - [KDE Plasma 5](https://github.com/esjeon/kwin-forceblur)
 - [KDE Plasma 6](https://github.com/taj-ny/kwin-effects-forceblur)
