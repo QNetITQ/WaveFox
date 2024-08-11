@@ -568,7 +568,21 @@
         --toolbarbutton-hover-background: color-mix(in srgb, currentColor 17%, transparent) !important;
         --toolbarbutton-active-background: color-mix(in srgb, currentColor 30%, transparent) !important;
 
-        #nav-bar,
+        #nav-bar
+        {
+            --toolbar-field-background-color: var(--toolbar-bgcolor) !important;
+            --toolbar-field-color: var(--toolbar-color) !important;
+            --toolbar-field-border-color: transparent !important;
+            background-color: transparent !important;
+        }
+
+        #urlbar:not([focused], [open]) > #urlbar-background,
+        #searchbar:not(:focus-within)
+        {
+            box-shadow: var(--additional-outer-box-shadow),
+                        var(--outer-box-shadow) !important;
+        }
+
         #PersonalToolbar
         {
             background-color: transparent !important;
