@@ -634,6 +634,32 @@ Low values are more suitable for high resolution monitors.
 
 </details>
 
+<details>
+  <summary>How to enable background blur on Linux?</summary>
+
+- [KDE Plasma 5](https://github.com/esjeon/kwin-forceblur)
+- [KDE Plasma 6](https://github.com/taj-ny/kwin-effects-forceblur)
+
+</details>
+
+###### If you do not find the desired key, then your browser version does not support it.
+
+<details>
+  <summary>How to enable Accent Color on Windows 10/11?</summary>
+
+- `browser.theme.windows.accent-color-in-tabs.enabled`
+
+</details>
+
+<details>
+  <summary>How to enable system design effects on MacOS?</summary>
+
+- `browser.theme.macos.native-theme`
+- `widget.macos.titlebar-blend-mode.behind-window`
+- `widget.macos.sidebar-blend-mode.behind-window`
+
+</details>
+
 ###### Have a question not related to this project? These resources will help you
 - [Mozilla support](https://support.mozilla.org/en-US/)
 - [Reddit](https://www.reddit.com/r/firefox)
