@@ -645,14 +645,14 @@ Low values are more suitable for high resolution monitors.
 ###### If you do not find the desired key, then your browser version does not support it.
 
 <details>
-  <summary>How to enable Accent Color on Windows 10/11?</summary>
+  <summary>How to enable Accent Color on Windows 11 / Windows 10?</summary>
 
 - `browser.theme.windows.accent-color-in-tabs.enabled`
 
 </details>
 
 <details>
-  <summary>How to enable system design effects on MacOS?</summary>
+  <summary>How to enable Tinting / Vibrancy on MacOS?</summary>
 
 - `browser.theme.macos.native-theme`
 - `widget.macos.titlebar-blend-mode.behind-window`
