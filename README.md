@@ -80,21 +80,8 @@ Go to the `chrome` folder and paste the desired styles inside the `third_party_c
 
 <i>Functionality that will not be part of the style will be published in the [discussions](https://github.com/QNetITQ/WaveFox/discussions) section as requests from users.</i>
 
-### Windows Accent Color
-Works only with the system theme.
-![изображение](https://github.com/QNetITQ/WaveFox/assets/85301851/55b01904-6620-4e36-9b6d-91b092db725c)
-
-- `browser.theme.windows.accent-color-in-tabs.enabled`
-
-### MacOS Tinting / Vibrancy
-Works only with the system theme.
-
-- `browser.theme.macos.native-theme` (MacOS 11+ / Tinting)
-  - `widget.macos.titlebar-blend-mode.behind-window` (Vibrancy / Restart required)
-  - `widget.macos.sidebar-blend-mode.behind-window` (Vibrancy / Firefox 130+ / Restart required)
-
 ### Linux Transparency
-Requires Linux with transparency support. Tested on Manjaro KDE [Plasma 5](https://github.com/esjeon/kwin-forceblur) / [Plasma 6](https://github.com/taj-ny/kwin-forceblur). Works only with the system theme. If you encounter a ghosting effect, increase the blur.
+Requires Linux with transparency support. Works only with the system theme.
 
 ![Снимок5](https://github.com/QNetITQ/WaveFox/assets/85301851/3b4dcfc8-217d-48a1-aba7-1621f9375f67)
 
@@ -291,20 +278,8 @@ Go to the `chrome` folder and paste the desired styles inside the `third_party_c
 
 <i>Functionality that will not be part of the style will be published in the [discussions](https://github.com/QNetITQ/WaveFox/discussions) section as requests from users.</i>
 
-### Windows Accent Color
-Works only with the system theme.
-![изображение](https://github.com/QNetITQ/WaveFox/assets/85301851/55b01904-6620-4e36-9b6d-91b092db725c)
-
-- `browser.theme.windows.accent-color-in-tabs.enabled`
-
-### MacOS Tinting / Vibrancy
-Works only with the system theme.
-
-- `browser.theme.macos.native-theme` (MacOS 11+ / Tinting)
-  - `widget.macos.titlebar-blend-mode.behind-window` (Vibrancy / Restart required)
-
 ### Linux Transparency
-Requires Linux with transparency support. Tested on Manjaro KDE [Plasma 5](https://github.com/esjeon/kwin-forceblur) / [Plasma 6](https://github.com/taj-ny/kwin-forceblur). Works only with the system theme. If you encounter a ghosting effect, increase the blur.
+Requires Linux with transparency support. Works only with the system theme.
 
 ![Снимок5](https://github.com/QNetITQ/WaveFox/assets/85301851/3b4dcfc8-217d-48a1-aba7-1621f9375f67)
 
@@ -511,7 +486,7 @@ Works only with the system theme.
 - `userChrome.Toolbar.Transparency.VeryHigh.Enabled`
 
 ### Linux Transparency
-Requires Linux with transparency support. Tested on Linux Manjaro KDE + ForceBlur. Transparency is active for all modes, but does not work everywhere. This may change with future browser updates. Works only with the system theme.
+Requires Linux with transparency support. Works only with the system theme.
 
 ![изображение](https://user-images.githubusercontent.com/85301851/173119832-e82bc2f7-eda7-4167-9dcd-ccca50383816.png)
 
