@@ -1407,7 +1407,7 @@ spacer[part="overflow-end-indicator"]
             }
         }
 
-        #nav-bar
+        #navigator-toolbox #nav-bar
         {
             --toolbar-field-background-color: var(--toolbar-bgcolor) !important;
             --toolbar-field-color: var(--toolbar-color) !important;
