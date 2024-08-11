@@ -518,9 +518,11 @@
 
 /* ---------------------------------------- Toolbar Transparency ---------------------------------------- */
 
-:root[tabsintitlebar]:not([lwtheme])
+@media (-moz-bool-pref: "userChrome.Toolbar.Transparency.Low.Enabled")    or
+       (-moz-bool-pref: "userChrome.Toolbar.Transparency.Medium.Enabled") or
+       (-moz-bool-pref: "userChrome.Toolbar.Transparency.High.Enabled")
 {
-    @media (-moz-bool-pref: "userChrome.Toolbar.Transparency.Low.Enabled")
+    :root:not([lwtheme])
     {
         --shadow-color: transparent;
         --additional-shadow-color: transparent;
@@ -528,77 +530,45 @@
         --toolbarbutton-active-background: color-mix(in srgb, currentColor 30%, transparent) !important;
         --urlbar-box-hover-bgcolor: color-mix(in srgb, currentColor 17%, transparent) !important;
         --urlbar-box-active-bgcolor: color-mix(in srgb, currentColor 30%, transparent) !important;
-
-        .tabbrowser-tab[visuallyselected] .tab-background,
-        #nav-bar,
-        #PersonalToolbar
+        
+        @media (-moz-bool-pref: "userChrome.Toolbar.Transparency.Low.Enabled")
         {
-            background-color: color-mix(in srgb, var(--toolbar-bgcolor), transparent 25%) !important;
-        }
-
-        #urlbar:not([focused], [open]) > #urlbar-background,
-        #searchbar:not(:focus-within)
-        {
-            background-color: color-mix(in srgb, var(--toolbar-field-background-color), transparent 25%) !important;
-        }
-    }
-
-    @media (-moz-bool-pref: "userChrome.Toolbar.Transparency.Medium.Enabled")
-    {
-        --shadow-color: transparent;
-        --additional-shadow-color: transparent;
-        --toolbarbutton-hover-background: color-mix(in srgb, currentColor 17%, transparent) !important;
-        --toolbarbutton-active-background: color-mix(in srgb, currentColor 30%, transparent) !important;
-        --urlbar-box-hover-bgcolor: color-mix(in srgb, currentColor 17%, transparent) !important;
-        --urlbar-box-active-bgcolor: color-mix(in srgb, currentColor 30%, transparent) !important;
-
-        .tabbrowser-tab[visuallyselected] .tab-background,
-        #nav-bar,
-        #PersonalToolbar
-        {
-            background-color: color-mix(in srgb, var(--toolbar-bgcolor), transparent 50%) !important;
+            --toolbar-transparency-level: 25%;
         }
         
-        #urlbar:not([focused], [open]) > #urlbar-background,
-        #searchbar:not(:focus-within)
+        @media (-moz-bool-pref: "userChrome.Toolbar.Transparency.Medium.Enabled")
         {
-            background-color: color-mix(in srgb, var(--toolbar-field-background-color), transparent 50%) !important;
+            --toolbar-transparency-level: 50%;
         }
-    }
-
-    @media (-moz-bool-pref: "userChrome.Toolbar.Transparency.High.Enabled")
-    {
-        --shadow-color: transparent;
-        --additional-shadow-color: transparent;
-        --toolbarbutton-hover-background: color-mix(in srgb, currentColor 17%, transparent) !important;
-        --toolbarbutton-active-background: color-mix(in srgb, currentColor 30%, transparent) !important;
-        --urlbar-box-hover-bgcolor: color-mix(in srgb, currentColor 17%, transparent) !important;
-        --urlbar-box-active-bgcolor: color-mix(in srgb, currentColor 30%, transparent) !important;
-
+        
+        @media (-moz-bool-pref: "userChrome.Toolbar.Transparency.High.Enabled")
+        {
+            --toolbar-transparency-level: 75%;
+        }
+        
         .tabbrowser-tab[visuallyselected] .tab-background,
         #nav-bar,
         #PersonalToolbar
         {
-            background-color: color-mix(in srgb, var(--toolbar-bgcolor), transparent 75%) !important;
+            background-color: color-mix(in srgb, var(--toolbar-bgcolor), transparent var(--toolbar-transparency-level)) !important;
         }
 
         #urlbar:not([focused], [open]) > #urlbar-background,
         #searchbar:not(:focus-within)
         {
-            background-color: color-mix(in srgb, var(--toolbar-field-background-color), transparent 75%) !important;
+            background-color: color-mix(in srgb, var(--toolbar-field-background-color), transparent var(--toolbar-transparency-level)) !important;
         }
     }
-    
-    @media (-moz-bool-pref: "userChrome.Toolbar.Transparency.VeryHigh.Enabled")
+}
+
+@media (-moz-bool-pref: "userChrome.Toolbar.Transparency.VeryHigh.Enabled")
+{
+    :root:not([lwtheme])
     {
         --toolbarbutton-hover-background: color-mix(in srgb, currentColor 17%, transparent) !important;
         --toolbarbutton-active-background: color-mix(in srgb, currentColor 30%, transparent) !important;
-        --urlbar-box-hover-bgcolor: color-mix(in srgb, currentColor 17%, transparent) !important;
-        --urlbar-box-active-bgcolor: color-mix(in srgb, currentColor 30%, transparent) !important;
 
         #nav-bar,
-        #urlbar:not([focused], [open]) > #urlbar-background,
-        #searchbar:not(:focus-within),
         #PersonalToolbar
         {
             background-color: transparent !important;
