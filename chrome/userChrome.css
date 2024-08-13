@@ -1,6 +1,7 @@
 @layer LowPriority, HighPriority;
 
 /* @import "modules/custom_properties.css" layer() supports() (); */
+/* @import "modules/tab_shapes.css" layer() supports() (); */
 
 @import "special/windows.css" layer(HighPriority) /* supports() */ (-moz-platform: windows);
 @import "special/linux.css"   layer(HighPriority) /* supports() */ (-moz-platform: linux);
