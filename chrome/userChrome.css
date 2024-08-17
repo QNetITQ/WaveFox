@@ -4,7 +4,7 @@
 @import "modules/tab_shapes.css"            layer(LowPriority) /* supports() () */ ;
 
 
-
+@import "modules/tab_separators.css"        layer(LowPriority) /* supports() () */ ;
 @import "modules/tabs_on_bottom.css"        layer(LowPriority) /* supports() () */ ;
 @import "modules/one_line.css"              layer(LowPriority) /* supports() () */ ;
 @import "modules/context_menu_icons.css"    layer(LowPriority) /* supports() () */ ;
