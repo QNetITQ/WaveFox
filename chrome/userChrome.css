@@ -2,18 +2,22 @@
 
 @import "modules/custom_properties.css"     layer(LowPriority) /* supports() () */ ;
 @import "modules/tab_shapes.css"            layer(LowPriority) /* supports() () */ ;
+
+
+
+@import "modules/tabs_on_bottom.css"        layer(LowPriority) /* supports() () */ ;
+@import "modules/one_line.css"              layer(LowPriority) /* supports() () */ ;
 @import "modules/context_menu_icons.css"    layer(LowPriority) /* supports() () */ ;
 @import "modules/transparency_on_linux.css" layer(LowPriority) /* supports() */ (-moz-platform: linux);
+
+
+
+
 
 @import "Lepton_Icons/icons/Lepton_Icons.css" /* layer() supports() */ (-moz-bool-pref: "userChrome.Menu.Icons.LeptonIcons.Enabled");
 @import "third_party_custom_styles.css"       /* layer() supports() */ (-moz-bool-pref: "userChrome.Style.ThirdParty.Enabled");
 
 @layer LowPriority
-{
-
-@media (-moz-platform: windows),
-       (-moz-platform: linux),
-       (-moz-platform: macos)
 {
 
 /* ---------------------------------------- Tabs ---------------------------------------- */
@@ -1106,210 +1110,6 @@ spacer[part="overflow-end-indicator"]
     margin-inline-end: 0px !important;
 }
 
-/* ---------------------------------------- Tabs On Bottom ---------------------------------------- */
-
-@media (-moz-bool-pref: "userChrome.Tabs.TabsOnBottom.Enabled")
-{
-    /* -------------------- Title Bar -------------------- */
-
-    #titlebar
-    {
-        order: 2 !important;
-    }
-
-    #toolbar-menubar
-    {
-        --toolbarbutton-icon-fill: inherit !important;
-        background-color: var(--toolbar-bgcolor) !important;
-        color: var(--toolbar-color) !important;
-        appearance: none !important;
-    }
-
-    #TabsToolbar::before
-    {
-        transform: rotateX(180deg);
-    }
-
-    /* -------------------- Nav Bar -------------------- */
-
-    #nav-bar
-    {
-        order: 0 !important;
-    }
-
-    /* -------------------- Personal Bar -------------------- */
-
-    #PersonalToolbar
-    {
-        order: 1 !important;
-    }
-
-    /* -------------------- Tabs -------------------- */
-
-    :root
-    {
-        --drag-space: 0px !important;
-    }
-
-    .tab-background
-    {
-        transform: rotateX(180deg);
-    }
-}
-
-/* ---------------------------------------- One Line ---------------------------------------- */
-
-@media (-moz-bool-pref: "userChrome.OneLine.TabBarFirst.Enabled") or
-       (-moz-bool-pref: "userChrome.OneLine.NavBarFirst.Enabled")
-{
-    @media (-moz-bool-pref: "userChrome.OneLine.TabBarFirst.Enabled")
-    {
-        #navigator-toolbox
-        {
-            grid-template-columns: auto minmax(auto, 0%) !important;
-        }
-
-        #titlebar
-        {
-            grid-area: 1 / 1 / span 1 / span 1 !important;
-        }
-    }
-
-    @media (-moz-bool-pref: "userChrome.OneLine.NavBarFirst.Enabled")
-    {
-        #navigator-toolbox
-        {
-            grid-template-columns: minmax(auto, 0%) auto !important;
-        }
-
-        #nav-bar
-        {
-            grid-area: 1 / 1 / span 1 / span 1 !important;
-        }
-    }
-
-    :root
-    {
-        --drag-space: 0px !important;
-    }
-
-    #navigator-toolbox
-    {
-        display: grid !important;
-        -moz-window-dragging: drag !important;
-    }
-
-    /* -------------------- Nav Bar -------------------- */
-
-    #nav-bar
-    {
-        width: fit-content !important;
-    }
-
-    #urlbar-container,
-    #search-container
-    {
-        padding-block: 0px !important;
-    }
-
-    #urlbar-container
-    {
-        --urlbar-container-height: var(--tab-min-height) !important;
-    }
-
-    /* -------------------- Bookmarks Bar / Notifications -------------------- */
-
-    #navigator-toolbox > *:not(#titlebar, #nav-bar)
-    {
-        grid-column: 1 / span 2 !important;
-    }
-
-    /* -------------------- Customization -------------------- */
-
-    #customization-panelWrapper
-    {
-        --panel-arrow-offset: 0px !important;
-    }
-
-    /* -------------------- Floating Tabs -------------------- */
-
-    @media (-moz-bool-pref: "userChrome.Tabs.Option1.Enabled") or
-           (-moz-bool-pref: "userChrome.Tabs.Option2.Enabled") or
-           (-moz-bool-pref: "userChrome.Tabs.Option3.Enabled") or
-           (-moz-bool-pref: "userChrome.Tabs.Option4.Enabled") or
-           (-moz-bool-pref: "userChrome.Tabs.Option5.Enabled")
-    {
-        #TabsToolbar::before
-        {
-            display: none !important;
-        }
-
-        #nav-bar
-        {
-            margin: var(--tab-block-margin) !important;
-            border-radius: var(--tab-border-radius) !important;
-            box-shadow: var(--additional-outer-box-shadow),
-                        var(--outer-box-shadow) !important;
-        }
-        
-        #PersonalToolbar
-        {
-            margin-inline: var(--tab-block-margin) !important;
-            border-radius: var(--tab-border-radius) !important;
-            box-shadow: var(--additional-outer-box-shadow),
-                        var(--outer-box-shadow) !important;
-        }
-
-        #PersonalToolbar[collapsed="false"]
-        {
-            margin-bottom: var(--tab-block-margin) !important;
-        }
-    }
-
-    /* -------------------- Attached Tabs -------------------- */
-
-    @media (-moz-bool-pref: "userChrome.Tabs.Option6.Enabled")  or
-           (-moz-bool-pref: "userChrome.Tabs.Option7.Enabled")  or
-           (-moz-bool-pref: "userChrome.Tabs.Option8.Enabled")  or
-           (-moz-bool-pref: "userChrome.Tabs.Option9.Enabled")  or
-           (-moz-bool-pref: "userChrome.Tabs.Option10.Enabled") or
-           (-moz-bool-pref: "userChrome.Tabs.Option11.Enabled") or
-           (-moz-bool-pref: "userChrome.Tabs.Option12.Enabled") or
-           (-moz-bool-pref: "userChrome.Tabs.Option13.Enabled")
-    {
-        :root[tabsintitlebar]
-        {
-            #nav-bar
-            {
-                will-change: auto !important;
-                transition: color var(--inactive-window-transition) !important;
-            }
-
-            &:-moz-window-inactive #nav-bar
-            {
-                color: color-mix(in srgb, currentColor calc(var(--inactive-titlebar-opacity) * 100%), transparent) !important;
-            }
-        }
-
-        #navigator-toolbox #nav-bar
-        {
-            --toolbar-field-background-color: var(--toolbar-bgcolor) !important;
-            --toolbar-field-color: var(--toolbar-color) !important;
-            --toolbar-field-border-color: transparent !important;
-            background-color: transparent !important;
-            box-shadow: var(--additional-inner-box-shadow),
-                        var(--inner-box-shadow) !important;
-        }
-
-        #urlbar:not([focused], [open]) > #urlbar-background,
-        #searchbar:not(:focus-within)
-        {
-            box-shadow: var(--additional-outer-box-shadow),
-                        var(--outer-box-shadow) !important;
-        }
-    }
-}
-
 
 
 
@@ -1322,7 +1122,5 @@ spacer[part="overflow-end-indicator"]
 
        
 
-
-}
 
 }
