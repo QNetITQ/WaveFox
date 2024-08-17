@@ -3,14 +3,17 @@
 @import "modules/custom_properties.css"     layer(LowPriority) /* supports() () */ ;
 @import "modules/tab_shapes.css"            layer(LowPriority) /* supports() () */ ;
 
-@import "modules/pinned_tab_width.css"      layer(LowPriority) /* supports() () */ ;
-@import "modules/toolbar_transparency.css"  layer(LowPriority) /* supports() () */ ;
-@import "modules/tab_shadows.css"           layer(LowPriority) /* supports() () */ ;
-@import "modules/tab_separators.css"        layer(LowPriority) /* supports() () */ ;
-@import "modules/tabs_on_bottom.css"        layer(LowPriority) /* supports() () */ ;
-@import "modules/one_line.css"              layer(LowPriority) /* supports() () */ ;
-@import "modules/context_menu_icons.css"    layer(LowPriority) /* supports() () */ ;
-@import "modules/transparency_on_linux.css" layer(LowPriority) /* supports() */ (-moz-platform: linux);
+@import "modules/drag_space.css"             layer(LowPriority) /* supports() () */ ;
+@import "modules/selected_tab_indicator.css" layer(LowPriority) /* supports() () */ ;
+@import "modules/pinned_tab_width.css"       layer(LowPriority) /* supports() () */ ;
+@import "modules/toolbar_transparency.css"   layer(LowPriority) /* supports() () */ ;
+@import "modules/tab_shadows.css"            layer(LowPriority) /* supports() () */ ;
+@import "modules/tab_separators.css"         layer(LowPriority) /* supports() () */ ;
+@import "modules/tabs_on_bottom.css"         layer(LowPriority) /* supports() () */ ;
+@import "modules/one_line.css"               layer(LowPriority) /* supports() () */ ;
+@import "modules/context_menu_densities.css" layer(LowPriority) /* supports() () */ ;
+@import "modules/context_menu_icons.css"     layer(LowPriority) /* supports() () */ ;
+@import "modules/transparency_on_linux.css"  layer(LowPriority) /* supports() */ (-moz-platform: linux);
 
 
 
@@ -214,40 +217,6 @@
     --tab-min-height: 40px !important;
 }
 
-/* ---------------------------------------- Context Menu (Not System Related) ---------------------------------------- */
-
-@media (-moz-bool-pref: "userChrome.Menu.Size.Compact.Enabled") or
-       (-moz-bool-pref: "userChrome.Menu.Size.Normal.Enabled")  or
-       (-moz-bool-pref: "userChrome.Menu.Size.Touch.Enabled")
-{
-    :root
-    {
-        --arrowpanel-menuitem-margin-block:   0px !important;
-        --arrowpanel-menuitem-margin-inline:  var(--browser-context-menu-margin-padding) !important;
-        --arrowpanel-menuitem-padding-block:  var(--browser-context-menu-margin-padding) !important;
-        --arrowpanel-menuitem-padding-inline: var(--browser-context-menu-margin-padding) !important;
-        --panel-separator-margin-horizontal:  var(--browser-context-menu-margin-padding) !important;
-        --panel-separator-margin-vertical:    var(--browser-context-menu-margin-padding) !important;
-        --panel-subview-body-padding-block:   var(--browser-context-menu-margin-padding) !important;
-        --panel-subview-body-padding-inline:  0px !important;
-
-        @media (-moz-bool-pref: "userChrome.Menu.Size.Compact.Enabled")
-        {
-            --browser-context-menu-margin-padding: 4px;
-        }
-
-        @media (-moz-bool-pref: "userChrome.Menu.Size.Normal.Enabled")
-        {
-            --browser-context-menu-margin-padding: 6px;
-        }
-
-        @media (-moz-bool-pref: "userChrome.Menu.Size.Touch.Enabled")
-        {
-            --browser-context-menu-margin-padding: 8px;
-        }
-    }
-}
-
 /* -------------------- Extensions menu -------------------- */
 
 #unified-extensions-panel
@@ -268,68 +237,6 @@
     overflow: hidden !important;
     white-space: nowrap !important;
     text-overflow: ellipsis !important;
-}
-
-/* ---------------------------------------- Drag Space ---------------------------------------- */
-
-@media (-moz-bool-pref: "userChrome.DragSpace.Left.Disabled")
-{
-    .titlebar-spacer[type="pre-tabs"]
-    {
-        display: none !important;
-    }
-}
-
-@media (-moz-bool-pref: "userChrome.DragSpace.Right.Disabled")
-{
-    .titlebar-spacer[type="post-tabs"]
-    {
-        display: none !important;
-    }
-}
-
-@media (-moz-bool-pref: "userChrome.DragSpace.Top.Windowed.Enabled")
-{
-    :root[sizemode="normal"]
-    {
-        --drag-space: 8px;
-    }
-}
-
-@media (-moz-bool-pref: "userChrome.DragSpace.Top.Maximized.Enabled")
-{
-    :root[sizemode="maximized"]
-    {
-        --drag-space: 8px;
-    }
-}
-
-@media (-moz-bool-pref: "userChrome.DragSpace.Top.Fullscreen.Enabled")
-{
-    :root[sizemode="fullscreen"]
-    {
-        --drag-space: 8px;
-    }
-}
-
-#TabsToolbar :is(.tabbrowser-tab, .toolbarbutton-1, separator, #personal-bookmarks, #search-container, .accessibility-indicator, .private-browsing-indicator, #private-browsing-indicator-with-label)
-{
-    margin-top: var(--drag-space) !important;
-}
-
-/* ---------- Shadow DOM ---------- */
-
-#tabbrowser-arrowscrollbox
-{
-    --drag-space-only-tabs: var(--drag-space) !important;
-}
-
-#scrollbutton-up,
-#scrollbutton-down,
-spacer[part="overflow-start-indicator"],
-spacer[part="overflow-end-indicator"]
-{
-    margin-top: var(--drag-space-only-tabs, revert) !important;
 }
 
 /* ---------------------------------------- Tabs ---------------------------------------- */
@@ -421,21 +328,6 @@ spacer[part="overflow-end-indicator"]
 .tab-close-button:hover:active
 {
     background-color: var(--toolbarbutton-active-background) !important;
-}
-
-/* -------------------- Selected Tab Indicator -------------------- */
-
-@media (-moz-bool-pref: "userChrome.Tabs.SelectedTabIndicator.Enabled")
-{
-    .tabbrowser-tab[visuallyselected][usercontextid] .tab-background
-    {
-        box-shadow: inset 0 -2px 0 var(--tab-loading-fill) !important;
-    }
-
-    .tabbrowser-tab[visuallyselected]:not([usercontextid]) .tab-background
-    {
-        box-shadow: inset 0 2px 0 var(--tab-loading-fill) !important;
-    }
 }
 
 /* -------------------- Tab Counter -------------------- */
