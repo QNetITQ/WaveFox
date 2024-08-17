@@ -611,7 +611,7 @@ Low values are more suitable for high resolution monitors.
 </details>
 
 <details>
-  <summary>How to add third-party styles to WaveFox 130+?</summary>
+  <summary>How to add third-party styles to WaveFox v1.x.130+?</summary>
 
 Open `userChrome.css` and paste your code under the appropriate comment. Your code has the highest priority by default.
 
