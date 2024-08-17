@@ -3,6 +3,8 @@
 @import "modules/custom_properties.css"     layer(LowPriority) /* supports() () */ ;
 @import "modules/tab_shapes.css"            layer(LowPriority) /* supports() () */ ;
 
+@import "modules/pinned_tab_width.css"      layer(LowPriority) /* supports() () */ ;
+@import "modules/toolbar_transparency.css"  layer(LowPriority) /* supports() () */ ;
 @import "modules/tab_shadows.css"           layer(LowPriority) /* supports() () */ ;
 @import "modules/tab_separators.css"        layer(LowPriority) /* supports() () */ ;
 @import "modules/tabs_on_bottom.css"        layer(LowPriority) /* supports() () */ ;
@@ -135,24 +137,6 @@
     }
 }
 
-/* ---------------------------------------- Pinned Tabs Width ---------------------------------------- */
-
-@media (-moz-bool-pref: "userChrome.Tabs.Pinned.Width.LowOffset.Enabled")
-{
-    :root
-    {
-        --pinned-tabs-width-offset: 2px;
-    }
-}
-
-@media (-moz-bool-pref: "userChrome.Tabs.Pinned.Width.HighOffset.Enabled")
-{
-    :root
-    {
-        --pinned-tabs-width-offset: 4px;
-    }
-}
-
 /* ---------------------------------------- Firefox View ---------------------------------------- */
 
 :where(toolbarbutton, toolbarpaletteitem) + #tabbrowser-tabs
@@ -178,85 +162,6 @@
 #TabsToolbar #firefox-view-button[attention]
 {
     background-position: var(--tab-attention-indicator-position) !important;
-}
-
-/* ---------------------------------------- Toolbar Transparency ---------------------------------------- */
-
-@media (-moz-bool-pref: "userChrome.Toolbar.Transparency.Low.Enabled")    or
-       (-moz-bool-pref: "userChrome.Toolbar.Transparency.Medium.Enabled") or
-       (-moz-bool-pref: "userChrome.Toolbar.Transparency.High.Enabled")
-{
-    :root:not([lwtheme])
-    {
-        --shadow-color: transparent;
-        --additional-shadow-color: transparent;
-        --toolbarbutton-hover-background: color-mix(in srgb, currentColor 17%, transparent) !important;
-        --toolbarbutton-active-background: color-mix(in srgb, currentColor 30%, transparent) !important;
-        --urlbar-box-hover-bgcolor: color-mix(in srgb, currentColor 17%, transparent) !important;
-        --urlbar-box-active-bgcolor: color-mix(in srgb, currentColor 30%, transparent) !important;
-        
-        @media (-moz-bool-pref: "userChrome.Toolbar.Transparency.Low.Enabled")
-        {
-            --toolbar-transparency-level: 25%;
-        }
-        
-        @media (-moz-bool-pref: "userChrome.Toolbar.Transparency.Medium.Enabled")
-        {
-            --toolbar-transparency-level: 50%;
-        }
-        
-        @media (-moz-bool-pref: "userChrome.Toolbar.Transparency.High.Enabled")
-        {
-            --toolbar-transparency-level: 75%;
-        }
-        
-        .tabbrowser-tab[visuallyselected] .tab-background,
-        #nav-bar,
-        #PersonalToolbar
-        {
-            background-color: color-mix(in srgb, var(--toolbar-bgcolor), transparent var(--toolbar-transparency-level)) !important;
-        }
-
-        #urlbar:not([focused], [open]) > #urlbar-background,
-        #searchbar:not(:focus-within)
-        {
-            background-color: color-mix(in srgb, var(--toolbar-field-background-color), transparent var(--toolbar-transparency-level)) !important;
-        }
-    }
-}
-
-@media (-moz-bool-pref: "userChrome.Toolbar.Transparency.VeryHigh.Enabled")
-{
-    :root:not([lwtheme])
-    {
-        --toolbarbutton-hover-background: color-mix(in srgb, currentColor 17%, transparent) !important;
-        --toolbarbutton-active-background: color-mix(in srgb, currentColor 30%, transparent) !important;
-
-        #nav-bar
-        {
-            --toolbar-field-background-color: var(--toolbar-bgcolor) !important;
-            --toolbar-field-color: var(--toolbar-color) !important;
-            --toolbar-field-border-color: transparent !important;
-            background-color: transparent !important;
-        }
-
-        #urlbar:not([focused], [open]) > #urlbar-background,
-        #searchbar:not(:focus-within)
-        {
-            box-shadow: var(--additional-outer-box-shadow),
-                        var(--outer-box-shadow) !important;
-        }
-
-        #PersonalToolbar
-        {
-            background-color: transparent !important;
-        }
-        
-        #TabsToolbar::before, #nav-bar, #PersonalToolbar
-        {
-            box-shadow: none !important;
-        }
-    }
 }
 
 /* ---------------------------------------- Main Window ---------------------------------------- */
