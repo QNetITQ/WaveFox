@@ -610,6 +610,13 @@ Low values are more suitable for high resolution monitors.
 
 </details>
 
+<details>
+  <summary>How to add third-party styles to WaveFox?</summary>
+
+Open `userChrome.css` and paste your code under the appropriate comment. Your code has the highest priority by default.
+
+</details>
+
 ###### If you do not find the desired key, then your browser version does not support it.
 
 <details>
