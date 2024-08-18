@@ -1,0 +1,31 @@
+@media (-moz-bool-pref: "userChrome.Menu.Size.Compact.Enabled") or
+       (-moz-bool-pref: "userChrome.Menu.Size.Normal.Enabled")  or
+       (-moz-bool-pref: "userChrome.Menu.Size.Touch.Enabled")
+{
+    :root
+    {
+        --arrowpanel-menuitem-margin-block:   0px !important;
+        --arrowpanel-menuitem-margin-inline:  var(--browser-context-menu-margin-padding) !important;
+        --arrowpanel-menuitem-padding-block:  var(--browser-context-menu-margin-padding) !important;
+        --arrowpanel-menuitem-padding-inline: var(--browser-context-menu-margin-padding) !important;
+        --panel-separator-margin-horizontal:  var(--browser-context-menu-margin-padding) !important;
+        --panel-separator-margin-vertical:    var(--browser-context-menu-margin-padding) !important;
+        --panel-subview-body-padding-block:   var(--browser-context-menu-margin-padding) !important;
+        --panel-subview-body-padding-inline:  0px !important;
+
+        @media (-moz-bool-pref: "userChrome.Menu.Size.Compact.Enabled")
+        {
+            --browser-context-menu-margin-padding: 4px;
+        }
+
+        @media (-moz-bool-pref: "userChrome.Menu.Size.Normal.Enabled")
+        {
+            --browser-context-menu-margin-padding: 6px;
+        }
+
+        @media (-moz-bool-pref: "userChrome.Menu.Size.Touch.Enabled")
+        {
+            --browser-context-menu-margin-padding: 8px;
+        }
+    }
+}
