@@ -13,7 +13,6 @@
 @import "modules/one_line.css"                layer(BasicPriority) /* supports() () */ ;
 @import "modules/toolbar_buttons.css"         layer(BasicPriority) /* supports() () */ ;
 @import "modules/context_menu_densities.css"  layer(BasicPriority) /* supports() () */ ;
-@import "modules/context_menu_icons.css"      layer(BasicPriority) /* supports() () */ ;
 @import "modules/transparency_on_linux.css"   layer(BasicPriority) /* supports() */ (-moz-platform: linux);
 
 @import "Lepton_Icons/icons/Lepton_Icons.css" layer(BasicPriority) /* supports() */ (-moz-bool-pref: "userChrome.Menu.Icons.LeptonIcons.Enabled");
