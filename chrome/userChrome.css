@@ -1,20 +1,19 @@
 @layer BasicPriority, HighPriority, VeryHighPriority;
 
-@import "modules/custom_properties.css"       layer(BasicPriority) /* supports() () */ ;
-@import "modules/tab_shapes.css"              layer(BasicPriority) /* supports() () */ ;
-@import "modules/tabs.css"                    layer(BasicPriority) /* supports() () */ ;
-@import "modules/drag_space.css"              layer(BasicPriority) /* supports() () */ ;
-@import "modules/selected_tab_indicator.css"  layer(BasicPriority) /* supports() () */ ;
-@import "modules/pinned_tab_width.css"        layer(BasicPriority) /* supports() () */ ;
-@import "modules/toolbar_transparency.css"    layer(BasicPriority) /* supports() () */ ;
-@import "modules/tab_shadows.css"             layer(BasicPriority) /* supports() () */ ;
-@import "modules/tab_separators.css"          layer(BasicPriority) /* supports() () */ ;
-@import "modules/tabs_on_bottom.css"          layer(BasicPriority) /* supports() () */ ;
-@import "modules/one_line.css"                layer(BasicPriority) /* supports() () */ ;
-@import "modules/toolbar_buttons.css"         layer(BasicPriority) /* supports() () */ ;
-@import "modules/context_menu_densities.css"  layer(BasicPriority) /* supports() () */ ;
-@import "modules/transparency_on_linux.css"   layer(BasicPriority) /* supports() */ (-moz-platform: linux);
-
-@import "Lepton_Icons/icons/Lepton_Icons.css" layer(BasicPriority) /* supports() */ (-moz-bool-pref: "userChrome.Menu.Icons.LeptonIcons.Enabled");
+@import "modules/horizontal_tabs/wavefox_custom_properties.css"       layer(BasicPriority) /* supports() () */ ;
+@import "modules/horizontal_tabs/wavefox_tab_shapes.css"              layer(BasicPriority) /* supports() () */ ;
+@import "modules/horizontal_tabs/wavefox_tabs.css"                    layer(BasicPriority) /* supports() () */ ;
+@import "modules/horizontal_tabs/wavefox_drag_space.css"              layer(BasicPriority) /* supports() () */ ;
+@import "modules/horizontal_tabs/wavefox_selected_tab_indicator.css"  layer(BasicPriority) /* supports() () */ ;
+@import "modules/horizontal_tabs/wavefox_pinned_tab_width.css"        layer(BasicPriority) /* supports() () */ ;
+@import "modules/horizontal_tabs/wavefox_toolbar_transparency.css"    layer(BasicPriority) /* supports() () */ ;
+@import "modules/horizontal_tabs/wavefox_tab_shadows.css"             layer(BasicPriority) /* supports() () */ ;
+@import "modules/horizontal_tabs/wavefox_tab_separators.css"          layer(BasicPriority) /* supports() () */ ;
+@import "modules/horizontal_tabs/wavefox_tabs_on_bottom.css"          layer(BasicPriority) /* supports() () */ ;
+@import "modules/horizontal_tabs/wavefox_one_line.css"                layer(BasicPriority) /* supports() () */ ;
+@import "modules/horizontal_tabs/wavefox_toolbar_buttons.css"         layer(BasicPriority) /* supports() () */ ;
+@import "modules/horizontal_tabs/wavefox_context_menu_densities.css"  layer(BasicPriority) /* supports() () */ ;
+@import "modules/horizontal_tabs/wavefox_transparency_on_linux.css"   layer(BasicPriority) /* supports() */ (-moz-platform: linux);
+@import "Lepton_Icons/icons/Lepton_Icons.css"                         layer(BasicPriority) /* supports() () */ ;
 
 /* ---------------------------------------- Third-party styles (Maximum priority) ---------------------------------------- */
