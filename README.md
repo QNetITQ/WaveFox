@@ -138,17 +138,9 @@ By default context menus follow the selected interface density, but it is possib
 - `userChrome.Menu.Size.Normal.Enabled`
 - `userChrome.Menu.Size.Touch.Enabled`
 
-### Icons
-
-| Regular | Filled |
-|---------|--------|
-| ![изображение](https://user-images.githubusercontent.com/85301851/151192118-0cbdb5a7-a77f-4275-8841-2ac321657c86.png) | ![изображение](https://user-images.githubusercontent.com/85301851/151192708-5ae7691c-ce07-49d8-b4fb-fc58692b63fe.png) |
-
-- `userChrome.Menu.Icons.Regular.Enabled`
-- `userChrome.Menu.Icons.Filled.Enabled`
-
-### Lepton Icons
-Icons from Lepton.css are now available. Please note that this is third-party code. I am not its author and do not support it. I will not solve any problems associated with these icons. They were added at the request of some users and work "As is". I will update this code according to the original source.
+### Lepton Icons (Menu icons)
+This is third-party code. I am not its author and do not support it. I will update this code according to the original source.
+![изображение](https://user-images.githubusercontent.com/85301851/151192118-0cbdb5a7-a77f-4275-8841-2ac321657c86.png)
 
 - `svg.context-properties.content.enabled`
 - `userChrome.Menu.Icons.LeptonIcons.Enabled`
