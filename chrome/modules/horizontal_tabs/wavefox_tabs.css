@@ -316,13 +316,13 @@
 
 .tabbrowser-tab:is([pinned], [image], [sharing], [pictureinpicture]):is([soundplaying], [muted], [activemedia-blocked]):not([busy], [crashed]) .tab-icon-stack > :not(.tab-icon-overlay)
 {
-    mask-image: url("modules/horizontal_tabs/svg_files/media/Media.svg");
+    mask-image: url("svg_files/media/Media.svg");
     mask-size: 16px 16px;
 }
 
 :root:-moz-locale-dir(rtl) .tabbrowser-tab:is([pinned], [image], [sharing], [pictureinpicture]):is([soundplaying], [muted], [activemedia-blocked]):not([busy], [crashed]) .tab-icon-stack > :not(.tab-icon-overlay)
 {
-    mask-image: url("modules/horizontal_tabs/svg_files/media/Media_rtl.svg");
+    mask-image: url("svg_files/media/Media_rtl.svg");
 }
 
 /* ---------- Picture-In-Picture ---------- */
@@ -358,12 +358,12 @@
 
 .tabbrowser-tab[pictureinpicture]:not([busy], [crashed]):not([soundplaying], [muted], [activemedia-blocked]) .tab-icon-stack::before
 {
-    mask-image: url("modules/horizontal_tabs/svg_files/media/PIP.svg");
+    mask-image: url("svg_files/media/PIP.svg");
 }
 
 .tabbrowser-tab[pictureinpicture]:not([busy], [crashed]):is([soundplaying], [muted], [activemedia-blocked]) .tab-icon-stack::before
 {
-    mask-image: url("modules/horizontal_tabs/svg_files/media/PIP_Sound.svg");
+    mask-image: url("svg_files/media/PIP_Sound.svg");
 }
 
 /* -------------------- Tab Text -------------------- */
