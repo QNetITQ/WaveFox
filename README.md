@@ -139,7 +139,8 @@ By default context menus follow the selected interface density, but it is possib
 - `userChrome.Menu.Size.Touch.Enabled`
 
 ### Lepton Icons (Menu icons)
-This is third-party code. I am not its author and do not support it. I will update this code according to the original source.
+This is third-party code. I will update this code according to the original source.
+
 ![изображение](https://user-images.githubusercontent.com/85301851/151192118-0cbdb5a7-a77f-4275-8841-2ac321657c86.png)
 
 - `svg.context-properties.content.enabled`
