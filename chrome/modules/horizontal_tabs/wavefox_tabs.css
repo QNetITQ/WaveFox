@@ -172,14 +172,6 @@
     justify-content: flex-end !important;
     padding-inline: var(--tab-inline-padding) !important;
 
-    &[visuallyselected]
-    {
-        position: relative;
-        z-index: 2 !important;
-        filter: var(--additional-outer-drop-shadow)
-                var(--outer-drop-shadow);
-    }
-
     &:not([visuallyselected])
     {
         color: inherit !important;
@@ -223,11 +215,6 @@
 .tab-drop-indicator
 {
     opacity: 0 !important;
-}
-
-#tabbrowser-tabs[movingtab] .tabbrowser-tab:not([visuallyselected])
-{
-    z-index: auto !important;
 }
 
 .tabbrowser-tab[pending] .tab-icon-image
@@ -408,27 +395,6 @@
 }
 
 /* ---------------------------------------- Tab Bar ---------------------------------------- */
-
-#TabsToolbar
-{
-    position: relative !important;
-    clip-path: inset(0px) !important;
-}
-
-#TabsToolbar::before
-{
-    content: "";
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    bottom: 0px;
-    inset-inline-start: 0px;
-    box-shadow: var(--additional-inner-box-shadow),
-                var(--inner-box-shadow);
-    pointer-events: none;
-    z-index: 2;
-}
 
 #TabsToolbar #search-container
 {
