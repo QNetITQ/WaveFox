@@ -39,7 +39,7 @@
 
             @media (-moz-bool-pref: "userChrome.LightTheme.Tabs.Shadows.Saturation.Low.Enabled")
             {
-                --shadow-saturation: 100%;
+                --shadow-saturation: 10%;
             }
 
             @media (-moz-bool-pref: "userChrome.LightTheme.Tabs.Shadows.Saturation.Medium.Enabled")
