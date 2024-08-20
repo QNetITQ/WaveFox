@@ -1,6 +1,0 @@
-@property --drag-space
-{
-    syntax: "<length>";
-    inherits: true;
-    initial-value: 0;
-}
