@@ -193,3 +193,26 @@
         }
     }
 }
+
+/* ---------- Custom Properties ---------- */
+
+@property --outer-box-shadow
+{
+    syntax: "*";
+    inherits: true;
+    initial-value: 0 0 0 transparent;
+}
+
+@property --inner-box-shadow
+{
+    syntax: "*";
+    inherits: true;
+    initial-value: 0 0 0 transparent;
+}
+
+@property --outer-drop-shadow
+{
+    syntax: "*";
+    inherits: true;
+    initial-value: drop-shadow(0 0 0 transparent);
+}
