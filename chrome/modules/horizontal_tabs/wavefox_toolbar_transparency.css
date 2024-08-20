@@ -4,8 +4,6 @@
 {
     :root:not([lwtheme])
     {
-        --shadow-color: transparent;
-        --additional-shadow-color: transparent;
         --toolbarbutton-hover-background: color-mix(in srgb, currentColor 17%, transparent) !important;
         --toolbarbutton-active-background: color-mix(in srgb, currentColor 30%, transparent) !important;
         --urlbar-box-hover-bgcolor: color-mix(in srgb, currentColor 17%, transparent) !important;
@@ -59,8 +57,7 @@
         #urlbar:not([focused], [open]) > #urlbar-background,
         #searchbar:not(:focus-within)
         {
-            box-shadow: var(--additional-outer-box-shadow),
-                        var(--outer-box-shadow) !important;
+            box-shadow: var(--outer-box-shadow) !important;
         }
 
         #PersonalToolbar
@@ -68,9 +65,9 @@
             background-color: transparent !important;
         }
         
-        #TabsToolbar::before, #nav-bar, #PersonalToolbar
+        #TabsToolbar::before
         {
-            box-shadow: none !important;
+            display: none !important;
         }
     }
 }
