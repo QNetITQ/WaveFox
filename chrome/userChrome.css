@@ -1,6 +1,5 @@
 @layer BasicPriority, HighPriority, VeryHighPriority;
 
-@import "modules/horizontal_tabs/wavefox_custom_properties.css"       layer(BasicPriority) /* supports() () */ ;
 @import "modules/horizontal_tabs/wavefox_tab_shapes.css"              layer(BasicPriority) /* supports() () */ ;
 @import "modules/horizontal_tabs/wavefox_tabs.css"                    layer(BasicPriority) /* supports() () */ ;
 @import "modules/horizontal_tabs/wavefox_drag_space.css"              layer(BasicPriority) /* supports() () */ ;
@@ -14,6 +13,7 @@
 @import "modules/horizontal_tabs/wavefox_toolbar_buttons.css"         layer(BasicPriority) /* supports() () */ ;
 @import "modules/horizontal_tabs/wavefox_context_menu_densities.css"  layer(BasicPriority) /* supports() () */ ;
 @import "modules/horizontal_tabs/wavefox_transparency_on_linux.css"   layer(BasicPriority) /* supports() */ (-moz-platform: linux);
-@import "Lepton_Icons/icons/Lepton_Icons.css"                         layer(BasicPriority) /* supports() () */ ;
+
+/* @import "Lepton_Icons/icons/Lepton_Icons.css" layer(BasicPriority) supports() (); */
 
 /* ---------------------------------------- Third-party styles (Maximum priority) ---------------------------------------- */
