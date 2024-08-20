@@ -87,16 +87,14 @@
         {
             margin: var(--tab-block-margin) !important;
             border-radius: var(--tab-border-radius) !important;
-            box-shadow: var(--additional-outer-box-shadow),
-                        var(--outer-box-shadow) !important;
+            box-shadow: var(--outer-box-shadow) !important;
         }
         
         #PersonalToolbar
         {
             margin-inline: var(--tab-block-margin) !important;
             border-radius: var(--tab-border-radius) !important;
-            box-shadow: var(--additional-outer-box-shadow),
-                        var(--outer-box-shadow) !important;
+            box-shadow: var(--outer-box-shadow) !important;
         }
 
         #PersonalToolbar[collapsed="false"]
@@ -116,35 +114,25 @@
            (-moz-bool-pref: "userChrome.Tabs.Option12.Enabled") or
            (-moz-bool-pref: "userChrome.Tabs.Option13.Enabled")
     {
-        :root[tabsintitlebar]
+        #nav-bar
         {
-            #nav-bar
+            position: relative !important;
+            overflow: visible !important;
+
+            &::before
             {
-                will-change: auto !important;
-                transition: color var(--inactive-window-transition) !important;
+                content: "";
+                display: block;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                inset-inline-start: 0px;
+                inset-block-start: 0px;
+                pointer-events: none;
+                z-index: 0;
+                clip-path: inset(0 -4px);
+                box-shadow: var(--outer-box-shadow);
             }
-
-            &:-moz-window-inactive #nav-bar
-            {
-                color: color-mix(in srgb, currentColor calc(var(--inactive-titlebar-opacity) * 100%), transparent) !important;
-            }
-        }
-
-        #navigator-toolbox #nav-bar
-        {
-            --toolbar-field-background-color: var(--toolbar-bgcolor) !important;
-            --toolbar-field-color: var(--toolbar-color) !important;
-            --toolbar-field-border-color: transparent !important;
-            background-color: transparent !important;
-            box-shadow: var(--additional-inner-box-shadow),
-                        var(--inner-box-shadow) !important;
-        }
-
-        #urlbar:not([focused], [open]) > #urlbar-background,
-        #searchbar:not(:focus-within)
-        {
-            box-shadow: var(--additional-outer-box-shadow),
-                        var(--outer-box-shadow) !important;
         }
     }
 }
