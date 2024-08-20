@@ -57,3 +57,12 @@ spacer[part="overflow-end-indicator"]
 {
     margin-top: var(--drag-space-only-tabs, revert) !important;
 }
+
+/* ---------- Custom Properties ---------- */
+
+@property --drag-space
+{
+    syntax: "<length>";
+    inherits: true;
+    initial-value: 0px;
+}
