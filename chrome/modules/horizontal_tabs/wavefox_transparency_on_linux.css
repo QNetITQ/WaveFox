@@ -32,7 +32,7 @@
             --toolbox-transparency: 100%;
         }
 
-        &[tabsintitlebar]:not([lwtheme]) #navigator-toolbox
+        &:not([lwtheme]) #navigator-toolbox
         {
             background-color: color-mix(in srgb, var(--toolbox-background-color), transparent var(--toolbox-transparency)) !important;
         }
