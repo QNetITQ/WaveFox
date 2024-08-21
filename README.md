@@ -134,7 +134,7 @@ This is third-party code. I will update this code according to the original sour
 ![изображение](https://user-images.githubusercontent.com/85301851/151192118-0cbdb5a7-a77f-4275-8841-2ac321657c86.png)
 
 - `svg.context-properties.content.enabled`
-- `userChrome.Menu.Icons.LeptonIcons.Enabled`
+- `userChrome.Menu.Icons.LeptonIcons.Enabled` (Deprecated in v1.7.130)
   - `userChrome.icon.panel_full` or `userChrome.icon.panel_photon`
   - `userChrome.icon.library`
   - `userChrome.icon.panel`
@@ -156,12 +156,6 @@ This is third-party code. I will update this code according to the original sour
 - `userChrome.DragSpace.Top.Windowed.Enabled`
 - `userChrome.DragSpace.Top.Maximized.Enabled`
 - `userChrome.DragSpace.Top.Fullscreen.Enabled`
-
-### Pinned Tabs Width
-![Снимок](https://user-images.githubusercontent.com/85301851/185612113-7bb0445f-8993-45bd-916d-d066e88ea7f4.PNG)
-
-- `userChrome.Tabs.Pinned.Width.LowOffset.Enabled`
-- `userChrome.Tabs.Pinned.Width.HighOffset.Enabled`
 
 ### Selected Tab Indicator
 ![изображение](https://github.com/QNetITQ/WaveFox/assets/85301851/c5b7c4b8-81d2-4ca2-9944-574af7e88f1d)
