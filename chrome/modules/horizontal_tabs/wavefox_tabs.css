@@ -74,6 +74,7 @@
         --tab-bg-block-margin: 0px;
         --tab-inline-padding: 0px;
         --tab-separator-offset: 0px;
+        --pinned-tabs-width-offset: 2px;
     }
 }
 
