@@ -93,6 +93,6 @@
 .toolbarbutton-1:has(+ #tabbrowser-tabs:not([overflow])),
 .toolbarbutton-1:has(+ #tabbrowser-tabs[overflow][haspinnedtabs])
 {
-    margin-inline-end: calc(-1 * var(--tab-first-last-inline-margin) / 2 + 1px) !important;
+    margin-inline-end: calc(-1 * var(--tab-first-last-inline-margin) / 2) !important;
     z-index: 0 !important;
 }
