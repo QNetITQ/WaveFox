@@ -12,7 +12,7 @@
   <summary>WaveFox v1.6.129 / v1.6.130+</summary>
 
 - ##### Minimum Requirements
-  - Firefox 129 / 130+
+  - Firefox 130 / 131+
   - Windows / MacOS / Linux
 
 - Download the `chrome` folder and put it in your user profile folder
