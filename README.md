@@ -9,7 +9,7 @@
 [Download Firefox](https://www.mozilla.org/en-US/firefox/all/#product-desktop-release) / [Download WaveFox](https://github.com/QNetITQ/WaveFox/releases)
 
 <details>
-  <summary>WaveFox v1.6.129 / v1.6.130+</summary>
+  <summary>WaveFox v1.7.130 / v1.7.130+</summary>
 
 - ##### Minimum Requirements
   - Firefox 130 / 131+
