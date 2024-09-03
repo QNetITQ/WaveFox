@@ -78,42 +78,6 @@
     }
 }
 
-/* ---------------------------------------- System Theme ---------------------------------------- */
-
-@media not (prefers-contrast)
-{
-    :root:not([lwtheme])
-    {
-        .tabbrowser-tab[visuallyselected]
-        {
-            color: var(--toolbar-color) !important;
-
-            .tab-background
-            {
-                background-color: var(--toolbar-bgcolor) !important;
-            }
-        }
-    }
-}
-
-/* ---------------------------------------- Light Theme / Dark Theme ---------------------------------------- */
-
-:root:is(
-         [style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26)"],
-         [style*="--lwt-accent-color: rgb(28, 27, 34); --lwt-text-color: rgba(251, 251, 254)"]
-        )
-{
-    .tabbrowser-tab[visuallyselected]
-    {
-        color: var(--toolbar-color) !important;
-
-        .tab-background
-        {
-            background-color: var(--toolbar-bgcolor) !important;
-        }
-    }
-}
-
 /* ---------------------------------------- Main Window ---------------------------------------- */
 
 :root
@@ -172,6 +136,39 @@
     overflow: visible !important;
     justify-content: flex-end !important;
     padding-inline: var(--tab-inline-padding) !important;
+
+    &[visuallyselected]
+    {
+        color: var(--toolbar-color) !important;
+
+        .tab-background
+        {
+            --gradient-background-image: linear-gradient(var(--toolbar-bgcolor), var(--toolbar-bgcolor));
+            --gradient-background-attachment: fixed;
+            --gradient-background-size: auto auto;
+            --gradient-background-position: left top;
+            --gradient-background-repeat: no-repeat;
+
+            --amo-background-image-1: var(--lwt-header-image, none);
+            --amo-background-attachment-1: fixed;
+            --amo-background-size-1: auto auto;
+            --amo-background-position-1: right top;
+            --amo-background-repeat-1: no-repeat;
+
+            --amo-background-image-2: var(--lwt-additional-images, none);
+            --amo-background-attachment-2: fixed, fixed, fixed;
+            --amo-background-size-2: auto auto, auto auto, auto auto;
+            --amo-background-position-2: var(--lwt-background-alignment);
+            --amo-background-repeat-2: var(--lwt-background-tiling);
+
+            background-color: transparent !important;
+            background-image: var(--gradient-background-image), var(--amo-background-image-1), var(--amo-background-image-2) !important;
+            background-attachment: var(--gradient-background-attachment), var(--amo-background-attachment-1), var(--amo-background-attachment-2) !important;
+            background-size: var(--gradient-background-size), var(--amo-background-size-1), var(--amo-background-size-2) !important;
+            background-position: var(--gradient-background-position), var(--amo-background-position-1), var(--amo-background-position-2) !important;
+            background-repeat: var(--gradient-background-repeat), var(--amo-background-repeat-1), var(--amo-background-repeat-2) !important;
+        }
+    }
 
     &:not([visuallyselected])
     {
