@@ -133,8 +133,7 @@
 .tabbrowser-tab
 {
     --tab-label-mask-size: 0px !important;
-    overflow: visible !important;
-    justify-content: flex-end !important;
+    overflow-clip-margin: var(--tab-min-height) !important;
     padding-inline: var(--tab-inline-padding) !important;
 
     &[visuallyselected]
@@ -431,7 +430,6 @@
     box-sizing: content-box !important;
     padding-inline: var(--tab-scroll-animation-inline-padding) !important;
     margin-inline: var(--tab-scroll-animation-inline-margin) !important;
-    overflow: clip !important;
     overflow-clip-margin: 0px !important;
 }
 
