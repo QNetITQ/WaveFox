@@ -139,6 +139,8 @@
     &[visuallyselected]
     {
         color: var(--toolbar-color) !important;
+        position: relative;
+        z-index: 2 !important;
 
         .tab-background
         {
