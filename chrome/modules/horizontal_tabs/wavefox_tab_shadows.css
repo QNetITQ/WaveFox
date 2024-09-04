@@ -84,8 +84,6 @@
 
         .tabbrowser-tab[visuallyselected]
         {
-            position: relative;
-            z-index: 2 !important;
             filter: var(--outer-drop-shadow);
         }
 
@@ -182,8 +180,6 @@
 
         .tabbrowser-tab[visuallyselected]
         {
-            position: relative;
-            z-index: 2 !important;
             filter: var(--outer-drop-shadow);
         }
 
