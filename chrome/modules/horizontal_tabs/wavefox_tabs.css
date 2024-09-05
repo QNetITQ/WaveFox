@@ -184,6 +184,11 @@
         {
             background-color: var(--toolbarbutton-active-background) !important;
         }
+
+        #tabbrowser-tabs[movingtab] &
+        {
+            z-index: 0 !important;
+        }
     }
 
     .tab-background
