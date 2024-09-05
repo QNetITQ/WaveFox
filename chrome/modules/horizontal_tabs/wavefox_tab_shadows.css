@@ -86,11 +86,6 @@
         {
             filter: var(--outer-drop-shadow);
         }
-
-        #tabbrowser-tabs[movingtab] .tabbrowser-tab:not([visuallyselected])
-        {
-            z-index: 0 !important;
-        }
     }
 }
 
@@ -181,11 +176,6 @@
         .tabbrowser-tab[visuallyselected]
         {
             filter: var(--outer-drop-shadow);
-        }
-
-        #tabbrowser-tabs[movingtab] .tabbrowser-tab:not([visuallyselected])
-        {
-            z-index: 0 !important;
         }
     }
 }
