@@ -262,7 +262,7 @@
             height: 100%;
             bottom: 0px;
             inset-inline-start: 0px;
-            box-shadow: var(--inner-box-shadow);
+            box-shadow: var(--inner-box-border);
             pointer-events: none;
             z-index: 2;
         }
@@ -271,7 +271,7 @@
 
         .tabbrowser-tab[visuallyselected]
         {
-            filter: var(--outer-drop-shadow);
+            filter: var(--outer-drop-border);
         }
     }
 }
@@ -331,7 +331,7 @@
             height: 100%;
             bottom: 0px;
             inset-inline-start: 0px;
-            box-shadow: var(--inner-box-shadow);
+            box-shadow: var(--inner-box-border);
             pointer-events: none;
             z-index: 2;
         }
@@ -340,7 +340,7 @@
 
         .tabbrowser-tab[visuallyselected]
         {
-            filter: var(--outer-drop-shadow);
+            filter: var(--outer-drop-border);
         }
     }
 }
