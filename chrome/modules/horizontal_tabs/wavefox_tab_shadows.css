@@ -1,3 +1,5 @@
+/* ---------------------------------------- Tab Bar Shadows ---------------------------------------- */
+
 @media (-moz-bool-pref: "userChrome.LightTheme.Tabs.Shadows.Saturation.Low.Enabled")      or
        (-moz-bool-pref: "userChrome.LightTheme.Tabs.Shadows.Saturation.Medium.Enabled")   or
        (-moz-bool-pref: "userChrome.LightTheme.Tabs.Shadows.Saturation.High.Enabled")     or
@@ -201,4 +203,86 @@
     syntax: "*";
     inherits: true;
     initial-value: drop-shadow(0 0 0 transparent);
+}
+
+/* ---------------------------------------- Tab Bar Borders ---------------------------------------- */
+
+@media (-moz-bool-pref: "userChrome.LightTheme.Tabs.Borders.Enabled")
+{
+    @media (prefers-color-scheme: light)
+    {
+        :root
+        {
+            --my-border-width: 1px;
+            --my-border-color: var(--chrome-content-separator-color);
+
+            --outer-box-border: 0 0 0 var(--my-border-width) var(--my-border-color);
+
+            --inner-box-border: inset 0 calc(-1 * var(--my-border-width)) 0 var(--my-border-color);
+
+            --outer-drop-border: drop-shadow(
+                                 0
+                                 calc(-1 * var(--my-border-width))
+                                 0
+                                 var(--my-border-color))
+
+                                 drop-shadow(
+                                 var(--my-border-width)
+                                 var(--outer-drop-border-offset, 0)
+                                 0
+                                 var(--my-border-color))
+
+                                 drop-shadow(
+                                 0
+                                 var(--my-border-width)
+                                 0
+                                 var(--my-border-color))
+
+                                 drop-shadow(
+                                 calc(-1 * var(--my-border-width))
+                                 var(--outer-drop-border-offset, 0)
+                                 0
+                                 var(--my-border-color));
+        }
+    }
+}
+
+@media (-moz-bool-pref: "userChrome.DarkTheme.Tabs.Borders.Enabled")
+{
+    @media (prefers-color-scheme: dark)
+    {
+        :root
+        {
+            --my-border-width: 1px;
+            --my-border-color: var(--chrome-content-separator-color);
+
+            --outer-box-border: 0 0 0 var(--my-border-width) var(--my-border-color);
+
+            --inner-box-border: inset 0 calc(-1 * var(--my-border-width)) 0 var(--my-border-color);
+
+            --outer-drop-border: drop-shadow(
+                                 0
+                                 calc(-1 * var(--my-border-width))
+                                 0
+                                 var(--my-border-color))
+
+                                 drop-shadow(
+                                 var(--my-border-width)
+                                 var(--outer-drop-border-offset, 0)
+                                 0
+                                 var(--my-border-color))
+
+                                 drop-shadow(
+                                 0
+                                 var(--my-border-width)
+                                 0
+                                 var(--my-border-color))
+
+                                 drop-shadow(
+                                 calc(-1 * var(--my-border-width))
+                                 var(--outer-drop-border-offset, 0)
+                                 0
+                                 var(--my-border-color));
+        }
+    }
 }
