@@ -244,6 +244,35 @@
                                  0
                                  var(--my-border-color));
         }
+
+        /* ---------- Tab Bar ---------- */
+
+        #TabsToolbar
+        {
+            position: relative !important;
+            clip-path: inset(0px) !important;
+        }
+
+        #TabsToolbar::before
+        {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            bottom: 0px;
+            inset-inline-start: 0px;
+            box-shadow: var(--inner-box-shadow);
+            pointer-events: none;
+            z-index: 2;
+        }
+        
+        /* ---------- Tabs ---------- */
+
+        .tabbrowser-tab[visuallyselected]
+        {
+            filter: var(--outer-drop-shadow);
+        }
     }
 }
 
@@ -283,6 +312,35 @@
                                  var(--outer-drop-border-offset, 0)
                                  0
                                  var(--my-border-color));
+        }
+
+        /* ---------- Tab Bar ---------- */
+
+        #TabsToolbar
+        {
+            position: relative !important;
+            clip-path: inset(0px) !important;
+        }
+
+        #TabsToolbar::before
+        {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            bottom: 0px;
+            inset-inline-start: 0px;
+            box-shadow: var(--inner-box-shadow);
+            pointer-events: none;
+            z-index: 2;
+        }
+        
+        /* ---------- Tabs ---------- */
+
+        .tabbrowser-tab[visuallyselected]
+        {
+            filter: var(--outer-drop-shadow);
         }
     }
 }
