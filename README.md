@@ -9,10 +9,10 @@
 [Download Firefox](https://www.mozilla.org/en-US/firefox/all/#product-desktop-release) / [Download WaveFox](https://github.com/QNetITQ/WaveFox/releases)
 
 <details>
-  <summary>WaveFox v1.7.130+</summary>
+  <summary>WaveFox v1.7.131</summary>
 
 - ##### Minimum Requirements
-  - Firefox 130+
+  - Firefox 131
   - Windows / MacOS / Linux
 
 - Download the `chrome` folder and put it in your user profile folder
@@ -128,7 +128,7 @@ By default context menus follow the selected interface density, but it is possib
 - `userChrome.Menu.Size.Touch.Enabled`
 
 ### Lepton Icons (Menu icons)
-This is third-party code. I will update this code according to the original source.
+This is third-party code. I will update this code according to the original source. The first two keys are mandatory. The rest can be turned on arbitrarily or all together.
 
 ![изображение](https://user-images.githubusercontent.com/85301851/151192118-0cbdb5a7-a77f-4275-8841-2ac321657c86.png)
 
