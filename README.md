@@ -94,7 +94,6 @@ Works only with the system theme.
 - `userChrome.Toolbar.Transparency.VeryHigh.Enabled`
 
 ### Tab Bar Shadows
-Incompatible with AMO themes.
 ![изображение](https://user-images.githubusercontent.com/85301851/152011749-4d5619b3-0fd8-40f9-a3dc-96be31839971.png)
 
 ##### Shadows (Light Theme)
@@ -102,14 +101,14 @@ Incompatible with AMO themes.
 - `userChrome.LightTheme.Tabs.Shadows.Saturation.Medium.Enabled`
 - `userChrome.LightTheme.Tabs.Shadows.Saturation.High.Enabled`
 - `userChrome.LightTheme.Tabs.Shadows.Saturation.VeryHigh.Enabled`
-  - `userChrome.LightTheme.Tabs.Shadows.Blur.Low.Enabled` (Shadow like border)
+  - `userChrome.LightTheme.Tabs.Borders.Enabled` (Shadow like border)
 
 ##### Shadows (Dark Theme)
 - `userChrome.DarkTheme.Tabs.Shadows.Saturation.Low.Enabled`
 - `userChrome.DarkTheme.Tabs.Shadows.Saturation.Medium.Enabled`
 - `userChrome.DarkTheme.Tabs.Shadows.Saturation.High.Enabled`
 - `userChrome.DarkTheme.Tabs.Shadows.Saturation.VeryHigh.Enabled`
-  - `userChrome.DarkTheme.Tabs.Shadows.Blur.Low.Enabled` (Shadow like border)
+  - `userChrome.DarkTheme.Tabs.Borders.Enabled` (Shadow like border)
 
 ### Tab Separators
 ![изображение](https://user-images.githubusercontent.com/85301851/152351312-f6ad4578-e7d5-40b7-8b2d-49388a750f54.png)
