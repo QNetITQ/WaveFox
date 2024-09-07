@@ -6,9 +6,7 @@
 
 ## Installation
 
-[Download Firefox](https://www.mozilla.org/en-US/firefox/all/#product-desktop-release) / [Download WaveFox](https://github.com/QNetITQ/WaveFox/releases)
-
-[WaveFox Nightly](https://github.com/QNetITQ/WaveFox/tree/WaveFox-Nightly)
+[Download Firefox](https://www.mozilla.org/en-US/firefox/all/#product-desktop-release) / [Download WaveFox](https://github.com/QNetITQ/WaveFox/releases) / [WaveFox Nightly](https://github.com/QNetITQ/WaveFox/tree/WaveFox-Nightly)
 
 <details>
   <summary>WaveFox v1.7.131</summary>
