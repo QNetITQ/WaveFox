@@ -1,5 +1,3 @@
-/* ---------------------------------------- Tab Bar Shadows ---------------------------------------- */
-
 @media (-moz-bool-pref: "userChrome.LightTheme.Tabs.Shadows.Saturation.Low.Enabled")      or
        (-moz-bool-pref: "userChrome.LightTheme.Tabs.Shadows.Saturation.Medium.Enabled")   or
        (-moz-bool-pref: "userChrome.LightTheme.Tabs.Shadows.Saturation.High.Enabled")     or
@@ -10,7 +8,7 @@
         :root
         {
             --shadow-blur: 4px;
-            --shadow-color: rgb(0, 0, 0);
+            --shadow-color: var(--tab-selected-outline-color);
 
             --outer-box-shadow: 0
                                 0
@@ -32,7 +30,7 @@
 
             /* ---------- Blur ---------- */
 
-            @media (-moz-bool-pref: "userChrome.LightTheme.Tabs.Shadows.Blur.Low.Enabled")
+            @media (-moz-bool-pref: "userChrome.LightTheme.Tabs.Borders.Enabled")
             {
                 --shadow-blur: 2px;
             }
@@ -58,6 +56,20 @@
             {
                 --shadow-saturation: 100%;
             }
+        }
+
+        /* ---------- System Theme / Light Theme ---------- */
+
+        :root:is(:not([lwtheme]), [style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26)"])
+        {
+            --shadow-color: rgb(0,0,0);
+        }
+
+        /* ---------- AMO Theme ---------- */
+
+        :root[lwtheme]:not([style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26)"])
+        {
+            --shadow-saturation: 100%;
         }
 
         /* ---------- Tab Bar ---------- */
@@ -101,7 +113,7 @@
         :root
         {
             --shadow-blur: 4px;
-            --shadow-color: rgb(0, 0, 0);
+            --shadow-color: var(--tab-selected-outline-color);
 
             --outer-box-shadow: 0
                                 0
@@ -123,7 +135,7 @@
             
             /* ---------- Blur ---------- */
             
-            @media (-moz-bool-pref: "userChrome.DarkTheme.Tabs.Shadows.Blur.Low.Enabled")
+            @media (-moz-bool-pref: "userChrome.DarkTheme.Tabs.Borders.Enabled")
             {
                 --shadow-blur: 2px;
             }
@@ -149,6 +161,20 @@
             {
                 --shadow-saturation: 100%;
             }
+        }
+
+        /* ---------- System Theme / Dark Theme ---------- */
+
+        :root:is(:not([lwtheme]), [style*="--lwt-accent-color: rgb(28, 27, 34); --lwt-text-color: rgba(251, 251, 254)"])
+        {
+            --shadow-color: rgb(0,0,0);
+        }
+
+        /* ---------- AMO Theme ---------- */
+
+        :root[lwtheme]:not([style*="--lwt-accent-color: rgb(28, 27, 34); --lwt-text-color: rgba(251, 251, 254)"])
+        {
+            --shadow-saturation: 100%;
         }
         
         /* ---------- Tab Bar ---------- */
@@ -204,145 +230,3 @@
     inherits: true;
     initial-value: drop-shadow(0 0 0 transparent);
 }
-
-/* ---------------------------------------- Tab Bar Borders ---------------------------------------- */
-
-@media (-moz-bool-pref: "userChrome.LightTheme.Tabs.Borders.Enabled")
-{
-    @media (prefers-color-scheme: light)
-    {
-        :root
-        {
-            --my-border-width: 1px;
-            --my-border-color: var(--chrome-content-separator-color);
-
-            --outer-box-border: 0 0 0 var(--my-border-width) var(--my-border-color);
-
-            --inner-box-border: inset 0 calc(-1 * var(--my-border-width)) 0 var(--my-border-color);
-
-            --outer-drop-border: drop-shadow(
-                                 0
-                                 calc(-1 * var(--my-border-width))
-                                 0
-                                 var(--my-border-color))
-
-                                 drop-shadow(
-                                 var(--my-border-width)
-                                 var(--outer-drop-border-offset, 0)
-                                 0
-                                 var(--my-border-color))
-
-                                 drop-shadow(
-                                 0
-                                 var(--my-border-width)
-                                 0
-                                 var(--my-border-color))
-
-                                 drop-shadow(
-                                 calc(-1 * var(--my-border-width))
-                                 var(--outer-drop-border-offset, 0)
-                                 0
-                                 var(--my-border-color));
-        }
-
-        /* ---------- Tab Bar ---------- */
-
-        #TabsToolbar
-        {
-            position: relative !important;
-            clip-path: inset(0px) !important;
-        }
-
-        #TabsToolbar::before
-        {
-            content: "";
-            display: block;
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            bottom: 0px;
-            inset-inline-start: 0px;
-            box-shadow: var(--inner-box-border);
-            pointer-events: none;
-            z-index: 2;
-        }
-        
-        /* ---------- Tabs ---------- */
-
-        .tabbrowser-tab[visuallyselected]
-        {
-            filter: var(--outer-drop-border);
-        }
-    }
-}
-
-@media (-moz-bool-pref: "userChrome.DarkTheme.Tabs.Borders.Enabled")
-{
-    @media (prefers-color-scheme: dark)
-    {
-        :root
-        {
-            --my-border-width: 1px;
-            --my-border-color: var(--chrome-content-separator-color);
-
-            --outer-box-border: 0 0 0 var(--my-border-width) var(--my-border-color);
-
-            --inner-box-border: inset 0 calc(-1 * var(--my-border-width)) 0 var(--my-border-color);
-
-            --outer-drop-border: drop-shadow(
-                                 0
-                                 calc(-1 * var(--my-border-width))
-                                 0
-                                 var(--my-border-color))
-
-                                 drop-shadow(
-                                 var(--my-border-width)
-                                 var(--outer-drop-border-offset, 0)
-                                 0
-                                 var(--my-border-color))
-
-                                 drop-shadow(
-                                 0
-                                 var(--my-border-width)
-                                 0
-                                 var(--my-border-color))
-
-                                 drop-shadow(
-                                 calc(-1 * var(--my-border-width))
-                                 var(--outer-drop-border-offset, 0)
-                                 0
-                                 var(--my-border-color));
-        }
-
-        /* ---------- Tab Bar ---------- */
-
-        #TabsToolbar
-        {
-            position: relative !important;
-            clip-path: inset(0px) !important;
-        }
-
-        #TabsToolbar::before
-        {
-            content: "";
-            display: block;
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            bottom: 0px;
-            inset-inline-start: 0px;
-            box-shadow: var(--inner-box-border);
-            pointer-events: none;
-            z-index: 2;
-        }
-        
-        /* ---------- Tabs ---------- */
-
-        .tabbrowser-tab[visuallyselected]
-        {
-            filter: var(--outer-drop-border);
-        }
-    }
-}
-
-/* ---------------------------------------- Tab Bar Borders and Shadows ---------------------------------------- */
