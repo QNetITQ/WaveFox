@@ -216,9 +216,9 @@
     }
 }
 
-.tab-drop-indicator
+#tabbrowser-tabs[overflow] .tab-drop-indicator
 {
-    opacity: 0 !important;
+    inset-inline-start: var(--tab-first-last-inline-margin) !important;
 }
 
 .tabbrowser-tab[pending] .tab-icon-image
