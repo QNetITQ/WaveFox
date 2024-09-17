@@ -1,4 +1,4 @@
-@media (-moz-bool-pref: "userChrome.WebContent.Rounding.Enabled")
+@media (-moz-bool-pref: "userChrome.WebPage.Rounding.Enabled")
 {
     :root:not([inFullscreen], [inDOMFullscreen]) #browser > #tabbrowser-tabbox
     {
