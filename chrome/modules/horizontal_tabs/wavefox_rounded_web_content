@@ -1,0 +1,13 @@
+@media (-moz-bool-pref: "userChrome.WebContent.Rounding.Enabled")
+{
+    :root:not([inFullscreen], [inDOMFullscreen]) #browser > #tabbrowser-tabbox
+    {
+        margin: 8px !important;
+        filter: var(--outer-drop-shadow) !important;
+
+        #tabbrowser-tabpanels
+        {
+            clip-path: xywh(0 0 100% 100% round 8px) !important;
+        }
+    }
+}
