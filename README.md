@@ -173,6 +173,11 @@ This is third-party code. I will update this code according to the original sour
 - `userChrome.OneLine.TabBarFirst.Enabled`
 - `userChrome.OneLine.NavBarFirst.Enabled`
 
+### Rounded web page
+![изображение](https://github.com/user-attachments/assets/93ffab37-bbe5-4b17-993d-cc084fd341ad)
+
+- `userChrome.WebPage.Rounding.Enabled`
+
 </details>
 
 <details>
