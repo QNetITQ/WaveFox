@@ -8,7 +8,7 @@
         :root
         {
             --shadow-blur: 4px;
-            --shadow-color: rgb(0, 0, 0);
+            --shadow-color: var(--tab-selected-outline-color);
 
             --outer-box-shadow: 0
                                 0
@@ -30,7 +30,7 @@
 
             /* ---------- Blur ---------- */
 
-            @media (-moz-bool-pref: "userChrome.LightTheme.Tabs.Shadows.Blur.Low.Enabled")
+            @media (-moz-bool-pref: "userChrome.LightTheme.Tabs.Borders.Enabled")
             {
                 --shadow-blur: 2px;
             }
@@ -58,6 +58,20 @@
             }
         }
 
+        /* ---------- System Theme / Light Theme ---------- */
+
+        :root:is(:not([lwtheme]), [style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26)"])
+        {
+            --shadow-color: rgb(0,0,0);
+        }
+
+        /* ---------- AMO Theme ---------- */
+
+        :root[lwtheme]:not([style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26)"])
+        {
+            --shadow-saturation: 100%;
+        }
+
         /* ---------- Tab Bar ---------- */
 
         #TabsToolbar
@@ -84,14 +98,7 @@
 
         .tabbrowser-tab[visuallyselected]
         {
-            position: relative;
-            z-index: 2 !important;
             filter: var(--outer-drop-shadow);
-        }
-
-        #tabbrowser-tabs[movingtab] .tabbrowser-tab:not([visuallyselected])
-        {
-            z-index: 0 !important;
         }
     }
 }
@@ -106,7 +113,7 @@
         :root
         {
             --shadow-blur: 4px;
-            --shadow-color: rgb(0, 0, 0);
+            --shadow-color: var(--tab-selected-outline-color);
 
             --outer-box-shadow: 0
                                 0
@@ -128,7 +135,7 @@
             
             /* ---------- Blur ---------- */
             
-            @media (-moz-bool-pref: "userChrome.DarkTheme.Tabs.Shadows.Blur.Low.Enabled")
+            @media (-moz-bool-pref: "userChrome.DarkTheme.Tabs.Borders.Enabled")
             {
                 --shadow-blur: 2px;
             }
@@ -155,6 +162,20 @@
                 --shadow-saturation: 100%;
             }
         }
+
+        /* ---------- System Theme / Dark Theme ---------- */
+
+        :root:is(:not([lwtheme]), [style*="--lwt-accent-color: rgb(28, 27, 34); --lwt-text-color: rgba(251, 251, 254)"])
+        {
+            --shadow-color: rgb(0,0,0);
+        }
+
+        /* ---------- AMO Theme ---------- */
+
+        :root[lwtheme]:not([style*="--lwt-accent-color: rgb(28, 27, 34); --lwt-text-color: rgba(251, 251, 254)"])
+        {
+            --shadow-saturation: 100%;
+        }
         
         /* ---------- Tab Bar ---------- */
 
@@ -182,14 +203,7 @@
 
         .tabbrowser-tab[visuallyselected]
         {
-            position: relative;
-            z-index: 2 !important;
             filter: var(--outer-drop-shadow);
-        }
-
-        #tabbrowser-tabs[movingtab] .tabbrowser-tab:not([visuallyselected])
-        {
-            z-index: 0 !important;
         }
     }
 }

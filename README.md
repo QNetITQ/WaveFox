@@ -6,13 +6,13 @@
 
 ## Installation
 
-[Download Firefox](https://www.mozilla.org/en-US/firefox/all/#product-desktop-release) / [Download WaveFox](https://github.com/QNetITQ/WaveFox/releases)
+[Download Firefox](https://www.mozilla.org/en-US/firefox/all/#product-desktop-release) / [Download WaveFox](https://github.com/QNetITQ/WaveFox/releases) / [WaveFox Nightly](https://github.com/QNetITQ/WaveFox/tree/WaveFox-Nightly)
 
 <details>
-  <summary>WaveFox v1.7.130+</summary>
+  <summary>WaveFox v1.7.131</summary>
 
 - ##### Minimum Requirements
-  - Firefox 130+
+  - Firefox 131
   - Windows / MacOS / Linux
 
 - Download the `chrome` folder and put it in your user profile folder
@@ -94,7 +94,6 @@ Works only with the system theme.
 - `userChrome.Toolbar.Transparency.VeryHigh.Enabled`
 
 ### Tab Bar Shadows
-Incompatible with AMO themes.
 ![изображение](https://user-images.githubusercontent.com/85301851/152011749-4d5619b3-0fd8-40f9-a3dc-96be31839971.png)
 
 ##### Shadows (Light Theme)
@@ -102,14 +101,14 @@ Incompatible with AMO themes.
 - `userChrome.LightTheme.Tabs.Shadows.Saturation.Medium.Enabled`
 - `userChrome.LightTheme.Tabs.Shadows.Saturation.High.Enabled`
 - `userChrome.LightTheme.Tabs.Shadows.Saturation.VeryHigh.Enabled`
-  - `userChrome.LightTheme.Tabs.Shadows.Blur.Low.Enabled` (Shadow like border)
+  - `userChrome.LightTheme.Tabs.Borders.Enabled` (Shadow like border)
 
 ##### Shadows (Dark Theme)
 - `userChrome.DarkTheme.Tabs.Shadows.Saturation.Low.Enabled`
 - `userChrome.DarkTheme.Tabs.Shadows.Saturation.Medium.Enabled`
 - `userChrome.DarkTheme.Tabs.Shadows.Saturation.High.Enabled`
 - `userChrome.DarkTheme.Tabs.Shadows.Saturation.VeryHigh.Enabled`
-  - `userChrome.DarkTheme.Tabs.Shadows.Blur.Low.Enabled` (Shadow like border)
+  - `userChrome.DarkTheme.Tabs.Borders.Enabled` (Shadow like border)
 
 ### Tab Separators
 ![изображение](https://user-images.githubusercontent.com/85301851/152351312-f6ad4578-e7d5-40b7-8b2d-49388a750f54.png)
@@ -129,7 +128,7 @@ By default context menus follow the selected interface density, but it is possib
 - `userChrome.Menu.Size.Touch.Enabled`
 
 ### Lepton Icons (Menu icons)
-This is third-party code. I will update this code according to the original source.
+This is third-party code. I will update this code according to the original source. The first two keys are mandatory. The rest can be turned on arbitrarily or all together.
 
 ![изображение](https://user-images.githubusercontent.com/85301851/151192118-0cbdb5a7-a77f-4275-8841-2ac321657c86.png)
 
@@ -173,6 +172,11 @@ This is third-party code. I will update this code according to the original sour
 
 - `userChrome.OneLine.TabBarFirst.Enabled`
 - `userChrome.OneLine.NavBarFirst.Enabled`
+
+### Rounded Web Page (Experimentally)
+![изображение](https://github.com/user-attachments/assets/93ffab37-bbe5-4b17-993d-cc084fd341ad)
+
+- `userChrome.WebPage.Rounding.Enabled`
 
 </details>
 
