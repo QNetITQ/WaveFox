@@ -1,0 +1,28 @@
+@media (-moz-bool-pref: "userChrome.WebPage.Rounding.Enabled")
+{
+    :root:is(:not([lwtheme]),
+             [style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26)"],
+             [style*="--lwt-accent-color: rgb(28, 27, 34); --lwt-text-color: rgba(251, 251, 254)"])
+    {
+        &:not([inFullscreen], [inDOMFullscreen])
+        {
+            background-color: var(--toolbar-bgcolor) !important;
+        
+            #navigator-toolbox
+            {
+                border-bottom: none !important;
+            }
+
+            #browser > #tabbrowser-tabbox
+            {
+                margin: 1px 8px 8px 8px !important;
+                filter: drop-shadow(0 0 1px var(--chrome-content-separator-color)) !important;
+
+                #tabbrowser-tabpanels
+                {
+                    clip-path: xywh(0 0 100% 100% round 8px) !important;
+                }
+            }
+        }
+    }
+}
