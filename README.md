@@ -9,10 +9,10 @@
 [Download Firefox](https://www.mozilla.org/en-US/firefox/all/#product-desktop-release) / [Download WaveFox](https://github.com/QNetITQ/WaveFox/releases) / [WaveFox Nightly](https://github.com/QNetITQ/WaveFox/tree/WaveFox-Nightly)
 
 <details>
-  <summary>WaveFox v1.7.131</summary>
+  <summary>WaveFox v1.7.132</summary>
 
 - ##### Minimum Requirements
-  - Firefox 131
+  - Firefox 132
   - Windows / MacOS / Linux
 
 - Download the `chrome` folder and put it in your user profile folder
@@ -174,7 +174,8 @@ This is third-party code. I will update this code according to the original sour
 - `userChrome.OneLine.NavBarFirst.Enabled`
 
 ### Rounded Web Page
-![изображение](https://github.com/user-attachments/assets/93ffab37-bbe5-4b17-993d-cc084fd341ad)
+Works only with system, light and dark themes.
+![изображение](https://github.com/user-attachments/assets/26a19f9a-642b-4a10-a4f9-80d87cc42bdc)
 
 - `userChrome.WebPage.Rounding.Enabled`
 
