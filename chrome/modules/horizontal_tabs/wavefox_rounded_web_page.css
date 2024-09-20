@@ -6,21 +6,27 @@
     {
         &:not([inFullscreen], [inDOMFullscreen])
         {
-            background-color: var(--toolbar-bgcolor) !important;
-        
             #navigator-toolbox
             {
                 border-bottom: none !important;
             }
-
-            #browser > #tabbrowser-tabbox
+            
+            #browser
             {
-                margin: 1px 8px 8px 8px !important;
-                filter: drop-shadow(0 0 1px var(--chrome-content-separator-color)) !important;
+                background-color: var(--toolbar-bgcolor) !important;
 
-                #tabbrowser-tabpanels
+                #tabbrowser-tabbox
                 {
-                    clip-path: xywh(0 0 100% 100% round 8px) !important;
+                    margin-block: 0 8px !important;
+                    margin-inline: 8px !important;
+                    border: 1px solid var(--chrome-content-separator-color) !important;
+                    border-radius: 8px !important;
+                    background-clip: padding-box !important;
+
+                    #tabbrowser-tabpanels
+                    {
+                        clip-path: xywh(0 0 100% 100% round 8px) !important;
+                    }
                 }
             }
         }
