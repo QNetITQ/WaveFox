@@ -609,6 +609,13 @@ Open `userChrome.css` and paste your code under the appropriate comment. Your co
 </details>
 
 <details>
+  <summary>How to enable Mica on Windows 11?</summary>
+
+- `widget.windows.mica`
+
+</details>
+
+<details>
   <summary>How to enable Tinting / Vibrancy on MacOS?</summary>
 
 - `browser.theme.macos.native-theme`
