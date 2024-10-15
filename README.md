@@ -618,7 +618,7 @@ Open `userChrome.css` and paste your code under the appropriate comment. Your co
 <details>
   <summary>How to enable Tinting / Vibrancy on MacOS?</summary>
 
-- `browser.theme.macos.native-theme` or 'browser.theme.native-theme'
+- `browser.theme.macos.native-theme` or `browser.theme.native-theme`
 - `widget.macos.titlebar-blend-mode.behind-window`
 - `widget.macos.sidebar-blend-mode.behind-window`
 
