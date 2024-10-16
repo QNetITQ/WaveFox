@@ -2,17 +2,15 @@
 {
     /* -------------------- Title Bar -------------------- */
 
-    #titlebar
+    #TabsToolbar
     {
-        order: 2 !important;
+        order: 4 !important;
     }
 
     #toolbar-menubar
     {
-        --toolbarbutton-icon-fill: inherit !important;
-        background-color: var(--toolbar-bgcolor) !important;
-        color: var(--toolbar-color) !important;
         appearance: none !important;
+        order: 0 !important;
     }
 
     #TabsToolbar::before
@@ -24,14 +22,14 @@
 
     #nav-bar
     {
-        order: 0 !important;
+        order: 1 !important;
     }
 
     /* -------------------- Personal Bar -------------------- */
 
     #PersonalToolbar
     {
-        order: 1 !important;
+        order: 3 !important;
     }
 
     /* -------------------- Tabs -------------------- */
@@ -44,5 +42,17 @@
     .tab-background
     {
         transform: rotateX(180deg);
+    }
+    
+    /* -------------------- Window Control Buttons -------------------- */
+
+    #toolbar-menubar[inactive] ~ #nav-bar > :is(.titlebar-buttonbox-container)
+    {
+        display: block !important;
+    }
+
+    #toolbar-menubar[inactive] ~ #TabsToolbar > :is(.titlebar-buttonbox-container, .titlebar-spacer)
+    {
+        display: none !important;
     }
 }
