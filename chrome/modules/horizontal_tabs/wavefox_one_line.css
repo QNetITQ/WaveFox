@@ -8,9 +8,14 @@
             grid-template-columns: auto minmax(auto, 0%) !important;
         }
 
-        #titlebar
+        #TabsToolbar
         {
-            grid-area: 1 / 1 / span 1 / span 1 !important;
+            grid-area: 2 / 1 / span 2 / span 1 !important;
+        }
+
+        #nav-bar
+        {
+            grid-area: 2 / 2 / span 2 / span 2 !important;
         }
     }
 
@@ -20,10 +25,15 @@
         {
             grid-template-columns: minmax(auto, 0%) auto !important;
         }
+        
+        #TabsToolbar
+        {
+            grid-area: 2 / 2 / span 2 / span 2 !important;
+        }
 
         #nav-bar
         {
-            grid-area: 1 / 1 / span 1 / span 1 !important;
+            grid-area: 2 / 1 / span 2 / span 1 !important;
         }
     }
 
@@ -58,9 +68,9 @@
 
     /* -------------------- Bookmarks Bar / Notifications -------------------- */
 
-    #navigator-toolbox > *:not(#titlebar, #nav-bar)
+    #navigator-toolbox > *:not(#TabsToolbar, #nav-bar)
     {
-        grid-column: 1 / span 2 !important;
+        grid-column: 1 / span 3 !important;
     }
 
     /* -------------------- Customization -------------------- */
