@@ -54,7 +54,7 @@
         --tab-scroll-animation-inline-margin: calc(-1 * var(--tab-first-last-inline-margin));
         --tab-scroll-animation-inline-padding: calc(var(--tab-first-last-inline-margin) * 2);
         --tab-bg-block-margin: var(--tab-block-margin);
-        --tab-inline-padding: var(--tab-first-last-inline-margin);
+        --my-tab-inline-padding: var(--tab-first-last-inline-margin);
         --tab-separator-offset: var(--tab-first-last-inline-margin);
     }
 
@@ -72,7 +72,7 @@
         --tab-scroll-animation-inline-margin: calc(-1 * var(--tab-first-last-inline-margin));
         --tab-scroll-animation-inline-padding: var(--tab-first-last-inline-margin);
         --tab-bg-block-margin: 0px;
-        --tab-inline-padding: 0px;
+        --my-tab-inline-padding: 0px;
         --tab-separator-offset: 0px;
         --pinned-tabs-width-offset: 2px;
     }
@@ -134,7 +134,7 @@
 {
     --tab-label-mask-size: 0px !important;
     overflow-clip-margin: var(--tab-min-height) !important;
-    padding-inline: var(--tab-inline-padding) !important;
+    padding-inline: var(--my-tab-inline-padding) !important;
 
     &[visuallyselected]
     {
@@ -264,8 +264,8 @@
 
 .tab-icon-overlay:not([crashed])
 {
-    stroke: transparent !important;
     background-color: transparent !important;
+    border: none !important;
     border-radius: 50% !important;
     color: inherit !important;
     fill: currentColor !important;

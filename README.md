@@ -9,10 +9,10 @@
 [Download Firefox](https://www.mozilla.org/en-US/firefox/all/#product-desktop-release) / [Download WaveFox](https://github.com/QNetITQ/WaveFox/releases) / [WaveFox Nightly](https://github.com/QNetITQ/WaveFox/tree/WaveFox-Nightly)
 
 <details>
-  <summary>WaveFox v1.7.131</summary>
+  <summary>WaveFox v1.7.132</summary>
 
 - ##### Minimum Requirements
-  - Firefox 131
+  - Firefox 132
   - Windows / MacOS / Linux
 
 - Download the `chrome` folder and put it in your user profile folder
@@ -173,8 +173,9 @@ This is third-party code. I will update this code according to the original sour
 - `userChrome.OneLine.TabBarFirst.Enabled`
 - `userChrome.OneLine.NavBarFirst.Enabled`
 
-### Rounded Web Page (Experimentally)
-![изображение](https://github.com/user-attachments/assets/93ffab37-bbe5-4b17-993d-cc084fd341ad)
+### Rounded Web Page
+Works only with system, light and dark themes.
+![изображение](https://github.com/user-attachments/assets/26a19f9a-642b-4a10-a4f9-80d87cc42bdc)
 
 - `userChrome.WebPage.Rounding.Enabled`
 
@@ -608,9 +609,16 @@ Open `userChrome.css` and paste your code under the appropriate comment. Your co
 </details>
 
 <details>
+  <summary>How to enable Mica on Windows 11?</summary>
+
+- `widget.windows.mica`
+
+</details>
+
+<details>
   <summary>How to enable Tinting / Vibrancy on MacOS?</summary>
 
-- `browser.theme.macos.native-theme`
+- `browser.theme.macos.native-theme` or `browser.theme.native-theme`
 - `widget.macos.titlebar-blend-mode.behind-window`
 - `widget.macos.sidebar-blend-mode.behind-window`
 

@@ -1,5 +1,7 @@
 @layer BasicPriority, HighPriority, VeryHighPriority;
 
+/* ---------- Horizontal Tabs ---------- */
+
 @import "modules/horizontal_tabs/wavefox_tab_shapes.css"             layer(BasicPriority) /* supports() */ not (-moz-bool-pref: "sidebar.verticalTabs");
 @import "modules/horizontal_tabs/wavefox_tabs.css"                   layer(BasicPriority) /* supports() */ not (-moz-bool-pref: "sidebar.verticalTabs");
 @import "modules/horizontal_tabs/wavefox_drag_space.css"             layer(BasicPriority) /* supports() */ not (-moz-bool-pref: "sidebar.verticalTabs");
@@ -11,7 +13,7 @@
 @import "modules/horizontal_tabs/wavefox_one_line.css"               layer(BasicPriority) /* supports() */ not (-moz-bool-pref: "sidebar.verticalTabs");
 @import "modules/horizontal_tabs/wavefox_toolbar_buttons.css"        layer(BasicPriority) /* supports() */ not (-moz-bool-pref: "sidebar.verticalTabs");
 @import "modules/horizontal_tabs/wavefox_context_menu_densities.css" layer(BasicPriority) /* supports() */ not (-moz-bool-pref: "sidebar.verticalTabs");
-@import "modules/horizontal_tabs/wavefox_rounded_web_page.css"       layer(BasicPriority) /* supports() */ not (-moz-bool-pref: "sidebar.verticalTabs");
+@import "modules/horizontal_tabs/wavefox_rounded_web_page.css"       layer(BasicPriority) /* supports() */ not (-moz-bool-pref: "sidebar.revamp");
 @import "modules/horizontal_tabs/wavefox_transparency_on_linux.css"  layer(BasicPriority) /* supports() */     (-moz-platform: linux);
 @import "Lepton_Icons/icons/Lepton_Icons.css"                        layer(BasicPriority) /* supports() */     (-moz-bool-pref: "userChrome.Menu.Icons.LeptonIcons.Enabled");
 
