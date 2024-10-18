@@ -4,13 +4,17 @@
 
     #TabsToolbar
     {
-        order: 4 !important;
+        order: 3 !important;
     }
 
     #toolbar-menubar
     {
-        appearance: none !important;
         order: 0 !important;
+        background-color: var(--toolbar-bgcolor) !important;
+        color: var(--toolbar-color) !important;
+        --toolbarbutton-icon-fill: inherit !important;
+        --toolbarbutton-hover-background: inherit !important;
+        --toolbarbutton-active-background: inherit !important;
     }
 
     #TabsToolbar::before
@@ -29,7 +33,7 @@
 
     #PersonalToolbar
     {
-        order: 3 !important;
+        order: 2 !important;
     }
 
     /* -------------------- Tabs -------------------- */
@@ -46,7 +50,7 @@
     
     /* -------------------- Window Control Buttons -------------------- */
 
-    #toolbar-menubar[inactive] ~ #nav-bar > :is(.titlebar-buttonbox-container)
+    /*#toolbar-menubar[inactive] ~ #nav-bar > :is(.titlebar-buttonbox-container)
     {
         display: block !important;
     }
@@ -54,5 +58,5 @@
     #toolbar-menubar[inactive] ~ #TabsToolbar > :is(.titlebar-buttonbox-container, .titlebar-spacer)
     {
         display: none !important;
-    }
+    }*/
 }
