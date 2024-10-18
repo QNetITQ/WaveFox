@@ -50,13 +50,18 @@
     
     /* -------------------- Window Control Buttons -------------------- */
 
-    /*#toolbar-menubar[inactive] ~ #nav-bar > :is(.titlebar-buttonbox-container)
+    #TabsToolbar > :is(.titlebar-buttonbox-container, .titlebar-spacer)
+    {
+        display: none !important;
+    }
+
+    #toolbar-menubar[inactive] ~ #nav-bar > .titlebar-buttonbox-container
     {
         display: block !important;
     }
 
-    #toolbar-menubar[inactive] ~ #TabsToolbar > :is(.titlebar-buttonbox-container, .titlebar-spacer)
+    :root[tabsintitlebar]:not([inFullscreen]) #toolbar-menubar[inactive] ~ #nav-bar > .titlebar-spacer[type="post-tabs"]
     {
-        display: none !important;
-    }*/
+        display: block !important;
+    }
 }
