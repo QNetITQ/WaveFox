@@ -165,7 +165,7 @@ This is third-party code. I will update this code according to the original sour
 ![Снимок](https://github.com/QNetITQ/WaveFox/assets/85301851/514cf30d-a417-48cb-bfd1-0e77c9df1bf4)
 
 - `userChrome.Tabs.TabsOnBottom.Enabled`
-- `browser.tabs.inTitlebar` (Required key. Set the value to 0)
+- `browser.tabs.inTitlebar` (Optional key. Set the value to 0)
 
 ### One Line
 ![Снимок](https://github.com/QNetITQ/WaveFox/assets/85301851/05bba314-643d-46f3-a09c-b3ac31f9761d)
