@@ -107,7 +107,6 @@
         :root[tabsintitlebar]:not([lwtheme]) #nav-bar
         {
             color: inherit !important;
-            --toolbarbutton-icon-fill: currentColor !important;
         }
         
         :root[tabsintitlebar] #nav-bar
