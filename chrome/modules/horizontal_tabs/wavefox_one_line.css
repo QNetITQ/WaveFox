@@ -10,12 +10,12 @@
 
         #TabsToolbar
         {
-            grid-area: 2 / 1 / span 2 / span 1 !important;
+            grid-area: 2 / 1 / auto / auto !important;
         }
 
         #nav-bar
         {
-            grid-area: 2 / 2 / span 2 / span 2 !important;
+            grid-area: 2 / 2 / auto / auto !important;
         }
     }
 
@@ -28,18 +28,13 @@
         
         #TabsToolbar
         {
-            grid-area: 2 / 2 / span 2 / span 2 !important;
+            grid-area: 2 / 2 / auto / auto !important;
         }
 
         #nav-bar
         {
-            grid-area: 2 / 1 / span 2 / span 1 !important;
+            grid-area: 2 / 1 / auto / auto !important;
         }
-    }
-
-    :root
-    {
-        --drag-space: 0px !important;
     }
 
     #navigator-toolbox
@@ -53,6 +48,9 @@
     #nav-bar
     {
         width: fit-content !important;
+        background-color: transparent !important;
+        margin-top: var(--drag-space) !important;
+        box-shadow: var(--inner-box-shadow) !important;
     }
 
     #urlbar-container,
@@ -61,16 +59,11 @@
         padding-block: 0px !important;
     }
 
-    #urlbar-container
-    {
-        --urlbar-container-height: var(--tab-min-height) !important;
-    }
-
     /* -------------------- Bookmarks Bar / Notifications -------------------- */
 
     #navigator-toolbox > *:not(#TabsToolbar, #nav-bar)
     {
-        grid-column: 1 / span 3 !important;
+        grid-column: 1 / span 2 !important;
     }
 
     /* -------------------- Customization -------------------- */
@@ -78,71 +71,5 @@
     #customization-panelWrapper
     {
         --panel-arrow-offset: 0px !important;
-    }
-
-    /* -------------------- Floating Tabs -------------------- */
-
-    @media (-moz-bool-pref: "userChrome.Tabs.Option1.Enabled") or
-           (-moz-bool-pref: "userChrome.Tabs.Option2.Enabled") or
-           (-moz-bool-pref: "userChrome.Tabs.Option3.Enabled") or
-           (-moz-bool-pref: "userChrome.Tabs.Option4.Enabled") or
-           (-moz-bool-pref: "userChrome.Tabs.Option5.Enabled")
-    {
-        #TabsToolbar::before
-        {
-            display: none !important;
-        }
-
-        #nav-bar
-        {
-            margin: var(--tab-block-margin) !important;
-            border-radius: var(--tab-border-radius) !important;
-            box-shadow: var(--outer-box-shadow) !important;
-        }
-        
-        #PersonalToolbar
-        {
-            margin-inline: var(--tab-block-margin) !important;
-            border-radius: var(--tab-border-radius) !important;
-            box-shadow: var(--outer-box-shadow) !important;
-        }
-
-        #PersonalToolbar[collapsed="false"]
-        {
-            margin-bottom: var(--tab-block-margin) !important;
-        }
-    }
-
-    /* -------------------- Attached Tabs -------------------- */
-
-    @media (-moz-bool-pref: "userChrome.Tabs.Option6.Enabled")  or
-           (-moz-bool-pref: "userChrome.Tabs.Option7.Enabled")  or
-           (-moz-bool-pref: "userChrome.Tabs.Option8.Enabled")  or
-           (-moz-bool-pref: "userChrome.Tabs.Option9.Enabled")  or
-           (-moz-bool-pref: "userChrome.Tabs.Option10.Enabled") or
-           (-moz-bool-pref: "userChrome.Tabs.Option11.Enabled") or
-           (-moz-bool-pref: "userChrome.Tabs.Option12.Enabled") or
-           (-moz-bool-pref: "userChrome.Tabs.Option13.Enabled")
-    {
-        #nav-bar
-        {
-            position: relative !important;
-            overflow: visible !important;
-
-            &::before
-            {
-                content: "";
-                display: block;
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                inset-inline-start: 0px;
-                inset-block-start: 0px;
-                pointer-events: none;
-                z-index: 0;
-                clip-path: inset(0 -4px);
-                box-shadow: var(--outer-box-shadow);
-            }
-        }
     }
 }
