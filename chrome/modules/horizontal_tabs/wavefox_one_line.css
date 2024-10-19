@@ -72,4 +72,69 @@
     {
         --panel-arrow-offset: 0px !important;
     }
+
+    /* -------------------- Windows -------------------- */
+
+    @media (-moz-platform: windows)
+    {
+        @media (-moz-windows-accent-color-in-titlebar) or (-moz-windows-mica)
+        {
+            :root[tabsintitlebar]:not([lwtheme]) #nav-bar
+            {
+                color: inherit !important;
+                --toolbarbutton-icon-fill: currentColor !important;
+                --toolbarbutton-hover-background: color-mix(in srgb, currentColor 17%, transparent) !important;
+                --toolbarbutton-active-background: color-mix(in srgb, currentColor 30%, transparent) !important;
+            }
+        }
+        
+        :root[tabsintitlebar] #nav-bar
+        {
+            will-change: auto !important;
+            transition: color var(--inactive-window-transition) !important;
+
+            &:-moz-window-inactive
+            {
+                color: color-mix(in srgb, currentColor calc(var(--inactive-titlebar-opacity) * 100%), transparent) !important;
+            }
+        }
+    }
+    
+    /* -------------------- Linux -------------------- */
+
+    @media (-moz-platform: linux)
+    {
+        :root[tabsintitlebar]:not([lwtheme]) #nav-bar
+        {
+            color: inherit !important;
+            --toolbarbutton-icon-fill: currentColor !important;
+        }
+        
+        :root[tabsintitlebar] #nav-bar
+        {
+            will-change: auto !important;
+            transition: color var(--inactive-window-transition) !important;
+
+            &:-moz-window-inactive
+            {
+                color: color-mix(in srgb, currentColor calc(var(--inactive-titlebar-opacity) * 100%), transparent) !important;
+            }
+        }
+    }
+        
+    /* -------------------- MacOS -------------------- */
+
+    @media (-moz-platform: macos)
+    {
+        :root[tabsintitlebar] #nav-bar
+        {
+            will-change: auto !important;
+            transition: color var(--inactive-window-transition) !important;
+
+            &:-moz-window-inactive
+            {
+                color: color-mix(in srgb, currentColor calc(var(--inactive-titlebar-opacity) * 100%), transparent) !important;
+            }
+        }
+    }
 }
