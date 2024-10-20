@@ -7,7 +7,7 @@
         #navigator-toolbox
         {
             background-color: transparent !important;
-            border-top: none !important;
+            border-top-color: transparent !important;
         }
 
         .titlebar-buttonbox-container
