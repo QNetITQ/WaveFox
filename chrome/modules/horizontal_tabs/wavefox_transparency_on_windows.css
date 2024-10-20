@@ -1,0 +1,14 @@
+:root[tabsintitlebar]:not([lwtheme])
+{
+    background-color: transparent !important;
+
+    #navigator-toolbox
+    {
+        background-color: transparent !important;
+    }
+
+    .titlebar-buttonbox-container
+    {
+        align-items: start !important;
+    }
+}
