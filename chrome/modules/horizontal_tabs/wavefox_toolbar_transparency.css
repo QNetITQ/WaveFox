@@ -9,8 +9,6 @@
         --outer-drop-shadow: initial !important;
         --toolbarbutton-hover-background: color-mix(in srgb, currentColor 17%, transparent) !important;
         --toolbarbutton-active-background: color-mix(in srgb, currentColor 30%, transparent) !important;
-        --urlbar-box-hover-bgcolor: color-mix(in srgb, currentColor 17%, transparent) !important;
-        --urlbar-box-active-bgcolor: color-mix(in srgb, currentColor 30%, transparent) !important;
         
         @media (-moz-bool-pref: "userChrome.Toolbar.Transparency.Low.Enabled")
         {
@@ -34,12 +32,6 @@
             background-color: color-mix(in srgb, var(--toolbar-bgcolor), transparent var(--toolbar-transparency-level)) !important;
             background-image: none !important;
         }
-
-        #urlbar:not([focused], [open]) > #urlbar-background,
-        #searchbar:not(:focus-within)
-        {
-            background-color: color-mix(in srgb, var(--toolbar-field-background-color), transparent var(--toolbar-transparency-level)) !important;
-        }
     }
 }
 
@@ -50,28 +42,16 @@
         --toolbarbutton-hover-background: color-mix(in srgb, currentColor 17%, transparent) !important;
         --toolbarbutton-active-background: color-mix(in srgb, currentColor 30%, transparent) !important;
 
-        #nav-bar
-        {
-            --toolbar-field-background-color: var(--toolbar-bgcolor) !important;
-            --toolbar-field-color: var(--toolbar-color) !important;
-            --toolbar-field-border-color: transparent !important;
-            background-color: transparent !important;
-        }
-
-        #urlbar:not([focused], [open]) > #urlbar-background,
-        #searchbar:not(:focus-within)
-        {
-            box-shadow: var(--outer-box-shadow) !important;
-        }
-
+        #nav-bar,
         #PersonalToolbar
         {
             background-color: transparent !important;
         }
         
-        #TabsToolbar::before
+        #TabsToolbar::before,
+        #nav-bar
         {
-            display: none !important;
+            box-shadow: none !important;
         }
     }
 }
