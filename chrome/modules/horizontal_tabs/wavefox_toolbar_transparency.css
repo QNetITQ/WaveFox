@@ -4,6 +4,9 @@
 {
     :root:not([lwtheme])
     {
+        --outer-box-shadow: initial !important;
+        --inner-box-shadow: initial !important;
+        --outer-drop-shadow: initial !important;
         --toolbarbutton-hover-background: color-mix(in srgb, currentColor 17%, transparent) !important;
         --toolbarbutton-active-background: color-mix(in srgb, currentColor 30%, transparent) !important;
         --urlbar-box-hover-bgcolor: color-mix(in srgb, currentColor 17%, transparent) !important;
@@ -29,6 +32,7 @@
         #PersonalToolbar
         {
             background-color: color-mix(in srgb, var(--toolbar-bgcolor), transparent var(--toolbar-transparency-level)) !important;
+            background-image: none !important;
         }
 
         #urlbar:not([focused], [open]) > #urlbar-background,
