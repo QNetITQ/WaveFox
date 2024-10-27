@@ -13,6 +13,7 @@
         .titlebar-buttonbox-container
         {
             align-items: start !important;
+            opacity: 0 !important;
         }
     }
 }
