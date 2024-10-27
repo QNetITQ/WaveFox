@@ -10,7 +10,7 @@
             border-top-color: transparent !important;
         }
 
-        .titlebar-buttonbox-container
+        &:not([inFullscreen]) .browser-titlebar > .titlebar-buttonbox-container
         {
             align-items: start !important;
             opacity: 0 !important;
