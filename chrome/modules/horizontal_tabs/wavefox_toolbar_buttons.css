@@ -59,9 +59,15 @@
     counter-increment: TabCounter;
 }
 
+#tabbrowser-tabs ~ #alltabs-button > .toolbarbutton-badge-stack > .toolbarbutton-icon
+{
+    opacity: 0 !important;
+}
+
 #tabbrowser-tabs ~ #alltabs-button::after
 {
     content: counter(TabCounter);
+    position: absolute;
 }
 
 /* ---------------------------------------- Tab Bar ---------------------------------------- */
