@@ -135,12 +135,12 @@ By default context menus follow the selected interface density, but it is possib
 - `userChrome.Menu.Size.Touch.Enabled`
 
 ### Lepton Icons (Menu icons)
-This is third-party code. I will update this code according to the original source. The first two keys are mandatory. The rest can be turned on arbitrarily or all together.
+This is third-party code. I will update this code according to the original source. Unlike other options, these keys can be enabled in any order, or all together.
 
 ![изображение](https://user-images.githubusercontent.com/85301851/151192118-0cbdb5a7-a77f-4275-8841-2ac321657c86.png)
 
-- `svg.context-properties.content.enabled`
-- `userChrome.Menu.Icons.LeptonIcons.Enabled`
+- `svg.context-properties.content.enabled` (Required key)
+- `userChrome.Menu.Icons.LeptonIcons.Enabled` (Required key)
   - `userChrome.icon.panel_full` or `userChrome.icon.panel_photon`
   - `userChrome.icon.library`
   - `userChrome.icon.panel`
