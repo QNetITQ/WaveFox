@@ -260,11 +260,7 @@
 {
     background-color: transparent !important;
     border: none !important;
-    border-radius: 50% !important;
-    color: inherit !important;
     fill: currentColor !important;
-    fill-opacity: 1 !important;
-    z-index: 1 !important;
 }
 
 .tab-icon-overlay:not([crashed]):hover
@@ -294,20 +290,16 @@
     margin-inline-end: 10px !important;
 }
 
-.tabbrowser-tab[busy] .tab-icon-overlay
-{
-    display: none !important;
-}
-
-.tabbrowser-tab:is([pinned], [image], [sharing], [pictureinpicture]):is([soundplaying], [muted], [activemedia-blocked]):not([busy], [crashed]) .tab-icon-stack > :not(.tab-icon-overlay)
+.tabbrowser-tab:is([pinned], [image], [sharing], [pictureinpicture]):is([soundplaying], [muted], [activemedia-blocked]):not([crashed]) .tab-icon-stack > :not(.tab-icon-overlay)
 {
     mask-image: url("svg_files/media/Media.svg");
     mask-size: 16px 16px;
 }
 
-:root:-moz-locale-dir(rtl) .tabbrowser-tab:is([pinned], [image], [sharing], [pictureinpicture]):is([soundplaying], [muted], [activemedia-blocked]):not([busy], [crashed]) .tab-icon-stack > :not(.tab-icon-overlay)
+:root:-moz-locale-dir(rtl) .tabbrowser-tab:is([pinned], [image], [sharing], [pictureinpicture]):is([soundplaying], [muted], [activemedia-blocked]):not([crashed]) .tab-icon-stack > :not(.tab-icon-overlay)
 {
     mask-image: url("svg_files/media/Media_rtl.svg");
+    mask-size: 16px 16px;
 }
 
 /* ---------- Picture-In-Picture ---------- */
@@ -356,6 +348,7 @@
 .tab-label-container
 {
     height: var(--tab-min-height) !important;
+    font-size: 12px !important;
 }
 
 .tab-label
@@ -379,6 +372,7 @@
     width: 100% !important;
     height: 16px !important;
     line-height: 16px !important;
+    overflow: hidden !important;
     margin-block: 0px !important;
     order: -1 !important;
 }
