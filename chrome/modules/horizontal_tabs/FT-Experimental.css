@@ -69,7 +69,22 @@
     
     
 
+/* ---------------------------------------- Density ---------------------------------------- */
 
+:root[uidensity="compact"]
+{
+    --tab-min-height: 32px !important;
+}
+
+:root
+{
+    --tab-min-height: 36px !important;
+}
+
+:root[uidensity="touch"]
+{
+    --tab-min-height: 40px !important;
+}
 
 /* ---------------------------------------- Titlebar ---------------------------------------- */
 
