@@ -1,0 +1,137 @@
+/* ---------------------------------------- Custom properties ---------------------------------------- */
+
+@property --wavefox-ft-border-radius
+{
+    syntax: "<length>";
+    inherits: true;
+    initial-value: 4px;
+}
+
+@property --wavefox-ft-shadow
+{
+    syntax: "*";
+    inherits: true;
+    initial-value: none;
+}
+
+/* ---------------------------------------- Floating tabs ---------------------------------------- */
+
+@media (-moz-bool-pref: "userChrome.Tabs.Option1.Enabled") or
+       (-moz-bool-pref: "userChrome.Tabs.Option2.Enabled") or
+       (-moz-bool-pref: "userChrome.Tabs.Option3.Enabled")
+{
+    /* -------------------- Tab shapes -------------------- */
+
+    @media (-moz-bool-pref: "userChrome.Tabs.Option1.Enabled")
+    {
+        :root
+        {
+            --wavefox-ft-border-radius: 8px;
+        }
+    }
+    
+    @media (-moz-bool-pref: "userChrome.Tabs.Option2.Enabled")
+    {
+        :root
+        {
+            --wavefox-ft-border-radius: 12px;
+        }
+    }
+    
+    @media (-moz-bool-pref: "userChrome.Tabs.Option3.Enabled")
+    {
+        :root
+        {
+            --wavefox-ft-border-radius: 50px;
+        }
+    }
+}
+
+        
+
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+/* ---------------------------------------- Titlebar ---------------------------------------- */
+
+:root[tabsintitlebar]
+{
+    .browser-titlebar
+    {
+        will-change: auto !important;
+        transition: color var(--inactive-window-transition) !important;
+
+        &:-moz-window-inactive
+        {
+            color: color-mix(in srgb, currentColor calc(var(--inactive-titlebar-opacity) * 100%), transparent) !important;
+            opacity: 1 !important;
+        }
+    }
+}
+
+/* ---------------------------------------- Tabs ---------------------------------------- */
+
+.tabbrowser-tab
+{
+    --tab-label-mask-size: 0px !important;
+
+    .tab-background
+    {
+        border-radius: var(--wavefox-ft-border-radius) !important;
+    }
+
+    &[pinned] .tab-content
+    {
+        padding-inline: calc((var(--tab-min-height) - 16px) / 2 + var(--pinned-tabs-width-offset, 0px)) !important;
+    }
+
+    &:not([pinned]) .tab-content
+    {
+        padding-inline: 10px !important;
+    }
+}
+
+.tabbrowser-tab[visuallyselected] .tab-background
+{
+    box-shadow: var(--wavefox-ft-shadow) !important;
+}
+
+.tabbrowser-tab[pending] .tab-icon-image
+{
+    filter: saturate(0) !important;
+}
+
+.tab-close-button
+{
+    width: 16px !important;
+    height: 16px !important;
+    border-radius: 50% !important;
+    padding: 2px !important;
+    margin: 0px !important;
+}
+
+/* ---------------------------------------- Indents ---------------------------------------- */
+
+#tabbrowser-tabs:not([overflow]) .tabbrowser-tab:nth-child(1 of .tabbrowser-tab:not([pinned], [hidden]))
+{
+    margin-inline-start: 0px !important;
+}
