@@ -84,6 +84,7 @@
 {
     --tab-shadow-max-size: 0px !important;
     --tab-attention-indicator-position: 50% calc(50% + 12px);
+    --tabstrip-min-height: auto !important;
 }
 
 /* ---------------------------------------- Nav Bar ---------------------------------------- */
