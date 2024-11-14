@@ -1,7 +1,178 @@
+/* ---------------------------------------- Custom properties ---------------------------------------- */
+
+@property --wavefox-ft-tab-border-radius
+{
+    syntax: "<length>";
+    inherits: true;
+    initial-value: 4px;
+}
+
+/* ---------------------------------------- Density ---------------------------------------- */
+
+:root
+{
+    --tab-min-height: 36px !important;
+
+    &[uidensity="compact"]
+    {
+        --tab-min-height: 32px !important;
+    }
+
+    &[uidensity="touch"]
+    {
+        --tab-min-height: 40px !important;
+    }
+}
+
+/* ---------------------------------------- Titlebar ---------------------------------------- */
+
+:root[tabsintitlebar]
+{
+    .browser-titlebar
+    {
+        will-change: auto !important;
+        transition: color var(--inactive-window-transition) !important;
+
+        &:-moz-window-inactive
+        {
+            color: color-mix(in srgb, currentColor calc(var(--inactive-titlebar-opacity) * 100%), transparent) !important;
+            opacity: 1 !important;
+        }
+    }
+}
+
+/* ---------------------------------------- Tabs ---------------------------------------- */
+
+.tabbrowser-tab
+{
+    &[pinned] .tab-content
+    {
+        padding-inline: calc((var(--tab-min-height) - 16px) / 2) !important;
+    }
+
+    &:not([pinned]) .tab-content
+    {
+        padding-inline: 10px !important;
+    }
+
+    &[pending] .tab-icon-image
+    {
+        filter: saturate(0) !important;
+    }
+
+    .tab-background
+    {
+        border-radius: var(--wavefox-ft-tab-border-radius) !important;
+    }
+
+    .tab-close-button
+    {
+        width: 16px !important;
+        height: 16px !important;
+        border-radius: 50% !important;
+        padding: 2px !important;
+        margin: 0px !important;
+    }
+}
+
+/* ---------------------------------------- Indents ---------------------------------------- */
+
+#tabbrowser-tabs:not([overflow]) .tabbrowser-tab:nth-child(1 of .tabbrowser-tab:not([pinned], [hidden]))
+{
+    margin-inline-start: 0px !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------------------------------- Floating tabs ---------------------------------------- */
+
+@media (-moz-bool-pref: "userChrome.Tabs.Option1.Enabled") or
+       (-moz-bool-pref: "userChrome.Tabs.Option2.Enabled") or
+       (-moz-bool-pref: "userChrome.Tabs.Option3.Enabled")
+{
+    /* -------------------- Tab shapes -------------------- */
+
+    @media (-moz-bool-pref: "userChrome.Tabs.Option1.Enabled")
+    {
+        :root
+        {
+            --wavefox-ft-border-radius: 8px;
+        }
+    }
+    
+    @media (-moz-bool-pref: "userChrome.Tabs.Option2.Enabled")
+    {
+        :root
+        {
+            --wavefox-ft-border-radius: 12px;
+        }
+    }
+    
+    @media (-moz-bool-pref: "userChrome.Tabs.Option3.Enabled")
+    {
+        :root
+        {
+            --wavefox-ft-border-radius: 50px;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------------------------------- Attached tabs ---------------------------------------- */
+
+@media (-moz-bool-pref: "userChrome.Tabs.Option4.Enabled")  or
+       (-moz-bool-pref: "userChrome.Tabs.Option5.Enabled")  or
+       (-moz-bool-pref: "userChrome.Tabs.Option6.Enabled")  or
+       (-moz-bool-pref: "userChrome.Tabs.Option7.Enabled")  or
+       (-moz-bool-pref: "userChrome.Tabs.Option8.Enabled")  or
+       (-moz-bool-pref: "userChrome.Tabs.Option9.Enabled")  or
+       (-moz-bool-pref: "userChrome.Tabs.Option10.Enabled") or
+       (-moz-bool-pref: "userChrome.Tabs.Option11.Enabled")
+{
+
+
 /* ---------------------------------------- Tabs ---------------------------------------- */
 
 :root
 {
+    @media (-moz-bool-pref: "userChrome.Tabs.Option4.Enabled")
+    {
+        --tab-first-last-inline-margin: calc(var(--tab-min-height) / 4);
+    }
+
+    @media (-moz-bool-pref: "userChrome.Tabs.Option5.Enabled")
+    {
+        --tab-first-last-inline-margin: calc(var(--tab-min-height) / 4);
+    }
+
     @media (-moz-bool-pref: "userChrome.Tabs.Option6.Enabled")
     {
         --tab-first-last-inline-margin: calc(var(--tab-min-height) / 4);
@@ -9,17 +180,17 @@
 
     @media (-moz-bool-pref: "userChrome.Tabs.Option7.Enabled")
     {
-        --tab-first-last-inline-margin: calc(var(--tab-min-height) / 4);
+        --tab-first-last-inline-margin: calc(var(--tab-min-height) / 2 - 6px);
     }
 
     @media (-moz-bool-pref: "userChrome.Tabs.Option8.Enabled")
     {
-        --tab-first-last-inline-margin: calc(var(--tab-min-height) / 4);
+        --tab-first-last-inline-margin: calc(var(--tab-min-height) / 2);
     }
 
     @media (-moz-bool-pref: "userChrome.Tabs.Option9.Enabled")
     {
-        --tab-first-last-inline-margin: calc(var(--tab-min-height) / 2 - 6px);
+        --tab-first-last-inline-margin: calc(var(--tab-min-height) / 2);
     }
 
     @media (-moz-bool-pref: "userChrome.Tabs.Option10.Enabled")
@@ -30,32 +201,6 @@
     @media (-moz-bool-pref: "userChrome.Tabs.Option11.Enabled")
     {
         --tab-first-last-inline-margin: calc(var(--tab-min-height) / 2);
-    }
-
-    @media (-moz-bool-pref: "userChrome.Tabs.Option12.Enabled")
-    {
-        --tab-first-last-inline-margin: calc(var(--tab-min-height) / 2);
-    }
-
-    @media (-moz-bool-pref: "userChrome.Tabs.Option13.Enabled")
-    {
-        --tab-first-last-inline-margin: calc(var(--tab-min-height) / 2);
-    }
-
-    /* -------------------- Floating Tabs -------------------- */
-
-    @media (-moz-bool-pref: "userChrome.Tabs.Option1.Enabled") or
-           (-moz-bool-pref: "userChrome.Tabs.Option2.Enabled") or
-           (-moz-bool-pref: "userChrome.Tabs.Option3.Enabled") or
-           (-moz-bool-pref: "userChrome.Tabs.Option4.Enabled") or
-           (-moz-bool-pref: "userChrome.Tabs.Option5.Enabled")
-    {
-        --tab-first-last-inline-margin: calc(var(--tab-block-margin) / 2);
-        --tab-scroll-animation-inline-margin: calc(-1 * var(--tab-first-last-inline-margin));
-        --tab-scroll-animation-inline-padding: calc(var(--tab-first-last-inline-margin) * 2);
-        --tab-bg-block-margin: var(--tab-block-margin);
-        --my-tab-inline-padding: var(--tab-first-last-inline-margin);
-        --tab-separator-offset: var(--tab-first-last-inline-margin);
     }
 
     /* -------------------- Attached Tabs -------------------- */
@@ -94,40 +239,10 @@
     border: none !important;
 }
 
-/* ---------------------------------------- Titlebar ---------------------------------------- */
-
-:root[tabsintitlebar]
-{
-    .browser-titlebar
-    {
-        will-change: auto !important;
-        transition: color var(--inactive-window-transition) !important;
-
-        &:-moz-window-inactive
-        {
-            color: color-mix(in srgb, currentColor calc(var(--inactive-titlebar-opacity) * 100%), transparent) !important;
-            opacity: 1 !important;
-        }
-    }
-}
-
-/* ---------------------------------------- Density ---------------------------------------- */
-
-:root[uidensity="compact"]
-{
-    --tab-min-height: 32px !important;
-}
-
-:root[uidensity="touch"]
-{
-    --tab-min-height: 40px !important;
-}
-
 /* ---------------------------------------- Tabs ---------------------------------------- */
 
 .tabbrowser-tab
 {
-    --tab-label-mask-size: 0px !important;
     overflow-clip-margin: var(--tab-min-height) !important;
     padding-inline: var(--my-tab-inline-padding) !important;
 
@@ -139,46 +254,13 @@
 
         .tab-background
         {
-            --gradient-background-image: linear-gradient(var(--toolbar-bgcolor), var(--toolbar-bgcolor));
-            --gradient-background-attachment: fixed;
-            --gradient-background-size: auto auto;
-            --gradient-background-position: left top;
-            --gradient-background-repeat: no-repeat;
-
-            --amo-background-image-1: var(--lwt-header-image, none);
-            --amo-background-attachment-1: fixed;
-            --amo-background-size-1: auto auto;
-            --amo-background-position-1: right top;
-            --amo-background-repeat-1: no-repeat;
-
-            --amo-background-image-2: var(--lwt-additional-images, none);
-            --amo-background-attachment-2: fixed, fixed, fixed;
-            --amo-background-size-2: auto auto, auto auto, auto auto;
-            --amo-background-position-2: var(--lwt-background-alignment);
-            --amo-background-repeat-2: var(--lwt-background-tiling);
-
-            background-color: transparent !important;
-            background-image: var(--gradient-background-image), var(--amo-background-image-1), var(--amo-background-image-2) !important;
-            background-attachment: var(--gradient-background-attachment), var(--amo-background-attachment-1), var(--amo-background-attachment-2) !important;
-            background-size: var(--gradient-background-size), var(--amo-background-size-1), var(--amo-background-size-2) !important;
-            background-position: var(--gradient-background-position), var(--amo-background-position-1), var(--amo-background-position-2) !important;
-            background-repeat: var(--gradient-background-repeat), var(--amo-background-repeat-1), var(--amo-background-repeat-2) !important;
+            background-color: var(--toolbar-bgcolor) !important;
         }
     }
 
     &:not([visuallyselected])
     {
         color: inherit !important;
-
-        &:hover .tab-background
-        {
-            background-color: var(--toolbarbutton-hover-background) !important;
-        }
-
-        &[multiselected] .tab-background
-        {
-            background-color: var(--toolbarbutton-active-background) !important;
-        }
 
         #tabbrowser-tabs[movingtab] &
         {
@@ -199,45 +281,11 @@
         border-radius: 0px !important;
         pointer-events: none !important;
     }
-
-    &[pinned] .tab-content
-    {
-        padding-inline: calc((var(--tab-min-height) - 16px) / 2 + var(--pinned-tabs-width-offset, 0px)) !important;
-    }
-
-    &:not([pinned]) .tab-content
-    {
-        padding-inline: 10px !important;
-    }
 }
 
 #tabbrowser-tabs[overflow] .tab-drop-indicator
 {
     inset-inline-start: var(--tab-first-last-inline-margin) !important;
-}
-
-.tabbrowser-tab[pending] .tab-icon-image
-{
-    filter: saturate(0) !important;
-}
-
-.tab-close-button
-{
-    width: 16px !important;
-    height: 16px !important;
-    border-radius: 50% !important;
-    padding: 2px !important;
-    margin: 0px !important;
-}
-
-.tab-close-button:hover
-{
-    background-color: var(--toolbarbutton-hover-background) !important;
-}
-
-.tab-close-button:hover:active
-{
-    background-color: var(--toolbarbutton-active-background) !important;
 }
 
 /* -------------------- Container Indicators -------------------- */
@@ -263,11 +311,6 @@
 }
 
 /* ---------------------------------------- Indents ---------------------------------------- */
-
-#tabbrowser-tabs:not([overflow]) .tabbrowser-tab:nth-child(1 of .tabbrowser-tab:not([pinned], [hidden]))
-{
-    margin-inline-start: 0px !important;
-}
 
 #tabbrowser-tabs:not([overflow]) .tabbrowser-tab:nth-child(1 of .tabbrowser-tab:not([hidden])),
 #tabbrowser-tabs[overflow] .tabbrowser-tab:nth-child(1 of .tabbrowser-tab:not([pinned], [hidden])),
@@ -310,4 +353,20 @@
 #tabbrowser-tabs[overflow]:not([movingtab]) .tabbrowser-tab:nth-last-child(1 of .tabbrowser-tab:not([hidden]))
 {
     margin-inline-end: 0px !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

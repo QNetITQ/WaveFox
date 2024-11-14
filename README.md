@@ -9,10 +9,10 @@
 [Download Firefox](https://www.mozilla.org/en-US/firefox/all/#product-desktop-release) / [Download WaveFox](https://github.com/QNetITQ/WaveFox/releases) / [WaveFox Nightly](https://github.com/QNetITQ/WaveFox/tree/WaveFox-Nightly)
 
 <details>
-  <summary>WaveFox v1.7.132</summary>
+  <summary>WaveFox v1.7.133</summary>
 
 - ##### Minimum Requirements
-  - Firefox 132
+  - Firefox 133
   - Windows / MacOS / Linux
 
 - Download the `chrome` folder and put it in your user profile folder
@@ -73,6 +73,13 @@
 
 ## Optional
 
+### Windows 11/10 Custom Transparency
+Install [DWMBlurGlass](https://github.com/Maplespe/DWMBlurGlass). Configure to your liking and activate the keys below. Works only with the system theme. If you just want to enable MicaAlt on Windows 11, see the FAQ.
+![изображение](https://github.com/user-attachments/assets/632c972f-b48a-4ca6-8c69-28859e34485b)
+
+- `browser.theme.windows.accent-color-in-tabs.enabled`
+- `userChrome.Windows.Transparency.Enabled`
+
 ### Linux Transparency
 Requires Linux with transparency support. Works only with the system theme.
 
@@ -128,12 +135,12 @@ By default context menus follow the selected interface density, but it is possib
 - `userChrome.Menu.Size.Touch.Enabled`
 
 ### Lepton Icons (Menu icons)
-This is third-party code. I will update this code according to the original source. The first two keys are mandatory. The rest can be turned on arbitrarily or all together.
+This is third-party code. I will update this code according to the original source. Unlike other options, these keys can be enabled in any order, or all together.
 
 ![изображение](https://user-images.githubusercontent.com/85301851/151192118-0cbdb5a7-a77f-4275-8841-2ac321657c86.png)
 
-- `svg.context-properties.content.enabled`
-- `userChrome.Menu.Icons.LeptonIcons.Enabled`
+- `svg.context-properties.content.enabled` (Required key)
+- `userChrome.Menu.Icons.LeptonIcons.Enabled` (Required key)
   - `userChrome.icon.panel_full` or `userChrome.icon.panel_photon`
   - `userChrome.icon.library`
   - `userChrome.icon.panel`
@@ -165,7 +172,7 @@ This is third-party code. I will update this code according to the original sour
 ![Снимок](https://github.com/QNetITQ/WaveFox/assets/85301851/514cf30d-a417-48cb-bfd1-0e77c9df1bf4)
 
 - `userChrome.Tabs.TabsOnBottom.Enabled`
-- `browser.tabs.inTitlebar` (Required key. Set the value to 0)
+- `browser.tabs.inTitlebar` (Optional key. Set the value to 0)
 
 ### One Line
 ![Снимок](https://github.com/QNetITQ/WaveFox/assets/85301851/05bba314-643d-46f3-a09c-b3ac31f9761d)

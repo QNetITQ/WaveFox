@@ -59,9 +59,15 @@
     counter-increment: TabCounter;
 }
 
+#tabbrowser-tabs ~ #alltabs-button > .toolbarbutton-badge-stack > .toolbarbutton-icon
+{
+    opacity: 0 !important;
+}
+
 #tabbrowser-tabs ~ #alltabs-button::after
 {
     content: counter(TabCounter);
+    position: absolute;
 }
 
 /* ---------------------------------------- Tab Bar ---------------------------------------- */
@@ -94,5 +100,5 @@
 .toolbarbutton-1:has(+ #tabbrowser-tabs[overflow][haspinnedtabs])
 {
     margin-inline-end: calc(-1 * var(--tab-first-last-inline-margin) / 2) !important;
-    z-index: 0 !important;
+    z-index: 1 !important;
 }
