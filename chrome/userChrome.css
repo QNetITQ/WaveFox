@@ -5,7 +5,6 @@
 @import "modules/horizontal_tabs/wavefox_tabs.css"                      layer(BasicPriority) /* supports() */ not (-moz-bool-pref: "sidebar.verticalTabs");
 
 /*
-@import "modules/horizontal_tabs/wavefox_tab_shapes.css"                layer(BasicPriority) /* supports() */ not (-moz-bool-pref: "sidebar.verticalTabs");
 @import "modules/horizontal_tabs/wavefox_drag_space.css"                layer(BasicPriority) /* supports() */ not (-moz-bool-pref: "sidebar.verticalTabs");
 @import "modules/horizontal_tabs/wavefox_selected_tab_indicator.css"    layer(BasicPriority) /* supports() */ not (-moz-bool-pref: "sidebar.verticalTabs");
 @import "modules/horizontal_tabs/wavefox_toolbar_transparency.css"      layer(BasicPriority) /* supports() */ not (-moz-bool-pref: "sidebar.verticalTabs");
