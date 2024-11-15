@@ -77,7 +77,8 @@
 
 @media (-moz-bool-pref: "userChrome.Tabs.Option1.Enabled") or
        (-moz-bool-pref: "userChrome.Tabs.Option2.Enabled") or
-       (-moz-bool-pref: "userChrome.Tabs.Option3.Enabled")
+       (-moz-bool-pref: "userChrome.Tabs.Option3.Enabled") or
+       (-moz-bool-pref: "userChrome.Tabs.Option4.Enabled")
 {
     /* -------------------- Tab shapes -------------------- */
 
@@ -241,14 +242,9 @@
 
 :root
 {
-    @media (-moz-bool-pref: "userChrome.Tabs.Option4.Enabled")
-    {
-        --tab-first-last-inline-margin: calc(var(--tab-min-height) / 4);
-    }
-
     @media (-moz-bool-pref: "userChrome.Tabs.Option5.Enabled")
     {
-        --tab-first-last-inline-margin: calc(var(--tab-min-height) / 4);
+        --tab-first-last-inline-margin: calc(var(--tab-min-height) / 4); /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
     }
 
     @media (-moz-bool-pref: "userChrome.Tabs.Option6.Enabled")
@@ -258,12 +254,12 @@
 
     @media (-moz-bool-pref: "userChrome.Tabs.Option7.Enabled")
     {
-        --tab-first-last-inline-margin: calc(var(--tab-min-height) / 2 - 6px);
+        --tab-first-last-inline-margin: calc(var(--tab-min-height) / 4);
     }
 
     @media (-moz-bool-pref: "userChrome.Tabs.Option8.Enabled")
     {
-        --tab-first-last-inline-margin: calc(var(--tab-min-height) / 2);
+        --tab-first-last-inline-margin: calc(var(--tab-min-height) / 2 - 6px);
     }
 
     @media (-moz-bool-pref: "userChrome.Tabs.Option9.Enabled")
@@ -281,23 +277,24 @@
         --tab-first-last-inline-margin: calc(var(--tab-min-height) / 2);
     }
 
+    @media (-moz-bool-pref: "userChrome.Tabs.Option12.Enabled")
+    {
+        --tab-first-last-inline-margin: calc(var(--tab-min-height) / 2);
+    }
+
     /* -------------------- Attached Tabs -------------------- */
 
-    @media (-moz-bool-pref: "userChrome.Tabs.Option6.Enabled")  or
+    @media (-moz-bool-pref: "userChrome.Tabs.Option5.Enabled")  or
+           (-moz-bool-pref: "userChrome.Tabs.Option6.Enabled")  or
            (-moz-bool-pref: "userChrome.Tabs.Option7.Enabled")  or
            (-moz-bool-pref: "userChrome.Tabs.Option8.Enabled")  or
            (-moz-bool-pref: "userChrome.Tabs.Option9.Enabled")  or
            (-moz-bool-pref: "userChrome.Tabs.Option10.Enabled") or
            (-moz-bool-pref: "userChrome.Tabs.Option11.Enabled") or
-           (-moz-bool-pref: "userChrome.Tabs.Option12.Enabled") or
-           (-moz-bool-pref: "userChrome.Tabs.Option13.Enabled")
+           (-moz-bool-pref: "userChrome.Tabs.Option12.Enabled")
     {
         --tab-scroll-animation-inline-margin: calc(-1 * var(--tab-first-last-inline-margin));
         --tab-scroll-animation-inline-padding: var(--tab-first-last-inline-margin);
-        --tab-bg-block-margin: 0px;
-        --my-tab-inline-padding: 0px;
-        --tab-separator-offset: 0px;
-        --pinned-tabs-width-offset: 2px;
     }
 }
 
@@ -317,48 +314,107 @@
     border: none !important;
 }
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 /* ---------------------------------------- Tabs ---------------------------------------- */
 
 .tabbrowser-tab
 {
-    overflow-clip-margin: var(--tab-min-height) !important;
-    padding-inline: var(--my-tab-inline-padding) !important;
+    overflow: visible !important;
+    padding-inline: 0px !important;
+    
+    &[pinned] .tab-content
+    {
+        padding-inline: calc((var(--tab-min-height) - 16px) / 2 + 2px) !important;
+    }
 
     &[visuallyselected]
     {
         color: var(--toolbar-color) !important;
-        position: relative;
-        z-index: 2 !important;
 
         .tab-background
         {
             background-color: var(--toolbar-bgcolor) !important;
         }
     }
-
-    &:not([visuallyselected])
-    {
-        color: inherit !important;
-
-        #tabbrowser-tabs[movingtab] &
-        {
-            z-index: 0 !important;
-        }
-    }
-
+    
     .tab-background
     {
-        mask-image: var(--left-svg), var(--center-svg), var(--right-svg);
-        mask-size: auto 100%, calc(100% - var(--tab-min-height) * 2) 100%, auto 100%;
-        mask-position: left center, center center, right center;
-        mask-repeat: no-repeat, no-repeat, no-repeat;
-        box-shadow: none !important;
-        outline: none !important;
-        margin-block: var(--tab-bg-block-margin) !important;
-        margin-inline: calc(-1 * (var(--tab-min-height) / 2)) !important;
+        position: relative !important;
+        margin-inline: calc(var(--tab-min-height) / 2) !important;
+        margin-block: 0px !important;
         border-radius: 0px !important;
-        pointer-events: none !important;
+        box-shadow: none !important;
+        
+        &::before,
+        &::after
+        {
+            content: "";
+            display: block;
+            position: absolute;
+            width: var(--tab-min-height);
+            height: var(--tab-min-height);
+            mask-size: var(--tab-min-height);
+            mask-position: center;
+            mask-repeat: no-repeat;
+        }
+        
+        &::before
+        {
+            inset-inline-end: 100%;
+            mask-image: var(--left-svg);
+        }
+        
+        &::after
+        {
+            inset-inline-start: 100%;
+            mask-image: var(--right-svg);
+        }
     }
+    
+    &[visuallyselected] .tab-background
+    {
+        &::before,
+        &::after
+        {
+            background-color: var(--toolbar-bgcolor) !important;
+        }
+    }
+    
+    &:not([visuallyselected]):hover .tab-background
+    {
+        &::before,
+        &::after
+        {
+            background-color: var(--tab-hover-background-color) !important;
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }
 
 #tabbrowser-tabs[overflow] .tab-drop-indicator
@@ -366,6 +422,35 @@
     inset-inline-start: var(--tab-first-last-inline-margin) !important;
 }
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 /* -------------------- Container Indicators -------------------- */
 
 .tab-context-line
