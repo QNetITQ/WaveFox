@@ -1,12 +1,3 @@
-/* ---------------------------------------- Custom properties ---------------------------------------- */
-
-@property --wavefox-ft-tab-border-radius
-{
-    syntax: "<length>";
-    inherits: true;
-    initial-value: 4px;
-}
-
 /* ---------------------------------------- Density ---------------------------------------- */
 
 :root
@@ -62,7 +53,7 @@
 
     .tab-background
     {
-        border-radius: var(--wavefox-ft-tab-border-radius) !important;
+        border-radius: var(--wavefox-tab-border-radius, 4px) !important;
     }
 
     .tab-close-button
@@ -82,27 +73,6 @@
     margin-inline-start: 0px !important;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ---------------------------------------- Floating tabs ---------------------------------------- */
 
 @media (-moz-bool-pref: "userChrome.Tabs.Option1.Enabled") or
@@ -115,7 +85,7 @@
     {
         :root
         {
-            --wavefox-ft-border-radius: 8px;
+            --wavefox-tab-border-radius: 8px;
         }
     }
     
@@ -123,7 +93,7 @@
     {
         :root
         {
-            --wavefox-ft-border-radius: 12px;
+            --wavefox-tab-border-radius: 12px;
         }
     }
     
@@ -131,7 +101,15 @@
     {
         :root
         {
-            --wavefox-ft-border-radius: 50px;
+            --wavefox-tab-border-radius: 16px;
+        }
+    }
+    
+    @media (-moz-bool-pref: "userChrome.Tabs.Option4.Enabled")
+    {
+        :root
+        {
+            --wavefox-tab-border-radius: 50px;
         }
     }
 }
@@ -148,109 +126,115 @@
 
 /* ---------------------------------------- Attached tabs ---------------------------------------- */
 
-@media (-moz-bool-pref: "userChrome.Tabs.Option4.Enabled")  or
-       (-moz-bool-pref: "userChrome.Tabs.Option5.Enabled")  or
+@media (-moz-bool-pref: "userChrome.Tabs.Option5.Enabled")  or
        (-moz-bool-pref: "userChrome.Tabs.Option6.Enabled")  or
        (-moz-bool-pref: "userChrome.Tabs.Option7.Enabled")  or
        (-moz-bool-pref: "userChrome.Tabs.Option8.Enabled")  or
        (-moz-bool-pref: "userChrome.Tabs.Option9.Enabled")  or
        (-moz-bool-pref: "userChrome.Tabs.Option10.Enabled") or
-       (-moz-bool-pref: "userChrome.Tabs.Option11.Enabled")
+       (-moz-bool-pref: "userChrome.Tabs.Option11.Enabled") or
+       (-moz-bool-pref: "userChrome.Tabs.Option12.Enabled")
 {
-
-    :root
-{
-    @media (-moz-bool-pref: "userChrome.Tabs.Option1.Enabled")
-    {
-        --left-svg:   url("svg_files/option_1/left_corners.svg");
-        --center-svg: url("svg_files/option_1/center.svg");
-        --right-svg:  url("svg_files/option_1/right_corners.svg");
-    }
-
-    @media (-moz-bool-pref: "userChrome.Tabs.Option2.Enabled")
-    {
-        --left-svg:   url("svg_files/option_2/left_corners.svg");
-        --center-svg: url("svg_files/option_2/center.svg");
-        --right-svg:  url("svg_files/option_2/right_corners.svg");
-    }
-
-    @media (-moz-bool-pref: "userChrome.Tabs.Option3.Enabled")
-    {
-        --left-svg:   url("svg_files/option_3/left_corners.svg");
-        --center-svg: url("svg_files/option_3/center.svg");
-        --right-svg:  url("svg_files/option_3/right_corners.svg");
-    }
-
-    @media (-moz-bool-pref: "userChrome.Tabs.Option4.Enabled")
-    {
-        --left-svg:   url("svg_files/option_4/left_corners.svg");
-        --center-svg: url("svg_files/option_4/center.svg");
-        --right-svg:  url("svg_files/option_4/right_corners.svg");
-    }
+    /* -------------------- Tab shapes -------------------- */
 
     @media (-moz-bool-pref: "userChrome.Tabs.Option5.Enabled")
     {
-        --left-svg:   url("svg_files/option_5/left_corners.svg");
-        --center-svg: url("svg_files/option_5/center.svg");
-        --right-svg:  url("svg_files/option_5/right_corners.svg");
+        :root
+        {
+            --wavefox-tab-border-radius: 0px;
+        }
     }
 
     @media (-moz-bool-pref: "userChrome.Tabs.Option6.Enabled")
     {
-        --left-svg:   url("svg_files/option_1/left_corners.svg");
-        --center-svg: url("svg_files/option_1/center.svg");
-        --right-svg:  url("svg_files/option_1/right_corners.svg");
+        :root
+        {
+            --left-svg:   url("svg_files/option_6/left_corners.svg");
+            --center-svg: url("svg_files/option_6/center.svg");
+            --right-svg:  url("svg_files/option_6/right_corners.svg");
+        }
     }
-
+    
     @media (-moz-bool-pref: "userChrome.Tabs.Option7.Enabled")
     {
-        --left-svg:   url("svg_files/option_6/left_corners.svg");
-        --center-svg: url("svg_files/option_6/center.svg");
-        --right-svg:  url("svg_files/option_6/right_corners.svg");
+        :root
+        {
+            --left-svg:   url("svg_files/option_7/left_corners.svg");
+            --center-svg: url("svg_files/option_7/center.svg");
+            --right-svg:  url("svg_files/option_7/right_corners.svg");
+        }
     }
-
+    
     @media (-moz-bool-pref: "userChrome.Tabs.Option8.Enabled")
     {
-        --left-svg:   url("svg_files/option_7/left_corners.svg");
-        --center-svg: url("svg_files/option_7/center.svg");
-        --right-svg:  url("svg_files/option_7/right_corners.svg");
+        :root
+        {
+            --left-svg:   url("svg_files/option_8/left_corners.svg");
+            --center-svg: url("svg_files/option_8/center.svg");
+            --right-svg:  url("svg_files/option_8/right_corners.svg");
+        }
     }
-
+    
     @media (-moz-bool-pref: "userChrome.Tabs.Option9.Enabled")
     {
-        --left-svg:   url("svg_files/option_8/left_corners.svg");
-        --center-svg: url("svg_files/option_8/center.svg");
-        --right-svg:  url("svg_files/option_8/right_corners.svg");
+        :root
+        {
+            --left-svg:   url("svg_files/option_9/left_corners.svg");
+            --center-svg: url("svg_files/option_9/center.svg");
+            --right-svg:  url("svg_files/option_9/right_corners.svg");
+        }
     }
-
+    
     @media (-moz-bool-pref: "userChrome.Tabs.Option10.Enabled")
     {
-        --left-svg:   url("svg_files/option_9/left_corners.svg");
-        --center-svg: url("svg_files/option_9/center.svg");
-        --right-svg:  url("svg_files/option_9/right_corners.svg");
+        :root
+        {
+            --left-svg:   url("svg_files/option_10/left_corners.svg");
+            --center-svg: url("svg_files/option_10/center.svg");
+            --right-svg:  url("svg_files/option_10/right_corners.svg");
+        }
     }
-
+    
     @media (-moz-bool-pref: "userChrome.Tabs.Option11.Enabled")
     {
-        --left-svg:   url("svg_files/option_10/left_corners.svg");
-        --center-svg: url("svg_files/option_10/center.svg");
-        --right-svg:  url("svg_files/option_10/right_corners.svg");
+        :root
+        {
+            --left-svg:   url("svg_files/option_11/left_corners.svg");
+            --center-svg: url("svg_files/option_11/center.svg");
+            --right-svg:  url("svg_files/option_11/right_corners.svg");
+        }
     }
-
+    
     @media (-moz-bool-pref: "userChrome.Tabs.Option12.Enabled")
     {
-        --left-svg:   url("svg_files/option_11/left_corners.svg");
-        --center-svg: url("svg_files/option_11/center.svg");
-        --right-svg:  url("svg_files/option_11/right_corners.svg");
+        :root
+        {
+            --left-svg:   url("svg_files/option_12/left_corners.svg");
+            --center-svg: url("svg_files/option_12/center.svg");
+            --right-svg:  url("svg_files/option_12/right_corners.svg");
+        }
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
-    @media (-moz-bool-pref: "userChrome.Tabs.Option13.Enabled")
-    {
-        --left-svg:   url("svg_files/option_12/left_corners.svg");
-        --center-svg: url("svg_files/option_12/center.svg");
-        --right-svg:  url("svg_files/option_12/right_corners.svg");
-    }
-}
 
 
 /* ---------------------------------------- Tabs ---------------------------------------- */
