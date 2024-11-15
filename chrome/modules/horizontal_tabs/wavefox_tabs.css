@@ -334,110 +334,92 @@
     
     
 /* ---------------------------------------- Tabs ---------------------------------------- */
-
-.tabbrowser-tab
-{
-    overflow: visible !important;
-    padding-inline: 0px !important;
-    
-    &[pinned] .tab-content
-    {
-        padding-inline: calc((var(--tab-min-height) - 16px) / 2 + 2px) !important;
-    }
-
-    &[visuallyselected]
-    {
-        color: var(--toolbar-color) !important;
-
-        .tab-background
-        {
-            background-color: var(--toolbar-bgcolor) !important;
-        }
-    }
-    
-    .tab-background
-    {
-        position: relative !important;
-        margin-inline: calc(var(--tab-min-height) / 2) !important;
-        margin-block: 0px !important;
-        border-radius: 0px !important;
-        box-shadow: none !important;
-        
-        &::before,
-        &::after
-        {
-            content: "";
-            display: block;
-            position: absolute;
-            width: var(--tab-min-height);
-            height: var(--tab-min-height);
-            mask-size: var(--tab-min-height);
-            mask-position: center;
-            mask-repeat: no-repeat;
-        }
-        
-        &::before
-        {
-            inset-inline-end: 100%;
-            mask-image: var(--left-svg);
-        }
-        
-        &::after
-        {
-            inset-inline-start: 100%;
-            mask-image: var(--right-svg);
-        }
-    }
-    
-    &[visuallyselected] .tab-background
-    {
-        &::before,
-        &::after
-        {
-            background-color: var(--toolbar-bgcolor) !important;
-        }
-    }
-    
-    &:not([visuallyselected]):hover .tab-background
-    {
-        &::before,
-        &::after
-        {
-            background-color: var(--tab-hover-background-color) !important;
-        }
-    }
     
     
     
     
-    
-    
-    
-    
-    
-}
-
 #tabbrowser-tabs[overflow] .tab-drop-indicator
 {
     inset-inline-start: var(--tab-first-last-inline-margin) !important;
 }
+    
+    
+    
+    
+    
+    
+.tabbrowser-tab
+{
+    overflow: visible !important;
+    padding-inline: 0px !important;
+}
+    
+.tabbrowser-tab[pinned] .tab-content
+{
+    padding-inline: calc((var(--tab-min-height) - 16px) / 2 + 2px) !important;
+}
+    
+.tabbrowser-tab[visuallyselected]
+{
+    color: var(--toolbar-color) !important;
+}
 
+.tabbrowser-tab[visuallyselected] .tab-background
+{
+    background-color: var(--toolbar-bgcolor) !important;
+}
     
+.tabbrowser-tab[visuallyselected] .tab-background::before,
+.tabbrowser-tab[visuallyselected] .tab-background::after
+{
+    background-color: var(--toolbar-bgcolor) !important;
+}
+        
+.tabbrowser-tab:not([visuallyselected]):hover .tab-background::before,
+.tabbrowser-tab:not([visuallyselected]):hover .tab-background::after
+{
+    background-color: var(--tab-hover-background-color) !important;
+}
     
+.tabbrowser-tab:not([visuallyselected])[multiselected] .tab-background::before,
+.tabbrowser-tab:not([visuallyselected])[multiselected] .tab-background::after
+{
+    background-color: var(--tab-selected-bgcolor) !important;
+}
     
+.tabbrowser-tab .tab-background
+{
+    position: relative !important;
+    margin-inline: calc(var(--tab-min-height) / 2) !important;
+    margin-block: 0px !important;
+    border-radius: 0px !important;
+    box-shadow: none !important;
+}
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+.tabbrowser-tab .tab-background::before,
+.tabbrowser-tab .tab-background::after
+{
+    content: "";
+    display: block;
+    position: absolute;
+    width: var(--tab-min-height);
+    height: var(--tab-min-height);
+    mask-size: var(--tab-min-height);
+    mask-position: center;
+    mask-repeat: no-repeat;
+}
+        
+.tabbrowser-tab .tab-background::before
+{
+    inset-inline-end: 100%;
+    mask-image: var(--left-svg);
+}
+        
+.tabbrowser-tab .tab-background::after
+{
+    inset-inline-start: 100%;
+    mask-image: var(--right-svg);
+}
     
     
     
