@@ -16,7 +16,7 @@
             :root:is(:not([lwtheme]), [style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26)"])
             {
                 --wavefox-ft-tab-shadow-blur: 4px;
-                --wavefox-ft-tab-shadow-color: var(--tab-selected-outline-color);
+                --wavefox-ft-tab-shadow-color: rgb(0,0,0);
 
                 --wavefox-ft-selected-tab-shadow: 0
                                                   0
@@ -110,7 +110,7 @@
             :root:is(:not([lwtheme]), [style*="--lwt-accent-color: rgb(28, 27, 34); --lwt-text-color: rgba(251, 251, 254)"])
             {
                 --wavefox-ft-tab-shadow-blur: 4px;
-                --wavefox-ft-tab-shadow-color: var(--tab-selected-outline-color);
+                --wavefox-ft-tab-shadow-color: rgb(0,0,0);
 
                 --wavefox-ft-selected-tab-shadow: 0
                                                   0
