@@ -49,8 +49,8 @@
     {
         width: fit-content !important;
         background-color: transparent !important;
-        margin-top: var(--drag-space) !important;
-        box-shadow: var(--inner-box-shadow) !important;
+        margin-top: var(--drag-space, 0px) !important;
+        box-shadow: var(--wavefox-inner-tabbar-shadow) !important;
     }
 
     #urlbar-container,
