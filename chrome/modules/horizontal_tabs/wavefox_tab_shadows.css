@@ -18,17 +18,17 @@
                 --wavefox-ft-tab-shadow-blur: 4px;
                 --wavefox-ft-tab-shadow-color: rgb(0,0,0);
 
-                --wavefox-ft-selected-tab-shadow: 0
-                                                  0
-                                                  var(--wavefox-ft-tab-shadow-blur)
-                                                  color-mix(in srgb, var(--wavefox-ft-tab-shadow-color) var(--wavefox-ft-tab-shadow-saturation), transparent);
+                --wavefox-selected-tab-shadow: 0
+                                               0
+                                               var(--wavefox-ft-tab-shadow-blur)
+                                               color-mix(in srgb, var(--wavefox-ft-tab-shadow-color) var(--wavefox-ft-tab-shadow-saturation), transparent);
 
-                --wavefox-ft-inner-tabbar-shadow: inset
-                                                  0
-                                                  calc(-1 * var(--wavefox-ft-tab-shadow-blur))
-                                                  var(--wavefox-ft-tab-shadow-blur)
-                                                  calc(-1 * var(--wavefox-ft-tab-shadow-blur))
-                                                  color-mix(in srgb, var(--wavefox-ft-tab-shadow-color) var(--wavefox-ft-tab-shadow-saturation), transparent);
+                --wavefox-inner-tabbar-shadow: inset
+                                               0
+                                               calc(-1 * var(--wavefox-ft-tab-shadow-blur))
+                                               var(--wavefox-ft-tab-shadow-blur)
+                                               calc(-1 * var(--wavefox-ft-tab-shadow-blur))
+                                               color-mix(in srgb, var(--wavefox-ft-tab-shadow-color) var(--wavefox-ft-tab-shadow-saturation), transparent);
 
                 /* ---------- Blur ---------- */
 
@@ -77,7 +77,7 @@
                 height: 100%;
                 bottom: 0px;
                 inset-inline-start: 0px;
-                box-shadow: var(--wavefox-ft-inner-tabbar-shadow);
+                box-shadow: var(--wavefox-inner-tabbar-shadow);
                 pointer-events: none;
                 z-index: 2;
             }
@@ -86,7 +86,7 @@
 
             .tabbrowser-tab[visuallyselected] .tab-background
             {
-                box-shadow: var(--wavefox-ft-selected-tab-shadow) !important;
+                box-shadow: var(--wavefox-selected-tab-shadow) !important;
             }
         }
     }
@@ -112,17 +112,17 @@
                 --wavefox-ft-tab-shadow-blur: 4px;
                 --wavefox-ft-tab-shadow-color: rgb(0,0,0);
 
-                --wavefox-ft-selected-tab-shadow: 0
-                                                  0
-                                                  var(--wavefox-ft-tab-shadow-blur)
-                                                  color-mix(in srgb, var(--wavefox-ft-tab-shadow-color) var(--wavefox-ft-tab-shadow-saturation), transparent);
+                --wavefox-selected-tab-shadow: 0
+                                               0
+                                               var(--wavefox-ft-tab-shadow-blur)
+                                               color-mix(in srgb, var(--wavefox-ft-tab-shadow-color) var(--wavefox-ft-tab-shadow-saturation), transparent);
 
-                --wavefox-ft-inner-tabbar-shadow: inset
-                                                  0
-                                                  calc(-1 * var(--wavefox-ft-tab-shadow-blur))
-                                                  var(--wavefox-ft-tab-shadow-blur)
-                                                  calc(-1 * var(--wavefox-ft-tab-shadow-blur))
-                                                  color-mix(in srgb, var(--wavefox-ft-tab-shadow-color) var(--wavefox-ft-tab-shadow-saturation), transparent);
+                --wavefox-inner-tabbar-shadow: inset
+                                               0
+                                               calc(-1 * var(--wavefox-ft-tab-shadow-blur))
+                                               var(--wavefox-ft-tab-shadow-blur)
+                                               calc(-1 * var(--wavefox-ft-tab-shadow-blur))
+                                               color-mix(in srgb, var(--wavefox-ft-tab-shadow-color) var(--wavefox-ft-tab-shadow-saturation), transparent);
 
                 /* ---------- Blur ---------- */
 
@@ -171,7 +171,7 @@
                 height: 100%;
                 bottom: 0px;
                 inset-inline-start: 0px;
-                box-shadow: var(--wavefox-ft-inner-tabbar-shadow);
+                box-shadow: var(--wavefox-inner-tabbar-shadow);
                 pointer-events: none;
                 z-index: 2;
             }
@@ -180,7 +180,7 @@
 
             .tabbrowser-tab[visuallyselected] .tab-background
             {
-                box-shadow: var(--wavefox-ft-selected-tab-shadow) !important;
+                box-shadow: var(--wavefox-selected-tab-shadow) !important;
             }
         }
     }
@@ -203,49 +203,49 @@
         {
             :root:is(:not([lwtheme]), [style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26)"])
             {
-                --wavefox-ft-tab-shadow-blur: 4px;
-                --wavefox-ft-tab-shadow-color: rgb(0,0,0);
+                --wavefox-at-tab-shadow-blur: 4px;
+                --wavefox-at-tab-shadow-color: rgb(0,0,0);
 
-                --wavefox-ft-selected-tab-shadow: drop-shadow(
-                                                  0
-                                                  0
-                                                  calc(var(--wavefox-ft-tab-shadow-blur) / 2)
-                                                  color-mix(in srgb, var(--wavefox-ft-tab-shadow-color) var(--wavefox-ft-tab-shadow-saturation), transparent));
+                --wavefox-selected-tab-shadow: drop-shadow(
+                                               0
+                                               0
+                                               calc(var(--wavefox-at-tab-shadow-blur) / 2)
+                                               color-mix(in srgb, var(--wavefox-at-tab-shadow-color) var(--wavefox-at-tab-shadow-saturation), transparent));
 
-                --wavefox-ft-inner-tabbar-shadow: inset
-                                                  0
-                                                  calc(-1 * var(--wavefox-ft-tab-shadow-blur))
-                                                  var(--wavefox-ft-tab-shadow-blur)
-                                                  calc(-1 * var(--wavefox-ft-tab-shadow-blur))
-                                                  color-mix(in srgb, var(--wavefox-ft-tab-shadow-color) var(--wavefox-ft-tab-shadow-saturation), transparent);
+                --wavefox-inner-tabbar-shadow: inset
+                                               0
+                                               calc(-1 * var(--wavefox-at-tab-shadow-blur))
+                                               var(--wavefox-at-tab-shadow-blur)
+                                               calc(-1 * var(--wavefox-at-tab-shadow-blur))
+                                               color-mix(in srgb, var(--wavefox-at-tab-shadow-color) var(--wavefox-at-tab-shadow-saturation), transparent);
 
                 /* ---------- Blur ---------- */
 
                 @media (-moz-bool-pref: "userChrome.LightTheme.Tabs.Borders.Enabled")
                 {
-                    --wavefox-ft-tab-shadow-blur: 2px;
+                    --wavefox-at-tab-shadow-blur: 2px;
                 }
 
                 /* ---------- Saturation ---------- */
 
                 @media (-moz-bool-pref: "userChrome.LightTheme.Tabs.Shadows.Saturation.Low.Enabled")
                 {
-                    --wavefox-ft-tab-shadow-saturation: 10%;
+                    --wavefox-at-tab-shadow-saturation: 10%;
                 }
 
                 @media (-moz-bool-pref: "userChrome.LightTheme.Tabs.Shadows.Saturation.Medium.Enabled")
                 {
-                    --wavefox-ft-tab-shadow-saturation: 25%;
+                    --wavefox-at-tab-shadow-saturation: 25%;
                 }
 
                 @media (-moz-bool-pref: "userChrome.LightTheme.Tabs.Shadows.Saturation.High.Enabled")
                 {
-                    --wavefox-ft-tab-shadow-saturation: 50%;
+                    --wavefox-at-tab-shadow-saturation: 50%;
                 }
 
                 @media (-moz-bool-pref: "userChrome.LightTheme.Tabs.Shadows.Saturation.VeryHigh.Enabled")
                 {
-                    --wavefox-ft-tab-shadow-saturation: 100%;
+                    --wavefox-at-tab-shadow-saturation: 100%;
                 }
             }
             
@@ -266,7 +266,7 @@
                 height: 100%;
                 bottom: 0px;
                 inset-inline-start: 0px;
-                box-shadow: var(--wavefox-ft-inner-tabbar-shadow);
+                box-shadow: var(--wavefox-inner-tabbar-shadow);
                 pointer-events: none;
                 z-index: 2;
             }
@@ -275,7 +275,7 @@
 
             .tabbrowser-tab[visuallyselected] .tab-background
             {
-                filter: var(--wavefox-ft-selected-tab-shadow) !important;
+                filter: var(--wavefox-selected-tab-shadow) !important;
             }
         }
     }
@@ -298,49 +298,49 @@
         {
             :root:is(:not([lwtheme]), [style*="--lwt-accent-color: rgb(28, 27, 34); --lwt-text-color: rgba(251, 251, 254)"])
             {
-                --wavefox-ft-tab-shadow-blur: 4px;
-                --wavefox-ft-tab-shadow-color: rgb(0,0,0);
+                --wavefox-at-tab-shadow-blur: 4px;
+                --wavefox-at-tab-shadow-color: rgb(0,0,0);
 
-                --wavefox-ft-selected-tab-shadow: drop-shadow(
-                                                  0
-                                                  0
-                                                  calc(var(--wavefox-ft-tab-shadow-blur) / 2)
-                                                  color-mix(in srgb, var(--wavefox-ft-tab-shadow-color) var(--wavefox-ft-tab-shadow-saturation), transparent));
+                --wavefox-selected-tab-shadow: drop-shadow(
+                                               0
+                                               0
+                                               calc(var(--wavefox-at-tab-shadow-blur) / 2)
+                                               color-mix(in srgb, var(--wavefox-at-tab-shadow-color) var(--wavefox-at-tab-shadow-saturation), transparent));
 
-                --wavefox-ft-inner-tabbar-shadow: inset
-                                                  0
-                                                  calc(-1 * var(--wavefox-ft-tab-shadow-blur))
-                                                  var(--wavefox-ft-tab-shadow-blur)
-                                                  calc(-1 * var(--wavefox-ft-tab-shadow-blur))
-                                                  color-mix(in srgb, var(--wavefox-ft-tab-shadow-color) var(--wavefox-ft-tab-shadow-saturation), transparent);
+                --wavefox-inner-tabbar-shadow: inset
+                                               0
+                                               calc(-1 * var(--wavefox-at-tab-shadow-blur))
+                                               var(--wavefox-at-tab-shadow-blur)
+                                               calc(-1 * var(--wavefox-at-tab-shadow-blur))
+                                               color-mix(in srgb, var(--wavefox-at-tab-shadow-color) var(--wavefox-at-tab-shadow-saturation), transparent);
 
                 /* ---------- Blur ---------- */
 
                 @media (-moz-bool-pref: "userChrome.DarkTheme.Tabs.Borders.Enabled")
                 {
-                    --wavefox-ft-tab-shadow-blur: 2px;
+                    --wavefox-at-tab-shadow-blur: 2px;
                 }
 
                 /* ---------- Saturation ---------- */
 
                 @media (-moz-bool-pref: "userChrome.DarkTheme.Tabs.Shadows.Saturation.Low.Enabled")
                 {
-                    --wavefox-ft-tab-shadow-saturation: 25%;
+                    --wavefox-at-tab-shadow-saturation: 25%;
                 }
 
                 @media (-moz-bool-pref: "userChrome.DarkTheme.Tabs.Shadows.Saturation.Medium.Enabled")
                 {
-                    --wavefox-ft-tab-shadow-saturation: 50%;
+                    --wavefox-at-tab-shadow-saturation: 50%;
                 }
 
                 @media (-moz-bool-pref: "userChrome.DarkTheme.Tabs.Shadows.Saturation.High.Enabled")
                 {
-                    --wavefox-ft-tab-shadow-saturation: 75%;
+                    --wavefox-at-tab-shadow-saturation: 75%;
                 }
 
                 @media (-moz-bool-pref: "userChrome.DarkTheme.Tabs.Shadows.Saturation.VeryHigh.Enabled")
                 {
-                    --wavefox-ft-tab-shadow-saturation: 100%;
+                    --wavefox-at-tab-shadow-saturation: 100%;
                 }
             }
             
@@ -361,7 +361,7 @@
                 height: 100%;
                 bottom: 0px;
                 inset-inline-start: 0px;
-                box-shadow: var(--wavefox-ft-inner-tabbar-shadow);
+                box-shadow: var(--wavefox-inner-tabbar-shadow);
                 pointer-events: none;
                 z-index: 2;
             }
@@ -370,7 +370,7 @@
 
             .tabbrowser-tab[visuallyselected] .tab-background
             {
-                filter: var(--wavefox-ft-selected-tab-shadow) !important;
+                filter: var(--wavefox-selected-tab-shadow) !important;
             }
         }
     }
