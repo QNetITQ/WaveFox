@@ -40,14 +40,14 @@
 
 #TabsToolbar :is(.tabbrowser-tab, .toolbarbutton-1, separator, #personal-bookmarks, #search-container, .accessibility-indicator, .private-browsing-indicator, #private-browsing-indicator-with-label)
 {
-    margin-top: var(--drag-space) !important;
+    margin-top: var(--drag-space, 0px) !important;
 }
 
 /* ---------- Shadow DOM ---------- */
 
 #tabbrowser-arrowscrollbox
 {
-    --drag-space-only-tabs: var(--drag-space) !important;
+    --drag-space-only-tabs: var(--drag-space, 0px) !important;
 }
 
 #scrollbutton-up,
@@ -56,13 +56,4 @@ spacer[part="overflow-start-indicator"],
 spacer[part="overflow-end-indicator"]
 {
     margin-top: var(--drag-space-only-tabs, revert) !important;
-}
-
-/* ---------- Custom Properties ---------- */
-
-@property --drag-space
-{
-    syntax: "<length>";
-    inherits: true;
-    initial-value: 0px;
 }
