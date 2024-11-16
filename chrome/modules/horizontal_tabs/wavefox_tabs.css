@@ -127,8 +127,27 @@
 
 /* ---------------------------------------- Attached tabs ---------------------------------------- */
 
-@media (-moz-bool-pref: "userChrome.Tabs.Option5.Enabled")  or
-       (-moz-bool-pref: "userChrome.Tabs.Option6.Enabled")  or
+@media (-moz-bool-pref: "userChrome.Tabs.Option5.Enabled")
+{
+    /* -------------------- Tab shapes -------------------- */
+
+    :root
+    {
+        --wavefox-tab-border-radius: 0px;
+        
+        .tabbrowser-tab
+        {
+            padding-inline: 0px !important;
+            
+            .tab-background
+            {
+                margin-block: 0px !important;
+            }
+        }
+    }
+}
+
+@media (-moz-bool-pref: "userChrome.Tabs.Option6.Enabled")  or
        (-moz-bool-pref: "userChrome.Tabs.Option7.Enabled")  or
        (-moz-bool-pref: "userChrome.Tabs.Option8.Enabled")  or
        (-moz-bool-pref: "userChrome.Tabs.Option9.Enabled")  or
@@ -137,14 +156,6 @@
        (-moz-bool-pref: "userChrome.Tabs.Option12.Enabled")
 {
     /* -------------------- Tab shapes -------------------- */
-
-    @media (-moz-bool-pref: "userChrome.Tabs.Option5.Enabled")
-    {
-        :root
-        {
-            --wavefox-tab-border-radius: 0px;
-        }
-    }
 
     @media (-moz-bool-pref: "userChrome.Tabs.Option6.Enabled")
     {
@@ -242,11 +253,6 @@
 
 :root
 {
-    @media (-moz-bool-pref: "userChrome.Tabs.Option5.Enabled")
-    {
-        --tab-first-last-inline-margin: calc(var(--tab-min-height) / 4); /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
-    }
-
     @media (-moz-bool-pref: "userChrome.Tabs.Option6.Enabled")
     {
         --tab-first-last-inline-margin: calc(var(--tab-min-height) / 4);
@@ -381,6 +387,7 @@
     
     .tab-background
     {
+        display: grid !important;
         position: relative !important;
         margin-inline: calc(var(--tab-min-height) / 2) !important;
         margin-block: 0px !important;
@@ -414,6 +421,28 @@
             inset-inline-start: 100%;
             mask-image: var(--right-svg);
         }
+        
+        > *
+        {
+            grid-area: 1 / 1 / auto / auto !important;
+        }
+        
+        .tab-context-line,
+        .tab-loading-burst
+        {
+            min-height: var(--tab-min-height) !important;
+            mask-image: var(--left-svg), var(--center-svg), var(--right-svg);
+            mask-size: auto 100%, calc(100% - var(--tab-min-height) * 2) 100%, auto 100%;
+            mask-position: left center, center center, right center;
+            mask-repeat: no-repeat, no-repeat, no-repeat;
+            margin-block: 0px !important;
+            margin-inline: calc(-1 * var(--tab-min-height)) !important;
+        }
+    
+        .tab-context-line
+        {
+            clip-path: rect(0% 100% 2px 0%) !important;
+        }
     }
 }
     
@@ -422,41 +451,8 @@
     
     
     
-    /*
     
-    .tab-background
-    {
-        display: grid !important;
-    }
     
-    .tab-context-line, 
-    .tab-loading-burst,
-    .tab-group-line
-    {
-        grid-area: 1 / 1 / auto / auto !important;
-    }
-    
-    .tab-context-line,
-    .tab-loading-burst
-    .tab-group-line
-    {
-        min-height: var(--tab-min-height) !important;
-        mask-image: var(--left-svg), var(--center-svg), var(--right-svg);
-        mask-size: auto 100%, calc(100% - var(--tab-min-height) * 2) 100%, auto 100%;
-        mask-position: left center, center center, right center;
-        mask-repeat: no-repeat, no-repeat, no-repeat;
-        margin-block: 0px !important;
-        margin-inline: calc(-1 * var(--tab-min-height)) !important;
-    }
-
-    .tab-group-line
-    {
-        min-height var(--tab-min-height) !important;
-        margin-block auto 0px !important;
-        margin-inline 0px !important;
-    }
-
-    */
 
         
 
