@@ -186,125 +186,97 @@
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media (-moz-bool-pref: "userChrome.LightTheme.Tabs.Shadows.Saturation.Low.Enabled")      or
        (-moz-bool-pref: "userChrome.LightTheme.Tabs.Shadows.Saturation.Medium.Enabled")   or
        (-moz-bool-pref: "userChrome.LightTheme.Tabs.Shadows.Saturation.High.Enabled")     or
        (-moz-bool-pref: "userChrome.LightTheme.Tabs.Shadows.Saturation.VeryHigh.Enabled")
 {
-    @media (prefers-color-scheme: light)
+    @media (-moz-bool-pref: "userChrome.Tabs.Option6.Enabled")  or
+           (-moz-bool-pref: "userChrome.Tabs.Option7.Enabled")  or
+           (-moz-bool-pref: "userChrome.Tabs.Option8.Enabled")  or
+           (-moz-bool-pref: "userChrome.Tabs.Option9.Enabled")  or
+           (-moz-bool-pref: "userChrome.Tabs.Option10.Enabled") or
+           (-moz-bool-pref: "userChrome.Tabs.Option11.Enabled") or
+           (-moz-bool-pref: "userChrome.Tabs.Option12.Enabled")
     {
-        :root
+        @media (prefers-color-scheme: light)
         {
-            --shadow-blur: 4px;
-            --shadow-color: var(--tab-selected-outline-color);
-
-            --outer-box-shadow: 0
-                                0
-                                var(--shadow-blur)
-                                color-mix(in srgb, var(--shadow-color) var(--shadow-saturation), transparent);
-
-            --inner-box-shadow: inset
-                                0
-                                calc(-1 * var(--shadow-blur))
-                                var(--shadow-blur)
-                                calc(-1 * var(--shadow-blur))
-                                color-mix(in srgb, var(--shadow-color) var(--shadow-saturation), transparent);
-
-            --outer-drop-shadow: drop-shadow(
-                                 0
-                                 0
-                                 calc(var(--shadow-blur) / 2)
-                                 color-mix(in srgb, var(--shadow-color) var(--shadow-saturation), transparent));
-
-            /* ---------- Blur ---------- */
-
-            @media (-moz-bool-pref: "userChrome.LightTheme.Tabs.Borders.Enabled")
+            :root:is(:not([lwtheme]), [style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26)"])
             {
-                --shadow-blur: 2px;
+                --wavefox-ft-tab-shadow-blur: 4px;
+                --wavefox-ft-tab-shadow-color: rgb(0,0,0);
+
+                --wavefox-ft-selected-tab-shadow: drop-shadow(
+                                                  0
+                                                  0
+                                                  calc(var(--wavefox-ft-tab-shadow-blur) / 2)
+                                                  color-mix(in srgb, var(--wavefox-ft-tab-shadow-color) var(--wavefox-ft-tab-shadow-saturation), transparent));
+
+                --wavefox-ft-inner-tabbar-shadow: inset
+                                                  0
+                                                  calc(-1 * var(--wavefox-ft-tab-shadow-blur))
+                                                  var(--wavefox-ft-tab-shadow-blur)
+                                                  calc(-1 * var(--wavefox-ft-tab-shadow-blur))
+                                                  color-mix(in srgb, var(--wavefox-ft-tab-shadow-color) var(--wavefox-ft-tab-shadow-saturation), transparent);
+
+                /* ---------- Blur ---------- */
+
+                @media (-moz-bool-pref: "userChrome.LightTheme.Tabs.Borders.Enabled")
+                {
+                    --wavefox-ft-tab-shadow-blur: 2px;
+                }
+
+                /* ---------- Saturation ---------- */
+
+                @media (-moz-bool-pref: "userChrome.LightTheme.Tabs.Shadows.Saturation.Low.Enabled")
+                {
+                    --wavefox-ft-tab-shadow-saturation: 10%;
+                }
+
+                @media (-moz-bool-pref: "userChrome.LightTheme.Tabs.Shadows.Saturation.Medium.Enabled")
+                {
+                    --wavefox-ft-tab-shadow-saturation: 25%;
+                }
+
+                @media (-moz-bool-pref: "userChrome.LightTheme.Tabs.Shadows.Saturation.High.Enabled")
+                {
+                    --wavefox-ft-tab-shadow-saturation: 50%;
+                }
+
+                @media (-moz-bool-pref: "userChrome.LightTheme.Tabs.Shadows.Saturation.VeryHigh.Enabled")
+                {
+                    --wavefox-ft-tab-shadow-saturation: 100%;
+                }
+            }
+            
+            /* ---------- Tab Bar ---------- */
+
+            #TabsToolbar
+            {
+                position: relative !important;
+                clip-path: inset(0px) !important;
             }
 
-            /* ---------- Saturation ---------- */
-
-            @media (-moz-bool-pref: "userChrome.LightTheme.Tabs.Shadows.Saturation.Low.Enabled")
+            #TabsToolbar::before
             {
-                --shadow-saturation: 10%;
+                content: "";
+                display: block;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                bottom: 0px;
+                inset-inline-start: 0px;
+                box-shadow: var(--wavefox-ft-inner-tabbar-shadow);
+                pointer-events: none;
+                z-index: 2;
             }
 
-            @media (-moz-bool-pref: "userChrome.LightTheme.Tabs.Shadows.Saturation.Medium.Enabled")
+            /* ---------- Tabs ---------- */
+
+            .tabbrowser-tab[visuallyselected] .tab-background
             {
-                --shadow-saturation: 25%;
+                filter: var(--wavefox-ft-selected-tab-shadow) !important;
             }
-
-            @media (-moz-bool-pref: "userChrome.LightTheme.Tabs.Shadows.Saturation.High.Enabled")
-            {
-                --shadow-saturation: 50%;
-            }
-
-            @media (-moz-bool-pref: "userChrome.LightTheme.Tabs.Shadows.Saturation.VeryHigh.Enabled")
-            {
-                --shadow-saturation: 100%;
-            }
-        }
-
-        /* ---------- System Theme / Light Theme ---------- */
-
-        :root:is(:not([lwtheme]), [style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26)"])
-        {
-            --shadow-color: rgb(0,0,0);
-        }
-
-        /* ---------- AMO Theme ---------- */
-
-        :root[lwtheme]:not([style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26)"])
-        {
-            --shadow-saturation: 100%;
-        }
-
-        /* ---------- Tab Bar ---------- */
-
-        #TabsToolbar
-        {
-            position: relative !important;
-            clip-path: inset(0px) !important;
-        }
-
-        #TabsToolbar::before
-        {
-            content: "";
-            display: block;
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            bottom: 0px;
-            inset-inline-start: 0px;
-            box-shadow: var(--inner-box-shadow);
-            pointer-events: none;
-            z-index: 2;
-        }
-        
-        /* ---------- Tabs ---------- */
-
-        .tabbrowser-tab[visuallyselected]
-        {
-            filter: var(--outer-drop-shadow);
         }
     }
 }
@@ -314,125 +286,92 @@
        (-moz-bool-pref: "userChrome.DarkTheme.Tabs.Shadows.Saturation.High.Enabled")     or
        (-moz-bool-pref: "userChrome.DarkTheme.Tabs.Shadows.Saturation.VeryHigh.Enabled")
 {
-    @media (prefers-color-scheme: dark)
+    @media (-moz-bool-pref: "userChrome.Tabs.Option6.Enabled")  or
+           (-moz-bool-pref: "userChrome.Tabs.Option7.Enabled")  or
+           (-moz-bool-pref: "userChrome.Tabs.Option8.Enabled")  or
+           (-moz-bool-pref: "userChrome.Tabs.Option9.Enabled")  or
+           (-moz-bool-pref: "userChrome.Tabs.Option10.Enabled") or
+           (-moz-bool-pref: "userChrome.Tabs.Option11.Enabled") or
+           (-moz-bool-pref: "userChrome.Tabs.Option12.Enabled")
     {
-        :root
+        @media (prefers-color-scheme: dark)
         {
-            --shadow-blur: 4px;
-            --shadow-color: var(--tab-selected-outline-color);
+            :root:is(:not([lwtheme]), [style*="--lwt-accent-color: rgb(28, 27, 34); --lwt-text-color: rgba(251, 251, 254)"])
+            {
+                --wavefox-ft-tab-shadow-blur: 4px;
+                --wavefox-ft-tab-shadow-color: rgb(0,0,0);
 
-            --outer-box-shadow: 0
-                                0
-                                var(--shadow-blur)
-                                color-mix(in srgb, var(--shadow-color) var(--shadow-saturation), transparent);
+                --wavefox-ft-selected-tab-shadow: drop-shadow(
+                                                  0
+                                                  0
+                                                  calc(var(--wavefox-ft-tab-shadow-blur) / 2)
+                                                  color-mix(in srgb, var(--wavefox-ft-tab-shadow-color) var(--wavefox-ft-tab-shadow-saturation), transparent));
 
-            --inner-box-shadow: inset
-                                0
-                                calc(-1 * var(--shadow-blur))
-                                var(--shadow-blur)
-                                calc(-1 * var(--shadow-blur))
-                                color-mix(in srgb, var(--shadow-color) var(--shadow-saturation), transparent);
+                --wavefox-ft-inner-tabbar-shadow: inset
+                                                  0
+                                                  calc(-1 * var(--wavefox-ft-tab-shadow-blur))
+                                                  var(--wavefox-ft-tab-shadow-blur)
+                                                  calc(-1 * var(--wavefox-ft-tab-shadow-blur))
+                                                  color-mix(in srgb, var(--wavefox-ft-tab-shadow-color) var(--wavefox-ft-tab-shadow-saturation), transparent);
 
-            --outer-drop-shadow: drop-shadow(
-                                 0
-                                 0
-                                 calc(var(--shadow-blur) / 2)
-                                 color-mix(in srgb, var(--shadow-color) var(--shadow-saturation), transparent));
+                /* ---------- Blur ---------- */
+
+                @media (-moz-bool-pref: "userChrome.DarkTheme.Tabs.Borders.Enabled")
+                {
+                    --wavefox-ft-tab-shadow-blur: 2px;
+                }
+
+                /* ---------- Saturation ---------- */
+
+                @media (-moz-bool-pref: "userChrome.DarkTheme.Tabs.Shadows.Saturation.Low.Enabled")
+                {
+                    --wavefox-ft-tab-shadow-saturation: 25%;
+                }
+
+                @media (-moz-bool-pref: "userChrome.DarkTheme.Tabs.Shadows.Saturation.Medium.Enabled")
+                {
+                    --wavefox-ft-tab-shadow-saturation: 50%;
+                }
+
+                @media (-moz-bool-pref: "userChrome.DarkTheme.Tabs.Shadows.Saturation.High.Enabled")
+                {
+                    --wavefox-ft-tab-shadow-saturation: 75%;
+                }
+
+                @media (-moz-bool-pref: "userChrome.DarkTheme.Tabs.Shadows.Saturation.VeryHigh.Enabled")
+                {
+                    --wavefox-ft-tab-shadow-saturation: 100%;
+                }
+            }
             
-            /* ---------- Blur ---------- */
-            
-            @media (-moz-bool-pref: "userChrome.DarkTheme.Tabs.Borders.Enabled")
+            /* ---------- Tab Bar ---------- */
+
+            #TabsToolbar
             {
-                --shadow-blur: 2px;
+                position: relative !important;
+                clip-path: inset(0px) !important;
             }
 
-            /* ---------- Saturation ---------- */
-
-            @media (-moz-bool-pref: "userChrome.DarkTheme.Tabs.Shadows.Saturation.Low.Enabled")
+            #TabsToolbar::before
             {
-                --shadow-saturation: 25%;
+                content: "";
+                display: block;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                bottom: 0px;
+                inset-inline-start: 0px;
+                box-shadow: var(--wavefox-ft-inner-tabbar-shadow);
+                pointer-events: none;
+                z-index: 2;
             }
 
-            @media (-moz-bool-pref: "userChrome.DarkTheme.Tabs.Shadows.Saturation.Medium.Enabled")
+            /* ---------- Tabs ---------- */
+
+            .tabbrowser-tab[visuallyselected] .tab-background
             {
-                --shadow-saturation: 50%;
+                filter: var(--wavefox-ft-selected-tab-shadow) !important;
             }
-
-            @media (-moz-bool-pref: "userChrome.DarkTheme.Tabs.Shadows.Saturation.High.Enabled")
-            {
-                --shadow-saturation: 75%;
-            }
-
-            @media (-moz-bool-pref: "userChrome.DarkTheme.Tabs.Shadows.Saturation.VeryHigh.Enabled")
-            {
-                --shadow-saturation: 100%;
-            }
-        }
-
-        /* ---------- System Theme / Dark Theme ---------- */
-
-        :root:is(:not([lwtheme]), [style*="--lwt-accent-color: rgb(28, 27, 34); --lwt-text-color: rgba(251, 251, 254)"])
-        {
-            --shadow-color: rgb(0,0,0);
-        }
-
-        /* ---------- AMO Theme ---------- */
-
-        :root[lwtheme]:not([style*="--lwt-accent-color: rgb(28, 27, 34); --lwt-text-color: rgba(251, 251, 254)"])
-        {
-            --shadow-saturation: 100%;
-        }
-        
-        /* ---------- Tab Bar ---------- */
-
-        #TabsToolbar
-        {
-            position: relative !important;
-            clip-path: inset(0px) !important;
-        }
-
-        #TabsToolbar::before
-        {
-            content: "";
-            display: block;
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            bottom: 0px;
-            inset-inline-start: 0px;
-            box-shadow: var(--inner-box-shadow);
-            pointer-events: none;
-            z-index: 2;
-        }
-        
-        /* ---------- Tabs ---------- */
-
-        .tabbrowser-tab[visuallyselected]
-        {
-            filter: var(--outer-drop-shadow);
         }
     }
-}
-
-/* ---------- Custom Properties ---------- */
-
-@property --outer-box-shadow
-{
-    syntax: "*";
-    inherits: true;
-    initial-value: 0 0 0 transparent;
-}
-
-@property --inner-box-shadow
-{
-    syntax: "*";
-    inherits: true;
-    initial-value: 0 0 0 transparent;
-}
-
-@property --outer-drop-shadow
-{
-    syntax: "*";
-    inherits: true;
-    initial-value: drop-shadow(0 0 0 transparent);
 }
