@@ -34,7 +34,7 @@
 
                 @media (-moz-bool-pref: "userChrome.LightTheme.Tabs.Borders.Enabled")
                 {
-                    --wavefox-ft-tab-shadow-blur: 2px;
+                    --wavefox-ft-tab-shadow-blur: 1px;
                 }
 
                 /* ---------- Saturation ---------- */
@@ -86,7 +86,7 @@
 
             .tabbrowser-tab[visuallyselected] .tab-background
             {
-                box-shadow: var(--wavefox-ft-selected-tab-shadow);
+                box-shadow: var(--wavefox-ft-selected-tab-shadow) !important;
             }
         }
     }
@@ -128,7 +128,7 @@
 
                 @media (-moz-bool-pref: "userChrome.DarkTheme.Tabs.Borders.Enabled")
                 {
-                    --wavefox-ft-tab-shadow-blur: 2px;
+                    --wavefox-ft-tab-shadow-blur: 1px;
                 }
 
                 /* ---------- Saturation ---------- */
@@ -180,7 +180,7 @@
 
             .tabbrowser-tab[visuallyselected] .tab-background
             {
-                box-shadow: var(--wavefox-ft-selected-tab-shadow);
+                box-shadow: var(--wavefox-ft-selected-tab-shadow) !important;
             }
         }
     }
