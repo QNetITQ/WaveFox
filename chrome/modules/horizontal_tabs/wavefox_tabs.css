@@ -332,6 +332,8 @@
     
     &[visuallyselected]
     {
+        position: relative;
+        z-index: 2 !important;
         color: var(--toolbar-color) !important;
         
         .tab-background
@@ -385,6 +387,7 @@
         border-radius: 0px !important;
         box-shadow: none !important;
         outline: none !important;
+        pointer-events: none !important;
         
         &::before,
         &::after
@@ -397,6 +400,7 @@
             mask-size: var(--tab-min-height);
             mask-position: center;
             mask-repeat: no-repeat;
+            z-index: -1;
         }
         
         &::before
@@ -418,12 +422,41 @@
     
     
     
+    /*
     
+    .tab-background
+    {
+        display: grid !important;
+    }
     
-
-
-
+    .tab-context-line, 
+    .tab-loading-burst,
+    .tab-group-line
+    {
+        grid-area: 1 / 1 / auto / auto !important;
+    }
     
+    .tab-context-line,
+    .tab-loading-burst
+    .tab-group-line
+    {
+        min-height: var(--tab-min-height) !important;
+        mask-image: var(--left-svg), var(--center-svg), var(--right-svg);
+        mask-size: auto 100%, calc(100% - var(--tab-min-height) * 2) 100%, auto 100%;
+        mask-position: left center, center center, right center;
+        mask-repeat: no-repeat, no-repeat, no-repeat;
+        margin-block: 0px !important;
+        margin-inline: calc(-1 * var(--tab-min-height)) !important;
+    }
+
+    .tab-group-line
+    {
+        min-height var(--tab-min-height) !important;
+        margin-block auto 0px !important;
+        margin-inline 0px !important;
+    }
+
+    */
 
         
 
@@ -443,13 +476,7 @@
     
     
     
-    
-/* -------------------- Container Indicators -------------------- */
 
-.tab-context-line
-{
-    margin: 0px !important;
-}
 
 /* -------------------- Tab Icon Indicators -------------------- */
 
