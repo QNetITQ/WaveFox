@@ -135,17 +135,17 @@
 
                 @media (-moz-bool-pref: "userChrome.DarkTheme.Tabs.Shadows.Saturation.Low.Enabled")
                 {
-                    --wavefox-ft-tab-shadow-saturation: 10%;
+                    --wavefox-ft-tab-shadow-saturation: 25%;
                 }
 
                 @media (-moz-bool-pref: "userChrome.DarkTheme.Tabs.Shadows.Saturation.Medium.Enabled")
                 {
-                    --wavefox-ft-tab-shadow-saturation: 25%;
+                    --wavefox-ft-tab-shadow-saturation: 50%;
                 }
 
                 @media (-moz-bool-pref: "userChrome.DarkTheme.Tabs.Shadows.Saturation.High.Enabled")
                 {
-                    --wavefox-ft-tab-shadow-saturation: 50%;
+                    --wavefox-ft-tab-shadow-saturation: 75%;
                 }
 
                 @media (-moz-bool-pref: "userChrome.DarkTheme.Tabs.Shadows.Saturation.VeryHigh.Enabled")
