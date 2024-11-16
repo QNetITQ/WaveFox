@@ -18,7 +18,6 @@
 @import "modules/horizontal_tabs/wavefox_tab_separators.css"            layer(BasicPriority) /* supports() */ not (-moz-bool-pref: "sidebar.verticalTabs");
 @import "modules/horizontal_tabs/wavefox_tabs_on_bottom.css"            layer(BasicPriority) /* supports() */ not (-moz-bool-pref: "sidebar.verticalTabs");
 @import "modules/horizontal_tabs/wavefox_one_line.css"                  layer(BasicPriority) /* supports() */ not (-moz-bool-pref: "sidebar.verticalTabs");
-@import "modules/horizontal_tabs/wavefox_context_menu_densities.css"    layer(BasicPriority) /* supports() */ not (-moz-bool-pref: "sidebar.verticalTabs");
 */
 
 /* ---------------------------------------- Third-party styles (Maximum priority) ---------------------------------------- */
