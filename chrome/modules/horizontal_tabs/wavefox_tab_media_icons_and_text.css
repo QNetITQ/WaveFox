@@ -93,6 +93,7 @@
 {
     height: var(--tab-min-height) !important;
     font-size: 12px !important;
+    mask-image: none !important;
 }
 
 .tab-label
