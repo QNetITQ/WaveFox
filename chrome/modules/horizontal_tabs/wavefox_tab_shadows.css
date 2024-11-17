@@ -201,7 +201,7 @@
     {
         @media (prefers-color-scheme: light)
         {
-            :root:is(:not([lwtheme]), [style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26)"])
+            :root
             {
                 --wavefox-at-tab-shadow-blur: 4px;
                 --wavefox-at-tab-shadow-color: rgb(0,0,0);
@@ -277,6 +277,30 @@
             {
                 filter: var(--wavefox-selected-tab-shadow) !important;
             }
+
+            /* ---------- AMO ---------- */
+            
+            :root[lwtheme]:not([style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26)"])
+            {
+                --wavefox-at-tab-shadow-color: var(--tab-selected-outline-color) !important;
+                --wavefox-at-tab-shadow-saturation: 100% !important;
+                
+                .tabbrowser-tab[visuallyselected] .tab-background
+                {
+                    backdrop-filter: drop-shadow(0 0 1px transparent) !important;
+                    
+                    &::before,
+                    &::after
+                    {
+                        backdrop-filter: drop-shadow(0 0 1px transparent) !important;
+                    }
+                }
+                
+                #TabsToolbar::before
+                {
+                    display: none !important;
+                }
+            }
         }
     }
 }
@@ -296,7 +320,7 @@
     {
         @media (prefers-color-scheme: dark)
         {
-            :root:is(:not([lwtheme]), [style*="--lwt-accent-color: rgb(28, 27, 34); --lwt-text-color: rgba(251, 251, 254)"])
+            :root
             {
                 --wavefox-at-tab-shadow-blur: 4px;
                 --wavefox-at-tab-shadow-color: rgb(0,0,0);
@@ -371,6 +395,30 @@
             .tabbrowser-tab[visuallyselected] .tab-background
             {
                 filter: var(--wavefox-selected-tab-shadow) !important;
+            }
+
+            /* ---------- AMO ---------- */
+            
+            :root[lwtheme]:not([style*="--lwt-accent-color: rgb(28, 27, 34); --lwt-text-color: rgba(251, 251, 254)"])
+            {
+                --wavefox-at-tab-shadow-color: var(--tab-selected-outline-color) !important;
+                --wavefox-at-tab-shadow-saturation: 100% !important;
+                
+                .tabbrowser-tab[visuallyselected] .tab-background
+                {
+                    backdrop-filter: drop-shadow(0 0 1px transparent) !important;
+                    
+                    &::before,
+                    &::after
+                    {
+                        backdrop-filter: drop-shadow(0 0 1px transparent) !important;
+                    }
+                }
+                
+                #TabsToolbar::before
+                {
+                    display: none !important;
+                }
             }
         }
     }
