@@ -71,7 +71,7 @@
            (-moz-bool-pref: "userChrome.Tabs.Option9.Enabled")  or
            (-moz-bool-pref: "userChrome.Tabs.Option10.Enabled") or
            (-moz-bool-pref: "userChrome.Tabs.Option11.Enabled") or
-           (-moz-bool-pref: "userChrome.Tabs.Option12.Enabled"))
+           (-moz-bool-pref: "userChrome.Tabs.Option12.Enabled")
     {
         .tab-stack::before
         {
