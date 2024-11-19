@@ -247,9 +247,26 @@
         overflow: visible !important;
         padding-inline: 0px !important;
 
-        &[pinned] .tab-content
+        &[pinned]
         {
-            padding-inline: calc((var(--tab-min-height) - 16px) / 2 + 2px) !important;
+            .tab-content
+            {
+                padding-inline: calc((var(--tab-min-height) - 16px) / 2 + 2px) !important;
+            }
+
+            .tab-context-line
+            {
+                height: 4px !important;
+                margin: 0px !important;
+            }
+        }
+        
+        &:not([pinned])
+        {
+            .tab-context-line
+            {
+                margin: 0px !important;
+            }
         }
 
         &[visuallyselected]
@@ -288,6 +305,8 @@
 
             &[multiselected]
             {
+                color: inherit !important;
+
                 .tab-background
                 {
                     background-color: var(--toolbarbutton-active-background) !important;
@@ -303,7 +322,6 @@
 
         .tab-background
         {
-            display: grid !important;
             position: relative !important;
             margin-inline: calc(var(--tab-min-height) / 2) !important;
             margin-block: 0px !important;
@@ -336,26 +354,9 @@
                 mask-image: var(--right-svg);
             }
 
-            > *
-            {
-                grid-area: 1 / 1 / auto / auto !important;
-            }
-
-            .tab-context-line,
             .tab-loading-burst
             {
-                min-height: var(--tab-min-height) !important;
-                mask-image: var(--left-svg), var(--center-svg), var(--right-svg);
-                mask-size: auto 100%, calc(100% - var(--tab-min-height) * 2) 100%, auto 100%;
-                mask-position: left center, center center, right center;
-                mask-repeat: no-repeat, no-repeat, no-repeat;
-                margin-block: 0px !important;
-                margin-inline: calc(-1 * var(--tab-min-height)) !important;
-            }
-
-            .tab-context-line
-            {
-                clip-path: rect(0% 100% 2px 0%) !important;
+                opacity: 0 !important;
             }
         }
     }
