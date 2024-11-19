@@ -32,6 +32,11 @@
     }
 }
 
+.browser-titlebar
+{
+    font-size: clamp(0em, 1em, 12px) !important;
+}
+
 /* ---------------------------------------- Tabs ---------------------------------------- */
 
 .tabbrowser-tab
