@@ -92,6 +92,7 @@
 .tab-label-container
 {
     height: var(--tab-min-height) !important;
+    mask-image: none !important;
 }
 
 .tab-label
