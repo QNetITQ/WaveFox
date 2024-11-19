@@ -92,15 +92,14 @@
 .tab-label-container
 {
     height: var(--tab-min-height) !important;
-    font-size: 12px !important;
     mask-image: none !important;
 }
 
 .tab-label
 {
     width: 100% !important;
-    height: 16px !important;
-    line-height: 16px !important;
+    height: 20px !important;
+    line-height: 20px !important;
     overflow: hidden !important;
     text-overflow: ellipsis !important;
     margin-block: 0px !important;
@@ -115,18 +114,18 @@
 .tab-secondary-label
 {
     width: 100% !important;
-    height: 16px !important;
-    line-height: 16px !important;
+    height: 12px !important;
+    line-height: 12px !important;
     overflow: hidden !important;
-    margin-block: 0px !important;
+    margin-block: auto 0px !important;
     order: -1 !important;
 }
 
 .tab-secondary-label > *
 {
     width: 100% !important;
-    height: 16px !important;
-    line-height: 16px !important;
+    height: 12px !important;
+    line-height: 12px !important;
     overflow: hidden !important;
     text-overflow: ellipsis !important;
 }
