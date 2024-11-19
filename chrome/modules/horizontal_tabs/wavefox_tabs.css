@@ -294,32 +294,28 @@
 
         &:not([visuallyselected])
         {
+            z-index: 0 !important;
+
             &:hover
             {
                 .tab-background
                 {
-                    background-color: var(--toolbarbutton-hover-background) !important;
-
                     &::before,
                     &::after
                     {
-                        background-color: var(--toolbarbutton-hover-background) !important;
+                        background-color: var(--tab-hover-background-color) !important;
                     }
                 }
             }
 
             &[multiselected]
             {
-                color: inherit !important;
-
                 .tab-background
                 {
-                    background-color: var(--toolbarbutton-active-background) !important;
-
                     &::before,
                     &::after
                     {
-                        background-color: var(--toolbarbutton-active-background) !important;
+                        background-color: var(--tab-selected-bgcolor) !important;
                     }
                 }
             }
