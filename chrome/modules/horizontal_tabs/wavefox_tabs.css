@@ -315,11 +315,13 @@
                 .tab-background
                 {
                     filter: drop-shadow(0 0 2px var(--focus-outline-color)) !important;
+                    backdrop-filter: drop-shadow(0 0 1px transparent) !important;
 
                     &::before,
                     &::after
                     {
                         background-color: var(--tab-selected-bgcolor) !important;
+                        backdrop-filter: drop-shadow(0 0 1px transparent) !important;
                     }
                 }
             }
