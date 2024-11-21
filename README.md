@@ -9,10 +9,10 @@
 [Download Firefox](https://www.mozilla.org/en-US/firefox/all/#product-desktop-release) / [Download WaveFox](https://github.com/QNetITQ/WaveFox/releases) / [WaveFox Nightly](https://github.com/QNetITQ/WaveFox/tree/WaveFox-Nightly)
 
 <details>
-  <summary>WaveFox v1.7.133</summary>
+  <summary>WaveFox v1.8.134</summary>
 
 - ##### Minimum Requirements
-  - Firefox 133
+  - Firefox 134
   - Windows / MacOS / Linux
 
 - Download the `chrome` folder and put it in your user profile folder
@@ -123,17 +123,6 @@ Works only with the system theme.
 - `userChrome.TabSeparators.Saturation.Low.Enabled`
 - `userChrome.TabSeparators.Saturation.Medium.Enabled`
 
-### Menu Density
-By default context menus follow the selected interface density, but it is possible to set a fixed size.
-
-| Compact | Normal | Touch |
-|---------|--------|-------|
-| ![изображение](https://user-images.githubusercontent.com/85301851/152645825-7d351e3e-b938-4fa1-a460-1f699ed1c3c6.png) | ![изображение](https://user-images.githubusercontent.com/85301851/152645878-d917e841-837a-4a11-8fc1-ce0fc2262aef.png) | ![изображение](https://user-images.githubusercontent.com/85301851/152645915-833c1b22-e320-445f-817e-408ea26f7605.png) |
-
-- `userChrome.Menu.Size.Compact.Enabled`
-- `userChrome.Menu.Size.Normal.Enabled`
-- `userChrome.Menu.Size.Touch.Enabled`
-
 ### Lepton Icons (Menu icons)
 This is third-party code. I will update this code according to the original source. Unlike other options, these keys can be enabled in any order, or all together.
 
@@ -162,11 +151,6 @@ This is third-party code. I will update this code according to the original sour
 - `userChrome.DragSpace.Top.Windowed.Enabled`
 - `userChrome.DragSpace.Top.Maximized.Enabled`
 - `userChrome.DragSpace.Top.Fullscreen.Enabled`
-
-### Selected Tab Indicator
-![изображение](https://github.com/QNetITQ/WaveFox/assets/85301851/c5b7c4b8-81d2-4ca2-9944-574af7e88f1d)
-
-- `userChrome.Tabs.SelectedTabIndicator.Enabled`
 
 ### Tabs On Bottom
 ![Снимок](https://github.com/QNetITQ/WaveFox/assets/85301851/514cf30d-a417-48cb-bfd1-0e77c9df1bf4)
