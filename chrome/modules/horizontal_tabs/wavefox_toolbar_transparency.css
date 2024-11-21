@@ -23,12 +23,22 @@
         {
             --toolbar-transparency-level: 75%;
         }
-        
-        .tabbrowser-tab[visuallyselected] .tab-background,
+
         #nav-bar,
         #PersonalToolbar
         {
             background-color: color-mix(in srgb, var(--toolbar-bgcolor), transparent var(--toolbar-transparency-level)) !important;
+        }
+
+        .tabbrowser-tab[visuallyselected] .tab-background
+        {
+            background-color: color-mix(in srgb, var(--toolbar-bgcolor), transparent var(--toolbar-transparency-level)) !important;
+
+            &::before,
+            &::after
+            {
+                background-color: color-mix(in srgb, var(--toolbar-bgcolor), transparent var(--toolbar-transparency-level)) !important;
+            }
         }
     }
 }
