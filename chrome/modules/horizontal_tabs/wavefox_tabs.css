@@ -290,7 +290,7 @@
 
                 &::before
                 {
-                    margin-inline: 0% !important;
+                    margin-inline: 50% !important;
                 }
             }
         }
@@ -315,6 +315,7 @@
 
         &:not([visuallyselected])
         {
+            --tab-loading-fill: currentColor !important;
             z-index: 0 !important;
 
             &:hover
