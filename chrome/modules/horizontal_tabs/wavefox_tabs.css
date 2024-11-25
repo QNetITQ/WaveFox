@@ -373,7 +373,6 @@
                 aspect-ratio: 1 / 1;
                 height: 100%;
                 mask-size: contain;
-                z-index: -1;
             }
 
             &::before
