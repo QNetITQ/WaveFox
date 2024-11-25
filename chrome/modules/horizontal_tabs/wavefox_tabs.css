@@ -135,6 +135,17 @@
             {
                 margin-block: 0px !important;
             }
+
+            &[usercontextid] .tab-context-line
+            {
+                margin: 0px !important;
+            }
+
+            &:is([image], [pinned]) .tab-content[attention]:not([selected]),
+            .tab-content[pinned][titlechanged]:not([selected])
+            {
+                background-position: 50% calc(50% + 12px) !important;
+            }
         }
     }
 }
