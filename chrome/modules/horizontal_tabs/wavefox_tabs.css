@@ -255,43 +255,19 @@
                 padding-inline: calc((var(--tab-min-height) - 16px) / 2 + 2px) !important;
             }
 
-            .tab-context-line
+            &[usercontextid] .tab-context-line
             {
                 height: 4px !important;
                 margin: 0px !important;
                 border-radius: 4px !important;
             }
-
-            .tab-loading-burst
-            {
-                max-height: 2px !important;
-                margin-block: auto 0px !important;
-                margin-inline: calc(-1 * var(--tab-min-height) / 2) !important;
-
-                &::before
-                {
-                    margin-inline: 50% !important;
-                }
-            }
         }
         
         &:not([pinned])
         {
-            .tab-context-line
+            &[usercontextid] .tab-context-line
             {
                 margin: 0px !important;
-            }
-
-            .tab-loading-burst
-            {
-                max-height: 2px !important;
-                margin-block: auto 0px !important;
-                margin-inline: 0px !important;
-
-                &::before
-                {
-                    margin-inline: 50% !important;
-                }
             }
         }
 
@@ -381,6 +357,18 @@
             {
                 inset-inline-start: 100%;
                 mask-image: var(--right-svg);
+            }
+        }
+
+        .tab-loading-burst
+        {
+            max-height: 2px !important;
+            margin-block: auto 0px !important;
+            margin-inline: calc(-1 * var(--tab-min-height) / 2) !important;
+
+            &::before
+            {
+                margin-inline: 50% !important;
             }
         }
     }
