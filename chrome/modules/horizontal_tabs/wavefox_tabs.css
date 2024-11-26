@@ -394,6 +394,7 @@
             margin-block: auto 0px !important;
             margin-inline: calc(-1 * var(--tab-min-height) / 2) !important;
             border-radius: 4px !important;
+            z-index: 1 !important;
 
             &::before
             {
