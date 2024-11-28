@@ -129,3 +129,12 @@
     overflow: hidden !important;
     text-overflow: ellipsis !important;
 }
+
+@media (-moz-platform: linux)
+{
+    .tab-label
+    {
+        height: var(--tab-min-height) !important;
+        line-height: var(--tab-min-height) !important;
+    }
+}
