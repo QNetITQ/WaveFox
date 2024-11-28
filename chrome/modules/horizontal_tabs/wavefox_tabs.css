@@ -27,11 +27,6 @@
     }
 }
 
-.browser-titlebar
-{
-    font-size: clamp(0em, 1em, 12px) !important;
-}
-
 /* ---------------------------------------- Tabs ---------------------------------------- */
 
 .tabbrowser-tab
@@ -159,6 +154,11 @@
             {
                 background-position: 50% calc(50% + 12px) !important;
             }
+        }
+
+        #nav-bar
+        {
+            border: none !important;
         }
     }
 }
