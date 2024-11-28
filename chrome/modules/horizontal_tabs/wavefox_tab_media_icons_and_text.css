@@ -137,4 +137,9 @@
         height: var(--tab-min-height) !important;
         line-height: var(--tab-min-height) !important;
     }
+
+    .tab-secondary-label
+    {
+        display: none !important;
+    }
 }
