@@ -22,57 +22,69 @@
 
 ### Tab Shapes
 
-  ##### Tabs (Option 1)
-  ![1](https://user-images.githubusercontent.com/85301851/233114797-1495824d-9f46-474f-aeb2-a8dcc5608066.PNG)
-  - `userChrome.Tabs.Option1.Enabled`
-  
-  ##### Tabs (Option 2)
-  ![2](https://user-images.githubusercontent.com/85301851/233114845-1904b615-7c6b-43c4-9422-ae6b2ed6e3b1.PNG)
-  - `userChrome.Tabs.Option2.Enabled`
-  
-  ##### Tabs (Option 3)
-  ![3](https://user-images.githubusercontent.com/85301851/233114878-baae0abb-2779-453a-9a2f-30e6fd015952.PNG)
-  - `userChrome.Tabs.Option3.Enabled`
-  
-  ##### Tabs (Option 4)
-  ![4](https://user-images.githubusercontent.com/85301851/233114921-b386502c-2b73-496b-9536-5350227ae78b.PNG)
-  - `userChrome.Tabs.Option4.Enabled`
-  
-  ##### Tabs (Option 5)
-  ![5](https://user-images.githubusercontent.com/85301851/233114950-68595ae9-27dc-4384-8f71-61ae873b1a3b.PNG)
-  - `userChrome.Tabs.Option5.Enabled`
-  
-  ##### Tabs (Option 6)
-  ![9](https://user-images.githubusercontent.com/85301851/233115069-913b318e-5503-4d54-916e-e3cbd3626c96.PNG)
-  - `userChrome.Tabs.Option6.Enabled`
-  
-  ##### Tabs (Option 7)
-  ![10](https://user-images.githubusercontent.com/85301851/233115104-2a4e527f-15cf-47f9-9a8f-60159a5bb570.PNG)
-  - `userChrome.Tabs.Option7.Enabled`
-  
-  ##### Tabs (Option 8)
-  ![11](https://user-images.githubusercontent.com/85301851/233115136-eba3fb57-1591-4318-86ee-ecdf673609b7.PNG)
-  - `userChrome.Tabs.Option8.Enabled`
-  
-  ##### Tabs (Option 9)
-  ![12](https://user-images.githubusercontent.com/85301851/233115162-1cd61c70-5826-4712-8692-603b04147660.PNG)
-  - `userChrome.Tabs.Option9.Enabled`
-  
-  ##### Tabs (Option 10)
-  ![14](https://user-images.githubusercontent.com/85301851/233115224-fbada5b2-35f8-41bb-81c7-52552e62d829.PNG)
-  - `userChrome.Tabs.Option10.Enabled`
-  
-  ##### Tabs (Option 11)
-  ![15](https://user-images.githubusercontent.com/85301851/233115260-c6cb7c9a-192c-4a20-9327-392c6afae755.PNG)
-  - `userChrome.Tabs.Option11.Enabled`
-  
-  ##### Tabs (Option 12)
-  ![16](https://user-images.githubusercontent.com/85301851/233115285-feb26903-ab9f-4e38-b28a-7207b0459ebe.PNG)
-  - `userChrome.Tabs.Option12.Enabled`
+##### Option 1
 
-  ##### Tabs (Option 13)
-  ![изображение](https://github.com/QNetITQ/WaveFox/assets/85301851/906299f9-94e6-4a69-9191-202c94525ae6)
-  - `userChrome.Tabs.Option13.Enabled`
+
+- `userChrome.Tabs.Option1.Enabled`
+  
+##### Option 2
+
+
+- `userChrome.Tabs.Option2.Enabled`
+  
+##### Option 3
+
+
+- `userChrome.Tabs.Option3.Enabled`
+  
+##### Option 4
+
+
+- `userChrome.Tabs.Option4.Enabled`
+  
+##### Option 5
+
+
+- `userChrome.Tabs.Option5.Enabled`
+  
+##### Option 6
+
+
+- `userChrome.Tabs.Option6.Enabled`
+  
+##### Option 7
+
+
+- `userChrome.Tabs.Option7.Enabled`
+  
+##### Option 8
+
+
+- `userChrome.Tabs.Option8.Enabled`
+  
+##### Option 9
+
+
+- `userChrome.Tabs.Option9.Enabled`
+  
+##### Option 10
+
+
+- `userChrome.Tabs.Option10.Enabled`
+  
+##### Option 11
+
+
+- `userChrome.Tabs.Option11.Enabled`
+  
+##### Option 12
+
+
+- `userChrome.Tabs.Option12.Enabled`
+
+##### Option 13
+  
+- `userChrome.Tabs.Option13.Enabled`
 
 ### Windows 11/10 Custom Transparency
 Install [DWMBlurGlass](https://github.com/Maplespe/DWMBlurGlass). Configure to your liking and activate the keys below. Works only with the system theme. If you just want to enable MicaAlt on Windows 11, see the FAQ.
