@@ -23,68 +23,63 @@
 ### Tab Shapes
 
 ##### Option 1
-
+![изображение](https://github.com/user-attachments/assets/98d808c0-de87-4328-bd19-c885060adaec)
 
 - `userChrome.Tabs.Option1.Enabled`
   
 ##### Option 2
-
+![изображение](https://github.com/user-attachments/assets/15244c8d-e073-47f7-a84c-500bcf1f056d)
 
 - `userChrome.Tabs.Option2.Enabled`
   
 ##### Option 3
-
+![изображение](https://github.com/user-attachments/assets/ec6f06df-5f83-4408-8f39-8480cff5ca8b)
 
 - `userChrome.Tabs.Option3.Enabled`
   
 ##### Option 4
-
+![изображение](https://github.com/user-attachments/assets/112843be-7182-4a48-bc04-0f9211ddf7c7)
 
 - `userChrome.Tabs.Option4.Enabled`
   
 ##### Option 5
 
-
 - `userChrome.Tabs.Option5.Enabled`
   
 ##### Option 6
-
+![изображение](https://github.com/user-attachments/assets/21c6644f-f579-419d-92b8-cb614a726742)
 
 - `userChrome.Tabs.Option6.Enabled`
   
 ##### Option 7
-
+![изображение](https://github.com/user-attachments/assets/b648e7c3-2dc4-478d-9ee0-8ac9b727c37d)
 
 - `userChrome.Tabs.Option7.Enabled`
   
 ##### Option 8
-
+![изображение](https://github.com/user-attachments/assets/8cce9ecd-2005-4aba-9c66-6e49f2ccb76a)
 
 - `userChrome.Tabs.Option8.Enabled`
   
 ##### Option 9
-
+![изображение](https://github.com/user-attachments/assets/d720364a-88f3-4fe6-a61f-0747f93e5f20)
 
 - `userChrome.Tabs.Option9.Enabled`
   
 ##### Option 10
-
+![изображение](https://github.com/user-attachments/assets/88d1d2de-2d0c-4837-b15f-a10694e5093a)
 
 - `userChrome.Tabs.Option10.Enabled`
   
 ##### Option 11
-
+![изображение](https://github.com/user-attachments/assets/084a7915-12d9-44da-a3d1-a0b17267d356)
 
 - `userChrome.Tabs.Option11.Enabled`
   
 ##### Option 12
-
+![изображение](https://github.com/user-attachments/assets/2d38da42-f304-468c-bb52-1190d936bc19)
 
 - `userChrome.Tabs.Option12.Enabled`
-
-##### Option 13
-  
-- `userChrome.Tabs.Option13.Enabled`
 
 ### Windows 11/10 Custom Transparency
 Install [DWMBlurGlass](https://github.com/Maplespe/DWMBlurGlass). Configure to your liking and activate the keys below. Works only with the system theme. If you just want to enable MicaAlt on Windows 11, see the FAQ.
