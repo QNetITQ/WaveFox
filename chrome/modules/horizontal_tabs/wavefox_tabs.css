@@ -120,6 +120,7 @@
     :root
     {
         --wavefox-tab-border-radius: 0px;
+        --tabstrip-min-height: auto !important;
         
         .tabbrowser-tab
         {
@@ -128,6 +129,9 @@
 
             &[visuallyselected]
             {
+                position: relative;
+                z-index: 2 !important;
+
                 .tab-background
                 {
                     background-color: var(--toolbar-bgcolor) !important;
