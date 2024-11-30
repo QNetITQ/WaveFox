@@ -43,6 +43,7 @@
 - `userChrome.Tabs.Option4.Enabled`
   
 ##### Option 5
+![изображение](https://github.com/user-attachments/assets/cd6fb4a9-8cc7-4fd1-9f26-9acef5a4a121)
 
 - `userChrome.Tabs.Option5.Enabled`
   
