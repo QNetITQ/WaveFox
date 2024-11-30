@@ -17,7 +17,10 @@
 
 - Download the `chrome` folder and put it in your user profile folder
 - Go to `about:config` and activate the key `toolkit.legacyUserProfileCustomizations.stylesheets`
-- Specify the desired shape of the tabs
+
+## Optional
+
+### Tab Shapes
 
   ##### Tabs (Option 1)
   ![1](https://user-images.githubusercontent.com/85301851/233114797-1495824d-9f46-474f-aeb2-a8dcc5608066.PNG)
@@ -70,8 +73,6 @@
   ##### Tabs (Option 13)
   ![изображение](https://github.com/QNetITQ/WaveFox/assets/85301851/906299f9-94e6-4a69-9191-202c94525ae6)
   - `userChrome.Tabs.Option13.Enabled`
-
-## Optional
 
 ### Windows 11/10 Custom Transparency
 Install [DWMBlurGlass](https://github.com/Maplespe/DWMBlurGlass). Configure to your liking and activate the keys below. Works only with the system theme. If you just want to enable MicaAlt on Windows 11, see the FAQ.
