@@ -97,3 +97,10 @@
     margin-inline-end: calc(-1 * var(--tab-first-last-inline-margin, 0px) / 2) !important;
     z-index: 1 !important;
 }
+
+/* ---------------------------------------- Roundings ---------------------------------------- */
+
+.browser-titlebar .toolbarbutton-1 > :is(.toolbarbutton-icon, .toolbarbutton-badge-stack)
+{
+    clip-path: inset(0px round 50px) !important;
+}
