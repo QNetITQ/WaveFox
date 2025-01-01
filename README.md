@@ -82,8 +82,8 @@
 
 - `userChrome.Tabs.Option12.Enabled`
 
-### Windows 11/10 Custom Transparency
-Install [DWMBlurGlass](https://github.com/Maplespe/DWMBlurGlass). Configure to your liking and activate the keys below. Works only with the system theme. If you just want to enable MicaAlt on Windows 11, see the FAQ.
+### Windows 10 Transparency
+Install [DWMBlurGlass](https://github.com/Maplespe/DWMBlurGlass). Configure to your liking and activate the keys below. Works only with the system theme.
 ![изображение](https://github.com/user-attachments/assets/632c972f-b48a-4ca6-8c69-28859e34485b)
 
 - `browser.theme.windows.accent-color-in-tabs.enabled`
@@ -98,7 +98,6 @@ Requires Linux with transparency support. Works only with the system theme.
 - `userChrome.Linux.Transparency.Medium.Enabled`
 - `userChrome.Linux.Transparency.High.Enabled`
 - `userChrome.Linux.Transparency.VeryHigh.Enabled`
-- `browser.tabs.inTitlebar` > `1` (Required key)
 
 ### Toolbar Transparency
 Works only with the system theme.
@@ -609,7 +608,7 @@ Open `userChrome.css` and paste your code under the appropriate comment. Your co
 </details>
 
 <details>
-  <summary>How to enable Mica on Windows 11?</summary>
+  <summary>How to enable MicaAlt / Transparency on Windows 11?</summary>
 
 - `widget.windows.mica`
 
