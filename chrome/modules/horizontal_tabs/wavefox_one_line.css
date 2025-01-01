@@ -49,8 +49,8 @@
     {
         width: fit-content !important;
         background-color: transparent !important;
-        margin-top: var(--drag-space) !important;
-        box-shadow: var(--inner-box-shadow) !important;
+        margin-top: var(--drag-space, 0px) !important;
+        box-shadow: var(--wavefox-inner-tabbar-shadow) !important;
     }
 
     #urlbar-container,
@@ -87,17 +87,6 @@
                 --toolbarbutton-active-background: color-mix(in srgb, currentColor 30%, transparent) !important;
             }
         }
-        
-        :root[tabsintitlebar] #nav-bar
-        {
-            will-change: auto !important;
-            transition: color var(--inactive-window-transition) !important;
-
-            &:-moz-window-inactive
-            {
-                color: color-mix(in srgb, currentColor calc(var(--inactive-titlebar-opacity) * 100%), transparent) !important;
-            }
-        }
     }
     
     /* -------------------- Linux -------------------- */
@@ -107,33 +96,6 @@
         :root[tabsintitlebar]:not([lwtheme]) #nav-bar
         {
             color: inherit !important;
-        }
-        
-        :root[tabsintitlebar] #nav-bar
-        {
-            will-change: auto !important;
-            transition: color var(--inactive-window-transition) !important;
-
-            &:-moz-window-inactive
-            {
-                color: color-mix(in srgb, currentColor calc(var(--inactive-titlebar-opacity) * 100%), transparent) !important;
-            }
-        }
-    }
-        
-    /* -------------------- MacOS -------------------- */
-
-    @media (-moz-platform: macos)
-    {
-        :root[tabsintitlebar] #nav-bar
-        {
-            will-change: auto !important;
-            transition: color var(--inactive-window-transition) !important;
-
-            &:-moz-window-inactive
-            {
-                color: color-mix(in srgb, currentColor calc(var(--inactive-titlebar-opacity) * 100%), transparent) !important;
-            }
         }
     }
 }

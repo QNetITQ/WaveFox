@@ -24,24 +24,12 @@
 
     .tab-stack::before
     {
-        inset-inline-end: 100%;
-        transform: translateX(calc(-1 * var(--tab-separator-offset)));
-    }
-
-    :root:-moz-locale-dir(rtl) .tab-stack::before
-    {
-        transform: translateX(var(--tab-separator-offset));
+        inset-inline-end: calc(100% + var(--tab-overflow-clip-margin));
     }
 
     .tab-stack::after
     {
-        inset-inline-start: 100%;
-        transform: translateX(var(--tab-separator-offset));
-    }
-
-    :root:-moz-locale-dir(rtl) .tab-stack::after
-    {
-        transform: translateX(calc(-1 * var(--tab-separator-offset)));
+        inset-inline-start: calc(100% + var(--tab-overflow-clip-margin));
     }
 
     .tabbrowser-tab:not([hidden]):is([selected], :hover, [multiselected]) .tab-stack::before,
@@ -73,6 +61,26 @@
         :root
         {
             --separators-color-saturation: 0.5;
+        }
+    }
+
+    @media (-moz-bool-pref: "userChrome.Tabs.Option5.Enabled")  or
+           (-moz-bool-pref: "userChrome.Tabs.Option6.Enabled")  or
+           (-moz-bool-pref: "userChrome.Tabs.Option7.Enabled")  or
+           (-moz-bool-pref: "userChrome.Tabs.Option8.Enabled")  or
+           (-moz-bool-pref: "userChrome.Tabs.Option9.Enabled")  or
+           (-moz-bool-pref: "userChrome.Tabs.Option10.Enabled") or
+           (-moz-bool-pref: "userChrome.Tabs.Option11.Enabled") or
+           (-moz-bool-pref: "userChrome.Tabs.Option12.Enabled")
+    {
+        .tab-stack::before
+        {
+            inset-inline-end: 100% !important;
+        }
+
+        .tab-stack::after
+        {
+            inset-inline-start: 100% !important;
         }
     }
 }

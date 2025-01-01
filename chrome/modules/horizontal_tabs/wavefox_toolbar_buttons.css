@@ -20,11 +20,6 @@
     background-color: var(--toolbarbutton-hover-background) !important;
 }
 
-#TabsToolbar #firefox-view-button[attention]
-{
-    background-position: var(--tab-attention-indicator-position) !important;
-}
-
 /* -------------------- Extensions menu -------------------- */
 
 #unified-extensions-panel
@@ -93,12 +88,20 @@
 
 #tabs-newtab-button
 {
-    margin-inline-start: calc(-1 * var(--tab-first-last-inline-margin) / 2) !important;
+    margin-inline-start: calc(-1 * var(--tab-first-last-inline-margin, 0px) / 2) !important;
 }
 
 .toolbarbutton-1:has(+ #tabbrowser-tabs:not([overflow])),
 .toolbarbutton-1:has(+ #tabbrowser-tabs[overflow][haspinnedtabs])
 {
-    margin-inline-end: calc(-1 * var(--tab-first-last-inline-margin) / 2) !important;
+    margin-inline-end: calc(-1 * var(--tab-first-last-inline-margin, 0px) / 2) !important;
     z-index: 1 !important;
 }
+
+/* ---------------------------------------- Roundings ---------------------------------------- */
+/*
+.browser-titlebar .toolbarbutton-1 > :is(.toolbarbutton-icon, .toolbarbutton-badge-stack)
+{
+    clip-path: inset(0px round 50px) !important;
+}
+*/

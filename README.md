@@ -9,72 +9,81 @@
 [Download Firefox](https://www.mozilla.org/en-US/firefox/all/#product-desktop-release) / [Download WaveFox](https://github.com/QNetITQ/WaveFox/releases) / [WaveFox Nightly](https://github.com/QNetITQ/WaveFox/tree/WaveFox-Nightly)
 
 <details>
-  <summary>WaveFox v1.7.133</summary>
+  <summary>WaveFox v1.8.134</summary>
 
 - ##### Minimum Requirements
-  - Firefox 133
+  - Firefox 134
   - Windows / MacOS / Linux
 
 - Download the `chrome` folder and put it in your user profile folder
 - Go to `about:config` and activate the key `toolkit.legacyUserProfileCustomizations.stylesheets`
-- Specify the desired shape of the tabs
-
-  ##### Tabs (Option 1)
-  ![1](https://user-images.githubusercontent.com/85301851/233114797-1495824d-9f46-474f-aeb2-a8dcc5608066.PNG)
-  - `userChrome.Tabs.Option1.Enabled`
-  
-  ##### Tabs (Option 2)
-  ![2](https://user-images.githubusercontent.com/85301851/233114845-1904b615-7c6b-43c4-9422-ae6b2ed6e3b1.PNG)
-  - `userChrome.Tabs.Option2.Enabled`
-  
-  ##### Tabs (Option 3)
-  ![3](https://user-images.githubusercontent.com/85301851/233114878-baae0abb-2779-453a-9a2f-30e6fd015952.PNG)
-  - `userChrome.Tabs.Option3.Enabled`
-  
-  ##### Tabs (Option 4)
-  ![4](https://user-images.githubusercontent.com/85301851/233114921-b386502c-2b73-496b-9536-5350227ae78b.PNG)
-  - `userChrome.Tabs.Option4.Enabled`
-  
-  ##### Tabs (Option 5)
-  ![5](https://user-images.githubusercontent.com/85301851/233114950-68595ae9-27dc-4384-8f71-61ae873b1a3b.PNG)
-  - `userChrome.Tabs.Option5.Enabled`
-  
-  ##### Tabs (Option 6)
-  ![9](https://user-images.githubusercontent.com/85301851/233115069-913b318e-5503-4d54-916e-e3cbd3626c96.PNG)
-  - `userChrome.Tabs.Option6.Enabled`
-  
-  ##### Tabs (Option 7)
-  ![10](https://user-images.githubusercontent.com/85301851/233115104-2a4e527f-15cf-47f9-9a8f-60159a5bb570.PNG)
-  - `userChrome.Tabs.Option7.Enabled`
-  
-  ##### Tabs (Option 8)
-  ![11](https://user-images.githubusercontent.com/85301851/233115136-eba3fb57-1591-4318-86ee-ecdf673609b7.PNG)
-  - `userChrome.Tabs.Option8.Enabled`
-  
-  ##### Tabs (Option 9)
-  ![12](https://user-images.githubusercontent.com/85301851/233115162-1cd61c70-5826-4712-8692-603b04147660.PNG)
-  - `userChrome.Tabs.Option9.Enabled`
-  
-  ##### Tabs (Option 10)
-  ![14](https://user-images.githubusercontent.com/85301851/233115224-fbada5b2-35f8-41bb-81c7-52552e62d829.PNG)
-  - `userChrome.Tabs.Option10.Enabled`
-  
-  ##### Tabs (Option 11)
-  ![15](https://user-images.githubusercontent.com/85301851/233115260-c6cb7c9a-192c-4a20-9327-392c6afae755.PNG)
-  - `userChrome.Tabs.Option11.Enabled`
-  
-  ##### Tabs (Option 12)
-  ![16](https://user-images.githubusercontent.com/85301851/233115285-feb26903-ab9f-4e38-b28a-7207b0459ebe.PNG)
-  - `userChrome.Tabs.Option12.Enabled`
-
-  ##### Tabs (Option 13)
-  ![изображение](https://github.com/QNetITQ/WaveFox/assets/85301851/906299f9-94e6-4a69-9191-202c94525ae6)
-  - `userChrome.Tabs.Option13.Enabled`
 
 ## Optional
 
-### Windows 11/10 Custom Transparency
-Install [DWMBlurGlass](https://github.com/Maplespe/DWMBlurGlass). Configure to your liking and activate the keys below. Works only with the system theme. If you just want to enable MicaAlt on Windows 11, see the FAQ.
+### Tab Shapes
+
+##### Option 1
+![изображение](https://github.com/user-attachments/assets/98d808c0-de87-4328-bd19-c885060adaec)
+
+- `userChrome.Tabs.Option1.Enabled`
+  
+##### Option 2
+![изображение](https://github.com/user-attachments/assets/15244c8d-e073-47f7-a84c-500bcf1f056d)
+
+- `userChrome.Tabs.Option2.Enabled`
+  
+##### Option 3
+![изображение](https://github.com/user-attachments/assets/ec6f06df-5f83-4408-8f39-8480cff5ca8b)
+
+- `userChrome.Tabs.Option3.Enabled`
+  
+##### Option 4
+![изображение](https://github.com/user-attachments/assets/112843be-7182-4a48-bc04-0f9211ddf7c7)
+
+- `userChrome.Tabs.Option4.Enabled`
+  
+##### Option 5
+![изображение](https://github.com/user-attachments/assets/cd6fb4a9-8cc7-4fd1-9f26-9acef5a4a121)
+
+- `userChrome.Tabs.Option5.Enabled`
+  
+##### Option 6
+![изображение](https://github.com/user-attachments/assets/21c6644f-f579-419d-92b8-cb614a726742)
+
+- `userChrome.Tabs.Option6.Enabled`
+  
+##### Option 7
+![изображение](https://github.com/user-attachments/assets/b648e7c3-2dc4-478d-9ee0-8ac9b727c37d)
+
+- `userChrome.Tabs.Option7.Enabled`
+  
+##### Option 8
+![изображение](https://github.com/user-attachments/assets/8cce9ecd-2005-4aba-9c66-6e49f2ccb76a)
+
+- `userChrome.Tabs.Option8.Enabled`
+  
+##### Option 9
+![изображение](https://github.com/user-attachments/assets/d720364a-88f3-4fe6-a61f-0747f93e5f20)
+
+- `userChrome.Tabs.Option9.Enabled`
+  
+##### Option 10
+![изображение](https://github.com/user-attachments/assets/88d1d2de-2d0c-4837-b15f-a10694e5093a)
+
+- `userChrome.Tabs.Option10.Enabled`
+  
+##### Option 11
+![изображение](https://github.com/user-attachments/assets/084a7915-12d9-44da-a3d1-a0b17267d356)
+
+- `userChrome.Tabs.Option11.Enabled`
+  
+##### Option 12
+![изображение](https://github.com/user-attachments/assets/2d38da42-f304-468c-bb52-1190d936bc19)
+
+- `userChrome.Tabs.Option12.Enabled`
+
+### Windows 10 Transparency
+Install [DWMBlurGlass](https://github.com/Maplespe/DWMBlurGlass). Configure to your liking and activate the keys below. Works only with the system theme.
 ![изображение](https://github.com/user-attachments/assets/632c972f-b48a-4ca6-8c69-28859e34485b)
 
 - `browser.theme.windows.accent-color-in-tabs.enabled`
@@ -89,7 +98,6 @@ Requires Linux with transparency support. Works only with the system theme.
 - `userChrome.Linux.Transparency.Medium.Enabled`
 - `userChrome.Linux.Transparency.High.Enabled`
 - `userChrome.Linux.Transparency.VeryHigh.Enabled`
-- `browser.tabs.inTitlebar` > `1` (Required key)
 
 ### Toolbar Transparency
 Works only with the system theme.
@@ -123,17 +131,6 @@ Works only with the system theme.
 - `userChrome.TabSeparators.Saturation.Low.Enabled`
 - `userChrome.TabSeparators.Saturation.Medium.Enabled`
 
-### Menu Density
-By default context menus follow the selected interface density, but it is possible to set a fixed size.
-
-| Compact | Normal | Touch |
-|---------|--------|-------|
-| ![изображение](https://user-images.githubusercontent.com/85301851/152645825-7d351e3e-b938-4fa1-a460-1f699ed1c3c6.png) | ![изображение](https://user-images.githubusercontent.com/85301851/152645878-d917e841-837a-4a11-8fc1-ce0fc2262aef.png) | ![изображение](https://user-images.githubusercontent.com/85301851/152645915-833c1b22-e320-445f-817e-408ea26f7605.png) |
-
-- `userChrome.Menu.Size.Compact.Enabled`
-- `userChrome.Menu.Size.Normal.Enabled`
-- `userChrome.Menu.Size.Touch.Enabled`
-
 ### Lepton Icons (Menu icons)
 This is third-party code. I will update this code according to the original source. Unlike other options, these keys can be enabled in any order, or all together.
 
@@ -162,11 +159,6 @@ This is third-party code. I will update this code according to the original sour
 - `userChrome.DragSpace.Top.Windowed.Enabled`
 - `userChrome.DragSpace.Top.Maximized.Enabled`
 - `userChrome.DragSpace.Top.Fullscreen.Enabled`
-
-### Selected Tab Indicator
-![изображение](https://github.com/QNetITQ/WaveFox/assets/85301851/c5b7c4b8-81d2-4ca2-9944-574af7e88f1d)
-
-- `userChrome.Tabs.SelectedTabIndicator.Enabled`
 
 ### Tabs On Bottom
 ![Снимок](https://github.com/QNetITQ/WaveFox/assets/85301851/514cf30d-a417-48cb-bfd1-0e77c9df1bf4)
@@ -616,7 +608,7 @@ Open `userChrome.css` and paste your code under the appropriate comment. Your co
 </details>
 
 <details>
-  <summary>How to enable Mica on Windows 11?</summary>
+  <summary>How to enable MicaAlt / Transparency on Windows 11?</summary>
 
 - `widget.windows.mica`
 
