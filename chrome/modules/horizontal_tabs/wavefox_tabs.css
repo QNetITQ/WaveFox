@@ -17,7 +17,7 @@
 
 /* ---------------------------------------- Titlebar ---------------------------------------- */
 
-:root[tabsintitlebar]
+:root[customtitlebar]
 {
     .browser-titlebar
     {
