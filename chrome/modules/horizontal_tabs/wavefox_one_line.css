@@ -79,7 +79,7 @@
     {
         @media (-moz-windows-accent-color-in-titlebar) or (-moz-windows-mica)
         {
-            :root[tabsintitlebar]:not([lwtheme]) #nav-bar
+            :root[customtitlebar]:not([lwtheme]) #nav-bar
             {
                 color: inherit !important;
                 --toolbarbutton-icon-fill: currentColor !important;
@@ -93,7 +93,7 @@
 
     @media (-moz-platform: linux)
     {
-        :root[tabsintitlebar]:not([lwtheme]) #nav-bar
+        :root[customtitlebar]:not([lwtheme]) #nav-bar
         {
             color: inherit !important;
         }
