@@ -412,7 +412,11 @@
                 z-index: 1;
             }
 
-
+            .tab-group-line
+            {
+                margin-block: auto 0px !important;
+                margin-inline: calc(-1 * var(--tab-min-height) / 2) !important;
+            }
 
 
 
