@@ -276,22 +276,11 @@
             {
                 padding-inline: calc((var(--tab-min-height) - 16px) / 2 + 2px) !important;
             }
-
-            &[usercontextid] .tab-context-line
-            {
-                height: 4px !important;
-                margin: 0px !important;
-                border-radius: 4px !important;
-            }
         }
         
         &:not([pinned])
         {
-            &[usercontextid] .tab-context-line
-            {
-                margin: 0px !important;
-                border-radius: 4px !important;
-            }
+
         }
 
         &[visuallyselected]
@@ -384,20 +373,50 @@
                 inset-inline-start: 100%;
                 mask-image: var(--right-svg);
             }
-        }
 
-        .tab-loading-burst
-        {
-            max-height: 2px !important;
-            margin-block: auto 0px !important;
-            margin-inline: calc(-1 * var(--tab-min-height) / 2) !important;
-            border-radius: 4px !important;
-            z-index: 1 !important;
 
-            &::before
+
+
+
+            
+            > *
             {
-                margin-inline: 50% !important;
+                grid-area: 1 / 1 / auto / auto !important;
             }
+
+            .tab-context-line
+            {
+                height: 100% !important;
+                margin-block: 0px !important;
+                margin-inline: calc(-1 * var(--tab-min-height)) !important;
+                
+                mask-image: var(--left-svg), linear-gradient(black, black), var(--right-svg);
+                mask-size: auto 100%, calc(100% - var(--tab-min-height) * 2) 100%, auto 100%;
+                mask-position: left center, center center, right center;
+                mask-repeat: no-repeat;
+                
+                clip-path: xywh(0px 0px 100% 2px) !important;
+                
+                z-index: 1 !important;
+            }
+            
+            .tab-loading-burst
+            {
+                margin-inline: calc(-1 * var(--tab-min-height)) !important;
+                
+                mask-image: var(--left-svg), linear-gradient(black, black), var(--right-svg);
+                mask-size: auto 100%, calc(100% - var(--tab-min-height) * 2) 100%, auto 100%;
+                mask-position: left center, center center, right center;
+                mask-repeat: no-repeat;
+                
+                z-index: 1;
+            }
+
+
+
+
+
+            
         }
     }
 
