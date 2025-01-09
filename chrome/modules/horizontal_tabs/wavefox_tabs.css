@@ -344,6 +344,8 @@
 
         .tab-background
         {
+            display: grid !important;
+            grid-template: auto / auto !important;
             position: relative !important;
             margin-inline: calc(var(--tab-min-height) / 2) !important;
             margin-block: 0px !important;
@@ -374,48 +376,37 @@
                 mask-image: var(--right-svg);
             }
 
-
-
-
-
-            
             > *
             {
                 grid-area: 1 / 1 / auto / auto !important;
             }
-
-            .tab-context-line
+            
+            .tab-context-line,
+            .tab-loading-burst
             {
                 height: 100% !important;
-                margin-block: 0px !important;
-                margin-inline: calc(-1 * var(--tab-min-height)) !important;
-                
                 mask-image: var(--left-svg), linear-gradient(black, black), var(--right-svg);
                 mask-size: auto 100%, calc(100% - var(--tab-min-height) * 2) 100%, auto 100%;
                 mask-position: left center, center center, right center;
                 mask-repeat: no-repeat;
-                
+                margin-block: 0px !important;
+                margin-inline: calc(-1 * var(--tab-min-height)) !important;
+            }
+
+            .tab-context-line
+            {
                 clip-path: xywh(0px 0px 100% 2px) !important;
-                
-                z-index: 1 !important;
+                z-index: 2 !important;
             }
             
             .tab-loading-burst
             {
-                margin-inline: calc(-1 * var(--tab-min-height)) !important;
+                z-index: 1 !important;
                 
-                mask-image: var(--left-svg), linear-gradient(black, black), var(--right-svg);
-                mask-size: auto 100%, calc(100% - var(--tab-min-height) * 2) 100%, auto 100%;
-                mask-position: left center, center center, right center;
-                mask-repeat: no-repeat;
-                
-                z-index: 1;
-            }
-
-            .tab-group-line
-            {
-                margin-block: auto 0px !important;
-                margin-inline: calc(-1 * var(--tab-min-height) / 2) !important;
+                &::before
+                {
+                    margin-inline-start: 0% !important;
+                }
             }
 
 
