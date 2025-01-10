@@ -405,19 +405,54 @@
                 
                 &::before
                 {
-                    margin-inline-start: 0% !important;
+                    margin-inline-start: 0px !important;
                 }
             }
-
-
-
-            
         }
     }
 
     #tabbrowser-tabs[overflow] .tab-drop-indicator
     {
         inset-inline-start: var(--tab-first-last-inline-margin) !important;
+    }
+
+    /* -------------------- Tab Groups (Alpha) -------------------- */
+
+    .tab-background[dragover-createGroup]
+    {
+        &::before,
+        &::after
+        {
+            background-color: light-dark(var(--dragover-tab-group-color-pale), var(--dragover-tab-group-color));
+        }
+    }
+            
+    .tab-group-line
+    {
+        margin-block: auto 0px !important;
+        margin-inline: 0px !important;
+        z-index: 2 !important;
+    }
+
+    tab-group[collapsed] .tabbrowser-tab
+    {
+        visibility: collapse !important;
+    }
+    
+    .tabbrowser-tab:has(+ tab-group)
+    {
+        margin-inline-end: var(--tab-first-last-inline-margin) !important;
+    }
+    
+    tab-group[collapsed] + .tabbrowser-tab,
+    tab-group[collapsed] + #tabbrowser-arrowscrollbox-periphery > #tabs-newtab-button
+    {
+        margin-inline-start: var(--tab-first-last-inline-margin) !important;
+    }
+    
+    tab-group > .tab-group-label-container
+    {
+        margin-top: var(--drag-space, 0px) !important;
     }
 
     /* -------------------- Tab Icon Indicators -------------------- */
