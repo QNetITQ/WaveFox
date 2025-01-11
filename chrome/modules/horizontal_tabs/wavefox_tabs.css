@@ -418,41 +418,44 @@
 
     /* -------------------- Tab Groups (Alpha) -------------------- */
 
-    .tab-background[dragover-createGroup]
+    @media (-moz-bool-pref: "browser.tabs.groups.enabled")
     {
-        &::before,
-        &::after
+        .tab-group-line
         {
-            background-color: light-dark(var(--dragover-tab-group-color-pale), var(--dragover-tab-group-color));
+            margin-block: auto 0px !important;
+            margin-inline: 0px !important;
+            z-index: 2 !important;
         }
-    }
-            
-    .tab-group-line
-    {
-        margin-block: auto 0px !important;
-        margin-inline: 0px !important;
-        z-index: 2 !important;
-    }
 
-    tab-group[collapsed] .tabbrowser-tab
-    {
-        visibility: collapse !important;
-    }
-    
-    .tabbrowser-tab:has(+ tab-group)
-    {
-        margin-inline-end: var(--tab-first-last-inline-margin) !important;
-    }
-    
-    tab-group[collapsed] + .tabbrowser-tab,
-    tab-group[collapsed] + #tabbrowser-arrowscrollbox-periphery > #tabs-newtab-button
-    {
-        margin-inline-start: var(--tab-first-last-inline-margin) !important;
-    }
-    
-    tab-group > .tab-group-label-container
-    {
-        margin-top: var(--drag-space, 0px) !important;
+        .tabbrowser-tab[dragover-createGroup] .tab-background
+        {
+            &::before,
+            &::after
+            {
+                background-color: light-dark(var(--dragover-tab-group-color-pale), var(--dragover-tab-group-color));
+                transition: background-color 100ms ease, color 100ms ease, outline-color 100ms ease;
+            }
+        }
+        
+        tab-group[collapsed] .tabbrowser-tab
+        {
+            visibility: collapse !important;
+        }
+
+        .tabbrowser-tab:not(:last-of-type) + tab-group > .tab-group-label-container
+        {
+            margin-inline-start: calc(var(--tab-first-last-inline-margin) + 3px) !important;
+        }
+
+        tab-group[collapsed]:last-of-type > .tab-group-label-container
+        {
+            margin-inline-end: var(--tab-first-last-inline-margin) !important;
+        }
+
+        tab-group > .tab-group-label-container
+        {
+            margin-top: var(--drag-space, 0px) !important;
+        }
     }
 
     /* -------------------- Tab Icon Indicators -------------------- */
