@@ -442,9 +442,16 @@
             visibility: collapse !important;
         }
 
-        .tabbrowser-tab:not(:last-of-type) + tab-group > .tab-group-label-container
+        .tabbrowser-tab:not(:nth-last-child(1 of .tabbrowser-tab:not([hidden])), [hidden]) + tab-group > .tab-group-label-container
         {
             margin-inline-start: calc(var(--tab-first-last-inline-margin) + 3px) !important;
+        }
+
+        tab-group[collapsed]:has(+ .tabbrowser-tab:not([hidden])) > .tab-group-label-container,
+        tab-group[collapsed]:has(+ .tabbrowser-tab[hidden] + .tabbrowser-tab:not([hidden])) > .tab-group-label-container,
+        tab-group[collapsed]:has(+ .tabbrowser-tab[hidden] ~ .tabbrowser-tab[hidden] + .tabbrowser-tab:not([hidden])) > .tab-group-label-container
+        {
+            margin-inline-end: var(--tab-first-last-inline-margin) !important;
         }
 
         tab-group[collapsed]:last-of-type > .tab-group-label-container
