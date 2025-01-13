@@ -113,62 +113,8 @@
 
 /* ---------------------------------------- Attached tabs ---------------------------------------- */
 
-@media (-moz-bool-pref: "userChrome.Tabs.Option5.Enabled")
-{
-    /* -------------------- Tab shapes -------------------- */
-
-    :root
-    {
-        --wavefox-tab-border-radius: 0px;
-        --tabstrip-min-height: auto !important;
-        
-        .tabbrowser-tab
-        {
-            overflow: visible !important;
-            padding-inline: 0px !important;
-
-            &[visuallyselected]
-            {
-                position: relative;
-                z-index: 2 !important;
-
-                .tab-background
-                {
-                    background-color: var(--toolbar-bgcolor) !important;
-                }
-                
-                .tab-content
-                {
-                    color: var(--toolbar-color) !important;
-                }
-            }
-            
-            .tab-background
-            {
-                margin-block: 0px !important;
-                outline-offset: 0px !important;
-            }
-
-            &[usercontextid] .tab-context-line
-            {
-                margin: 0px !important;
-            }
-
-            &:is([image], [pinned]) .tab-content[attention]:not([selected]),
-            .tab-content[pinned][titlechanged]:not([selected])
-            {
-                background-position: 50% calc(50% + 12px) !important;
-            }
-        }
-
-        #nav-bar
-        {
-            border: none !important;
-        }
-    }
-}
-
-@media (-moz-bool-pref: "userChrome.Tabs.Option6.Enabled")  or
+@media (-moz-bool-pref: "userChrome.Tabs.Option5.Enabled")  or
+       (-moz-bool-pref: "userChrome.Tabs.Option6.Enabled")  or
        (-moz-bool-pref: "userChrome.Tabs.Option7.Enabled")  or
        (-moz-bool-pref: "userChrome.Tabs.Option8.Enabled")  or
        (-moz-bool-pref: "userChrome.Tabs.Option9.Enabled")  or
@@ -177,6 +123,21 @@
        (-moz-bool-pref: "userChrome.Tabs.Option12.Enabled")
 {
     /* -------------------- Tab shapes -------------------- */
+
+    @media (-moz-bool-pref: "userChrome.Tabs.Option5.Enabled")
+    {
+        :root
+        {
+            --left-svg:   linear-gradient(to right, transparent 50%, black 50%);
+            --right-svg:  linear-gradient(to left, transparent 50%, black 50%);
+            --tab-first-last-inline-margin: 0px;
+            
+            .tabbrowser-tab > .tab-stack > .tab-background > :is(.tab-context-line, .tab-loading-burst)
+            {
+                margin-inline: calc(-1 * var(--tab-min-height) / 2) !important;
+            }
+        }
+    }
 
     @media (-moz-bool-pref: "userChrome.Tabs.Option6.Enabled")
     {
@@ -385,6 +346,7 @@
             .tab-loading-burst
             {
                 height: 100% !important;
+                border-radius: 0px !important;
                 mask-image: var(--left-svg), linear-gradient(black, black), var(--right-svg);
                 mask-size: auto 100%, calc(100% - var(--tab-min-height) * 2) 100%, auto 100%;
                 mask-position: left center, center center, right center;
