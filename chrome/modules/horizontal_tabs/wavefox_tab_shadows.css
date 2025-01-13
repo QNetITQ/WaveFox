@@ -3,7 +3,8 @@
        (-moz-bool-pref: "userChrome.LightTheme.Tabs.Shadows.Saturation.High.Enabled")     or
        (-moz-bool-pref: "userChrome.LightTheme.Tabs.Shadows.Saturation.VeryHigh.Enabled")
 {
-    @media not ((-moz-bool-pref: "userChrome.Tabs.Option6.Enabled")  or
+    @media not ((-moz-bool-pref: "userChrome.Tabs.Option5.Enabled")  or
+                (-moz-bool-pref: "userChrome.Tabs.Option6.Enabled")  or
                 (-moz-bool-pref: "userChrome.Tabs.Option7.Enabled")  or
                 (-moz-bool-pref: "userChrome.Tabs.Option8.Enabled")  or
                 (-moz-bool-pref: "userChrome.Tabs.Option9.Enabled")  or
@@ -91,7 +92,8 @@
         }
     }
 
-    @media (-moz-bool-pref: "userChrome.Tabs.Option6.Enabled")  or
+    @media (-moz-bool-pref: "userChrome.Tabs.Option5.Enabled")  or
+           (-moz-bool-pref: "userChrome.Tabs.Option6.Enabled")  or
            (-moz-bool-pref: "userChrome.Tabs.Option7.Enabled")  or
            (-moz-bool-pref: "userChrome.Tabs.Option8.Enabled")  or
            (-moz-bool-pref: "userChrome.Tabs.Option9.Enabled")  or
@@ -210,7 +212,8 @@
        (-moz-bool-pref: "userChrome.DarkTheme.Tabs.Shadows.Saturation.High.Enabled")     or
        (-moz-bool-pref: "userChrome.DarkTheme.Tabs.Shadows.Saturation.VeryHigh.Enabled")
 {
-    @media not ((-moz-bool-pref: "userChrome.Tabs.Option6.Enabled")  or
+    @media not ((-moz-bool-pref: "userChrome.Tabs.Option5.Enabled")  or
+                (-moz-bool-pref: "userChrome.Tabs.Option6.Enabled")  or
                 (-moz-bool-pref: "userChrome.Tabs.Option7.Enabled")  or
                 (-moz-bool-pref: "userChrome.Tabs.Option8.Enabled")  or
                 (-moz-bool-pref: "userChrome.Tabs.Option9.Enabled")  or
@@ -298,7 +301,8 @@
         }
     }
 
-    @media (-moz-bool-pref: "userChrome.Tabs.Option6.Enabled")  or
+    @media (-moz-bool-pref: "userChrome.Tabs.Option5.Enabled")  or
+           (-moz-bool-pref: "userChrome.Tabs.Option6.Enabled")  or
            (-moz-bool-pref: "userChrome.Tabs.Option7.Enabled")  or
            (-moz-bool-pref: "userChrome.Tabs.Option8.Enabled")  or
            (-moz-bool-pref: "userChrome.Tabs.Option9.Enabled")  or
