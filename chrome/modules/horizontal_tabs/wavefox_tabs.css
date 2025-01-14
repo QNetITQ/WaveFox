@@ -323,6 +323,7 @@
                 aspect-ratio: 1 / 1;
                 height: 100%;
                 mask-size: contain;
+                transform: translate(0px, 0px);
             }
 
             &::before
