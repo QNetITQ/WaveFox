@@ -320,16 +320,37 @@
         {
             --tab-loading-fill: currentColor !important;
             --attention-dot-color: currentColor !important;
+            --local-tab-hover-bg-color: var(--tab-hover-background-color);
+            --local-multiselected-tab-bg-color: var(--tab-selected-bgcolor);
+
+            @media (-moz-bool-pref: "userChrome.Tabs.OpaqueInactive.Enabled")
+            {
+                --local-tab-hover-bg-color: color-mix(in srgb, var(--toolbar-bgcolor) 80%, rgb(0, 0, 0)) !important;
+                --local-multiselected-tab-bg-color: color-mix(in srgb, var(--toolbar-bgcolor) 80%, rgb(0, 0, 0)) !important;
+                &:not(:hover) .tab-background {
+                    background-color: color-mix(in srgb, var(--toolbar-bgcolor) 70%, rgb(0, 0, 0)) !important;
+
+                    &::before,
+                    &::after
+                    {
+                        background-color: color-mix(in srgb, var(--toolbar-bgcolor) 70%, rgb(0, 0, 0)) !important;
+                    }
+                }
+            }
             z-index: 0 !important;
 
             &:hover
             {
                 .tab-background
                 {
+                    @media (-moz-bool-pref: "userChrome.Tabs.OpaqueInactive.Enabled")
+                    {
+                        background-color: var(--local-tab-hover-bg-color) !important;
+                    }
                     &::before,
                     &::after
                     {
-                        background-color: var(--tab-hover-background-color) !important;
+                        background-color: var(--local-tab-hover-bg-color) !important;
                     }
                 }
             }
@@ -342,11 +363,15 @@
                 {
                     filter: drop-shadow(0 0 2px var(--focus-outline-color)) !important;
                     backdrop-filter: drop-shadow(0 0 1px transparent) !important;
+                    @media (-moz-bool-pref: "userChrome.Tabs.OpaqueInactive.Enabled")
+                    {
+                        background-color: var(--local-tab-hover-bg-color) !important;
+                    }
 
                     &::before,
                     &::after
                     {
-                        background-color: var(--tab-selected-bgcolor) !important;
+                        background-color: var(--local-multiselected-tab-bg-color) !important;
                         backdrop-filter: drop-shadow(0 0 1px transparent) !important;
                     }
                 }

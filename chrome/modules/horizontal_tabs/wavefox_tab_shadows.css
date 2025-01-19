@@ -177,6 +177,10 @@
             {
                 filter: var(--wavefox-selected-tab-shadow) !important;
             }
+            .tabbrowser-tab:not([visuallyselected]) .tab-background
+            {
+                filter: var(--wavefox-selected-tab-shadow) !important;
+            }
 
             /* ---------- AMO ---------- */
             
@@ -381,6 +385,10 @@
             /* ---------- Tabs ---------- */
 
             .tabbrowser-tab[visuallyselected] .tab-background
+            {
+                filter: var(--wavefox-selected-tab-shadow) !important;
+            }
+            .tabbrowser-tab:not([visuallyselected]) .tab-background
             {
                 filter: var(--wavefox-selected-tab-shadow) !important;
             }
