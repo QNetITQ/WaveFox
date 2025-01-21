@@ -245,15 +245,39 @@
     }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------- Tab Text -------------------- */
+
+.tab-label-container
+{
+    mask-image: none !important;
+}
+
+.tab-label
+{
+    width: 100% !important;
+    overflow: hidden !important;
+    white-space: nowrap !important;
+    text-overflow: ellipsis !important;
+    margin-block: 0px !important;
+}
+
+.tab-secondary-label
+{
+    display: none !important;
 }
 
 
 
 
-
-
-
-
-
-
-
+}
