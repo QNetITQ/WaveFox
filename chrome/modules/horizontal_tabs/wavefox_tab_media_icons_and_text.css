@@ -154,36 +154,8 @@
 @media (-moz-bool-pref: "MediaIcons136")
 {
 
-.tabbrowser-tab[pinned]:not([crashed])
-{
-    .tab-icon-overlay
-    {
-        background-color: transparent !important;
-        background-image: none !important;
-        fill: currentColor !important;
-        border-radius: 50px !important;
-        top: -8px !important;
-        inset-inline-end: -8px !important;
-            
-        &:hover
-        {
-            background-color: color-mix(in srgb, currentColor 10%, transparent) !important;
-        }
-            
-        &:hover:active
-        {
-            background-color: color-mix(in srgb, currentColor 20%, transparent) !important;
-        }
-    }
-}
-    
-    
-    
-    
-    
-    
-    
-    
+
+
     
 .tabbrowser-tab:not([pinned], [crashed])
 {
@@ -254,6 +226,76 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+    
+/* -------------------- Media Icons -------------------- */
+
+/* Pinned Tabs */
+
+.tabbrowser-tab[pinned]:not([crashed]) .tab-icon-overlay
+{
+    background-color: transparent !important;
+    background-image: none !important;
+    fill: currentColor !important;
+    border-radius: 50px !important;
+}
+
+.tabbrowser-tab[pinned]:not([crashed]) .tab-icon-overlay:hover
+{
+    background-color: color-mix(in srgb, currentColor 10%, transparent) !important;
+}
+
+.tabbrowser-tab[pinned]:not([crashed]) .tab-icon-overlay:hover:active
+{
+    background-color: color-mix(in srgb, currentColor 20%, transparent) !important;
+}
+
+.tabbrowser-tab[pinned]:not([crashed]) .tab-icon-overlay
+{
+    top: -8px !important;
+    inset-inline-end: -8px !important;
+}
+
+.tabbrowser-tab[pinned]:is([soundplaying], [muted], [activemedia-blocked]):not([crashed]) .tab-icon-stack > :not(.tab-icon-overlay)
+{
+    mask-image: linear-gradient(to bottom, black, black), radial-gradient(circle at right top, black 8px, transparent 9px) !important;
+    mask-size: 16px 16px, 16px 16px !important;
+    mask-position: center center, center center !important;
+    mask-repeat: no-repeat no-repeat, no-repeat no-repeat !important;
+    mask-composite: exclude !important;
+    mask-mode: alpha !important;
+    
+    :root:-moz-locale-dir(rtl) &
+    {
+        mask-image: linear-gradient(to bottom, black, black), radial-gradient(circle at left top, black 8px, transparent 9px) !important;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
 
 
 /* -------------------- Tab Text -------------------- */
