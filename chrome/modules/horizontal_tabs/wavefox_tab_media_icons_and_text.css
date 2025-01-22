@@ -232,11 +232,6 @@
         }
     }
     
-    &:is([soundplaying], [muted], [activemedia-blocked]) .tab-icon-overlay
-    {
-        display: revert !important;
-    }
-    
     &[soundplaying] .tab-icon-overlay
     {
         --mask-overlay-image: url("chrome://browser/skin/tabbrowser/tab-audio-playing-small.svg");
@@ -258,18 +253,26 @@
         inset-inline-end: -8px !important;
     }
     
-    &:is([soundplaying], [muted], [activemedia-blocked]) .tab-icon-stack > :not(.tab-icon-overlay)
+    &:is([soundplaying], [muted], [activemedia-blocked])
     {
-        mask-image: linear-gradient(to bottom, black, black), radial-gradient(circle at right top, black 8px, transparent 9px) !important;
-        mask-size: 16px 16px, 16px 16px !important;
-        mask-position: center center, center center !important;
-        mask-repeat: no-repeat, no-repeat !important;
-        mask-composite: exclude !important;
-        mask-mode: alpha, alpha !important;
-
-        :root:-moz-locale-dir(rtl) &
+        .tab-icon-stack > :not(.tab-icon-overlay)
         {
-            mask-image: linear-gradient(to bottom, black, black), radial-gradient(circle at left top, black 8px, transparent 9px) !important;
+            mask-image: linear-gradient(to bottom, black, black), radial-gradient(circle at right top, black 8px, transparent 9px) !important;
+            mask-size: 16px 16px, 16px 16px !important;
+            mask-position: center center, center center !important;
+            mask-repeat: no-repeat, no-repeat !important;
+            mask-composite: exclude !important;
+            mask-mode: alpha, alpha !important;
+
+            :root:-moz-locale-dir(rtl) &
+            {
+                mask-image: linear-gradient(to bottom, black, black), radial-gradient(circle at left top, black 8px, transparent 9px) !important;
+            }
+        }
+
+        .tab-icon-overlay
+        {
+            display: revert !important;
         }
     }
 }
