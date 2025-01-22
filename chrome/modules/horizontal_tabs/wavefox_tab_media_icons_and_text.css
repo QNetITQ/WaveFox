@@ -223,12 +223,12 @@
         
         &:hover
         {
-            --mask-overlay-background: linear-gradient(to bottom, color-mix(in srgb, currentColor 10%, transparent), color-mix(in srgb, currentColor 10%, transparent));
+            --mask-overlay-background: linear-gradient(to bottom, color-mix(in srgb, black 10%, transparent), color-mix(in srgb, black 10%, transparent));
         }
 
         &:hover:active
         {
-            --mask-overlay-background: linear-gradient(to bottom, color-mix(in srgb, currentColor 20%, transparent), color-mix(in srgb, currentColor 20%, transparent));
+            --mask-overlay-background: linear-gradient(to bottom, color-mix(in srgb, black 20%, transparent), color-mix(in srgb, black 20%, transparent));
         }
     }
     
@@ -279,6 +279,8 @@
 
 .tabbrowser-tab:not([pinned])
 {
+    --tab-min-width: inherit !important;
+
     .tab-icon-stack > *
     {
         margin-inline-end: 8px !important;
