@@ -156,82 +156,6 @@
 
 
 
-    
-.tabbrowser-tab:not([pinned], [crashed])
-{
-    .tab-icon-overlay
-    {
-        display: revert !important;
-        background-color: currentColor !important;
-        border-radius: 50px !important;
-        top: -8px !important;
-        inset-inline-end: -8px !important;
-        mask-size: 12px, 16px !important;
-        mask-position: center !important;
-        mask-repeat: no-repeat !important;
-    
-        &[soundplaying]
-        {
-            mask-image: url("chrome://browser/skin/tabbrowser/tab-audio-playing-small.svg") !important;
-
-            &:hover
-            {
-                mask-image: url("chrome://browser/skin/tabbrowser/tab-audio-playing-small.svg"), linear-gradient(color-mix(in srgb, currentColor 10%, transparent), color-mix(in srgb, currentColor 10%, transparent)) !important;
-            }
-
-            &:hover:active
-            {
-                mask-image: url("chrome://browser/skin/tabbrowser/tab-audio-playing-small.svg"), linear-gradient(color-mix(in srgb, currentColor 20%, transparent), color-mix(in srgb, currentColor 20%, transparent)) !important;
-            }
-        }
-
-        &[muted]
-        {
-            mask-image: url("chrome://browser/skin/tabbrowser/tab-audio-muted-small.svg") !important;
-
-            &:hover
-            {
-                mask-image: url("chrome://browser/skin/tabbrowser/tab-audio-muted-small.svg"), linear-gradient(color-mix(in srgb, currentColor 10%, transparent), color-mix(in srgb, currentColor 10%, transparent)) !important;
-            }
-
-            &:hover:active
-            {
-                mask-image: url("chrome://browser/skin/tabbrowser/tab-audio-muted-small.svg"), linear-gradient(color-mix(in srgb, currentColor 20%, transparent), color-mix(in srgb, currentColor 20%, transparent)) !important;
-            }
-        }
-        
-        &[activemedia-blocked]
-        {
-            mask-image: url("chrome://browser/skin/tabbrowser/tab-audio-blocked-small.svg") !important;
-
-            &:hover
-            {
-                mask-image: url("chrome://browser/skin/tabbrowser/tab-audio-blocked-small.svg"), linear-gradient(color-mix(in srgb, currentColor 10%, transparent), color-mix(in srgb, currentColor 10%, transparent)) !important;
-            }
-
-            &:hover:active
-            {
-                mask-image: url("chrome://browser/skin/tabbrowser/tab-audio-blocked-small.svg"), linear-gradient(color-mix(in srgb, currentColor 20%, transparent), color-mix(in srgb, currentColor 20%, transparent)) !important;
-            }
-        }
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -284,6 +208,82 @@
 
 
 
+
+
+
+
+
+
+
+
+    
+
+/* Regular Tabs */
+
+.tabbrowser-tab:not([pinned], [crashed]) .tab-audio-button
+{
+    position: relative !important;
+    margin-inline-end: 0px !important;
+    --icon-size-default: 12px !important;
+    --button-size-icon-small: 16px !important;
+    --button-min-height-small: 16px !important;
+    --button-border-radius: 50px !important;
+    --button-icon-fill: currentColor !important;
+    --button-icon-stroke: none !important;
+    --button-background-color-ghost: transparent !important;
+    --button-border: none !important;
+    --button-background-color-ghost-hover: color-mix(in srgb, currentColor 10%, transparent) !important;
+    --button-background-color-ghost-active: color-mix(in srgb, currentColor 20%, transparent) !important;
+}
+
+.tabbrowser-tab:not([pinned]):is([soundplaying], [muted], [activemedia-blocked])
+{
+    --tab-min-width: inherit !important;
+}
+
+.tabbrowser-tab:not([pinned], [crashed]):is([soundplaying], [muted], [activemedia-blocked]) .tab-audio-button
+{
+    display: flex !important;
+    justify-self: start !important;
+    align-self: center !important;
+}
+
+.tabbrowser-tab:not([pinned], [crashed]) .tab-content
+{
+    display: grid !important;
+    grid-template: auto / auto minmax(0px, 100%) auto !important;
+}
+
+.tabbrowser-tab:not([pinned], [crashed]) :is(.tab-icon-stack, .tab-audio-button)
+{
+    grid-area: 1 / 1 / auto / auto !important;
+}
+
+.tabbrowser-tab:is([image], [sharing], [pictureinpicture]):not([pinned], [crashed]) .tab-audio-button
+{
+    top: -8px !important;
+    inset-inline-end: -8px !important;
+}
+
+.tabbrowser-tab:not([pinned]) .tab-icon-stack > *
+{
+    margin-inline-end: 10px !important;
+}
+
+.tabbrowser-tab:not([pinned], [crashed]):is([soundplaying], [muted], [activemedia-blocked]) .tab-icon-stack > :not(.tab-icon-overlay)
+{
+    mask-image: linear-gradient(to bottom, black, black), radial-gradient(circle at right top, black 8px, transparent 9px) !important;
+    mask-size: 16px 16px, 16px 16px !important;
+    mask-position: center center, center center !important;
+    mask-repeat: no-repeat no-repeat, no-repeat no-repeat !important;
+    mask-composite: exclude !important;
+    mask-mode: alpha !important;
+            
+    :root:-moz-locale-dir(rtl) &
+    {
+        mask-image: linear-gradient(to bottom, black, black), radial-gradient(circle at left top, black 8px, transparent 9px) !important;
+    }
+}
 
 
 
