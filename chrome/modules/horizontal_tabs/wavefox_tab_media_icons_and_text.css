@@ -218,7 +218,7 @@
 
     
 
-/* Regular Tabs */
+/* Regular Tabs 1 ?????????????????????????????????? */
 
 .tabbrowser-tab:not([pinned], [crashed]) .tab-audio-button
 {
@@ -287,7 +287,84 @@
 
 
 
+/* Regular Tabs 2 ??????????????????????????? */
 
+.tabbrowser-tab:not([pinned], [crashed]):is([soundplaying], [muted], [activemedia-blocked]) .tab-icon-overlay
+{
+    display: block !important;
+    background-color: currentColor !important;
+    
+    mask-image: var(--mask-overlay-background, none), var(--mask-overlay-icon) !important;
+    
+    mask-size: 16px 16px, 12px 12px !important;
+    mask-position: center center, center center !important;
+    mask-repeat: no-repeat, no-repeat !important;
+
+    top: 0px !important;
+    inset-inline-end: 0px !important;
+    
+    border-radius: 50px !important;
+    
+    &:hover
+    {
+        --mask-overlay-background: linear-gradient(to bottom, color-mix(in srgb, currentColor 10%, transparent), color-mix(in srgb, currentColor 10%, transparent));
+    }
+    
+    &:hover:active
+    {
+        --mask-overlay-background: linear-gradient(to bottom, color-mix(in srgb, currentColor 20%, transparent), color-mix(in srgb, currentColor 20%, transparent));
+    }
+}
+
+.tabbrowser-tab:not([pinned], [crashed])[soundplaying] .tab-icon-overlay
+{
+    --mask-overlay-icon: url("chrome://browser/skin/tabbrowser/tab-audio-playing-small.svg");
+}
+
+.tabbrowser-tab:not([pinned], [crashed])[muted] .tab-icon-overlay
+{
+    --mask-overlay-icon: url("chrome://browser/skin/tabbrowser/tab-audio-muted-small.svg");
+}
+
+.tabbrowser-tab:not([pinned], [crashed])[activemedia-blocked] .tab-icon-overlay
+{
+    --mask-overlay-icon: url("chrome://browser/skin/tabbrowser/tab-audio-blocked-circle-12.svg");
+}
+
+
+
+
+
+.tabbrowser-tab:not([pinned]) .tab-icon-stack > *
+{
+    margin-inline-end: 10px !important;
+}
+
+.tabbrowser-tab:not([pinned], [crashed]):is([image], [sharing], [pictureinpicture]) .tab-icon-overlay
+{
+    top: -8px !important;
+    inset-inline-end: -8px !important;
+}
+
+.tabbrowser-tab:not([pinned], [crashed]):is([soundplaying], [muted], [activemedia-blocked]) .tab-icon-stack > :not(.tab-icon-overlay)
+{
+    mask-image: linear-gradient(to bottom, black, black), radial-gradient(circle at right top, black 8px, transparent 9px) !important;
+    mask-size: 16px 16px, 16px 16px !important;
+    mask-position: center center, center center !important;
+    mask-repeat: no-repeat no-repeat, no-repeat no-repeat !important;
+    mask-composite: exclude !important;
+    mask-mode: alpha !important;
+            
+    :root:-moz-locale-dir(rtl) &
+    {
+        mask-image: linear-gradient(to bottom, black, black), radial-gradient(circle at left top, black 8px, transparent 9px) !important;
+    }
+}
+
+.tab-audio-button
+{
+    display: none !important;
+}
 
 
 
