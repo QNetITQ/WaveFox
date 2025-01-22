@@ -292,28 +292,59 @@
     }
 }
 
+/* ---------- Picture-In-Picture ---------- */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.tabbrowser-tab[pictureinpicture]:not([busy], [crashed])
+{
+    .tab-icon-stack::before
+    {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        background-color: currentColor;
+        mask-size: 16px 16px;
+        mask-position: center center;
+        mask-repeat: no-repeat;
+        
+        :root:-moz-locale-dir(rtl) &
+        {
+            transform: rotateY(180deg);
+        }
+    }
     
+    .tab-icon-stack > :not(.tab-icon-overlay)
+    {
+        position: relative !important;
+        padding: 2px !important;
+        inset-inline-start: 8px !important;
+        top: 8px !important;
+        mask-image: none !important;
+        box-sizing: border-box !important;
+        z-index: 1 !important;
+    }
     
-
+    &:not([soundplaying], [muted], [activemedia-blocked]) .tab-icon-stack::before
+    {
+        mask-image: linear-gradient(to bottom, black, black), linear-gradient(to bottom, black, black), url("chrome://global/skin/media/picture-in-picture-open.svg");
+        mask-size: 8px 8px, 8px 8px, 16px 16px;
+        mask-position: right bottom, right bottom, center center;
+        mask-repeat: no-repeat, no-repeat, no-repeat;
+        mask-composite: exclude, add;
+        mask-mode: alpha, alpha, alpha;
+    }
+    
+    &:is([soundplaying], [muted], [activemedia-blocked]) .tab-icon-stack::before
+    {
+        mask-image: linear-gradient(to bottom, black, black), linear-gradient(to bottom, black, black), url("chrome://global/skin/media/picture-in-picture-open.svg");
+        mask-size: 8px 16px, 8px 16px, 16px 16px;
+        mask-position: right center, right center, center center;
+        mask-repeat: no-repeat, no-repeat, no-repeat;
+        mask-composite: exclude, add;
+        mask-mode: alpha, alpha, alpha;
+    }
+}
 
 /* -------------------- Tab Text -------------------- */
 
