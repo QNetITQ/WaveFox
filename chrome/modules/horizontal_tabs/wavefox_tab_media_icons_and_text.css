@@ -180,12 +180,12 @@
         
         &:hover
         {
-            background-color: color-mix(in srgb, currentColor 10%, transparent) !important;
+            background-color: color-mix(in srgb, currentColor 15%, transparent) !important;
         }
         
         &:hover:active
         {
-            background-color: color-mix(in srgb, currentColor 20%, transparent) !important;
+            background-color: color-mix(in srgb, currentColor 30%, transparent) !important;
         }
     }
         
@@ -223,12 +223,12 @@
         
         &:hover
         {
-            --mask-overlay-background: linear-gradient(to bottom, color-mix(in srgb, black 10%, transparent), color-mix(in srgb, black 10%, transparent));
+            --mask-overlay-background: linear-gradient(to bottom, rgba(0,0,0,0.15), rgba(0,0,0,0.15);
         }
 
         &:hover:active
         {
-            --mask-overlay-background: linear-gradient(to bottom, color-mix(in srgb, black 20%, transparent), color-mix(in srgb, black 20%, transparent));
+            --mask-overlay-background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.3);
         }
     }
     
@@ -294,7 +294,7 @@
 
 /* ---------- Picture-In-Picture ---------- */
 
-.tabbrowser-tab[pictureinpicture]:not([busy], [crashed])
+.tabbrowser-tab[pictureinpicture]:not([crashed], [busy])
 {
     .tab-icon-stack::before
     {
@@ -339,7 +339,7 @@
     {
         mask-image: linear-gradient(to bottom, black, black), linear-gradient(to bottom, black, black), url("chrome://global/skin/media/picture-in-picture-open.svg");
         mask-size: 8px 16px, 8px 16px, 16px 16px;
-        mask-position: right center, right center, center center;
+        mask-position: right bottom, right bottom, center center;
         mask-repeat: no-repeat, no-repeat, no-repeat;
         mask-composite: exclude, add;
         mask-mode: alpha, alpha, alpha;
