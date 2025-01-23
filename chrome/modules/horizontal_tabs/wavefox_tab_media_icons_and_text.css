@@ -350,12 +350,16 @@
 
 .tab-label-container
 {
+    height: auto !important;
+    font-size: clamp(0px, 1em, 16px) !important;
     mask-image: none !important;
 }
 
 .tab-label
 {
     width: 100% !important;
+    height: auto !important;
+    line-height: normal !important;
     overflow: hidden !important;
     white-space: nowrap !important;
     text-overflow: ellipsis !important;
