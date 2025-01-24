@@ -1,6 +1,6 @@
 @media (-moz-bool-pref: "userChrome.Windows.Transparency.Enabled")
 {
-    :root[tabsintitlebar]:not([lwtheme])
+    :root[customtitlebar]:not([lwtheme])
     {
         background-color: transparent !important;
 
@@ -8,12 +8,6 @@
         {
             background-color: transparent !important;
             border-top-color: transparent !important;
-        }
-
-        &:not([inFullscreen]) .browser-titlebar > .titlebar-buttonbox-container
-        {
-            align-items: start !important;
-            opacity: 0 !important;
         }
     }
 }
