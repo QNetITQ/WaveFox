@@ -82,13 +82,13 @@
         --mask-overlay-image: url("chrome://browser/skin/tabbrowser/tab-audio-blocked-circle-12.svg");
     }
     
-    &:is([image], [sharing], [pictureinpicture]) .tab-icon-overlay
+    &:where([image], [sharing], [pictureinpicture]) .tab-icon-overlay
     {
         top: -8px !important;
         inset-inline-end: -8px !important;
     }
     
-    &:is([soundplaying], [muted], [activemedia-blocked])
+    &:where([soundplaying], [muted], [activemedia-blocked])
     {
         .tab-icon-stack > :not(.tab-icon-overlay)
         {
