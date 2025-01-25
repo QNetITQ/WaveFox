@@ -24,7 +24,7 @@
         }
     }
         
-    &:is([soundplaying], [muted], [activemedia-blocked]) .tab-icon-stack > :not(.tab-icon-overlay)
+    &:where([soundplaying], [muted], [activemedia-blocked]) .tab-icon-stack > :not(.tab-icon-overlay)
     {
         mask-image: linear-gradient(to bottom, black, black), radial-gradient(circle at right top, black 8px, transparent 9px) !important;
         mask-size: 16px 16px, 16px 16px !important;
