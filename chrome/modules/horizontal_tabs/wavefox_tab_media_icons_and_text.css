@@ -42,7 +42,7 @@
 
 /* Regular Tabs */
 
-.tabbrowser-tab:not([pinned], [crashed], [busy])
+.tabbrowser-tab:not([pinned], [crashed])
 {
     .tab-icon-overlay
     {
@@ -82,7 +82,7 @@
         --mask-overlay-image: url("chrome://browser/skin/tabbrowser/tab-audio-blocked-circle-12.svg");
     }
     
-    &:where([image], [sharing], [pictureinpicture]) .tab-icon-overlay
+    &:where([busy], [image], [sharing], [pictureinpicture]) .tab-icon-overlay
     {
         top: -8px !important;
         inset-inline-end: -8px !important;
