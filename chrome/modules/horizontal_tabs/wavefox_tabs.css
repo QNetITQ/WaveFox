@@ -238,11 +238,6 @@
                 padding-inline: calc((var(--tab-min-height) - 16px) / 2 + 2px) !important;
             }
         }
-        
-        &:not([pinned])
-        {
-
-        }
 
         &[visuallyselected]
         {
@@ -252,12 +247,6 @@
             .tab-background
             {
                 background-color: var(--toolbar-bgcolor) !important;
-
-                &::before,
-                &::after
-                {
-                    background-color: var(--toolbar-bgcolor) !important;
-                }
             }
 
             .tab-content
@@ -272,43 +261,20 @@
             --attention-dot-color: currentColor !important;
             z-index: 0 !important;
 
-            &:hover
-            {
-                .tab-background
-                {
-                    &::before,
-                    &::after
-                    {
-                        background-color: var(--tab-hover-background-color) !important;
-                    }
-                }
-            }
-
             &[multiselected]
             {
                 z-index: 1 !important;
 
                 .tab-background
                 {
-                    filter: drop-shadow(0 0 2px var(--focus-outline-color)) !important;
-                    backdrop-filter: drop-shadow(0 0 1px transparent) !important;
-
-                    &::before,
-                    &::after
-                    {
-                        background-color: var(--tab-selected-bgcolor) !important;
-                        backdrop-filter: drop-shadow(0 0 1px transparent) !important;
-                    }
+                    filter: drop-shadow(0 0 2px var(--focus-outline-color)) !important; /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
                 }
             }
         }
 
         .tab-background
         {
-            display: grid !important;
-            grid-template: auto / auto !important;
-            position: relative !important;
-            margin-inline: calc(var(--tab-min-height) / 2) !important;
+            margin-inline: calc(-1 * var(--tab-min-height) / 2) !important;
             margin-block: 0px !important;
             border-radius: 0px !important;
             outline: none !important;
@@ -321,62 +287,14 @@
             mask-composite: exclude !important;
             mask-mode: alpha !important;
 
-            &::before,
-            &::after
-            {
-                content: "";
-                display: block;
-                position: absolute;
-                aspect-ratio: 1 / 1;
-                height: 100%;
-                mask-size: contain;
-                transform: translate(0px, 0px);
-            }
-
-            &::before
-            {
-                inset-inline-end: 100%;
-                mask-image: var(--left-svg);
-            }
-
-            &::after
-            {
-                inset-inline-start: 100%;
-                mask-image: var(--right-svg);
-            }
-
-            > *
-            {
-                grid-area: 1 / 1 / auto / auto !important;
-            }
-            
-            .tab-context-line,
-            .tab-loading-burst
-            {
-                height: 100% !important;
-                border-radius: 0px !important;
-                mask-image: var(--left-svg), linear-gradient(black, black), var(--right-svg);
-                mask-size: auto 100%, calc(100% - var(--tab-min-height) * 2) 100%, auto 100%;
-                mask-position: left center, center center, right center;
-                mask-repeat: no-repeat;
-                margin-block: 0px !important;
-                margin-inline: calc(-1 * var(--tab-min-height)) !important;
-            }
-
             .tab-context-line
             {
-                clip-path: xywh(0px 0px 100% 2px) !important;
-                z-index: 2 !important;
+                margin: 0px !important;
             }
             
-            .tab-loading-burst
+            .tab-loading-burst::before
             {
-                z-index: 1 !important;
-                
-                &::before
-                {
-                    margin-inline-start: 0px !important;
-                }
+                margin-inline-start: 0px !important;
             }
         }
     }
