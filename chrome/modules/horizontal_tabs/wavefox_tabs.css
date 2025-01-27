@@ -267,7 +267,12 @@
 
                 .tab-background
                 {
-                    filter: drop-shadow(0 0 2px var(--focus-outline-color)) !important; /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+                    background-color: color-mix(in srgb, currentColor 30%, transparent) !important;
+                }
+                
+                .tab-content
+                {
+                    color: inherit !important;
                 }
             }
         }
