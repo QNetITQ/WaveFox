@@ -314,6 +314,13 @@
             outline: none !important;
             pointer-events: none !important;
 
+            mask-image: var(--left-svg), linear-gradient(to bottom, black, black), var(--right-svg) !important;
+            mask-size: contain !important;
+            mask-position: left center, center center, right center !important;
+            mask-repeat: no-repeat !important;
+            mask-composite: exclude !important;
+            mask-mode: alpha !important;
+
             &::before,
             &::after
             {
