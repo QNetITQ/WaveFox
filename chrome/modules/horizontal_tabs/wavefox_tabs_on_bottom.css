@@ -60,7 +60,7 @@
         display: block !important;
     }
 
-    :root[tabsintitlebar]:not([inFullscreen]) #toolbar-menubar[inactive] ~ #nav-bar > .titlebar-spacer[type="post-tabs"]
+    :root[customtitlebar]:not([inFullscreen]) #toolbar-menubar[inactive] ~ #nav-bar > .titlebar-spacer[type="post-tabs"]
     {
         display: block !important;
     }
