@@ -175,33 +175,9 @@
 
             /* ---------- Tabs ---------- */
 
-            .tabbrowser-tab[visuallyselected] .tab-background
+            .tabbrowser-tab[visuallyselected]
             {
                 filter: var(--wavefox-selected-tab-shadow) !important;
-            }
-
-            /* ---------- AMO ---------- */
-            
-            :root[lwtheme]:not([style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26)"])
-            {
-                --wavefox-at-tab-shadow-color: var(--tab-selected-outline-color) !important;
-                --wavefox-at-tab-shadow-saturation: 100% !important;
-                
-                .tabbrowser-tab[visuallyselected] .tab-background
-                {
-                    backdrop-filter: drop-shadow(0 0 1px transparent) !important;
-                    
-                    &::before,
-                    &::after
-                    {
-                        backdrop-filter: drop-shadow(0 0 1px transparent) !important;
-                    }
-                }
-                
-                #TabsToolbar::before
-                {
-                    display: none !important;
-                }
             }
         }
     }
@@ -384,33 +360,9 @@
 
             /* ---------- Tabs ---------- */
 
-            .tabbrowser-tab[visuallyselected] .tab-background
+            .tabbrowser-tab[visuallyselected]
             {
                 filter: var(--wavefox-selected-tab-shadow) !important;
-            }
-
-            /* ---------- AMO ---------- */
-            
-            :root[lwtheme]:not([style*="--lwt-accent-color: rgb(28, 27, 34); --lwt-text-color: rgba(251, 251, 254)"])
-            {
-                --wavefox-at-tab-shadow-color: var(--tab-selected-outline-color) !important;
-                --wavefox-at-tab-shadow-saturation: 100% !important;
-                
-                .tabbrowser-tab[visuallyselected] .tab-background
-                {
-                    backdrop-filter: drop-shadow(0 0 1px transparent) !important;
-                    
-                    &::before,
-                    &::after
-                    {
-                        backdrop-filter: drop-shadow(0 0 1px transparent) !important;
-                    }
-                }
-                
-                #TabsToolbar::before
-                {
-                    display: none !important;
-                }
             }
         }
     }
