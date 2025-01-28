@@ -284,7 +284,6 @@
             border-radius: 0px !important;
             outline: none !important;
             pointer-events: none !important;
-
             mask-image: var(--left-svg), linear-gradient(to bottom, black, black), var(--right-svg) !important;
             mask-size: contain !important;
             mask-position: left center, center center, right center !important;
@@ -317,19 +316,8 @@
         {
             margin-block: auto 0px !important;
             margin-inline: 0px !important;
-            z-index: 2 !important;
         }
 
-        .tabbrowser-tab[dragover-createGroup] .tab-background
-        {
-            &::before,
-            &::after
-            {
-                background-color: light-dark(var(--dragover-tab-group-color-pale), var(--dragover-tab-group-color));
-                transition: background-color 100ms ease, color 100ms ease, outline-color 100ms ease;
-            }
-        }
-        
         tab-group[collapsed] .tabbrowser-tab
         {
             visibility: collapse !important;
