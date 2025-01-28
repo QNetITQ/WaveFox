@@ -128,14 +128,9 @@
     {
         :root
         {
-            --left-svg:   linear-gradient(to right, transparent 50%, black 50%);
-            --right-svg:  linear-gradient(to left, transparent 50%, black 50%);
+            --left-svg:   url("svg_files/option_5/left_corners.svg");
+            --right-svg:  url("svg_files/option_5/right_corners.svg");
             --tab-first-last-inline-margin: 0px;
-            
-            .tabbrowser-tab > .tab-stack > .tab-background > :is(.tab-context-line, .tab-loading-burst)
-            {
-                margin-inline: calc(-1 * var(--tab-min-height) / 2) !important;
-            }
         }
     }
 
