@@ -236,7 +236,6 @@
 
         &[visuallyselected]
         {
-            position: relative;
             z-index: 2 !important;
 
             .tab-background
@@ -252,8 +251,6 @@
 
         &:not([visuallyselected])
         {
-            --tab-loading-fill: currentColor !important;
-            --attention-dot-color: currentColor !important;
             z-index: 0 !important;
 
             &[multiselected]
