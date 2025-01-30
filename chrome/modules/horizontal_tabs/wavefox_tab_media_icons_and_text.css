@@ -127,6 +127,111 @@
     }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+@media (-moz-bool-pref: "WaveFox.TabMediaIcons2.Enabled")
+{
+
+/* Regular Tabs */
+
+.tabbrowser-tab:not([pinned], [crashed])
+{
+    .tab-audio-button
+    {
+        position: relative !important;
+        margin-inline-end: 8px !important;
+
+        --button-size-icon-small: 16px !important;
+        --button-min-height-small: 16px !important;
+        
+        --button-border: none !important;
+        --button-icon-stroke: none !important;
+        
+        --button-icon-fill: currentColor !important;
+        
+        --button-background-color-ghost: transparent !important;
+        --button-background-color-ghost-hover: color-mix(in srgb, currentColor 15%, transparent) !important;
+        --button-background-color-ghost-active: color-mix(in srgb, currentColor 30%, transparent) !important;
+        
+        --button-border-radius: 50px !important;
+    }
+    
+    &:where([busy], [image], [sharing], [pictureinpicture]) .tab-audio-button
+    {
+        top: -8px !important;
+        inset-inline-end: -8px !important;
+    }
+    
+    &:where([soundplaying], [muted], [activemedia-blocked])
+    {
+        .tab-audio-button
+        {
+            display: flex !important;
+            justify-self: flex-start !important;
+            align-self: center !important;
+        }
+        
+        .tab-icon-stack > :not(.tab-icon-overlay)
+        {
+            mask-image: linear-gradient(to bottom, black, black), radial-gradient(circle at right top, black 8px, transparent 9px) !important;
+            mask-size: 16px 16px, 16px 16px !important;
+            mask-position: center center, center center !important;
+            mask-repeat: no-repeat, no-repeat !important;
+            mask-composite: exclude !important;
+            mask-mode: alpha, alpha !important;
+
+            :root:-moz-locale-dir(rtl) &
+            {
+                mask-image: linear-gradient(to bottom, black, black), radial-gradient(circle at left top, black 8px, transparent 9px) !important;
+            }
+        }
+    }
+}
+
+.tabbrowser-tab:not([pinned])
+{
+    --tab-min-width: inherit !important;
+
+    .tab-icon-stack > *
+    {
+        margin-inline-end: 8px !important;
+    }
+    
+    .tab-content
+    {
+        display: grid !important;
+        grid-template-rows: auto !important;
+        grid-template-columns: auto minmax(0px, 100%) auto !important;
+        
+        .tab-icon-stack,
+        .tab-audio-button
+        {
+            grid-area: 1 / 1 / auto / auto !important;
+        }
+    }
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
 /* ---------- Picture-In-Picture ---------- */
 
 .tabbrowser-tab[pictureinpicture]:not([crashed], [busy])
