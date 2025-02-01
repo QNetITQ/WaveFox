@@ -44,6 +44,201 @@
 
 .tabbrowser-tab:not([pinned], [crashed])
 {
+    .tab-audio-button
+    {
+        position: relative !important;
+        margin-inline-end: 8px !important;
+        --icon-size-default: 12px !important;
+        --button-size-icon-small: 16px !important;
+        --button-min-height-small: 16px !important;
+        --button-background-color-ghost: transparent !important;
+        --button-background-color-ghost-hover: color-mix(in srgb, currentColor 15%, transparent) !important;
+        --button-background-color-ghost-active: color-mix(in srgb, currentColor 30%, transparent) !important;
+        --button-border-radius: 50px !important;
+        --button-text-color-ghost: currentColor !important;
+        --button-text-color-ghost-hover: currentColor !important;
+        --button-text-color-ghost-active: currentColor !important;
+        --button-icon-fill: currentColor !important;
+        --button-text-color: currentColor !important;
+        --button-border: none !important;
+        --button-icon-stroke: none !important;
+    }
+    
+    &:where([busy], [image], [sharing], [pictureinpicture]) .tab-audio-button
+    {
+        top: -8px !important;
+        inset-inline-end: -8px !important;
+    }
+    
+    &:where([soundplaying], [muted], [activemedia-blocked])
+    {
+        .tab-audio-button
+        {
+            display: flex !important;
+            justify-self: flex-start !important;
+            align-self: center !important;
+        }
+        
+        .tab-icon-stack > :not(.tab-icon-overlay)
+        {
+            mask-image: linear-gradient(to bottom, black, black), radial-gradient(circle at right top, black 8px, transparent 9px) !important;
+            mask-size: 16px 16px !important;
+            mask-position: center center !important;
+            mask-repeat: no-repeat !important;
+            mask-composite: exclude !important;
+            mask-mode: alpha !important;
+
+            :root:-moz-locale-dir(rtl) &
+            {
+                mask-image: linear-gradient(to bottom, black, black), radial-gradient(circle at left top, black 8px, transparent 9px) !important;
+            }
+        }
+    }
+}
+
+.tabbrowser-tab:not([pinned])
+{
+    --tab-min-width: inherit !important;
+
+    .tab-icon-stack > *
+    {
+        margin-inline-end: 8px !important;
+    }
+    
+    .tab-content
+    {
+        display: grid !important;
+        grid-template-rows: auto !important;
+        grid-template-columns: auto minmax(0px, 100%) auto !important;
+        
+        .tab-icon-stack,
+        .tab-audio-button
+        {
+            grid-area: 1 / 1 / auto / auto !important;
+        }
+    }
+}
+
+/* ---------- Picture-In-Picture ---------- */
+
+.tabbrowser-tab[pictureinpicture]:not([crashed], [busy])
+{
+    .tab-icon-stack::before
+    {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        background-color: currentColor;
+        mask-size: 16px 16px;
+        mask-position: center center;
+        mask-repeat: no-repeat;
+        mask-mode: alpha;
+        
+        :root:-moz-locale-dir(rtl) &
+        {
+            transform: rotateY(180deg);
+        }
+    }
+    
+    .tab-icon-stack > :not(.tab-icon-overlay)
+    {
+        position: relative !important;
+        padding: 2px !important;
+        inset-inline-start: 8px !important;
+        top: 8px !important;
+        mask-image: none !important;
+        box-sizing: border-box !important;
+        z-index: 1 !important;
+    }
+    
+    &:not([soundplaying], [muted], [activemedia-blocked]) .tab-icon-stack::before
+    {
+        mask-image: linear-gradient(to bottom, black, black), linear-gradient(to bottom, black, black), url("chrome://global/skin/media/picture-in-picture-open.svg");
+        mask-size: 8px 8px, 8px 8px, 16px 16px;
+        mask-position: right bottom, right bottom, center center;
+        mask-repeat: no-repeat;
+        mask-composite: exclude, add;
+    }
+    
+    &:is([soundplaying], [muted], [activemedia-blocked]) .tab-icon-stack::before
+    {
+        mask-image: linear-gradient(to bottom, black, black), linear-gradient(to bottom, black, black), url("chrome://global/skin/media/picture-in-picture-open.svg");
+        mask-size: 8px 16px, 8px 16px, 16px 16px;
+        mask-position: right bottom, right bottom, center center;
+        mask-repeat: no-repeat;
+        mask-composite: exclude, add;
+    }
+}
+
+/* -------------------- Tab Text -------------------- */
+
+.tab-label-container
+{
+    height: auto !important;
+    font-size: clamp(0px, 1em, 16px) !important;
+    mask-image: none !important;
+}
+
+.tab-label
+{
+    width: 100% !important;
+    height: auto !important;
+    line-height: normal !important;
+    overflow: hidden !important;
+    white-space: nowrap !important;
+    text-overflow: ellipsis !important;
+    margin-block: 0px !important;
+}
+
+.tab-secondary-label
+{
+    display: none !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (-moz-bool-pref: "WaveFox.TabMediaIcons2.Enabled")
+{
+
+/* -------------------- Media Icons -------------------- */
+
+/* Regular Tabs */
+
+.tabbrowser-tab:not([pinned], [crashed])
+{
     .tab-icon-overlay
     {
         background-color: currentColor !important;
@@ -127,179 +322,4 @@
     }
 }
 
-/* ---------- Picture-In-Picture ---------- */
-
-.tabbrowser-tab[pictureinpicture]:not([crashed], [busy])
-{
-    .tab-icon-stack::before
-    {
-        content: "";
-        display: block;
-        position: absolute;
-        width: 16px;
-        height: 16px;
-        background-color: currentColor;
-        mask-size: 16px 16px;
-        mask-position: center center;
-        mask-repeat: no-repeat;
-        
-        :root:-moz-locale-dir(rtl) &
-        {
-            transform: rotateY(180deg);
-        }
-    }
-    
-    .tab-icon-stack > :not(.tab-icon-overlay)
-    {
-        position: relative !important;
-        padding: 2px !important;
-        inset-inline-start: 8px !important;
-        top: 8px !important;
-        mask-image: none !important;
-        box-sizing: border-box !important;
-        z-index: 1 !important;
-    }
-    
-    &:not([soundplaying], [muted], [activemedia-blocked]) .tab-icon-stack::before
-    {
-        mask-image: linear-gradient(to bottom, black, black), linear-gradient(to bottom, black, black), url("chrome://global/skin/media/picture-in-picture-open.svg");
-        mask-size: 8px 8px, 8px 8px, 16px 16px;
-        mask-position: right bottom, right bottom, center center;
-        mask-repeat: no-repeat;
-        mask-composite: exclude, add;
-        mask-mode: alpha;
-    }
-    
-    &:is([soundplaying], [muted], [activemedia-blocked]) .tab-icon-stack::before
-    {
-        mask-image: linear-gradient(to bottom, black, black), linear-gradient(to bottom, black, black), url("chrome://global/skin/media/picture-in-picture-open.svg");
-        mask-size: 8px 16px, 8px 16px, 16px 16px;
-        mask-position: right bottom, right bottom, center center;
-        mask-repeat: no-repeat;
-        mask-composite: exclude, add;
-        mask-mode: alpha;
-    }
 }
-
-/* -------------------- Tab Text -------------------- */
-
-.tab-label-container
-{
-    height: auto !important;
-    font-size: clamp(0px, 1em, 16px) !important;
-    mask-image: none !important;
-}
-
-.tab-label
-{
-    width: 100% !important;
-    height: auto !important;
-    line-height: normal !important;
-    overflow: hidden !important;
-    white-space: nowrap !important;
-    text-overflow: ellipsis !important;
-    margin-block: 0px !important;
-}
-
-.tab-secondary-label
-{
-    display: none !important;
-}
-
-
-
-
-
-
-
-
-@media (-moz-bool-pref: "WaveFox.TabMediaIcons2.Enabled")
-{
-
-/* Regular Tabs */
-
-.tabbrowser-tab:not([pinned], [crashed])
-{
-    .tab-audio-button
-    {
-        position: relative !important;
-        margin-inline-end: 8px !important;
-
-        --button-size-icon-small: 16px !important;
-        --button-min-height-small: 16px !important;
-        
-        --button-border: none !important;
-        --button-icon-stroke: none !important;
-        
-        --button-icon-fill: currentColor !important;
-        
-        --button-background-color-ghost: transparent !important;
-        --button-background-color-ghost-hover: color-mix(in srgb, currentColor 15%, transparent) !important;
-        --button-background-color-ghost-active: color-mix(in srgb, currentColor 30%, transparent) !important;
-        
-        --button-border-radius: 50px !important;
-    }
-    
-    &:where([busy], [image], [sharing], [pictureinpicture]) .tab-audio-button
-    {
-        top: -8px !important;
-        inset-inline-end: -8px !important;
-    }
-    
-    &:where([soundplaying], [muted], [activemedia-blocked])
-    {
-        .tab-audio-button
-        {
-            display: flex !important;
-            justify-self: flex-start !important;
-            align-self: center !important;
-        }
-        
-        .tab-icon-stack > :not(.tab-icon-overlay)
-        {
-            mask-image: linear-gradient(to bottom, black, black), radial-gradient(circle at right top, black 8px, transparent 9px) !important;
-            mask-size: 16px 16px, 16px 16px !important;
-            mask-position: center center, center center !important;
-            mask-repeat: no-repeat, no-repeat !important;
-            mask-composite: exclude !important;
-            mask-mode: alpha, alpha !important;
-
-            :root:-moz-locale-dir(rtl) &
-            {
-                mask-image: linear-gradient(to bottom, black, black), radial-gradient(circle at left top, black 8px, transparent 9px) !important;
-            }
-        }
-    }
-}
-
-.tabbrowser-tab:not([pinned])
-{
-    --tab-min-width: inherit !important;
-
-    .tab-icon-stack > *
-    {
-        margin-inline-end: 8px !important;
-    }
-    
-    .tab-content
-    {
-        display: grid !important;
-        grid-template-rows: auto !important;
-        grid-template-columns: auto minmax(0px, 100%) auto !important;
-        
-        .tab-icon-stack,
-        .tab-audio-button
-        {
-            grid-area: 1 / 1 / auto / auto !important;
-        }
-    }
-}
-
-
-}
-
-
-
-
-
-
