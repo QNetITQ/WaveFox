@@ -131,6 +131,11 @@ Works only with the system theme.
 - `userChrome.TabSeparators.Saturation.Low.Enabled`
 - `userChrome.TabSeparators.Saturation.Medium.Enabled`
 
+### Background For Inactive Tabs
+![изображение](https://github.com/user-attachments/assets/56fc829a-3cb6-4009-a58c-485fc84f65e9)
+
+- `userChrome.Tabs.Background.Inactive.Enabled`
+
 ### Lepton Icons (Menu icons)
 This is third-party code. I will update this code according to the original source. Unlike other options, these keys can be enabled in any order, or all together.
 
