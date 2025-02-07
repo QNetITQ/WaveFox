@@ -197,46 +197,10 @@
     display: none !important;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media (-moz-bool-pref: "WaveFox.TabMediaIcons2.Enabled")
-{
-
-/* -------------------- Media Icons -------------------- */
+/* -------------------- Media Icons (Backup option) -------------------- */
 
 /* Regular Tabs */
-
+/*
 .tabbrowser-tab:not([pinned], [crashed])
 {
     .tab-icon-overlay
@@ -321,5 +285,4 @@
         display: none !important;
     }
 }
-
-}
+*/
