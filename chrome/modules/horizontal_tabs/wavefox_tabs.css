@@ -369,11 +369,6 @@
 
     /* ---------------------------------------- Tab Scroll Animation ---------------------------------------- */
 
-    #tabbrowser-tabs[overflow] .tabbrowser-tab:not([pinned])
-    {
-        box-sizing: content-box !important;
-    }
-
     #tabbrowser-tabs[overflow]:not([movingtab]) .tabbrowser-tab:not([pinned])
     {
         pointer-events: none !important;
