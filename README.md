@@ -109,6 +109,7 @@ Works only with the system theme.
 - `userChrome.Toolbar.Transparency.VeryHigh.Enabled`
 
 ### Tab Bar Shadows
+Works only with System / Light / Dark theme.
 ![изображение](https://user-images.githubusercontent.com/85301851/152011749-4d5619b3-0fd8-40f9-a3dc-96be31839971.png)
 
 ##### Shadows (Light Theme)
@@ -183,7 +184,6 @@ This is third-party code. I will update this code according to the original sour
 - `userChrome.OneLine.NavBarFirst.Enabled`
 
 ### Rounded Web Page
-Works only with system, light and dark themes.
 ![изображение](https://github.com/user-attachments/assets/26a19f9a-642b-4a10-a4f9-80d87cc42bdc)
 
 - `userChrome.WebPage.Rounding.Enabled`
