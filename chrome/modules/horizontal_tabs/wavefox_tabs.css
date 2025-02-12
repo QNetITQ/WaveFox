@@ -41,9 +41,9 @@
         padding-inline: 10px !important;
     }
 
-    &[pending] .tab-icon-image
+    &[pending] .tab-content
     {
-        filter: saturate(0) !important;
+        opacity: 0.75 !important;
     }
 
     .tab-background
