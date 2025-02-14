@@ -64,4 +64,28 @@
     {
         display: block !important;
     }
+
+    /* -------------------- Shadows -------------------- */
+    
+    @media not ((-moz-bool-pref: "userChrome.Tabs.Option5.Enabled")  or
+                (-moz-bool-pref: "userChrome.Tabs.Option6.Enabled")  or
+                (-moz-bool-pref: "userChrome.Tabs.Option7.Enabled")  or
+                (-moz-bool-pref: "userChrome.Tabs.Option8.Enabled")  or
+                (-moz-bool-pref: "userChrome.Tabs.Option9.Enabled")  or
+                (-moz-bool-pref: "userChrome.Tabs.Option10.Enabled") or
+                (-moz-bool-pref: "userChrome.Tabs.Option11.Enabled") or
+                (-moz-bool-pref: "userChrome.Tabs.Option12.Enabled"))
+    {
+        #TabsToolbar
+        {
+            box-shadow: var(--wavefox-inner-tabbar-shadow-inverted, none) !important;
+    
+            --wavefox-inner-tabbar-shadow-inverted: inset
+                                                    0
+                                                    var(--wavefox-ft-tab-shadow-blur)
+                                                    var(--wavefox-ft-tab-shadow-blur)
+                                                    calc(-1 * var(--wavefox-ft-tab-shadow-blur))
+                                                    color-mix(in srgb, var(--wavefox-ft-tab-shadow-color) var(--wavefox-ft-tab-shadow-saturation), transparent) !important;
+        }
+    }
 }
