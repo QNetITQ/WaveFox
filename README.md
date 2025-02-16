@@ -621,6 +621,7 @@ Open `userChrome.css` and paste your code under the appropriate comment. Your co
   <summary>How to enable MicaAlt / Transparency on Windows 11?</summary>
 
 - `widget.windows.mica`
+- `widget.windows.mica.popups`
 
 </details>
 
