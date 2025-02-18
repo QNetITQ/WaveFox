@@ -321,7 +321,18 @@
 
         tab-group[collapsed] .tabbrowser-tab
         {
-            visibility: collapse !important;
+            --tab-first-last-inline-margin: 0px !important;
+            overflow: hidden !important;
+        }
+        
+        #tabbrowser-tabs:first-child tab-group:first-of-type > .tab-group-label-container
+        {
+            margin-inline-start: calc(var(--tab-block-margin) * 2) !important;
+        }
+        
+        #tabbrowser-tabs:not(:first-child) tab-group:first-of-type > .tab-group-label-container
+        {
+            margin-inline-start: var(--tab-first-last-inline-margin) !important;
         }
 
         .tabbrowser-tab:not(:nth-last-child(1 of .tabbrowser-tab:not([hidden])), [hidden]) + tab-group > .tab-group-label-container
