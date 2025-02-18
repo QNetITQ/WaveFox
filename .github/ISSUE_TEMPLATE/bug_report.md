@@ -24,6 +24,8 @@ Steps to reproduce the behavior:
 A clear and concise description of what you expected to happen.
 
 **Required information (please complete the following information):**
+- [ ] I have read and followed the installation instructions in the README
+
 - Operating system
   - [ ] Windows 11/10
   - [ ] Windows 8/7
@@ -52,7 +54,7 @@ A clear and concise description of what you expected to happen.
   - [ ] Release
   - [ ] ESR 128
   - [ ] ESR 115
-  - If you made any changes to the style, such as adding third-party styles, please indicate which ones in additional context
+  - If you made any changes to the style, such as adding third-party styles, please indicate which ones in additional information section
 
-**Additional context**
-Add any other context about the problem here.
+**Additional information**
+Add any other information about the problem here.
