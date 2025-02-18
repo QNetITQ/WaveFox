@@ -100,6 +100,11 @@
 {
     --tab-min-width: inherit !important;
 
+    &[fadein]
+    {
+        min-width: var(--tab-min-width) !important;
+    }
+
     .tab-icon-stack > *
     {
         margin-inline-end: 8px !important;
@@ -274,6 +279,11 @@
 .tabbrowser-tab:not([pinned])
 {
     --tab-min-width: inherit !important;
+
+    &[fadein]
+    {
+        min-width: var(--tab-min-width) !important;
+    }
 
     .tab-icon-stack > *
     {
