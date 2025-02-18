@@ -223,7 +223,6 @@
 
     .tabbrowser-tab
     {
-        overflow-clip-margin: var(--tab-first-last-inline-margin) !important;
         padding-inline: 0px !important;
 
         &[pinned]
@@ -231,6 +230,16 @@
             .tab-content
             {
                 padding-inline: calc((var(--tab-min-height) - 16px) / 2 + 2px) !important;
+            }
+        }
+
+        &[fadein]
+        {
+            overflow: visible !important;
+            
+            #tabbrowser-tabs:not([movingtab]) &
+            {
+                transition: max-width 100ms ease-out !important;
             }
         }
 
@@ -375,7 +384,6 @@
         box-sizing: content-box !important;
         padding-inline: var(--tab-first-last-inline-margin) !important;
         margin-inline: calc(-1 * var(--tab-first-last-inline-margin)) !important;
-        overflow-clip-margin: 0px !important;
     }
 
     #tabbrowser-tabs[overflow]:not([movingtab]) .tabbrowser-tab:not([pinned]) .tab-stack
