@@ -339,7 +339,21 @@
             margin-inline-end: var(--tab-first-last-inline-margin) !important;
         }
 
+        .toolbarbutton-1:has(+ #tabbrowser-tabs:not([overflow]) tab-group)
+        {
+            margin-inline-end: 0px !important;
+        }
 
+        #tabbrowser-tabs:not([overflow]) tab-group + #tabbrowser-arrowscrollbox-periphery > .toolbarbutton-1
+        {
+            margin-inline-start: 0px !important;
+        }
+
+
+
+
+
+        
 
         
         /*
