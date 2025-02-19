@@ -1,4 +1,4 @@
-@media (-moz-bool-pref: "userChrome.DragSpace.Left.Disabled")
+@media (-moz-pref("userChrome.DragSpace.Left.Disabled"))
 {
     .titlebar-spacer[type="pre-tabs"]
     {
@@ -6,7 +6,7 @@
     }
 }
 
-@media (-moz-bool-pref: "userChrome.DragSpace.Right.Disabled")
+@media (-moz-pref("userChrome.DragSpace.Right.Disabled"))
 {
     .titlebar-spacer[type="post-tabs"]
     {
@@ -14,7 +14,7 @@
     }
 }
 
-@media (-moz-bool-pref: "userChrome.DragSpace.Top.Windowed.Enabled")
+@media (-moz-pref("userChrome.DragSpace.Top.Windowed.Enabled"))
 {
     :root[sizemode="normal"]
     {
@@ -22,7 +22,7 @@
     }
 }
 
-@media (-moz-bool-pref: "userChrome.DragSpace.Top.Maximized.Enabled")
+@media (-moz-pref("userChrome.DragSpace.Top.Maximized.Enabled"))
 {
     :root[sizemode="maximized"]
     {
@@ -30,7 +30,7 @@
     }
 }
 
-@media (-moz-bool-pref: "userChrome.DragSpace.Top.Fullscreen.Enabled")
+@media (-moz-pref("userChrome.DragSpace.Top.Fullscreen.Enabled"))
 {
     :root[sizemode="fullscreen"]
     {

@@ -1,4 +1,4 @@
-@media (-moz-bool-pref: "userChrome.WebPage.Rounding.Enabled")
+@media (-moz-pref("userChrome.WebPage.Rounding.Enabled"))
 {
     :root:not([inFullscreen], [inDOMFullscreen])
     {
@@ -16,9 +16,9 @@
             overflow: hidden !important;
             clip-path: border-box !important;
 
-            @media (-moz-bool-pref: "userChrome.Tabs.TabsOnBottom.Enabled")   or
-                   (-moz-bool-pref: "userChrome.OneLine.TabBarFirst.Enabled") or
-                   (-moz-bool-pref: "userChrome.OneLine.NavBarFirst.Enabled")
+            @media (-moz-pref("userChrome.Tabs.TabsOnBottom.Enabled"))   or
+                   (-moz-pref("userChrome.OneLine.TabBarFirst.Enabled")) or
+                   (-moz-pref("userChrome.OneLine.NavBarFirst.Enabled"))
             {
                 margin-block-start: 8px !important;
             }

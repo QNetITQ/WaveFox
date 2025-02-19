@@ -1,7 +1,7 @@
-@media (-moz-bool-pref: "userChrome.Linux.Transparency.Low.Enabled")      or
-       (-moz-bool-pref: "userChrome.Linux.Transparency.Medium.Enabled")   or
-       (-moz-bool-pref: "userChrome.Linux.Transparency.High.Enabled")     or
-       (-moz-bool-pref: "userChrome.Linux.Transparency.VeryHigh.Enabled")
+@media (-moz-pref("userChrome.Linux.Transparency.Low.Enabled"))      or
+       (-moz-pref("userChrome.Linux.Transparency.Medium.Enabled"))   or
+       (-moz-pref("userChrome.Linux.Transparency.High.Enabled"))     or
+       (-moz-pref("userChrome.Linux.Transparency.VeryHigh.Enabled"))
 {
     :root
     {
@@ -12,22 +12,22 @@
             --toolbox-background-color: InActiveCaption;
         }
 
-        @media (-moz-bool-pref: "userChrome.Linux.Transparency.Low.Enabled")
+        @media (-moz-pref("userChrome.Linux.Transparency.Low.Enabled"))
         {
             --toolbox-transparency: 25%;
         }
 
-        @media (-moz-bool-pref: "userChrome.Linux.Transparency.Medium.Enabled")
+        @media (-moz-pref("userChrome.Linux.Transparency.Medium.Enabled"))
         {
             --toolbox-transparency: 50%;
         }
 
-        @media (-moz-bool-pref: "userChrome.Linux.Transparency.High.Enabled")
+        @media (-moz-pref("userChrome.Linux.Transparency.High.Enabled"))
         {
             --toolbox-transparency: 75%;
         }
 
-        @media (-moz-bool-pref: "userChrome.Linux.Transparency.VeryHigh.Enabled")
+        @media (-moz-pref("userChrome.Linux.Transparency.VeryHigh.Enabled"))
         {
             --toolbox-transparency: 100%;
         }

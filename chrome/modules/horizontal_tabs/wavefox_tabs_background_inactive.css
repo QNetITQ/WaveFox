@@ -1,4 +1,4 @@
-@media (-moz-bool-pref: "userChrome.Tabs.Background.Inactive.Enabled")
+@media (-moz-pref("userChrome.Tabs.Background.Inactive.Enabled"))
 {
     .tabbrowser-tab:not([visuallyselected])
     {

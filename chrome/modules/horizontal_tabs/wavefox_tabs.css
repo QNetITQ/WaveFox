@@ -71,14 +71,14 @@
 
 /* ---------------------------------------- Floating tabs ---------------------------------------- */
 
-@media (-moz-bool-pref: "userChrome.Tabs.Option1.Enabled") or
-       (-moz-bool-pref: "userChrome.Tabs.Option2.Enabled") or
-       (-moz-bool-pref: "userChrome.Tabs.Option3.Enabled") or
-       (-moz-bool-pref: "userChrome.Tabs.Option4.Enabled")
+@media (-moz-pref("userChrome.Tabs.Option1.Enabled")) or
+       (-moz-pref("userChrome.Tabs.Option2.Enabled")) or
+       (-moz-pref("userChrome.Tabs.Option3.Enabled")) or
+       (-moz-pref("userChrome.Tabs.Option4.Enabled"))
 {
     /* -------------------- Tab shapes -------------------- */
 
-    @media (-moz-bool-pref: "userChrome.Tabs.Option1.Enabled")
+    @media (-moz-pref("userChrome.Tabs.Option1.Enabled"))
     {
         :root
         {
@@ -86,7 +86,7 @@
         }
     }
     
-    @media (-moz-bool-pref: "userChrome.Tabs.Option2.Enabled")
+    @media (-moz-pref("userChrome.Tabs.Option2.Enabled"))
     {
         :root
         {
@@ -94,7 +94,7 @@
         }
     }
     
-    @media (-moz-bool-pref: "userChrome.Tabs.Option3.Enabled")
+    @media (-moz-pref("userChrome.Tabs.Option3.Enabled"))
     {
         :root
         {
@@ -102,7 +102,7 @@
         }
     }
     
-    @media (-moz-bool-pref: "userChrome.Tabs.Option4.Enabled")
+    @media (-moz-pref("userChrome.Tabs.Option4.Enabled"))
     {
         :root
         {
@@ -113,18 +113,18 @@
 
 /* ---------------------------------------- Attached tabs ---------------------------------------- */
 
-@media (-moz-bool-pref: "userChrome.Tabs.Option5.Enabled")  or
-       (-moz-bool-pref: "userChrome.Tabs.Option6.Enabled")  or
-       (-moz-bool-pref: "userChrome.Tabs.Option7.Enabled")  or
-       (-moz-bool-pref: "userChrome.Tabs.Option8.Enabled")  or
-       (-moz-bool-pref: "userChrome.Tabs.Option9.Enabled")  or
-       (-moz-bool-pref: "userChrome.Tabs.Option10.Enabled") or
-       (-moz-bool-pref: "userChrome.Tabs.Option11.Enabled") or
-       (-moz-bool-pref: "userChrome.Tabs.Option12.Enabled")
+@media (-moz-pref("userChrome.Tabs.Option5.Enabled"))  or
+       (-moz-pref("userChrome.Tabs.Option6.Enabled"))  or
+       (-moz-pref("userChrome.Tabs.Option7.Enabled"))  or
+       (-moz-pref("userChrome.Tabs.Option8.Enabled"))  or
+       (-moz-pref("userChrome.Tabs.Option9.Enabled"))  or
+       (-moz-pref("userChrome.Tabs.Option10.Enabled")) or
+       (-moz-pref("userChrome.Tabs.Option11.Enabled")) or
+       (-moz-pref("userChrome.Tabs.Option12.Enabled"))
 {
     /* -------------------- Tab shapes -------------------- */
 
-    @media (-moz-bool-pref: "userChrome.Tabs.Option5.Enabled")
+    @media (-moz-pref("userChrome.Tabs.Option5.Enabled"))
     {
         :root
         {
@@ -134,7 +134,7 @@
         }
     }
 
-    @media (-moz-bool-pref: "userChrome.Tabs.Option6.Enabled")
+    @media (-moz-pref("userChrome.Tabs.Option6.Enabled"))
     {
         :root
         {
@@ -144,7 +144,7 @@
         }
     }
     
-    @media (-moz-bool-pref: "userChrome.Tabs.Option7.Enabled")
+    @media (-moz-pref("userChrome.Tabs.Option7.Enabled"))
     {
         :root
         {
@@ -154,7 +154,7 @@
         }
     }
     
-    @media (-moz-bool-pref: "userChrome.Tabs.Option8.Enabled")
+    @media (-moz-pref("userChrome.Tabs.Option8.Enabled"))
     {
         :root
         {
@@ -164,7 +164,7 @@
         }
     }
     
-    @media (-moz-bool-pref: "userChrome.Tabs.Option9.Enabled")
+    @media (-moz-pref("userChrome.Tabs.Option9.Enabled"))
     {
         :root
         {
@@ -174,7 +174,7 @@
         }
     }
     
-    @media (-moz-bool-pref: "userChrome.Tabs.Option10.Enabled")
+    @media (-moz-pref("userChrome.Tabs.Option10.Enabled"))
     {
         :root
         {
@@ -184,7 +184,7 @@
         }
     }
     
-    @media (-moz-bool-pref: "userChrome.Tabs.Option11.Enabled")
+    @media (-moz-pref("userChrome.Tabs.Option11.Enabled"))
     {
         :root
         {
@@ -194,7 +194,7 @@
         }
     }
     
-    @media (-moz-bool-pref: "userChrome.Tabs.Option12.Enabled")
+    @media (-moz-pref("userChrome.Tabs.Option12.Enabled"))
     {
         :root
         {
@@ -311,7 +311,7 @@
 
     /* -------------------- Tab Groups (Alpha) -------------------- */
 
-    @media (-moz-bool-pref: "browser.tabs.groups.enabled")
+    @media (-moz-pref("browser.tabs.groups.enabled"))
     {
         .tab-group-line
         {

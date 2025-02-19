@@ -1,4 +1,4 @@
-@media (-moz-bool-pref: "userChrome.Windows.Transparency.Enabled")
+@media (-moz-pref("userChrome.Windows.Transparency.Enabled"))
 {
     :root[customtitlebar]:not([lwtheme])
     {

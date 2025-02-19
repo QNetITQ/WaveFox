@@ -1,5 +1,5 @@
-@media (-moz-bool-pref: "userChrome.TabSeparators.Saturation.Low.Enabled")    or
-       (-moz-bool-pref: "userChrome.TabSeparators.Saturation.Medium.Enabled")
+@media (-moz-pref("userChrome.TabSeparators.Saturation.Low.Enabled"))    or
+       (-moz-pref("userChrome.TabSeparators.Saturation.Medium.Enabled"))
 {
     .tab-stack
     {
@@ -48,7 +48,7 @@
         opacity: var(--separators-color-saturation) !important;
     }
 
-    @media (-moz-bool-pref: "userChrome.TabSeparators.Saturation.Low.Enabled")
+    @media (-moz-pref("userChrome.TabSeparators.Saturation.Low.Enabled"))
     {
         :root
         {
@@ -56,7 +56,7 @@
         }
     }
 
-    @media (-moz-bool-pref: "userChrome.TabSeparators.Saturation.Medium.Enabled")
+    @media (-moz-pref("userChrome.TabSeparators.Saturation.Medium.Enabled"))
     {
         :root
         {
@@ -64,14 +64,14 @@
         }
     }
 
-    @media (-moz-bool-pref: "userChrome.Tabs.Option5.Enabled")  or
-           (-moz-bool-pref: "userChrome.Tabs.Option6.Enabled")  or
-           (-moz-bool-pref: "userChrome.Tabs.Option7.Enabled")  or
-           (-moz-bool-pref: "userChrome.Tabs.Option8.Enabled")  or
-           (-moz-bool-pref: "userChrome.Tabs.Option9.Enabled")  or
-           (-moz-bool-pref: "userChrome.Tabs.Option10.Enabled") or
-           (-moz-bool-pref: "userChrome.Tabs.Option11.Enabled") or
-           (-moz-bool-pref: "userChrome.Tabs.Option12.Enabled")
+    @media (-moz-pref("userChrome.Tabs.Option5.Enabled"))  or
+           (-moz-pref("userChrome.Tabs.Option6.Enabled"))  or
+           (-moz-pref("userChrome.Tabs.Option7.Enabled"))  or
+           (-moz-pref("userChrome.Tabs.Option8.Enabled"))  or
+           (-moz-pref("userChrome.Tabs.Option9.Enabled"))  or
+           (-moz-pref("userChrome.Tabs.Option10.Enabled")) or
+           (-moz-pref("userChrome.Tabs.Option11.Enabled")) or
+           (-moz-pref("userChrome.Tabs.Option12.Enabled"))
     {
         .tab-stack::before
         {
