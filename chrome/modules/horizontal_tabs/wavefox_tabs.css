@@ -325,6 +325,18 @@
             overflow: hidden !important;
         }
 
+        tab-group > .tab-group-label-container
+        {
+            order: -1 !important;
+        }
+        
+        tab-group:first-of-type > .tab-group-label-container
+        {
+            margin-inline-start: var(--tab-first-last-inline-margin) !important;
+        }
+
+        /*
+        
         #tabbrowser-tabs:not([overflow]) tab-group + .tabbrowser-tab:not([hidden]),
         #tabbrowser-tabs:not([overflow]) tab-group + .tabbrowser-tab[hidden] + .tabbrowser-tab:not([hidden]),
         #tabbrowser-tabs:not([overflow]) tab-group + .tabbrowser-tab[hidden] ~ .tabbrowser-tab[hidden] + .tabbrowser-tab:not([hidden])
@@ -348,15 +360,6 @@
         {
             margin-inline-start: 0px !important;
         }
-
-
-
-
-
-        
-
-        
-        /*
         
         #tabbrowser-tabs:first-child tab-group:first-of-type > .tab-group-label-container
         {
