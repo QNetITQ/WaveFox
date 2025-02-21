@@ -1,0 +1,39 @@
+@media (-moz-bool-pref: "userChrome.Tabs.Background.Inactive.Enabled")
+{
+    .tabbrowser-tab:not([visuallyselected])
+    {
+        &:nth-child(even)
+        {
+            --wavefox-tab-background-saturation-inactive: 8%;
+        }
+      
+        &:nth-child(odd)
+        {
+            z-index: 1 !important;
+            --wavefox-tab-background-saturation-inactive: 16%;
+        }
+      
+        &:not([dragover-createGroup])
+        {
+            .tab-background
+            {
+                background-color: color-mix(in srgb, var(--toolbar-color) var(--wavefox-tab-background-saturation-inactive), var(--toolbar-bgcolor)) !important;
+            }
+          
+            .tab-content
+            {
+                color: var(--toolbar-color) !important;
+            }
+    
+            &:hover .tab-background
+            {
+                background-color: color-mix(in srgb, var(--toolbar-color) 24%, var(--toolbar-bgcolor)) !important;
+            }
+    
+            &[multiselected] .tab-background
+            {
+                background-color: color-mix(in srgb, var(--toolbar-color) 32%, var(--toolbar-bgcolor)) !important;
+            }
+        }
+    }
+}

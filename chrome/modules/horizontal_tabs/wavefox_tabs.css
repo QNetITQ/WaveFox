@@ -41,9 +41,9 @@
         padding-inline: 10px !important;
     }
 
-    &[pending] .tab-icon-image
+    &[pending] .tab-content
     {
-        filter: saturate(0) !important;
+        opacity: 0.75 !important;
     }
 
     .tab-background
@@ -128,14 +128,9 @@
     {
         :root
         {
-            --left-svg:   linear-gradient(to right, transparent 50%, black 50%);
-            --right-svg:  linear-gradient(to left, transparent 50%, black 50%);
+            --left-svg:   url("svg_files/option_5/left_corners.svg");
+            --right-svg:  url("svg_files/option_5/right_corners.svg");
             --tab-first-last-inline-margin: 0px;
-            
-            .tabbrowser-tab > .tab-stack > .tab-background > :is(.tab-context-line, .tab-loading-burst)
-            {
-                margin-inline: calc(-1 * var(--tab-min-height) / 2) !important;
-            }
         }
     }
 
@@ -228,7 +223,6 @@
 
     .tabbrowser-tab
     {
-        overflow: visible !important;
         padding-inline: 0px !important;
 
         &[pinned]
@@ -238,26 +232,24 @@
                 padding-inline: calc((var(--tab-min-height) - 16px) / 2 + 2px) !important;
             }
         }
-        
-        &:not([pinned])
-        {
 
+        &[fadein]
+        {
+            overflow: visible !important;
+            
+            #tabbrowser-tabs:not([movingtab]) &
+            {
+                transition: max-width 100ms ease-out !important;
+            }
         }
 
         &[visuallyselected]
         {
-            position: relative;
             z-index: 2 !important;
 
             .tab-background
             {
                 background-color: var(--toolbar-bgcolor) !important;
-
-                &::before,
-                &::after
-                {
-                    background-color: var(--toolbar-bgcolor) !important;
-                }
             }
 
             .tab-content
@@ -268,21 +260,7 @@
 
         &:not([visuallyselected])
         {
-            --tab-loading-fill: currentColor !important;
-            --attention-dot-color: currentColor !important;
             z-index: 0 !important;
-
-            &:hover
-            {
-                .tab-background
-                {
-                    &::before,
-                    &::after
-                    {
-                        background-color: var(--tab-hover-background-color) !important;
-                    }
-                }
-            }
 
             &[multiselected]
             {
@@ -290,86 +268,38 @@
 
                 .tab-background
                 {
-                    filter: drop-shadow(0 0 2px var(--focus-outline-color)) !important;
-                    backdrop-filter: drop-shadow(0 0 1px transparent) !important;
-
-                    &::before,
-                    &::after
-                    {
-                        background-color: var(--tab-selected-bgcolor) !important;
-                        backdrop-filter: drop-shadow(0 0 1px transparent) !important;
-                    }
+                    background-color: color-mix(in srgb, currentColor 30%, transparent) !important;
+                }
+                
+                .tab-content
+                {
+                    color: inherit !important;
                 }
             }
         }
 
         .tab-background
         {
-            display: grid !important;
-            grid-template: auto / auto !important;
-            position: relative !important;
-            margin-inline: calc(var(--tab-min-height) / 2) !important;
+            margin-inline: calc(-1 * var(--tab-min-height) / 2) !important;
             margin-block: 0px !important;
             border-radius: 0px !important;
             outline: none !important;
             pointer-events: none !important;
-
-            &::before,
-            &::after
-            {
-                content: "";
-                display: block;
-                position: absolute;
-                aspect-ratio: 1 / 1;
-                height: 100%;
-                mask-size: contain;
-                transform: translate(0px, 0px);
-            }
-
-            &::before
-            {
-                inset-inline-end: 100%;
-                mask-image: var(--left-svg);
-            }
-
-            &::after
-            {
-                inset-inline-start: 100%;
-                mask-image: var(--right-svg);
-            }
-
-            > *
-            {
-                grid-area: 1 / 1 / auto / auto !important;
-            }
-            
-            .tab-context-line,
-            .tab-loading-burst
-            {
-                height: 100% !important;
-                border-radius: 0px !important;
-                mask-image: var(--left-svg), linear-gradient(black, black), var(--right-svg);
-                mask-size: auto 100%, calc(100% - var(--tab-min-height) * 2) 100%, auto 100%;
-                mask-position: left center, center center, right center;
-                mask-repeat: no-repeat;
-                margin-block: 0px !important;
-                margin-inline: calc(-1 * var(--tab-min-height)) !important;
-            }
+            mask-image: var(--left-svg), linear-gradient(to bottom, black, black), var(--right-svg) !important;
+            mask-size: contain !important;
+            mask-position: left center, center center, right center !important;
+            mask-repeat: no-repeat !important;
+            mask-composite: exclude !important;
+            mask-mode: alpha !important;
 
             .tab-context-line
             {
-                clip-path: xywh(0px 0px 100% 2px) !important;
-                z-index: 2 !important;
+                margin: 0px !important;
             }
             
-            .tab-loading-burst
+            .tab-loading-burst::before
             {
-                z-index: 1 !important;
-                
-                &::before
-                {
-                    margin-inline-start: 0px !important;
-                }
+                margin-inline-start: 0px !important;
             }
         }
     }
@@ -387,22 +317,58 @@
         {
             margin-block: auto 0px !important;
             margin-inline: 0px !important;
-            z-index: 2 !important;
         }
 
-        .tabbrowser-tab[dragover-createGroup] .tab-background
+        tab-group[collapsed] > .tabbrowser-tab
         {
-            &::before,
-            &::after
-            {
-                background-color: light-dark(var(--dragover-tab-group-color-pale), var(--dragover-tab-group-color));
-                transition: background-color 100ms ease, color 100ms ease, outline-color 100ms ease;
-            }
+            --tab-first-last-inline-margin: 0px !important;
+            overflow: hidden !important;
+        }
+
+        tab-group > .tab-group-label-container
+        {
+            order: -1 !important;
         }
         
-        tab-group[collapsed] .tabbrowser-tab
+        tab-group:first-of-type > .tab-group-label-container
         {
-            visibility: collapse !important;
+            margin-inline-start: var(--tab-first-last-inline-margin) !important;
+        }
+
+        /*
+        
+        #tabbrowser-tabs:not([overflow]) tab-group + .tabbrowser-tab:not([hidden]),
+        #tabbrowser-tabs:not([overflow]) tab-group + .tabbrowser-tab[hidden] + .tabbrowser-tab:not([hidden]),
+        #tabbrowser-tabs:not([overflow]) tab-group + .tabbrowser-tab[hidden] ~ .tabbrowser-tab[hidden] + .tabbrowser-tab:not([hidden])
+        {
+            margin-inline-start: var(--tab-first-last-inline-margin) !important;
+        }
+
+        #tabbrowser-tabs:not([overflow]) .tabbrowser-tab:not([hidden]):has(+ tab-group),
+        #tabbrowser-tabs:not([overflow]) .tabbrowser-tab:not([hidden]):has(+ .tabbrowser-tab[hidden] + tab-group),
+        #tabbrowser-tabs:not([overflow]) .tabbrowser-tab:not([hidden]):has(+ .tabbrowser-tab[hidden] ~ .tabbrowser-tab[hidden] + tab-group)
+        {
+            margin-inline-end: var(--tab-first-last-inline-margin) !important;
+        }
+
+        .toolbarbutton-1:has(+ #tabbrowser-tabs:not([overflow]) tab-group)
+        {
+            margin-inline-end: 0px !important;
+        }
+
+        #tabbrowser-tabs:not([overflow]) tab-group + #tabbrowser-arrowscrollbox-periphery > .toolbarbutton-1
+        {
+            margin-inline-start: 0px !important;
+        }
+        
+        #tabbrowser-tabs:first-child tab-group:first-of-type > .tab-group-label-container
+        {
+            margin-inline-start: calc(var(--tab-block-margin) * 2) !important;
+        }
+        
+        #tabbrowser-tabs:not(:first-child) tab-group:first-of-type > .tab-group-label-container
+        {
+            margin-inline-start: var(--tab-first-last-inline-margin) !important;
         }
 
         .tabbrowser-tab:not(:nth-last-child(1 of .tabbrowser-tab:not([hidden])), [hidden]) + tab-group > .tab-group-label-container
@@ -421,6 +387,8 @@
         {
             margin-inline-end: var(--tab-first-last-inline-margin) !important;
         }
+
+        */
 
         tab-group > .tab-group-label-container
         {
@@ -458,11 +426,6 @@
     }
 
     /* ---------------------------------------- Tab Scroll Animation ---------------------------------------- */
-
-    #tabbrowser-tabs[overflow] .tabbrowser-tab:not([pinned])
-    {
-        box-sizing: content-box !important;
-    }
 
     #tabbrowser-tabs[overflow]:not([movingtab]) .tabbrowser-tab:not([pinned])
     {

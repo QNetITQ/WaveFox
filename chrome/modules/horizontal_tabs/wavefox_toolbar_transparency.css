@@ -33,12 +33,6 @@
         .tabbrowser-tab[visuallyselected] .tab-background
         {
             background-color: color-mix(in srgb, var(--toolbar-bgcolor), transparent var(--toolbar-transparency-level)) !important;
-
-            &::before,
-            &::after
-            {
-                background-color: color-mix(in srgb, var(--toolbar-bgcolor), transparent var(--toolbar-transparency-level)) !important;
-            }
         }
     }
 }

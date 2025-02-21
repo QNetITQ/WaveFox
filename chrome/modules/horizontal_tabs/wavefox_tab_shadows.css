@@ -59,35 +59,20 @@
                 {
                     --wavefox-ft-tab-shadow-saturation: 100%;
                 }
-            }
             
-            /* ---------- Tab Bar ---------- */
+                /* ---------- Tab Bar ---------- */
+       
+                #TabsToolbar
+                {
+                    box-shadow: var(--wavefox-inner-tabbar-shadow) !important;
+                }
 
-            #TabsToolbar
-            {
-                position: relative !important;
-                clip-path: inset(0px) !important;
-            }
-
-            #TabsToolbar::before
-            {
-                content: "";
-                display: block;
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                bottom: 0px;
-                inset-inline-start: 0px;
-                box-shadow: var(--wavefox-inner-tabbar-shadow);
-                pointer-events: none;
-                z-index: 2;
-            }
-
-            /* ---------- Tabs ---------- */
-
-            .tabbrowser-tab[visuallyselected] .tab-background
-            {
-                box-shadow: var(--wavefox-selected-tab-shadow) !important;
+                /* ---------- Tabs ---------- */
+       
+                .tabbrowser-tab[visuallyselected] .tab-background
+                {
+                    box-shadow: var(--wavefox-selected-tab-shadow) !important;
+                }
             }
         }
     }
@@ -103,7 +88,7 @@
     {
         @media (prefers-color-scheme: light)
         {
-            :root
+            :root:is(:not([lwtheme]), [style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26)"])
             {
                 --wavefox-at-tab-shadow-blur: 4px;
                 --wavefox-at-tab-shadow-color: rgb(0,0,0);
@@ -149,58 +134,34 @@
                 {
                     --wavefox-at-tab-shadow-saturation: 100%;
                 }
-            }
             
-            /* ---------- Tab Bar ---------- */
-
-            #TabsToolbar
-            {
-                position: relative !important;
-                clip-path: inset(0px) !important;
-            }
-
-            #TabsToolbar::before
-            {
-                content: "";
-                display: block;
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                bottom: 0px;
-                inset-inline-start: 0px;
-                box-shadow: var(--wavefox-inner-tabbar-shadow);
-                pointer-events: none;
-                z-index: 2;
-            }
-
-            /* ---------- Tabs ---------- */
-
-            .tabbrowser-tab[visuallyselected] .tab-background
-            {
-                filter: var(--wavefox-selected-tab-shadow) !important;
-            }
-
-            /* ---------- AMO ---------- */
-            
-            :root[lwtheme]:not([style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26)"])
-            {
-                --wavefox-at-tab-shadow-color: var(--tab-selected-outline-color) !important;
-                --wavefox-at-tab-shadow-saturation: 100% !important;
-                
-                .tabbrowser-tab[visuallyselected] .tab-background
+                /* ---------- Tab Bar ---------- */
+       
+                #TabsToolbar
                 {
-                    backdrop-filter: drop-shadow(0 0 1px transparent) !important;
-                    
-                    &::before,
-                    &::after
-                    {
-                        backdrop-filter: drop-shadow(0 0 1px transparent) !important;
-                    }
+                    position: relative !important;
+                    clip-path: inset(0px) !important;
                 }
-                
+       
                 #TabsToolbar::before
                 {
-                    display: none !important;
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    bottom: 0px;
+                    inset-inline-start: 0px;
+                    box-shadow: var(--wavefox-inner-tabbar-shadow);
+                    pointer-events: none;
+                    z-index: 2;
+                }
+       
+                /* ---------- Tabs ---------- */
+       
+                .tabbrowser-tab[visuallyselected]
+                {
+                    filter: var(--wavefox-selected-tab-shadow) !important;
                 }
             }
         }
@@ -268,35 +229,20 @@
                 {
                     --wavefox-ft-tab-shadow-saturation: 100%;
                 }
-            }
             
-            /* ---------- Tab Bar ---------- */
+                /* ---------- Tab Bar ---------- */
 
-            #TabsToolbar
-            {
-                position: relative !important;
-                clip-path: inset(0px) !important;
-            }
+                #TabsToolbar
+                {
+                    box-shadow: var(--wavefox-inner-tabbar-shadow) !important;
+                }
 
-            #TabsToolbar::before
-            {
-                content: "";
-                display: block;
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                bottom: 0px;
-                inset-inline-start: 0px;
-                box-shadow: var(--wavefox-inner-tabbar-shadow);
-                pointer-events: none;
-                z-index: 2;
-            }
+                /* ---------- Tabs ---------- */
 
-            /* ---------- Tabs ---------- */
-
-            .tabbrowser-tab[visuallyselected] .tab-background
-            {
-                box-shadow: var(--wavefox-selected-tab-shadow) !important;
+                .tabbrowser-tab[visuallyselected] .tab-background
+                {
+                    box-shadow: var(--wavefox-selected-tab-shadow) !important;
+                }
             }
         }
     }
@@ -312,7 +258,7 @@
     {
         @media (prefers-color-scheme: dark)
         {
-            :root
+            :root:is(:not([lwtheme]), [style*="--lwt-accent-color: rgb(28, 27, 34); --lwt-text-color: rgba(251, 251, 254)"])
             {
                 --wavefox-at-tab-shadow-blur: 4px;
                 --wavefox-at-tab-shadow-color: rgb(0,0,0);
@@ -358,58 +304,34 @@
                 {
                     --wavefox-at-tab-shadow-saturation: 100%;
                 }
-            }
             
-            /* ---------- Tab Bar ---------- */
+                /* ---------- Tab Bar ---------- */
 
-            #TabsToolbar
-            {
-                position: relative !important;
-                clip-path: inset(0px) !important;
-            }
-
-            #TabsToolbar::before
-            {
-                content: "";
-                display: block;
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                bottom: 0px;
-                inset-inline-start: 0px;
-                box-shadow: var(--wavefox-inner-tabbar-shadow);
-                pointer-events: none;
-                z-index: 2;
-            }
-
-            /* ---------- Tabs ---------- */
-
-            .tabbrowser-tab[visuallyselected] .tab-background
-            {
-                filter: var(--wavefox-selected-tab-shadow) !important;
-            }
-
-            /* ---------- AMO ---------- */
-            
-            :root[lwtheme]:not([style*="--lwt-accent-color: rgb(28, 27, 34); --lwt-text-color: rgba(251, 251, 254)"])
-            {
-                --wavefox-at-tab-shadow-color: var(--tab-selected-outline-color) !important;
-                --wavefox-at-tab-shadow-saturation: 100% !important;
-                
-                .tabbrowser-tab[visuallyselected] .tab-background
+                #TabsToolbar
                 {
-                    backdrop-filter: drop-shadow(0 0 1px transparent) !important;
-                    
-                    &::before,
-                    &::after
-                    {
-                        backdrop-filter: drop-shadow(0 0 1px transparent) !important;
-                    }
+                    position: relative !important;
+                    clip-path: inset(0px) !important;
                 }
-                
+
                 #TabsToolbar::before
                 {
-                    display: none !important;
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    bottom: 0px;
+                    inset-inline-start: 0px;
+                    box-shadow: var(--wavefox-inner-tabbar-shadow);
+                    pointer-events: none;
+                    z-index: 2;
+                }
+
+                /* ---------- Tabs ---------- */
+
+                .tabbrowser-tab[visuallyselected]
+                {
+                    filter: var(--wavefox-selected-tab-shadow) !important;
                 }
             }
         }

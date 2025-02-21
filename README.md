@@ -9,10 +9,10 @@
 [Download Firefox](https://www.mozilla.org/en-US/firefox/all/#product-desktop-release) / [Download WaveFox](https://github.com/QNetITQ/WaveFox/releases) / [WaveFox Nightly](https://github.com/QNetITQ/WaveFox/tree/WaveFox-Nightly)
 
 <details>
-  <summary>WaveFox v1.8.135</summary>
+  <summary>WaveFox v1.8.136</summary>
 
 - ##### Minimum Requirements
-  - Firefox 135
+  - Firefox 136
   - Windows / MacOS / Linux
 
 - Download the `chrome` folder and put it in your user profile folder
@@ -109,6 +109,7 @@ Works only with the system theme.
 - `userChrome.Toolbar.Transparency.VeryHigh.Enabled`
 
 ### Tab Bar Shadows
+Works only with System / Light / Dark theme.
 ![изображение](https://user-images.githubusercontent.com/85301851/152011749-4d5619b3-0fd8-40f9-a3dc-96be31839971.png)
 
 ##### Shadows (Light Theme)
@@ -130,6 +131,11 @@ Works only with the system theme.
 
 - `userChrome.TabSeparators.Saturation.Low.Enabled`
 - `userChrome.TabSeparators.Saturation.Medium.Enabled`
+
+### Background For Inactive Tabs
+![изображение](https://github.com/user-attachments/assets/56fc829a-3cb6-4009-a58c-485fc84f65e9)
+
+- `userChrome.Tabs.Background.Inactive.Enabled`
 
 ### Lepton Icons (Menu icons)
 This is third-party code. I will update this code according to the original source. Unlike other options, these keys can be enabled in any order, or all together.
@@ -160,6 +166,11 @@ This is third-party code. I will update this code according to the original sour
 - `userChrome.DragSpace.Top.Maximized.Enabled`
 - `userChrome.DragSpace.Top.Fullscreen.Enabled`
 
+### Selected Tab Indicator
+![изображение](https://github.com/user-attachments/assets/e6d221d2-38b0-4890-9bbc-d5abc9b027c0)
+
+- `userChrome.Tabs.SelectedTabIndicator.Enabled`
+
 ### Tabs On Bottom
 ![Снимок](https://github.com/QNetITQ/WaveFox/assets/85301851/514cf30d-a417-48cb-bfd1-0e77c9df1bf4)
 
@@ -173,7 +184,6 @@ This is third-party code. I will update this code according to the original sour
 - `userChrome.OneLine.NavBarFirst.Enabled`
 
 ### Rounded Web Page
-Works only with system, light and dark themes.
 ![изображение](https://github.com/user-attachments/assets/26a19f9a-642b-4a10-a4f9-80d87cc42bdc)
 
 - `userChrome.WebPage.Rounding.Enabled`
@@ -611,6 +621,7 @@ Open `userChrome.css` and paste your code under the appropriate comment. Your co
   <summary>How to enable MicaAlt / Transparency on Windows 11?</summary>
 
 - `widget.windows.mica`
+- `widget.windows.mica.popups`
 
 </details>
 
