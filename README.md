@@ -173,7 +173,7 @@ This is third-party code. I will update this code according to the original sour
 ### Tabs On Bottom
 ![Снимок](https://github.com/QNetITQ/WaveFox/assets/85301851/514cf30d-a417-48cb-bfd1-0e77c9df1bf4)
 
-- `userChrome.Tabs.TabsOnBottom.Enabled`
+- `WaveFox.Tabs.TabsOnBottom.Enabled`
 - `browser.tabs.inTitlebar` (Optional key. Set the value to 0)
 
 ### One Line
