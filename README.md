@@ -107,18 +107,12 @@ Works only with System / Light / Dark theme.
 ![изображение](https://user-images.githubusercontent.com/85301851/152011749-4d5619b3-0fd8-40f9-a3dc-96be31839971.png)
 
 ##### Shadows (Light Theme)
-- `userChrome.LightTheme.Tabs.Shadows.Saturation.Low.Enabled`
-- `userChrome.LightTheme.Tabs.Shadows.Saturation.Medium.Enabled`
-- `userChrome.LightTheme.Tabs.Shadows.Saturation.High.Enabled`
-- `userChrome.LightTheme.Tabs.Shadows.Saturation.VeryHigh.Enabled`
-  - `userChrome.LightTheme.Tabs.Borders.Enabled` (Shadow like border)
+- `WaveFox.LightTheme.Tabs.Shadows` > 1 or 2 or 3 or 4
+  - `WaveFox.LightTheme.Tabs.Borders.Enabled` (Shadow like border)
 
 ##### Shadows (Dark Theme)
-- `userChrome.DarkTheme.Tabs.Shadows.Saturation.Low.Enabled`
-- `userChrome.DarkTheme.Tabs.Shadows.Saturation.Medium.Enabled`
-- `userChrome.DarkTheme.Tabs.Shadows.Saturation.High.Enabled`
-- `userChrome.DarkTheme.Tabs.Shadows.Saturation.VeryHigh.Enabled`
-  - `userChrome.DarkTheme.Tabs.Borders.Enabled` (Shadow like border)
+- `WaveFox.DarkTheme.Tabs.Shadows` > 1 or 2 or 3 or 4
+  - `WaveFox.DarkTheme.Tabs.Borders.Enabled` (Shadow like border)
 
 ### Tab Separators
 ![изображение](https://user-images.githubusercontent.com/85301851/152351312-f6ad4578-e7d5-40b7-8b2d-49388a750f54.png)
