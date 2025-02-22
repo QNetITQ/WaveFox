@@ -1,7 +1,7 @@
-@media (-moz-bool-pref: "userChrome.OneLine.TabBarFirst.Enabled") or
-       (-moz-bool-pref: "userChrome.OneLine.NavBarFirst.Enabled")
+@media -moz-pref("WaveFox.OneLine.NavBar.Position", 1) or
+       -moz-pref("WaveFox.OneLine.NavBar.Position", 2)
 {
-    @media (-moz-bool-pref: "userChrome.OneLine.TabBarFirst.Enabled")
+    @media -moz-pref("WaveFox.OneLine.NavBar.Position", 1)
     {
         #navigator-toolbox
         {
@@ -19,7 +19,7 @@
         }
     }
 
-    @media (-moz-bool-pref: "userChrome.OneLine.NavBarFirst.Enabled")
+    @media -moz-pref("WaveFox.OneLine.NavBar.Position", 2)
     {
         #navigator-toolbox
         {
