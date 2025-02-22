@@ -1,5 +1,7 @@
-@media (-moz-bool-pref: "userChrome.TabSeparators.Saturation.Low.Enabled")    or
-       (-moz-bool-pref: "userChrome.TabSeparators.Saturation.Medium.Enabled")
+@media -moz-pref("WaveFox.Tabs.Separators", 1) or
+       -moz-pref("WaveFox.Tabs.Separators", 2) or
+       -moz-pref("WaveFox.Tabs.Separators", 3) or
+       -moz-pref("WaveFox.Tabs.Separators", 4)
 {
     .tab-stack
     {
@@ -48,7 +50,7 @@
         opacity: var(--separators-color-saturation) !important;
     }
 
-    @media (-moz-bool-pref: "userChrome.TabSeparators.Saturation.Low.Enabled")
+    @media -moz-pref("WaveFox.Tabs.Separators", 1)
     {
         :root
         {
@@ -56,7 +58,7 @@
         }
     }
 
-    @media (-moz-bool-pref: "userChrome.TabSeparators.Saturation.Medium.Enabled")
+    @media -moz-pref("WaveFox.Tabs.Separators", 2)
     {
         :root
         {
@@ -64,14 +66,30 @@
         }
     }
 
-    @media (-moz-bool-pref: "userChrome.Tabs.Option5.Enabled")  or
-           (-moz-bool-pref: "userChrome.Tabs.Option6.Enabled")  or
-           (-moz-bool-pref: "userChrome.Tabs.Option7.Enabled")  or
-           (-moz-bool-pref: "userChrome.Tabs.Option8.Enabled")  or
-           (-moz-bool-pref: "userChrome.Tabs.Option9.Enabled")  or
-           (-moz-bool-pref: "userChrome.Tabs.Option10.Enabled") or
-           (-moz-bool-pref: "userChrome.Tabs.Option11.Enabled") or
-           (-moz-bool-pref: "userChrome.Tabs.Option12.Enabled")
+    @media -moz-pref("WaveFox.Tabs.Separators", 3)
+    {
+        :root
+        {
+            --separators-color-saturation: 0.75;
+        }
+    }
+
+    @media -moz-pref("WaveFox.Tabs.Separators", 4)
+    {
+        :root
+        {
+            --separators-color-saturation: 1;
+        }
+    }
+
+    @media -moz-pref("WaveFox.Tabs.Shape", 5)  or
+           -moz-pref("WaveFox.Tabs.Shape", 6)  or
+           -moz-pref("WaveFox.Tabs.Shape", 7)  or
+           -moz-pref("WaveFox.Tabs.Shape", 8)  or
+           -moz-pref("WaveFox.Tabs.Shape", 9)  or
+           -moz-pref("WaveFox.Tabs.Shape", 10) or
+           -moz-pref("WaveFox.Tabs.Shape", 11) or
+           -moz-pref("WaveFox.Tabs.Shape", 12)
     {
         .tab-stack::before
         {
