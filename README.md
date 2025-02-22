@@ -129,8 +129,7 @@ Works only with System / Light / Dark theme.
 ### Tab Separators
 ![изображение](https://user-images.githubusercontent.com/85301851/152351312-f6ad4578-e7d5-40b7-8b2d-49388a750f54.png)
 
-- `userChrome.TabSeparators.Saturation.Low.Enabled`
-- `userChrome.TabSeparators.Saturation.Medium.Enabled`
+- `WaveFox.Tabs.Separators` > 1 or 2 or 3 or 4
 
 ### Background For Inactive Tabs
 ![изображение](https://github.com/user-attachments/assets/56fc829a-3cb6-4009-a58c-485fc84f65e9)
