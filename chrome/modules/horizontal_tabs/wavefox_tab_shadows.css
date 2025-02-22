@@ -1,16 +1,16 @@
-@media (-moz-bool-pref: "userChrome.LightTheme.Tabs.Shadows.Saturation.Low.Enabled")      or
-       (-moz-bool-pref: "userChrome.LightTheme.Tabs.Shadows.Saturation.Medium.Enabled")   or
-       (-moz-bool-pref: "userChrome.LightTheme.Tabs.Shadows.Saturation.High.Enabled")     or
-       (-moz-bool-pref: "userChrome.LightTheme.Tabs.Shadows.Saturation.VeryHigh.Enabled")
+@media -moz-pref("WaveFox.LightTheme.Tabs.Shadows", 1) or
+       -moz-pref("WaveFox.LightTheme.Tabs.Shadows", 2) or
+       -moz-pref("WaveFox.LightTheme.Tabs.Shadows", 3) or
+       -moz-pref("WaveFox.LightTheme.Tabs.Shadows", 4)
 {
-    @media not ((-moz-bool-pref: "userChrome.Tabs.Option5.Enabled")  or
-                (-moz-bool-pref: "userChrome.Tabs.Option6.Enabled")  or
-                (-moz-bool-pref: "userChrome.Tabs.Option7.Enabled")  or
-                (-moz-bool-pref: "userChrome.Tabs.Option8.Enabled")  or
-                (-moz-bool-pref: "userChrome.Tabs.Option9.Enabled")  or
-                (-moz-bool-pref: "userChrome.Tabs.Option10.Enabled") or
-                (-moz-bool-pref: "userChrome.Tabs.Option11.Enabled") or
-                (-moz-bool-pref: "userChrome.Tabs.Option12.Enabled"))
+    @media not (-moz-bool-pref("WaveFox.Tabs.Shape", 5)  or
+                -moz-bool-pref("WaveFox.Tabs.Shape", 6)  or
+                -moz-bool-pref("WaveFox.Tabs.Shape", 7)  or
+                -moz-bool-pref("WaveFox.Tabs.Shape", 8)  or
+                -moz-bool-pref("WaveFox.Tabs.Shape", 9)  or
+                -moz-bool-pref("WaveFox.Tabs.Shape", 10) or
+                -moz-bool-pref("WaveFox.Tabs.Shape", 11) or
+                -moz-bool-pref("WaveFox.Tabs.Shape", 12))
     {
         @media (prefers-color-scheme: light)
         {
@@ -33,29 +33,29 @@
 
                 /* ---------- Blur ---------- */
 
-                @media (-moz-bool-pref: "userChrome.LightTheme.Tabs.Borders.Enabled")
+                @media -moz-pref("WaveFox.LightTheme.Tabs.Borders.Enabled")
                 {
                     --wavefox-ft-tab-shadow-blur: 1px;
                 }
 
                 /* ---------- Saturation ---------- */
 
-                @media (-moz-bool-pref: "userChrome.LightTheme.Tabs.Shadows.Saturation.Low.Enabled")
+                @media -moz-pref("WaveFox.LightTheme.Tabs.Shadows", 1)
                 {
                     --wavefox-ft-tab-shadow-saturation: 10%;
                 }
 
-                @media (-moz-bool-pref: "userChrome.LightTheme.Tabs.Shadows.Saturation.Medium.Enabled")
+                @media -moz-pref("WaveFox.LightTheme.Tabs.Shadows", 2)
                 {
                     --wavefox-ft-tab-shadow-saturation: 25%;
                 }
 
-                @media (-moz-bool-pref: "userChrome.LightTheme.Tabs.Shadows.Saturation.High.Enabled")
+                @media -moz-pref("WaveFox.LightTheme.Tabs.Shadows", 3)
                 {
                     --wavefox-ft-tab-shadow-saturation: 50%;
                 }
 
-                @media (-moz-bool-pref: "userChrome.LightTheme.Tabs.Shadows.Saturation.VeryHigh.Enabled")
+                @media -moz-pref("WaveFox.LightTheme.Tabs.Shadows", 4)
                 {
                     --wavefox-ft-tab-shadow-saturation: 100%;
                 }
@@ -77,14 +77,14 @@
         }
     }
 
-    @media (-moz-bool-pref: "userChrome.Tabs.Option5.Enabled")  or
-           (-moz-bool-pref: "userChrome.Tabs.Option6.Enabled")  or
-           (-moz-bool-pref: "userChrome.Tabs.Option7.Enabled")  or
-           (-moz-bool-pref: "userChrome.Tabs.Option8.Enabled")  or
-           (-moz-bool-pref: "userChrome.Tabs.Option9.Enabled")  or
-           (-moz-bool-pref: "userChrome.Tabs.Option10.Enabled") or
-           (-moz-bool-pref: "userChrome.Tabs.Option11.Enabled") or
-           (-moz-bool-pref: "userChrome.Tabs.Option12.Enabled")
+    @media -moz-pref("WaveFox.Tabs.Shape", 5)  or
+           -moz-pref("WaveFox.Tabs.Shape", 6)  or
+           -moz-pref("WaveFox.Tabs.Shape", 7)  or
+           -moz-pref("WaveFox.Tabs.Shape", 8)  or
+           -moz-pref("WaveFox.Tabs.Shape", 9)  or
+           -moz-pref("WaveFox.Tabs.Shape", 10) or
+           -moz-pref("WaveFox.Tabs.Shape", 11) or
+           -moz-pref("WaveFox.Tabs.Shape", 12)
     {
         @media (prefers-color-scheme: light)
         {
@@ -108,29 +108,29 @@
 
                 /* ---------- Blur ---------- */
 
-                @media (-moz-bool-pref: "userChrome.LightTheme.Tabs.Borders.Enabled")
+                @media -moz-pref("WaveFox.LightTheme.Tabs.Borders.Enabled")
                 {
                     --wavefox-at-tab-shadow-blur: 2px;
                 }
 
                 /* ---------- Saturation ---------- */
 
-                @media (-moz-bool-pref: "userChrome.LightTheme.Tabs.Shadows.Saturation.Low.Enabled")
+                @media -moz-pref("WaveFox.LightTheme.Tabs.Shadows", 1)
                 {
                     --wavefox-at-tab-shadow-saturation: 10%;
                 }
 
-                @media (-moz-bool-pref: "userChrome.LightTheme.Tabs.Shadows.Saturation.Medium.Enabled")
+                @media -moz-pref("WaveFox.LightTheme.Tabs.Shadows", 2)
                 {
                     --wavefox-at-tab-shadow-saturation: 25%;
                 }
 
-                @media (-moz-bool-pref: "userChrome.LightTheme.Tabs.Shadows.Saturation.High.Enabled")
+                @media -moz-pref("WaveFox.LightTheme.Tabs.Shadows", 3)
                 {
                     --wavefox-at-tab-shadow-saturation: 50%;
                 }
 
-                @media (-moz-bool-pref: "userChrome.LightTheme.Tabs.Shadows.Saturation.VeryHigh.Enabled")
+                @media -moz-pref("WaveFox.LightTheme.Tabs.Shadows", 4)
                 {
                     --wavefox-at-tab-shadow-saturation: 100%;
                 }
