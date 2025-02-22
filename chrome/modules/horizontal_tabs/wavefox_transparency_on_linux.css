@@ -1,7 +1,7 @@
-@media (-moz-bool-pref: "userChrome.Linux.Transparency.Low.Enabled")      or
-       (-moz-bool-pref: "userChrome.Linux.Transparency.Medium.Enabled")   or
-       (-moz-bool-pref: "userChrome.Linux.Transparency.High.Enabled")     or
-       (-moz-bool-pref: "userChrome.Linux.Transparency.VeryHigh.Enabled")
+@media -moz-pref("WaveFox.Linux.Transparency", 1) or
+       -moz-pref("WaveFox.Linux.Transparency", 2) or
+       -moz-pref("WaveFox.Linux.Transparency", 3) or
+       -moz-pref("WaveFox.Linux.Transparency", 4)
 {
     :root
     {
@@ -12,22 +12,22 @@
             --toolbox-background-color: InActiveCaption;
         }
 
-        @media (-moz-bool-pref: "userChrome.Linux.Transparency.Low.Enabled")
+        @media -moz-pref("WaveFox.Linux.Transparency", 1)
         {
             --toolbox-transparency: 25%;
         }
 
-        @media (-moz-bool-pref: "userChrome.Linux.Transparency.Medium.Enabled")
+        @media -moz-pref("WaveFox.Linux.Transparency", 2)
         {
             --toolbox-transparency: 50%;
         }
 
-        @media (-moz-bool-pref: "userChrome.Linux.Transparency.High.Enabled")
+        @media -moz-pref("WaveFox.Linux.Transparency", 3)
         {
             --toolbox-transparency: 75%;
         }
 
-        @media (-moz-bool-pref: "userChrome.Linux.Transparency.VeryHigh.Enabled")
+        @media -moz-pref("WaveFox.Linux.Transparency", 4)
         {
             --toolbox-transparency: 100%;
         }
