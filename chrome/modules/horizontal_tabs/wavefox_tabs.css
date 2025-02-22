@@ -208,7 +208,7 @@
 
     :root
     {
-        --tab-shadow-max-size: 0px !important;
+        --tab-selected-shadow-size: 0px !important;
         --tabstrip-min-height: auto !important;
     }
 
