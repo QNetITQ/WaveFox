@@ -134,7 +134,7 @@ Works only with System / Light / Dark theme.
 ### Background For Inactive Tabs
 ![изображение](https://github.com/user-attachments/assets/56fc829a-3cb6-4009-a58c-485fc84f65e9)
 
-- `userChrome.Tabs.Background.Inactive.Enabled`
+- `WaveFox.Tabs.Background.Inactive.Enabled`
 
 ### Lepton Icons (Menu icons)
 This is third-party code. I will update this code according to the original source. Unlike other options, these keys can be enabled in any order, or all together.
