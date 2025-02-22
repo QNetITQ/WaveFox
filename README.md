@@ -169,7 +169,7 @@ This is third-party code. I will update this code according to the original sour
 ### Selected Tab Indicator
 ![изображение](https://github.com/user-attachments/assets/e6d221d2-38b0-4890-9bbc-d5abc9b027c0)
 
-- `userChrome.Tabs.SelectedTabIndicator.Enabled`
+- `WaveFox.Tabs.SelectedTabIndicator.Enabled`
 
 ### Tabs On Bottom
 ![Снимок](https://github.com/QNetITQ/WaveFox/assets/85301851/514cf30d-a417-48cb-bfd1-0e77c9df1bf4)
