@@ -160,11 +160,11 @@ This is third-party code. I will update this code according to the original sour
 ### Drag Space
 ![изображение](https://user-images.githubusercontent.com/85301851/152680229-43547df0-1d2c-4384-b024-950e7aa56ca6.png)
 
-- `userChrome.DragSpace.Left.Disabled`
-- `userChrome.DragSpace.Right.Disabled`
-- `userChrome.DragSpace.Top.Windowed.Enabled`
-- `userChrome.DragSpace.Top.Maximized.Enabled`
-- `userChrome.DragSpace.Top.Fullscreen.Enabled`
+- `WaveFox.DragSpace.LeftSide.Disabled`
+- `WaveFox.DragSpace.RightSide.Disabled`
+- `WaveFox.DragSpace.AboveTabs.Windowed.Enabled`
+- `WaveFox.DragSpace.AboveTabs.Maximized.Enabled`
+- `WaveFox.DragSpace.AboveTabs.Fullscreen.Enabled`
 
 ### Selected Tab Indicator
 ![изображение](https://github.com/user-attachments/assets/e6d221d2-38b0-4890-9bbc-d5abc9b027c0)
