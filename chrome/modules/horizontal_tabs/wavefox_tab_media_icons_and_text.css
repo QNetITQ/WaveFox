@@ -98,8 +98,6 @@
 
 .tabbrowser-tab:not([pinned])
 {
-    --tab-min-width: inherit !important;
-
     &[fadein]
     {
         min-width: var(--tab-min-width) !important;
@@ -278,8 +276,6 @@
 
 .tabbrowser-tab:not([pinned])
 {
-    --tab-min-width: inherit !important;
-
     &[fadein]
     {
         min-width: var(--tab-min-width) !important;
