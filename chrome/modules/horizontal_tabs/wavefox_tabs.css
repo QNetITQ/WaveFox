@@ -71,14 +71,14 @@
 
 /* ---------------------------------------- Floating tabs ---------------------------------------- */
 
-@media (-moz-bool-pref: "userChrome.Tabs.Option1.Enabled") or
-       (-moz-bool-pref: "userChrome.Tabs.Option2.Enabled") or
-       (-moz-bool-pref: "userChrome.Tabs.Option3.Enabled") or
-       (-moz-bool-pref: "userChrome.Tabs.Option4.Enabled")
+@media -moz-pref("WaveFox.Tabs.Shape", 1) or
+       -moz-pref("WaveFox.Tabs.Shape", 2) or
+       -moz-pref("WaveFox.Tabs.Shape", 3) or
+       -moz-pref("WaveFox.Tabs.Shape", 4)
 {
     /* -------------------- Tab shapes -------------------- */
 
-    @media (-moz-bool-pref: "userChrome.Tabs.Option1.Enabled")
+    @media -moz-pref("WaveFox.Tabs.Shape", 1)
     {
         :root
         {
@@ -86,7 +86,7 @@
         }
     }
     
-    @media (-moz-bool-pref: "userChrome.Tabs.Option2.Enabled")
+    @media -moz-pref("WaveFox.Tabs.Shape", 2)
     {
         :root
         {
@@ -94,7 +94,7 @@
         }
     }
     
-    @media (-moz-bool-pref: "userChrome.Tabs.Option3.Enabled")
+    @media -moz-pref("WaveFox.Tabs.Shape", 3)
     {
         :root
         {
@@ -102,7 +102,7 @@
         }
     }
     
-    @media (-moz-bool-pref: "userChrome.Tabs.Option4.Enabled")
+    @media -moz-pref("WaveFox.Tabs.Shape", 4)
     {
         :root
         {
