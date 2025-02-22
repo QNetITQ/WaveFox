@@ -113,18 +113,18 @@
 
 /* ---------------------------------------- Attached tabs ---------------------------------------- */
 
-@media (-moz-bool-pref: "userChrome.Tabs.Option5.Enabled")  or
-       (-moz-bool-pref: "userChrome.Tabs.Option6.Enabled")  or
-       (-moz-bool-pref: "userChrome.Tabs.Option7.Enabled")  or
-       (-moz-bool-pref: "userChrome.Tabs.Option8.Enabled")  or
-       (-moz-bool-pref: "userChrome.Tabs.Option9.Enabled")  or
-       (-moz-bool-pref: "userChrome.Tabs.Option10.Enabled") or
-       (-moz-bool-pref: "userChrome.Tabs.Option11.Enabled") or
-       (-moz-bool-pref: "userChrome.Tabs.Option12.Enabled")
+@media -moz-pref("WaveFox.Tabs.Shape", 5)  or
+       -moz-pref("WaveFox.Tabs.Shape", 6)  or
+       -moz-pref("WaveFox.Tabs.Shape", 7)  or
+       -moz-pref("WaveFox.Tabs.Shape", 8)  or
+       -moz-pref("WaveFox.Tabs.Shape", 9)  or
+       -moz-pref("WaveFox.Tabs.Shape", 10) or
+       -moz-pref("WaveFox.Tabs.Shape", 11) or
+       -moz-pref("WaveFox.Tabs.Shape", 12)
 {
     /* -------------------- Tab shapes -------------------- */
 
-    @media (-moz-bool-pref: "userChrome.Tabs.Option5.Enabled")
+    @media -moz-pref("WaveFox.Tabs.Shape", 5)
     {
         :root
         {
@@ -134,7 +134,7 @@
         }
     }
 
-    @media (-moz-bool-pref: "userChrome.Tabs.Option6.Enabled")
+    @media -moz-pref("WaveFox.Tabs.Shape", 6)
     {
         :root
         {
@@ -144,7 +144,7 @@
         }
     }
     
-    @media (-moz-bool-pref: "userChrome.Tabs.Option7.Enabled")
+    @media -moz-pref("WaveFox.Tabs.Shape", 7)
     {
         :root
         {
@@ -154,7 +154,7 @@
         }
     }
     
-    @media (-moz-bool-pref: "userChrome.Tabs.Option8.Enabled")
+    @media -moz-pref("WaveFox.Tabs.Shape", 8)
     {
         :root
         {
@@ -164,7 +164,7 @@
         }
     }
     
-    @media (-moz-bool-pref: "userChrome.Tabs.Option9.Enabled")
+    @media -moz-pref("WaveFox.Tabs.Shape", 9)
     {
         :root
         {
@@ -174,7 +174,7 @@
         }
     }
     
-    @media (-moz-bool-pref: "userChrome.Tabs.Option10.Enabled")
+    @media -moz-pref("WaveFox.Tabs.Shape", 10)
     {
         :root
         {
@@ -184,7 +184,7 @@
         }
     }
     
-    @media (-moz-bool-pref: "userChrome.Tabs.Option11.Enabled")
+    @media -moz-pref("WaveFox.Tabs.Shape", 11)
     {
         :root
         {
@@ -194,7 +194,7 @@
         }
     }
     
-    @media (-moz-bool-pref: "userChrome.Tabs.Option12.Enabled")
+    @media -moz-pref("WaveFox.Tabs.Shape", 12)
     {
         :root
         {
@@ -311,7 +311,7 @@
 
     /* -------------------- Tab Groups (Alpha) -------------------- */
 
-    @media (-moz-bool-pref: "browser.tabs.groups.enabled")
+    @media -moz-pref("browser.tabs.groups.enabled")
     {
         .tab-group-line
         {
