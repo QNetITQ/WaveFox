@@ -1,5 +1,5 @@
-@media -moz-pref("WaveFox.WebPage.RoundedСorners", 1) or
-       -moz-pref("WaveFox.WebPage.RoundedСorners", 2)
+@media -moz-pref("WaveFox.WebPage.Floating", 1) or
+       -moz-pref("WaveFox.WebPage.Floating", 2)
 {
     :root:not([inFullscreen], [inDOMFullscreen])
     {
@@ -17,12 +17,12 @@
             overflow: hidden !important;
             clip-path: border-box !important;
 
-            @media -moz-pref("WaveFox.WebPage.RoundedСorners", 1)
+            @media -moz-pref("WaveFox.WebPage.Floating", 1)
             {
                 margin-block-start: 0px !important;
             }
 
-            @media -moz-pref("WaveFox.WebPage.RoundedСorners", 2)
+            @media -moz-pref("WaveFox.WebPage.Floating", 2)
             {
                 margin-block-start: 8px !important;
             }
