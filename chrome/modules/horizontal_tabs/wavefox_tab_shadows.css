@@ -3,14 +3,14 @@
        -moz-pref("WaveFox.LightTheme.Tabs.Shadows", 3) or
        -moz-pref("WaveFox.LightTheme.Tabs.Shadows", 4)
 {
-    @media not (-moz-bool-pref("WaveFox.Tabs.Shape", 5)  or
-                -moz-bool-pref("WaveFox.Tabs.Shape", 6)  or
-                -moz-bool-pref("WaveFox.Tabs.Shape", 7)  or
-                -moz-bool-pref("WaveFox.Tabs.Shape", 8)  or
-                -moz-bool-pref("WaveFox.Tabs.Shape", 9)  or
-                -moz-bool-pref("WaveFox.Tabs.Shape", 10) or
-                -moz-bool-pref("WaveFox.Tabs.Shape", 11) or
-                -moz-bool-pref("WaveFox.Tabs.Shape", 12))
+    @media not (-moz-pref("WaveFox.Tabs.Shape", 5)  or
+                -moz-pref("WaveFox.Tabs.Shape", 6)  or
+                -moz-pref("WaveFox.Tabs.Shape", 7)  or
+                -moz-pref("WaveFox.Tabs.Shape", 8)  or
+                -moz-pref("WaveFox.Tabs.Shape", 9)  or
+                -moz-pref("WaveFox.Tabs.Shape", 10) or
+                -moz-pref("WaveFox.Tabs.Shape", 11) or
+                -moz-pref("WaveFox.Tabs.Shape", 12))
     {
         @media (prefers-color-scheme: light)
         {
