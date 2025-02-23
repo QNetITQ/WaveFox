@@ -172,7 +172,7 @@ This is third-party code. I will update this code according to the original sour
 ### Rounded Web Page
 ![изображение](https://github.com/user-attachments/assets/26a19f9a-642b-4a10-a4f9-80d87cc42bdc)
 
-- `WaveFox.WebPage.Rounding.Enabled`
+- `WaveFox.WebPage.RoundedСorners` > 1 or 2
 
 </details>
 
