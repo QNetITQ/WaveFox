@@ -5,24 +5,6 @@
     {
         #navigator-toolbox
         {
-            grid-template-columns: auto minmax(auto, 0%) !important;
-        }
-
-        #TabsToolbar
-        {
-            grid-area: 2 / 1 / auto / auto !important;
-        }
-
-        #nav-bar
-        {
-            grid-area: 2 / 2 / auto / auto !important;
-        }
-    }
-
-    @media -moz-pref("WaveFox.OneLine.NavBar.Position", 2)
-    {
-        #navigator-toolbox
-        {
             grid-template-columns: minmax(auto, 0%) auto !important;
         }
         
@@ -37,10 +19,27 @@
         }
     }
 
+    @media -moz-pref("WaveFox.OneLine.NavBar.Position", 2)
+    {
+        #navigator-toolbox
+        {
+            grid-template-columns: auto minmax(auto, 0%) !important;
+        }
+
+        #TabsToolbar
+        {
+            grid-area: 2 / 1 / auto / auto !important;
+        }
+
+        #nav-bar
+        {
+            grid-area: 2 / 2 / auto / auto !important;
+        }
+    }
+
     #navigator-toolbox
     {
         display: grid !important;
-        -moz-window-dragging: drag !important;
     }
 
     /* -------------------- Nav Bar -------------------- */
@@ -48,15 +47,8 @@
     #nav-bar
     {
         width: fit-content !important;
-        background-color: transparent !important;
-        margin-top: var(--drag-space, 0px) !important;
-        box-shadow: var(--wavefox-inner-tabbar-shadow) !important;
-    }
-
-    #urlbar-container,
-    #search-container
-    {
-        padding-block: 0px !important;
+        border: none !important;
+        align-self: end !important;
     }
 
     /* -------------------- Bookmarks Bar / Notifications -------------------- */
@@ -73,12 +65,8 @@
         --panel-arrow-offset: 0px !important;
     }
 
-
-
-
-
     /* -------------------- Floating tabs -------------------- */
-    /*
+
     @media not (-moz-pref("WaveFox.Tabs.Shape", 5)  or
                 -moz-pref("WaveFox.Tabs.Shape", 6)  or
                 -moz-pref("WaveFox.Tabs.Shape", 7)  or
@@ -90,53 +78,61 @@
     {
         #nav-bar
         {
-            border: none !important;
             border-radius: var(--wavefox-tab-border-radius, 4px) !important;
             margin: var(--tab-block-margin) !important;
             box-shadow: var(--wavefox-selected-tab-shadow, none) !important;
-            align-self: end !important;
         }
         
         #TabsToolbar
         {
             box-shadow: none !important;
         }
-    }*/
+    }
 
+    /* -------------------- Attached tabs -------------------- */
 
-
-
-
-
-
-
-
-
-       
-
-    /* -------------------- Windows -------------------- */
-
-    @media (-moz-platform: windows)
+    @media -moz-pref("WaveFox.Tabs.Shape", 5)  or
+           -moz-pref("WaveFox.Tabs.Shape", 6)  or
+           -moz-pref("WaveFox.Tabs.Shape", 7)  or
+           -moz-pref("WaveFox.Tabs.Shape", 8)  or
+           -moz-pref("WaveFox.Tabs.Shape", 9)  or
+           -moz-pref("WaveFox.Tabs.Shape", 10) or
+           -moz-pref("WaveFox.Tabs.Shape", 11) or
+           -moz-pref("WaveFox.Tabs.Shape", 12)
     {
-        @media (-moz-windows-accent-color-in-titlebar) or (-moz-windows-mica)
+        #nav-bar
         {
-            :root[customtitlebar]:not([lwtheme]) #nav-bar
+            position: relative !important;
+            background-color: transparent !important;
+            filter: var(--wavefox-selected-tab-shadow, none) !important;
+            clip-path: inset(0px);
+            padding-inline: var(--tab-first-last-inline-margin) !important;
+            
+            &::before
             {
-                color: inherit !important;
-                --toolbarbutton-icon-fill: currentColor !important;
-                --toolbarbutton-hover-background: color-mix(in srgb, currentColor 17%, transparent) !important;
-                --toolbarbutton-active-background: color-mix(in srgb, currentColor 30%, transparent) !important;
+                content: "";
+                display: block;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                inset-block-end: 0px;
+                inset-inline-start: 0px;
+                background-color: var(--toolbar-bgcolor);
+                pointer-events: none;
+                z-index: -1;
+                mask-image: var(--left-svg), linear-gradient(to bottom, black, black), var(--right-svg);
+                mask-size: contain;
+                mask-position: left center, center center, right center;
+                mask-repeat: no-repeat;
+                mask-composite: exclude;
+                mask-mode: alpha;
             }
         }
-    }
-    
-    /* -------------------- Linux -------------------- */
 
-    @media (-moz-platform: linux)
-    {
-        :root[customtitlebar]:not([lwtheme]) #nav-bar
+        #urlbar-container,
+        #search-container
         {
-            color: inherit !important;
+            padding-block: 0px !important;
         }
     }
 }
