@@ -130,7 +130,7 @@ This is third-party code. I will update this code according to the original sour
 ![изображение](https://user-images.githubusercontent.com/85301851/151192118-0cbdb5a7-a77f-4275-8841-2ac321657c86.png)
 
 - `svg.context-properties.content.enabled` (Required key)
-- `userChrome.Menu.Icons.LeptonIcons.Enabled` (Required key)
+- `WaveFox.LeptonIcons.Enabled` (Required key)
   - `userChrome.icon.panel_full` or `userChrome.icon.panel_photon`
   - `userChrome.icon.library`
   - `userChrome.icon.panel`
