@@ -13,9 +13,9 @@
 @import "modules/horizontal_tabs/wavefox_toolbar_transparency.css"      layer(BasicPriority) /* supports() */ not -moz-pref("sidebar.verticalTabs");
 @import "modules/horizontal_tabs/wavefox_tabs_on_bottom.css"            layer(BasicPriority) /* supports() */ not -moz-pref("sidebar.verticalTabs");
 @import "modules/horizontal_tabs/wavefox_one_line.css"                  layer(BasicPriority) /* supports() */ not -moz-pref("sidebar.verticalTabs");
-@import "modules/horizontal_tabs/wavefox_transparency_on_windows.css"   layer(BasicPriority) /* supports() */     (-moz-platform: windows);
+@import "modules/horizontal_tabs/wavefox_transparency_on_windows10.css" layer(BasicPriority) /* supports() */     (-moz-platform: windows);
 @import "modules/horizontal_tabs/wavefox_transparency_on_linux.css"     layer(BasicPriority) /* supports() */     (-moz-platform: linux);
 @import "modules/horizontal_tabs/wavefox_rounded_web_page.css"          layer(BasicPriority) /* supports() */ not -moz-pref("sidebar.revamp");
-@import "Lepton_Icons/icons/Lepton_Icons.css"                           layer(BasicPriority) /* supports() */     -moz-pref("userChrome.Menu.Icons.LeptonIcons.Enabled");
+@import "Lepton_Icons/icons/Lepton_Icons.css"                           layer(BasicPriority) /* supports() */     -moz-pref("WaveFox.LeptonIcons.Enabled");
 
 /* ---------------------------------------- Third-party styles (Maximum priority) ---------------------------------------- */
