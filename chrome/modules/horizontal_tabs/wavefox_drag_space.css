@@ -1,4 +1,53 @@
-@media -moz-pref("WaveFox.DragSpace.LeftSide.Disabled")
+@media -moz-pref("WaveFox.DragSpace.Tabs", 1)  or
+       -moz-pref("WaveFox.DragSpace.Tabs", 2)  or
+       -moz-pref("WaveFox.DragSpace.Tabs", 3)
+{
+    @media -moz-pref("WaveFox.DragSpace.Tabs", 1)
+    {
+        :root[sizemode="normal"]
+        {
+            --drag-space: 8px;
+        }
+    }
+
+    @media -moz-pref("WaveFox.DragSpace.Tabs", 2)
+    {
+        :root:is([sizemode="normal"], [sizemode="maximized"])
+        {
+            --drag-space: 8px;
+        }
+    }
+
+    @media -moz-pref("WaveFox.DragSpace.Tabs", 3)
+    {
+        :root:is([sizemode="normal"], [sizemode="maximized"], [sizemode="fullscreen"])
+        {
+            --drag-space: 8px;
+        }
+    }
+
+    #TabsToolbar :is(.tabbrowser-tab, .toolbarbutton-1, separator, #personal-bookmarks, #search-container, .accessibility-indicator)
+    {
+        margin-top: var(--drag-space, 0px) !important;
+    }
+
+    /* ---------- Shadow DOM ---------- */
+
+    #tabbrowser-arrowscrollbox
+    {
+        --drag-space-only-tabs: var(--drag-space, 0px) !important;
+    }
+
+    #scrollbutton-up,
+    #scrollbutton-down,
+    spacer[part="overflow-start-indicator"],
+    spacer[part="overflow-end-indicator"]
+    {
+        margin-top: var(--drag-space-only-tabs, revert) !important;
+    }
+}
+
+@media -moz-pref("WaveFox.DragSpace.TabBarLeftSide.Disabled")
 {
     .titlebar-spacer[type="pre-tabs"]
     {
@@ -6,54 +55,10 @@
     }
 }
 
-@media -moz-pref("WaveFox.DragSpace.RightSide.Disabled")
+@media -moz-pref("WaveFox.DragSpace.TabBarRightSide.Disabled")
 {
     .titlebar-spacer[type="post-tabs"]
     {
         display: none !important;
     }
-}
-
-@media -moz-pref("WaveFox.DragSpace.AboveTabs.Windowed.Enabled")
-{
-    :root[sizemode="normal"]
-    {
-        --drag-space: 8px;
-    }
-}
-
-@media -moz-pref("WaveFox.DragSpace.AboveTabs.Maximized.Enabled")
-{
-    :root[sizemode="maximized"]
-    {
-        --drag-space: 8px;
-    }
-}
-
-@media -moz-pref("WaveFox.DragSpace.AboveTabs.Fullscreen.Enabled")
-{
-    :root[sizemode="fullscreen"]
-    {
-        --drag-space: 8px;
-    }
-}
-
-#TabsToolbar :is(.tabbrowser-tab, .toolbarbutton-1, separator, #personal-bookmarks, #search-container, .accessibility-indicator, .private-browsing-indicator, #private-browsing-indicator-with-label)
-{
-    margin-top: var(--drag-space, 0px) !important;
-}
-
-/* ---------- Shadow DOM ---------- */
-
-#tabbrowser-arrowscrollbox
-{
-    --drag-space-only-tabs: var(--drag-space, 0px) !important;
-}
-
-#scrollbutton-up,
-#scrollbutton-down,
-spacer[part="overflow-start-indicator"],
-spacer[part="overflow-end-indicator"]
-{
-    margin-top: var(--drag-space-only-tabs, revert) !important;
 }
