@@ -87,7 +87,7 @@ Install [DWMBlurGlass](https://github.com/Maplespe/DWMBlurGlass). Configure to y
 ![изображение](https://github.com/user-attachments/assets/632c972f-b48a-4ca6-8c69-28859e34485b)
 
 - `browser.theme.windows.accent-color-in-tabs.enabled`
-- `WaveFox.Windows.Transparency.Enabled`
+- `WaveFox.Windows10.Transparency.Enabled`
 
 ### Linux Transparency
 Requires Linux with transparency support. Works only with the system theme.
@@ -147,11 +147,9 @@ This is third-party code. I will update this code according to the original sour
 ### Drag Space
 ![изображение](https://user-images.githubusercontent.com/85301851/152680229-43547df0-1d2c-4384-b024-950e7aa56ca6.png)
 
-- `WaveFox.DragSpace.LeftSide.Disabled`
-- `WaveFox.DragSpace.RightSide.Disabled`
-- `WaveFox.DragSpace.AboveTabs.Windowed.Enabled`
-- `WaveFox.DragSpace.AboveTabs.Maximized.Enabled`
-- `WaveFox.DragSpace.AboveTabs.Fullscreen.Enabled`
+- `WaveFox.DragSpace.Tabs` > 1 or 2 or 3
+- `WaveFox.DragSpace.TabBarLeftSide.Disabled`
+- `WaveFox.DragSpace.TabBarRightSide.Disabled`
 
 ### Selected Tab Indicator
 ![изображение](https://github.com/user-attachments/assets/e6d221d2-38b0-4890-9bbc-d5abc9b027c0)
