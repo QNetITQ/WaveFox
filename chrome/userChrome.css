@@ -2,20 +2,20 @@
 
 /* ---------- Horizontal Tabs ---------- */
 
-@import "modules/horizontal_tabs/wavefox_tabs.css"                      layer(BasicPriority) /* supports() */ not -moz-pref("sidebar.verticalTabs");
-@import "modules/horizontal_tabs/wavefox_tabs_background_inactive.css"  layer(BasicPriority) /* supports() */ not -moz-pref("sidebar.verticalTabs");
-@import "modules/horizontal_tabs/wavefox_selected_tab_indicator.css"    layer(BasicPriority) /* supports() */ not -moz-pref("sidebar.verticalTabs");
-@import "modules/horizontal_tabs/wavefox_tab_media_icons_and_text.css"  layer(BasicPriority) /* supports() */ not -moz-pref("sidebar.verticalTabs");
-@import "modules/horizontal_tabs/wavefox_toolbar_buttons.css"           layer(BasicPriority) /* supports() */ not -moz-pref("sidebar.verticalTabs");
-@import "modules/horizontal_tabs/wavefox_tab_separators.css"            layer(BasicPriority) /* supports() */ not -moz-pref("sidebar.verticalTabs");
-@import "modules/horizontal_tabs/wavefox_tab_shadows.css"               layer(BasicPriority) /* supports() */ not -moz-pref("sidebar.verticalTabs");
-@import "modules/horizontal_tabs/wavefox_drag_space.css"                layer(BasicPriority) /* supports() */ not -moz-pref("sidebar.verticalTabs");
-@import "modules/horizontal_tabs/wavefox_toolbar_transparency.css"      layer(BasicPriority) /* supports() */ not -moz-pref("sidebar.verticalTabs");
-@import "modules/horizontal_tabs/wavefox_tabs_on_bottom.css"            layer(BasicPriority) /* supports() */ not -moz-pref("sidebar.verticalTabs");
-@import "modules/horizontal_tabs/wavefox_one_line.css"                  layer(HighPriority)  /* supports() */ not -moz-pref("sidebar.verticalTabs");
-@import "modules/horizontal_tabs/wavefox_transparency_on_windows10.css" layer(BasicPriority) /* supports() */     (-moz-platform: windows);
-@import "modules/horizontal_tabs/wavefox_transparency_on_linux.css"     layer(BasicPriority) /* supports() */     (-moz-platform: linux);
-@import "modules/horizontal_tabs/wavefox_rounded_web_page.css"          layer(BasicPriority) /* supports() */ not -moz-pref("sidebar.revamp");
-@import "Lepton_Icons/icons/Lepton_Icons.css"                           layer(BasicPriority) /* supports() */     -moz-pref("WaveFox.LeptonIcons.Enabled");
+@import "modules/horizontal_tabs/wavefox_tabs.css"                      layer(BasicPriority) /* supports() */ -moz-pref("sidebar.verticalTabs", false);
+@import "modules/horizontal_tabs/wavefox_tabs_background_inactive.css"  layer(BasicPriority) /* supports() */ -moz-pref("sidebar.verticalTabs", false);
+@import "modules/horizontal_tabs/wavefox_selected_tab_indicator.css"    layer(BasicPriority) /* supports() */ -moz-pref("sidebar.verticalTabs", false);
+@import "modules/horizontal_tabs/wavefox_tab_media_icons_and_text.css"  layer(BasicPriority) /* supports() */ -moz-pref("sidebar.verticalTabs", false);
+@import "modules/horizontal_tabs/wavefox_toolbar_buttons.css"           layer(BasicPriority) /* supports() */ -moz-pref("sidebar.verticalTabs", false);
+@import "modules/horizontal_tabs/wavefox_tab_separators.css"            layer(BasicPriority) /* supports() */ -moz-pref("sidebar.verticalTabs", false);
+@import "modules/horizontal_tabs/wavefox_tab_shadows.css"               layer(BasicPriority) /* supports() */ -moz-pref("sidebar.verticalTabs", false);
+@import "modules/horizontal_tabs/wavefox_drag_space.css"                layer(BasicPriority) /* supports() */ -moz-pref("sidebar.verticalTabs", false);
+@import "modules/horizontal_tabs/wavefox_toolbar_transparency.css"      layer(BasicPriority) /* supports() */ -moz-pref("sidebar.verticalTabs", false);
+@import "modules/horizontal_tabs/wavefox_tabs_on_bottom.css"            layer(BasicPriority) /* supports() */ -moz-pref("sidebar.verticalTabs", false);
+@import "modules/horizontal_tabs/wavefox_one_line.css"                  layer(HighPriority)  /* supports() */ -moz-pref("sidebar.verticalTabs", false);
+@import "modules/horizontal_tabs/wavefox_transparency_on_windows10.css" layer(BasicPriority) /* supports() */ (-moz-platform: windows);
+@import "modules/horizontal_tabs/wavefox_transparency_on_linux.css"     layer(BasicPriority) /* supports() */ (-moz-platform: linux);
+@import "modules/horizontal_tabs/wavefox_rounded_web_page.css"          layer(BasicPriority) /* supports() */ -moz-pref("sidebar.revamp", false);
+@import "Lepton_Icons/icons/Lepton_Icons.css"                           layer(BasicPriority) /* supports() */ -moz-pref("WaveFox.LeptonIcons.Enabled", true);
 
 /* ---------------------------------------- Third-party styles (Maximum priority) ---------------------------------------- */
