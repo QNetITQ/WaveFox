@@ -73,6 +73,47 @@
         --panel-arrow-offset: 0px !important;
     }
 
+
+
+
+
+    /* -------------------- Floating tabs -------------------- */
+    /*
+    @media not (-moz-pref("WaveFox.Tabs.Shape", 5)  or
+                -moz-pref("WaveFox.Tabs.Shape", 6)  or
+                -moz-pref("WaveFox.Tabs.Shape", 7)  or
+                -moz-pref("WaveFox.Tabs.Shape", 8)  or
+                -moz-pref("WaveFox.Tabs.Shape", 9)  or
+                -moz-pref("WaveFox.Tabs.Shape", 10) or
+                -moz-pref("WaveFox.Tabs.Shape", 11) or
+                -moz-pref("WaveFox.Tabs.Shape", 12))
+    {
+        #nav-bar
+        {
+            border: none !important;
+            border-radius: var(--wavefox-tab-border-radius, 4px) !important;
+            margin: var(--tab-block-margin) !important;
+            box-shadow: var(--wavefox-selected-tab-shadow, none) !important;
+            align-self: end !important;
+        }
+        
+        #TabsToolbar
+        {
+            box-shadow: none !important;
+        }
+    }*/
+
+
+
+
+
+
+
+
+
+
+       
+
     /* -------------------- Windows -------------------- */
 
     @media (-moz-platform: windows)
