@@ -1,4 +1,4 @@
-@media -moz-pref("WaveFox.Windows.Transparency.Enabled")
+@media -moz-pref("WaveFox.Windows10.Transparency.Enabled")
 {
     :root[customtitlebar]:not([lwtheme])
     {
