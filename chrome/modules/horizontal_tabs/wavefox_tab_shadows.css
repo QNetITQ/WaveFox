@@ -79,11 +79,14 @@
                 }
             }
 
-            @media -moz-pref("WaveFox.Tabs.Shape", 0) or
-                   -moz-pref("WaveFox.Tabs.Shape", 1) or
-                   -moz-pref("WaveFox.Tabs.Shape", 2) or
-                   -moz-pref("WaveFox.Tabs.Shape", 3) or
-                   -moz-pref("WaveFox.Tabs.Shape", 4)
+            @media not (-moz-pref("WaveFox.Tabs.Shape", 5)   or
+                        -moz-pref("WaveFox.Tabs.Shape", 6)   or
+                        -moz-pref("WaveFox.Tabs.Shape", 7)   or
+                        -moz-pref("WaveFox.Tabs.Shape", 8)   or
+                        -moz-pref("WaveFox.Tabs.Shape", 9)   or
+                        -moz-pref("WaveFox.Tabs.Shape", 10)  or
+                        -moz-pref("WaveFox.Tabs.Shape", 11)  or
+                        -moz-pref("WaveFox.Tabs.Shape", 12))
             {
                 #TabsToolbar
                 {
@@ -215,11 +218,14 @@
                 }
             }
 
-            @media -moz-pref("WaveFox.Tabs.Shape", 0) or
-                   -moz-pref("WaveFox.Tabs.Shape", 1) or
-                   -moz-pref("WaveFox.Tabs.Shape", 2) or
-                   -moz-pref("WaveFox.Tabs.Shape", 3) or
-                   -moz-pref("WaveFox.Tabs.Shape", 4)
+            @media not (-moz-pref("WaveFox.Tabs.Shape", 5)   or
+                        -moz-pref("WaveFox.Tabs.Shape", 6)   or
+                        -moz-pref("WaveFox.Tabs.Shape", 7)   or
+                        -moz-pref("WaveFox.Tabs.Shape", 8)   or
+                        -moz-pref("WaveFox.Tabs.Shape", 9)   or
+                        -moz-pref("WaveFox.Tabs.Shape", 10)  or
+                        -moz-pref("WaveFox.Tabs.Shape", 11)  or
+                        -moz-pref("WaveFox.Tabs.Shape", 12))
             {
                 #TabsToolbar
                 {
