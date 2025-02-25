@@ -1,7 +1,7 @@
-@media -moz-pref("WaveFox.OneLine.NavBar.Position", 1) or
-       -moz-pref("WaveFox.OneLine.NavBar.Position", 2)
+@media -moz-pref("WaveFox.OneLine", 1) or
+       -moz-pref("WaveFox.OneLine", 2)
 {
-    @media -moz-pref("WaveFox.OneLine.NavBar.Position", 1)
+    @media -moz-pref("WaveFox.OneLine", 1)
     {
         #navigator-toolbox
         {
@@ -19,7 +19,7 @@
         }
     }
 
-    @media -moz-pref("WaveFox.OneLine.NavBar.Position", 2)
+    @media -moz-pref("WaveFox.OneLine", 2)
     {
         #navigator-toolbox
         {
@@ -67,13 +67,13 @@
 
     /* -------------------- Floating tabs -------------------- */
 
-    @media not (-moz-pref("WaveFox.Tabs.Shape", 5)  or
-                -moz-pref("WaveFox.Tabs.Shape", 6)  or
-                -moz-pref("WaveFox.Tabs.Shape", 7)  or
-                -moz-pref("WaveFox.Tabs.Shape", 8)  or
-                -moz-pref("WaveFox.Tabs.Shape", 9)  or
-                -moz-pref("WaveFox.Tabs.Shape", 10) or
-                -moz-pref("WaveFox.Tabs.Shape", 11) or
+    @media not (-moz-pref("WaveFox.Tabs.Shape", 5)   or
+                -moz-pref("WaveFox.Tabs.Shape", 6)   or
+                -moz-pref("WaveFox.Tabs.Shape", 7)   or
+                -moz-pref("WaveFox.Tabs.Shape", 8)   or
+                -moz-pref("WaveFox.Tabs.Shape", 9)   or
+                -moz-pref("WaveFox.Tabs.Shape", 10)  or
+                -moz-pref("WaveFox.Tabs.Shape", 11)  or
                 -moz-pref("WaveFox.Tabs.Shape", 12))
     {
         #nav-bar
@@ -104,8 +104,9 @@
         {
             position: relative !important;
             background-color: transparent !important;
-            filter: var(--wavefox-selected-tab-shadow, none) !important;
-            clip-path: inset(0px);
+            filter: var(--wavefox-selected-tab-filter, none) !important;
+            box-shadow: var(--wavefox-inner-tabbar-shadow, none) !important;
+            clip-path: inset(0px) !important;
             padding-inline: var(--tab-first-last-inline-margin) !important;
             
             &::before
