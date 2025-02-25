@@ -396,23 +396,171 @@
                                                var(--wavefox-inner-tabbar-shadow-blur)
                                                var(--wavefox-inner-tabbar-shadow-spread)
                                                color-mix(in srgb, var(--wavefox-inner-tabbar-shadow-color) var(--wavefox-filter-shadow-saturation), transparent);
+            }
 
-                @media -moz-pref("WaveFox.LightTheme.Tabs.Shadows", 1)
+            @media -moz-pref("WaveFox.LightTheme.Tabs.Shadows", 1)
+            {
+                :root
                 {
                     --wavefox-filter-shadow-saturation: 10%;
                 }
+            }
 
-                @media -moz-pref("WaveFox.LightTheme.Tabs.Shadows", 2)
+            @media -moz-pref("WaveFox.LightTheme.Tabs.Shadows", 2)
+            {
+                :root
                 {
                     --wavefox-filter-shadow-saturation: 25%;
                 }
+            }
 
-                @media -moz-pref("WaveFox.LightTheme.Tabs.Shadows", 3)
+            @media -moz-pref("WaveFox.LightTheme.Tabs.Shadows", 3)
+            {
+                :root
                 {
                     --wavefox-filter-shadow-saturation: 50%;
                 }
+            }
 
-                @media -moz-pref("WaveFox.LightTheme.Tabs.Shadows", 4)
+            @media -moz-pref("WaveFox.LightTheme.Tabs.Shadows", 4)
+            {
+                :root
+                {
+                    --wavefox-filter-shadow-saturation: 100%;
+                }
+            }
+
+            @media -moz-pref("WaveFox.Tabs.Shape", 0) or
+                   -moz-pref("WaveFox.Tabs.Shape", 1) or
+                   -moz-pref("WaveFox.Tabs.Shape", 2) or
+                   -moz-pref("WaveFox.Tabs.Shape", 3) or
+                   -moz-pref("WaveFox.Tabs.Shape", 4)
+            {
+                #TabsToolbar
+                {
+                    box-shadow: var(--wavefox-inner-tabbar-shadow) !important;
+                }
+       
+                .tabbrowser-tab[visuallyselected] .tab-background
+                {
+                    box-shadow: var(--wavefox-selected-tab-shadow) !important;
+                }
+            }
+            
+            @media -moz-pref("WaveFox.Tabs.Shape", 5)  or
+                   -moz-pref("WaveFox.Tabs.Shape", 6)  or
+                   -moz-pref("WaveFox.Tabs.Shape", 7)  or
+                   -moz-pref("WaveFox.Tabs.Shape", 8)  or
+                   -moz-pref("WaveFox.Tabs.Shape", 9)  or
+                   -moz-pref("WaveFox.Tabs.Shape", 10) or
+                   -moz-pref("WaveFox.Tabs.Shape", 11) or
+                   -moz-pref("WaveFox.Tabs.Shape", 12)
+            {
+                #TabsToolbar
+                {
+                    position: relative !important;
+                    clip-path: inset(0px) !important;
+                }
+       
+                #TabsToolbar::before
+                {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    bottom: 0px;
+                    inset-inline-start: 0px;
+                    box-shadow: var(--wavefox-inner-tabbar-shadow);
+                    pointer-events: none;
+                    z-index: 2;
+                }
+       
+                .tabbrowser-tab[visuallyselected]
+                {
+                    filter: var(--wavefox-selected-tab-filter) !important;
+                }
+            }
+        }
+    }
+}
+
+@media -moz-pref("WaveFox.DarkTheme.Tabs.Shadows", 1) or
+       -moz-pref("WaveFox.DarkTheme.Tabs.Shadows", 2) or
+       -moz-pref("WaveFox.DarkTheme.Tabs.Shadows", 3) or
+       -moz-pref("WaveFox.DarkTheme.Tabs.Shadows", 4)
+{
+    @media -moz-pref("extensions.activeThemeID", 'default-theme@mozilla.org') or
+           -moz-pref("extensions.activeThemeID", 'firefox-compact-dark@mozilla.org')
+    {
+        @media (prefers-color-scheme: dark)
+        {
+            :root
+            {
+                --wavefox-selected-tab-filter-offset-x: 0px;
+                --wavefox-selected-tab-filter-offset-y: 0px;
+                --wavefox-selected-tab-filter-blur: 2px;
+                --wavefox-selected-tab-filter-color: rgb(0,0,0);
+                
+                --wavefox-selected-tab-shadow-offset-x: 0px;
+                --wavefox-selected-tab-shadow-offset-y: 0px;
+                --wavefox-selected-tab-shadow-blur: 4px;
+                --wavefox-selected-tab-shadow-spread: 0px;
+                --wavefox-selected-tab-shadow-color: rgb(0,0,0);
+                
+                --wavefox-inner-tabbar-shadow-offset-x: 0px;
+                --wavefox-inner-tabbar-shadow-offset-y: -4px;
+                --wavefox-inner-tabbar-shadow-blur: 4px;
+                --wavefox-inner-tabbar-shadow-spread: -4px;
+                --wavefox-inner-tabbar-shadow-color: rgb(0,0,0);
+                
+                --wavefox-selected-tab-filter: drop-shadow(
+                                               var(--wavefox-selected-tab-filter-offset-x)
+                                               var(--wavefox-selected-tab-filter-offset-y)
+                                               var(--wavefox-selected-tab-filter-blur)
+                                               color-mix(in srgb, var(--wavefox-selected-tab-filter-color) var(--wavefox-filter-shadow-saturation), transparent));
+
+                --wavefox-selected-tab-shadow: var(--wavefox-selected-tab-shadow-offset-x)
+                                               var(--wavefox-selected-tab-shadow-offset-y)
+                                               var(--wavefox-selected-tab-shadow-blur)
+                                               var(--wavefox-selected-tab-shadow-spread)
+                                               color-mix(in srgb, var(--wavefox-selected-tab-shadow-color) var(--wavefox-filter-shadow-saturation), transparent);
+
+                --wavefox-inner-tabbar-shadow: inset
+                                               var(--wavefox-inner-tabbar-shadow-offset-x)
+                                               var(--wavefox-inner-tabbar-shadow-offset-y)
+                                               var(--wavefox-inner-tabbar-shadow-blur)
+                                               var(--wavefox-inner-tabbar-shadow-spread)
+                                               color-mix(in srgb, var(--wavefox-inner-tabbar-shadow-color) var(--wavefox-filter-shadow-saturation), transparent);
+            }
+
+            @media -moz-pref("WaveFox.DarkTheme.Tabs.Shadows", 1)
+            {
+                :root
+                {
+                    --wavefox-filter-shadow-saturation: 25%;
+                }
+            }
+
+            @media -moz-pref("WaveFox.DarkTheme.Tabs.Shadows", 2)
+            {
+                :root
+                {
+                    --wavefox-filter-shadow-saturation: 50%;
+                }
+            }
+
+            @media -moz-pref("WaveFox.DarkTheme.Tabs.Shadows", 3)
+            {
+                :root
+                {
+                    --wavefox-filter-shadow-saturation: 75%;
+                }
+            }
+
+            @media -moz-pref("WaveFox.DarkTheme.Tabs.Shadows", 4)
+            {
+                :root
                 {
                     --wavefox-filter-shadow-saturation: 100%;
                 }
