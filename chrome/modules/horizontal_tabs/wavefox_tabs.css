@@ -323,11 +323,7 @@
         {
             --tab-first-last-inline-margin: 0px !important;
             overflow: hidden !important;
-        }
-
-        tab-group > .tab-group-label-container
-        {
-            order: -1 !important;
+            min-width: 0px !important;
         }
         
         tab-group:first-of-type > .tab-group-label-container
