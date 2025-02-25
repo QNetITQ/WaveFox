@@ -154,11 +154,10 @@ This is third-party code. I will update this code according to the original sour
 
 - `WaveFox.Tabs.SelectedTabIndicator.Enabled`
 
-### Tabs On Bottom
+### Tabs Below URL
 ![Снимок](https://github.com/QNetITQ/WaveFox/assets/85301851/514cf30d-a417-48cb-bfd1-0e77c9df1bf4)
 
-- `WaveFox.Tabs.TabsOnBottom.Enabled`
-- `browser.tabs.inTitlebar` (Optional key. Set the value to 0)
+- `WaveFox.TabsBelowURL.Enabled` and `browser.tabs.inTitlebar > 0`
 
 ### One Line
 ![Снимок](https://github.com/QNetITQ/WaveFox/assets/85301851/05bba314-643d-46f3-a09c-b3ac31f9761d)
