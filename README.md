@@ -108,11 +108,9 @@ Works only with System / Light / Dark theme.
 
 ##### Shadows (Light Theme)
 - `WaveFox.LightTheme.Tabs.Shadows` > 1 or 2 or 3 or 4
-  - `WaveFox.LightTheme.Tabs.Borders.Enabled` (Shadow like border)
 
 ##### Shadows (Dark Theme)
 - `WaveFox.DarkTheme.Tabs.Shadows` > 1 or 2 or 3 or 4
-  - `WaveFox.DarkTheme.Tabs.Borders.Enabled` (Shadow like border)
 
 ### Tab Separators
 ![изображение](https://user-images.githubusercontent.com/85301851/152351312-f6ad4578-e7d5-40b7-8b2d-49388a750f54.png)
