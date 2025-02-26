@@ -53,7 +53,7 @@
 
         #urlbar-container
         {
-            --urlbar-container-height: var(--tab-min-height) !important;
+            min-height: var(--tab-min-height) !important;
         }
     }
 
