@@ -319,7 +319,7 @@
             margin-inline: 0px !important;
         }
 
-        tab-group[collapsed] > .tabbrowser-tab
+        tab-group[collapsed] > .tabbrowser-tab[fadein]
         {
             --tab-first-last-inline-margin: 0px !important;
             overflow: hidden !important;
