@@ -40,6 +40,7 @@
     #navigator-toolbox
     {
         display: grid !important;
+        -moz-window-dragging: drag !important;
     }
 
     /* -------------------- Nav Bar -------------------- */
@@ -49,6 +50,11 @@
         width: fit-content !important;
         border: none !important;
         align-self: end !important;
+
+        #urlbar-container
+        {
+            --urlbar-container-height: var(--tab-min-height) !important;
+        }
     }
 
     /* -------------------- Bookmarks Bar / Notifications -------------------- */
@@ -106,7 +112,7 @@
             background-color: transparent !important;
             filter: var(--wavefox-selected-tab-filter, none) !important;
             box-shadow: var(--wavefox-inner-tabbar-shadow, none) !important;
-            clip-path: inset(0px) !important;
+            clip-path: inset(-4px 0px 0px 0px) !important;
             padding-inline: var(--tab-first-last-inline-margin) !important;
             
             &::before
