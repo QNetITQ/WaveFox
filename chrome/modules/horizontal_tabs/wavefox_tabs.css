@@ -267,7 +267,8 @@
 
             .tab-background
             {
-                background-image: linear-gradient(to bottom, transparent, var(--toolbar-bgcolor)) !important;
+                background-color: transparent !important;
+                background-image: linear-gradient(to bottom, var(--tab-selected-bgcolor), var(--toolbar-bgcolor)) !important;
             }
         }
 
