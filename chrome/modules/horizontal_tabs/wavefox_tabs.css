@@ -241,6 +241,7 @@
 
     .tabbrowser-tab
     {
+        overflow: visible !important;
         padding-inline: 0px !important;
 
         &[pinned]
@@ -248,16 +249,6 @@
             .tab-content
             {
                 padding-inline: calc((var(--tab-min-height) - 16px) / 2 + 2px) !important;
-            }
-        }
-
-        &[fadein]
-        {
-            overflow: visible !important;
-            
-            #tabbrowser-tabs:not([movingtab]) &
-            {
-                transition: max-width 100ms ease-out !important;
             }
         }
 
