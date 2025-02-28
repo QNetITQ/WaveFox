@@ -570,7 +570,8 @@ Low values are more suitable for high resolution monitors.
 <details>
   <summary>How to create custom keys?</summary>
 
-  ![Keys](https://github.com/QNetITQ/WaveFox/assets/85301851/9a3673d1-0d95-49fd-911c-dc91b366bc8b)
+  ![Bool1](https://github.com/user-attachments/assets/cab70491-bd9b-4e3a-86f5-6f8532cd68c9)
+  ![Num1](https://github.com/user-attachments/assets/28f2bf7e-ffae-44af-86d5-6e6246a50d17)
 
 </details>
 
