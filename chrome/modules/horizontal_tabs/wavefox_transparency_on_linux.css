@@ -1,6 +1,5 @@
 @media -moz-pref("WaveFox.Linux.Transparency.Enabled")                    and
-       -moz-pref("extensions.activeThemeID", 'default-theme@mozilla.org') and
-       -moz-pref("browser.tabs.inTitlebar", 0)
+       -moz-pref("extensions.activeThemeID", 'default-theme@mozilla.org')
 {
     :root
     {
