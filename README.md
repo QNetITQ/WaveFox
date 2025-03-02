@@ -93,7 +93,7 @@ Requires Linux with transparency support. Works only with the system theme.
 
 ![Снимок5](https://github.com/QNetITQ/WaveFox/assets/85301851/3b4dcfc8-217d-48a1-aba7-1621f9375f67)
 
-- `WaveFox.Linux.Transparency` > 1 or 2 or 3 or 4
+- `WaveFox.Linux.Transparency.Enabled`
 
 ### Toolbar Transparency
 Works only with the system theme.
