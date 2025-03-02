@@ -1,40 +1,13 @@
-@media -moz-pref("WaveFox.Linux.Transparency", 1) or
-       -moz-pref("WaveFox.Linux.Transparency", 2) or
-       -moz-pref("WaveFox.Linux.Transparency", 3) or
-       -moz-pref("WaveFox.Linux.Transparency", 4)
+@media -moz-pref("WaveFox.Linux.Transparency") and
+       -moz-pref("extensions.activeThemeID", 'default-theme@mozilla.org')
 {
     :root
     {
-        --toolbox-background-color: ActiveCaption;
+        background-color: transparent !important;
 
-        &:-moz-window-inactive
+        #navigator-toolbox
         {
-            --toolbox-background-color: InActiveCaption;
-        }
-
-        @media -moz-pref("WaveFox.Linux.Transparency", 1)
-        {
-            --toolbox-transparency: 25%;
-        }
-
-        @media -moz-pref("WaveFox.Linux.Transparency", 2)
-        {
-            --toolbox-transparency: 50%;
-        }
-
-        @media -moz-pref("WaveFox.Linux.Transparency", 3)
-        {
-            --toolbox-transparency: 75%;
-        }
-
-        @media -moz-pref("WaveFox.Linux.Transparency", 4)
-        {
-            --toolbox-transparency: 100%;
-        }
-
-        &:not([lwtheme]) #navigator-toolbox
-        {
-            background-color: color-mix(in srgb, var(--toolbox-background-color), transparent var(--toolbox-transparency)) !important;
+            background-color: transparent !important;
         }
     }
 }
