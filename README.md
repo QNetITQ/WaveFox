@@ -86,7 +86,6 @@
 Install [DWMBlurGlass](https://github.com/Maplespe/DWMBlurGlass). Configure to your liking and activate the keys below. Works only with the system theme.
 ![изображение](https://github.com/user-attachments/assets/632c972f-b48a-4ca6-8c69-28859e34485b)
 
-- `browser.theme.windows.accent-color-in-tabs.enabled`
 - `WaveFox.Windows10.Transparency.Enabled`
 
 ### Linux Transparency
