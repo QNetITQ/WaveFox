@@ -79,7 +79,7 @@
 
     &[activemedia-blocked] .tab-icon-overlay
     {
-        --mask-overlay-image: url("chrome://browser/skin/tabbrowser/tab-audio-blocked-circle-12.svg");
+        --mask-overlay-image: url("chrome://browser/skin/tabbrowser/tab-audio-blocked-small.svg");
     }
     
     &:where([busy], [image], [sharing], [pictureinpicture]) .tab-icon-overlay
