@@ -11,6 +11,8 @@ and
         --wavefox-selected-tab-filter: none !important;
         --wavefox-selected-tab-shadow: none !important;
         --wavefox-inner-tabbar-shadow: none !important;
+        --toolbarbutton-hover-background: color-mix(in srgb, currentColor 17%, transparent) !important;
+        --toolbarbutton-active-background: color-mix(in srgb, currentColor 30%, transparent) !important;
         
         @media -moz-pref("WaveFox.Toolbar.Transparency", 1)
         {
