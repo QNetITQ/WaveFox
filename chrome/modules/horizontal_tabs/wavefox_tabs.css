@@ -255,12 +255,6 @@
         &[visuallyselected]
         {
             z-index: 2 !important;
-
-            .tab-background
-            {
-                background-color: transparent !important;
-                background-image: linear-gradient(to bottom, var(--tab-selected-bgcolor), var(--toolbar-bgcolor)) !important;
-            }
         }
 
         &:not([visuallyselected])
