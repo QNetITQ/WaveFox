@@ -239,17 +239,6 @@
 
     /* ---------------------------------------- Tabs ---------------------------------------- */
 
-    @media not (-moz-pref("extensions.activeThemeID", 'default-theme@mozilla.org')         or
-                -moz-pref("extensions.activeThemeID", 'firefox-compact-light@mozilla.org') or
-                -moz-pref("extensions.activeThemeID", 'firefox-compact-dark@mozilla.org'))
-    {
-        .tabbrowser-tab[visuallyselected] .tab-background
-        {
-            background-color: transparent !important;
-            background-image: linear-gradient(to bottom, var(--tab-selected-bgcolor), var(--toolbar-bgcolor)) !important;
-        }
-    }
-
     .tabbrowser-tab
     {
         overflow: visible !important;
@@ -317,89 +306,6 @@
     #tabbrowser-tabs[overflow] .tab-drop-indicator
     {
         inset-inline-start: var(--tab-first-last-inline-margin) !important;
-    }
-
-    /* -------------------- Tab Groups (Alpha) -------------------- */
-
-    @media -moz-pref("browser.tabs.groups.enabled")
-    {
-        .tab-group-line
-        {
-            margin-block: auto 0px !important;
-            margin-inline: 0px !important;
-        }
-
-        tab-group[collapsed] > .tabbrowser-tab[fadein]
-        {
-            --tab-first-last-inline-margin: 0px !important;
-            overflow: hidden !important;
-            min-width: 0px !important;
-        }
-        
-        tab-group:first-of-type > .tab-group-label-container
-        {
-            margin-inline-start: var(--tab-first-last-inline-margin) !important;
-        }
-
-        /*
-        
-        #tabbrowser-tabs:not([overflow]) tab-group + .tabbrowser-tab:not([hidden]),
-        #tabbrowser-tabs:not([overflow]) tab-group + .tabbrowser-tab[hidden] + .tabbrowser-tab:not([hidden]),
-        #tabbrowser-tabs:not([overflow]) tab-group + .tabbrowser-tab[hidden] ~ .tabbrowser-tab[hidden] + .tabbrowser-tab:not([hidden])
-        {
-            margin-inline-start: var(--tab-first-last-inline-margin) !important;
-        }
-
-        #tabbrowser-tabs:not([overflow]) .tabbrowser-tab:not([hidden]):has(+ tab-group),
-        #tabbrowser-tabs:not([overflow]) .tabbrowser-tab:not([hidden]):has(+ .tabbrowser-tab[hidden] + tab-group),
-        #tabbrowser-tabs:not([overflow]) .tabbrowser-tab:not([hidden]):has(+ .tabbrowser-tab[hidden] ~ .tabbrowser-tab[hidden] + tab-group)
-        {
-            margin-inline-end: var(--tab-first-last-inline-margin) !important;
-        }
-
-        .toolbarbutton-1:has(+ #tabbrowser-tabs:not([overflow]) tab-group)
-        {
-            margin-inline-end: 0px !important;
-        }
-
-        #tabbrowser-tabs:not([overflow]) tab-group + #tabbrowser-arrowscrollbox-periphery > .toolbarbutton-1
-        {
-            margin-inline-start: 0px !important;
-        }
-        
-        #tabbrowser-tabs:first-child tab-group:first-of-type > .tab-group-label-container
-        {
-            margin-inline-start: calc(var(--tab-block-margin) * 2) !important;
-        }
-        
-        #tabbrowser-tabs:not(:first-child) tab-group:first-of-type > .tab-group-label-container
-        {
-            margin-inline-start: var(--tab-first-last-inline-margin) !important;
-        }
-
-        .tabbrowser-tab:not(:nth-last-child(1 of .tabbrowser-tab:not([hidden])), [hidden]) + tab-group > .tab-group-label-container
-        {
-            margin-inline-start: calc(var(--tab-first-last-inline-margin) + 3px) !important;
-        }
-
-        tab-group[collapsed]:has(+ .tabbrowser-tab:not([hidden])) > .tab-group-label-container,
-        tab-group[collapsed]:has(+ .tabbrowser-tab[hidden] + .tabbrowser-tab:not([hidden])) > .tab-group-label-container,
-        tab-group[collapsed]:has(+ .tabbrowser-tab[hidden] ~ .tabbrowser-tab[hidden] + .tabbrowser-tab:not([hidden])) > .tab-group-label-container
-        {
-            margin-inline-end: var(--tab-first-last-inline-margin) !important;
-        }
-
-        tab-group[collapsed]:last-of-type > .tab-group-label-container
-        {
-            margin-inline-end: var(--tab-first-last-inline-margin) !important;
-        }
-
-        */
-
-        tab-group > .tab-group-label-container
-        {
-            margin-top: var(--drag-space, 0px) !important;
-        }
     }
 
     /* -------------------- Tab Icon Indicators -------------------- */
