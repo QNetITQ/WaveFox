@@ -1,5 +1,4 @@
-@media -moz-pref("WaveFox.WebPage.Floating", 1) or
-       -moz-pref("WaveFox.WebPage.Floating", 2)
+@media -moz-pref("WaveFox.WebPage.Floating")
 {
     :root:not([inFullscreen], [inDOMFullscreen])
     {
@@ -10,6 +9,7 @@
 
         #browser > #tabbrowser-tabbox
         {
+            margin-block-start: 0px !important;
             margin-block-end: 8px !important;
             margin-inline: 8px !important;
             border: 1px solid var(--chrome-content-separator-color) !important;
@@ -18,16 +18,11 @@
             clip-path: border-box !important;
             outline: none !important;
             box-shadow: none !important;
+        }
 
-            @media -moz-pref("WaveFox.WebPage.Floating", 1)
-            {
-                margin-block-start: 0px !important;
-            }
-
-            @media -moz-pref("WaveFox.WebPage.Floating", 2)
-            {
-                margin-block-start: 8px !important;
-            }
+        &:is([style*="--lwt-header-image"], [style*="--lwt-additional-images"]) #browser > #tabbrowser-tabbox
+        {
+            margin-block-start: 8px !important;
         }
 
         #browser > #sidebar-wrapper
