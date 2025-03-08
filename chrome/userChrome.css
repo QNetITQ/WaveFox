@@ -13,7 +13,7 @@
 @import "modules/horizontal_tabs/wavefox_toolbar_transparency.css"      layer(BasicPriority) /* supports() */ -moz-pref("sidebar.verticalTabs", false);
 @import "modules/horizontal_tabs/wavefox_transparency_on_windows10.css" layer(BasicPriority) /* supports() */ (-moz-platform: windows);
 @import "modules/horizontal_tabs/wavefox_transparency_on_linux.css"     layer(BasicPriority) /* supports() */ (-moz-platform: linux);
-@import "modules/horizontal_tabs/wavefox_rounded_web_page.css"          layer(BasicPriority) /* supports() */ -moz-pref("sidebar.revamp", false);
+@import "modules/horizontal_tabs/wavefox_rounded_web_page.css"          layer(BasicPriority) /* supports() */ -moz-pref("sidebar.verticalTabs", false);
 @import "Lepton_Icons/icons/Lepton_Icons.css"                           layer(BasicPriority) /* supports() */ -moz-pref("WaveFox.LeptonIcons.Enabled");
 
 @import "modules/horizontal_tabs/wavefox_one_line.css"                  layer(HighPriority)  /* supports() */ -moz-pref("sidebar.verticalTabs", false);
