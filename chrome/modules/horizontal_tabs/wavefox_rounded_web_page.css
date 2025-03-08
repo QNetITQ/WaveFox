@@ -16,6 +16,8 @@
             border-radius: 10px !important;
             overflow: hidden !important;
             clip-path: border-box !important;
+            outline: none !important;
+            box-shadow: none !important;
 
             @media -moz-pref("WaveFox.WebPage.Floating", 1)
             {
@@ -25,6 +27,19 @@
             @media -moz-pref("WaveFox.WebPage.Floating", 2)
             {
                 margin-block-start: 8px !important;
+            }
+        }
+
+        #browser > #sidebar-wrapper
+        {
+            &:has(#sidebar-main:not([hidden], [positionend])) + #tabbrowser-tabbox
+            {
+                margin-inline-start: 0px !important;
+            }
+            
+            &:has(#sidebar-main[positionend]:not([hidden])) + #tabbrowser-tabbox
+            {
+                margin-inline-end: 0px !important;
             }
         }
     }
