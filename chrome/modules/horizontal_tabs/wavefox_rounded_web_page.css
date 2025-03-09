@@ -18,6 +18,13 @@
             clip-path: border-box !important;
             outline: none !important;
             box-shadow: none !important;
+
+            @media (-moz-pref("WaveFox.TabsBelowURL.Enabled") and -moz-pref("browser.tabs.inTitlebar", 0)) or
+                    -moz-pref("WaveFox.OneLine", 1) or 
+                    -moz-pref("WaveFox.OneLine", 2)
+            {
+                margin-block-start: 8px !important;
+            }
         }
 
         &:is([style*="--lwt-header-image"], [style*="--lwt-additional-images"]) #browser > #tabbrowser-tabbox
