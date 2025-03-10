@@ -87,8 +87,7 @@
 }
 
 /*
-.tabbrowser-tab + #tabbrowser-arrowscrollbox-periphery,
-tab-group:not([collapsed]) + #tabbrowser-arrowscrollbox-periphery
+.tabbrowser-tab + #tabbrowser-arrowscrollbox-periphery
 {
     margin-inline-start: calc(-1 * var(--tab-first-last-inline-margin, 0px) / 2) !important;
 }
