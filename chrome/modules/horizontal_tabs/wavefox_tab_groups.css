@@ -3,9 +3,16 @@
 
 /* Media icons */
 
-tab-group[collapsed] > .tabbrowser-tab
+tab-group[collapsed] > .tabbrowser-tab[fadein]
 {
     min-width: 0px !important;
+}
+
+/* Drag space */
+
+tab-group > .tab-group-label-container
+{
+    margin-top: var(--drag-space, 0px) !important;
 }
     
 /* Attached tabs */
@@ -30,64 +37,33 @@ tab-group[collapsed] > .tabbrowser-tab
         display: none !important;
     }
     
-    #tabbrowser-tabs:not([overflow])
+    tab-group[collapsed] > .tabbrowser-tab
     {
-        tab-group[collapsed] > .tabbrowser-tab
-        {
-            overflow: clip !important;
-            margin-inline: 0px !important;
-        }
-
-        .tabbrowser-tab:not([hidden]):has(+ tab-group),
-        .tabbrowser-tab:not([hidden]):has(+ .tabbrowser-tab[hidden] + tab-group),
-        .tabbrowser-tab:not([hidden]):has(+ .tabbrowser-tab[hidden] ~ .tabbrowser-tab[hidden] + tab-group)
-        {
-            margin-inline-end: var(--tab-first-last-inline-margin) !important;
-        }
-
-        tab-group[collapsed] + .tabbrowser-tab:not([hidden]),
-        tab-group[collapsed] + .tabbrowser-tab[hidden] + .tabbrowser-tab:not([hidden]),
-        tab-group[collapsed] + .tabbrowser-tab[hidden] ~ .tabbrowser-tab[hidden] + .tabbrowser-tab:not([hidden])
-        {
-            margin-inline-start: var(--tab-first-last-inline-margin) !important;
-        }
-        
-        tab-group:not([collapsed]) + .tabbrowser-tab:nth-child(1 of .tabbrowser-tab:not([hidden], [pinned]))
-        {
-            margin-inline-start: 0px !important;
-        }
+        overflow: clip !important;
+        margin-inline: 0px !important;
+        padding-inline: 0px !important;
     }
-    
-    #tabbrowser-tabs[overflow]
+
+    .tabbrowser-tab:not([hidden]):has(+ tab-group),
+    .tabbrowser-tab:not([hidden]):has(+ .tabbrowser-tab[hidden] + tab-group),
+    .tabbrowser-tab:not([hidden]):has(+ .tabbrowser-tab[hidden] ~ .tabbrowser-tab[hidden] + tab-group)
     {
-        tab-group[collapsed] > .tabbrowser-tab
-        {
-            overflow: clip !important;
-            padding-inline: 0px !important;
-            margin-inline: 0px !important;
-        }
+        margin-inline-end: var(--tab-first-last-inline-margin) !important;
+        padding-inline-end: 0px !important;
+    }
 
-        .tabbrowser-tab:not([hidden]):has(+ tab-group),
-        .tabbrowser-tab:not([hidden]):has(+ .tabbrowser-tab[hidden] + tab-group),
-        .tabbrowser-tab:not([hidden]):has(+ .tabbrowser-tab[hidden] ~ .tabbrowser-tab[hidden] + tab-group)
-        {
-            margin-inline-end: var(--tab-first-last-inline-margin) !important;
-            padding-inline-end: 0px !important;
-        }
-
-        tab-group[collapsed] + .tabbrowser-tab:not([hidden]),
-        tab-group[collapsed] + .tabbrowser-tab[hidden] + .tabbrowser-tab:not([hidden]),
-        tab-group[collapsed] + .tabbrowser-tab[hidden] ~ .tabbrowser-tab[hidden] + .tabbrowser-tab:not([hidden])
-        {
-            margin-inline-start: var(--tab-first-last-inline-margin) !important;
-            padding-inline-start: 0px !important;
-        }
+    tab-group[collapsed] + .tabbrowser-tab:not([hidden]),
+    tab-group[collapsed] + .tabbrowser-tab[hidden] + .tabbrowser-tab:not([hidden]),
+    tab-group[collapsed] + .tabbrowser-tab[hidden] ~ .tabbrowser-tab[hidden] + .tabbrowser-tab:not([hidden])
+    {
+        margin-inline-start: var(--tab-first-last-inline-margin) !important;
+        padding-inline-start: 0px !important;
+    }
         
-        tab-group:not([collapsed]) + .tabbrowser-tab:nth-child(1 of .tabbrowser-tab:not([hidden], [pinned]))
-        {
-            margin-inline-start: 0px !important;
-            padding-inline-start: 0px !important;
-        }
+    tab-group:not([collapsed]) + .tabbrowser-tab:nth-child(1 of .tabbrowser-tab:not([hidden], [pinned]))
+    {
+        margin-inline-start: 0px !important;
+        padding-inline-start: 0px !important;
     }
 }
 
