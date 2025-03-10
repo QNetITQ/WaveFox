@@ -117,13 +117,6 @@
     &[fadein]
     {
         min-width: var(--tab-min-width) !important;
-
-        /*
-        tab-group[collapsed] > &
-        {
-            min-width: 0px !important;
-        }
-        */
     }
 
     .tab-icon-stack > *
