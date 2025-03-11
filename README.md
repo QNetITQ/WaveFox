@@ -86,14 +86,14 @@
 Install [DWMBlurGlass](https://github.com/Maplespe/DWMBlurGlass). Configure to your liking and activate the keys below. Works only with the system theme.
 ![изображение](https://github.com/user-attachments/assets/632c972f-b48a-4ca6-8c69-28859e34485b)
 
-- `WaveFox.Windows10.Transparency.Enabled`
+- `WaveFox.Windows10.Transparency.Enabled` and `browser.tabs.inTitlebar > 1`
 
 ### Linux Transparency
 Requires Linux with transparency support. Works only with the system theme.
 
 ![Снимок5](https://github.com/QNetITQ/WaveFox/assets/85301851/3b4dcfc8-217d-48a1-aba7-1621f9375f67)
 
-- `WaveFox.Linux.Transparency.Enabled`
+- `WaveFox.Linux.Transparency.Enabled` and `browser.tabs.inTitlebar > 1`
 
 ### Toolbar Transparency
 Works only with the system theme.
