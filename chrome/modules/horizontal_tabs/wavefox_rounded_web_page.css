@@ -1,4 +1,4 @@
-@media -moz-pref("WaveFox.WebPage.Floating")
+@media -moz-pref("WaveFox.WebPage.Floating.Enabled")
 {
     :root:not([inFullscreen], [inDOMFullscreen])
     {
