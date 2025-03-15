@@ -1,0 +1,3 @@
+/* ---------------------------------------- Third-party styles (Maximum priority) ---------------------------------------- */
+
+@import "modules/Third-party/newtab_transparency.css"                       layer(BasicPriority);
