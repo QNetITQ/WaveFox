@@ -1,0 +1,11 @@
+@media (-moz-bool-pref: "userChrome.newtab.Transparency.Enabled")
+{
+    /* newtab page */
+    @-moz-document url(about:blank), url(about:newtab), url(about:home) {
+        :root {
+        --in-content-page-background: transparent !important;
+        --in-content-box-background: transparent !important;
+        --newtab-background-color: transparent !important;
+        }
+    }
+}

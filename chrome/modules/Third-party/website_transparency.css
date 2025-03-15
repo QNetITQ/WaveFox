@@ -1,0 +1,33 @@
+@media (-moz-bool-pref: "userChrome.website.Transparency.Low.Enabled")      or
+       (-moz-bool-pref: "userChrome.website.Transparency.Medium.Enabled")   or
+       (-moz-bool-pref: "userChrome.website.Transparency.High.Enabled")     or
+       (-moz-bool-pref: "userChrome.website.Transparency.VeryHigh.Enabled")
+{
+    
+    :root:not([lwtheme]) {
+        @media (-moz-bool-pref: "userChrome.website.Transparency.Low.Enabled")
+        {
+            --newtab-transparency-level: 25%;
+        }
+        
+        @media (-moz-bool-pref: "userChrome.website.Transparency.Medium.Enabled")
+        {
+            --newtab-transparency-level: 50%;
+        }
+        
+        @media (-moz-bool-pref: "userChrome.website.Transparency.High.Enabled")
+        {
+            --newtab-transparency-level: 75%;
+        }
+
+        @media (-moz-bool-pref: "userChrome.website.Transparency.VeryHigh.Enabled")
+        {
+            --newtab-transparency-level: 100%;
+        }
+
+        #browser:not(.browser-toolbox-background) {
+            background-color: color-mix(in srgb, #2B2A33, transparent var(--newtab-transparency-level)) !important;
+            --tabpanel-background-color: transparent !important;
+        }
+    }
+}
