@@ -603,7 +603,7 @@ Open `userChrome.css` and paste your code under the appropriate comment. Your co
 
 - `widget.windows.mica`
 - `widget.windows.mica.popups`
-- `widget.windows.mica.toplevel-backdrop` > 1 or 2 or 3 (Mica > 1 / Acrylic > 2 / MicaAlt > 3) 
+- `widget.windows.mica.toplevel-backdrop` > 0 or 1 or 2 or 3 (Auto / Mica / Acrylic / MicaAlt) 
 
 </details>
 
