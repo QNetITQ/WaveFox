@@ -599,10 +599,11 @@ Open `userChrome.css` and paste your code under the appropriate comment. Your co
 </details>
 
 <details>
-  <summary>How to enable MicaAlt / Transparency on Windows 11?</summary>
+  <summary>How to enable Mica / Acrylic / MicaAlt on Windows 11?</summary>
 
 - `widget.windows.mica`
 - `widget.windows.mica.popups`
+- `widget.windows.mica.toplevel-backdrop` > 1 or 2 or 3 (Mica > 1 / Acrylic > 2 / MicaAlt > 3) 
 
 </details>
 
