@@ -79,7 +79,7 @@ body:
         - label: Light
         - label: Dark
         - label: Repository / AMO
-        required: true
+          required: true
 
   - type: dropdown
     attributes:
