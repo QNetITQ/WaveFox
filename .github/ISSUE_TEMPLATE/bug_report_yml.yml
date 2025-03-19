@@ -36,7 +36,6 @@ body:
       value: "## Required information"
 
   - type: dropdown
-    id: Operation system
     attributes:
       label: Operating system
       options:
@@ -50,15 +49,15 @@ body:
     validations:
       required: true
 
-    - type: checkboxes
-      attributes:
-        label: Color scheme
-        options:
-          - label: "System"
-          - label: "Light"
-          - label: "Dark"
-      validations:
-        required: true
+  - type: checkboxes
+    attributes:
+      label: Color scheme
+      options:
+        - label: "System"
+        - label: "Light"
+        - label: "Dark"
+    validations:
+      required: true
 
   - type: dropdown
     attributes:
@@ -73,16 +72,16 @@ body:
     validations:
       required: true
 
-    - type: checkboxes
-      attributes:
-        label: Color scheme
-        options:
-          - label: "System"
-          - label: "Light"
-          - label: "Dark"
-          - label: "Repository / AMO"
-      validations:
-        required: true
+  - type: checkboxes
+    attributes:
+      label: Color scheme
+      options:
+        - label: "System"
+        - label: "Light"
+        - label: "Dark"
+        - label: "Repository / AMO"
+    validations:
+      required: true
 
   - type: dropdown
     attributes:
