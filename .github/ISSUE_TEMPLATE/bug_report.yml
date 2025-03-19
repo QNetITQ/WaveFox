@@ -5,14 +5,7 @@ body:
 
   - type: textarea
     attributes:
-      label: Screenshots
-      placeholder: If applicable, add screenshots to help explain your problem
-    validations:
-      required: false
-
-  - type: textarea
-    attributes:
-      label: Describe the bug
+      label: Describe the issue
       placeholder: A clear and concise description of what the bug is
     validations:
       required: true
@@ -30,6 +23,13 @@ body:
       placeholder: A clear and concise description of what you expected to happen
     validations:
       required: true
+
+  - type: textarea
+    attributes:
+      label: Additional information
+      placeholder: Add any other information about the problem here
+    validations:
+      required: false
 
   - type: markdown
     attributes:
@@ -97,10 +97,3 @@ body:
       multiple: true
     validations:
       required: true
-
-  - type: textarea
-    attributes:
-      label: Additional information
-      placeholder: Add any other information about the problem here
-    validations:
-      required: false
