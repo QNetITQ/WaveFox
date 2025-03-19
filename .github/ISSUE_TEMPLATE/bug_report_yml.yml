@@ -36,6 +36,7 @@ body:
       value: "## Required information"
 
   - type: dropdown
+    id: Operation system
     attributes:
       label: Operating system
       options:
@@ -51,11 +52,11 @@ body:
 
     - type: checkboxes
       attributes:
-      label: Color scheme
-      options:
-        - label: "System"
-        - label: "Light"
-        - label: "Dark"
+        label: Color scheme
+        options:
+          - label: "System"
+          - label: "Light"
+          - label: "Dark"
       validations:
         required: true
 
