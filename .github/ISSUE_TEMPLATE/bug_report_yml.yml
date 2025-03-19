@@ -53,7 +53,7 @@ body:
     attributes:
       label: Color scheme
       options:
-        - label: System
+        - label: "System"
         - label: Light
         - label: Dark
         required: true
