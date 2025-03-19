@@ -6,7 +6,7 @@ body:
   - type: textarea
     attributes:
       label: Describe the issue
-      placeholder: A clear and concise description of what the bug is
+      placeholder: A clear and concise description of what the issue is
     validations:
       required: true
 
@@ -28,12 +28,10 @@ body:
     attributes:
       label: Additional information
       placeholder: Add any other information about the problem here
-    validations:
-      required: false
 
   - type: markdown
     attributes:
-      value: "-----"
+      value: "---"
 
   - type: checkboxes
     attributes:
