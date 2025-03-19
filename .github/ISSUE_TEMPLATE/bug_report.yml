@@ -29,10 +29,6 @@ body:
       label: Additional information
       placeholder: Add any other information about the problem here
 
-  - type: markdown
-    attributes:
-      value: "---"
-
   - type: checkboxes
     attributes:
       label: Clarification
