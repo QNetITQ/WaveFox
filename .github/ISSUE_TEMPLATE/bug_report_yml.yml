@@ -33,7 +33,13 @@ body:
 
   - type: markdown
     attributes:
-      value: "## Required information"
+      value: "### Required information"
+
+  - type: checkboxes
+    attributes:
+      label: Clarification
+      options:
+        - label: I have read and followed the installation instructions in the README
 
   - type: dropdown
     attributes:
