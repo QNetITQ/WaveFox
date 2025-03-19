@@ -56,7 +56,6 @@ body:
         - label: System
         - label: Light
         - label: Dark
-          required: true
 
   - type: dropdown
     attributes:
@@ -79,7 +78,6 @@ body:
         - label: Light
         - label: Dark
         - label: Repository / AMO
-          required: true
 
   - type: dropdown
     attributes:
