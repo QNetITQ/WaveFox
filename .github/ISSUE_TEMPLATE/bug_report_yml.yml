@@ -56,8 +56,7 @@ body:
         - label: System
         - label: Light
         - label: Dark
-    validations:
-      required: true
+        required: true
 
   - type: dropdown
     attributes:
@@ -80,8 +79,7 @@ body:
         - label: Light
         - label: Dark
         - label: Repository / AMO
-    validations:
-      required: true
+        required: true
 
   - type: dropdown
     attributes:
