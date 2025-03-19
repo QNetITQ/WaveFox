@@ -3,6 +3,12 @@ description: Create a report
 
 body:
 
+  - type: checkboxes
+    attributes:
+      label: Important clarification
+      options:
+        - label: I have read and followed the installation instructions in the README
+
   - type: textarea
     attributes:
       label: Describe the issue
@@ -28,12 +34,6 @@ body:
     attributes:
       label: Additional information
       placeholder: Add any other information about the problem here
-
-  - type: checkboxes
-    attributes:
-      label: Clarification
-      options:
-        - label: I have read and followed the installation instructions in the README
 
   - type: dropdown
     attributes:
