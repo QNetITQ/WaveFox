@@ -53,10 +53,10 @@ body:
     attributes:
       label: Color scheme
       options:
-        - label: "System"
+        - label: System
         - label: Light
         - label: Dark
-        required: true
+          required: true
 
   - type: dropdown
     attributes:
