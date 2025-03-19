@@ -20,7 +20,7 @@ body:
   - type: textarea
     attributes:
       label: To reproduce
-      placeholder: "Steps to reproduce the behavior: 1) Go to '...'   2) Click on '....'   3) Scroll down to '....'   4) See error"
+      placeholder: "Steps to reproduce the behavior: 1. Go to '...' 2. Click on '....' 3. Scroll down to '....' 4. See error"
     validations:
       required: true
 
@@ -53,9 +53,9 @@ body:
     attributes:
       label: OS color scheme
       options:
-        - label: "System"
-        - label: "Light"
-        - label: "Dark"
+        - label: System
+        - label: Light
+        - label: Dark
     validations:
       required: true
 
@@ -76,10 +76,10 @@ body:
     attributes:
       label: Firefox color scheme
       options:
-        - label: "System"
-        - label: "Light"
-        - label: "Dark"
-        - label: "Repository / AMO"
+        - label: System
+        - label: Light
+        - label: Dark
+        - label: Repository / AMO
     validations:
       required: true
 
