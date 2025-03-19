@@ -2,7 +2,6 @@ name: Bug report
 description: Create a report
 
 body:
-
   - type: textarea
     attributes:
       label: Screenshots
