@@ -62,6 +62,7 @@ body:
         - label: System
         - label: Light
         - label: Dark
+        - label: Contrast
 
   - type: dropdown
     attributes:
@@ -80,7 +81,7 @@ body:
     attributes:
       label: Firefox theme
       options:
-        - label: System
+        - label: System / Auto
         - label: Light
         - label: Dark
         - label: Repository / AMO
