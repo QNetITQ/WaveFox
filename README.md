@@ -602,8 +602,9 @@ Open `userChrome.css` and paste your code under the appropriate comment. Your co
   <summary>How to enable Mica / Acrylic / MicaAlt on Windows 11?</summary>
 
 - `widget.windows.mica`
-- `widget.windows.mica.popups`
-- `widget.windows.mica.toplevel-backdrop` > 0 or 1 or 2 or 3 (Auto / Mica / Acrylic / MicaAlt) 
+  - `widget.windows.mica.toplevel-backdrop` > 0 or 1 or 2 or 3 (Auto / Mica / Acrylic / MicaAlt)
+- `widget.windows.mica.popups` (Firefox 137)
+- `widget.windows.mica.popups` > 0 or 1 or 2 (Disabled / Enabled / Auto) (Firefox 138+)
 
 </details>
 
