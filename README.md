@@ -9,10 +9,10 @@
 [Download Firefox](https://www.mozilla.org/en-US/firefox/all/#product-desktop-release) / [Download WaveFox](https://github.com/QNetITQ/WaveFox/releases) / [WaveFox Nightly](https://github.com/QNetITQ/WaveFox/tree/WaveFox-Nightly)
 
 <details>
-  <summary>WaveFox v1.8.136</summary>
+  <summary>WaveFox v1.8.137</summary>
 
 - ##### Minimum Requirements
-  - Firefox 136
+  - Firefox 137
   - Windows / MacOS / Linux
 
 - Download the `chrome` folder and put it in your user profile folder
@@ -22,120 +22,104 @@
 
 ### Tab Shapes
 
-##### Option 1
+##### Shape 1
 ![изображение](https://github.com/user-attachments/assets/98d808c0-de87-4328-bd19-c885060adaec)
 
-- `userChrome.Tabs.Option1.Enabled`
+- `WaveFox.Tabs.Shape` > 1
   
-##### Option 2
+##### Shape 2
 ![изображение](https://github.com/user-attachments/assets/15244c8d-e073-47f7-a84c-500bcf1f056d)
 
-- `userChrome.Tabs.Option2.Enabled`
+- `WaveFox.Tabs.Shape` > 2
   
-##### Option 3
+##### Shape 3
 ![изображение](https://github.com/user-attachments/assets/ec6f06df-5f83-4408-8f39-8480cff5ca8b)
 
-- `userChrome.Tabs.Option3.Enabled`
+- `WaveFox.Tabs.Shape` > 3
   
-##### Option 4
+##### Shape 4
 ![изображение](https://github.com/user-attachments/assets/112843be-7182-4a48-bc04-0f9211ddf7c7)
 
-- `userChrome.Tabs.Option4.Enabled`
+- `WaveFox.Tabs.Shape` > 4
   
-##### Option 5
+##### Shape 5
 ![изображение](https://github.com/user-attachments/assets/cd6fb4a9-8cc7-4fd1-9f26-9acef5a4a121)
 
-- `userChrome.Tabs.Option5.Enabled`
+- `WaveFox.Tabs.Shape` > 5
   
-##### Option 6
+##### Shape 6
 ![изображение](https://github.com/user-attachments/assets/21c6644f-f579-419d-92b8-cb614a726742)
 
-- `userChrome.Tabs.Option6.Enabled`
+- `WaveFox.Tabs.Shape` > 6
   
-##### Option 7
+##### Shape 7
 ![изображение](https://github.com/user-attachments/assets/b648e7c3-2dc4-478d-9ee0-8ac9b727c37d)
 
-- `userChrome.Tabs.Option7.Enabled`
+- `WaveFox.Tabs.Shape` > 7
   
-##### Option 8
+##### Shape 8
 ![изображение](https://github.com/user-attachments/assets/8cce9ecd-2005-4aba-9c66-6e49f2ccb76a)
 
-- `userChrome.Tabs.Option8.Enabled`
+- `WaveFox.Tabs.Shape` > 8
   
-##### Option 9
+##### Shape 9
 ![изображение](https://github.com/user-attachments/assets/d720364a-88f3-4fe6-a61f-0747f93e5f20)
 
-- `userChrome.Tabs.Option9.Enabled`
+- `WaveFox.Tabs.Shape` > 9
   
-##### Option 10
+##### Shape 10
 ![изображение](https://github.com/user-attachments/assets/88d1d2de-2d0c-4837-b15f-a10694e5093a)
 
-- `userChrome.Tabs.Option10.Enabled`
+- `WaveFox.Tabs.Shape` > 10
   
-##### Option 11
+##### Shape 11
 ![изображение](https://github.com/user-attachments/assets/084a7915-12d9-44da-a3d1-a0b17267d356)
 
-- `userChrome.Tabs.Option11.Enabled`
+- `WaveFox.Tabs.Shape` > 11
   
-##### Option 12
+##### Shape 12
 ![изображение](https://github.com/user-attachments/assets/2d38da42-f304-468c-bb52-1190d936bc19)
 
-- `userChrome.Tabs.Option12.Enabled`
+- `WaveFox.Tabs.Shape` > 12
 
 ### Windows 10 Transparency
 Install [DWMBlurGlass](https://github.com/Maplespe/DWMBlurGlass). Configure to your liking and activate the keys below. Works only with the system theme.
 ![изображение](https://github.com/user-attachments/assets/632c972f-b48a-4ca6-8c69-28859e34485b)
 
-- `browser.theme.windows.accent-color-in-tabs.enabled`
-- `userChrome.Windows.Transparency.Enabled`
+- `WaveFox.Windows10.Transparency.Enabled` and `browser.tabs.inTitlebar > 1`
 
 ### Linux Transparency
 Requires Linux with transparency support. Works only with the system theme.
 
 ![Снимок5](https://github.com/QNetITQ/WaveFox/assets/85301851/3b4dcfc8-217d-48a1-aba7-1621f9375f67)
 
-- `userChrome.Linux.Transparency.Low.Enabled`
-- `userChrome.Linux.Transparency.Medium.Enabled`
-- `userChrome.Linux.Transparency.High.Enabled`
-- `userChrome.Linux.Transparency.VeryHigh.Enabled`
+- `WaveFox.Linux.Transparency.Enabled` and `browser.tabs.inTitlebar > 1`
 
 ### Toolbar Transparency
 Works only with the system theme.
 ![изображение](https://user-images.githubusercontent.com/85301851/165526704-4f7486c4-f330-4c86-a25d-6ed8ab2affe4.png)
 
-- `userChrome.Toolbar.Transparency.Low.Enabled`
-- `userChrome.Toolbar.Transparency.Medium.Enabled`
-- `userChrome.Toolbar.Transparency.High.Enabled`
-- `userChrome.Toolbar.Transparency.VeryHigh.Enabled`
+- `WaveFox.Toolbar.Transparency` > 1 or 2 or 3 or 4 and `browser.tabs.inTitlebar > 1`
 
 ### Tab Bar Shadows
 Works only with System / Light / Dark theme.
 ![изображение](https://user-images.githubusercontent.com/85301851/152011749-4d5619b3-0fd8-40f9-a3dc-96be31839971.png)
 
 ##### Shadows (Light Theme)
-- `userChrome.LightTheme.Tabs.Shadows.Saturation.Low.Enabled`
-- `userChrome.LightTheme.Tabs.Shadows.Saturation.Medium.Enabled`
-- `userChrome.LightTheme.Tabs.Shadows.Saturation.High.Enabled`
-- `userChrome.LightTheme.Tabs.Shadows.Saturation.VeryHigh.Enabled`
-  - `userChrome.LightTheme.Tabs.Borders.Enabled` (Shadow like border)
+- `WaveFox.LightTheme.Tabs.Shadows` > 1 or 2 or 3 or 4
 
 ##### Shadows (Dark Theme)
-- `userChrome.DarkTheme.Tabs.Shadows.Saturation.Low.Enabled`
-- `userChrome.DarkTheme.Tabs.Shadows.Saturation.Medium.Enabled`
-- `userChrome.DarkTheme.Tabs.Shadows.Saturation.High.Enabled`
-- `userChrome.DarkTheme.Tabs.Shadows.Saturation.VeryHigh.Enabled`
-  - `userChrome.DarkTheme.Tabs.Borders.Enabled` (Shadow like border)
+- `WaveFox.DarkTheme.Tabs.Shadows` > 1 or 2 or 3 or 4
 
 ### Tab Separators
 ![изображение](https://user-images.githubusercontent.com/85301851/152351312-f6ad4578-e7d5-40b7-8b2d-49388a750f54.png)
 
-- `userChrome.TabSeparators.Saturation.Low.Enabled`
-- `userChrome.TabSeparators.Saturation.Medium.Enabled`
+- `WaveFox.Tabs.Separators` > 1 or 2 or 3 or 4
 
 ### Background For Inactive Tabs
 ![изображение](https://github.com/user-attachments/assets/56fc829a-3cb6-4009-a58c-485fc84f65e9)
 
-- `userChrome.Tabs.Background.Inactive.Enabled`
+- `WaveFox.Tabs.Background.Inactive.Enabled`
 
 ### Lepton Icons (Menu icons)
 This is third-party code. I will update this code according to the original source. Unlike other options, these keys can be enabled in any order, or all together.
@@ -143,7 +127,7 @@ This is third-party code. I will update this code according to the original sour
 ![изображение](https://user-images.githubusercontent.com/85301851/151192118-0cbdb5a7-a77f-4275-8841-2ac321657c86.png)
 
 - `svg.context-properties.content.enabled` (Required key)
-- `userChrome.Menu.Icons.LeptonIcons.Enabled` (Required key)
+- `WaveFox.LeptonIcons.Enabled` (Required key)
   - `userChrome.icon.panel_full` or `userChrome.icon.panel_photon`
   - `userChrome.icon.library`
   - `userChrome.icon.panel`
@@ -160,33 +144,29 @@ This is third-party code. I will update this code according to the original sour
 ### Drag Space
 ![изображение](https://user-images.githubusercontent.com/85301851/152680229-43547df0-1d2c-4384-b024-950e7aa56ca6.png)
 
-- `userChrome.DragSpace.Left.Disabled`
-- `userChrome.DragSpace.Right.Disabled`
-- `userChrome.DragSpace.Top.Windowed.Enabled`
-- `userChrome.DragSpace.Top.Maximized.Enabled`
-- `userChrome.DragSpace.Top.Fullscreen.Enabled`
+- `WaveFox.DragSpace.Tabs` > 1 or 2 or 3
+- `WaveFox.DragSpace.TabBarLeftSide.Disabled`
+- `WaveFox.DragSpace.TabBarRightSide.Disabled`
 
 ### Selected Tab Indicator
 ![изображение](https://github.com/user-attachments/assets/e6d221d2-38b0-4890-9bbc-d5abc9b027c0)
 
-- `userChrome.Tabs.SelectedTabIndicator.Enabled`
+- `WaveFox.Tabs.SelectedTabIndicator.Enabled`
 
-### Tabs On Bottom
+### Tabs Below URL
 ![Снимок](https://github.com/QNetITQ/WaveFox/assets/85301851/514cf30d-a417-48cb-bfd1-0e77c9df1bf4)
 
-- `userChrome.Tabs.TabsOnBottom.Enabled`
-- `browser.tabs.inTitlebar` (Optional key. Set the value to 0)
+- `WaveFox.TabsBelowURL.Enabled` and `browser.tabs.inTitlebar > 0`
 
 ### One Line
 ![Снимок](https://github.com/QNetITQ/WaveFox/assets/85301851/05bba314-643d-46f3-a09c-b3ac31f9761d)
 
-- `userChrome.OneLine.TabBarFirst.Enabled`
-- `userChrome.OneLine.NavBarFirst.Enabled`
+- `WaveFox.OneLine` > 1 or 2
 
-### Rounded Web Page
+### Floating Web Page
 ![изображение](https://github.com/user-attachments/assets/26a19f9a-642b-4a10-a4f9-80d87cc42bdc)
 
-- `userChrome.WebPage.Rounding.Enabled`
+- `WaveFox.WebPage.Floating.Enabled`
 
 </details>
 
@@ -589,7 +569,8 @@ Low values are more suitable for high resolution monitors.
 <details>
   <summary>How to create custom keys?</summary>
 
-  ![Keys](https://github.com/QNetITQ/WaveFox/assets/85301851/9a3673d1-0d95-49fd-911c-dc91b366bc8b)
+  ![Bool1](https://github.com/user-attachments/assets/cab70491-bd9b-4e3a-86f5-6f8532cd68c9)
+  ![Num1](https://github.com/user-attachments/assets/28f2bf7e-ffae-44af-86d5-6e6246a50d17)
 
 </details>
 
@@ -618,10 +599,12 @@ Open `userChrome.css` and paste your code under the appropriate comment. Your co
 </details>
 
 <details>
-  <summary>How to enable MicaAlt / Transparency on Windows 11?</summary>
+  <summary>How to enable Mica / Acrylic / MicaAlt on Windows 11?</summary>
 
 - `widget.windows.mica`
-- `widget.windows.mica.popups`
+  - `widget.windows.mica.toplevel-backdrop` > 0 or 1 or 2 or 3 (Auto / Mica / Acrylic / MicaAlt)
+- `widget.windows.mica.popups` (Firefox 137)
+- `widget.windows.mica.popups` > 0 or 1 or 2 (Disabled / Enabled / Auto) (Firefox 138+)
 
 </details>
 

@@ -1,0 +1,35 @@
+@media -moz-pref("WaveFox.TabsBelowURL.Enabled") and
+       -moz-pref("browser.tabs.inTitlebar", 0)
+{
+    :root
+    {
+        --drag-space: 0px;
+        --wavefox-inner-tabbar-shadow-offset-y: 4px;
+    }
+    
+    #toolbar-menubar
+    {
+        order: 0 !important;
+        background-color: var(--toolbar-bgcolor) !important;
+    }
+
+    #nav-bar
+    {
+        order: 1 !important;
+    }
+
+    #PersonalToolbar
+    {
+        order: 2 !important;
+    }
+    
+    #TabsToolbar
+    {
+        order: 3 !important;
+    }
+
+    .tab-background
+    {
+        transform: rotateX(180deg) !important;
+    }
+}
