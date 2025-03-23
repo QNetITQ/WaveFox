@@ -97,8 +97,22 @@
 
     /* -------------------- Attached tabs -------------------- */
 
-    @media -moz-pref("WaveFox.Tabs.Shape", 5)  or
-           -moz-pref("WaveFox.Tabs.Shape", 6)  or
+    @media -moz-pref("WaveFox.Tabs.Shape", 5)
+    {
+        #nav-bar
+        {
+            box-shadow: var(--wavefox-selected-tab-shadow, none) !important;
+            clip-path: inset(-4px -4px 0px -4px) !important;
+        }
+        
+        #urlbar-container,
+        #search-container
+        {
+            padding-block: 0px !important;
+        }
+    }
+
+    @media -moz-pref("WaveFox.Tabs.Shape", 6)  or
            -moz-pref("WaveFox.Tabs.Shape", 7)  or
            -moz-pref("WaveFox.Tabs.Shape", 8)  or
            -moz-pref("WaveFox.Tabs.Shape", 9)  or
@@ -113,7 +127,7 @@
             filter: var(--wavefox-selected-tab-filter, none) !important;
             box-shadow: var(--wavefox-inner-tabbar-shadow, none) !important;
             clip-path: inset(-4px 0px 0px 0px) !important;
-            padding-inline: var(--tab-first-last-inline-margin) !important;
+            padding-inline: calc(var(--tab-min-height) / 2) !important;
             
             &::before
             {
