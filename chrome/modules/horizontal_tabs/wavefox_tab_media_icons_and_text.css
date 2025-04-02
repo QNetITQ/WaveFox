@@ -116,7 +116,7 @@
 {
     &[fadein]
     {
-        min-width: var(--tab-min-width) !important;
+        min-width: var(--tab-min-width-pref) !important;
     }
 
     .tab-icon-stack > *
