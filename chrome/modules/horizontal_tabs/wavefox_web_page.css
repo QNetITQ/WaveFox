@@ -19,6 +19,16 @@
             outline: none !important;
             box-shadow: none !important;
 
+            &[sidebar-shown]:not([sidebar-positionend])
+            {
+                margin-inline-start: 0px !important;
+            }
+            
+            &[sidebar-shown][sidebar-positionend]
+            {
+                margin-inline-end: 0px !important;
+            }
+
             @media (-moz-pref("WaveFox.TabsBelowURL.Enabled") and -moz-pref("browser.tabs.inTitlebar", 0)) or
                     -moz-pref("WaveFox.OneLine", 1) or 
                     -moz-pref("WaveFox.OneLine", 2)
@@ -30,19 +40,6 @@
         &:is([style*="--lwt-header-image"], [style*="--lwt-additional-images"]) #browser > #tabbrowser-tabbox
         {
             margin-block-start: 8px !important;
-        }
-
-        #browser > #sidebar-wrapper
-        {
-            &:has(#sidebar-main:not([hidden], [positionend])) + #tabbrowser-tabbox
-            {
-                margin-inline-start: 0px !important;
-            }
-            
-            &:has(#sidebar-main[positionend]:not([hidden])) + #tabbrowser-tabbox
-            {
-                margin-inline-end: 0px !important;
-            }
         }
     }
 }
