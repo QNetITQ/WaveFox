@@ -39,7 +39,7 @@ tab-group > .tab-group-label-container
     
     tab-group[collapsed] > .tabbrowser-tab
     {
-        overflow: clip !important;
+        overflow-clip-margin: 0px !important;
         margin-inline: 0px !important;
         padding-inline: 0px !important;
     }
