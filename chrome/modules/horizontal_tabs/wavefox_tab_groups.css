@@ -41,20 +41,14 @@ tab-group > .tab-group-label-container
 
     .tab-group-label-container
     {
-        margin-inline: var(--tab-first-last-inline-margin) !important;
+        margin-inline: var(--toolbar-start-end-padding) !important;
         padding-inline: 0px !important;
         
         tab-group:not([collapsed]) > &
         {
             margin-inline-end: 0px !important;
         }
-        
-        tab-group:has(+ tab-group) > &,
-        tab-group:has(+ .tabbrowser-tab[hidden] + tab-group) > &
-        {
-            margin-inline-end: 4px !important;
-        }
-        
+
         tab-group + tab-group > &,
         tab-group + .tabbrowser-tab[hidden] + tab-group > &
         {
