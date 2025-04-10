@@ -255,6 +255,13 @@
         overflow-clip-margin: var(--tab-first-last-inline-margin) !important;
         padding-inline: 0px !important;
 
+        tab-group[collapsed] > &
+        {
+            overflow-clip-margin: 0px !important;
+            margin-inline: 0px !important;
+            padding-inline: 0px !important;
+        }
+
         &[pinned]
         {
             .tab-content
