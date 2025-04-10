@@ -10,6 +10,8 @@
 
     .tabbrowser-tab:nth-child(1 of .tabbrowser-tab:not([hidden])) .tab-stack::before,
     #tabbrowser-tabs[overflow][haspinnedtabs] .tabbrowser-tab:nth-child(1 of .tabbrowser-tab:not([pinned], [hidden])) .tab-stack::before,
+    tab-group + .tabbrowser-tab > .tab-stack::before,
+    tab-group + .tabbrowser-tab[hidden] + .tabbrowser-tab > .tab-stack::before,
     .tab-stack::after
     {
         content: "";
