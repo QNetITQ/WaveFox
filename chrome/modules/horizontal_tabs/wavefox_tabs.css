@@ -311,6 +311,12 @@
             {
                 margin-inline-start: 0px !important;
             }
+
+            .tab-group-line
+            {
+                margin-block: 0px !important;
+                margin-inline: calc(var(--tab-min-height) / 2) !important;
+            }
         }
     }
 
