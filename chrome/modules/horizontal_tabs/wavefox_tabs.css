@@ -257,9 +257,7 @@
 
         tab-group[collapsed] > &
         {
-            overflow-clip-margin: 0px !important;
-            margin-inline: 0px !important;
-            padding-inline: 0px !important;
+            --tab-first-last-inline-margin: 0px;
         }
 
         @media -moz-pref("WaveFox.Tabs.Shape", 5)
