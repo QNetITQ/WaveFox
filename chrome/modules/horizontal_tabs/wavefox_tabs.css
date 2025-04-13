@@ -262,6 +262,14 @@
             padding-inline: 0px !important;
         }
 
+        @media -moz-pref("WaveFox.Tabs.Shape", 5)
+        {
+            tab-group:not([collapsed]) > &
+            {
+                --tab-first-last-inline-margin: var(--toolbar-start-end-padding) !important;
+            }
+        }
+
         &[pinned]
         {
             .tab-content
