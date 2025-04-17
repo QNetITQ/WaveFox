@@ -168,6 +168,12 @@ This is third-party code. I will update this code according to the original sour
 
 - `WaveFox.WebPage.Floating.Enabled`
 
+### Transparent Web Page
+Works only with system theme. Requires transparency support from the operating system. The quality of this option depends heavily on the specific website.
+![изображение](https://github.com/user-attachments/assets/99afc380-027a-46b3-b0d6-5cdf3c55a33e)
+
+- `WaveFox.WebPage.Transparency` > 1 or 2 and `browser.tabs.allow_transparent_browser` (1 - Browser windows only / 2 - Browser windows and all websites)
+
 </details>
 
 <details>
