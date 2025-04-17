@@ -47,3 +47,20 @@
         }
     }
 }
+
+@media (-moz-pref("WaveFox.WebPage.Transparency", 1)  or
+        -moz-pref("WaveFox.WebPage.Transparency", 2)) and
+        -moz-pref("extensions.activeThemeID", 'default-theme@mozilla.org') and
+        -moz-pref("browser.tabs.allow_transparent_browser")
+{
+    #browser
+    {
+        background-color: transparent !important;
+
+        #tabbrowser-tabpanels
+        {
+            background-color: transparent !important;
+            background-image: none !important;
+        }
+    }
+}
