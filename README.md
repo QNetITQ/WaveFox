@@ -585,6 +585,7 @@ Low values are more suitable for high resolution monitors.
 
 - [KDE Plasma 5](https://github.com/esjeon/kwin-forceblur)
 - [KDE Plasma 6](https://github.com/taj-ny/kwin-effects-forceblur)
+- [GNOME](https://github.com/aunetx/blur-my-shell)
 
 </details>
 
