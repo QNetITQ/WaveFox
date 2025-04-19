@@ -86,7 +86,7 @@
     margin-inline-end: calc(var(--toolbar-start-end-padding) - var(--toolbarbutton-outer-padding)) !important;
 }
 
-.tabbrowser-tab + #tabbrowser-arrowscrollbox-periphery
+.tabbrowser-tab:not([hidden]) + #tabbrowser-arrowscrollbox-periphery > #tabs-newtab-button
 {
     margin-inline-start: calc(-1 * var(--tab-first-last-inline-margin, 0px) / 2) !important;
 }

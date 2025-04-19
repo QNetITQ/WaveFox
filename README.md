@@ -9,10 +9,10 @@
 [Download Firefox](https://www.mozilla.org/en-US/firefox/all/#product-desktop-release) / [Download WaveFox](https://github.com/QNetITQ/WaveFox/releases) / [WaveFox Nightly](https://github.com/QNetITQ/WaveFox/tree/WaveFox-Nightly)
 
 <details>
-  <summary>WaveFox v1.8.137</summary>
+  <summary>WaveFox v1.8.138</summary>
 
 - ##### Minimum Requirements
-  - Firefox 137
+  - Firefox 138
   - Windows / MacOS / Linux
 
 - Download the `chrome` folder and put it in your user profile folder
@@ -167,6 +167,12 @@ This is third-party code. I will update this code according to the original sour
 ![изображение](https://github.com/user-attachments/assets/26a19f9a-642b-4a10-a4f9-80d87cc42bdc)
 
 - `WaveFox.WebPage.Floating.Enabled`
+
+### Transparent Web Page (Experimentally)
+Works only with system theme. Requires transparency support from the operating system. The quality of this option depends heavily on the specific website.
+![изображение](https://github.com/user-attachments/assets/99afc380-027a-46b3-b0d6-5cdf3c55a33e)
+
+- `WaveFox.WebPage.Transparency` > 1 or 2 and `browser.tabs.allow_transparent_browser` (1 - Browser windows only / 2 - Browser windows and all websites)
 
 </details>
 
@@ -579,6 +585,7 @@ Low values are more suitable for high resolution monitors.
 
 - [KDE Plasma 5](https://github.com/esjeon/kwin-forceblur)
 - [KDE Plasma 6](https://github.com/taj-ny/kwin-effects-forceblur)
+- [GNOME](https://github.com/aunetx/blur-my-shell)
 
 </details>
 
@@ -603,15 +610,14 @@ Open `userChrome.css` and paste your code under the appropriate comment. Your co
 
 - `widget.windows.mica`
   - `widget.windows.mica.toplevel-backdrop` > 0 or 1 or 2 or 3 (Auto / Mica / Acrylic / MicaAlt)
-- `widget.windows.mica.popups` (Firefox 137)
-- `widget.windows.mica.popups` > 0 or 1 or 2 (Disabled / Enabled / Auto) (Firefox 138+)
+- `widget.windows.mica.popups` > 0 or 1 or 2 (Disabled / Enabled / Auto)
 
 </details>
 
 <details>
   <summary>How to enable Tinting / Vibrancy on MacOS?</summary>
 
-- `browser.theme.macos.native-theme` or `browser.theme.native-theme`
+- `browser.theme.native-theme`
 - `widget.macos.titlebar-blend-mode.behind-window`
 - `widget.macos.sidebar-blend-mode.behind-window`
 
