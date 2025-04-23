@@ -327,8 +327,8 @@
 
             .tab-group-line
             {
-                margin-block: 0px !important;
-                margin-inline: calc(var(--tab-min-height) / 2) !important;
+                inset-inline: 0px !important;
+                inset-block: auto 0px !important;
             }
         }
     }
@@ -337,6 +337,11 @@
     {
         margin-inline: var(--toolbar-start-end-padding) !important;
         padding-inline: 0px !important;
+
+        &::after
+        {
+            display: none !important;
+        }
         
         tab-group:not([collapsed]) > &
         {
