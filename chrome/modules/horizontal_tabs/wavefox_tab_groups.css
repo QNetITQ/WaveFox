@@ -9,12 +9,6 @@
        -moz-pref("WaveFox.Tabs.Shape", 11) or
        -moz-pref("WaveFox.Tabs.Shape", 12)
 {
-    tab-group[collapsed] > .tabbrowser-tab
-    {
-        margin-inline: 0px !important;
-        padding-inline: 0px !important;
-    }
-
     .tabbrowser-tab:not([hidden]):has(+ tab-group),
     .tabbrowser-tab:not([hidden]):has(+ .tabbrowser-tab[hidden] + tab-group)
     {
