@@ -333,6 +333,11 @@
         margin-inline: var(--toolbar-start-end-padding) !important;
         padding-inline: 0px !important;
 
+        &::after
+        {
+            inset-block: auto 0px !important;
+        }
+
         tab-group:not([collapsed]) > &
         {
             margin-inline-end: 0px !important;
