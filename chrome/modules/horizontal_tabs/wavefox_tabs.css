@@ -59,11 +59,6 @@
         padding-inline: 10px !important;
     }
 
-    &[pending] .tab-content
-    {
-        opacity: 0.5 !important;
-    }
-
     .tab-background
     {
         border-radius: var(--wavefox-tab-border-radius, 4px) !important;
@@ -338,11 +333,6 @@
         margin-inline: var(--toolbar-start-end-padding) !important;
         padding-inline: 0px !important;
 
-        &::after
-        {
-            display: none !important;
-        }
-        
         tab-group:not([collapsed]) > &
         {
             margin-inline-end: 0px !important;
