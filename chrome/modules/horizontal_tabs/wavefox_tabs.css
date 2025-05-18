@@ -59,11 +59,6 @@
         padding-inline: 10px !important;
     }
 
-    &[pending] .tab-content
-    {
-        opacity: 0.5 !important;
-    }
-
     .tab-background
     {
         border-radius: var(--wavefox-tab-border-radius, 4px) !important;
@@ -327,8 +322,8 @@
 
             .tab-group-line
             {
-                margin-block: 0px !important;
-                margin-inline: calc(var(--tab-min-height) / 2) !important;
+                inset-inline: 0px !important;
+                inset-block: auto 0px !important;
             }
         }
     }
@@ -337,7 +332,12 @@
     {
         margin-inline: var(--toolbar-start-end-padding) !important;
         padding-inline: 0px !important;
-        
+
+        &::after
+        {
+            inset-block: auto 0px !important;
+        }
+
         tab-group:not([collapsed]) > &
         {
             margin-inline-end: 0px !important;
@@ -347,6 +347,18 @@
         tab-group + .tabbrowser-tab[hidden] + tab-group > &
         {
             margin-inline-start: 0px !important;
+        }
+
+        .tabbrowser-tab:not([hidden]) + tab-group > &,
+        .tabbrowser-tab:not([hidden]) + .tabbrowser-tab[hidden] + tab-group > &
+        {
+            margin-inline-start: var(--tab-first-last-inline-margin) !important;
+        }
+        
+        tab-group[collapsed]:has(+ .tabbrowser-tab:not([hidden])) > &,
+        tab-group[collapsed]:has(+ .tabbrowser-tab[hidden] + .tabbrowser-tab:not([hidden])) > &
+        {
+            margin-inline-end: var(--tab-first-last-inline-margin) !important;
         }
     }
 
