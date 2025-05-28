@@ -360,6 +360,16 @@
         {
             margin-inline-end: var(--tab-first-last-inline-margin) !important;
         }
+
+        tab-group[collapsed]:has(+ .tabbrowser-tab:nth-child(1 of .tabbrowser-tab:not([hidden]))) > &
+        {
+            margin-inline-end: 0px !important;
+        }
+
+        .tabbrowser-tab:nth-last-child(1 of .tabbrowser-tab:not([hidden])) + tab-group > &
+        {
+            margin-inline-start: 0px !important;
+        }
     }
 
     #tabbrowser-tabs[overflow] .tab-drop-indicator
