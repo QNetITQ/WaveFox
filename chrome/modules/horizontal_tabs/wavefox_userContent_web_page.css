@@ -1,0 +1,21 @@
+@media -moz-pref("WaveFox.WebPage.Transparency", 1) and -moz-pref("browser.tabs.allow_transparent_browser")
+{
+    @-moz-document url-prefix("about")
+    {
+        html, body
+        {
+            background-color: transparent !important;
+        }
+    }
+}
+
+@media -moz-pref("WaveFox.WebPage.Transparency", 2) and -moz-pref("browser.tabs.allow_transparent_browser")
+{
+    @-moz-document url-prefix("")
+    {
+        html, body
+        {
+            background-color: transparent !important;
+        }
+    }
+}
