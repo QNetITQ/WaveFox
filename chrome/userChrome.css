@@ -1,6 +1,17 @@
 @layer BasicPriority, HighPriority, VeryHighPriority;
 
-/* ---------- Horizontal Tabs ---------- */
+/* ---------- General styles ---------- */
+
+@import "modules/general_styles/MrOtherGuy_repository/icons/icon_only_context_menu_text_controls.css" layer(BasicPriority) /* supports() */ -moz-pref("WaveFox.Icons", 1);
+@import "modules/general_styles/MrOtherGuy_repository/icons/icon_only_tabs.css"                       layer(BasicPriority) /* supports() */ -moz-pref("WaveFox.Icons", 1);
+@import "modules/general_styles/MrOtherGuy_repository/icons/iconized_content_context_menu.css"        layer(BasicPriority) /* supports() */ -moz-pref("WaveFox.Icons", 1);
+@import "modules/general_styles/MrOtherGuy_repository/icons/iconized_main_menu.css"                   layer(BasicPriority) /* supports() */ -moz-pref("WaveFox.Icons", 1);
+@import "modules/general_styles/MrOtherGuy_repository/icons/iconized_menubar_items.css"               layer(BasicPriority) /* supports() */ -moz-pref("WaveFox.Icons", 1);
+@import "modules/general_styles/MrOtherGuy_repository/icons/iconized_places_context_menu.css"         layer(BasicPriority) /* supports() */ -moz-pref("WaveFox.Icons", 1);
+@import "modules/general_styles/MrOtherGuy_repository/icons/iconized_tabs_context_menu.css"           layer(BasicPriority) /* supports() */ -moz-pref("WaveFox.Icons", 1);
+@import "modules/general_styles/MrOtherGuy_repository/icons/iconized_textbox_context_menu.css"        layer(BasicPriority) /* supports() */ -moz-pref("WaveFox.Icons", 1);
+
+/* ---------- Horizontal tabs ---------- */
 
 @import "modules/horizontal_tabs/wavefox_tabs.css"                      layer(BasicPriority) /* supports() */ -moz-pref("sidebar.verticalTabs", false);
 @import "modules/horizontal_tabs/wavefox_tabs_background_inactive.css"  layer(BasicPriority) /* supports() */ -moz-pref("sidebar.verticalTabs", false);
