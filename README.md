@@ -80,13 +80,13 @@
 
 - `WaveFox.Tabs.Shape` > 12
 
-### Windows 10 Transparency
+### Windows 10 Transparency (Horizontal and Vertical tabs)
 Install [DWMBlurGlass](https://github.com/Maplespe/DWMBlurGlass). Configure to your liking and activate the keys below. Works only with the system theme.
 ![изображение](https://github.com/user-attachments/assets/632c972f-b48a-4ca6-8c69-28859e34485b)
 
 - `WaveFox.Windows10.Transparency.Enabled` and `browser.tabs.inTitlebar > 1`
 
-### Linux Transparency
+### Linux Transparency (Horizontal and Vertical tabs)
 Requires Linux with transparency support. Works only with the system theme.
 
 ![Снимок5](https://github.com/QNetITQ/WaveFox/assets/85301851/3b4dcfc8-217d-48a1-aba7-1621f9375f67)
@@ -119,7 +119,7 @@ Works only with System / Light / Dark theme.
 
 - `WaveFox.Tabs.Background.Inactive.Enabled`
 
-### Icons (MrOtherGuy / Lepton)
+### Icons (firefox-csshacks / Lepton) / (Horizontal and Vertical tabs)
 This is third-party code. I will update this code according to the original source.
 
 ![изображение](https://user-images.githubusercontent.com/85301851/151192118-0cbdb5a7-a77f-4275-8841-2ac321657c86.png)
