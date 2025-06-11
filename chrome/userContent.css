@@ -1,7 +1,7 @@
 @layer BasicPriority, HighPriority, VeryHighPriority;
 
-/* ---------- Horizontal Tabs ---------- */
+/* ---------- General styles ---------- */
 
-@import "modules/horizontal_tabs/wavefox_web_page_userContent.css" layer(BasicPriority) /* supports() */ -moz-pref("sidebar.verticalTabs", false);
+@import "modules/general_styles/wavefox_web_page_userContent.css" layer(BasicPriority); /* supports() -moz-pref("", false) */
 
 /* ---------------------------------------- Third-party styles (Maximum priority) ---------------------------------------- */
