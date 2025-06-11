@@ -173,6 +173,7 @@ Works only with system theme. Requires transparency support from the operating s
 ![изображение](https://github.com/user-attachments/assets/99afc380-027a-46b3-b0d6-5cdf3c55a33e)
 
 - `WaveFox.WebPage.Transparency` > 1 or 2 and `browser.tabs.allow_transparent_browser` (1 - New tab page only / 2 - All browser windows and all websites)
+  - `WaveFox.WebPage.Background.Saturation` > 1 or 2 or 3
 
 </details>
 
