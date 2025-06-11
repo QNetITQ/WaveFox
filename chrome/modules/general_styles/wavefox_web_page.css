@@ -57,11 +57,6 @@
     {
         background-color: transparent !important;
 
-        #sidebar-main
-        {
-            background-color: var(--toolbar-bgcolor) !important;
-        }
-
         #tabbrowser-tabpanels
         {
             background-color: transparent !important;
