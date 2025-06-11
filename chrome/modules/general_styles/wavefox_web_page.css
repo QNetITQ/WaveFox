@@ -64,7 +64,7 @@
         }
     }
 
-    @media -moz-pref("WaveFox.WebPage.Floating.Enabled")
+    @media -moz-pref("WaveFox.WebPage.Floating.Enabled") and -moz-pref("sidebar.verticalTabs", false)
     {
         :root:not([inFullscreen], [inDOMFullscreen]) #browser > #tabbrowser-tabbox
         {
