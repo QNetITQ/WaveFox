@@ -64,6 +64,14 @@
         }
     }
 
+    @media -moz-pref("WaveFox.WebPage.Floating.Enabled")
+    {
+        :root:not([inFullscreen], [inDOMFullscreen]) #browser > #tabbrowser-tabbox
+        {
+            margin-block-start: var(--space-small) !important;
+        }
+    }
+
     @media -moz-pref("WaveFox.WebPage.Background.Saturation", 1)
     {
         :root
