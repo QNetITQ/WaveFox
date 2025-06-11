@@ -66,9 +66,17 @@
 
     @media -moz-pref("WaveFox.WebPage.Floating.Enabled") and -moz-pref("sidebar.verticalTabs", false)
     {
-        :root:not([inFullscreen], [inDOMFullscreen]) #browser > #tabbrowser-tabbox
+        :root:not([inFullscreen], [inDOMFullscreen])
         {
-            margin-block-start: var(--space-small) !important;
+            #navigator-toolbox
+            {
+                box-shadow: var(--wavefox-selected-tab-shadow, none) !important;
+            }
+
+            #browser > #tabbrowser-tabbox
+            {
+                margin-block-start: var(--space-small) !important;
+            }
         }
     }
 
