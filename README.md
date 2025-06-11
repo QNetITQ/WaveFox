@@ -163,16 +163,16 @@ The keys below are relevant only for the second option.
 
 - `WaveFox.OneLine` > 1 or 2
 
-### Floating Web Page
+### Floating Web Page (Horizontal and Vertical tabs)
 ![изображение](https://github.com/user-attachments/assets/26a19f9a-642b-4a10-a4f9-80d87cc42bdc)
 
 - `WaveFox.WebPage.Floating.Enabled`
 
-### Transparent Web Page (Experimentally)
+### Transparent Web Page (Experimentally) (Horizontal and Vertical tabs)
 Works only with system theme. Requires transparency support from the operating system. The quality of this option depends heavily on the specific website.
 ![изображение](https://github.com/user-attachments/assets/99afc380-027a-46b3-b0d6-5cdf3c55a33e)
 
-- `WaveFox.WebPage.Transparency` > 1 or 2 and `browser.tabs.allow_transparent_browser` (1 - Browser windows only / 2 - Browser windows and all websites)
+- `WaveFox.WebPage.Transparency` > 1 or 2 and `browser.tabs.allow_transparent_browser` (1 - New tab page only / 2 - All browser windows and all websites)
 
 </details>
 
