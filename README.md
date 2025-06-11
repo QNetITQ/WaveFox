@@ -7,10 +7,10 @@
 [Download Firefox](https://www.mozilla.org/en-US/firefox/all/#product-desktop-release) / [Download WaveFox](https://github.com/QNetITQ/WaveFox/releases) / [WaveFox Nightly](https://github.com/QNetITQ/WaveFox/tree/WaveFox-Nightly)
 
 <details>
-  <summary>WaveFox v1.8.139</summary>
+  <summary>WaveFox v1.8.140 ESR</summary>
 
 - ##### Minimum Requirements
-  - Firefox 139
+  - Firefox 140 ESR
   - Windows / MacOS / Linux
 
 - Download the `chrome` folder and put it in your user profile folder
@@ -80,13 +80,13 @@
 
 - `WaveFox.Tabs.Shape` > 12
 
-### Windows 10 Transparency
+### Windows 10 Transparency (Horizontal and Vertical tabs)
 Install [DWMBlurGlass](https://github.com/Maplespe/DWMBlurGlass). Configure to your liking and activate the keys below. Works only with the system theme.
 ![изображение](https://github.com/user-attachments/assets/632c972f-b48a-4ca6-8c69-28859e34485b)
 
 - `WaveFox.Windows10.Transparency.Enabled` and `browser.tabs.inTitlebar > 1`
 
-### Linux Transparency
+### Linux Transparency (Horizontal and Vertical tabs)
 Requires Linux with transparency support. Works only with the system theme.
 
 ![Снимок5](https://github.com/QNetITQ/WaveFox/assets/85301851/3b4dcfc8-217d-48a1-aba7-1621f9375f67)
@@ -119,13 +119,15 @@ Works only with System / Light / Dark theme.
 
 - `WaveFox.Tabs.Background.Inactive.Enabled`
 
-### Lepton Icons (Menu icons)
-This is third-party code. I will update this code according to the original source. Unlike other options, these keys can be enabled in any order, or all together.
+### Icons (firefox-csshacks / Lepton) / (Horizontal and Vertical tabs)
+This is third-party code. I will update this code according to the original source.
 
 ![изображение](https://user-images.githubusercontent.com/85301851/151192118-0cbdb5a7-a77f-4275-8841-2ac321657c86.png)
 
 - `svg.context-properties.content.enabled` (Required key)
-- `WaveFox.LeptonIcons.Enabled` (Required key)
+- `WaveFox.Icons` > 1 or 2 (Required key)
+
+The keys below are relevant only for the second option.
   - `userChrome.icon.panel_full` or `userChrome.icon.panel_photon`
   - `userChrome.icon.library`
   - `userChrome.icon.panel`
@@ -161,16 +163,17 @@ This is third-party code. I will update this code according to the original sour
 
 - `WaveFox.OneLine` > 1 or 2
 
-### Floating Web Page
+### Floating Web Page (Horizontal and Vertical tabs)
 ![изображение](https://github.com/user-attachments/assets/26a19f9a-642b-4a10-a4f9-80d87cc42bdc)
 
 - `WaveFox.WebPage.Floating.Enabled`
 
-### Transparent Web Page (Experimentally)
+### Transparent Web Page (Experimentally) (Horizontal and Vertical tabs)
 Works only with system theme. Requires transparency support from the operating system. The quality of this option depends heavily on the specific website.
 ![изображение](https://github.com/user-attachments/assets/99afc380-027a-46b3-b0d6-5cdf3c55a33e)
 
-- `WaveFox.WebPage.Transparency` > 1 or 2 and `browser.tabs.allow_transparent_browser` (1 - Browser windows only / 2 - Browser windows and all websites)
+- `WaveFox.WebPage.Transparency` > 1 or 2 and `browser.tabs.allow_transparent_browser` (1 - New tab page only / 2 - All browser windows and all websites)
+  - `WaveFox.WebPage.Background.Saturation` > 1 or 2 or 3
 
 </details>
 
