@@ -30,4 +30,4 @@
 @import "modules/horizontal_tabs/wavefox_tabs_below_url.css"            layer(HighPriority)  /* supports() */ -moz-pref("sidebar.verticalTabs", false);
 
 /* ---------------------------------------- Third-party styles (Maximum priority) ---------------------------------------- */
-/* =) */
+/* =) */    
