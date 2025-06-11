@@ -1,8 +1,8 @@
 @media -moz-pref("WaveFox.WebPage.Transparency", 1) and -moz-pref("browser.tabs.allow_transparent_browser")
 {
-    @-moz-document url-prefix("about")
+    @-moz-document url("about:newtab")
     {
-        html, body
+        body
         {
             background-color: transparent !important;
         }
