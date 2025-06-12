@@ -44,12 +44,6 @@
         opacity: 0 !important;
     }
 
-    #tabbrowser-tabs[overflow] .tabbrowser-tab[pinned]:not([selected], :hover, [multiselected]):has(+ .tabbrowser-tab:nth-child(1 of .tabbrowser-tab:not([pinned], [hidden]))) .tab-stack::after,
-    #tabbrowser-tabs[overflow] .tabbrowser-tab[pinned]:not([selected], :hover, [multiselected]):has(+ .tabbrowser-tab[hidden] + .tabbrowser-tab:nth-child(1 of .tabbrowser-tab:not([pinned], [hidden]))) .tab-stack::after
-    {
-        opacity: var(--separators-color-saturation) !important;
-    }
-
     @media -moz-pref("WaveFox.Tabs.Separators", 1)
     {
         :root
