@@ -33,6 +33,7 @@
 
     /* ---------- Shadow DOM ---------- */
 
+    #pinned-tabs-container,
     #tabbrowser-arrowscrollbox
     {
         --drag-space-only-tabs: var(--drag-space, 0px) !important;
