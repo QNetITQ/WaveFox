@@ -1,0 +1,93 @@
+name: Issue report
+description: Create a report
+
+body:
+
+  - type: checkboxes
+    attributes:
+      label: Important clarification
+      options:
+        - label: I have read and followed the installation instructions in the README
+
+  - type: textarea
+    attributes:
+      label: Describe the issue
+      placeholder: A clear and concise description of what the issue is
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: To reproduce
+      placeholder: "Steps to reproduce the behavior: 1. Go to '...' 2. Click on '....' 3. Scroll down to '....' 4. See error"
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Expected behavior
+      placeholder: A clear and concise description of what you expected to happen
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Additional information
+      placeholder: Add any other information about the problem here
+
+  - type: dropdown
+    attributes:
+      label: Operating system
+      options:
+        - Linux
+        - MacOS
+        - Windows 11
+        - Windows 10
+        - Windows 8
+        - Windows 7
+      multiple: true
+    validations:
+      required: true
+
+  - type: checkboxes
+    attributes:
+      label: Color scheme
+      options:
+        - label: System
+        - label: Light
+        - label: Dark
+        - label: Contrast
+
+  - type: dropdown
+    attributes:
+      label: Firefox version
+      options:
+        - Nightly
+        - Developer
+        - Beta
+        - Release
+        - ESR
+      multiple: true
+    validations:
+      required: true
+
+  - type: checkboxes
+    attributes:
+      label: Firefox theme
+      options:
+        - label: System / Auto
+        - label: Light
+        - label: Dark
+        - label: Repository / AMO
+
+  - type: dropdown
+    attributes:
+      label: WaveFox version
+      options:
+        - Nightly
+        - Release
+        - ESR 128
+        - ESR 115
+      multiple: true
+    validations:
+      required: true
