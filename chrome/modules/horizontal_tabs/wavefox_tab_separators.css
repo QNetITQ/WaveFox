@@ -76,84 +76,19 @@
         }
     }
 
-    @media -moz-pref("WaveFox.Tabs.Shape", 5)  or
-           -moz-pref("WaveFox.Tabs.Shape", 6)  or
-           -moz-pref("WaveFox.Tabs.Shape", 7)  or
-           -moz-pref("WaveFox.Tabs.Shape", 8)  or
-           -moz-pref("WaveFox.Tabs.Shape", 9)  or
-           -moz-pref("WaveFox.Tabs.Shape", 10) or
-           -moz-pref("WaveFox.Tabs.Shape", 11) or
-           -moz-pref("WaveFox.Tabs.Shape", 12)
+    @media not (-moz-pref("WaveFox.Tabs.Shape", 5)   or
+                -moz-pref("WaveFox.Tabs.Shape", 6)   or
+                -moz-pref("WaveFox.Tabs.Shape", 7)   or
+                -moz-pref("WaveFox.Tabs.Shape", 8)   or
+                -moz-pref("WaveFox.Tabs.Shape", 9)   or
+                -moz-pref("WaveFox.Tabs.Shape", 10)  or
+                -moz-pref("WaveFox.Tabs.Shape", 11)  or
+                -moz-pref("WaveFox.Tabs.Shape", 12))
     {
-        .tab-stack::before
+        .tabbrowser-tab:nth-child(1 of .tabbrowser-tab:not([hidden]))
         {
-            inset-inline-end: 100% !important;
+            margin-inline-start: 1px !important;
         }
-
-        .tab-stack::after
-        {
-            inset-inline-start: 100% !important;
-        }
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-
-@media -moz-pref("WaveFox.Tabs.Separators", 1) or
-       -moz-pref("WaveFox.Tabs.Separators", 2) or
-       -moz-pref("WaveFox.Tabs.Separators", 3) or
-       -moz-pref("WaveFox.Tabs.Separators", 4)
-{
-    .tab-stack
-    {
-        margin-inline-end: 1px !important;
-    }
-
-    .tab-stack::before,
-    .tab-stack::after
-    {
-        content: "";
-        display: block;
-        position: absolute;
-        width: 1px;
-        height: 50%;
-        border-inline-end: 1px solid currentColor;
-        top: 25%;
-        box-sizing: border-box;
-        pointer-events: none;
-        mix-blend-mode: exclusion;
-    }
-
-    .tab-stack::before
-    {
-        inset-inline-end: calc(100% + var(--tab-overflow-clip-margin));
-    }
-
-    .tab-stack::after
-    {
-        inset-inline-start: calc(100% + var(--tab-overflow-clip-margin));
-    }
-
-    .tabbrowser-tab:not([hidden]):is([selected], :hover, [multiselected]) .tab-stack::before,
-    .tabbrowser-tab:not([hidden]):is([selected], :hover, [multiselected]) .tab-stack::after,
-    #tabbrowser-tabs:not([movingtab]) .tabbrowser-tab:not([hidden]):has(+ .tabbrowser-tab:is([selected], :hover, [multiselected]):not([hidden])) .tab-stack::after,
-    #tabbrowser-tabs:not([movingtab]) .tabbrowser-tab:not([hidden]):has(+ .tabbrowser-tab[hidden] + .tabbrowser-tab:is([selected], :hover, [multiselected]):not([hidden])) .tab-stack::after,
-    #tabbrowser-tabs:not([movingtab]) .tabbrowser-tab:is([selected], :hover, [multiselected]):not([hidden]) + .tabbrowser-tab:not([hidden]) .tab-stack::before,
-    #tabbrowser-tabs:not([movingtab]) .tabbrowser-tab:is([selected], :hover, [multiselected]):not([hidden]) + .tabbrowser-tab[hidden] + .tabbrowser-tab:not([hidden]) .tab-stack::before
-    {
-        opacity: 0 !important;
     }
 
     @media -moz-pref("WaveFox.Tabs.Shape", 5)  or
@@ -176,5 +111,3 @@
         }
     }
 }
-
-*/
