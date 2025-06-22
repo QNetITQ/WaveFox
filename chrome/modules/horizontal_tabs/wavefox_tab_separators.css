@@ -8,8 +8,7 @@
         margin-inline-end: 1px !important;
     }
 
-    #pinned-tabs-container > .tabbrowser-tab:first-child > .tab-stack::before,
-    #tabbrowser-arrowscrollbox[overflowing] > .tabbrowser-tab:nth-child(1 of .tabbrowser-tab:not([hidden])) > .tab-stack::before,
+    .tabbrowser-tab:nth-child(1 of .tabbrowser-tab:not([hidden])) > .tab-stack::before,
     tab-group + .tabbrowser-tab > .tab-stack::before,
     tab-group + .tabbrowser-tab[hidden] + .tabbrowser-tab > .tab-stack::before,
     .tab-stack::after
