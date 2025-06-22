@@ -87,7 +87,7 @@
            -moz-pref("WaveFox.Tabs.Shape", 11) or
            -moz-pref("WaveFox.Tabs.Shape", 12)
     {
-        #pinned-tabs-container:has(.tabbrowser-tab) ~ #tabbrowser-arrowscrollbox:not([overflowing])
+        #pinned-tabs-container:has(.tabbrowser-tab) ~ #tabbrowser-arrowscrollbox:not([overflowing]):has(.tabbrowser-tab:not([hidden]))
         {
             margin-inline-start: calc(-2 * var(--tab-first-last-inline-margin)) !important;
         }
