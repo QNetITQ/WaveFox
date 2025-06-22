@@ -75,6 +75,17 @@
     }
 }
 
+/* ---------------------------------------- Pinned tabs ---------------------------------------- */
+
+#pinned-tabs-container
+{
+    overflow: auto !important;
+    resize: horizontal !important;
+    -moz-window-dragging: no-drag !important;
+    min-width: 25% !important;
+    max-width: 50% !important;
+}
+
 /* ---------------------------------------- Indents ---------------------------------------- */
 
 #pinned-tabs-container
