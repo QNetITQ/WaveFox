@@ -39,7 +39,9 @@
     .tabbrowser-tab:not([hidden]):is([selected], :hover, [multiselected]) .tab-stack::before,
     .tabbrowser-tab:not([hidden]):is([selected], :hover, [multiselected]) .tab-stack::after,
     #tabbrowser-tabs:not([movingtab]) .tabbrowser-tab:not([hidden]):has(+ .tabbrowser-tab:is([selected], :hover, [multiselected]):not([hidden])) .tab-stack::after,
-    #tabbrowser-tabs:not([movingtab]) .tabbrowser-tab:not([hidden]):has(+ .tabbrowser-tab[hidden] + .tabbrowser-tab:is([selected], :hover, [multiselected]):not([hidden])) .tab-stack::after
+    #tabbrowser-tabs:not([movingtab]) .tabbrowser-tab:not([hidden]):has(+ .tabbrowser-tab[hidden] + .tabbrowser-tab:is([selected], :hover, [multiselected]):not([hidden])) .tab-stack::after,
+    #pinned-tabs-container:has(~ #tabbrowser-arrowscrollbox:not([overflowing]) > .tabbrowser-tab:is([selected], :hover, [multiselected]):nth-child(1 of .tabbrowser-tab:not([hidden]))) > .tabbrowser-tab:last-child > .tab-stack::after
+
     {
         opacity: 0 !important;
     }
@@ -76,21 +78,6 @@
         }
     }
 
-    @media not (-moz-pref("WaveFox.Tabs.Shape", 5)   or
-                -moz-pref("WaveFox.Tabs.Shape", 6)   or
-                -moz-pref("WaveFox.Tabs.Shape", 7)   or
-                -moz-pref("WaveFox.Tabs.Shape", 8)   or
-                -moz-pref("WaveFox.Tabs.Shape", 9)   or
-                -moz-pref("WaveFox.Tabs.Shape", 10)  or
-                -moz-pref("WaveFox.Tabs.Shape", 11)  or
-                -moz-pref("WaveFox.Tabs.Shape", 12))
-    {
-        #pinned-tabs-container:has(~ #tabbrowser-arrowscrollbox:not([overflowing]) > .tabbrowser-tab:is([selected], :hover, [multiselected]):nth-child(1 of .tabbrowser-tab:not([hidden]))) > .tabbrowser-tab[pinned]:last-child > .tab-stack::after
-        {
-            opacity: 0 !important;
-        }
-    }
-
     @media -moz-pref("WaveFox.Tabs.Shape", 5)  or
            -moz-pref("WaveFox.Tabs.Shape", 6)  or
            -moz-pref("WaveFox.Tabs.Shape", 7)  or
@@ -100,9 +87,9 @@
            -moz-pref("WaveFox.Tabs.Shape", 11) or
            -moz-pref("WaveFox.Tabs.Shape", 12)
     {
-        #tabbrowser-arrowscrollbox:not([overflowing])
+        #pinned-tabs-container:has(.tabbrowser-tab) ~ #tabbrowser-arrowscrollbox:not([overflowing])
         {
-            margin-inline-start: calc(-1 * var(--tab-min-height)) !important;
+            margin-inline-start: calc(-2 * var(--tab-first-last-inline-margin)) !important;
         }
 
         .tab-stack::before
