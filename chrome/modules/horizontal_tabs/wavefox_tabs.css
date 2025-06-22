@@ -75,6 +75,13 @@
     }
 }
 
+/* ---------------------------------------- Indents ---------------------------------------- */
+
+#pinned-tabs-container
+{
+    margin-inline-end: 0px !important;
+}
+
 /* ---------------------------------------- Floating tabs ---------------------------------------- */
 
 @media -moz-pref("WaveFox.Tabs.Shape", 1) or
@@ -385,11 +392,6 @@
     }
 
     /* ---------------------------------------- Indents ---------------------------------------- */
-
-    #pinned-tabs-container
-    {
-        margin-inline-end: 0px !important;
-    }
 
     .tabbrowser-tab:nth-child(1 of .tabbrowser-tab:not([hidden]))
     {
