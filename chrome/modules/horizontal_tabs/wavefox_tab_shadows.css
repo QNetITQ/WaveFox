@@ -128,6 +128,7 @@ and
         #TabsToolbar
         {
             position: relative !important;
+            clip-path: inset(0px) !important;
         }
        
         #TabsToolbar::before
