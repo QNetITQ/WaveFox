@@ -39,6 +39,7 @@
     .tabbrowser-tab:not([hidden]):is([selected], :hover, [multiselected]) .tab-stack::after,
     #tabbrowser-tabs:not([movingtab]) .tabbrowser-tab:not([hidden]):has(+ .tabbrowser-tab:is([selected], :hover, [multiselected]):not([hidden])) .tab-stack::after,
     #tabbrowser-tabs:not([movingtab]) .tabbrowser-tab:not([hidden]):has(+ .tabbrowser-tab[hidden] + .tabbrowser-tab:is([selected], :hover, [multiselected]):not([hidden])) .tab-stack::after,
+    #pinned-tabs-container:has(.tabbrowser-tab) ~ #tabbrowser-arrowscrollbox:not([overflowing]) > .tabbrowser-tab:nth-child(1 of .tabbrowser-tab:not([hidden])) > .tab-stack::before,
     #pinned-tabs-container:has(~ #tabbrowser-arrowscrollbox:not([overflowing]) > .tabbrowser-tab:is([selected], :hover, [multiselected]):nth-child(1 of .tabbrowser-tab:not([hidden]))) > .tabbrowser-tab:last-child > .tab-stack::after
 
     {
