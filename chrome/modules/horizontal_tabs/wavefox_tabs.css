@@ -404,7 +404,7 @@
 
     /* ---------------------------------------- Indents ---------------------------------------- */
 
-    #pinned-tabs-container:has(.tabbrowser-tab) ~ #tabbrowser-arrowscrollbox:not([overflowing]):has(.tabbrowser-tab:not([hidden]))
+    #pinned-tabs-container:not([overflowing]):has(.tabbrowser-tab) ~ #tabbrowser-arrowscrollbox:not([overflowing]):has(.tabbrowser-tab:not([hidden]))
     {
         margin-inline-start: calc(-2 * var(--tab-first-last-inline-margin)) !important;
     }
