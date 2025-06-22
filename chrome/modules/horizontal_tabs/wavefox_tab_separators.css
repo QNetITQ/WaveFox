@@ -85,9 +85,9 @@
                 -moz-pref("WaveFox.Tabs.Shape", 11)  or
                 -moz-pref("WaveFox.Tabs.Shape", 12))
     {
-        .tabbrowser-tab:nth-child(1 of .tabbrowser-tab:not([hidden]))
+        #pinned-tabs-container:has(~ #tabbrowser-arrowscrollbox:not([overflowing]) > .tabbrowser-tab:is([selected], :hover, [multiselected]):nth-child(1 of .tabbrowser-tab:not([hidden]))) > .tabbrowser-tab[pinned]:last-child > .tab-stack::after
         {
-            margin-inline-start: 1px !important;
+            opacity: 0 !important;
         }
     }
 
