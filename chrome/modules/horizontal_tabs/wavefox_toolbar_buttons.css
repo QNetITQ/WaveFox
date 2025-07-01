@@ -15,11 +15,6 @@
     outline: none !important;
 }
 
-#TabsToolbar #firefox-view-button:hover:not([open]) > .toolbarbutton-icon
-{
-    background-color: var(--toolbarbutton-hover-background) !important;
-}
-
 /* -------------------- Extensions menu -------------------- */
 
 #unified-extensions-panel
