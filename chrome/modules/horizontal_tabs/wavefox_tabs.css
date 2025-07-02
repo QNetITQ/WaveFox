@@ -405,12 +405,12 @@
         margin-inline-start: calc(-2 * var(--tab-first-last-inline-margin)) !important;
     }
 
-    .tabbrowser-tab:nth-child(1 of .tabbrowser-tab:not([hidden]))
+    .tabbrowser-tab:nth-child(1 of .tabbrowser-tab:not([hidden], [dragtarget]))
     {
         margin-inline-start: var(--tab-first-last-inline-margin) !important;
     }
 
-    .tabbrowser-tab:nth-last-child(1 of .tabbrowser-tab:not([hidden]))
+    .tabbrowser-tab:nth-last-child(1 of .tabbrowser-tab:not([hidden], [dragtarget]))
     {
         margin-inline-end: var(--tab-first-last-inline-margin) !important;
     }
