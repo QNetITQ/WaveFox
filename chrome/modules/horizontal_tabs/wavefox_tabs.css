@@ -150,7 +150,7 @@
         {
             --left-svg:   url("svg_files/option_5/left_corners.svg");
             --right-svg:  url("svg_files/option_5/right_corners.svg");
-            --tab-first-last-inline-margin: 0px;
+            --tab-first-last-inline-margin: var(--toolbar-start-end-padding);
         }
     }
 
@@ -259,14 +259,6 @@
         tab-group[collapsed] > &
         {
             --tab-first-last-inline-margin: 0px;
-        }
-
-        @media -moz-pref("WaveFox.Tabs.Shape", 5)
-        {
-            tab-group:not([collapsed]) > &
-            {
-                --tab-first-last-inline-margin: var(--toolbar-start-end-padding) !important;
-            }
         }
 
         &[pinned]
