@@ -11,8 +11,7 @@
 @import "modules/general_styles/firefox-csshacks/iconized_places_context_menu.css"  layer(BasicPriority) /* supports() */ -moz-pref("WaveFox.Icons", 1);
 @import "modules/general_styles/firefox-csshacks/iconized_tabs_context_menu.css"    layer(BasicPriority) /* supports() */ -moz-pref("WaveFox.Icons", 1);
 @import "modules/general_styles/firefox-csshacks/iconized_textbox_context_menu.css" layer(BasicPriority) /* supports() */ -moz-pref("WaveFox.Icons", 1);
-
-@import "Lepton_Icons/icons/Lepton_Icons.css"                                       layer(BasicPriority) /* supports() */ -moz-pref("WaveFox.Icons", 2);
+@import "modules/general_styles/Firefox-UI-Fix/icons/Firefox-UI-Fix_icons.css"      layer(BasicPriority) /* supports() */ -moz-pref("WaveFox.Icons", 2);
 
 /* ---------- Horizontal tabs ---------- */
 
@@ -30,4 +29,4 @@
 @import "modules/horizontal_tabs/wavefox_tabs_below_url.css"            layer(HighPriority)  /* supports() */ -moz-pref("sidebar.verticalTabs", false);
 
 /* ---------------------------------------- Third-party styles (Maximum priority) ---------------------------------------- */
-/* =) */    
+/* =) */
