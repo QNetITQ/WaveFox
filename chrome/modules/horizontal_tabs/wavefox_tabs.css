@@ -329,6 +329,16 @@
             inset-block: auto 0px !important;
         }
 
+        #tabbrowser-arrowscrollbox:not([overflowing]) > tab-group:first-child > &
+        {
+            margin-inline-start: var(--toolbar-start-end-padding) !important;
+        }
+        
+        #pinned-tabs-container:not([overflowing]):has(.tabbrowser-tab) ~ #tabbrowser-arrowscrollbox:not([overflowing]) > tab-group:first-child > &
+        {
+            margin-inline-start: 0px !important;
+        }
+
         tab-group[collapsed] + tab-group > &,
         tab-group[collapsed] + .tabbrowser-tab[hidden] + tab-group > &
         {
