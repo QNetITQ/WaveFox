@@ -246,11 +246,12 @@
 
     .tabbrowser-tab
     {
+        overflow-clip-margin: var(--tab-first-last-inline-margin) !important;
         padding-inline: 0px !important;
 
-        &:not(tab-group[collapsed] > &:not([visuallyselected]))
+        tab-group[collapsed] > &
         {
-            overflow: visible !important;
+            --tab-first-last-inline-margin: 0px;
         }
 
         &[pinned]
@@ -320,7 +321,7 @@
 
     .tab-group-label-container
     {
-        margin-inline: 0px !important;
+        margin-inline: var(--toolbar-start-end-padding) !important;
         padding-inline: 0px !important;
 
         &::after
@@ -328,26 +329,38 @@
             inset-block: auto 0px !important;
         }
 
-        #tabbrowser-arrowscrollbox:not([overflowing]) > tab-group:first-child > &
+        tab-group:not([collapsed]) > &
         {
-            margin-inline-start: var(--toolbar-start-end-padding) !important;
+            margin-inline-end: 0px !important;
         }
-        
-        #pinned-tabs-container:not([overflowing]):has(.tabbrowser-tab) ~ #tabbrowser-arrowscrollbox:not([overflowing]) > tab-group:first-child > &
+
+        tab-group + tab-group > &,
+        tab-group + .tabbrowser-tab[hidden] + tab-group > &
         {
             margin-inline-start: 0px !important;
         }
 
-        tab-group[collapsed] + tab-group > &,
-        tab-group[collapsed] + .tabbrowser-tab[hidden] + tab-group > &
+        .tabbrowser-tab:not([hidden]) + tab-group > &,
+        .tabbrowser-tab:not([hidden]) + .tabbrowser-tab[hidden] + tab-group > &
         {
-            margin-inline-start: 4px !important;
+            margin-inline-start: var(--tab-first-last-inline-margin) !important;
         }
-    }
+        
+        tab-group[collapsed]:has(+ .tabbrowser-tab:not([hidden])) > &,
+        tab-group[collapsed]:has(+ .tabbrowser-tab[hidden] + .tabbrowser-tab:not([hidden])) > &
+        {
+            margin-inline-end: var(--tab-first-last-inline-margin) !important;
+        }
 
-    tab-group > .tab-group-overflow-count-container::after
-    {
-        inset-block: auto 0px !important;
+        tab-group[collapsed]:has(+ .tabbrowser-tab:nth-child(1 of .tabbrowser-tab:not([hidden]))) > &
+        {
+            margin-inline-end: 0px !important;
+        }
+
+        .tabbrowser-tab:nth-last-child(1 of .tabbrowser-tab:not([hidden])) + tab-group > &
+        {
+            margin-inline-start: 0px !important;
+        }
     }
 
     #tabbrowser-tabs[overflow] .tab-drop-indicator
@@ -388,13 +401,14 @@
     }
 
     /* ---------------------------------------- Tab Scroll Animation ---------------------------------------- */
-/*
+
     #tabbrowser-tabs[overflow]:not([movingtab]) .tabbrowser-tab
     {
         pointer-events: none !important;
         box-sizing: content-box !important;
         padding-inline: var(--tab-first-last-inline-margin) !important;
         margin-inline: calc(-1 * var(--tab-first-last-inline-margin)) !important;
+        overflow-clip-margin: 0px !important;
     }
 
     #tabbrowser-tabs[overflow]:not([movingtab]) .tabbrowser-tab > .tab-stack
@@ -411,5 +425,4 @@
     {
         margin-inline-end: 0px !important;
     }
-*/
 }
