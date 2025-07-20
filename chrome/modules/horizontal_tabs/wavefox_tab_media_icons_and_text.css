@@ -114,14 +114,9 @@
 
 .tabbrowser-tab:not([pinned])
 {
-    &[fadein]
+    &[fadein]:not(tab-group[collapsed] > &:not([visuallyselected]))
     {
         min-width: var(--tab-min-width-pref) !important;
-
-        tab-group[collapsed] > &
-        {
-            min-width: 0px !important;
-        }
     }
 
     .tab-icon-stack > *
