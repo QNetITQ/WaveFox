@@ -25,7 +25,6 @@
 @import "modules/horizontal_tabs/wavefox_drag_space.css"                layer(BasicPriority) /* supports() */ -moz-pref("sidebar.verticalTabs", false);
 @import "modules/horizontal_tabs/wavefox_toolbar_transparency.css"      layer(BasicPriority) /* supports() */ -moz-pref("sidebar.verticalTabs", false);
 
-@import "modules/horizontal_tabs/wavefox_tab_groups.css"                layer(HighPriority)  /* supports() */ -moz-pref("sidebar.verticalTabs", false);
 @import "modules/horizontal_tabs/wavefox_one_line.css"                  layer(HighPriority)  /* supports() */ -moz-pref("sidebar.verticalTabs", false);
 @import "modules/horizontal_tabs/wavefox_tabs_below_url.css"            layer(HighPriority)  /* supports() */ -moz-pref("sidebar.verticalTabs", false);
 
