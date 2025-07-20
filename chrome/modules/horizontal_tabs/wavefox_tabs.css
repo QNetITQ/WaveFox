@@ -246,12 +246,11 @@
 
     .tabbrowser-tab
     {
-        overflow-clip-margin: var(--tab-first-last-inline-margin) !important;
         padding-inline: 0px !important;
 
-        tab-group[collapsed] > &:not([visuallyselected])
+        &:not(tab-group[collapsed] > &:not([visuallyselected]))
         {
-            --tab-first-last-inline-margin: 0px;
+            overflow: visible !important;
         }
 
         &[pinned]
@@ -389,14 +388,13 @@
     }
 
     /* ---------------------------------------- Tab Scroll Animation ---------------------------------------- */
-
+/*
     #tabbrowser-tabs[overflow]:not([movingtab]) .tabbrowser-tab
     {
         pointer-events: none !important;
         box-sizing: content-box !important;
         padding-inline: var(--tab-first-last-inline-margin) !important;
         margin-inline: calc(-1 * var(--tab-first-last-inline-margin)) !important;
-        overflow-clip-margin: 0px !important;
     }
 
     #tabbrowser-tabs[overflow]:not([movingtab]) .tabbrowser-tab > .tab-stack
@@ -413,4 +411,5 @@
     {
         margin-inline-end: 0px !important;
     }
+*/
 }
