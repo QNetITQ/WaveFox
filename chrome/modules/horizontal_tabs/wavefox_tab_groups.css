@@ -1,0 +1,11 @@
+.tabbrowser-tab:not([hidden]):has(+ tab-group),
+.tabbrowser-tab:not([hidden]):has(+ .tabbrowser-tab[hidden] + tab-group)
+{
+    margin-inline-end: var(--tab-first-last-inline-margin) !important;
+}
+
+tab-group + .tabbrowser-tab:not([hidden]),
+tab-group + .tabbrowser-tab[hidden] + .tabbrowser-tab:not([hidden])
+{
+    margin-inline-start: var(--tab-first-last-inline-margin) !important;
+}
