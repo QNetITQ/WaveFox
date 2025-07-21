@@ -401,6 +401,11 @@
         padding-inline: var(--tab-first-last-inline-margin) !important;
         margin-inline: calc(-1 * var(--tab-first-last-inline-margin)) !important;
         overflow-clip-margin: 0px !important;
+
+        tab-group[collapsed] > &[visuallyselected]
+        {
+            margin-inline: 0px !important;
+        }
     }
 
     #tabbrowser-tabs[overflow]:not([movingtab]) .tabbrowser-tab > .tab-stack
