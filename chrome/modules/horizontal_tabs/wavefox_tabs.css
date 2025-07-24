@@ -329,6 +329,19 @@
         }
     }
 
+    tab-group > .tab-group-overflow-count-container
+    {
+        &::after
+        {
+            inset-block-end: 0px !important;
+        }
+
+        .tab-group-overflow-count
+        {
+            padding: 0px !important;
+        }
+    }
+
     #tabbrowser-tabs[overflow] .tab-drop-indicator
     {
         inset-inline-start: var(--tab-first-last-inline-margin) !important;
