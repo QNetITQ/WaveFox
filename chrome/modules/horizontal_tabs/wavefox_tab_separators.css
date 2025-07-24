@@ -39,9 +39,7 @@
     .tabbrowser-tab:not([hidden]):is([selected], :hover, [multiselected], [dragover-createGroup]) .tab-stack::after,
     .tabbrowser-tab:not([hidden]):has(+ .tabbrowser-tab[dragover-createGroup]) .tab-stack::after,
     #tabbrowser-tabs:not([movingtab]) .tabbrowser-tab:not([hidden]):has(+ .tabbrowser-tab:is([selected], :hover, [multiselected]):not([hidden])) .tab-stack::after,
-    #tabbrowser-tabs:not([movingtab]) .tabbrowser-tab:not([hidden]):has(+ .tabbrowser-tab[hidden] + .tabbrowser-tab:is([selected], :hover, [multiselected]):not([hidden])) .tab-stack::after,
-    #pinned-tabs-container:not([overflowing]):has(.tabbrowser-tab) ~ #tabbrowser-arrowscrollbox:not([overflowing]) > .tabbrowser-tab:nth-child(1 of :not([hidden])) > .tab-stack::before,
-    #pinned-tabs-container:not([overflowing]):has(~ #tabbrowser-arrowscrollbox:not([overflowing]) > .tabbrowser-tab:is([selected], :hover, [multiselected], [dragover-createGroup]):nth-child(1 of :not([hidden]))) > .tabbrowser-tab:last-child > .tab-stack::after
+    #tabbrowser-tabs:not([movingtab]) .tabbrowser-tab:not([hidden]):has(+ .tabbrowser-tab[hidden] + .tabbrowser-tab:is([selected], :hover, [multiselected]):not([hidden])) .tab-stack::after
     {
         opacity: 0 !important;
     }
