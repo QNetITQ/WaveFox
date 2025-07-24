@@ -371,17 +371,17 @@
         margin-inline: var(--tab-first-last-inline-margin) !important;
     }
 
-    /*
-    tab-group > .tab-group-label-container
+    .tabbrowser-tab:not([hidden]) + tab-group > .tab-group-label-container,
+    .tabbrowser-tab:not([hidden]) + .tabbrowser-tab[hidden] + tab-group > .tab-group-label-container
     {
         margin-inline-start: var(--tab-first-last-inline-margin) !important;
     }
 
-    tab-group[collapsed]:not([hasactivetab]) > .tab-group-label-container
+    tab-group[collapsed]:not([hasactivetab]):has(+ .tabbrowser-tab:not([hidden])) > .tab-group-label-container,
+    tab-group[collapsed]:not([hasactivetab]):has(+ .tabbrowser-tab[hidden] + .tabbrowser-tab:not([hidden])) > .tab-group-label-container
     {
         margin-inline-end: var(--tab-first-last-inline-margin) !important;
     }
-    */
 
     /* ---------------------------------------- Tab Scroll Animation ---------------------------------------- */
 
