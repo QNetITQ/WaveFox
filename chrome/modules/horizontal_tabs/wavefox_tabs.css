@@ -75,13 +75,6 @@
     }
 }
 
-/* ---------------------------------------- Indents ---------------------------------------- */
-
-#pinned-tabs-container
-{
-    margin-inline-end: 0px !important;
-}
-
 /* ---------------------------------------- Floating tabs ---------------------------------------- */
 
 @media -moz-pref("WaveFox.Tabs.Shape", 1) or
@@ -358,9 +351,9 @@
 
     /* ---------------------------------------- Indents ---------------------------------------- */
 
-    #pinned-tabs-container:not([overflowing]):has(.tabbrowser-tab) ~ #tabbrowser-arrowscrollbox:not([overflowing]):has(.tabbrowser-tab:nth-child(1 of :not([hidden])))
+    #pinned-tabs-container
     {
-        margin-inline-start: calc(-2 * var(--tab-first-last-inline-margin)) !important;
+        margin-inline-end: 0px !important;
     }
 
     .tabbrowser-tab:nth-child(1 of .tabbrowser-tab:not([hidden], [dragtarget]))
