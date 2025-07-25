@@ -323,8 +323,11 @@
         }
     }
 
-    tab-group > .tab-group-overflow-count-container
+    .tab-group-overflow-count-container
     {
+        margin-inline: 0px !important;
+        padding-inline: 0px !important;
+
         &::after
         {
             inset-block-end: 0px !important;
