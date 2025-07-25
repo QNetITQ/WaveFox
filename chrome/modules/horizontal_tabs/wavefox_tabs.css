@@ -321,12 +321,6 @@
         {
             inset-block: auto 0px !important;
         }
-
-        tab-group[collapsed] + tab-group > &,
-        tab-group[collapsed] + .tabbrowser-tab[hidden] + tab-group > &
-        {
-            margin-inline-start: 4px !important;
-        }
     }
 
     tab-group > .tab-group-overflow-count-container
@@ -384,6 +378,12 @@
         margin-inline: var(--tab-first-last-inline-margin) !important;
     }
 
+    tab-group[collapsed] + tab-group > .tab-group-label-container,
+    tab-group[collapsed] + .tabbrowser-tab[hidden] + tab-group > .tab-group-label-container
+    {
+        margin-inline-start: 4px !important;
+    }
+
     .tabbrowser-tab:not([hidden]) + tab-group > .tab-group-label-container,
     .tabbrowser-tab:not([hidden]) + .tabbrowser-tab[hidden] + tab-group > .tab-group-label-container
     {
@@ -394,6 +394,16 @@
     tab-group[collapsed]:not([hasactivetab]):has(+ .tabbrowser-tab[hidden] + .tabbrowser-tab:not([hidden])) > .tab-group-label-container
     {
         margin-inline-end: var(--tab-first-last-inline-margin) !important;
+    }
+
+    tab-group[collapsed]:has(+ .tabbrowser-tab:nth-child(1 of .tabbrowser-tab:not([hidden]))) > .tab-group-label-container
+    {
+        margin-inline-end: 0px !important;
+    }
+
+    .tabbrowser-tab:nth-last-child(1 of .tabbrowser-tab:not([hidden])) + tab-group > .tab-group-label-container
+    {
+        margin-inline-start: 0px !important;
     }
 
     /* ---------------------------------------- Tab Scroll Animation ---------------------------------------- */
