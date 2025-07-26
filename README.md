@@ -1,4 +1,4 @@
-# *WaveFox*
+# *WaveFox / Work on the style has been suspended indefinitely*
 
 ![WaveFox_Preview](https://github.com/QNetITQ/WaveFox/assets/85301851/268bda8c-b987-45d1-966b-59992c18e66e)
 
