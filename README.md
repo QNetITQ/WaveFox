@@ -1,4 +1,6 @@
-# *WaveFox / Work on the style has been suspended indefinitely*
+# *WaveFox*
+
+## Work on the style is temporarily suspended. It is possible that one or two of the next releases will be missed, but this is not certain. The project is not abandoned, I just have little time now.
 
 ![WaveFox_Preview](https://github.com/QNetITQ/WaveFox/assets/85301851/268bda8c-b987-45d1-966b-59992c18e66e)
 
