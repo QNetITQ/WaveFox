@@ -118,7 +118,7 @@
     {
         min-width: var(--tab-min-width-pref) !important;
 
-        tab-group[collapsed] > &
+        tab-group[collapsed] > &:not([visuallyselected])
         {
             min-width: 0px !important;
         }

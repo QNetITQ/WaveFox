@@ -26,7 +26,7 @@
         }
     }
 
-    #TabsToolbar :is(.tabbrowser-tab, .toolbarbutton-1, separator, #personal-bookmarks, #search-container, .tab-group-label-container)
+    #TabsToolbar :is(.tabbrowser-tab, .toolbarbutton-1, separator, #personal-bookmarks, #search-container, .tab-group-label-container, .tab-group-overflow-count-container)
     {
         margin-top: var(--drag-space, 0px) !important;
     }

@@ -11,10 +11,10 @@
 [Download Firefox](https://www.mozilla.org/en-US/firefox/all/#product-desktop-release) / [Download WaveFox](https://github.com/QNetITQ/WaveFox/releases) / [WaveFox Nightly](https://github.com/QNetITQ/WaveFox/tree/WaveFox-Nightly)
 
 <details>
-  <summary>WaveFox v1.8.141</summary>
+  <summary>WaveFox v1.8.142</summary>
 
 - ##### Minimum Requirements
-  - Firefox 141
+  - Firefox 142
   - Windows / MacOS / Linux
 
 - Download the `chrome` folder and put it in your user profile folder

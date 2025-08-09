@@ -75,13 +75,6 @@
     }
 }
 
-/* ---------------------------------------- Indents ---------------------------------------- */
-
-#pinned-tabs-container
-{
-    margin-inline-end: 0px !important;
-}
-
 /* ---------------------------------------- Floating tabs ---------------------------------------- */
 
 @media -moz-pref("WaveFox.Tabs.Shape", 1) or
@@ -249,7 +242,7 @@
         overflow-clip-margin: var(--tab-first-last-inline-margin) !important;
         padding-inline: 0px !important;
 
-        tab-group[collapsed] > &
+        tab-group[collapsed] > &:not([visuallyselected])
         {
             --tab-first-last-inline-margin: 0px;
         }
@@ -321,45 +314,28 @@
 
     .tab-group-label-container
     {
-        margin-inline: var(--toolbar-start-end-padding) !important;
+        margin-inline: 0px !important;
         padding-inline: 0px !important;
 
         &::after
         {
             inset-block: auto 0px !important;
         }
+    }
 
-        tab-group:not([collapsed]) > &
+    .tab-group-overflow-count-container
+    {
+        margin-inline: 0px var(--tab-first-last-inline-margin) !important;
+        padding-inline: 0px !important;
+
+        &::after
         {
-            margin-inline-end: 0px !important;
+            inset-block-end: 0px !important;
         }
 
-        tab-group + tab-group > &,
-        tab-group + .tabbrowser-tab[hidden] + tab-group > &
+        .tab-group-overflow-count
         {
-            margin-inline-start: 0px !important;
-        }
-
-        .tabbrowser-tab:not([hidden]) + tab-group > &,
-        .tabbrowser-tab:not([hidden]) + .tabbrowser-tab[hidden] + tab-group > &
-        {
-            margin-inline-start: var(--tab-first-last-inline-margin) !important;
-        }
-        
-        tab-group[collapsed]:has(+ .tabbrowser-tab:not([hidden])) > &,
-        tab-group[collapsed]:has(+ .tabbrowser-tab[hidden] + .tabbrowser-tab:not([hidden])) > &
-        {
-            margin-inline-end: var(--tab-first-last-inline-margin) !important;
-        }
-
-        tab-group[collapsed]:has(+ .tabbrowser-tab:nth-child(1 of .tabbrowser-tab:not([hidden]))) > &
-        {
-            margin-inline-end: 0px !important;
-        }
-
-        .tabbrowser-tab:nth-last-child(1 of .tabbrowser-tab:not([hidden])) + tab-group > &
-        {
-            margin-inline-start: 0px !important;
+            padding: 0px !important;
         }
     }
 
@@ -385,9 +361,9 @@
 
     /* ---------------------------------------- Indents ---------------------------------------- */
 
-    #pinned-tabs-container:not([overflowing]):has(.tabbrowser-tab) ~ #tabbrowser-arrowscrollbox:not([overflowing]):has(.tabbrowser-tab:nth-child(1 of :not([hidden])))
+    #pinned-tabs-container
     {
-        margin-inline-start: calc(-2 * var(--tab-first-last-inline-margin)) !important;
+        margin-inline-end: 0px !important;
     }
 
     .tabbrowser-tab:nth-child(1 of .tabbrowser-tab:not([hidden], [dragtarget]))
@@ -400,6 +376,39 @@
         margin-inline-end: var(--tab-first-last-inline-margin) !important;
     }
 
+    tab-group[collapsed] > .tabbrowser-tab[visuallyselected]
+    {
+        margin-inline: var(--tab-first-last-inline-margin) !important;
+    }
+
+    tab-group[collapsed] + tab-group > .tab-group-label-container,
+    tab-group[collapsed] + .tabbrowser-tab[hidden] + tab-group > .tab-group-label-container
+    {
+        margin-inline-start: 4px !important;
+    }
+
+    .tabbrowser-tab:not([hidden]) + tab-group > .tab-group-label-container,
+    .tabbrowser-tab:not([hidden]) + .tabbrowser-tab[hidden] + tab-group > .tab-group-label-container
+    {
+        margin-inline-start: var(--tab-first-last-inline-margin) !important;
+    }
+
+    tab-group[collapsed]:not([hasactivetab]):has(+ .tabbrowser-tab:not([hidden])) > .tab-group-label-container,
+    tab-group[collapsed]:not([hasactivetab]):has(+ .tabbrowser-tab[hidden] + .tabbrowser-tab:not([hidden])) > .tab-group-label-container
+    {
+        margin-inline-end: var(--tab-first-last-inline-margin) !important;
+    }
+
+    tab-group[collapsed]:has(+ .tabbrowser-tab:nth-child(1 of .tabbrowser-tab:not([hidden]))) > .tab-group-label-container
+    {
+        margin-inline-end: 0px !important;
+    }
+
+    .tabbrowser-tab:nth-last-child(1 of .tabbrowser-tab:not([hidden])) + tab-group > .tab-group-label-container
+    {
+        margin-inline-start: 0px !important;
+    }
+
     /* ---------------------------------------- Tab Scroll Animation ---------------------------------------- */
 
     #tabbrowser-tabs[overflow]:not([movingtab]) .tabbrowser-tab
@@ -409,6 +418,11 @@
         padding-inline: var(--tab-first-last-inline-margin) !important;
         margin-inline: calc(-1 * var(--tab-first-last-inline-margin)) !important;
         overflow-clip-margin: 0px !important;
+    }
+
+    #tabbrowser-tabs[overflow]:not([movingtab]) tab-group[collapsed] > .tabbrowser-tab[visuallyselected]
+    {
+        margin-inline: 0px !important;
     }
 
     #tabbrowser-tabs[overflow]:not([movingtab]) .tabbrowser-tab > .tab-stack
