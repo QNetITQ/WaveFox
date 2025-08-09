@@ -325,7 +325,7 @@
 
     .tab-group-overflow-count-container
     {
-        margin-inline: 0px !important;
+        margin-inline: 0px var(--tab-first-last-inline-margin) !important;
         padding-inline: 0px !important;
 
         &::after
