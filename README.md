@@ -153,12 +153,12 @@ The keys below are relevant only for the second option.
 
 - `WaveFox.Tabs.SelectedTabIndicator.Enabled`
 
-### Tabs Below URL
+### Tabs Below URL (Floating Tabs Only)
 ![Снимок](https://github.com/QNetITQ/WaveFox/assets/85301851/514cf30d-a417-48cb-bfd1-0e77c9df1bf4)
 
 - `WaveFox.TabsBelowURL.Enabled` and `browser.tabs.inTitlebar > 0`
 
-### One Line
+### One Line (Floating Tabs Only)
 ![Снимок](https://github.com/QNetITQ/WaveFox/assets/85301851/05bba314-643d-46f3-a09c-b3ac31f9761d)
 
 - `WaveFox.OneLine` > 1 or 2
@@ -324,12 +324,12 @@ The keys below are relevant only for the second option.
 
 - `WaveFox.Tabs.SelectedTabIndicator.Enabled`
 
-### Tabs Below URL (Floating Tabs Only)
+### Tabs Below URL
 ![Снимок](https://github.com/QNetITQ/WaveFox/assets/85301851/514cf30d-a417-48cb-bfd1-0e77c9df1bf4)
 
 - `WaveFox.TabsBelowURL.Enabled` and `browser.tabs.inTitlebar > 0`
 
-### One Line (Floating Tabs Only)
+### One Line
 ![Снимок](https://github.com/QNetITQ/WaveFox/assets/85301851/05bba314-643d-46f3-a09c-b3ac31f9761d)
 
 - `WaveFox.OneLine` > 1 or 2
