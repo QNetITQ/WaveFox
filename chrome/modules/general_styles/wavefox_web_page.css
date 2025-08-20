@@ -7,6 +7,20 @@
             border-bottom: none !important;
         }
 
+        @media -moz-pref("sidebar.expandOnHover", true)
+        {
+            #browser > #sidebar-main
+            {
+                &[sidebar-launcher-expanded],
+                &[sidebar-ongoing-animations]:not([sidebar-launcher-expanded])
+                {
+                    background-color: color-mix(in srgb, var(--toolbar-bgcolor) 75%, transparent) !important;
+                    background-image: none !important;
+                    backdrop-filter: blur(4px) !important;
+                }
+            }
+        }
+
         #browser > #tabbrowser-tabbox
         {
             margin-block-start: 0px !important;
