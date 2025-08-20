@@ -7,10 +7,10 @@
 [Download Firefox](https://www.mozilla.org/en-US/firefox/all/#product-desktop-release) / [Download WaveFox](https://github.com/QNetITQ/WaveFox/releases) / [WaveFox Nightly](https://github.com/QNetITQ/WaveFox/tree/WaveFox-Nightly)
 
 <details>
-  <summary>WaveFox v1.8.142</summary>
+  <summary>WaveFox v1.8.143</summary>
 
 - ##### Minimum Requirements
-  - Firefox 142
+  - Firefox 143
   - Windows / MacOS / Linux
 
 - Download the `chrome` folder and put it in your user profile folder
@@ -324,12 +324,12 @@ The keys below are relevant only for the second option.
 
 - `WaveFox.Tabs.SelectedTabIndicator.Enabled`
 
-### Tabs Below URL
+### Tabs Below URL (Floating Tabs Only)
 ![Снимок](https://github.com/QNetITQ/WaveFox/assets/85301851/514cf30d-a417-48cb-bfd1-0e77c9df1bf4)
 
 - `WaveFox.TabsBelowURL.Enabled` and `browser.tabs.inTitlebar > 0`
 
-### One Line
+### One Line (Floating Tabs Only)
 ![Снимок](https://github.com/QNetITQ/WaveFox/assets/85301851/05bba314-643d-46f3-a09c-b3ac31f9761d)
 
 - `WaveFox.OneLine` > 1 or 2
