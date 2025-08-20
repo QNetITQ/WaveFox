@@ -361,11 +361,6 @@
 
     /* ---------------------------------------- Indents ---------------------------------------- */
 
-    #pinned-tabs-container
-    {
-        margin-inline-end: 0px !important;
-    }
-
     .tabbrowser-tab:nth-child(1 of .tabbrowser-tab:not([hidden], [dragtarget]))
     {
         margin-inline-start: var(--tab-first-last-inline-margin) !important;
