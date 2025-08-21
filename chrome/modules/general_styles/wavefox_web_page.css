@@ -7,7 +7,7 @@
             border-bottom: none !important;
         }
 
-        @media -moz-pref("sidebar.expandOnHover", true)
+        @media -moz-pref("sidebar.visibility", 'expand-on-hover')
         {
             #browser > #sidebar-main
             {
