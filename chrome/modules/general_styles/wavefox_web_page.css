@@ -83,7 +83,7 @@
 
         #tabbrowser-tabpanels
         {
-            background-color: color-mix(in srgb, var(--toolbar-bgcolor) var(--wavefox-webpage-background-saturation, 0%), transparent) !important;
+            background-color: color-mix(in srgb, var(--toolbar-bgcolor) var(--wavefox-webpage-background-saturation, 75%), transparent) !important;
             background-image: none !important;
         }
     }
@@ -108,7 +108,7 @@
     {
         :root
         {
-            --wavefox-webpage-background-saturation: 25%;
+            --wavefox-webpage-background-saturation: 50%;
         }
     }
     
@@ -116,7 +116,7 @@
     {
         :root
         {
-            --wavefox-webpage-background-saturation: 50%;
+            --wavefox-webpage-background-saturation: 25%;
         }
     }
     
@@ -124,7 +124,7 @@
     {
         :root
         {
-            --wavefox-webpage-background-saturation: 75%;
+            --wavefox-webpage-background-saturation: 0%;
         }
     }
 }
