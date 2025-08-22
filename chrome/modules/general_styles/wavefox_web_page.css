@@ -7,20 +7,6 @@
             border-bottom: none !important;
         }
 
-        @media -moz-pref("sidebar.visibility", 'expand-on-hover')
-        {
-            #browser > #sidebar-main
-            {
-                &[sidebar-launcher-expanded],
-                &[sidebar-ongoing-animations]:not([sidebar-launcher-expanded])
-                {
-                    background-color: color-mix(in srgb, var(--toolbar-bgcolor) 75%, transparent) !important;
-                    background-image: none !important;
-                    backdrop-filter: blur(4px) !important;
-                }
-            }
-        }
-
         #browser > #tabbrowser-tabbox
         {
             margin-block-start: 0px !important;
@@ -68,6 +54,20 @@
         &:is([style*="--lwt-header-image"], [style*="--lwt-additional-images"]) #browser > #tabbrowser-tabbox
         {
             margin-block-start: var(--space-small) !important;
+        }
+    }
+}
+
+@media -moz-pref("sidebar.visibility", 'expand-on-hover')
+{
+    #browser > #sidebar-main
+    {
+        &[sidebar-launcher-expanded],
+        &[sidebar-ongoing-animations]:not([sidebar-launcher-expanded])
+        {
+            background-color: color-mix(in srgb, var(--toolbar-bgcolor) 75%, transparent) !important;
+            background-image: none !important;
+            backdrop-filter: blur(8px) !important;
         }
     }
 }
