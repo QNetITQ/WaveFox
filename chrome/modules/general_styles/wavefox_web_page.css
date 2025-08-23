@@ -14,22 +14,6 @@
         }
     }
 
-    @media -moz-pref("WaveFox.WebPage.Floating.Enabled") and -moz-pref("sidebar.verticalTabs", false)
-    {
-        :root:not([inFullscreen], [inDOMFullscreen])
-        {
-            #navigator-toolbox
-            {
-                box-shadow: var(--wavefox-selected-tab-shadow, none) !important;
-            }
-
-            #browser > #tabbrowser-tabbox
-            {
-                margin-block-start: var(--space-small) !important;
-            }
-        }
-    }
-
     @media -moz-pref("WaveFox.WebPage.Background.Saturation", 1)
     {
         :root
