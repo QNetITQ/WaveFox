@@ -11,6 +11,7 @@
     #sidebar-main
     {
         background-color: var(--toolbar-bgcolor) !important;
+        background-image: none !important;
         color: var(--toolbar-color) !important;
         border-radius: 0px !important;
         border: none !important;
@@ -20,8 +21,7 @@
             &[sidebar-launcher-expanded],
             &[sidebar-ongoing-animations]:not([sidebar-launcher-expanded])
             {
-                background-image: none !important;
-                backdrop-filter: blur(4px) !important;
+                backdrop-filter: blur(8px) !important;
             }
         }
     }
