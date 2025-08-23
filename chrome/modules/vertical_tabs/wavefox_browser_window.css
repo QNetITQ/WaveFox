@@ -1,1 +1,34 @@
-!!!!!!!!!!!!!!!!!!!!!!!!!!
+#browser
+{
+    overflow: clip !important;
+    margin-block: 0px 4px !important;
+    margin-inline: 4px !important;
+    border-radius: var(--border-radius-medium) !important;
+    border: 1px solid var(--chrome-content-separator-color) !important;
+    box-shadow: var(--content-area-shadow) !important;
+    background-clip: padding-box !important;
+
+    #sidebar-main
+    {
+        background-color: var(--toolbar-bgcolor) !important;
+        color: var(--toolbar-color) !important;
+        border-radius: 0px !important;
+        border: none !important;
+
+        @media -moz-pref("sidebar.visibility", 'expand-on-hover')
+        {
+            &[sidebar-launcher-expanded],
+            &[sidebar-ongoing-animations]:not([sidebar-launcher-expanded])
+            {
+                background-image: none !important;
+                backdrop-filter: blur(4px) !important;
+            }
+        }
+    }
+  
+    #tabbrowser-tabbox
+    {
+        outline: none !important;
+        box-shadow: none !important;
+    }
+}
