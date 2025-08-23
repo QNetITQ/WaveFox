@@ -19,21 +19,11 @@
             &[sidebar-shown]:not([sidebar-positionend])
             {
                 margin-inline-start: 0px !important;
-                
-                &[sidebar-launcher-expanded][sidebar-launcher-hovered]:not([sidebar-panel-open]), &[sidebar-ongoing-animations]:not([sidebar-launcher-expanded], [sidebar-panel-open])
-                {
-                    margin-inline-start: var(--sidebar-launcher-collapsed-width) !important;
-                }
             }
             
             &[sidebar-shown][sidebar-positionend]
             {
                 margin-inline-end: 0px !important;
-                
-                &[sidebar-launcher-expanded][sidebar-launcher-hovered]:not([sidebar-panel-open]), &[sidebar-ongoing-animations]:not([sidebar-launcher-expanded], [sidebar-panel-open])
-                {
-                    margin-inline-end: var(--sidebar-launcher-collapsed-width) !important;
-                }
             }
 
             @media (-moz-pref("WaveFox.TabsBelowURL.Enabled") and -moz-pref("browser.tabs.inTitlebar", 0)) or
@@ -54,20 +44,6 @@
         &:is([style*="--lwt-header-image"], [style*="--lwt-additional-images"]) #browser > #tabbrowser-tabbox
         {
             margin-block-start: var(--space-small) !important;
-        }
-    }
-}
-
-@media -moz-pref("sidebar.visibility", 'expand-on-hover')
-{
-    #browser > #sidebar-main
-    {
-        &[sidebar-launcher-expanded],
-        &[sidebar-ongoing-animations]:not([sidebar-launcher-expanded])
-        {
-            background-color: color-mix(in srgb, var(--toolbar-bgcolor) 75%, transparent) !important;
-            background-image: none !important;
-            backdrop-filter: blur(8px) !important;
         }
     }
 }
