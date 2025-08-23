@@ -1,4 +1,4 @@
-@media -moz-pref("widget.windows.mica.toplevel-backdrop", 2) and
+@media -moz-pref("widget.windows.mica", true) and
        -moz-pref("extensions.activeThemeID", 'default-theme@mozilla.org') and
       (-moz-pref("browser.tabs.inTitlebar", 1) or -moz-pref("browser.tabs.inTitlebar", 2))
 {
