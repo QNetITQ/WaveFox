@@ -10,11 +10,13 @@
 
     #sidebar-main
     {
-        background-color: var(--toolbar-bgcolor) !important;
+        background-color: color-mix(in srgb, var(--toolbar-bgcolor) 50%, transparent) !important;
         background-image: none !important;
         color: var(--toolbar-color) !important;
         border-radius: 0px !important;
         border: none !important;
+        box-shadow: var(--content-area-shadow) !important;
+        z-index: 3 !important;
 
         @media -moz-pref("sidebar.visibility", 'expand-on-hover')
         {
