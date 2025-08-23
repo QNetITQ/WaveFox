@@ -5,5 +5,6 @@
     :root
     {
         background-color: transparent !important;
+        --toolbar-bgcolor: light-dark(#f9f9fb, rgb(43, 42, 51)) !important;
     }
 }
