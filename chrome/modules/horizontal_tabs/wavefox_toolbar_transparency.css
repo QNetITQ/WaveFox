@@ -1,16 +1,3 @@
-/* ---------- Opaque toolbar ---------- */
-
-@media (-moz-platform: windows) and 
-        -moz-pref("widget.windows.mica") and
-        -moz-pref("extensions.activeThemeID", 'default-theme@mozilla.org') and
-       (-moz-pref("browser.tabs.inTitlebar", 1) or -moz-pref("browser.tabs.inTitlebar", 2))
-{
-    :root
-    {
-        --toolbar-bgcolor: light-dark(#f9f9fb, rgb(43, 42, 51)) !important;
-    }
-}
-
 /* ---------- Toolbar transparency ---------- */
 
 @media (-moz-pref("WaveFox.Toolbar.Transparency", 1)  or
@@ -54,7 +41,6 @@ and
 
         .tabbrowser-tab[visuallyselected] .tab-background,
         #nav-bar,
-        #nav-bar::before,
         #PersonalToolbar
         {
             background-color: color-mix(in srgb, var(--toolbar-bgcolor) var(--toolbar-transparency-level), transparent) !important;
