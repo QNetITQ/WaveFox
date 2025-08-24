@@ -1,6 +1,5 @@
 :root
 {
-    appearance: none !important;
     background-color: var(--toolbox-bgcolor) !important;
   
     &:-moz-window-inactive
