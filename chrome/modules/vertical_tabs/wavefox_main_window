@@ -1,0 +1,10 @@
+:root
+{
+    appearance: none !important;
+    background-color: var(--toolbox-bgcolor) !important;
+  
+    &:-moz-window-inactive
+    {
+        background-color: var(--toolbox-bgcolor-inactive) !important;
+    }
+}
