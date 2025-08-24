@@ -32,7 +32,9 @@
 
 /* ---------- Vertical tabs ---------- */
 
+@import "modules/vertical_tabs/wavefox_main_window.css"    layer(BasicPriority) /* supports() */ -moz-pref("sidebar.verticalTabs", true);
 @import "modules/vertical_tabs/wavefox_browser_window.css" layer(BasicPriority) /* supports() */ -moz-pref("sidebar.verticalTabs", true);
 
 /* ---------------------------------------- Third-party styles (Maximum priority) ---------------------------------------- */
+
 
