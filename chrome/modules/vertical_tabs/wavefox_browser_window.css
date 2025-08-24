@@ -16,14 +16,15 @@
             background-image: none !important;
             color: var(--toolbar-color) !important;
             border-radius: 0px !important;
-            border: none !important;
-    
+            background-clip: padding-box !important;
+
             @media -moz-pref("sidebar.visibility", 'expand-on-hover')
             {
                 &[sidebar-launcher-expanded],
                 &[sidebar-ongoing-animations]:not([sidebar-launcher-expanded])
                 {
-                    backdrop-filter: blur(8px) !important;
+                    backdrop-filter: blur(4px) !important;
+                    box-shadow: var(--content-area-shadow) !important;
                 }
             }
         }
