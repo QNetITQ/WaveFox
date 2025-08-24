@@ -3,7 +3,7 @@
 /* ---------- General styles ---------- */
 
 @import "modules/general_styles/wavefox_transparency_on_windows11.css" layer(BasicPriority)  /* supports() */ (-moz-platform: windows);
-@import "modules/general_styles/wavefox_transparency_on_windows10.css" layer(BasicPriority)  /* supports() */ (-moz-platform: windows);
+@import "modules/general_styles/wavefox_transparency_on_windows10.css" layer(HighPriority)   /* supports() */ (-moz-platform: windows);
 @import "modules/general_styles/wavefox_transparency_on_linux.css"     layer(HighPriority)   /* supports() */ (-moz-platform: linux);
 @import "modules/general_styles/wavefox_web_page.css"                  layer(BasicPriority); /* supports() -moz-pref("", false) */
 
@@ -36,6 +36,7 @@
 @import "modules/vertical_tabs/wavefox_browser_window.css" layer(BasicPriority) /* supports() */ -moz-pref("sidebar.verticalTabs", true);
 
 /* ---------------------------------------- Third-party styles (Maximum priority) ---------------------------------------- */
+
 
 
 
