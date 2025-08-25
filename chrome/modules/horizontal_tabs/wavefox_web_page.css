@@ -6,44 +6,50 @@
         {
             border-bottom: none !important;
         }
+        
+        #browser
+        {
+            #tabbrowser-tabbox
+            {
+                outline: none !important;
+                box-shadow: none !important;
+                
+                #tabbrowser-tabpanels
+                {
+                    overflow: auto !important;
+                    margin-block: 0px 4px !important;
+                    margin-inline: 4px !important;
+                    border: 1px solid var(--chrome-content-separator-color) !important;
+                    border-radius: var(--border-radius-medium) !important;
+                    box-shadow: var(--content-area-shadow) !important;
+                    background-clip: padding-box !important;
+                }
+                
+                &[sidebar-shown]:not([sidebar-positionend]) #tabbrowser-tabpanels
+                {
+                    margin-inline-start: 0px !important;
+                }
+
+                &[sidebar-shown][sidebar-positionend] #tabbrowser-tabpanels
+                {
+                    margin-inline-end: 0px !important;
+                }
+            }
+        }
 
         #browser > #tabbrowser-tabbox
         {
-            margin-block-start: 0px !important;
-            margin-block-end: var(--space-small) !important;
-            margin-inline: var(--space-small) !important;
-            border-radius: var(--border-radius-medium) !important;
-            box-shadow: var(--content-area-shadow) !important;
-            outline: 0.5px solid var(--sidebar-border-color) !important;
-
-            &[sidebar-shown]:not([sidebar-positionend])
-            {
-                margin-inline-start: 0px !important;
-            }
-            
-            &[sidebar-shown][sidebar-positionend]
-            {
-                margin-inline-end: 0px !important;
-            }
-
             @media (-moz-pref("WaveFox.TabsBelowURL.Enabled") and -moz-pref("browser.tabs.inTitlebar", 0)) or
                     -moz-pref("WaveFox.OneLine", 1) or 
                     -moz-pref("WaveFox.OneLine", 2)
             {
-                margin-block-start: var(--space-small) !important;
-            }
-            
-            > #tabbrowser-tabpanels
-            {
-                border-radius: var(--border-radius-medium) !important;
-                overflow: clip !important;
-                clip-path: border-box !important;
+                margin-block-start: 4px !important;
             }
         }
 
         &:is([style*="--lwt-header-image"], [style*="--lwt-additional-images"]) #browser > #tabbrowser-tabbox
         {
-            margin-block-start: var(--space-small) !important;
+            margin-block-start: 4px !important;
         }
     }
 }
