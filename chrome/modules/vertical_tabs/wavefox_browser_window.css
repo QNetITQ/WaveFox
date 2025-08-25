@@ -28,7 +28,27 @@
                 }
             }
         }
-      
+
+        #sidebar-launcher-splitter,
+        #sidebar-splitter
+        {
+            width: 2px !important;
+            margin-inline-start: -2px !important;
+            border: none !important;
+        }
+
+        #sidebar-box
+        {
+            padding: 0px !important;
+            
+            #sidebar
+            {
+                border-radius: 0px !important;
+                box-shadow: none !important;
+                outline: none !important;
+            }
+        }
+
         #tabbrowser-tabbox
         {
             outline: none !important;
