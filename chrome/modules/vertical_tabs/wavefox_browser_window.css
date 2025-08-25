@@ -20,8 +20,8 @@
 
             @media -moz-pref("sidebar.visibility", 'expand-on-hover')
             {
-                &[sidebar-launcher-expanded],
-                &[sidebar-ongoing-animations]:not([sidebar-launcher-expanded])
+                :root[sidebar-expand-on-hover] &[sidebar-launcher-expanded],
+                :root[sidebar-expand-on-hover] &[sidebar-ongoing-animations]:not([sidebar-launcher-expanded])
                 {
                     backdrop-filter: blur(8px) !important;
                     box-shadow: var(--content-area-shadow) !important;
