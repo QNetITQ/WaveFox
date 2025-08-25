@@ -1,4 +1,4 @@
-:root
+#main-window
 {
     background-color: var(--toolbox-bgcolor) !important;
     will-change: background-color !important;
