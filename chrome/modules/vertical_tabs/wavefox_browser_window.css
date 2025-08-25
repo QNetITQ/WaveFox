@@ -32,8 +32,8 @@
         #sidebar-launcher-splitter,
         #sidebar-splitter
         {
-            width: 2px !important;
-            margin-inline-start: -2px !important;
+            width: var(--splitter-width) !important;
+            margin-inline-start: calc(-1 * var(--splitter-width)) !important;
             border: none !important;
         }
 
@@ -43,6 +43,8 @@
             
             #sidebar
             {
+                background-color: color-mix(in srgb, var(--toolbar-bgcolor) 75%, transparent) !important;
+                color: var(--toolbar-color) !important;
                 border-radius: 0px !important;
                 box-shadow: none !important;
                 outline: none !important;
