@@ -37,7 +37,7 @@
             }
         }
 
-        #browser > #tabbrowser-tabbox
+        #browser > #tabbrowser-tabbox > #tabbrowser-tabpanels
         {
             @media (-moz-pref("WaveFox.TabsBelowURL.Enabled") and -moz-pref("browser.tabs.inTitlebar", 0)) or
                     -moz-pref("WaveFox.OneLine", 1) or 
@@ -47,7 +47,7 @@
             }
         }
 
-        &:is([style*="--lwt-header-image"], [style*="--lwt-additional-images"]) #browser > #tabbrowser-tabbox
+        &:is([style*="--lwt-header-image"], [style*="--lwt-additional-images"]) #browser > #tabbrowser-tabbox > #tabbrowser-tabpanels
         {
             margin-block-start: 4px !important;
         }
