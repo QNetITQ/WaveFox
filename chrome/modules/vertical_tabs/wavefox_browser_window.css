@@ -55,6 +55,12 @@
         {
             outline: none !important;
             box-shadow: none !important;
+
+            #tabbrowser-tabpanels
+            {
+                background-color: color-mix(in srgb, var(--toolbar-bgcolor) 75%, transparent) !important;
+                background-image: none !important;
+            }
         }
     }
 }
