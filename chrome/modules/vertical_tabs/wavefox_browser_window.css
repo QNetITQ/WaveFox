@@ -2,7 +2,7 @@
 {
     #browser
     {
-        overflow: clip !important;
+        overflow: hidden !important;
         margin-block: 0px 4px !important;
         margin-inline: 4px !important;
         border-radius: var(--border-radius-medium) !important;
