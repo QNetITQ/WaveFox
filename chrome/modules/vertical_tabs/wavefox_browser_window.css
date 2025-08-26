@@ -2,7 +2,7 @@
 {
     #browser
     {
-        overflow: auto !important;
+        overflow: clip !important;
         margin-block: 0px 4px !important;
         margin-inline: 4px !important;
         border-radius: var(--border-radius-medium) !important;
@@ -33,8 +33,13 @@
         #sidebar-splitter
         {
             width: var(--splitter-width) !important;
-            margin-inline-start: calc(-1 * var(--splitter-width)) !important;
+            margin-inline: calc(-1 * var(--splitter-width)) 0px !important;
             border: none !important;
+
+            :is(#sidebar-main, #sidebar-box)[sidebar-positionend] + &
+            {
+                margin-inline: 0px calc(-1 * var(--splitter-width)) !important;
+            }
         }
 
         #sidebar-box
