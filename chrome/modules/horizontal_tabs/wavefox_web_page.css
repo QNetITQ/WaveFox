@@ -16,7 +16,7 @@
                 
                 #tabbrowser-tabpanels
                 {
-                    overflow: clip !important;
+                    overflow: hidden !important;
                     margin-block: 0px 4px !important;
                     margin-inline: 4px !important;
                     border: 1px solid var(--chrome-content-separator-color) !important;
