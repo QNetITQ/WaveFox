@@ -2,7 +2,7 @@
 {
     #browser
     {
-        overflow: hidden !important;
+        overflow: clip !important;
         margin-block: 0px 4px !important;
         margin-inline: 4px !important;
         border-radius: var(--border-radius-medium) !important;
@@ -58,14 +58,7 @@
 
         #tabbrowser-tabbox
         {
-            outline: none !important;
-            box-shadow: none !important;
-
-            #tabbrowser-tabpanels
-            {
-                background-color: color-mix(in srgb, var(--toolbar-bgcolor) 75%, transparent) !important;
-                background-image: none !important;
-            }
+            clip-path: content-box !important;
         }
     }
 }
