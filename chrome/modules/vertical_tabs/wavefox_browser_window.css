@@ -44,15 +44,12 @@
 
         #sidebar-box
         {
+            clip-path: content-box !important;
             padding: 0px !important;
             
             #sidebar
             {
-                background-color: color-mix(in srgb, var(--toolbar-bgcolor) 75%, transparent) !important;
-                color: var(--toolbar-color) !important;
                 border-radius: 0px !important;
-                box-shadow: none !important;
-                outline: none !important;
             }
         }
 
