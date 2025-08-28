@@ -36,7 +36,7 @@
             
         :root:-moz-locale-dir(rtl) &
         {
-            mask-image: linear-gradient(to bottom, black, black), radial-gradient(circle at left top, black 8px, transparent 9px) !important;
+            mask-image: linear-gradient(to bottom, black, black), radial-gradient(circle at left bottom, black 8px, transparent 9px) !important;
         }
     }
 }
@@ -103,7 +103,7 @@
 
             :root:-moz-locale-dir(rtl) &
             {
-                mask-image: linear-gradient(to bottom, black, black), radial-gradient(circle at left top, black 8px, transparent 9px) !important;
+                mask-image: linear-gradient(to bottom, black, black), radial-gradient(circle at left bottom, black 8px, transparent 9px) !important;
             }
         }
 
@@ -118,7 +118,7 @@
 {
     .tab-icon-stack > *
     {
-        margin-inline-end: 8px !important;
+        margin-inline-end: 10px !important;
     }
     
     .tab-audio-button
