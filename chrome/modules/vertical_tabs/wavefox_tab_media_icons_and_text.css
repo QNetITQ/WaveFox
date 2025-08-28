@@ -48,6 +48,7 @@
     .tab-icon-overlay
     {
         background-color: currentColor !important;
+        background-image: none !important;
         border-radius: 50px !important;
         top: 0px !important;
         inset-inline-end: 0px !important;
