@@ -27,7 +27,7 @@
         
     &:where([soundplaying], [muted], [activemedia-blocked]) .tab-icon-stack > :not(.tab-icon-overlay)
     {
-        mask-image: linear-gradient(to bottom, black, black), radial-gradient(circle at right bottom, black 8px, transparent 9px) !important;
+        mask-image: linear-gradient(to bottom, black, black), radial-gradient(circle at right top, black 8px, transparent 9px) !important;
         mask-size: 16px 16px !important;
         mask-position: center center !important;
         mask-repeat: no-repeat !important;
@@ -36,7 +36,7 @@
             
         :root:-moz-locale-dir(rtl) &
         {
-            mask-image: linear-gradient(to bottom, black, black), radial-gradient(circle at left bottom, black 8px, transparent 9px) !important;
+            mask-image: linear-gradient(to bottom, black, black), radial-gradient(circle at left top, black 8px, transparent 9px) !important;
         }
     }
 }
@@ -94,7 +94,7 @@
     {
         .tab-icon-stack > :not(.tab-icon-overlay)
         {
-            mask-image: linear-gradient(to bottom, black, black), radial-gradient(circle at right bottom, black 8px, transparent 9px) !important;
+            mask-image: linear-gradient(to bottom, black, black), radial-gradient(circle at right top, black 8px, transparent 9px) !important;
             mask-size: 16px 16px !important;
             mask-position: center center !important;
             mask-repeat: no-repeat !important;
@@ -103,7 +103,7 @@
 
             :root:-moz-locale-dir(rtl) &
             {
-                mask-image: linear-gradient(to bottom, black, black), radial-gradient(circle at left bottom, black 8px, transparent 9px) !important;
+                mask-image: linear-gradient(to bottom, black, black), radial-gradient(circle at left top, black 8px, transparent 9px) !important;
             }
         }
 
@@ -128,8 +128,8 @@
 }
 
 /* ---------- Picture-In-Picture ---------- */
-/*
-.tabbrowser-tab[pictureinpicture]:not([crashed], [busy])
+
+#tabbrowser-tabs:is([expanded], :not([expanded])) .tabbrowser-tab[pictureinpicture]:not([crashed], [busy])
 {
     .tab-icon-stack::before
     {
@@ -179,7 +179,6 @@
         mask-composite: exclude, add;
     }
 }
-*/
 
 /* -------------------- Tab Text -------------------- */
 
@@ -199,4 +198,11 @@
     white-space: nowrap !important;
     text-overflow: ellipsis !important;
     margin-block: 0px !important;
+}
+
+/* -------------------- Tab content / Temporary solution -------------------- */
+
+.tab-content
+{
+    background-position: 50% calc(50% + 12px) !important;
 }
