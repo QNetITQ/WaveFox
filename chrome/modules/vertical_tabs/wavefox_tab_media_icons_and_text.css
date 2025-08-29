@@ -114,11 +114,11 @@
     }
 }
 
-#tabbrowser-tabs[expanded] .tabbrowser-tab:not([pinned])
+#tabbrowser-tabs[expanded] .tabbrowser-tab
 {
     .tab-icon-stack > *
     {
-        margin-inline-end: 10px !important;
+        margin-inline-end: 8px !important;
     }
     
     .tab-audio-button
