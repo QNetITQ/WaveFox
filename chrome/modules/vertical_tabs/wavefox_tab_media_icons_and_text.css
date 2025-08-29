@@ -11,7 +11,7 @@
         background-image: none !important;
         fill: currentColor !important;
         border-radius: 50px !important;
-        top: 8px !important;
+        top: -8px !important;
         inset-inline-end: -8px !important;
         
         &:hover
@@ -86,7 +86,7 @@
     
     .tab-icon-overlay
     {
-        top: 8px !important;
+        top: -8px !important;
         inset-inline-end: -8px !important;
     }
     
