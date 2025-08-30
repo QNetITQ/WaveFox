@@ -55,6 +55,22 @@
         #tabbrowser-tabbox
         {
             clip-path: content-box !important;
+
+            @media -moz-pref("wavefox.tests.extra", true)
+            {
+                background-color: color-mix(in srgb, var(--toolbar-bgcolor) 75%, transparent) !important;
+                background-image: none !important;
+
+                #tabbrowser-tabpanels
+                {
+                    overflow: clip !important;
+                    margin: 4px !important;
+                    border-radius: var(--border-radius-medium) !important;
+                    border: 1px solid var(--sidebar-border-color) !important;
+                    box-shadow: var(--content-area-shadow) !important;
+                    background-clip: padding-box !important;
+                }
+            }
         }
     }
 }
