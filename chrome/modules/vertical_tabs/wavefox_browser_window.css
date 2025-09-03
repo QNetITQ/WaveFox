@@ -1,5 +1,4 @@
-@media -moz-pref("WaveFox.VerticalTabs.WebPage.Floating", 1) or 
-       -moz-pref("WaveFox.VerticalTabs.WebPage.Floating", 2)
+@media -moz-pref("WaveFox.VerticalTabs.WebPage.Floating.Enabled")
 {
     :root:not([inFullscreen], [inDOMFullscreen])
     {
@@ -27,6 +26,7 @@
                     :root[sidebar-expand-on-hover] &[sidebar-ongoing-animations]:not([sidebar-launcher-expanded])
                     {
                         backdrop-filter: blur(8px) !important;
+                        box-shadow: var(--content-area-shadow) !important;
                     }
                 }
             }
@@ -59,23 +59,30 @@
 
             #tabbrowser-tabbox
             {
-                clip-path: content-box !important;
+                outline: none !important;
+                box-shadow: none !important;
+                background-color: color-mix(in srgb, var(--toolbar-bgcolor) 75%, transparent) !important;
+                background-image: none !important;
 
-                @media -moz-pref("WaveFox.VerticalTabs.WebPage.Floating", 2)
+                #tabbrowser-tabpanels
                 {
-                    background-color: color-mix(in srgb, var(--toolbar-bgcolor) 75%, transparent) !important;
-                    background-image: none !important;
-
-                    #tabbrowser-tabpanels
-                    {
-                        overflow: clip !important;
-                        margin: 4px !important;
-                        border-radius: var(--border-radius-medium) !important;
-                        border: 1px solid var(--sidebar-border-color) !important;
-                        box-shadow: var(--content-area-shadow) !important;
-                        background-clip: padding-box !important;
-                    }
+                    overflow: clip !important;
+                    margin: 4px !important;
+                    border-radius: var(--border-radius-medium) !important;
+                    border: 1px solid var(--sidebar-border-color) !important;
+                    box-shadow: var(--content-area-shadow) !important;
+                    background-clip: padding-box !important;
                 }
+            }
+            
+            #sidebar-main:not([sidebar-positionend], [hidden]) ~ #tabbrowser-tabbox > #tabbrowser-tabpanels
+            {
+                margin-inline-start: 0px !important;
+            }
+            
+            #sidebar-main[sidebar-positionend]:not([hidden]) ~ #tabbrowser-tabbox > #tabbrowser-tabpanels
+            {
+                margin-inline-end: 0px !important;
             }
         }
     }
