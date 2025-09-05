@@ -1,0 +1,10 @@
+@media -moz-pref("widget.windows.mica", true) and
+       -moz-pref("extensions.activeThemeID", 'default-theme@mozilla.org') and
+      (-moz-pref("browser.tabs.inTitlebar", 1) or -moz-pref("browser.tabs.inTitlebar", 2))
+{
+    :root
+    {
+        background-color: transparent !important;
+        --toolbar-bgcolor: light-dark(#f9f9fb, rgb(43, 42, 51)) !important;
+    }
+}

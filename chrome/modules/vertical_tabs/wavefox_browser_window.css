@@ -1,0 +1,89 @@
+@media -moz-pref("WaveFox.VerticalTabs.WebPage.Floating.Enabled")
+{
+    :root:not([inFullscreen], [inDOMFullscreen])
+    {
+        #browser
+        {
+            overflow: clip !important;
+            margin-block: 0px 4px !important;
+            margin-inline: 4px !important;
+            border-radius: var(--border-radius-medium) !important;
+            border: 1px solid var(--chrome-content-separator-color) !important;
+            box-shadow: var(--content-area-shadow) !important;
+            background-clip: padding-box !important;
+
+            #sidebar-main
+            {
+                background-color: color-mix(in srgb, var(--toolbar-bgcolor) 75%, transparent) !important;
+                background-image: none !important;
+                color: var(--toolbar-color) !important;
+                border-radius: 0px !important;
+                background-clip: padding-box !important;
+
+                @media -moz-pref("sidebar.visibility", 'expand-on-hover')
+                {
+                    :root[sidebar-expand-on-hover] &[sidebar-launcher-expanded],
+                    :root[sidebar-expand-on-hover] &[sidebar-ongoing-animations]:not([sidebar-launcher-expanded])
+                    {
+                        backdrop-filter: blur(8px) !important;
+                        box-shadow: var(--content-area-shadow) !important;
+                    }
+                }
+            }
+
+            #sidebar-launcher-splitter,
+            #sidebar-splitter
+            {
+                width: var(--splitter-width) !important;
+                margin-inline: calc(-1 * var(--splitter-width)) 0px !important;
+                border: none !important;
+
+                :is(#sidebar-main, #sidebar-box)[sidebar-positionend] + &
+                {
+                    margin-inline: 0px calc(-1 * var(--splitter-width)) !important;
+                }
+            }
+
+            #sidebar-box
+            {
+                clip-path: content-box !important;
+                padding: 0px !important;
+
+                #sidebar
+                {
+                    background-color: color-mix(in srgb, var(--toolbar-bgcolor) 75%, transparent) !important;
+                    color: var(--toolbar-color) !important;
+                    border-radius: 0px !important;
+                }
+            }
+
+            #tabbrowser-tabbox
+            {
+                outline: none !important;
+                box-shadow: none !important;
+                background-color: color-mix(in srgb, var(--toolbar-bgcolor) 75%, transparent) !important;
+                background-image: none !important;
+
+                #tabbrowser-tabpanels
+                {
+                    overflow: clip !important;
+                    margin: 4px !important;
+                    border-radius: var(--border-radius-medium) !important;
+                    border: 1px solid var(--sidebar-border-color) !important;
+                    box-shadow: var(--content-area-shadow) !important;
+                    background-clip: padding-box !important;
+                }
+            }
+            
+            #sidebar-main:not([sidebar-positionend], [hidden]) ~ #tabbrowser-tabbox > #tabbrowser-tabpanels
+            {
+                margin-inline-start: 0px !important;
+            }
+            
+            #sidebar-main[sidebar-positionend]:not([hidden]) ~ #tabbrowser-tabbox > #tabbrowser-tabpanels
+            {
+                margin-inline-end: 0px !important;
+            }
+        }
+    }
+}

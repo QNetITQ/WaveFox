@@ -2,9 +2,10 @@
 
 /* ---------- General styles ---------- */
 
-@import "modules/general_styles/wavefox_transparency_on_windows10.css" layer(BasicPriority)  /* supports() */ (-moz-platform: windows);
-@import "modules/general_styles/wavefox_transparency_on_linux.css"     layer(BasicPriority)  /* supports() */ (-moz-platform: linux);
-@import "modules/general_styles/wavefox_web_page.css"                  layer(BasicPriority); /* supports() -moz-pref("", false) */
+@import "modules/general_styles/wavefox_transparency_on_windows11.css" layer(BasicPriority)  /* supports() */ (-moz-platform: windows);
+@import "modules/general_styles/wavefox_transparency_on_windows10.css" layer(HighPriority)   /* supports() */ (-moz-platform: windows);
+@import "modules/general_styles/wavefox_transparency_on_linux.css"     layer(HighPriority)   /* supports() */ (-moz-platform: linux);
+@import "modules/general_styles/wavefox_web_page.css"                  layer(HighPriority); /* supports() -moz-pref("", false) */
 
 @import "modules/general_styles/firefox-csshacks/iconized_content_context_menu.css" layer(BasicPriority) /* supports() */ -moz-pref("WaveFox.Icons", 1);
 @import "modules/general_styles/firefox-csshacks/iconized_main_menu.css"            layer(BasicPriority) /* supports() */ -moz-pref("WaveFox.Icons", 1);
@@ -24,8 +25,15 @@
 @import "modules/horizontal_tabs/wavefox_tab_shadows.css"               layer(BasicPriority) /* supports() */ -moz-pref("sidebar.verticalTabs", false);
 @import "modules/horizontal_tabs/wavefox_drag_space.css"                layer(BasicPriority) /* supports() */ -moz-pref("sidebar.verticalTabs", false);
 @import "modules/horizontal_tabs/wavefox_toolbar_transparency.css"      layer(BasicPriority) /* supports() */ -moz-pref("sidebar.verticalTabs", false);
+@import "modules/horizontal_tabs/wavefox_web_page.css"                  layer(BasicPriority) /* supports() */ -moz-pref("sidebar.verticalTabs", false);
 
 @import "modules/horizontal_tabs/wavefox_one_line.css"                  layer(HighPriority)  /* supports() */ -moz-pref("sidebar.verticalTabs", false);
 @import "modules/horizontal_tabs/wavefox_tabs_below_url.css"            layer(HighPriority)  /* supports() */ -moz-pref("sidebar.verticalTabs", false);
 
-/* ---------------------------------------- Third-party styles (Maximum priority) ---------------------------------------- */
+/* ---------- Vertical tabs ---------- */
+
+@import "modules/vertical_tabs/wavefox_main_window.css"              layer(BasicPriority) /* supports() */ -moz-pref("sidebar.verticalTabs", true);
+@import "modules/vertical_tabs/wavefox_browser_window.css"           layer(BasicPriority) /* supports() */ -moz-pref("sidebar.verticalTabs", true);
+@import "modules/vertical_tabs/wavefox_tab_media_icons_and_text.css" layer(BasicPriority) /* supports() */ -moz-pref("sidebar.verticalTabs", true);
+
+/* ---------------------------------------- Third-party styles (Maximum priority) ---------------------------------------- */        

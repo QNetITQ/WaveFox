@@ -1,78 +1,6 @@
 @media -moz-pref("WaveFox.OneLine", 1) or
        -moz-pref("WaveFox.OneLine", 2)
 {
-    @media -moz-pref("WaveFox.OneLine", 1)
-    {
-        #navigator-toolbox
-        {
-            grid-template-columns: minmax(auto, 0%) auto !important;
-        }
-        
-        #TabsToolbar
-        {
-            grid-area: 2 / 2 / auto / auto !important;
-        }
-
-        #nav-bar
-        {
-            grid-area: 2 / 1 / auto / auto !important;
-        }
-    }
-
-    @media -moz-pref("WaveFox.OneLine", 2)
-    {
-        #navigator-toolbox
-        {
-            grid-template-columns: auto minmax(auto, 0%) !important;
-        }
-
-        #TabsToolbar
-        {
-            grid-area: 2 / 1 / auto / auto !important;
-        }
-
-        #nav-bar
-        {
-            grid-area: 2 / 2 / auto / auto !important;
-        }
-    }
-
-    #navigator-toolbox
-    {
-        display: grid !important;
-        -moz-window-dragging: drag !important;
-    }
-
-    /* -------------------- Nav Bar -------------------- */
-
-    #nav-bar
-    {
-        width: fit-content !important;
-        border: none !important;
-        align-self: end !important;
-
-        #urlbar-container
-        {
-            min-height: var(--tab-min-height) !important;
-        }
-    }
-
-    /* -------------------- Bookmarks Bar / Notifications -------------------- */
-
-    #navigator-toolbox > *:not(#TabsToolbar, #nav-bar)
-    {
-        grid-column: 1 / span 2 !important;
-    }
-
-    /* -------------------- Customization -------------------- */
-
-    #customization-panelWrapper
-    {
-        --panel-arrow-offset: 0px !important;
-    }
-
-    /* -------------------- Floating tabs -------------------- */
-
     @media not (-moz-pref("WaveFox.Tabs.Shape", 5)   or
                 -moz-pref("WaveFox.Tabs.Shape", 6)   or
                 -moz-pref("WaveFox.Tabs.Shape", 7)   or
@@ -82,78 +10,82 @@
                 -moz-pref("WaveFox.Tabs.Shape", 11)  or
                 -moz-pref("WaveFox.Tabs.Shape", 12))
     {
-        #nav-bar
+        @media -moz-pref("WaveFox.OneLine", 1)
         {
-            border-radius: var(--wavefox-tab-border-radius, 4px) !important;
-            margin: var(--tab-block-margin) !important;
-            box-shadow: var(--wavefox-selected-tab-shadow, none) !important;
+            #navigator-toolbox
+            {
+                grid-template-columns: minmax(auto, 0%) auto !important;
+            }
+
+            #TabsToolbar
+            {
+                grid-area: 2 / 2 / auto / auto !important;
+            }
+
+            #nav-bar
+            {
+                grid-area: 2 / 1 / auto / auto !important;
+            }
         }
-        
+
+        @media -moz-pref("WaveFox.OneLine", 2)
+        {
+            #navigator-toolbox
+            {
+                grid-template-columns: auto minmax(auto, 0%) !important;
+            }
+
+            #TabsToolbar
+            {
+                grid-area: 2 / 1 / auto / auto !important;
+            }
+
+            #nav-bar
+            {
+                grid-area: 2 / 2 / auto / auto !important;
+            }
+        }
+
+        #navigator-toolbox
+        {
+            display: grid !important;
+            -moz-window-dragging: drag !important;
+        }
+
         #TabsToolbar
         {
             box-shadow: none !important;
         }
-    }
 
-    /* -------------------- Attached tabs -------------------- */
+        /* -------------------- Nav Bar -------------------- */
 
-    @media -moz-pref("WaveFox.Tabs.Shape", 5)
-    {
         #nav-bar
         {
+            width: fit-content !important;
+            border: none !important;
+            align-self: end !important;
+            border-radius: var(--wavefox-tab-border-radius, 4px) !important;
+            margin: var(--tab-block-margin) !important;
             box-shadow: var(--wavefox-selected-tab-shadow, none) !important;
-            clip-path: inset(-4px -4px 0px -4px) !important;
-        }
-        
-        #urlbar-container,
-        #search-container
-        {
-            padding-block: 0px !important;
-        }
-    }
 
-    @media -moz-pref("WaveFox.Tabs.Shape", 6)  or
-           -moz-pref("WaveFox.Tabs.Shape", 7)  or
-           -moz-pref("WaveFox.Tabs.Shape", 8)  or
-           -moz-pref("WaveFox.Tabs.Shape", 9)  or
-           -moz-pref("WaveFox.Tabs.Shape", 10) or
-           -moz-pref("WaveFox.Tabs.Shape", 11) or
-           -moz-pref("WaveFox.Tabs.Shape", 12)
-    {
-        #nav-bar
-        {
-            position: relative !important;
-            background-color: transparent !important;
-            filter: var(--wavefox-selected-tab-filter, none) !important;
-            box-shadow: var(--wavefox-inner-tabbar-shadow, none) !important;
-            clip-path: inset(-4px 0px 0px 0px) !important;
-            padding-inline: calc(var(--tab-min-height) / 2) !important;
-            
-            &::before
+            #urlbar-container
             {
-                content: "";
-                display: block;
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                inset-block-end: 0px;
-                inset-inline-start: 0px;
-                background-color: var(--toolbar-bgcolor);
-                pointer-events: none;
-                z-index: -1;
-                mask-image: var(--left-svg), linear-gradient(to bottom, black, black), var(--right-svg);
-                mask-size: contain;
-                mask-position: left center, center center, right center;
-                mask-repeat: no-repeat;
-                mask-composite: exclude;
-                mask-mode: alpha;
+                min-height: var(--tab-min-height) !important;
             }
         }
 
-        #urlbar-container,
-        #search-container
+        /* -------------------- Bookmarks Bar / Notifications -------------------- */
+
+        #navigator-toolbox > *:not(#TabsToolbar, #nav-bar)
         {
-            padding-block: 0px !important;
+            grid-column: 1 / span 2 !important;
+        }
+
+        /* -------------------- Customization -------------------- */
+
+        #customization-panelWrapper
+        {
+            --panel-arrow-offset: 0px !important;
         }
     }
 }

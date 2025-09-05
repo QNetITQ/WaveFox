@@ -9,10 +9,10 @@
 [Download Firefox](https://www.mozilla.org/en-US/firefox/all/#product-desktop-release) / [Download WaveFox](https://github.com/QNetITQ/WaveFox/releases) / [WaveFox Nightly](https://github.com/QNetITQ/WaveFox/tree/WaveFox-Nightly)
 
 <details>
-  <summary>WaveFox v1.8.142</summary>
+  <summary>WaveFox v1.8.143</summary>
 
 - ##### Minimum Requirements
-  - Firefox 142
+  - Firefox 143
   - Windows / MacOS / Linux
 
 - Download the `chrome` folder and put it in your user profile folder
@@ -155,17 +155,17 @@ The keys below are relevant only for the second option.
 
 - `WaveFox.Tabs.SelectedTabIndicator.Enabled`
 
-### Tabs Below URL
+### Tabs Below URL (Floating Tabs Only)
 ![Снимок](https://github.com/QNetITQ/WaveFox/assets/85301851/514cf30d-a417-48cb-bfd1-0e77c9df1bf4)
 
 - `WaveFox.TabsBelowURL.Enabled` and `browser.tabs.inTitlebar > 0`
 
-### One Line
+### One Line (Floating Tabs Only)
 ![Снимок](https://github.com/QNetITQ/WaveFox/assets/85301851/05bba314-643d-46f3-a09c-b3ac31f9761d)
 
 - `WaveFox.OneLine` > 1 or 2
 
-### Floating Web Page (Horizontal and Vertical tabs)
+### Floating Web Page (Horizontal tabs)
 ![изображение](https://github.com/user-attachments/assets/26a19f9a-642b-4a10-a4f9-80d87cc42bdc)
 
 - `WaveFox.WebPage.Floating.Enabled`
@@ -176,6 +176,11 @@ Works only with system theme. Requires transparency support from the operating s
 
 - `WaveFox.WebPage.Transparency` > 1 or 2 and `browser.tabs.allow_transparent_browser` (1 - New tab page only / 2 - All browser windows and all websites)
   - `WaveFox.WebPage.Background.Saturation` > 1 or 2 or 3
+
+### Floating Web Page (Vertical tabs)
+<img width="1780" height="873" alt="изображение" src="https://github.com/user-attachments/assets/a9bc4d90-1b3e-4707-b805-67fe449dcbd2" />
+
+- `WaveFox.VerticalTabs.WebPage.Floating.Enabled`
 
 </details>
 
