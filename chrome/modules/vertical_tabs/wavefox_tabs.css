@@ -1,0 +1,21 @@
+:root
+{
+    
+}
+
+.tabbrowser-tab
+{
+    padding-block: 2px !important;
+
+    &:not([visuallyselected], :hover, [multiselected])
+    {
+        .tab-background
+        {
+            background-color: transparent !important;
+        }
+    }
+    .tab-background
+    {
+        margin-block: 0px !important;
+    }
+}
