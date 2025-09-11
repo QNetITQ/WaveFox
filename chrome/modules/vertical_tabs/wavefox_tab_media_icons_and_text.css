@@ -194,10 +194,3 @@
     text-overflow: ellipsis !important;
     margin-block: 0px !important;
 }
-
-/* -------------------- Tab content / Temporary solution -------------------- */
-
-.tab-content
-{
-    background-position: 50% calc(50% + 12px) !important;
-}
