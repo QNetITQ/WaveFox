@@ -116,11 +116,6 @@
 
 #tabbrowser-tabs[expanded] .tabbrowser-tab
 {
-    .tab-icon-stack > *
-    {
-        margin-inline-end: 8px !important;
-    }
-    
     .tab-audio-button
     {
         display: none !important;
