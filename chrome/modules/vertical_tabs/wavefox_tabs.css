@@ -18,4 +18,9 @@
     {
         margin-block: 0px !important;
     }
+
+    .tab-content
+    {
+        background-position: 50% calc(50% + 12px) !important;
+    }
 }
