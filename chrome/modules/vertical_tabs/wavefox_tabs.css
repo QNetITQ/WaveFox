@@ -1,6 +1,8 @@
 :root
 {
-    
+    --tab-pinned-container-margin-inline-expanded: 0px !important;
+    --tab-pinned-min-width-expanded: calc(var(--tab-min-height) + 4px) !important;
+    --tab-height-with-margin-padding: calc(var(--tab-min-height) + 4px) !important;
 }
 
 .tabbrowser-tab
