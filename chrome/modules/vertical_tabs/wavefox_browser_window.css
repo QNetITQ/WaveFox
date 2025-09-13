@@ -29,21 +29,6 @@
                         box-shadow: var(--content-area-shadow) !important;
                     }
                 }
-
-                /* !!!!!!!!!!!!!!!!!!!! */
-
-                #pinned-tabs-container,
-                #tabbrowser-arrowscrollbox
-                {
-                    overflow: clip !important;
-                    margin: 4px !important;
-                    background-color: color-mix(in srgb, var(--toolbar-bgcolor) 75%, transparent) !important;
-                    background-image: none !important;
-                    border: 1px solid var(--chrome-content-separator-color) !important;
-                    border-radius: var(--border-radius-medium) !important;
-                    box-shadow: var(--content-area-shadow) !important;
-                    background-clip: padding-box !important;
-                }
             }
 
             #sidebar-launcher-splitter,
