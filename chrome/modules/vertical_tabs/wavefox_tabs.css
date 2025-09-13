@@ -13,11 +13,15 @@
     }
 
     --tab-icon-end-margin: 8px !important;
-    
+
+    /* ----------------- */
     --tab-pinned-container-margin-inline-expanded: 0px !important;
-    --tab-pinned-min-width-expanded: calc(var(--tab-min-height) + 4px) !important;
-    --tab-height-with-margin-padding: calc(var(--tab-min-height) + 4px) !important;
+    --tab-pinned-expanded-background-width: var(--tab-min-height) !important;
+    --tab-pinned-margin-inline-expanded: 2px !important;
+    --tab-height-with-margin-padding: auto !important;
     
+    /* ----------------- */
+
     #tabbrowser-tabs
     {
         --tab-icon-end-margin: 8px !important;
