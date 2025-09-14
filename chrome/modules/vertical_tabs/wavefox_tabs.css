@@ -1,5 +1,6 @@
 :root
 {
+    --space-xsmall: 2px !important;
     --tab-min-height: 36px !important;
 
     &[uidensity="compact"]
@@ -12,20 +13,13 @@
         --tab-min-height: 40px !important;
     }
 
-    --tab-icon-end-margin: 8px !important;
-
-    /* ----------------- */
-    --tab-pinned-container-margin-inline-expanded: 0px !important;
     --tab-pinned-expanded-background-width: var(--tab-min-height) !important;
-    --tab-pinned-margin-inline-expanded: 2px !important;
     --tab-height-with-margin-padding: auto !important;
-    
-    /* ----------------- */
+    --tab-icon-end-margin: 8px !important;
 
     #tabbrowser-tabs
     {
         --tab-icon-end-margin: 8px !important;
-        grid-gap: 0px !important;
     }
 }
 
