@@ -5,8 +5,8 @@
         #browser
         {
             overflow: clip !important;
-            margin-block: 0px var(--space-medium) !important;
-            margin-inline: var(--space-medium) !important;
+            margin-block: 0px var(--space-small) !important;
+            margin-inline: var(--space-small) !important;
             border-radius: var(--border-radius-medium) !important;
             border: 1px solid var(--chrome-content-separator-color) !important;
             box-shadow: var(--content-area-shadow) !important;
@@ -67,7 +67,7 @@
                 #tabbrowser-tabpanels
                 {
                     overflow: clip !important;
-                    margin: var(--space-medium) !important;
+                    margin: var(--space-small) !important;
                     border-radius: var(--border-radius-medium) !important;
                     border: 1px solid var(--sidebar-border-color) !important;
                     box-shadow: var(--content-area-shadow) !important;
