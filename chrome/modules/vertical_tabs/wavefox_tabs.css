@@ -26,7 +26,7 @@
 .tabbrowser-tab
 {
     --tab-icon-end-margin: 8px !important;
-    padding-block: 2px !important;
+    padding-block: var(--space-xsmall) !important;
 
     &:not([visuallyselected], :hover, [multiselected])
     {
