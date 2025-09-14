@@ -14,12 +14,12 @@
     }
 
     --tab-pinned-expanded-background-width: var(--tab-min-height) !important;
-    --tab-height-with-margin-padding: auto !important;
+    --tab-height-with-margin-padding: calc(var(--tab-min-height) + (2 * var(--tab-block-margin))) !important;
     --tab-icon-end-margin: 8px !important;
 
     #tabbrowser-tabs
     {
-        padding-block-start: var(--space-small) !important;
+        padding-block: var(--space-small) !important;
         --tab-icon-end-margin: 8px !important;
     }
 }
@@ -43,6 +43,6 @@
 
     .tab-content
     {
-        background-position: 50% calc(50% + 12px) !important;
+        background-position: 50% 100% !important;
     }
 }
