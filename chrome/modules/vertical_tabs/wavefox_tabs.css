@@ -19,7 +19,7 @@
 
     #tabbrowser-tabs
     {
-        padding-block: var(--space-small) !important;
+        padding-block: calc(var(--space-small) - var(--tab-block-margin)) !important;
         --tab-icon-end-margin: 8px !important;
     }
 }
