@@ -45,5 +45,16 @@
     .tab-content
     {
         background-position: 50% 100% !important;
+
+        .tab-close-button
+        {
+            width: 16px !important;
+            height: 16px !important;
+            padding: 2px !important;
+            margin: 0px !important;
+            border-radius: 50px !important;
+            top: 0px !important;
+            inset-inline-start: 0px !important;
+        }
     }
 }
