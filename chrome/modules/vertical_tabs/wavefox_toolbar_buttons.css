@@ -1,0 +1,4 @@
+:is(#tabs-newtab-button, #vertical-tabs-newtab-button) > .toolbarbutton-text
+{
+    display: none !important;
+}
