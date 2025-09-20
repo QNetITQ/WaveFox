@@ -53,8 +53,8 @@
             padding: 2px !important;
             margin: 0px !important;
             border-radius: 50px !important;
-            top: 0px !important;
-            inset-inline-start: var(--tab-inner-inline-margin) !important;
+            top: -2px !important;
+            inset-inline-start: calc(var(--tab-inner-inline-margin) - 2px) !important;
         }
     }
 }
