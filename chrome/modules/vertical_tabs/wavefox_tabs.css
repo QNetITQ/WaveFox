@@ -54,7 +54,7 @@
             margin: 0px !important;
             border-radius: 50px !important;
             top: 0px !important;
-            inset-inline-start: 0px !important;
+            inset-inline-start: var(--tab-inner-inline-margin) !important;
         }
     }
 }
