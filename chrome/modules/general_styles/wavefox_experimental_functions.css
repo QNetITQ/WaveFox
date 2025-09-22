@@ -1,0 +1,6 @@
+/* Disables the pinning feature for tabs when dragging */
+
+#pinned-drop-indicator
+{
+    display: none !important;
+}
