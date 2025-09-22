@@ -339,10 +339,12 @@
         }
     }
 
+    /*
     #tabbrowser-tabs[overflow] .tab-drop-indicator
     {
         inset-inline-start: var(--tab-first-last-inline-margin) !important;
-    }
+    } 
+    */
 
     /* -------------------- Tab Icon Indicators -------------------- */
 
@@ -405,7 +407,7 @@
     }
 
     /* ---------------------------------------- Tab Scroll Animation ---------------------------------------- */
-/*
+    /*
     #tabbrowser-tabs[overflow]:not([movingtab]) .tabbrowser-tab
     {
         pointer-events: none !important;
@@ -433,5 +435,6 @@
     #tabbrowser-tabs[overflow]:not([movingtab]) .tabbrowser-tab:nth-last-child(1 of .tabbrowser-tab:not([hidden]))
     {
         margin-inline-end: 0px !important;
-    } */
+    } 
+    */
 }
