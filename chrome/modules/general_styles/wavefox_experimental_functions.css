@@ -4,3 +4,10 @@
 {
     display: none !important;
 }
+
+/* Removing the browser panel in PWA mode */
+
+:root[taskbartab] #navigator-toolbox
+{
+    display: none !important;
+}
