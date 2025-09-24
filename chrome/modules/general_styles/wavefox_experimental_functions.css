@@ -5,6 +5,14 @@
     display: none !important;
 }
 
+/* Disable dragging tabs between panels */
+
+#pinned-tabs-container:has(.tabbrowser-tab[dragtarget]) ~  #tabbrowser-arrowscrollbox,
+#pinned-tabs-container:has(~ #tabbrowser-arrowscrollbox > .tabbrowser-tab[dragtarget])
+{
+    pointer-events: none !important;
+}
+
 /* Removing the browser panel in PWA mode */
 /*
 :root[taskbartab] #navigator-toolbox
