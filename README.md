@@ -182,7 +182,7 @@ Works only with system theme. Requires transparency support from the operating s
 
 ### Experimental
 
-Disables the ability to pin tabs by dragging and dropping. Some users find this feature annoying. Mozilla doesn't allow it to be disabled.
+Disables the ability to pin tabs by dragging. Some users find this feature annoying.
 - `WaveFox.Experimental.Tabs.Pin_By_Dragging.Disabled`
 
 Disables the ability to pin and unpin tabs by dragging. This only works if there are pinned tabs.
