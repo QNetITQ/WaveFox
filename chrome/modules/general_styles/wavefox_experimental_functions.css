@@ -1,16 +1,22 @@
 /* Disables the pinning feature for tabs when dragging */
 
-#pinned-drop-indicator
+@media -moz-pref("WaveFox.Experimental.Tabs.Pin_By_Dragging.Disabled")
 {
-    display: none !important;
+    #pinned-drop-indicator
+    {
+        display: none !important;
+    }
 }
 
 /* Disable dragging tabs between panels */
 
-#pinned-tabs-container:has(.tabbrowser-tab[dragtarget]) ~  #tabbrowser-arrowscrollbox,
-#pinned-tabs-container:has(~ #tabbrowser-arrowscrollbox > .tabbrowser-tab[dragtarget])
+@media -moz-pref("WaveFox.Experimental.Tabs.Moving_By_Dragging_Same_Window.Disabled")
 {
-    pointer-events: none !important;
+    #pinned-tabs-container:has(.tabbrowser-tab[dragtarget]) ~  #tabbrowser-arrowscrollbox,
+    #pinned-tabs-container:has(~ #tabbrowser-arrowscrollbox > .tabbrowser-tab[dragtarget])
+    {
+        pointer-events: none !important;
+    }
 }
 
 /* Removing the browser panel in PWA mode */
