@@ -186,7 +186,7 @@ Disables the ability to pin tabs by dragging. Some users find this feature annoy
 - `WaveFox.Experimental.Tabs.Pin_By_Dragging.Disabled`
 
 Disables the ability to pin and unpin tabs by dragging. This only works if there are pinned tabs.
-- `WaveFox.Experimental.Tabs.Moving_By_Dragging_Same_Window.Disabled`
+- `WaveFox.Experimental.Tabs.Pin_And_Unpin_By_Dragging.Disabled`
 
 </details>
 
