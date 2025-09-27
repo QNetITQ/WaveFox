@@ -185,9 +185,6 @@ Works only with system theme. Requires transparency support from the operating s
 Disables the ability to pin tabs by dragging. Some users find this feature annoying.
 - `WaveFox.Experimental.Tabs.Pin_By_Dragging.Disabled`
 
-Disables the ability to pin and unpin tabs by dragging. This only works if there are pinned tabs.
-- `WaveFox.Experimental.Tabs.Pin_And_Unpin_By_Dragging.Disabled`
-
 </details>
 
 <details>
