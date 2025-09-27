@@ -180,6 +180,14 @@ Works only with system theme. Requires transparency support from the operating s
 
 - `WaveFox.VerticalTabs.WebPage.Floating.Enabled`
 
+### Experimental
+
+Disables the ability to pin tabs by dragging and dropping. Some users find this feature annoying. Mozilla doesn't allow it to be disabled.
+- `WaveFox.Experimental.Tabs.Pin_By_Dragging.Disabled`
+
+Disables the ability to pin and unpin tabs by dragging. This only works if there are pinned tabs.
+- `WaveFox.Experimental.Tabs.Moving_By_Dragging_Same_Window.Disabled`
+
 </details>
 
 <details>
