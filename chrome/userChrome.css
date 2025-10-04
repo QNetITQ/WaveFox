@@ -40,4 +40,4 @@
 @import "modules/vertical_tabs/wavefox_tab_media_icons_and_text.css" layer(BasicPriority) /* supports() */ -moz-pref("sidebar.verticalTabs", true);
 @import "modules/vertical_tabs/wavefox_toolbar_buttons.css"          layer(BasicPriority) /* supports() */ -moz-pref("sidebar.verticalTabs", true);
 
-/* ---------------------------------------- Third-party styles (Maximum priority) ---------------------------------------- */        
+/* ---------------------------------------- Third-party styles (Maximum priority) ---------------------------------------- */
