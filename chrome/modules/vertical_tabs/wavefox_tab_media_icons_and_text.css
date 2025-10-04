@@ -116,11 +116,6 @@
 
 #tabbrowser-tabs[expanded] .tabbrowser-tab
 {
-    .tab-icon-stack > *
-    {
-        margin-inline-end: 8px !important;
-    }
-    
     .tab-audio-button
     {
         display: none !important;
@@ -198,11 +193,4 @@
     white-space: nowrap !important;
     text-overflow: ellipsis !important;
     margin-block: 0px !important;
-}
-
-/* -------------------- Tab content / Temporary solution -------------------- */
-
-.tab-content
-{
-    background-position: 50% calc(50% + 12px) !important;
 }

@@ -1,0 +1,60 @@
+:root
+{
+    --space-xsmall: 2px !important;
+    --tab-min-height: 36px !important;
+
+    &[uidensity="compact"]
+    {
+        --tab-min-height: 32px !important;
+    }
+
+    &[uidensity="touch"]
+    {
+        --tab-min-height: 40px !important;
+    }
+
+    --tab-pinned-expanded-background-width: var(--tab-min-height) !important;
+    --tab-height-with-margin-padding: calc(var(--tab-min-height) + (2 * var(--tab-block-margin))) !important;
+    --tab-icon-end-margin: 8px !important;
+
+    #tabbrowser-tabs
+    {
+        padding-block: calc(var(--space-small) - var(--tab-block-margin)) !important;
+        --tab-icon-end-margin: 8px !important;
+    }
+}
+
+.tabbrowser-tab
+{
+    --tab-icon-end-margin: 8px !important;
+    padding-block: var(--tab-block-margin) !important;
+
+    &:not([visuallyselected], :hover, [multiselected])
+    {
+        .tab-background
+        {
+            background-color: transparent !important;
+        }
+    }
+
+    .tab-background
+    {
+        margin-block: 0px !important;
+    }
+
+    .tab-content
+    {
+        background-position: 50% 100% !important;
+
+        .tab-close-button
+        {
+            width: 16px !important;
+            height: 16px !important;
+            padding: 2px !important;
+            margin: 0px !important;
+            border-radius: 50px !important;
+            top: -2px !important;
+            inset-inline-start: calc(var(--tab-inner-inline-margin) - 2px) !important;
+        }
+    }
+}
