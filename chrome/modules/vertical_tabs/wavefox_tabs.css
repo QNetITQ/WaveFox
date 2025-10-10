@@ -6,7 +6,7 @@
     {
         #browser
         {
-            clip-path: content-box !important;
+            backdrop-filter: blur(0px) !important;
             
             #sidebar-main[sidebar-launcher-expanded],
             #sidebar-main[sidebar-ongoing-animations]:not([sidebar-launcher-expanded])
