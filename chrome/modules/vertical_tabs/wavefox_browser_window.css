@@ -17,20 +17,8 @@
                 background-color: color-mix(in srgb, var(--toolbar-bgcolor) 75%, transparent) !important;
                 background-image: none !important;
                 color: var(--toolbar-color) !important;
-                border: none !important;
                 border-radius: 0px !important;
                 background-clip: padding-box !important;
-
-                @media -moz-pref("sidebar.visibility", 'expand-on-hover')
-                {
-                    :root[sidebar-expand-on-hover] &[sidebar-launcher-expanded],
-                    :root[sidebar-expand-on-hover] &[sidebar-ongoing-animations]:not([sidebar-launcher-expanded])
-                    {
-                        backdrop-filter: blur(8px) !important;
-                        box-shadow: var(--content-area-shadow) !important;
-                        outline: 1px solid var(--chrome-content-separator-color) !important;
-                    }
-                }
             }
 
             #sidebar-launcher-splitter,
@@ -91,16 +79,6 @@
                 color: var(--toolbar-color) !important;
                 border-radius: 0px !important;
                 background-clip: padding-box !important;
-
-                @media -moz-pref("sidebar.visibility", 'expand-on-hover')
-                {
-                    :root[sidebar-expand-on-hover] &[sidebar-launcher-expanded],
-                    :root[sidebar-expand-on-hover] &[sidebar-ongoing-animations]:not([sidebar-launcher-expanded])
-                    {
-                        backdrop-filter: blur(8px) !important;
-                        box-shadow: var(--content-area-shadow) !important;
-                    }
-                }
             }
 
             #sidebar-launcher-splitter,
@@ -170,19 +148,6 @@
             {
                 border-radius: 0px !important;
                 background-clip: padding-box !important;
-
-                @media -moz-pref("sidebar.visibility", 'expand-on-hover')
-                {
-                    :root[sidebar-expand-on-hover] &[sidebar-launcher-expanded],
-                    :root[sidebar-expand-on-hover] &[sidebar-ongoing-animations]:not([sidebar-launcher-expanded])
-                    {
-                        background-color: color-mix(in srgb, var(--toolbar-bgcolor) 75%, transparent) !important;
-                        background-image: none !important;
-                        color: var(--toolbar-color) !important;
-                        backdrop-filter: blur(8px) !important;
-                        box-shadow: var(--content-area-shadow) !important;
-                    }
-                }
             }
 
             #sidebar-launcher-splitter,
