@@ -1,1 +1,21 @@
+/* Roundings */
 
+@media -moz-pref("WaveFox.Toolbar.Roundings", 1)
+{
+    :root
+    {
+        --border-radius-medium: 4px !important;
+        --arrowpanel-border-radius: 4px !important;
+        --arrowpanel-menuitem-border-radius: 4px !important;
+    }
+}
+
+@media -moz-pref("WaveFox.Toolbar.Roundings", 2)
+{
+    :root
+    {
+        --border-radius-medium: 12px !important;
+        --arrowpanel-border-radius: 12px !important;
+        --arrowpanel-menuitem-border-radius: 12px !important;
+    }
+}
