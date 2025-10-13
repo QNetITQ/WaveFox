@@ -75,48 +75,6 @@
     }
 }
 
-/* ---------------------------------------- Floating tabs ---------------------------------------- */
-
-@media -moz-pref("WaveFox.Tabs.Shape", 1) or
-       -moz-pref("WaveFox.Tabs.Shape", 2) or
-       -moz-pref("WaveFox.Tabs.Shape", 3) or
-       -moz-pref("WaveFox.Tabs.Shape", 4)
-{
-    /* -------------------- Tab shapes -------------------- */
-
-    @media -moz-pref("WaveFox.Tabs.Shape", 1)
-    {
-        :root
-        {
-            --wavefox-tab-border-radius: 8px;
-        }
-    }
-    
-    @media -moz-pref("WaveFox.Tabs.Shape", 2)
-    {
-        :root
-        {
-            --wavefox-tab-border-radius: 12px;
-        }
-    }
-    
-    @media -moz-pref("WaveFox.Tabs.Shape", 3)
-    {
-        :root
-        {
-            --wavefox-tab-border-radius: 16px;
-        }
-    }
-    
-    @media -moz-pref("WaveFox.Tabs.Shape", 4)
-    {
-        :root
-        {
-            --wavefox-tab-border-radius: 50px;
-        }
-    }
-}
-
 /* ---------------------------------------- Attached tabs ---------------------------------------- */
 
 @media -moz-pref("WaveFox.Tabs.Shape", 5)  or
