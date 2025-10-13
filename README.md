@@ -20,26 +20,6 @@
 
 ### Tab Shapes
 
-##### Shape 1
-![изображение](https://github.com/user-attachments/assets/98d808c0-de87-4328-bd19-c885060adaec)
-
-- `WaveFox.Tabs.Shape` > 1
-  
-##### Shape 2
-![изображение](https://github.com/user-attachments/assets/15244c8d-e073-47f7-a84c-500bcf1f056d)
-
-- `WaveFox.Tabs.Shape` > 2
-  
-##### Shape 3
-![изображение](https://github.com/user-attachments/assets/ec6f06df-5f83-4408-8f39-8480cff5ca8b)
-
-- `WaveFox.Tabs.Shape` > 3
-  
-##### Shape 4
-![изображение](https://github.com/user-attachments/assets/112843be-7182-4a48-bc04-0f9211ddf7c7)
-
-- `WaveFox.Tabs.Shape` > 4
-  
 ##### Shape 5
 ![изображение](https://github.com/user-attachments/assets/cd6fb4a9-8cc7-4fd1-9f26-9acef5a4a121)
 
