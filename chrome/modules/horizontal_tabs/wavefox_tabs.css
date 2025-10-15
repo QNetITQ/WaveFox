@@ -395,4 +395,42 @@
         margin-inline-end: 0px !important;
     } 
     */
+
+    /*
+    #tabbrowser-tabs:not([movingtab])
+    {
+        #pinned-tabs-container[overflowing],
+        #tabbrowser-arrowscrollbox[overflowing]
+        {
+            .tabbrowser-tab
+            {
+                pointer-events: none !important;
+                box-sizing: content-box !important;
+                padding-inline: var(--tab-first-last-inline-margin) !important;
+                margin-inline: calc(-1 * var(--tab-first-last-inline-margin)) !important;
+                overflow-clip-margin: 0px !important;
+                
+                &:nth-child(1 of .tabbrowser-tab:not([hidden]))
+                {
+                    margin-inline-start: 0px !important;
+                }
+
+                &:nth-last-child(1 of .tabbrowser-tab:not([hidden]))
+                {
+                    margin-inline-end: 0px !important;
+                }
+                
+                .tab-stack
+                {
+                    pointer-events: auto !important;
+                }
+                
+                tab-group[collapsed] > &[visuallyselected]
+                {
+                    margin-inline: 0px !important;
+                }
+            }
+        }
+    }
+    */
 }
