@@ -1,6 +1,8 @@
-@media -moz-pref("widget.windows.mica", true) and
-       -moz-pref("extensions.activeThemeID", 'default-theme@mozilla.org') and
-      (-moz-pref("browser.tabs.inTitlebar", 1) or -moz-pref("browser.tabs.inTitlebar", 2))
+@media -moz-pref("widget.windows.mica") and
+      (-moz-pref("extensions.activeThemeID", 'default-theme@mozilla.org') or
+       -moz-pref("extensions.activeThemeID", 'firefox-compact-light@mozilla.org') or
+       -moz-pref("extensions.activeThemeID", 'firefox-compact-dark@mozilla.org')) and
+      (not -moz-pref("browser.tabs.inTitlebar", 0))
 {
     :root
     {
