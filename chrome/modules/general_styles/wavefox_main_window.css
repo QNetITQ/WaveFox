@@ -1,0 +1,11 @@
+:root
+{
+    background-color: var(--toolbox-bgcolor) !important;
+    will-change: background-color !important;
+    transition: background-color var(--inactive-window-transition) !important;
+  
+    &:-moz-window-inactive
+    {
+        background-color: var(--toolbox-bgcolor-inactive) !important;
+    }
+}
