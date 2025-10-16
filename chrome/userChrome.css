@@ -3,7 +3,7 @@
 /* ---------- General styles ---------- */
 
 @import "modules/general_styles/wavefox_experimental_functions.css"    layer(BasicPriority); /* supports() -moz-pref("", false) */
-
+@import "modules/general_styles/wavefox_main_window.css"               layer(BasicPriority); /* supports() -moz-pref("", false) */
 @import "modules/general_styles/wavefox_transparency_on_windows11.css" layer(HighPriority)   /* supports() */ (-moz-platform: windows);
 @import "modules/general_styles/wavefox_transparency_on_windows10.css" layer(HighPriority)   /* supports() */ (-moz-platform: windows);
 @import "modules/general_styles/wavefox_transparency_on_linux.css"     layer(HighPriority)   /* supports() */ (-moz-platform: linux);
@@ -35,11 +35,9 @@
 
 /* ---------- Vertical tabs ---------- */
 
-@import "modules/vertical_tabs/wavefox_main_window.css"              layer(BasicPriority) /* supports() */ -moz-pref("sidebar.verticalTabs", true);
 @import "modules/vertical_tabs/wavefox_browser_window.css"           layer(BasicPriority) /* supports() */ -moz-pref("sidebar.verticalTabs", true);
 @import "modules/vertical_tabs/wavefox_tabs.css"                     layer(BasicPriority) /* supports() */ -moz-pref("sidebar.verticalTabs", true);
 @import "modules/vertical_tabs/wavefox_tab_media_icons_and_text.css" layer(BasicPriority) /* supports() */ -moz-pref("sidebar.verticalTabs", true);
 @import "modules/vertical_tabs/wavefox_toolbar_buttons.css"          layer(BasicPriority) /* supports() */ -moz-pref("sidebar.verticalTabs", true);
 
 /* ---------------------------------------- Third-party styles (Maximum priority) ---------------------------------------- */
-
