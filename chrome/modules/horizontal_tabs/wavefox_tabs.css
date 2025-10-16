@@ -396,7 +396,6 @@
     } 
     */
 
-    /*
     #tabbrowser-tabs:not([movingtab])
     {
         #pinned-tabs-container[overflowing],
@@ -432,5 +431,4 @@
             }
         }
     }
-    */
 }
