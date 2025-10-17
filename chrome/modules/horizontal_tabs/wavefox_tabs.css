@@ -297,13 +297,6 @@
         }
     }
 
-    /*
-    #tabbrowser-tabs[overflow] .tab-drop-indicator
-    {
-        inset-inline-start: var(--tab-first-last-inline-margin) !important;
-    } 
-    */
-
     /* -------------------- Tab Icon Indicators -------------------- */
 
     .tabbrowser-tab:is([image], [pinned]) .tab-content[attention]:not([selected]),
@@ -365,36 +358,6 @@
     }
 
     /* ---------------------------------------- Tab Scroll Animation ---------------------------------------- */
-    /*
-    #tabbrowser-tabs[overflow]:not([movingtab]) .tabbrowser-tab
-    {
-        pointer-events: none !important;
-        box-sizing: content-box !important;
-        padding-inline: var(--tab-first-last-inline-margin) !important;
-        margin-inline: calc(-1 * var(--tab-first-last-inline-margin)) !important;
-        overflow-clip-margin: 0px !important;
-    }
-
-    #tabbrowser-tabs[overflow]:not([movingtab]) tab-group[collapsed] > .tabbrowser-tab[visuallyselected]
-    {
-        margin-inline: 0px !important;
-    }
-
-    #tabbrowser-tabs[overflow]:not([movingtab]) .tabbrowser-tab > .tab-stack
-    {
-        pointer-events: auto !important;
-    }
-
-    #tabbrowser-tabs[overflow]:not([movingtab]) .tabbrowser-tab:nth-child(1 of .tabbrowser-tab:not([hidden]))
-    {
-        margin-inline-start: 0px !important;
-    }
-
-    #tabbrowser-tabs[overflow]:not([movingtab]) .tabbrowser-tab:nth-last-child(1 of .tabbrowser-tab:not([hidden]))
-    {
-        margin-inline-end: 0px !important;
-    } 
-    */
 
     #tabbrowser-tabs:not([movingtab])
     {
@@ -430,5 +393,10 @@
                 }
             }
         }
+    }
+
+    #tabbrowser-tabs[overflow] .tab-drop-indicator
+    {
+        inset-inline-start: var(--tab-first-last-inline-margin) !important;
     }
 }
