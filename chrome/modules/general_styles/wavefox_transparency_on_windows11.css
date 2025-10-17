@@ -1,12 +1,9 @@
 @media -moz-pref("widget.windows.mica") and
-      (-moz-pref("extensions.activeThemeID", 'default-theme@mozilla.org') or
-       -moz-pref("extensions.activeThemeID", 'firefox-compact-light@mozilla.org') or
-       -moz-pref("extensions.activeThemeID", 'firefox-compact-dark@mozilla.org')) and
-      (not -moz-pref("browser.tabs.inTitlebar", 0))
+       -moz-pref("extensions.activeThemeID", 'default-theme@mozilla.org') and
+       (not -moz-pref("browser.tabs.inTitlebar", 0))
 {
     :root
     {
-        background-color: transparent !important;
         --toolbar-bgcolor: light-dark(#f9f9fb, rgb(43, 42, 51)) !important;
     }
 }
