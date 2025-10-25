@@ -395,6 +395,30 @@
         }
     }
 
+    /*
+    .tabbrowser-tab[dragtarget][pinned]
+    {
+        max-width: min-content !important;
+        
+        ~ .tabbrowser-tab[pinned]
+        {
+            inset-inline: 40px 0px !important;
+            
+        }
+    }
+    
+    .tabbrowser-tab[dragtarget]:not([pinned])
+    {
+        max-width: min-content !important;
+        
+        ~ .tabbrowser-tab:not([pinned])
+        {
+            inset-inline: 76px 0px !important;
+            
+        }
+    }
+    */
+
     #tabbrowser-tabs[overflow] .tab-drop-indicator
     {
         inset-inline-start: var(--tab-first-last-inline-margin) !important;
