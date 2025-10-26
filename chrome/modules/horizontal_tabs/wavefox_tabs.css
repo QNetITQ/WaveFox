@@ -61,7 +61,6 @@
 
     .tab-background
     {
-        border-radius: var(--wavefox-tab-border-radius, 4px) !important;
         box-shadow: none !important;
     }
 
