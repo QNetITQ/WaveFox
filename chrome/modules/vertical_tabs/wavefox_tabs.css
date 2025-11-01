@@ -1,3 +1,28 @@
+/* Expand On Hover */
+
+@media -moz-pref("sidebar.visibility", 'expand-on-hover')
+{
+    :root[sidebar-expand-on-hover]
+    {
+        #browser
+        {
+            backdrop-filter: blur(0px) !important;
+            
+            #sidebar-main[sidebar-launcher-expanded],
+            #sidebar-main[sidebar-ongoing-animations]:not([sidebar-launcher-expanded])
+            {
+                background-color: color-mix(in srgb, var(--toolbar-bgcolor) 75%, transparent) !important;
+                background-image: none !important;
+                color: var(--toolbar-color) !important;
+                backdrop-filter: blur(8px) !important;
+                box-shadow: var(--content-area-shadow) !important;
+            }
+        }
+    }
+}
+
+/* Tabs */
+
 :root
 {
     --space-xsmall: 2px !important;

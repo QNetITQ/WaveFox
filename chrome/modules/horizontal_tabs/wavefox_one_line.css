@@ -64,7 +64,7 @@
             width: fit-content !important;
             border: none !important;
             align-self: end !important;
-            border-radius: var(--wavefox-tab-border-radius, 4px) !important;
+            border-radius: var(--tab-border-radius) !important;
             margin: var(--tab-block-margin) !important;
             box-shadow: var(--wavefox-selected-tab-shadow, none) !important;
 

@@ -9,10 +9,10 @@
 [Download Firefox](https://www.mozilla.org/en-US/firefox/all/#product-desktop-release) / [Download WaveFox](https://github.com/QNetITQ/WaveFox/releases) / [WaveFox Nightly](https://github.com/QNetITQ/WaveFox/tree/WaveFox-Nightly)
 
 <details>
-  <summary>WaveFox v1.8.144</summary>
+  <summary>WaveFox v1.8.145</summary>
 
 - ##### Minimum Requirements
-  - Firefox 144
+  - Firefox 145
   - Windows / MacOS / Linux
 
 - Download the `chrome` folder and put it in your user profile folder
@@ -22,26 +22,6 @@
 
 ### Tab Shapes
 
-##### Shape 1
-![изображение](https://github.com/user-attachments/assets/98d808c0-de87-4328-bd19-c885060adaec)
-
-- `WaveFox.Tabs.Shape` > 1
-  
-##### Shape 2
-![изображение](https://github.com/user-attachments/assets/15244c8d-e073-47f7-a84c-500bcf1f056d)
-
-- `WaveFox.Tabs.Shape` > 2
-  
-##### Shape 3
-![изображение](https://github.com/user-attachments/assets/ec6f06df-5f83-4408-8f39-8480cff5ca8b)
-
-- `WaveFox.Tabs.Shape` > 3
-  
-##### Shape 4
-![изображение](https://github.com/user-attachments/assets/112843be-7182-4a48-bc04-0f9211ddf7c7)
-
-- `WaveFox.Tabs.Shape` > 4
-  
 ##### Shape 5
 ![изображение](https://github.com/user-attachments/assets/cd6fb4a9-8cc7-4fd1-9f26-9acef5a4a121)
 
@@ -100,6 +80,12 @@ Works only with the system theme.
 ![изображение](https://user-images.githubusercontent.com/85301851/165526704-4f7486c4-f330-4c86-a25d-6ed8ab2affe4.png)
 
 - `WaveFox.Toolbar.Transparency` > 1 or 2 or 3 or 4 and `browser.tabs.inTitlebar > 1`
+
+### Toolbar Roundings (Horizontal and Vertical tabs)
+Ability to control the rounding of browser bar elements.
+<img width="1778" height="120" alt="изображение" src="https://github.com/user-attachments/assets/ec10f079-fabc-4bdf-bfa5-ccd3125d5792" />
+
+- `WaveFox.Toolbar.Roundings` > 1 or 2
 
 ### Tab Bar Shadows
 Works only with System / Light / Dark theme.

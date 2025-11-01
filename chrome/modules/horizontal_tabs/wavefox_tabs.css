@@ -61,7 +61,6 @@
 
     .tab-background
     {
-        border-radius: var(--wavefox-tab-border-radius, 4px) !important;
         box-shadow: none !important;
     }
 
@@ -72,48 +71,6 @@
         border-radius: 50% !important;
         padding: 2px !important;
         margin: 0px !important;
-    }
-}
-
-/* ---------------------------------------- Floating tabs ---------------------------------------- */
-
-@media -moz-pref("WaveFox.Tabs.Shape", 1) or
-       -moz-pref("WaveFox.Tabs.Shape", 2) or
-       -moz-pref("WaveFox.Tabs.Shape", 3) or
-       -moz-pref("WaveFox.Tabs.Shape", 4)
-{
-    /* -------------------- Tab shapes -------------------- */
-
-    @media -moz-pref("WaveFox.Tabs.Shape", 1)
-    {
-        :root
-        {
-            --wavefox-tab-border-radius: 8px;
-        }
-    }
-    
-    @media -moz-pref("WaveFox.Tabs.Shape", 2)
-    {
-        :root
-        {
-            --wavefox-tab-border-radius: 12px;
-        }
-    }
-    
-    @media -moz-pref("WaveFox.Tabs.Shape", 3)
-    {
-        :root
-        {
-            --wavefox-tab-border-radius: 16px;
-        }
-    }
-    
-    @media -moz-pref("WaveFox.Tabs.Shape", 4)
-    {
-        :root
-        {
-            --wavefox-tab-border-radius: 50px;
-        }
     }
 }
 
@@ -339,13 +296,6 @@
         }
     }
 
-    /*
-    #tabbrowser-tabs[overflow] .tab-drop-indicator
-    {
-        inset-inline-start: var(--tab-first-last-inline-margin) !important;
-    } 
-    */
-
     /* -------------------- Tab Icon Indicators -------------------- */
 
     .tabbrowser-tab:is([image], [pinned]) .tab-content[attention]:not([selected]),
@@ -407,34 +357,69 @@
     }
 
     /* ---------------------------------------- Tab Scroll Animation ---------------------------------------- */
+
+    #tabbrowser-tabs:not([movingtab])
+    {
+        #pinned-tabs-container[overflowing],
+        #tabbrowser-arrowscrollbox[overflowing]
+        {
+            .tabbrowser-tab
+            {
+                pointer-events: none !important;
+                box-sizing: content-box !important;
+                padding-inline: var(--tab-first-last-inline-margin) !important;
+                margin-inline: calc(-1 * var(--tab-first-last-inline-margin)) !important;
+                overflow-clip-margin: 0px !important;
+                
+                &:nth-child(1 of .tabbrowser-tab:not([hidden]))
+                {
+                    margin-inline-start: 0px !important;
+                }
+
+                &:nth-last-child(1 of .tabbrowser-tab:not([hidden]))
+                {
+                    margin-inline-end: 0px !important;
+                }
+                
+                .tab-stack
+                {
+                    pointer-events: auto !important;
+                }
+                
+                tab-group[collapsed] > &[visuallyselected]
+                {
+                    margin-inline: 0px !important;
+                }
+            }
+        }
+    }
+
     /*
-    #tabbrowser-tabs[overflow]:not([movingtab]) .tabbrowser-tab
+    .tabbrowser-tab[dragtarget][pinned]
     {
-        pointer-events: none !important;
-        box-sizing: content-box !important;
-        padding-inline: var(--tab-first-last-inline-margin) !important;
-        margin-inline: calc(-1 * var(--tab-first-last-inline-margin)) !important;
-        overflow-clip-margin: 0px !important;
+        max-width: min-content !important;
+        
+        ~ .tabbrowser-tab[pinned]
+        {
+            inset-inline: 40px 0px !important;
+            
+        }
     }
-
-    #tabbrowser-tabs[overflow]:not([movingtab]) tab-group[collapsed] > .tabbrowser-tab[visuallyselected]
+    
+    .tabbrowser-tab[dragtarget]:not([pinned])
     {
-        margin-inline: 0px !important;
+        max-width: min-content !important;
+        
+        ~ .tabbrowser-tab:not([pinned])
+        {
+            inset-inline: 76px 0px !important;
+            
+        }
     }
-
-    #tabbrowser-tabs[overflow]:not([movingtab]) .tabbrowser-tab > .tab-stack
-    {
-        pointer-events: auto !important;
-    }
-
-    #tabbrowser-tabs[overflow]:not([movingtab]) .tabbrowser-tab:nth-child(1 of .tabbrowser-tab:not([hidden]))
-    {
-        margin-inline-start: 0px !important;
-    }
-
-    #tabbrowser-tabs[overflow]:not([movingtab]) .tabbrowser-tab:nth-last-child(1 of .tabbrowser-tab:not([hidden]))
-    {
-        margin-inline-end: 0px !important;
-    } 
     */
+
+    #tabbrowser-tabs[overflow] .tab-drop-indicator
+    {
+        inset-inline-start: var(--tab-first-last-inline-margin) !important;
+    }
 }
