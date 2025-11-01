@@ -13,7 +13,7 @@
             --wavefox-tab-background-saturation-inactive: 16%;
         }
       
-        &:not([dragover-createGroup])
+        &:not([dragover-groupTarget])
         {
             .tab-background
             {
