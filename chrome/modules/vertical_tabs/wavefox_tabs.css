@@ -4,7 +4,7 @@
 {
     :root[sidebar-expand-on-hover]
     {
-        .browser-toolbox-background
+        #browser
         {
             will-change: background-color, backdrop-filter !important;
             
