@@ -4,16 +4,16 @@
 {
     :root[sidebar-expand-on-hover]
     {
-        #browser
+        .browser-toolbox-background
         {
-            backdrop-filter: blur(0px) !important;
+            will-change: background-color, backdrop-filter !important;
             
             #sidebar-main[sidebar-launcher-expanded],
             #sidebar-main[sidebar-ongoing-animations]:not([sidebar-launcher-expanded])
             {
-                background-color: color-mix(in srgb, var(--toolbar-bgcolor) 75%, transparent) !important;
+                background-color: color-mix(in srgb, var(--sidebar-background-color) 75%, transparent) !important;
                 background-image: none !important;
-                color: var(--toolbar-color) !important;
+                color: var(--sidebar-text-color) !important;
                 backdrop-filter: blur(8px) !important;
                 box-shadow: var(--content-area-shadow) !important;
             }
