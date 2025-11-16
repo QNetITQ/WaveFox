@@ -148,8 +148,7 @@
                 background-clip: padding-box !important;
             }
 
-            #sidebar-launcher-splitter,
-            #sidebar-splitter
+            #sidebar-launcher-splitter
             {
                 width: var(--splitter-width) !important;
                 margin-inline: calc(-1 * var(--splitter-width)) 0px !important;
@@ -163,13 +162,15 @@
 
             #sidebar-box
             {
-                clip-path: content-box !important;
-                padding: 0px !important;
+                padding-block: 0px !important;
 
                 #sidebar
                 {
-                    background-color: transparent !important;
-                    border-radius: 0px !important;
+                    outline: none !important;
+                    margin-block: 0px var(--space-small) !important;
+                    border: 1px solid var(--sidebar-border-color) !important;
+                    box-shadow: var(--content-area-shadow) !important;
+                    background-clip: padding-box !important;
                 }
             }
 
