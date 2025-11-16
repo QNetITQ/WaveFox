@@ -145,7 +145,6 @@
             #sidebar-main
             {
                 border-radius: 0px !important;
-                background-clip: padding-box !important;
             }
 
             #sidebar-launcher-splitter
