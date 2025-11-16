@@ -2,7 +2,7 @@
 {
     :root:not([inFullscreen], [inDOMFullscreen])
     {
-        #browser
+        .browser-toolbox-background:not(#navigator-toolbox)
         {
             overflow: clip !important;
             margin-block: 0px var(--space-small) !important;
@@ -63,7 +63,7 @@
 {
     :root:not([inFullscreen], [inDOMFullscreen])
     {
-        #browser
+        .browser-toolbox-background:not(#navigator-toolbox)
         {
             overflow: clip !important;
             margin-block: 0px var(--space-small) !important;
@@ -140,7 +140,7 @@
 {
     :root:not([inFullscreen], [inDOMFullscreen])
     {
-        #browser
+        .browser-toolbox-background:not(#navigator-toolbox)
         {
             #sidebar-main
             {
