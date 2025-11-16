@@ -72,18 +72,16 @@
             border: 1px solid var(--chrome-content-separator-color) !important;
             box-shadow: var(--content-area-shadow) !important;
             background-clip: padding-box !important;
+            background-color: color-mix(in srgb, var(--sidebar-background-color) 75%, transparent) !important;
 
             #sidebar-main
             {
-                background-color: color-mix(in srgb, var(--toolbar-bgcolor) 75%, transparent) !important;
-                background-image: none !important;
-                color: var(--toolbar-color) !important;
+                background-color: transparent !important;
+                color: var(--sidebar-text-color) !important;
                 border-radius: 0px !important;
-                background-clip: padding-box !important;
             }
 
-            #sidebar-launcher-splitter,
-            #sidebar-splitter
+            #sidebar-launcher-splitter
             {
                 width: var(--splitter-width) !important;
                 margin-inline: calc(-1 * var(--splitter-width)) 0px !important;
@@ -97,14 +95,15 @@
 
             #sidebar-box
             {
-                clip-path: content-box !important;
-                padding: 0px !important;
+                padding-block: 0px !important;
 
                 #sidebar
                 {
-                    background-color: color-mix(in srgb, var(--toolbar-bgcolor) 75%, transparent) !important;
-                    color: var(--toolbar-color) !important;
-                    border-radius: 0px !important;
+                    outline: none !important;
+                    margin-block: var(--space-small) !important;
+                    border: 1px solid var(--sidebar-border-color) !important;
+                    box-shadow: var(--content-area-shadow) !important;
+                    background-clip: padding-box !important;
                 }
             }
 
@@ -112,8 +111,6 @@
             {
                 outline: none !important;
                 box-shadow: none !important;
-                background-color: color-mix(in srgb, var(--toolbar-bgcolor) 75%, transparent) !important;
-                background-image: none !important;
 
                 #tabbrowser-tabpanels
                 {
