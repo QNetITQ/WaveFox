@@ -4,7 +4,7 @@
 {
     :root[sidebar-expand-on-hover]
     {
-        #browser
+        .browser-toolbox-background:not(#navigator-toolbox)
         {
             will-change: background-color, backdrop-filter !important;
             
