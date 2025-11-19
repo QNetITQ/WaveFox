@@ -14,7 +14,9 @@
         }
     }
 
-    @media -moz-pref("sidebar.verticalTabs", true)
+    @media -moz-pref("sidebar.verticalTabs", true) and
+          (-moz-pref("WaveFox.VerticalTabs.WebPage.Floating", 1) or
+           -moz-pref("WaveFox.VerticalTabs.WebPage.Floating", 2))
     {
         #sidebar-main
         {
