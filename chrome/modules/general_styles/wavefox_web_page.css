@@ -14,6 +14,16 @@
         }
     }
 
+    @media -moz-pref("sidebar.verticalTabs", true) and
+          (-moz-pref("WaveFox.VerticalTabs.WebPage.Floating", 1) or
+           -moz-pref("WaveFox.VerticalTabs.WebPage.Floating", 2))
+    {
+        #sidebar-main
+        {
+            background-color: color-mix(in srgb, var(--sidebar-background-color) 75%, transparent) !important;
+        }
+    }
+
     @media -moz-pref("WaveFox.WebPage.Background.Saturation", 1)
     {
         :root
