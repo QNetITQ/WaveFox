@@ -173,9 +173,6 @@
 
             #tabbrowser-tabbox
             {
-                outline: none !important;
-                box-shadow: none !important;
-
                 #tabbrowser-tabpanels
                 {
                     overflow: clip !important;
