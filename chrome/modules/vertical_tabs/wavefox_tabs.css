@@ -16,6 +16,7 @@
                 color: var(--sidebar-text-color) !important;
                 backdrop-filter: blur(8px) !important;
                 box-shadow: var(--content-area-shadow) !important;
+                border: none !important;
             }
         }
     }
