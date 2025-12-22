@@ -36,20 +36,21 @@
             #sidebar-box
             {
                 padding-block: 0px !important;
+                z-index: 3 !important;
 
                 #sidebar
                 {
-                    outline-offset: 0px !important;
+                    outline: none !important;
                     margin-block: 0px !important;
                     border-radius: 0px !important;
-                    box-shadow: none !important;
+                    box-shadow: var(--content-area-shadow) !important;
                 }
             }
 
             #tabbrowser-tabbox
             {
-                box-shadow: none !important;
-
+                box-shadow: var(--content-area-shadow) !important;
+                
                 #tabbrowser-tabpanels
                 {
                     clip-path: content-box !important;
