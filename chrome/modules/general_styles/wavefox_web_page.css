@@ -7,7 +7,7 @@
     {
         background-color: transparent !important;
 
-        #tabbrowser-tabpanels
+        .browserContainer
         {
             background-color: color-mix(in srgb, var(--toolbar-bgcolor) var(--wavefox-webpage-background-saturation, 75%), transparent) !important;
             background-image: none !important;
