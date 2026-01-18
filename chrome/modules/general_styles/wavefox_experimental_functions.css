@@ -27,3 +27,30 @@
     display: none !important;
 }
 */
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+@media -moz-pref("WaveFox.Experimental.Autohide")
+{
+    #navigator-toolbox
+    {
+        overflow: clip !important;
+        position: absolute !important;
+        background-color: var(--toolbar-bgcolor) !important;
+        border-radius: 0 0 8px 8px;
+        box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+        width: 60% !important;
+        left: 20% !important;
+        z-index: 3 !important;
+    top: -36px;
+      
+          transition-property: top !important;
+        transition-duration: 0.5s !important;
+    }
+    
+    #navigator-toolbox:hover,
+    #navigator-toolbox:has(*[open])
+    {
+        top: 0px !important;
+    }
+}
