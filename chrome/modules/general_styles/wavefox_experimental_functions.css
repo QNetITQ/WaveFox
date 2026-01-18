@@ -36,7 +36,7 @@
     {
         overflow: clip !important;
         position: absolute !important;
-        background-color: var(--toolbar-bgcolor) !important;
+        background-color: color-mix(in srgb, var(--toolbar-bgcolor) 75%, transparent) !important;
         border-radius: 0 0 8px 8px;
         box-shadow: 0 1px 4px rgba(0,0,0,0.25);
         width: 60% !important;
@@ -46,6 +46,8 @@
       
           transition-property: top !important;
         transition-duration: 0.5s !important;
+      
+        backdrop-filter: blur(4px) !important;
     }
     
     #navigator-toolbox:hover,
