@@ -1,3 +1,4 @@
+/*
 @media -moz-pref("WaveFox.VerticalTabs.WebPage.Floating", 2)
 {
     :root:not([inFullscreen], [inDOMFullscreen])
@@ -198,6 +199,104 @@
                     outline: none !important;
                 }
             }
+        }
+    }
+}
+*/
+
+:root:not([inDOMFullscreen])
+{
+    @media -moz-pref("sidebar.visibility", 'expand-on-hover')
+    {
+        &[sidebar-expand-on-hover]
+        {
+            .browser-toolbox-background:not(#navigator-toolbox)
+            {
+                will-change: background-color, backdrop-filter !important;
+
+                #sidebar-main[sidebar-launcher-expanded],
+                #sidebar-main[sidebar-ongoing-animations]:not([sidebar-launcher-expanded])
+                {
+                    background-color: color-mix(in srgb, var(--sidebar-background-color) 75%, transparent) !important;
+                    background-image: none !important;
+                    color: var(--sidebar-text-color) !important;
+                    backdrop-filter: blur(8px) !important;
+                    box-shadow: var(--content-area-shadow) !important;
+                    border: none !important;
+                }
+            }
+        }
+    }
+        
+    &[inFullscreen] .browser-toolbox-background:not(#navigator-toolbox)
+    {
+        border: none !important;
+    }
+
+    .browser-toolbox-background:not(#navigator-toolbox)
+    {
+        overflow: clip !important;
+        border-top: 1px solid var(--chrome-content-separator-color) !important;
+        box-shadow: var(--content-area-shadow) !important;
+        background-clip: padding-box !important;
+
+        #sidebar-main
+        {
+            background-color: color-mix(in srgb, var(--sidebar-background-color) 75%, transparent) !important;
+            color: var(--sidebar-text-color) !important;
+            border-radius: 0px !important;
+        }
+
+        #sidebar-launcher-splitter,
+        #sidebar-splitter
+        {
+            width: var(--splitter-width) !important;
+            margin-inline: calc(-1 * var(--splitter-width)) 0px !important;
+            border: none !important;
+
+            :is(#sidebar-main, #sidebar-box)[sidebar-positionend] + &
+            {
+                margin-inline: 0px calc(-1 * var(--splitter-width)) !important;
+            }
+        }
+
+        #sidebar-box
+        {
+            padding-block: 0px !important;
+            z-index: 3 !important;
+
+            #sidebar
+            {
+                outline: none !important;
+                margin-block: 0px !important;
+                border-radius: 0px !important;
+                box-shadow: var(--content-area-shadow) !important;
+            }
+        }
+
+        #tabbrowser-tabbox
+        {
+            .browserContainer
+            {
+                outline: none !important;
+                box-shadow: none !important;
+            }
+        }
+    }
+
+    @media -moz-pref("WaveFox.VerticalTabs.WebPage.Floating", 4)
+    {
+        &[inFullscreen] .browser-toolbox-background:not(#navigator-toolbox)
+        {
+            margin-top: var(--space-small) !important;
+        }
+
+        .browser-toolbox-background:not(#navigator-toolbox)
+        {
+            margin-block: 0px var(--space-small) !important;
+            margin-inline: var(--space-small) !important;
+            border-radius: var(--border-radius-medium) !important;
+            border: 1px solid var(--chrome-content-separator-color) !important;
         }
     }
 }
