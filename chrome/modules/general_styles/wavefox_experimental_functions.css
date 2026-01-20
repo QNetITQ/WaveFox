@@ -32,8 +32,17 @@
 
 @media -moz-pref("WaveFox.Experimental.Autohide")
 {
+    .urlbar
+    {
+        transform: translateY(0%) !important;
+        top 0% !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+    }
+    
     #navigator-toolbox
     {
+        transform: translateY(calc(-100% + 4px)) !important;
         overflow: clip !important;
         position: absolute !important;
         background-color: color-mix(in srgb, var(--toolbar-bgcolor) 75%, transparent) !important;
@@ -42,17 +51,24 @@
         width: 60% !important;
         left: 20% !important;
         z-index: 3 !important;
-    top: -36px;
+        
+
       
-          transition-property: top !important;
+        transition-property: transform !important;
         transition-duration: 0.5s !important;
       
-        backdrop-filter: blur(4px) !important;
+        backdrop-filter blur(4px) !important;
     }
     
     #navigator-toolbox:hover,
-    #navigator-toolbox:has(*[open])
+    #navigator-toolbox:has(*[open], *:focus)
     {
-        top: 0px !important;
+        transform: translateY(0px) !important;
+        
+        .urlbar
+        {
+            opacity: 1 !important;
+            pointer-events: auto !important;
+        }
     }
 }
