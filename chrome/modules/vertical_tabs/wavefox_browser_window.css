@@ -217,12 +217,8 @@
                 #sidebar-main[sidebar-launcher-expanded],
                 #sidebar-main[sidebar-ongoing-animations]:not([sidebar-launcher-expanded])
                 {
-                    background-color: color-mix(in srgb, var(--sidebar-background-color) 75%, transparent) !important;
-                    background-image: none !important;
-                    color: var(--sidebar-text-color) !important;
                     backdrop-filter: blur(8px) !important;
                     box-shadow: var(--content-area-shadow) !important;
-                    border: none !important;
                 }
             }
         }
@@ -243,8 +239,10 @@
         #sidebar-main
         {
             background-color: color-mix(in srgb, var(--sidebar-background-color) 75%, transparent) !important;
+            background-image: none !important;
             color: var(--sidebar-text-color) !important;
             border-radius: 0px !important;
+            border: none !important;
         }
 
         #sidebar-launcher-splitter,
