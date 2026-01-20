@@ -288,7 +288,7 @@
         }
     }
 
-    @media -moz-pref("WaveFox.VerticalTabs.WebPage.Floating", 4)
+    @media -moz-pref("WaveFox.VerticalTabs.WebPage.Floating")
     {
         &[inFullscreen] .browser-toolbox-background:not(#navigator-toolbox)
         {
