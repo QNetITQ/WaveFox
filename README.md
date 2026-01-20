@@ -7,10 +7,10 @@
 [Download Firefox](https://www.mozilla.org/en-US/firefox/all/#product-desktop-release) / [Download WaveFox](https://github.com/QNetITQ/WaveFox/releases) / [WaveFox Nightly](https://github.com/QNetITQ/WaveFox/tree/WaveFox-Nightly)
 
 <details>
-  <summary>WaveFox v1.8.147</summary>
+  <summary>WaveFox v1.8.148</summary>
 
 - ##### Minimum Requirements
-  - Firefox 147
+  - Firefox 148
   - Windows / MacOS / Linux
 
 - Download the `chrome` folder and put it in your user profile folder
@@ -164,7 +164,7 @@ Works only with system theme. Requires transparency support from the operating s
 ### Floating Web Page (Vertical tabs)
 <img width="1780" height="873" alt="изображение" src="https://github.com/user-attachments/assets/a9bc4d90-1b3e-4707-b805-67fe449dcbd2" />
 
-- `WaveFox.VerticalTabs.WebPage.Floating` > 1 or 2 or 3 or 4
+- `WaveFox.VerticalTabs.WebPage.Floating.Enabled`
 
 ### Experimental
 
