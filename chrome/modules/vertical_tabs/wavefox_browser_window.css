@@ -276,10 +276,16 @@
 
         #tabbrowser-tabbox
         {
-            .browserContainer
+            #tabbrowser-tabpanels
             {
-                outline: none !important;
-                box-shadow: none !important;
+                box-shadow: var(--content-area-shadow) !important;
+
+                .browserContainer
+                {
+                    outline: none !important;
+                    box-shadow: none !important;
+                    clip-path: content-box !important;
+                }
             }
         }
     }
