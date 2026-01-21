@@ -35,6 +35,11 @@
     :root:not([inFullscreen])
     {
 
+    &[sizemode="normal"] #navigator-toolbox
+    {
+        clip-path: inset(0px 0px calc(100% - 12px) round 0px 0px 50px 50px) !important;
+    }
+
     #navigator-toolbox
     {
         overflow: clip !important;
