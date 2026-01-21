@@ -32,40 +32,48 @@
 
 @media -moz-pref("WaveFox.Experimental.Autohide")
 {
-    .urlbar
-    {
-        transform: translateY(0%) !important;
-        top 0% !important;
-        opacity: 0 !important;
-        pointer-events: none !important;
-    }
-    
     #navigator-toolbox
     {
-        transform: translateY(calc(-100% + 4px)) !important;
         overflow: clip !important;
         position: absolute !important;
-        background-color: color-mix(in srgb, var(--toolbar-bgcolor) 75%, transparent) !important;
-        border-radius: 0 0 8px 8px;
-        box-shadow: 0 1px 4px rgba(0,0,0,0.25);
-        width: 60% !important;
-        left: 20% !important;
-        z-index: 3 !important;
         
+        background-color: color-mix(in srgb, var(--sidebar-text-color) 25%, transparent) !important;
+        
+        outline: 1px solid var(--chrome-content-separator-color) !important;
+        outline-offset: 0px !important;
 
-      
-        transition-property: transform !important;
-        transition-duration: 0.5s !important;
-      
-        backdrop-filter blur(4px) !important;
+        box-shadow: var(--content-area-shadow) !important;
+        
+        width: 50% !important;
+
+        z-index: 3 !important;
+
+        transition-property: background-color, height, clip-path !important;
+        transition-duration: 1s !important;
+        
+        inset-inline-end: 25% !important;
+
+        backdrop-filter: blur(8px) !important;
+        
+        top: var(--space-medium) !important;
+        
+        clip-path: inset(0px 0px calc(100% - 4px) round 50px) !important;
+        
+        #urlbar
+        {
+            opacity: 0 !important;
+            pointer-events: none !important;
+        }
     }
-    
+
     #navigator-toolbox:hover,
     #navigator-toolbox:has(*[open], *:focus)
     {
-        transform: translateY(0px) !important;
+        clip-path: inset(-10px round 0px) !important;
+        background-color: color-mix(in srgb, var(--sidebar-background-color) 75%, transparent) !important;
+        border-radius: var(--border-radius-medium) !important;
         
-        .urlbar
+        #urlbar
         {
             opacity: 1 !important;
             pointer-events: auto !important;
