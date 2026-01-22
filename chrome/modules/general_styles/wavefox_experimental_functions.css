@@ -32,6 +32,7 @@
 
 @media -moz-pref("WaveFox.Experimental.VerticalTabs.Autohide") and -moz-pref("sidebar.verticalTabs", true)
 {
+    /*
     :root[sizemode="normal"] #navigator-toolbox
     {
         border-radius var(--border-radius-medium) !important;
@@ -39,6 +40,7 @@
         top: calc(-2 * var(--space-small)) !important;
         clip-path: inset(calc(50% - var(--space-small)) 0px round 50px) !important;
     }
+    */
 
     #navigator-toolbox
     {
