@@ -32,16 +32,6 @@
 
 @media -moz-pref("WaveFox.Experimental.VerticalTabs.Autohide") and -moz-pref("sidebar.verticalTabs", true)
 {
-    /*
-    :root[sizemode="normal"] #navigator-toolbox
-    {
-        border-radius var(--border-radius-medium) !important;
-      
-        top: calc(-2 * var(--space-small)) !important;
-        clip-path: inset(calc(50% - var(--space-small)) 0px round 50px) !important;
-    }
-    */
-
     #navigator-toolbox
     {
         overflow: clip !important;
@@ -56,6 +46,11 @@
         transition-delay: 0.5s !important;
         clip-path: inset(0px 0px calc(100% - var(--space-small)) 0px round 50px) !important;
         z-index: 3 !important;
+      
+        :root[sizemode="normal"] &
+        {
+            top: var(--space-medium) !important;
+        }
         
         #urlbar
         {
@@ -71,6 +66,11 @@
             clip-path: inset(-100%) !important;
             backdrop-filter: blur(8px) !important;
             transition-delay: 0s !important;
+          
+            :root[sizemode="normal"] &
+            {
+                border-radius: var(--border-radius-medium) !important;
+            }
 
             #urlbar
             {
