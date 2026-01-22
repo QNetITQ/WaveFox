@@ -32,48 +32,43 @@
 
 @media -moz-pref("WaveFox.Experimental.VerticalTabs.Autohide") and -moz-pref("sidebar.verticalTabs", true)
 {
-    :root:not([inFullscreen])
+    :root[sizemode="normal"] #navigator-toolbox
     {
-
-    &[sizemode="normal"] #navigator-toolbox
-    {
-        clip-path: inset(0px 0px calc(100% - 12px) round 0px 0px 50px 50px) !important;
+        border-radius var(--border-radius-medium) !important;
+      
+        top: calc(-2 * var(--space-small)) !important;
+        clip-path: inset(calc(50% - var(--space-small)) 0px round 50px) !important;
     }
 
     #navigator-toolbox
     {
         overflow: clip !important;
         position: absolute !important;
-        
+        width: 50% !important;
+        inset-inline-start: 25% !important;
         background-color: color-mix(in srgb, var(--sidebar-text-color) 25%, transparent) !important;
-
+        border-radius: 0px 0px var(--border-radius-medium) var(--border-radius-medium) !important;
         box-shadow: var(--content-area-shadow) !important;
-        
-        width: 60% !important;
-
-        z-index: 3 !important;
-
-        transition-property: background-color, border-radius, clip-path, box-shadow !important;
+        transition-property: all !important;
         transition-duration: 0.5s !important;
-        
-        inset-inline-end: 20% !important;
-
-        backdrop-filter: blur(8px) !important;
-        
-        clip-path: inset(0px 0px calc(100% - 4px) round 0px 0px 50px 50px) !important;
+        transition-delay: 0.5s !important;
+        clip-path: inset(0px 0px calc(100% - var(--space-small)) 0px round 50px) !important;
+        z-index: 3 !important;
         
         #urlbar
         {
             opacity: 0 !important;
             pointer-events: none !important;
+            transition-delay: 0s !important;
         }
 
         &:hover,
         &:has(*[open], *:focus)
         {
-            clip-path: inset(-10px) !important;
             background-color: color-mix(in srgb, var(--sidebar-background-color) 75%, transparent) !important;
-            border-radius: 0px 0px var(--border-radius-medium) var(--border-radius-medium) !important;
+            clip-path: inset(-100%) !important;
+            backdrop-filter: blur(8px) !important;
+            transition-delay: 0s !important;
 
             #urlbar
             {
@@ -82,6 +77,5 @@
                 transition-delay: 0.5s !important;
             }
         }
-    }
     }
 }
