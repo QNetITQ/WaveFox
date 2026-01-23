@@ -166,6 +166,11 @@ Works only with system theme. Requires transparency support from the operating s
 
 - `WaveFox.VerticalTabs.WebPage.Floating.Enabled`
 
+### Toolbar Autohide
+<img width="1727" height="918" alt="изображение" src="https://github.com/user-attachments/assets/bf786951-7633-4429-ada2-1639d2210263" />
+
+- `WaveFox.VerticalTabs.Toolbar.Autohide`
+
 ### Experimental
 
 Disables the ability to pin tabs by dragging. Some users find this feature annoying.
