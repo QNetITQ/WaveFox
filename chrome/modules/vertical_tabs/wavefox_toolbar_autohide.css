@@ -40,7 +40,7 @@
         }
 
         &:hover,
-        &:has(*[open], *:focus, *:focus-visible)
+        &:has(*[open], *[_moz-menuactive], *:focus, *:focus-visible)
         {
             background-color: color-mix(in srgb, var(--sidebar-background-color) 75%, transparent) !important;
             clip-path: inset(-100%) !important;
