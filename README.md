@@ -161,10 +161,10 @@ Works only with system theme. Requires transparency support from the operating s
 - `WaveFox.WebPage.Transparency` > 1 or 2 and `browser.tabs.allow_transparent_browser` (1 - New tab page only / 2 - All browser windows and all websites)
   - `WaveFox.WebPage.Background.Saturation` > 1 or 2 or 3
 
-### Floating Web Page (Vertical tabs)
+### Web Page (Vertical tabs)
 <img width="1780" height="873" alt="изображение" src="https://github.com/user-attachments/assets/a9bc4d90-1b3e-4707-b805-67fe449dcbd2" />
 
-- `WaveFox.VerticalTabs.WebPage.Floating.Enabled`
+- `WaveFox.VerticalTabs.WebPage` > 1 or 2
 
 ### Toolbar Autohide (Vertical tabs)
 <img width="1727" height="918" alt="изображение" src="https://github.com/user-attachments/assets/bf786951-7633-4429-ada2-1639d2210263" />
