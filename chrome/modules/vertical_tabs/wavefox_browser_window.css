@@ -45,6 +45,11 @@
                 border-radius: var(--border-radius-medium) !important;
                 box-shadow: var(--content-area-shadow) !important;
                 background-clip: padding-box !important;
+
+                :root[sizemode="fullscreen"] &
+                {
+                    margin-top: 4px !important;
+                }
                 
                 #tabbrowser-tabbox
                 {
