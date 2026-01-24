@@ -24,14 +24,42 @@
 
     .browser-toolbox-background:not(#navigator-toolbox)
     {
-        @media -moz-pref("WaveFox.VerticalTabs.WebPage", 1)
+        @media -moz-pref("WaveFox.VerticalTabs.WebPage", 1) or 
+               -moz-pref("WaveFox.VerticalTabs.WebPage", 2)
         {
             #sidebar-main
             {
                 background-color: color-mix(in srgb, var(--toolbar-bgcolor) 75%, transparent) !important;
                 color: var(--toolbar-color) !important;
+                border-radius: 0px !important;
                 transition-property: background-color !important;
                 transition-duration: 0.5s !important;
+            }
+            
+            @media -moz-pref("WaveFox.VerticalTabs.WebPage", 2)
+            {
+                overflow: clip !important;
+                margin-block: 0px 4px !important;
+                margin-inline: 4px !important;
+                border: 1px solid var(--chrome-content-separator-color) !important;
+                border-radius: var(--border-radius-medium) !important;
+                box-shadow: var(--content-area-shadow) !important;
+                background-clip: padding-box !important;
+                
+                #tabbrowser-tabbox
+                {
+                    #tabbrowser-tabpanels
+                    {
+                        box-shadow: var(--content-area-shadow) !important;
+
+                        .browserContainer
+                        {
+                            outline: none !important;
+                            box-shadow: none !important;
+                            clip-path: content-box !important;
+                        }
+                    }
+                }
             }
         }
 
