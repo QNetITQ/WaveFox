@@ -1,8 +1,8 @@
 @media -moz-pref("WaveFox.VerticalTabs.Toolbar.Autohide.Enabled")
 {
-    .browser-toolbox-background:not(#navigator-toolbox) /* Backdrop-filter issue fix */
+    .browser-toolbox-background:not(#navigator-toolbox)
     {
-        @media not -moz-pref("WaveFox.VerticalTabs.WebPage.Floating.Enabled")
+        @media not -moz-pref("WaveFox.VerticalTabs.WebPage.Floating.Enabled") /* Backdrop-filter issue fix */
         {
             overflow: clip !important;
             border-radius: 0.01px !important;
