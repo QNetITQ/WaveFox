@@ -4,6 +4,11 @@
     {
         overflow: clip !important;
         border-radius: 0.01px !important;
+        
+        @media -moz-pref("WaveFox.VerticalTabs.WebPage.Floating.Enabled")
+        {
+            margin-top: 4px !important;
+        }
     }
 
     #navigator-toolbox
@@ -17,7 +22,6 @@
         box-shadow: var(--content-area-shadow) !important;
         transition-property: all !important;
         transition-duration: 0.5s !important;
-        transition-delay: 0.5s !important;
         clip-path: inset(0px 40% calc(100% - 4px) 40% round 50px) !important;
         z-index: 3 !important;
       
@@ -30,7 +34,6 @@
         {
             opacity: 0 !important;
             pointer-events: none !important;
-            transition-delay: 0s !important;
         }
 
         &:hover,
@@ -39,7 +42,6 @@
             background-color: color-mix(in srgb, var(--sidebar-background-color) 75%, transparent) !important;
             clip-path: inset(-100%) !important;
             backdrop-filter: blur(8px) !important;
-            transition-delay: 0s !important;
           
             :root[sizemode="normal"] &
             {
@@ -50,7 +52,6 @@
             {
                 opacity: 1 !important;
                 pointer-events: auto !important;
-                transition-delay: 0.5s !important;
             }
         }
     }
