@@ -169,7 +169,7 @@ Works only with system theme. Requires transparency support from the operating s
 ### Toolbar Autohide (Vertical tabs)
 <img width="1727" height="918" alt="изображение" src="https://github.com/user-attachments/assets/bf786951-7633-4429-ada2-1639d2210263" />
 
-- `WaveFox.VerticalTabs.Toolbar.Autohide`
+- `WaveFox.VerticalTabs.Toolbar.Autohide.Enabled`
 
 ### Experimental
 
