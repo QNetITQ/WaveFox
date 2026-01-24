@@ -24,6 +24,17 @@
 
     .browser-toolbox-background:not(#navigator-toolbox)
     {
+        @media -moz-pref("WaveFox.VerticalTabs.WebPage", 1)
+        {
+            #sidebar-main
+            {
+                background-color: color-mix(in srgb, var(--toolbar-bgcolor) 75%, transparent) !important;
+                color: var(--toolbar-color) !important;
+                transition-property: background-color !important;
+                transition-duration: 0.5s !important;
+            }
+        }
+
         #sidebar-launcher-splitter,
         #sidebar-splitter
         {
