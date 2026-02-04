@@ -11,11 +11,9 @@
                 #sidebar-main[sidebar-launcher-expanded],
                 #sidebar-main[sidebar-ongoing-animations]:not([sidebar-launcher-expanded])
                 {
-                    background-color: color-mix(in srgb, var(--sidebar-background-color) 75%, transparent) !important;
+                    background-color: color-mix(in srgb, var(--toolbar-bgcolor) 75%, transparent) !important;
                     background-image: none !important;
-                    color: var(--sidebar-text-color) !important;
-                    border: none !important;
-                    box-shadow: var(--content-area-shadow) !important;
+                    color: var(--toolbar-color) !important;
                     backdrop-filter: blur(8px) !important;
                 }
             }
@@ -24,12 +22,25 @@
 
     .browser-toolbox-background:not(#navigator-toolbox)
     {
+        overflow: clip !important;
+        outline: 1px solid var(--chrome-content-separator-color) !important;
+        outline-offset: 0px !important;
+
         #sidebar-main
         {
             transition-property: background-color !important;
             transition-duration: 0.5s !important;
+            
+            border: none !important;
+            outline: 1px solid var(--sidebar-border-color) !important;
+            outline-offset: 0px !important;
+            background-color: var(--toolbar-bgcolor) !important;
+            color: var(--toolbar-color) !important;
+            box-shadow: var(--content-area-shadow) !important;
+            z-index: 3 !important;
         }
         
+        /*
         @media -moz-pref("WaveFox.VerticalTabs.WebPage.Floating.Enabled")
         {
             overflow: clip !important;
@@ -67,6 +78,7 @@
                 }
             }
         }
+        */
 
         #sidebar-launcher-splitter,
         #sidebar-splitter
@@ -84,14 +96,13 @@
         #sidebar-box
         {
             padding-block: 0px !important;
-            z-index: 3 !important;
 
             #sidebar
             {
                 outline: none !important;
                 margin-block: 0px !important;
                 border-radius: 0px !important;
-                box-shadow: var(--content-area-shadow) !important;
+                box-shadow: none !important;
             }
         }
 
@@ -99,7 +110,9 @@
         {
             .browserContainer
             {
-                outline: none !important;
+                outline: 1px solid var(--sidebar-border-color) !important;
+                outline-offset: 0px !important;
+                box-shadow: var(--content-area-shadow) !important;
             }
         }
     }
