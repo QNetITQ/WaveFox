@@ -115,6 +115,7 @@
                 .browserContainer
                 {
                     outline: none !important;
+                    box-shadow: var(--content-area-shadow) !important;
                 }
             }
         }
