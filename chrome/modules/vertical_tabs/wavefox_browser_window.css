@@ -1,6 +1,5 @@
 :root:not([inDOMFullscreen])
 {
-    /*
     @media -moz-pref("sidebar.visibility", 'expand-on-hover')
     {
         &[sidebar-expand-on-hover]
@@ -18,181 +17,106 @@
             }
         }
     }
-    */
 
     .browser-toolbox-background:not(#navigator-toolbox)
     {
         #sidebar-main
         {
-            /*
             transition-property: background-color !important;
             transition-duration: 0.5s !important;
-            */
 
-            border: none !important;
+            margin-top: 0px !important;
+            margin-bottom: 6px !important;
             background-color: var(--toolbar-bgcolor) !important;
             background-image: none !important;
             color: var(--toolbar-color) !important;
+            border: none !important;
             box-shadow: var(--content-area-shadow) !important;
             z-index: 3 !important;
-        }
-        
-        /*
-        @media -moz-pref("WaveFox.VerticalTabs.WebPage.Floating.Enabled")
-        {
-            overflow: clip !important;
-            margin-block: 0px 4px !important;
-            margin-inline: 4px !important;
-            border: 1px solid var(--chrome-content-separator-color) !important;
-            border-radius: var(--border-radius-medium) !important;
-            box-shadow: var(--content-area-shadow) !important;
-            background-clip: padding-box !important;
-            
+                
             :root[sizemode="fullscreen"] &
             {
-                margin-top: 4px !important;
+                margin-top: 6px !important;
             }
-
-            #sidebar-main
+                
+            &:not([sidebar-positionend])
             {
-                background-color: color-mix(in srgb, var(--toolbar-bgcolor) 75%, transparent) !important;
-                color: var(--toolbar-color) !important;
-                border-radius: 0px !important;
+                border-start-end-radius: var(--border-radius-medium) !important;
+                border-end-end-radius: var(--border-radius-medium) !important;
             }
-            
-            #tabbrowser-tabbox
+                
+            &[sidebar-positionend]
             {
-                #tabbrowser-tabpanels
-                {
-                    box-shadow: var(--content-area-shadow) !important;
-
-                    .browserContainer
-                    {
-                        outline: none !important;
-                        box-shadow: none !important;
-                        clip-path: content-box !important;
-                    }
-                }
+                border-start-start-radius: var(--border-radius-medium) !important;
+                border-end-start-radius: var(--border-radius-medium) !important;
             }
         }
-        */
 
         #sidebar-launcher-splitter,
         #sidebar-splitter
         {
-            width: var(--splitter-width) !important;
-            margin-inline: calc(-1 * var(--splitter-width)) 0px !important;
+            width: 2px !important;
+            margin-top: 0px !important;
+            margin-inline: 2px !important;
+            margin-bottom: 6px !important;
             border: none !important;
-
-            :is(#sidebar-main, #sidebar-box)[sidebar-positionend] + &
+            border-radius: var(--border-radius-medium) !important;
+            
+            :root[sizemode="fullscreen"] &
             {
-                margin-inline: 0px calc(-1 * var(--splitter-width)) !important;
+                margin-top: 6px !important;
             }
         }
 
         #sidebar-box
         {
-            padding-block: 0px !important;
+            padding-top: 0px !important;
+            padding-bottom: 0px !important;
 
             #sidebar
             {
-                background-color: transparent !important;
-                color: inherit !important;
                 outline: none !important;
-                margin-block: 0px !important;
-                border-radius: 0px !important;
-                box-shadow: none !important;
-            }
-        }
-
-        #tabbrowser-tabbox
-        {
-            .browserContainer
-            {
-                outline: none !important;
-            }
-        }
-        
-        
-        
-        
-        
-        
-        @media -moz-pref("WaveFox.VerticalTabs.WebPage.Floating.Enabled", false)
-        {
-            #sidebar-main
-            {
+                margin-top: 0px !important;
                 margin-bottom: 6px !important;
+                box-shadow: var(--content-area-shadow) !important;
                 
                 :root[sizemode="fullscreen"] &
                 {
                     margin-top: 6px !important;
                 }
+            }
+        }
+
+        #tabbrowser-tabbox
+        {
+            &:not([sidebar-positionend]) > #tabbrowser-tabpanels
+            {
+                margin-inline-end: 6px !important;
+            }
                 
-                &:not([sidebar-positionend])
-                {
-                    border-start-end-radius: var(--border-radius-medium) !important;
-                    border-end-end-radius: var(--border-radius-medium) !important;
-                }
-                
-                &[sidebar-positionend]
-                {
-                    border-start-start-radius: var(--border-radius-medium) !important;
-                    border-end-start-radius: var(--border-radius-medium) !important;
-                }
+            &[sidebar-positionend] > #tabbrowser-tabpanels
+            {
+                margin-inline-start: 6px !important;
             }
 
-            #tabbrowser-tabbox
+            #tabbrowser-tabpanels
             {
-                #tabbrowser-tabpanels
+                overflow: clip !important;
+                margin-top: 0px !important;
+                margin-bottom: 6px !important;
+                border-radius: var(--border-radius-medium) !important;
+                box-shadow: var(--content-area-shadow) !important;
+
+                :root[sizemode="fullscreen"] &
                 {
-                    overflow: clip !important;
-                    margin-bottom: 6px !important;
-                    margin-inline: 6px !important;
-                    border-radius: var(--border-radius-medium) !important;
-                    box-shadow: var(--content-area-shadow) !important;
-                    
-                    :root[sizemode="fullscreen"] &
-                    {
-                        margin-top: 6px !important;
-                    }
+                    margin-top: 6px !important;
                 }
-                
-                &[sidebar-panel-open]:not([sidebar-positionend]) > #tabbrowser-tabpanels
+
+                .browserContainer
                 {
-                    margin-inline-start: 0px !important;
-                }
-                
-                &[sidebar-panel-open][sidebar-positionend] > #tabbrowser-tabpanels
-                {
-                    margin-inline-end: 0px !important;
+                    outline: none !important;
                 }
             }
         }
-       
-        
-        
-        
-        
-        
-        
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
