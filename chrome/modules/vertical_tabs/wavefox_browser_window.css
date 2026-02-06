@@ -1,5 +1,6 @@
 :root:not([inDOMFullscreen])
 {
+    /*
     @media -moz-pref("sidebar.visibility", 'expand-on-hover')
     {
         &[sidebar-expand-on-hover]
@@ -12,29 +13,25 @@
                 #sidebar-main[sidebar-ongoing-animations]:not([sidebar-launcher-expanded])
                 {
                     background-color: color-mix(in srgb, var(--toolbar-bgcolor) 75%, transparent) !important;
-                    background-image: none !important;
-                    color: var(--toolbar-color) !important;
                     backdrop-filter: blur(8px) !important;
                 }
             }
         }
     }
+    */
 
     .browser-toolbox-background:not(#navigator-toolbox)
     {
-        overflow: clip !important;
-        outline: 1px solid var(--chrome-content-separator-color) !important;
-        outline-offset: 0px !important;
-
         #sidebar-main
         {
+            /*
             transition-property: background-color !important;
             transition-duration: 0.5s !important;
-            
+            */
+
             border: none !important;
-            outline: 1px solid var(--sidebar-border-color) !important;
-            outline-offset: 0px !important;
             background-color: var(--toolbar-bgcolor) !important;
+            background-image: none !important;
             color: var(--toolbar-color) !important;
             box-shadow: var(--content-area-shadow) !important;
             z-index: 3 !important;
@@ -99,6 +96,8 @@
 
             #sidebar
             {
+                background-color: transparent !important;
+                color: inherit !important;
                 outline: none !important;
                 margin-block: 0px !important;
                 border-radius: 0px !important;
@@ -110,10 +109,90 @@
         {
             .browserContainer
             {
-                outline: 1px solid var(--sidebar-border-color) !important;
-                outline-offset: 0px !important;
-                box-shadow: var(--content-area-shadow) !important;
+                outline: none !important;
             }
         }
+        
+        
+        
+        
+        
+        
+        @media -moz-pref("WaveFox.VerticalTabs.WebPage.Floating.Enabled", false)
+        {
+            #sidebar-main
+            {
+                margin-bottom: 6px !important;
+                
+                :root[sizemode="fullscreen"] &
+                {
+                    margin-top: 6px !important;
+                }
+                
+                &:not([sidebar-positionend])
+                {
+                    border-start-end-radius: var(--border-radius-medium) !important;
+                    border-end-end-radius: var(--border-radius-medium) !important;
+                }
+                
+                &[sidebar-positionend]
+                {
+                    border-start-start-radius: var(--border-radius-medium) !important;
+                    border-end-start-radius: var(--border-radius-medium) !important;
+                }
+            }
+
+            #tabbrowser-tabbox
+            {
+                #tabbrowser-tabpanels
+                {
+                    overflow: clip !important;
+                    margin-bottom: 6px !important;
+                    margin-inline: 6px !important;
+                    border-radius: var(--border-radius-medium) !important;
+                    box-shadow: var(--content-area-shadow) !important;
+                    
+                    :root[sizemode="fullscreen"] &
+                    {
+                        margin-top: 6px !important;
+                    }
+                }
+                
+                &[sidebar-panel-open]:not([sidebar-positionend]) > #tabbrowser-tabpanels
+                {
+                    margin-inline-start: 0px !important;
+                }
+                
+                &[sidebar-panel-open][sidebar-positionend] > #tabbrowser-tabpanels
+                {
+                    margin-inline-end: 0px !important;
+                }
+            }
+        }
+       
+        
+        
+        
+        
+        
+        
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
