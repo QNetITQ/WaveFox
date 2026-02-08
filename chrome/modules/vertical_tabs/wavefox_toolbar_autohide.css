@@ -43,6 +43,7 @@
         &:has(*[open], *[_moz-menuactive], *:focus, *:focus-visible)
         {
             background-color: color-mix(in srgb, var(--sidebar-background-color) 75%, transparent) !important;
+            color: var(--sidebar-text-color) !important;
             clip-path: inset(-100%) !important;
             backdrop-filter: blur(8px) !important;
           
