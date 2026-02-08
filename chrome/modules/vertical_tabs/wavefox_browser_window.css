@@ -1,5 +1,8 @@
 :root:not([inDOMFullscreen])
 {
+    --sidebar-background-color: var(--toolbar-bgcolor) !important;
+    --sidebar-text-color: var(--toolbar-color) !important;
+
     @media -moz-pref("sidebar.visibility", 'expand-on-hover')
     {
         &[sidebar-expand-on-hover]
@@ -11,7 +14,7 @@
                 #sidebar-main[sidebar-launcher-expanded],
                 #sidebar-main[sidebar-ongoing-animations]:not([sidebar-launcher-expanded])
                 {
-                    background-color: color-mix(in srgb, var(--toolbar-bgcolor) 75%, transparent) !important;
+                    background-color: color-mix(in srgb, var(--sidebar-background-color) 75%, transparent) !important;
                     backdrop-filter: blur(8px) !important;
                 }
             }
@@ -22,17 +25,16 @@
     {
         #sidebar-main
         {
-            transition-property: background-color !important;
-            transition-duration: 0.5s !important;
-
             margin-top: 0px !important;
             margin-bottom: 6px !important;
-            background-color: var(--toolbar-bgcolor) !important;
+            background-color: var(--sidebar-background-color) !important;
             background-image: none !important;
-            color: var(--toolbar-color) !important;
+            color: var(--sidebar-text-color) !important;
             border: none !important;
             box-shadow: var(--content-area-shadow) !important;
             z-index: 3 !important;
+            transition-property: background-color !important;
+            transition-duration: 0.5s !important;
                 
             :root[sizemode="fullscreen"] &
             {
@@ -53,7 +55,8 @@
         }
 
         #sidebar-launcher-splitter,
-        #sidebar-splitter
+        #sidebar-splitter,
+        #ai-window-splitter
         {
             width: 2px !important;
             margin-top: 0px !important;
@@ -70,8 +73,7 @@
 
         #sidebar-box
         {
-            padding-top: 0px !important;
-            padding-bottom: 0px !important;
+            padding: 0px !important;
 
             #sidebar
             {
