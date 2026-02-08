@@ -25,7 +25,7 @@
         box-shadow: var(--content-area-shadow) !important;
         transition-property: all !important;
         transition-duration: 0.5s !important;
-        clip-path: inset(0px 40% calc(100% - 4px) 40% round 50px) !important;
+        clip-path: inset(0px 40% calc(100% - 6px) 40% round 50px) !important;
         z-index: 3 !important;
       
         :root[sizemode="normal"] &
