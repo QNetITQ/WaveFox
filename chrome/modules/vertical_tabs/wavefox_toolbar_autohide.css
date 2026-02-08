@@ -7,11 +7,11 @@
             overflow: clip !important;
             border-radius: 0.01px !important;
         }
-
-        @media -moz-pref("WaveFox.VerticalTabs.WebPage.Floating.Enabled")
-        {
-            margin-top: 4px !important;
-        }
+    }
+    
+    .browser-toolbox-background:not(#navigator-toolbox) :is(#sidebar-main, #sidebar-launcher-splitter, #sidebar-splitter, #sidebar, #tabbrowser-tabpanels)
+    {
+        margin-top: 6px !important;
     }
 
     #navigator-toolbox
@@ -30,7 +30,7 @@
       
         :root[sizemode="normal"] &
         {
-            top: var(--space-medium) !important;
+            top: 6px !important;
         }
         
         #urlbar
