@@ -55,12 +55,11 @@
         }
 
         #sidebar-launcher-splitter,
-        #sidebar-splitter,
-        #ai-window-splitter
+        #sidebar-splitter
         {
-            width: 2px !important;
+            width: 6px !important;
             margin-top: 0px !important;
-            margin-inline: 2px !important;
+            margin-inline: 0px !important;
             margin-bottom: 6px !important;
             border: none !important;
             border-radius: var(--border-radius-medium) !important;
