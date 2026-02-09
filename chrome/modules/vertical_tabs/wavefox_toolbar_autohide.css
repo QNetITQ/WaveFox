@@ -1,15 +1,6 @@
 @media -moz-pref("WaveFox.VerticalTabs.Toolbar.Autohide.Enabled")
 {
-    .browser-toolbox-background:not(#navigator-toolbox)
-    {
-        @media not -moz-pref("WaveFox.VerticalTabs.WebPage.Floating.Enabled") /* Backdrop-filter issue fix */
-        {
-            overflow: clip !important;
-            border-radius: 0.01px !important;
-        }
-    }
-    
-    .browser-toolbox-background:not(#navigator-toolbox) :is(#sidebar-main, #sidebar-launcher-splitter, #sidebar-splitter, #sidebar, #tabbrowser-tabpanels)
+    #browser :is(#sidebar-main, #sidebar-launcher-splitter, #sidebar-splitter, #sidebar, #tabbrowser-tabpanels)
     {
         margin-top: 6px !important;
     }
@@ -42,10 +33,9 @@
         &:hover,
         &:has(*[open], *[_moz-menuactive], *:focus, *:focus-visible)
         {
-            background-color: color-mix(in srgb, var(--sidebar-background-color) 75%, transparent) !important;
+            background-color: var(--sidebar-background-color) !important;
             color: var(--sidebar-text-color) !important;
             clip-path: inset(-100%) !important;
-            backdrop-filter: blur(8px) !important;
           
             :root[sizemode="normal"] &
             {
