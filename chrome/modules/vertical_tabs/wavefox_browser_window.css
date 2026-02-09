@@ -7,7 +7,7 @@
     {
         &[sidebar-expand-on-hover]
         {
-            .browser-toolbox-background:not(#navigator-toolbox)
+            #browser
             {
                 will-change: background-color, backdrop-filter !important;
 
@@ -21,7 +21,7 @@
         }
     }
 
-    .browser-toolbox-background:not(#navigator-toolbox)
+    #browser
     {
         #sidebar-main
         {
