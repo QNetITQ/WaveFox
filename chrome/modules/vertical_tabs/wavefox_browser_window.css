@@ -26,9 +26,9 @@
         {
             margin-top: 0px !important;
             margin-bottom: 6px !important;
-            background-color: var(--sidebar-background-color) !important;
+            background-color: var(--toolbar-bgcolor) !important;
             background-image: none !important;
-            color: var(--sidebar-text-color) !important;
+            color: var(--toolbar-color) !important;
             border: none !important;
             box-shadow: var(--content-area-shadow) !important;
             z-index: 3 !important;
