@@ -2,7 +2,14 @@
 {
     :root:not([inDOMFullscreen])
     {
-        --content-area-shadow: 0px 0px 1px light-dark(rgba(0,0,0,0.125), rgba(0,0,0,0.5)), 0px 2px 6px light-dark(rgba(0,0,0,0.125), rgba(0,0,0,0.5)) !important;
+        @media -moz-pref("extensions.activeThemeID", 'default-theme@mozilla.org')         or
+               -moz-pref("extensions.activeThemeID", 'firefox-compact-light@mozilla.org') or
+               -moz-pref("extensions.activeThemeID", 'firefox-compact-dark@mozilla.org')
+        {
+            --sidebar-background-color: var(--toolbar-bgcolor) !important;
+            --sidebar-text-color: var(--toolbar-color) !important;
+            --content-area-shadow: 0px 0px 1px light-dark(rgba(0,0,0,0.125), rgba(0,0,0,0.5)), 0px 2px 6px light-dark(rgba(0,0,0,0.125), rgba(0,0,0,0.5)) !important;
+        }
         
         #navigator-toolbox
         {
