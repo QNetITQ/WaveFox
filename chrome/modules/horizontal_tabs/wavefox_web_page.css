@@ -1,7 +1,9 @@
 @media -moz-pref("WaveFox.WebPage.Floating.Enabled")
 {
-    :root:not([inFullscreen], [inDOMFullscreen])
+    :root:not([inDOMFullscreen])
     {
+        --content-area-shadow: 0px 0px 1px light-dark(rgba(0,0,0,0.125), rgba(0,0,0,0.5)), 0px 2px 6px light-dark(rgba(0,0,0,0.125), rgba(0,0,0,0.5)) !important;
+        
         #navigator-toolbox
         {
             border-bottom: none !important;
@@ -11,45 +13,108 @@
         {
             #sidebar-box
             {
-                margin-block-end: 4px !important;
-                padding-block: 0px !important;
+                padding: 0px !important;
                 
                 #sidebar
                 {
+                    background-color: var(--sidebar-background-color) !important;
+                    color: var(--sidebar-text-color) !important;
+                    border-radius: var(--border-radius-medium) !important;
                     outline: none !important;
-                    border: 1px solid var(--chrome-content-separator-color) !important;
-                    background-clip: padding-box !important;
+                    box-shadow: var(--content-area-shadow) !important;
+                    margin-top: 0px !important;
+                    margin-inline: 0px !important;
+                    margin-bottom: 6px !important;
+                    
+                    :root[sizemode="fullscreen"] &
+                    {
+                        margin-top: 6px !important;
+                    }
                 }
             }
             
+            #sidebar-splitter
+            {
+                width: 6px !important;
+                border: none !important;
+                border-radius: var(--border-radius-medium) !important;
+                margin-top: 0px !important;
+                margin-inline: 0px !important;
+                margin-bottom: 6px !important;
+                
+                :root[sizemode="fullscreen"] &
+                {
+                    margin-top: 6px !important;
+                }
+            }
+
             #tabbrowser-tabbox
             {
-                outline: none !important;
-                box-shadow: none !important;
-                
-                #tabbrowser-tabpanels
+                .browserContainer
                 {
                     overflow: clip !important;
-                    margin-block: 0px 4px !important;
-                    margin-inline: 4px !important;
-                    border: 1px solid var(--chrome-content-separator-color) !important;
                     border-radius: var(--border-radius-medium) !important;
+                    margin-top: 0px !important;
+                    margin-bottom: 6px !important;
+                    outline: none !important;
                     box-shadow: var(--content-area-shadow) !important;
-                    background-clip: padding-box !important;
+                    
+                    :root[sizemode="fullscreen"] &
+                    {
+                        margin-top: 6px !important;
+                    }
                 }
                 
-                &[sidebar-shown]:not([sidebar-positionend]) #tabbrowser-tabpanels
+                &:not([sidebar-positionend])
                 {
-                    margin-inline-start: 0px !important;
-                }
+                    .browserContainer
+                    {
+                        margin-inline-end: 6px !important;
+                    }
 
-                &[sidebar-shown][sidebar-positionend] #tabbrowser-tabpanels
+                    &:not([sidebar-shown])
+                    {
+                        .browserContainer
+                        {
+                            margin-inline-start: 6px !important;
+                        }
+                    }
+                    
+                    &[sidebar-shown]
+                    {
+                        .browserContainer
+                        {
+                            margin-inline-start: 0px !important;
+                        }
+                    }
+                }
+                
+                &[sidebar-positionend]
                 {
-                    margin-inline-end: 0px !important;
+                    .browserContainer
+                    {
+                        margin-inline-start: 6px !important;
+                    }
+
+                    &:not([sidebar-shown])
+                    {
+                        .browserContainer
+                        {
+                            margin-inline-end: 6px !important;
+                        }
+                    }
+                    
+                    &[sidebar-shown]
+                    {
+                        .browserContainer
+                        {
+                            margin-inline-end: 0px !important;
+                        }
+                    }
                 }
             }
         }
-
+        /*
         #browser > #tabbrowser-tabbox > #tabbrowser-tabpanels,
         #browser > #sidebar-box #sidebar
         {
@@ -65,5 +130,6 @@
         {
             margin-block-start: 4px !important;
         }
+        */
     }
 }
