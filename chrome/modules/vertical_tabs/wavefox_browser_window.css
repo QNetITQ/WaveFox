@@ -1,40 +1,27 @@
 :root:not([inDOMFullscreen])
 {
-    --content-area-shadow: 0px 0px 1px light-dark(rgba(0,0,0,0.125), rgba(0,0,0,0.5)), 0px 2px 6px light-dark(rgba(0,0,0,0.125), rgba(0,0,0,0.5)) !important;
-
-    @media -moz-pref("sidebar.visibility", 'expand-on-hover')
+    @media -moz-pref("extensions.activeThemeID", 'default-theme@mozilla.org')         or
+           -moz-pref("extensions.activeThemeID", 'firefox-compact-light@mozilla.org') or
+           -moz-pref("extensions.activeThemeID", 'firefox-compact-dark@mozilla.org')
     {
-        &[sidebar-expand-on-hover]
-        {
-            #browser
-            {
-                will-change: background-color, backdrop-filter !important;
-
-                #sidebar-main[sidebar-launcher-expanded],
-                #sidebar-main[sidebar-ongoing-animations]:not([sidebar-launcher-expanded])
-                {
-                    background-color: color-mix(in srgb, var(--sidebar-background-color) 75%, transparent) !important;
-                    backdrop-filter: blur(8px) !important;
-                }
-            }
-        }
+        --sidebar-background-color: var(--toolbar-bgcolor) !important;
+        --sidebar-text-color: var(--toolbar-color) !important;
+        --content-area-shadow: 0px 0px 1px light-dark(rgba(0,0,0,0.125), rgba(0,0,0,0.5)), 0px 2px 6px light-dark(rgba(0,0,0,0.125), rgba(0,0,0,0.5)) !important;
     }
-
+    
     #browser
     {
         #sidebar-main
         {
             margin-top: 0px !important;
             margin-bottom: 6px !important;
-            background-color: var(--toolbar-bgcolor) !important;
+            background-color: var(--sidebar-background-color) !important;
             background-image: none !important;
-            color: var(--toolbar-color) !important;
+            color: var(--sidebar-text-color) !important;
             border: none !important;
             box-shadow: var(--content-area-shadow) !important;
             z-index: 3 !important;
-            transition-property: background-color !important;
-            transition-duration: 0.5s !important;
-                
+
             :root[sizemode="fullscreen"] &
             {
                 margin-top: 6px !important;
