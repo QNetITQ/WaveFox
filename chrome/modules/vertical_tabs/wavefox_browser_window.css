@@ -20,7 +20,6 @@
             color: var(--sidebar-text-color) !important;
             border: none !important;
             box-shadow: var(--content-area-shadow) !important;
-            z-index: 3 !important;
 
             :root[sizemode="fullscreen"] &
             {
