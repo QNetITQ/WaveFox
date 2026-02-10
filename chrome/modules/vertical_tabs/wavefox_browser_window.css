@@ -75,34 +75,29 @@
 
         #tabbrowser-tabbox
         {
-            &:not([sidebar-positionend]) > #tabbrowser-tabpanels
-            {
-                margin-inline-end: 6px !important;
-            }
-                
-            &[sidebar-positionend] > #tabbrowser-tabpanels
-            {
-                margin-inline-start: 6px !important;
-            }
-
-            #tabbrowser-tabpanels
+            .browserContainer
             {
                 overflow: clip !important;
                 margin-top: 0px !important;
                 margin-bottom: 6px !important;
                 border-radius: var(--border-radius-medium) !important;
+                outline: none !important;
                 box-shadow: var(--content-area-shadow) !important;
 
                 :root[sizemode="fullscreen"] &
                 {
                     margin-top: 6px !important;
                 }
+            }
 
-                .browserContainer
-                {
-                    outline: none !important;
-                    box-shadow: var(--content-area-shadow) !important;
-                }
+            &:not([sidebar-positionend]) .browserContainer
+            {
+                margin-inline-end: 6px !important;
+            }
+                
+            &[sidebar-positionend] .browserContainer
+            {
+                margin-inline-start: 6px !important;
             }
         }
     }
