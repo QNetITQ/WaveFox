@@ -2,7 +2,7 @@
 {
     :root:not([inDOMFullscreen])
     {
-        #browser :is(#sidebar-main, #sidebar-launcher-splitter, #sidebar-splitter, #sidebar, #tabbrowser-tabpanels)
+        #browser :is(#sidebar-main, #sidebar-launcher-splitter, #sidebar-splitter, #sidebar, .browserContainer)
         {
             margin-top: 6px !important;
         }
