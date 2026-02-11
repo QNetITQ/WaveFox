@@ -1,253 +1,103 @@
-@media -moz-pref("WaveFox.VerticalTabs.WebPage.Floating", 1)
+:root:not([inDOMFullscreen])
 {
-    :root:not([inFullscreen], [inDOMFullscreen])
+    @media -moz-pref("extensions.activeThemeID", 'default-theme@mozilla.org')         or
+           -moz-pref("extensions.activeThemeID", 'firefox-compact-light@mozilla.org') or
+           -moz-pref("extensions.activeThemeID", 'firefox-compact-dark@mozilla.org')
     {
-        .browser-toolbox-background:not(#navigator-toolbox)
+        --sidebar-background-color: var(--toolbar-bgcolor) !important;
+        --sidebar-text-color: var(--toolbar-color) !important;
+        --content-area-shadow: 0px 0px 1px light-dark(rgba(0,0,0,0.125), rgba(0,0,0,0.5)), 0px 2px 6px light-dark(rgba(0,0,0,0.125), rgba(0,0,0,0.5)) !important;
+    }
+    
+    #browser
+    {
+        #sidebar-main
         {
-            overflow: clip !important;
-            margin-block: 0px var(--space-small) !important;
-            margin-inline: var(--space-small) !important;
+            margin-top: 0px !important;
+            margin-bottom: 6px !important;
+            background-color: var(--sidebar-background-color) !important;
+            background-image: none !important;
+            color: var(--sidebar-text-color) !important;
+            border: none !important;
+            box-shadow: var(--content-area-shadow) !important;
+
+            :root[sizemode="fullscreen"] &
+            {
+                margin-top: 6px !important;
+            }
+                
+            &:not([sidebar-positionend])
+            {
+                border-start-end-radius: var(--border-radius-medium) !important;
+                border-end-end-radius: var(--border-radius-medium) !important;
+            }
+                
+            &[sidebar-positionend]
+            {
+                border-start-start-radius: var(--border-radius-medium) !important;
+                border-end-start-radius: var(--border-radius-medium) !important;
+            }
+        }
+
+        #sidebar-launcher-splitter,
+        #sidebar-splitter
+        {
+            width: 6px !important;
+            margin-top: 0px !important;
+            margin-inline: 0px !important;
+            margin-bottom: 6px !important;
+            border: none !important;
             border-radius: var(--border-radius-medium) !important;
-            border: 1px solid var(--chrome-content-separator-color) !important;
-            box-shadow: var(--content-area-shadow) !important;
-            background-clip: padding-box !important;
-            background-color: color-mix(in srgb, var(--sidebar-background-color) 75%, transparent) !important;
-
-            #sidebar-main
+            
+            :root[sizemode="fullscreen"] &
             {
-                background-color: transparent !important;
-                color: var(--sidebar-text-color) !important;
-                border-radius: 0px !important;
+                margin-top: 6px !important;
             }
+        }
 
-            #sidebar-launcher-splitter,
-            #sidebar-splitter
+        #sidebar-box
+        {
+            padding: 0px !important;
+
+            #sidebar
             {
-                width: var(--splitter-width) !important;
-                margin-inline: calc(-1 * var(--splitter-width)) 0px !important;
-                border: none !important;
-
-                :is(#sidebar-main, #sidebar-box)[sidebar-positionend] + &
+                outline: none !important;
+                margin-top: 0px !important;
+                margin-bottom: 6px !important;
+                box-shadow: var(--content-area-shadow) !important;
+                
+                :root[sizemode="fullscreen"] &
                 {
-                    margin-inline: 0px calc(-1 * var(--splitter-width)) !important;
-                }
-            }
-
-            #sidebar-box
-            {
-                padding-block: 0px !important;
-                z-index: 3 !important;
-
-                #sidebar
-                {
-                    outline: none !important;
-                    margin-block: 0px !important;
-                    border-radius: 0px !important;
-                    box-shadow: var(--content-area-shadow) !important;
-                }
-            }
-
-            #tabbrowser-tabbox
-            {
-                .browserContainer
-                {
-                    outline: none !important;
+                    margin-top: 6px !important;
                 }
             }
         }
-    }
-}
 
-@media -moz-pref("WaveFox.VerticalTabs.WebPage.Floating", 2)
-{
-    :root:not([inFullscreen], [inDOMFullscreen])
-    {
-        .browser-toolbox-background:not(#navigator-toolbox)
+        #tabbrowser-tabbox
         {
-            overflow: clip !important;
-            margin-block: 0px var(--space-small) !important;
-            margin-inline: var(--space-small) !important;
-            border-radius: var(--border-radius-medium) !important;
-            border: 1px solid var(--chrome-content-separator-color) !important;
-            box-shadow: var(--content-area-shadow) !important;
-            background-clip: padding-box !important;
-            background-color: color-mix(in srgb, var(--sidebar-background-color) 75%, transparent) !important;
-
-            #sidebar-main
+            .browserContainer
             {
-                background-color: transparent !important;
-                color: var(--sidebar-text-color) !important;
-                border-radius: 0px !important;
-            }
+                overflow: clip !important;
+                margin-top: 0px !important;
+                margin-bottom: 6px !important;
+                border-radius: var(--border-radius-medium) !important;
+                outline: none !important;
+                box-shadow: var(--content-area-shadow) !important;
 
-            #sidebar-launcher-splitter
-            {
-                width: var(--splitter-width) !important;
-                margin-inline: calc(-1 * var(--splitter-width)) 0px !important;
-                border: none !important;
-
-                :is(#sidebar-main, #sidebar-box)[sidebar-positionend] + &
+                :root[sizemode="fullscreen"] &
                 {
-                    margin-inline: 0px calc(-1 * var(--splitter-width)) !important;
+                    margin-top: 6px !important;
                 }
             }
 
-            #sidebar-box
+            &:not([sidebar-positionend]) .browserContainer
             {
-                padding-block: 0px !important;
-
-                #sidebar
-                {
-                    outline: none !important;
-                    margin-block: var(--space-small) !important;
-                    border: 1px solid var(--sidebar-border-color) !important;
-                    box-shadow: var(--content-area-shadow) !important;
-                    background-clip: padding-box !important;
-                }
+                margin-inline-end: 6px !important;
             }
-
-            #tabbrowser-tabbox
+                
+            &[sidebar-positionend] .browserContainer
             {
-                #tabbrowser-tabpanels
-                {
-                    overflow: clip !important;
-                    margin: var(--space-small) !important;
-                    border-radius: var(--border-radius-medium) !important;
-                    border: 1px solid var(--sidebar-border-color) !important;
-                    box-shadow: var(--content-area-shadow) !important;
-                    background-clip: padding-box !important;
-                }
-            }
-            
-            #sidebar-main:not([sidebar-positionend], [hidden]) ~ #tabbrowser-tabbox > #tabbrowser-tabpanels
-            {
-                margin-inline-start: 0px !important;
-            }
-            
-            #sidebar-main[sidebar-positionend]:not([hidden]) ~ #tabbrowser-tabbox > #tabbrowser-tabpanels
-            {
-                margin-inline-end: 0px !important;
-            }
-        }
-    }
-}
-
-@media -moz-pref("WaveFox.VerticalTabs.WebPage.Floating", 3)
-{
-    :root:not([inFullscreen], [inDOMFullscreen])
-    {
-        .browser-toolbox-background:not(#navigator-toolbox)
-        {
-            #sidebar-main
-            {
-                border-radius: 0px !important;
-            }
-
-            #sidebar-launcher-splitter
-            {
-                width: var(--splitter-width) !important;
-                margin-inline: calc(-1 * var(--splitter-width)) 0px !important;
-                border: none !important;
-
-                :is(#sidebar-main, #sidebar-box)[sidebar-positionend] + &
-                {
-                    margin-inline: 0px calc(-1 * var(--splitter-width)) !important;
-                }
-            }
-
-            #sidebar-box
-            {
-                padding-block: 0px !important;
-
-                #sidebar
-                {
-                    outline: none !important;
-                    margin-block: 0px var(--space-small) !important;
-                    border: 1px solid var(--sidebar-border-color) !important;
-                    box-shadow: var(--content-area-shadow) !important;
-                    background-clip: padding-box !important;
-                }
-            }
-
-            #tabbrowser-tabbox
-            {
-                #tabbrowser-tabpanels
-                {
-                    overflow: clip !important;
-                    margin-block: 0px var(--space-small) !important;
-                    margin-inline: var(--space-small) !important;
-                    border-radius: var(--border-radius-medium) !important;
-                    border: 1px solid var(--sidebar-border-color) !important;
-                    box-shadow: var(--content-area-shadow) !important;
-                    background-clip: padding-box !important;
-                }
-            }
-            
-            #sidebar-main:not([sidebar-positionend], [hidden]) ~ #tabbrowser-tabbox > #tabbrowser-tabpanels
-            {
-                margin-inline-start: 0px !important;
-            }
-            
-            #sidebar-main[sidebar-positionend]:not([hidden]) ~ #tabbrowser-tabbox > #tabbrowser-tabpanels
-            {
-                margin-inline-end: 0px !important;
-            }
-        }
-    }
-}
-
-@media -moz-pref("WaveFox.VerticalTabs.WebPage.Floating", 4)
-{
-    :root:not([inFullscreen], [inDOMFullscreen])
-    {
-        .browser-toolbox-background:not(#navigator-toolbox)
-        {
-            overflow: clip !important;
-            border-top: 1px solid var(--chrome-content-separator-color) !important;
-            box-shadow: var(--content-area-shadow) !important;
-            background-clip: padding-box !important;
-            background-color: color-mix(in srgb, var(--sidebar-background-color) 75%, transparent) !important;
-
-            #sidebar-main
-            {
-                background-color: transparent !important;
-                color: var(--sidebar-text-color) !important;
-                border-radius: 0px !important;
-            }
-
-            #sidebar-launcher-splitter,
-            #sidebar-splitter
-            {
-                width: var(--splitter-width) !important;
-                margin-inline: calc(-1 * var(--splitter-width)) 0px !important;
-                border: none !important;
-
-                :is(#sidebar-main, #sidebar-box)[sidebar-positionend] + &
-                {
-                    margin-inline: 0px calc(-1 * var(--splitter-width)) !important;
-                }
-            }
-
-            #sidebar-box
-            {
-                padding-block: 0px !important;
-                z-index: 3 !important;
-
-                #sidebar
-                {
-                    outline: none !important;
-                    margin-block: 0px !important;
-                    border-radius: 0px !important;
-                    box-shadow: var(--content-area-shadow) !important;
-                }
-            }
-
-            #tabbrowser-tabbox
-            {
-                .browserContainer
-                {
-                    outline: none !important;
-                }
+                margin-inline-start: 6px !important;
             }
         }
     }

@@ -1,29 +1,3 @@
-/* Expand On Hover */
-
-@media -moz-pref("sidebar.visibility", 'expand-on-hover')
-{
-    :root[sidebar-expand-on-hover]
-    {
-        .browser-toolbox-background:not(#navigator-toolbox)
-        {
-            will-change: background-color, backdrop-filter !important;
-            
-            #sidebar-main[sidebar-launcher-expanded],
-            #sidebar-main[sidebar-ongoing-animations]:not([sidebar-launcher-expanded])
-            {
-                background-color: color-mix(in srgb, var(--sidebar-background-color) 75%, transparent) !important;
-                background-image: none !important;
-                color: var(--sidebar-text-color) !important;
-                backdrop-filter: blur(8px) !important;
-                box-shadow: var(--content-area-shadow) !important;
-                border: none !important;
-            }
-        }
-    }
-}
-
-/* Tabs */
-
 :root
 {
     --space-xsmall: 2px !important;
@@ -45,7 +19,7 @@
 
     #tabbrowser-tabs
     {
-        padding-block: calc(var(--space-small) - var(--tab-block-margin)) !important;
+        padding-block: calc(var(--space-medium) - var(--tab-block-margin)) !important;
         --tab-icon-end-margin: 8px !important;
     }
 }
