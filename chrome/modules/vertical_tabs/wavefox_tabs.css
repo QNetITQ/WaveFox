@@ -1,7 +1,20 @@
 :root
 {
-    --space-xsmall: 2px !important;
     --tab-min-height: 36px !important;
+    --dimension-relative-0125: 1px !important;
+    --dimension-relative-025: 2px !important;
+    --dimension-relative-050: 4px !important;
+    --dimension-relative-075: 6px !important;
+    --dimension-relative-100: 8px !important;
+    --dimension-relative-125: 10px !important;
+    --dimension-relative-150: 12px !important;
+    --dimension-relative-200: 16px !important;
+    --dimension-relative-250: 20px !important;
+    --dimension-relative-300: 24px !important;
+    --dimension-relative-350: 28px !important;
+    --dimension-relative-400: 32px !important;
+    --dimension-relative-500: 40px !important;
+    --dimension-relative-600: 48px !important;
 
     &[uidensity="compact"]
     {
