@@ -66,7 +66,9 @@ body:
         - Developer
         - Beta
         - Release
-        - ESR
+        - ESR 140
+        - ESR 128
+        - ESR 115
       multiple: true
     validations:
       required: true
@@ -86,6 +88,7 @@ body:
       options:
         - Nightly
         - Release
+        - ESR 140
         - ESR 128
         - ESR 115
       multiple: true
