@@ -75,6 +75,43 @@
 
         #tabbrowser-tabbox
         {
+            #tabbrowser-tabpanels[splitview]
+            {
+                .split-view-panel
+                {
+                    overflow: visible !important;
+                    margin: 0px !important;
+                    z-index: 1 !important;
+                
+                    &[column="0"] .browserContainer
+                    {
+                        margin-inline: 0px !important;
+                    }
+                }
+                
+                .split-view-splitter
+                {
+                    width: 6px !important;
+                    margin-top: 0px !important;
+                    margin-inline: 0px !important;
+                    margin-bottom: 6px !important;
+                    border: none !important;
+                    border-radius: var(--border-radius-medium) !important;
+                    background-color: transparent !important;
+                    transition: background-color 0.5s ease-in-out !important;
+                    
+                    &:hover
+                    {
+                        background-color: var(--focus-outline-color) !important;
+                    }
+                    
+                    :root[sizemode="fullscreen"] &
+                    {
+                        margin-top: 6px !important;
+                    }
+                }
+            }
+
             .browserContainer
             {
                 overflow: clip !important;
