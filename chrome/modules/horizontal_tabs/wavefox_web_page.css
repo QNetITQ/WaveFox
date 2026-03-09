@@ -63,19 +63,34 @@
                     {
                         overflow: visible !important;
                         margin: 0px !important;
+
+                        &[column="0"]
+                        {
+                            .browserContainer
+                            {
+                                margin-inline-end: 0px !important;
+                            }
+                        }
+                        
+                        &[column="1"]
+                        {
+                            .browserContainer
+                            {
+                                margin-inline-start: 0px !important;
+                            }
+                        }
                     }
                     
                     .split-view-splitter
                     {
                         width: 6px !important;
                         margin-top: 0px !important;
-                        margin-inline: -6px !important;
+                        margin-inline: 0px !important;
                         margin-bottom: 6px !important;
                         border: none !important;
                         border-radius: var(--border-radius-medium) !important;
                         background-color: transparent !important;
                         transition: background-color 0.5s ease-in-out !important;
-                        z-index: 1 !important;
 
                         &:hover
                         {
