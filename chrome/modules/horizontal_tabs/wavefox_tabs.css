@@ -301,6 +301,11 @@ tab-split-view-wrapper
         height: 100% !important;
         margin: 0px !important;
         padding: 0px !important;
+
+        .tab-background
+        {
+            --tab-min-height: inherit !important;
+        }
     }
 
     .tab-group-label-container
