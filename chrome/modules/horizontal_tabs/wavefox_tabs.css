@@ -296,6 +296,13 @@ tab-split-view-wrapper
         }
     }
 
+    tab-split-view-wrapper
+    {
+        height: 100% !important;
+        margin: 0px !important;
+        padding: 0px !important;
+    }
+
     .tab-group-label-container
     {
         margin-inline: 0px !important;
