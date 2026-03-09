@@ -1,3 +1,31 @@
+.split-view-panel
+{
+    overflow: visible !important;
+    margin: 0px !important;
+    z-index: 1 !important;
+    
+    .browserContainer
+    {
+        overflow: visible !important;
+        border-radius: 0px !important;
+        outline: none !important;
+    }
+}
+
+.split-view-splitter
+{
+    width: 6px !important;
+    margin: 0px !important;
+    border: none !important;
+    background-color: transparent !important;
+    transition: background-color 0.5s ease-in-out !important;
+
+    &:hover
+    {
+        background-color: var(--focus-outline-color) !important;
+    }
+}
+
 @media -moz-pref("WaveFox.WebPage.Floating.Enabled")
 {
     :root:not([inDOMFullscreen])
