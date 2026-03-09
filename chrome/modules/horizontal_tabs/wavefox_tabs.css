@@ -74,6 +74,33 @@
     }
 }
 
+tab-split-view-wrapper
+{
+    background-color: var(--tab-hover-background-color) !important;
+    
+    .tabbrowser-tab
+    {
+        border: none !important;
+        
+        .tab-stack
+        {
+            &::before,
+            &::after
+            {
+                display: none !important;
+            }
+        }
+        
+        &:hover
+        {
+            .tab-background:not([selected], [multiselected])
+            {
+                background-color: var(--tab-hover-background-color) !important;
+            }
+        }
+    }
+}
+
 /* ---------------------------------------- Attached tabs ---------------------------------------- */
 
 @media -moz-pref("WaveFox.Tabs.Shape", 5)  or
