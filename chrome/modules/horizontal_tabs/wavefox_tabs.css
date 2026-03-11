@@ -81,16 +81,7 @@ tab-split-view-wrapper
     .tabbrowser-tab
     {
         border: none !important;
-        
-        .tab-stack
-        {
-            &::before,
-            &::after
-            {
-                display: none !important;
-            }
-        }
-        
+
         &:hover
         {
             .tab-background:not([selected], [multiselected])
@@ -304,7 +295,7 @@ tab-split-view-wrapper
 
         .tab-background
         {
-            --tab-min-height: inherit !important;
+            min-height: var(--tab-min-height) !important;
         }
     }
 
