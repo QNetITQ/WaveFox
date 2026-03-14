@@ -293,20 +293,31 @@ tab-split-view-wrapper
         min-width: auto !important;
         height: 100% !important;
         margin: 0px !important;
-        padding-block: 0px !important;
-        padding-inline: 6px !important;
+        padding: 0px !important;
         border-radius: 0px !important;
-        z-index: 2 !important;
-        mask-image: var(--left-svg), linear-gradient(to bottom, black, black), var(--right-svg) !important;
-        mask-size: contain !important;
-        mask-position: left center, center center, right center !important;
-        mask-repeat: no-repeat !important;
-        mask-composite: exclude !important;
-        mask-mode: alpha !important;
+        background-color: transparent !important;
+        
+        &::before
+        {
+            content: "";
+            display: block;
+            position: absolute;
+            width: calc(100% + var(--tab-first-last-inline-margin) * 2);
+            height: 100%;
+            background-color: var(--tab-hover-background-color);
+            inset-inline-start: calc(-1 * var(--tab-first-last-inline-margin));
+            bottom: 0px;
+            mask-image: var(--left-svg), linear-gradient(to bottom, black, black), var(--right-svg);
+            mask-size: contain;
+            mask-position: left center, center center, right center;
+            mask-repeat: no-repeat;
+            mask-composite: exclude;
+            mask-mode: alpha;
+        }
 
         .tab-background
         {
-            min-height: calc(var(--tab-min-height) - 4px) !important;
+            min-height: var(--tab-min-height) !important;
         }
     }
 
