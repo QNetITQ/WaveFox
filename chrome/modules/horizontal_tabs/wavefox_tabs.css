@@ -289,6 +289,8 @@ tab-split-view-wrapper
 
     tab-split-view-wrapper
     {
+        outline: none !important;
+        min-width: auto !important;
         height: 100% !important;
         margin: 0px !important;
         padding: 0px !important;
