@@ -26,10 +26,15 @@
         }
     }
 
-    #TabsToolbar :is(.tabbrowser-tab, .toolbarbutton-1, separator, #personal-bookmarks, #search-container, .tab-group-label-container, tab-split-view-wrapper, .tab-group-overflow-count-container)
+    #TabsToolbar :where(.tabbrowser-tab, .toolbarbutton-1, separator, #personal-bookmarks, #search-container, .tab-group-label-container, tab-split-view-wrapper, .tab-group-overflow-count-container)
     {
         margin-top: var(--drag-space, 0px) !important;
+    }
 
+    #TabsToolbar tab-split-view-wrapper
+    {
+        align-self: end !important;
+        
         .tabbrowser-tab
         {
             margin-top: 0px !important;
