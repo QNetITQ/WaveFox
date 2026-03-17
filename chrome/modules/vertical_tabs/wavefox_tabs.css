@@ -87,6 +87,14 @@ tab-split-view-wrapper
     .tabbrowser-tab
     {
         border: none !important;
+
+        &:hover
+        {
+            .tab-background:not([selected], [multiselected])
+            {
+                background-color: var(--tab-hover-background-color) !important;
+            }
+        }
     
         .tab-background
         {
