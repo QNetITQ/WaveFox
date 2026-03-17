@@ -40,7 +40,10 @@
                 }
             }
             
-            #sidebar-splitter
+            #sidebar-launcher-splitter,
+            #sidebar-splitter,
+            #ai-window-splitter,
+            .split-view-splitter
             {
                 width: 6px !important;
                 border: none !important;
@@ -48,6 +51,13 @@
                 margin-top: 0px !important;
                 margin-inline: 0px !important;
                 margin-bottom: 6px !important;
+                background-color: transparent !important;
+                transition: background-color 0.5s ease-in-out !important;
+                
+                &:hover
+                {
+                    background-color: var(--focus-outline-color) !important;
+                }
                 
                 :root[sizemode="fullscreen"] &
                 {
@@ -57,11 +67,21 @@
 
             #tabbrowser-tabbox
             {
+                #tabbrowser-tabpanels[splitview]
+                {
+                    .split-view-panel
+                    {
+                        overflow: visible !important;
+                        margin: 0px !important;
+                    }
+                }
+
                 .browserContainer
                 {
                     overflow: clip !important;
                     border-radius: var(--border-radius-medium) !important;
                     margin-top: 0px !important;
+                    margin-inline: 0px !important;
                     margin-bottom: 6px !important;
                     outline: none !important;
                     box-shadow: var(--content-area-shadow) !important;
@@ -71,72 +91,19 @@
                         margin-top: 6px !important;
                     }
                 }
-                
-                &:not([sidebar-positionend])
-                {
-                    .browserContainer
-                    {
-                        margin-inline-end: 6px !important;
-                    }
-
-                    &:not([sidebar-shown])
-                    {
-                        .browserContainer
-                        {
-                            margin-inline-start: 6px !important;
-                        }
-                    }
-                    
-                    &[sidebar-shown]
-                    {
-                        .browserContainer
-                        {
-                            margin-inline-start: 0px !important;
-                        }
-                    }
-                }
-                
-                &[sidebar-positionend]
-                {
-                    .browserContainer
-                    {
-                        margin-inline-start: 6px !important;
-                    }
-
-                    &:not([sidebar-shown])
-                    {
-                        .browserContainer
-                        {
-                            margin-inline-end: 6px !important;
-                        }
-                    }
-                    
-                    &[sidebar-shown]
-                    {
-                        .browserContainer
-                        {
-                            margin-inline-end: 0px !important;
-                        }
-                    }
-                }
             }
-        }
-        /*
-        #browser > #tabbrowser-tabbox > #tabbrowser-tabpanels,
-        #browser > #sidebar-box #sidebar
-        {
-            @media (-moz-pref("WaveFox.TabsBelowURL.Enabled") and -moz-pref("browser.tabs.inTitlebar", 0)) or
-                    -moz-pref("WaveFox.OneLine", 1) or 
-                    -moz-pref("WaveFox.OneLine", 2)
+            
+            #sidebar-launcher-splitter:has(~ #tabbrowser-tabbox:not([sidebar-shown]))
             {
-                margin-block-start: 4px !important;
+                display: block !important;
+                pointer-events: none !important;
+            }
+            
+            #ai-window-splitter[hidden]
+            {
+                display: block !important;
+                pointer-events: none !important;
             }
         }
-
-        &:is([style*="--lwt-header-image"], [style*="--lwt-additional-images"]) #browser > #tabbrowser-tabbox > #tabbrowser-tabpanels
-        {
-            margin-block-start: 4px !important;
-        }
-        */
     }
 }

@@ -40,7 +40,9 @@
         }
 
         #sidebar-launcher-splitter,
-        #sidebar-splitter
+        #sidebar-splitter,
+        #ai-window-splitter,
+        .split-view-splitter
         {
             width: 6px !important;
             margin-top: 0px !important;
@@ -48,11 +50,24 @@
             margin-bottom: 6px !important;
             border: none !important;
             border-radius: var(--border-radius-medium) !important;
+            background-color: transparent !important;
+            transition: background-color 0.5s ease-in-out !important;
             
+            &:hover
+            {
+                background-color: var(--focus-outline-color) !important;
+            }
+
             :root[sizemode="fullscreen"] &
             {
                 margin-top: 6px !important;
             }
+        }
+        
+        #ai-window-splitter[hidden]
+        {
+            display: block !important;
+            pointer-events: none !important;
         }
 
         #sidebar-box
@@ -75,6 +90,15 @@
 
         #tabbrowser-tabbox
         {
+            #tabbrowser-tabpanels[splitview]
+            {
+                .split-view-panel
+                {
+                    overflow: visible !important;
+                    margin: 0px !important;
+                }
+            }
+
             .browserContainer
             {
                 overflow: clip !important;
@@ -88,16 +112,6 @@
                 {
                     margin-top: 6px !important;
                 }
-            }
-
-            &:not([sidebar-positionend]) .browserContainer
-            {
-                margin-inline-end: 6px !important;
-            }
-                
-            &[sidebar-positionend] .browserContainer
-            {
-                margin-inline-start: 6px !important;
             }
         }
     }
