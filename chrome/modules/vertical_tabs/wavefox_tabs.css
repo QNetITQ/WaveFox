@@ -80,7 +80,6 @@ tab-split-view-wrapper
     
     #tabbrowser-tabs:not([expanded]) &
     {
-        justify-items: center !important;
         gap: 0px !important;
     }
     
@@ -103,8 +102,6 @@ tab-split-view-wrapper
 
         .tab-content
         {
-            justify-content: center !important;
-
             .tab-close-button
             {
                 inset-inline-start: calc(var(--tab-inner-inline-margin) - 8px) !important;
