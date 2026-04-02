@@ -7,10 +7,10 @@
 [Download Firefox](https://www.mozilla.org/en-US/firefox/all/#product-desktop-release) / [Download WaveFox](https://github.com/QNetITQ/WaveFox/releases) / [WaveFox Nightly](https://github.com/QNetITQ/WaveFox/tree/WaveFox-Nightly)
 
 <details>
-  <summary>WaveFox v1.9.149</summary>
+  <summary>WaveFox v1.9.150</summary>
 
 - ##### Minimum Requirements
-  - Firefox 149
+  - Firefox 150
   - Windows / MacOS / Linux
 
 - Download the `chrome` folder and put it in your user profile folder
@@ -72,6 +72,7 @@ Requires Linux with transparency support. Works only with the system theme.
 ![Снимок5](https://github.com/QNetITQ/WaveFox/assets/85301851/3b4dcfc8-217d-48a1-aba7-1621f9375f67)
 
 - `WaveFox.Linux.Transparency.Enabled` and `browser.tabs.inTitlebar > 1`
+  - `WaveFox.Linux.Transparency.TextColor.White.Enabled`
 
 ### Toolbar Transparency
 Works only with the system theme.
