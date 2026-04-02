@@ -2,9 +2,18 @@
        -moz-pref("extensions.activeThemeID", 'default-theme@mozilla.org') and
        -moz-pref("browser.tabs.inTitlebar", 1)
 {
-    :root,
-    .browser-toolbox-background
+    :root
     {
         background-color: transparent !important;
+    }
+  
+    body
+    {
+        background-color: transparent !important;
+      
+        @media -moz-pref("WaveFox.Linux.Transparency.TextColor.White.Enabled")
+        {
+            color: white !important;
+        }
     }
 }
