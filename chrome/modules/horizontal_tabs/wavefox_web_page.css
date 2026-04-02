@@ -99,10 +99,11 @@
                 pointer-events: none !important;
             }
             
-            #ai-window-splitter[hidden]
+            #ai-window-splitter[collapsed]
             {
                 display: block !important;
                 pointer-events: none !important;
+                visibility: visible !important;
             }
         }
     }
