@@ -3,7 +3,7 @@
        -moz-pref("browser.tabs.inTitlebar", 1)
 {
     :root,
-    .browser-toolbox-background
+    body
     {
         background-color: transparent !important;
     }
