@@ -64,10 +64,11 @@
             }
         }
         
-        #ai-window-splitter[hidden]
+        #ai-window-splitter[collapsed]
         {
             display: block !important;
             pointer-events: none !important;
+            visibility: visible !important;
         }
 
         #sidebar-box
