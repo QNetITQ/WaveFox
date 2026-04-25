@@ -27,3 +27,18 @@
     display: none !important;
 }
 */
+
+/* Future implementation of tab rounding instead of svg?????????????????????????????????? */
+/*
+clip-path: shape(
+  from 0px 100%,
+  arc to 32px calc(100% - 32px) of 32px ccw small rotate 0deg,
+  vline to 32px,
+  arc to 64px 0% of 32px cw small rotate 0deg,
+  hline to calc(100% - 64px),
+  arc to calc(100% - 32px) 32px of 32px cw small rotate 0deg,
+  vline to calc(100% - 32px),
+  arc to 100% 100% of 32px ccw small rotate 0deg,
+  close
+);
+*/
