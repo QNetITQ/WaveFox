@@ -41,4 +41,12 @@ clip-path: shape(
   arc to 100% 100% of 32px ccw small rotate 0deg,
   close
 );
+
+clip-path: shape(
+  from 0% 100%,
+  curve to 50% 0% with 25% 0% from start / -25% 0% from end,
+  hline to calc(100% - 50%),
+  curve to 100% 100% with 25% 0% from start / -25% 0% from end,
+  close
+);
 */
