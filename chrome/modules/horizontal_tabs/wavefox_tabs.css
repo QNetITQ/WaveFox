@@ -642,7 +642,7 @@ tab-split-view-wrapper
 
     .tabbrowser-tab
     {
-        --tab-first-last-inline-margin: calc(var(--tab-min-height) / 4);
+        --tab-first-last-inline-margin: var(--tab-border-radius);
         overflow-clip-margin: var(--tab-first-last-inline-margin) !important;
         padding-inline: 0px !important;
 
@@ -686,7 +686,7 @@ tab-split-view-wrapper
 
         .tab-background
         {
-            margin-inline: calc(-1 * var(--tab-min-height) / 4 + 0px) !important;
+            margin-inline: calc(-1 * var(--tab-border-radius)) !important;
             margin-block: 0px !important;
             border-radius: 0px !important;
             outline: none !important;
