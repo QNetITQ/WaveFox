@@ -573,59 +573,8 @@ tab-split-view-wrapper
 
 /* ---------------------------------------- Attached tabs ---------------------------------------- */
 
-@media -moz-pref("WaveFox.Tabs.Shape", 5)  or
-       -moz-pref("WaveFox.Tabs.Shape", 6)  or
-       -moz-pref("WaveFox.Tabs.Shape", 7)  or
-       -moz-pref("WaveFox.Tabs.Shape", 8)  or
-       -moz-pref("WaveFox.Tabs.Shape", 9)  or
-       -moz-pref("WaveFox.Tabs.Shape", 10) or
-       -moz-pref("WaveFox.Tabs.Shape", 11) or
-       -moz-pref("WaveFox.Tabs.Shape", 12)
+@media -moz-pref("WaveFox.AttachedTabs")
 {
-    /* -------------------- Tab shapes -------------------- */
-    
-    @media -moz-pref("WaveFox.Tabs.Shape", 9)
-    {
-        :root
-        {
-            --left-svg:   url("svg_files/option_9/left_corners.svg");
-            --right-svg:  url("svg_files/option_9/right_corners.svg");
-            --tab-first-last-inline-margin: calc(var(--tab-min-height) / 2);
-        }
-    }
-    
-    @media -moz-pref("WaveFox.Tabs.Shape", 10)
-    {
-        :root
-        {
-            --left-svg:   url("svg_files/option_10/left_corners.svg");
-            --right-svg:  url("svg_files/option_10/right_corners.svg");
-            --tab-first-last-inline-margin: calc(var(--tab-min-height) / 2);
-        }
-    }
-    
-    @media -moz-pref("WaveFox.Tabs.Shape", 11)
-    {
-        :root
-        {
-            --left-svg:   url("svg_files/option_11/left_corners.svg");
-            --right-svg:  url("svg_files/option_11/right_corners.svg");
-            --tab-first-last-inline-margin: calc(var(--tab-min-height) / 2);
-        }
-    }
-    
-    @media -moz-pref("WaveFox.Tabs.Shape", 12)
-    {
-        :root
-        {
-            --left-svg:   url("svg_files/option_12/left_corners.svg");
-            --right-svg:  url("svg_files/option_12/right_corners.svg");
-            --tab-first-last-inline-margin: calc(var(--tab-min-height) / 2);
-        }
-    }
-
-    /* ---------------------------------------- Main Window ---------------------------------------- */
-
     :root
     {
         --tabstrip-min-height: auto !important;
@@ -642,6 +591,7 @@ tab-split-view-wrapper
 
     .tabbrowser-tab
     {
+        --tab-border-radius: clamp(0px, var(--toolbarbutton-border-radius), calc(var(--tab-min-height) / 2)) !important;
         --tab-first-last-inline-margin: var(--tab-border-radius);
         overflow-clip-margin: var(--tab-first-last-inline-margin) !important;
         padding-inline: 0px !important;
@@ -649,14 +599,6 @@ tab-split-view-wrapper
         tab-group[collapsed] > &:not([visuallyselected])
         {
             --tab-first-last-inline-margin: 0px;
-        }
-
-        &[pinned]
-        {
-            .tab-content
-            {
-                padding-inline: calc((var(--tab-min-height) - 16px) / 2 + 2px) !important;
-            }
         }
 
         &[visuallyselected]
@@ -691,7 +633,7 @@ tab-split-view-wrapper
             border-radius: 0px !important;
             outline: none !important;
             pointer-events: none !important;
-            
+
             clip-path: shape(
                 nonzero from 0px 100%,
                 arc by var(--tab-border-radius) calc(-1 * var(--tab-border-radius)) of var(--tab-border-radius) ccw, /* 0px small rotate 0deg */
@@ -860,42 +802,83 @@ tab-split-view-wrapper
         }
     }
 
-    /*
-    .tabbrowser-tab[dragtarget][pinned]
-    {
-        max-width: min-content !important;
-        
-        ~ .tabbrowser-tab[pinned]
-        {
-            inset-inline: 40px 0px !important;
-            
-        }
-    }
-    
-    .tabbrowser-tab[dragtarget]:not([pinned])
-    {
-        max-width: min-content !important;
-        
-        ~ .tabbrowser-tab:not([pinned])
-        {
-            inset-inline: 76px 0px !important;
-            
-        }
-    }
-    */
-
     #tabbrowser-tabs[overflow] .tab-drop-indicator
     {
         inset-inline-start: var(--tab-first-last-inline-margin) !important;
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /* ----------------------------------------------------------------------------------------- */
+    
+    @media -moz-pref("WaveFox.AttachedTabs.Shape", 1) or
+           -moz-pref("WaveFox.AttachedTabs.Shape", 2) or
+           -moz-pref("WaveFox.AttachedTabs.Shape", 3) or
+           -moz-pref("WaveFox.AttachedTabs.Shape", 4)
+    {
+        :root
+        {
+            @media -moz-pref("WaveFox.AttachedTabs.Shape", 1)
+            {
+                --tab-corner-incline: 4px;
+            }
+
+            @media -moz-pref("WaveFox.AttachedTabs.Shape", 2)
+            {
+                --tab-corner-incline: 8px;
+            }
+
+            @media -moz-pref("WaveFox.AttachedTabs.Shape", 3)
+            {
+                --tab-corner-incline: 12px;
+            }
+
+            @media -moz-pref("WaveFox.AttachedTabs.Shape", 4)
+            {
+                --tab-corner-incline: 16px;
+            }
+        }
+        
+        .tabbrowser-tab
+        {
+            --tab-first-last-inline-margin: calc(var(--tab-min-height) / 2);
+            
+            .tab-background
+            {
+                margin-inline: calc(-1 * var(--tab-min-height) / 2) !important;
+                
+                clip-path: shape(
+                    from 0px 100%,
+                    curve to var(--tab-min-height) 0px with calc(var(--tab-min-height) - var(--tab-corner-incline)) 0px from start / calc(-1 * (var(--tab-min-height) - var(--tab-corner-incline))) 0px from end,
+                    hline to calc(100% - var(--tab-min-height)),
+                    curve to 100% 100% with calc(var(--tab-min-height) - var(--tab-corner-incline)) 0px from start / calc(-1 * (var(--tab-min-height) - var(--tab-corner-incline))) 0px from end,
+                    close
+                );
+            }
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }
     
 }
-
-
-
-
-
-
-
-
