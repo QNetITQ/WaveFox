@@ -830,40 +830,67 @@ tab-split-view-wrapper
     {
         :root
         {
+            --tab-first-last-inline-margin: calc(var(--tab-min-height) / 2) !important;
+            --tab-corner-incline-y: 0px;
+            
             @media -moz-pref("WaveFox.AttachedTabs.Shape", 1)
             {
-                --tab-corner-incline: 4px;
+                --tab-corner-incline-x: 2px;
             }
 
             @media -moz-pref("WaveFox.AttachedTabs.Shape", 2)
             {
-                --tab-corner-incline: 8px;
+                --tab-corner-incline-x: 4px;
             }
 
             @media -moz-pref("WaveFox.AttachedTabs.Shape", 3)
             {
-                --tab-corner-incline: 12px;
+                --tab-corner-incline-x: 6px;
             }
 
             @media -moz-pref("WaveFox.AttachedTabs.Shape", 4)
             {
-                --tab-corner-incline: 16px;
+                --tab-corner-incline-x: 8px;
+            }
+
+            @media -moz-pref("WaveFox.AttachedTabs.Shape.Mode", 1)
+            {
+                --tab-corner-incline-y: 2px;
+            }
+            
+            @media -moz-pref("WaveFox.AttachedTabs.Shape.Mode", 2)
+            {
+                --tab-corner-incline-y: 4px;
+            }
+            
+            @media -moz-pref("WaveFox.AttachedTabs.Shape.Mode", 3)
+            {
+                --tab-corner-incline-y: 6px;
+            }
+            
+            @media -moz-pref("WaveFox.AttachedTabs.Shape.Mode", 4)
+            {
+                --tab-corner-incline-y: 8px;
             }
         }
-        
+
         .tabbrowser-tab
         {
-            --tab-first-last-inline-margin: calc(var(--tab-min-height) / 2);
+            --tab-first-last-inline-margin: inherit !important; /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
             
             .tab-background
             {
-                margin-inline: calc(-1 * var(--tab-min-height) / 2) !important;
-                
+                margin-inline: calc(-1 * var(--tab-first-last-inline-margin)) !important;
+
                 clip-path: shape(
-                    from 0px 100%,
-                    curve to var(--tab-min-height) 0px with calc(var(--tab-min-height) - var(--tab-corner-incline)) 0px from start / calc(-1 * (var(--tab-min-height) - var(--tab-corner-incline))) 0px from end,
+                    nonzero from 0px var(--tab-min-height),
+                    curve by var(--tab-min-height) calc(-1 * var(--tab-min-height)) with
+                    calc(var(--tab-min-height) - var(--tab-corner-incline-x)) calc(-1 * var(--tab-corner-incline-y)) from start /
+                    calc(-1 * (var(--tab-min-height) - var(--tab-corner-incline-x))) var(--tab-corner-incline-y) from end,
                     hline to calc(100% - var(--tab-min-height)),
-                    curve to 100% 100% with calc(var(--tab-min-height) - var(--tab-corner-incline)) 0px from start / calc(-1 * (var(--tab-min-height) - var(--tab-corner-incline))) 0px from end,
+                    curve by var(--tab-min-height) var(--tab-min-height) with
+                    calc(var(--tab-min-height) - var(--tab-corner-incline-x)) var(--tab-corner-incline-y) from start /
+                    calc(-1 * (var(--tab-min-height) - var(--tab-corner-incline-x))) calc(-1 * var(--tab-corner-incline-y)) from end,
                     close
                 );
             }
