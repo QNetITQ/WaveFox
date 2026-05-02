@@ -577,6 +577,7 @@ tab-split-view-wrapper
 {
     :root
     {
+        --tab-first-last-inline-margin: var(--tab-border-radius);
         --tabstrip-min-height: auto !important;
     }
 
@@ -592,7 +593,6 @@ tab-split-view-wrapper
     .tabbrowser-tab
     {
         --tab-border-radius: clamp(0px, var(--toolbarbutton-border-radius), calc(var(--tab-min-height) / 2)) !important;
-        --tab-first-last-inline-margin: var(--tab-border-radius);
         overflow-clip-margin: var(--tab-first-last-inline-margin) !important;
         padding-inline: 0px !important;
 
