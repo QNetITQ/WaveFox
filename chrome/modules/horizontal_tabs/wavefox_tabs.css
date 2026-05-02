@@ -832,52 +832,40 @@ tab-split-view-wrapper
         {
             --tab-first-last-inline-margin: calc(var(--tab-min-height) / 2) !important;
             --tab-corner-incline-y: 0px;
-            
+
             @media -moz-pref("WaveFox.AttachedTabs.Shape", 1)
             {
-                --tab-corner-incline-x: 2px;
+                --tab-corner-incline-x: calc(var(--tab-min-height) * 0.875);
             }
 
             @media -moz-pref("WaveFox.AttachedTabs.Shape", 2)
             {
-                --tab-corner-incline-x: 4px;
+                --tab-corner-incline-x: calc(var(--tab-min-height) * 0.75);
             }
 
             @media -moz-pref("WaveFox.AttachedTabs.Shape", 3)
             {
-                --tab-corner-incline-x: 6px;
+                --tab-corner-incline-x: calc(var(--tab-min-height) * 0.625);
             }
 
             @media -moz-pref("WaveFox.AttachedTabs.Shape", 4)
             {
-                --tab-corner-incline-x: 8px;
+                --tab-corner-incline-x: calc(var(--tab-min-height) * 0.5);
             }
 
             @media -moz-pref("WaveFox.AttachedTabs.Shape.Mode", 1)
             {
-                --tab-corner-incline-y: 2px;
+                --tab-corner-incline-y: calc(var(--tab-min-height) * 0.125);
             }
             
             @media -moz-pref("WaveFox.AttachedTabs.Shape.Mode", 2)
             {
-                --tab-corner-incline-y: 4px;
-            }
-            
-            @media -moz-pref("WaveFox.AttachedTabs.Shape.Mode", 3)
-            {
-                --tab-corner-incline-y: 6px;
-            }
-            
-            @media -moz-pref("WaveFox.AttachedTabs.Shape.Mode", 4)
-            {
-                --tab-corner-incline-y: 8px;
+                --tab-corner-incline-y: calc(var(--tab-min-height) * 0.25);
             }
         }
 
         .tabbrowser-tab
         {
-            --tab-first-last-inline-margin: inherit !important; /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
-            
             .tab-background
             {
                 margin-inline: calc(-1 * var(--tab-first-last-inline-margin)) !important;
@@ -885,12 +873,12 @@ tab-split-view-wrapper
                 clip-path: shape(
                     nonzero from 0px var(--tab-min-height),
                     curve by var(--tab-min-height) calc(-1 * var(--tab-min-height)) with
-                    calc(var(--tab-min-height) - var(--tab-corner-incline-x)) calc(-1 * var(--tab-corner-incline-y)) from start /
-                    calc(-1 * (var(--tab-min-height) - var(--tab-corner-incline-x))) var(--tab-corner-incline-y) from end,
+                    var(--tab-corner-incline-x) calc(-1 * var(--tab-corner-incline-y)) from start /
+                    calc(-1 * var(--tab-corner-incline-x)) var(--tab-corner-incline-y) from end,
                     hline to calc(100% - var(--tab-min-height)),
                     curve by var(--tab-min-height) var(--tab-min-height) with
-                    calc(var(--tab-min-height) - var(--tab-corner-incline-x)) var(--tab-corner-incline-y) from start /
-                    calc(-1 * (var(--tab-min-height) - var(--tab-corner-incline-x))) calc(-1 * var(--tab-corner-incline-y)) from end,
+                    var(--tab-corner-incline-x) var(--tab-corner-incline-y) from start /
+                    calc(-1 * var(--tab-corner-incline-x)) calc(-1 * var(--tab-corner-incline-y)) from end,
                     close
                 );
             }
