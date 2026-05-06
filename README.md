@@ -167,11 +167,6 @@ Works only with system theme. Requires transparency support from the operating s
 
 - `WaveFox.VerticalTabs.Toolbar.Autohide.Enabled`
 
-### Experimental
-
-Disables the ability to pin tabs by dragging. Some users find this feature annoying.
-- `WaveFox.Experimental.Tabs.Pin_By_Dragging.Disabled`
-
 </details>
 
 <details>
