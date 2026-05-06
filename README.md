@@ -101,11 +101,6 @@ Works only with System / Light / Dark theme.
 
 - `WaveFox.Tabs.Separators` > 1 or 2 or 3 or 4
 
-### Background For Inactive Tabs
-![изображение](https://github.com/user-attachments/assets/56fc829a-3cb6-4009-a58c-485fc84f65e9)
-
-- `WaveFox.Tabs.Background.Inactive.Enabled`
-
 ### Icons (firefox-csshacks / Lepton) / (Horizontal and Vertical tabs)
 This is third-party code. I will update this code according to the original source.
 
@@ -134,11 +129,6 @@ The keys below are relevant only for the second option.
 - `WaveFox.DragSpace.Tabs` > 1 or 2 or 3
 - `WaveFox.DragSpace.TabBarLeftSide.Disabled`
 - `WaveFox.DragSpace.TabBarRightSide.Disabled`
-
-### Selected Tab Indicator
-![изображение](https://github.com/user-attachments/assets/e6d221d2-38b0-4890-9bbc-d5abc9b027c0)
-
-- `WaveFox.Tabs.SelectedTabIndicator.Enabled`
 
 ### Tabs Below URL (Floating Tabs Only)
 ![Снимок](https://github.com/QNetITQ/WaveFox/assets/85301851/514cf30d-a417-48cb-bfd1-0e77c9df1bf4)
