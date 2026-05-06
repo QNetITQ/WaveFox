@@ -18,8 +18,6 @@
 /* ---------- Horizontal tabs ---------- */
 
 @import "modules/horizontal_tabs/wavefox_tabs.css"                      layer(BasicPriority) /* supports() */ -moz-pref("sidebar.verticalTabs", false);
-@import "modules/horizontal_tabs/wavefox_tabs_background_inactive.css"  layer(BasicPriority) /* supports() */ -moz-pref("sidebar.verticalTabs", false);
-@import "modules/horizontal_tabs/wavefox_selected_tab_indicator.css"    layer(BasicPriority) /* supports() */ -moz-pref("sidebar.verticalTabs", false);
 @import "modules/horizontal_tabs/wavefox_tab_media_icons_and_text.css"  layer(BasicPriority) /* supports() */ -moz-pref("sidebar.verticalTabs", false);
 @import "modules/horizontal_tabs/wavefox_toolbar_buttons.css"           layer(BasicPriority) /* supports() */ -moz-pref("sidebar.verticalTabs", false);
 @import "modules/horizontal_tabs/wavefox_tab_separators.css"            layer(BasicPriority) /* supports() */ -moz-pref("sidebar.verticalTabs", false);
