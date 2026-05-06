@@ -2,7 +2,6 @@
 
 /* ---------- General styles ---------- */
 
-@import "modules/general_styles/wavefox_experimental_functions.css"    layer(BasicPriority); /* supports() -moz-pref("", false) */
 @import "modules/general_styles/wavefox_transparency_on_windows11.css" layer(HighPriority)   /* supports() */ (-moz-platform: windows);
 @import "modules/general_styles/wavefox_transparency_on_windows10.css" layer(HighPriority)   /* supports() */ (-moz-platform: windows);
 @import "modules/general_styles/wavefox_transparency_on_linux.css"     layer(HighPriority)   /* supports() */ (-moz-platform: linux);
