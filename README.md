@@ -7,10 +7,10 @@
 [Download Firefox](https://www.mozilla.org/en-US/firefox/all/#product-desktop-release) / [Download WaveFox](https://github.com/QNetITQ/WaveFox/releases) / [WaveFox Nightly](https://github.com/QNetITQ/WaveFox/tree/WaveFox-Nightly)
 
 <details>
-  <summary>WaveFox v1.9.150</summary>
+  <summary>WaveFox v1.9.150+</summary>
 
 - ##### Minimum Requirements
-  - Firefox 150
+  - Firefox 150+
   - Windows / MacOS / Linux
 
 - Download the `chrome` folder and put it in your user profile folder
@@ -144,13 +144,6 @@ The keys below are relevant only for the second option.
 ![изображение](https://github.com/user-attachments/assets/26a19f9a-642b-4a10-a4f9-80d87cc42bdc)
 
 - `WaveFox.WebPage.Floating.Enabled`
-
-### Transparent Web Page (Experimentally) (Horizontal and Vertical tabs)
-Works only with system theme. Requires transparency support from the operating system. The quality of this option depends heavily on the specific website.
-![изображение](https://github.com/user-attachments/assets/99afc380-027a-46b3-b0d6-5cdf3c55a33e)
-
-- `WaveFox.WebPage.Transparency` > 1 or 2 and `browser.tabs.allow_transparent_browser` (1 - New tab page only / 2 - All browser windows and all websites)
-  - `WaveFox.WebPage.Background.Saturation` > 1 or 2 or 3
 
 ### Toolbar Autohide (Vertical tabs)
 <img width="1727" height="918" alt="изображение" src="https://github.com/user-attachments/assets/bf786951-7633-4429-ada2-1639d2210263" />
