@@ -20,45 +20,9 @@
 
 ### Tab Shapes
 
-##### Shape 5
-![изображение](https://github.com/user-attachments/assets/cd6fb4a9-8cc7-4fd1-9f26-9acef5a4a121)
+##### Shapes
 
-- `WaveFox.Tabs.Shape` > 5
-  
-##### Shape 6
-![изображение](https://github.com/user-attachments/assets/21c6644f-f579-419d-92b8-cb614a726742)
-
-- `WaveFox.Tabs.Shape` > 6
-  
-##### Shape 7
-![изображение](https://github.com/user-attachments/assets/b648e7c3-2dc4-478d-9ee0-8ac9b727c37d)
-
-- `WaveFox.Tabs.Shape` > 7
-  
-##### Shape 8
-![изображение](https://github.com/user-attachments/assets/8cce9ecd-2005-4aba-9c66-6e49f2ccb76a)
-
-- `WaveFox.Tabs.Shape` > 8
-  
-##### Shape 9
-![изображение](https://github.com/user-attachments/assets/d720364a-88f3-4fe6-a61f-0747f93e5f20)
-
-- `WaveFox.Tabs.Shape` > 9
-  
-##### Shape 10
-![изображение](https://github.com/user-attachments/assets/88d1d2de-2d0c-4837-b15f-a10694e5093a)
-
-- `WaveFox.Tabs.Shape` > 10
-  
-##### Shape 11
-![изображение](https://github.com/user-attachments/assets/084a7915-12d9-44da-a3d1-a0b17267d356)
-
-- `WaveFox.Tabs.Shape` > 11
-  
-##### Shape 12
-![изображение](https://github.com/user-attachments/assets/2d38da42-f304-468c-bb52-1190d936bc19)
-
-- `WaveFox.Tabs.Shape` > 12
+- `-------------` > !!!!!!!!!!!!!
 
 ### Windows 10 Transparency (Horizontal and Vertical tabs)
 Install [DWMBlurGlass](https://github.com/Maplespe/DWMBlurGlass). Configure to your liking and activate the keys below. Works only with the system theme.
