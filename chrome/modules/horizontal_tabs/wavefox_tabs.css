@@ -95,6 +95,25 @@ tab-split-view-wrapper
     }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ---------------------------------------- Attached tabs ---------------------------------------- */
 
 @media -moz-pref("WaveFox.AttachedTabs")
@@ -111,6 +130,26 @@ tab-split-view-wrapper
     {
         border: none !important;
     }
+    
+    /* ---------------------------------------- Tab Bar ---------------------------------------- */
+
+    #TabsToolbar #search-container
+    {
+        padding-block: 0 !important;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    @scope (#pinned-tabs-container, #tabbrowser-arrowscrollbox) to (tab-split-view-wrapper, tab-group)
+    {
+        
+
 
     /* ---------------------------------------- Tabs ---------------------------------------- */
 
@@ -179,78 +218,15 @@ tab-split-view-wrapper
             {
                 margin-inline-start: 0px !important;
             }
-
-            .tab-group-line
-            {
-                inset-inline: 0px !important;
-                inset-block: auto 0px !important;
-            }
         }
     }
-
-
-    tab-split-view-wrapper
-    {
-        outline none !important;
-        min-width auto !important;
-        
-        margin: 0px !important;
-
-        .tabbrowser-tab
-        {
-            margin: 0px !important;
-            padding: 0px !important;
-            
-            .tab-background
-            {
-                margin: 0px !important;
-                border-radius: 0px !important;
-            }
-        }
-    }
-    
-    /*
-
-    .tab-group-label-container
-    {
-        margin-inline: 0px !important;
-        padding-inline: 0px !important;
-
-        &::after
-        {
-            inset-block: auto 0px !important;
-        }
-    }
-
-    .tab-group-overflow-count-container
-    {
-        margin-inline: 0px var(--tab-first-last-inline-margin) !important;
-        padding-inline: 0px !important;
-
-        &::after
-        {
-            inset-block-end: 0px !important;
-        }
-
-        .tab-group-overflow-count
-        {
-            padding: 0px !important;
-        }
-    }*/
 
     /* -------------------- Tab Icon Indicators -------------------- */
 
     .tabbrowser-tab:is([image], [pinned]) .tab-content[attention]:not([selected]),
     .tab-content[pinned][titlechanged]:not([selected])
     {
-        background-position: 50% calc(((36px - 16px) / 2 - 4px) / 2) !important;
-    }
-
-    /* ---------------------------------------- Tab Bar ---------------------------------------- */
-
-    #TabsToolbar #search-container
-    {
-        padding-block: 0 !important;
+        background-position: 50% calc(50% - 12px) !important;
     }
 
     /* ---------------------------------------- Indents ---------------------------------------- */
@@ -270,6 +246,7 @@ tab-split-view-wrapper
         margin-inline: var(--tab-first-last-inline-margin) !important;
     }
 
+    /*
     tab-group[collapsed] + tab-group > .tab-group-label-container,
     tab-group[collapsed] + .tabbrowser-tab[hidden] + tab-group > .tab-group-label-container
     {
@@ -297,6 +274,7 @@ tab-split-view-wrapper
     {
         margin-inline-start: 0px !important;
     }
+    */
 
     /* ---------------------------------------- Tab Scroll Animation ---------------------------------------- */
 
@@ -343,6 +321,25 @@ tab-split-view-wrapper
     
     
     
+    }
+
+    /* Tab Groups / Split View */
+    
+    tab-group
+    {
+        .tab-background
+        {
+            min-height: calc(var(--tab-min-height) - var(--tab-block-margin) * 2) !important;
+        }
+    }
+    
+    tab-split-view-wrapper
+    {
+        .tab-background
+        {
+            min-height: calc(var(--tab-min-height) - var(--tab-block-margin) * 2 - var(--split-view-padding-block) * 2) !important;
+        }
+    }
     
     
     
