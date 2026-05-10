@@ -22,7 +22,7 @@
 This setting makes tabs one with the browser toolbar. Depends on the corner rounding settings or custom tab shapes.
 <img width="1794" height="103" alt="изображение" src="https://github.com/user-attachments/assets/665f7f02-4869-46ab-bb65-6ffe83ca36c2" />
 
-- `WaveFox.AttachedTabs`
+- `WaveFox.AttachedTabs` > true
   - `WaveFox.AttachedTabs.Shape` > 1 or 2 or 3 or 4
     - `WaveFox.AttachedTabs.Shape.Mode` > 1 or 2
 
