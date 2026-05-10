@@ -1,60 +1,63 @@
-@media -moz-pref("WaveFox.DragSpace.Tabs", 1)  or
-       -moz-pref("WaveFox.DragSpace.Tabs", 2)  or
-       -moz-pref("WaveFox.DragSpace.Tabs", 3)
+@media -moz-pref("WaveFox.AttachedTabs.DragSpace", 1)  or
+       -moz-pref("WaveFox.AttachedTabs.DragSpace", 2)  or
+       -moz-pref("WaveFox.AttachedTabs.DragSpace", 3)
 {
-    @media -moz-pref("WaveFox.DragSpace.Tabs", 1)
+    @media -moz-pref("WaveFox.AttachedTabs")
     {
-        :root[sizemode="normal"]
+        @media -moz-pref("WaveFox.AttachedTabs.DragSpace", 1)
         {
-            --drag-space: 8px;
+            :root[sizemode="normal"]
+            {
+                --drag-space: 8px;
+            }
         }
-    }
 
-    @media -moz-pref("WaveFox.DragSpace.Tabs", 2)
-    {
-        :root:is([sizemode="normal"], [sizemode="maximized"])
+        @media -moz-pref("WaveFox.AttachedTabs.DragSpace", 2)
         {
-            --drag-space: 8px;
+            :root:is([sizemode="normal"], [sizemode="maximized"])
+            {
+                --drag-space: 8px;
+            }
         }
-    }
 
-    @media -moz-pref("WaveFox.DragSpace.Tabs", 3)
-    {
-        :root:is([sizemode="normal"], [sizemode="maximized"], [sizemode="fullscreen"])
+        @media -moz-pref("WaveFox.AttachedTabs.DragSpace", 3)
         {
-            --drag-space: 8px;
+            :root:is([sizemode="normal"], [sizemode="maximized"], [sizemode="fullscreen"])
+            {
+                --drag-space: 8px;
+            }
         }
-    }
 
-    #TabsToolbar :where(.tabbrowser-tab, .toolbarbutton-1, separator, #personal-bookmarks, #search-container, .tab-group-label-container, tab-split-view-wrapper, .tab-group-overflow-count-container)
-    {
-        margin-top: var(--drag-space, 0px) !important;
-    }
-
-    #TabsToolbar tab-split-view-wrapper
-    {
-        align-self: end !important;
-        
-        .tabbrowser-tab
+        #TabsToolbar :where(.tabbrowser-tab, .toolbarbutton-1, separator, #personal-bookmarks, #search-container, .tab-group-label-container, tab-split-view-wrapper, .tab-group-overflow-count-container)
         {
-            margin-top: 0px !important;
+            margin-top: var(--drag-space, 0px) !important;
         }
-    }
 
-    /* ---------- Shadow DOM ---------- */
+        #TabsToolbar tab-split-view-wrapper
+        {
+            align-self: end !important;
 
-    #pinned-tabs-container,
-    #tabbrowser-arrowscrollbox
-    {
-        --drag-space-only-tabs: var(--drag-space, 0px) !important;
-    }
+            .tabbrowser-tab
+            {
+                margin-top: 0px !important;
+            }
+        }
 
-    #scrollbutton-up,
-    #scrollbutton-down,
-    spacer[part="overflow-start-indicator"],
-    spacer[part="overflow-end-indicator"]
-    {
-        margin-top: var(--drag-space-only-tabs, revert) !important;
+        /* ---------- Shadow DOM ---------- */
+
+        #pinned-tabs-container,
+        #tabbrowser-arrowscrollbox
+        {
+            --drag-space-only-tabs: var(--drag-space, 0px) !important;
+        }
+
+        #scrollbutton-up,
+        #scrollbutton-down,
+        spacer[part="overflow-start-indicator"],
+        spacer[part="overflow-end-indicator"]
+        {
+            margin-top: var(--drag-space-only-tabs, revert) !important;
+        }
     }
 }
 
