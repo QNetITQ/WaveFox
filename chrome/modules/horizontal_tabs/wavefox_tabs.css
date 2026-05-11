@@ -77,6 +77,20 @@
     }
 }
 
+/* Tab Groups / Split View */
+
+.tabbrowser-tab
+{
+    .tab-background
+    {
+        .tab-group-line
+        {
+            inset-block: auto 0px !important;
+            inset-inline: 0px !important;
+        }
+    }
+}
+
 /* Tab Groups */
 
 @scope (tab-group) to (tab-split-view-wrapper)
@@ -93,18 +107,6 @@
     .tabbrowser-tab
     {
         color: white !important;
-        
-        &[visuallyselected]
-        {
-            .tab-background
-            {
-                .tab-group-line
-                {
-                    inset-block: auto 0px !important;
-                    inset-inline: 0px !important;
-                }
-            }
-        }
 
         &:not([visuallyselected])
         {
@@ -155,7 +157,6 @@ tab-split-view-wrapper
             .tab-group-line
             {
                 inset-block: auto calc(-1 * (var(--tab-block-margin) + var(--split-view-padding-block))) !important;
-                inset-inline: 0px !important;
             }
         }
     }
