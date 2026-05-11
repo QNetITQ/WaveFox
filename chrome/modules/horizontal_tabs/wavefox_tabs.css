@@ -77,6 +77,63 @@
     }
 }
 
+
+
+
+
+
+
+
+
+
+
+/* Tab Groups */
+
+@scope (tab-group) to (tab-split-view-wrapper)
+{
+    .tab-group-label-container
+    {
+        &::after
+        {
+            display: none !important;
+        }
+    }
+
+    .tabbrowser-tab
+    {
+        color: white !important;
+
+        &:not([visuallyselected])
+        {
+            .tab-background
+            {
+                background-color: var(--tab-group-line-color) !important;
+                
+                .tab-group-line
+                {
+                    display: none !important;
+                }
+            }
+
+            &:hover
+            {
+                .tab-background
+                {
+                    background-color: color-mix(in srgb, currentColor 17%, var(--tab-group-line-color) 100%) !important;
+                }
+            }
+
+            &[multiselected]
+            {
+                .tab-background
+                {
+                    background-color: color-mix(in srgb, currentColor 30%, var(--tab-group-line-color) 100%) !important;
+                }
+            }
+        }
+    }
+}
+
 /* Split View */
 
 tab-split-view-wrapper
@@ -91,9 +148,44 @@ tab-split-view-wrapper
         {
             margin: 0px !important;
             border-radius: calc(var(--toolbarbutton-border-radius) - var(--tab-overflow-clip-margin)) !important;
+            
+            .tab-group-line
+            {
+                inset-block: auto calc(-1 * var(--tab-block-margin)) !important;
+                inset-inline: 0px !important;
+            }
+        }
+    }
+    
+    /* Tab Groups */
+    
+    tab-group > &
+    {
+        background-color: var(--tab-group-line-color) !important;
+
+        .tabbrowser-tab
+        {
+            color: white !important;
+            
+            .tab-background
+            {
+                .tab-group-line
+                {
+                    display: none !important;
+                }
+            }
         }
     }
 }
+
+
+
+
+
+
+
+
+
 
 /* ---------------------------------------- Attached Tabs ---------------------------------------- */
 
