@@ -1,10 +1,8 @@
 /* ---------------------------------------- Firefox View ---------------------------------------- */
 
-:where(toolbarbutton, toolbarpaletteitem) + #tabbrowser-tabs
+#tabbrowser-tabs::before
 {
-    border-inline-start: none !important;
-    padding-inline-start: var(--tab-overflow-pinned-tabs-width) !important;
-    margin-inline-start: 0px !important;
+    display: none !important;
 }
 
 #TabsToolbar #firefox-view-button[open] > .toolbarbutton-icon
