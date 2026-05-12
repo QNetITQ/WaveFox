@@ -154,7 +154,7 @@
 
     .tabbrowser-tab[pictureinpicture]:not([crashed], [busy])
     {
-        &:is([soundplaying], [muted], [activemedia-blocked])
+        &[soundplaying]
         {
             .tab-icon-stack > .tab-icon-overlay
             {
@@ -172,6 +172,19 @@
                 {
                     opacity: 0 !important;
                 }
+            }
+        }
+        
+        &:is([muted], [activemedia-blocked])
+        {
+            .tab-icon-stack > .tab-icon-overlay
+            {
+                opacity: 1 !important;
+            }
+            
+            .tab-icon-stack > :not(.tab-icon-overlay)
+            {
+                opacity: 0 !important;
             }
         }
     }
