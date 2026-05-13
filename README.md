@@ -65,7 +65,7 @@ Works only with System / Light / Dark theme.
 ### Tab Separators
 ![изображение](https://user-images.githubusercontent.com/85301851/152351312-f6ad4578-e7d5-40b7-8b2d-49388a750f54.png)
 
-- `WaveFox.Tabs.Separators` > true
+- `WaveFox.Tabs.Separators` > 1 or 2
 
 ### Icons (firefox-csshacks / Lepton) / (Horizontal and Vertical tabs)
 This is third-party code. I will update this code according to the original source.
