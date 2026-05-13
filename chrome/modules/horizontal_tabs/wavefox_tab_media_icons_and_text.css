@@ -149,6 +149,26 @@
             display: none !important;
         }
     }
+    
+    /* Picture-In-Picture */
+
+    .tabbrowser-tab[pictureinpicture]:not([crashed], [busy])
+    {
+        &:is([soundplaying], [muted], [activemedia-blocked])
+        {
+            .tab-icon-stack::before
+            {
+                clip-path: shape(
+                    nonzero from 0px 0px,
+                    hline by 16px,
+                    vline by 16px,
+                    hline by -8px,
+                    arc by -8px -8px of 8px ccw, /* 0px small rotate 0deg */
+                    close
+                );
+            }
+        }
+    }
 }
 
 /* Picture-In-Picture */
@@ -178,21 +198,6 @@
     .tab-icon-stack > :not(.tab-icon-overlay)
     {
         opacity: 0 !important;
-    }
-
-    &:is([soundplaying], [muted], [activemedia-blocked])
-    {
-        .tab-icon-stack::before
-        {
-            clip-path: shape(
-                nonzero from 0px 0px,
-                hline by 16px,
-                vline by 16px,
-                hline by -8px,
-                arc by -8px -8px of 8px ccw, /* 0px small rotate 0deg */
-                close
-            );
-        }
     }
 }
 
