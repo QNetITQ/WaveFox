@@ -1,41 +1,53 @@
-@media -moz-pref("WaveFox.Tabs.Separators")
+@media -moz-pref("WaveFox.Tabs.Separators", 1) or 
+       -moz-pref("WaveFox.Tabs.Separators", 2)
 {
     @scope (#tabbrowser-arrowscrollbox) to (tab-group, tab-split-view-wrapper)
     {
-        .tabbrowser-tab + .tabbrowser-tab > .tab-stack,
-        .tabbrowser-tab + .tabbrowser-tab[hidden] + .tabbrowser-tab > .tab-stack
+        @media -moz-pref("WaveFox.Tabs.Separators", 1)
         {
-            margin-inline-start: 1px !important;
-            
-            &::before
+            .tabbrowser-tab + .tabbrowser-tab > .tab-stack,
+            .tabbrowser-tab + .tabbrowser-tab[hidden] + .tabbrowser-tab > .tab-stack
             {
-                content: "";
-                display: block;
-                position: absolute;
-                width: 1px;
-                height: 50%;
-                border-inline-end: 1px solid currentColor;
-                top: 25%;
-                opacity: 0.5;
-                box-sizing: border-box;
-                pointer-events: none;
-                inset-inline-end: calc(100% + var(--tab-overflow-clip-margin));
-            }
-            
-            @media -moz-pref("WaveFox.AttachedTabs")
-            {
+                margin-inline-start: 1px !important;
+
                 &::before
                 {
-                    inset-inline-end: 100% !important;
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    width: 1px;
+                    height: 50%;
+                    border-inline-end: 1px solid currentColor;
+                    top: 25%;
+                    opacity: 0.5;
+                    box-sizing: border-box;
+                    pointer-events: none;
+                    inset-inline-end: calc(100% + var(--tab-overflow-clip-margin));
                 }
+
+                @media -moz-pref("WaveFox.AttachedTabs")
+                {
+                    &::before
+                    {
+                        inset-inline-end: 100% !important;
+                    }
+                }
+            }
+
+            .tabbrowser-tab:not([hidden]):is([selected], :hover, [multiselected], [dragover-groupTarget]) > .tab-stack::before,
+            .tabbrowser-tab:not([hidden]):is([selected], :hover, [multiselected], [dragover-groupTarget]) + .tabbrowser-tab > .tab-stack::before,
+            .tabbrowser-tab:not([hidden]):is([selected], :hover, [multiselected], [dragover-groupTarget]) + .tabbrowser-tab[hidden] + .tabbrowser-tab > .tab-stack::before
+            {
+                opacity: 0 !important;
             }
         }
 
-        .tabbrowser-tab:not([hidden]):is([selected], :hover, [multiselected], [dragover-groupTarget]) > .tab-stack::before,
-        .tabbrowser-tab:not([hidden]):is([selected], :hover, [multiselected], [dragover-groupTarget]) + .tabbrowser-tab > .tab-stack::before,
-        .tabbrowser-tab:not([hidden]):is([selected], :hover, [multiselected], [dragover-groupTarget]) + .tabbrowser-tab[hidden] + .tabbrowser-tab > .tab-stack::before
+        @media -moz-pref("WaveFox.Tabs.Separators", 2)
         {
-            opacity: 0 !important;
+            .tabbrowser-tab > .tab-stack > .tab-background
+            {
+                background-color: color-mix(in srgb, currentColor 10%, transparent);
+            }
         }
     }
 }
