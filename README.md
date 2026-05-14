@@ -53,7 +53,7 @@ Ability to control the rounding of browser bar elements.
 - `WaveFox.Toolbar.Roundings` > 1 or 2
 
 ### Tab Bar Shadows
-Works only with System / Light / Dark theme.
+Works only with System / Light / Dark theme and attached tabs.
 ![изображение](https://user-images.githubusercontent.com/85301851/152011749-4d5619b3-0fd8-40f9-a3dc-96be31839971.png)
 
 ##### Shadows (Light Theme)
