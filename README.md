@@ -96,10 +96,10 @@ The keys below are relevant only for the second option.
 - `WaveFox.DragSpace.TabBarLeftSide.Disabled`
 - `WaveFox.DragSpace.TabBarRightSide.Disabled`
 
-### Tabs Below URL (Floating Tabs Only)
+### Tabs Below URL
 ![Снимок](https://github.com/QNetITQ/WaveFox/assets/85301851/514cf30d-a417-48cb-bfd1-0e77c9df1bf4)
 
-- `WaveFox.TabsBelowURL.Enabled` and `browser.tabs.inTitlebar > 0`
+- `WaveFox.HorizontalTabs.TabsBelowURL`
 
 ### One Line (Floating Tabs Only)
 ![Снимок](https://github.com/QNetITQ/WaveFox/assets/85301851/05bba314-643d-46f3-a09c-b3ac31f9761d)
