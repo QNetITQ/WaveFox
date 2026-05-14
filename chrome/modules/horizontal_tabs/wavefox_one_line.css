@@ -1,91 +1,67 @@
-@media -moz-pref("WaveFox.OneLine", 1) or
-       -moz-pref("WaveFox.OneLine", 2)
+@media -moz-pref("WaveFox.HorizontalTabs.OneLine")
 {
-    @media not (-moz-pref("WaveFox.Tabs.Shape", 5)   or
-                -moz-pref("WaveFox.Tabs.Shape", 6)   or
-                -moz-pref("WaveFox.Tabs.Shape", 7)   or
-                -moz-pref("WaveFox.Tabs.Shape", 8)   or
-                -moz-pref("WaveFox.Tabs.Shape", 9)   or
-                -moz-pref("WaveFox.Tabs.Shape", 10)  or
-                -moz-pref("WaveFox.Tabs.Shape", 11)  or
-                -moz-pref("WaveFox.Tabs.Shape", 12))
+    #navigator-toolbox
     {
-        @media -moz-pref("WaveFox.OneLine", 1)
-        {
-            #navigator-toolbox
-            {
-                grid-template-columns: minmax(auto, 0%) auto !important;
-            }
+        display: grid !important;
+    }
 
-            #TabsToolbar
-            {
-                grid-area: 2 / 2 / auto / auto !important;
-            }
-
-            #nav-bar
-            {
-                grid-area: 2 / 1 / auto / auto !important;
-            }
-        }
-
-        @media -moz-pref("WaveFox.OneLine", 2)
-        {
-            #navigator-toolbox
-            {
-                grid-template-columns: auto minmax(auto, 0%) !important;
-            }
-
-            #TabsToolbar
-            {
-                grid-area: 2 / 1 / auto / auto !important;
-            }
-
-            #nav-bar
-            {
-                grid-area: 2 / 2 / auto / auto !important;
-            }
-        }
-
-        #navigator-toolbox
-        {
-            display: grid !important;
-            -moz-window-dragging: drag !important;
-        }
+    #navigator-toolbox:has(~ #browser > #sidebar-main:not([sidebar-positionend]))
+    {
+        grid-template-columns: minmax(auto, 0%) auto !important;
 
         #TabsToolbar
         {
-            box-shadow: none !important;
+            grid-area: 2 / 2 / auto / auto !important;
         }
-
-        /* -------------------- Nav Bar -------------------- */
 
         #nav-bar
         {
-            width: fit-content !important;
-            border: none !important;
-            align-self: end !important;
-            border-radius: var(--tab-border-radius) !important;
-            margin: var(--tab-block-margin) !important;
-            box-shadow: var(--wavefox-selected-tab-shadow, none) !important;
-
-            #urlbar-container
-            {
-                min-height: var(--tab-min-height) !important;
-            }
+            grid-area: 2 / 1 / auto / auto !important;
         }
-
-        /* -------------------- Bookmarks Bar / Notifications -------------------- */
-
-        #navigator-toolbox > *:not(#TabsToolbar, #nav-bar)
+    }
+    
+    #navigator-toolbox:has(~ #browser > #sidebar-main[sidebar-positionend])
+    {
+        grid-template-columns: auto minmax(auto, 0%) !important;
+        
+        #TabsToolbar
         {
-            grid-column: 1 / span 2 !important;
+            grid-area: 2 / 1 / auto / auto !important;
         }
 
-        /* -------------------- Customization -------------------- */
-
-        #customization-panelWrapper
+        #nav-bar
         {
-            --panel-arrow-offset: 0px !important;
+            grid-area: 2 / 2 / auto / auto !important;
         }
+    }
+
+    /* #TabsToolbar */
+    
+    #TabsToolbar
+    {
+        background-color: var(--toolbar-bgcolor) !important;
+        color: var(--toolbar-color) !important;
+    }
+
+    /* Nav Bar */
+
+    #nav-bar
+    {
+        width: fit-content !important;
+        border: none !important;
+    }
+
+    /* Bookmarks Bar / Notifications */
+
+    #navigator-toolbox > *:not(#TabsToolbar, #nav-bar)
+    {
+        grid-column: 1 / span 2 !important;
+    }
+
+    /* Customization */
+
+    #customization-panelWrapper
+    {
+        --panel-arrow-offset: 0px !important;
     }
 }
