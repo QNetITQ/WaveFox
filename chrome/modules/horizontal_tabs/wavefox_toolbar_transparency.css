@@ -6,7 +6,7 @@
         -moz-pref("WaveFox.Toolbar.Transparency", 4))
 and
         -moz-pref("extensions.activeThemeID", 'default-theme@mozilla.org') and
-        -moz-pref("browser.tabs.inTitlebar", 1)
+        (not -moz-pref("browser.tabs.inTitlebar", 0))
 {
     :root
     {
@@ -32,11 +32,6 @@ and
         @media -moz-pref("WaveFox.Toolbar.Transparency", 4)
         {
             --toolbar-transparency-level: 0%;
-            
-            .tabbrowser-tab[visuallyselected] .tab-background
-            {
-                background-image: linear-gradient(to bottom, var(--toolbar-bgcolor), var(--toolbar-bgcolor)) !important;
-            }
         }
 
         .tabbrowser-tab[visuallyselected] .tab-background,
