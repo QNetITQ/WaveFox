@@ -1,17 +1,17 @@
-@media (-moz-pref("WaveFox.LightTheme.Tabs.Shadows", 1) or
-        -moz-pref("WaveFox.LightTheme.Tabs.Shadows", 2) or
-        -moz-pref("WaveFox.LightTheme.Tabs.Shadows", 3) or
-        -moz-pref("WaveFox.LightTheme.Tabs.Shadows", 4) or
-        -moz-pref("WaveFox.DarkTheme.Tabs.Shadows", 1)  or
-        -moz-pref("WaveFox.DarkTheme.Tabs.Shadows", 2)  or
-        -moz-pref("WaveFox.DarkTheme.Tabs.Shadows", 3)  or
-        -moz-pref("WaveFox.DarkTheme.Tabs.Shadows", 4))
+@media (-moz-pref("WaveFox.HorizontalTabs.LightTheme.Tabs.Shadows", 1) or
+        -moz-pref("WaveFox.HorizontalTabs.LightTheme.Tabs.Shadows", 2) or
+        -moz-pref("WaveFox.HorizontalTabs.LightTheme.Tabs.Shadows", 3) or
+        -moz-pref("WaveFox.HorizontalTabs.LightTheme.Tabs.Shadows", 4) or
+        -moz-pref("WaveFox.HorizontalTabs.DarkTheme.Tabs.Shadows", 1)  or
+        -moz-pref("WaveFox.HorizontalTabs.DarkTheme.Tabs.Shadows", 2)  or
+        -moz-pref("WaveFox.HorizontalTabs.DarkTheme.Tabs.Shadows", 3)  or
+        -moz-pref("WaveFox.HorizontalTabs.DarkTheme.Tabs.Shadows", 4))
 and
        (-moz-pref("extensions.activeThemeID", 'default-theme@mozilla.org')         or
         -moz-pref("extensions.activeThemeID", 'firefox-compact-light@mozilla.org') or
         -moz-pref("extensions.activeThemeID", 'firefox-compact-dark@mozilla.org'))
 {
-    @media -moz-pref("WaveFox.AttachedTabs")
+    @media -moz-pref("WaveFox.HorizontalTabs.AttachedTabs")
     {
         :root
         {
@@ -53,22 +53,22 @@ and
 
             @media (prefers-color-scheme: light)
             {
-                @media -moz-pref("WaveFox.LightTheme.Tabs.Shadows", 1)
+                @media -moz-pref("WaveFox.HorizontalTabs.LightTheme.Tabs.Shadows", 1)
                 {
                     --wavefox-filter-shadow-saturation: 10%;
                 }
 
-                @media -moz-pref("WaveFox.LightTheme.Tabs.Shadows", 2)
+                @media -moz-pref("WaveFox.HorizontalTabs.LightTheme.Tabs.Shadows", 2)
                 {
                     --wavefox-filter-shadow-saturation: 15%;
                 }
 
-                @media -moz-pref("WaveFox.LightTheme.Tabs.Shadows", 3)
+                @media -moz-pref("WaveFox.HorizontalTabs.LightTheme.Tabs.Shadows", 3)
                 {
                     --wavefox-filter-shadow-saturation: 20%;
                 }
 
-                @media -moz-pref("WaveFox.LightTheme.Tabs.Shadows", 4)
+                @media -moz-pref("WaveFox.HorizontalTabs.LightTheme.Tabs.Shadows", 4)
                 {
                     --wavefox-filter-shadow-saturation: 25%;
                 }
@@ -76,22 +76,22 @@ and
 
             @media (prefers-color-scheme: dark)
             {
-                @media -moz-pref("WaveFox.DarkTheme.Tabs.Shadows", 1)
+                @media -moz-pref("WaveFox.HorizontalTabs.DarkTheme.Tabs.Shadows", 1)
                 {
                     --wavefox-filter-shadow-saturation: 25%;
                 }
 
-                @media -moz-pref("WaveFox.DarkTheme.Tabs.Shadows", 2)
+                @media -moz-pref("WaveFox.HorizontalTabs.DarkTheme.Tabs.Shadows", 2)
                 {
                     --wavefox-filter-shadow-saturation: 50%;
                 }
 
-                @media -moz-pref("WaveFox.DarkTheme.Tabs.Shadows", 3)
+                @media -moz-pref("WaveFox.HorizontalTabs.DarkTheme.Tabs.Shadows", 3)
                 {
                     --wavefox-filter-shadow-saturation: 75%;
                 }
 
-                @media -moz-pref("WaveFox.DarkTheme.Tabs.Shadows", 4)
+                @media -moz-pref("WaveFox.HorizontalTabs.DarkTheme.Tabs.Shadows", 4)
                 {
                     --wavefox-filter-shadow-saturation: 100%;
                 }
