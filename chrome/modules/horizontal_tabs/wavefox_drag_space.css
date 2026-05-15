@@ -1,10 +1,10 @@
-@media -moz-pref("WaveFox.AttachedTabs.DragSpace", 1)  or
-       -moz-pref("WaveFox.AttachedTabs.DragSpace", 2)  or
-       -moz-pref("WaveFox.AttachedTabs.DragSpace", 3)
+@media -moz-pref("WaveFox.HorizontalTabs.AttachedTabs.DragSpace", 1)  or
+       -moz-pref("WaveFox.HorizontalTabs.AttachedTabs.DragSpace", 2)  or
+       -moz-pref("WaveFox.HorizontalTabs.AttachedTabs.DragSpace", 3)
 {
-    @media -moz-pref("WaveFox.AttachedTabs")
+    @media -moz-pref("WaveFox.HorizontalTabs.AttachedTabs")
     {
-        @media -moz-pref("WaveFox.AttachedTabs.DragSpace", 1)
+        @media -moz-pref("WaveFox.HorizontalTabs.AttachedTabs.DragSpace", 1)
         {
             :root[sizemode="normal"]
             {
@@ -12,7 +12,7 @@
             }
         }
 
-        @media -moz-pref("WaveFox.AttachedTabs.DragSpace", 2)
+        @media -moz-pref("WaveFox.HorizontalTabs.AttachedTabs.DragSpace", 2)
         {
             :root:is([sizemode="normal"], [sizemode="maximized"])
             {
@@ -20,7 +20,7 @@
             }
         }
 
-        @media -moz-pref("WaveFox.AttachedTabs.DragSpace", 3)
+        @media -moz-pref("WaveFox.HorizontalTabs.AttachedTabs.DragSpace", 3)
         {
             :root:is([sizemode="normal"], [sizemode="maximized"], [sizemode="fullscreen"])
             {
@@ -58,21 +58,5 @@
         {
             margin-top: var(--drag-space-only-tabs, revert) !important;
         }
-    }
-}
-
-@media -moz-pref("WaveFox.DragSpace.TabBarLeftSide.Disabled")
-{
-    .titlebar-spacer[type="pre-tabs"]
-    {
-        display: none !important;
-    }
-}
-
-@media -moz-pref("WaveFox.DragSpace.TabBarRightSide.Disabled")
-{
-    .titlebar-spacer[type="post-tabs"]
-    {
-        display: none !important;
     }
 }
