@@ -40,12 +40,6 @@ Requires Linux with transparency support. Works only with the system theme.
 - `WaveFox.Linux.Transparency.Enabled` and `browser.tabs.inTitlebar > 1`
   - `WaveFox.Linux.Transparency.TextColor.White.Enabled`
 
-### Toolbar Transparency
-Works only with the system theme.
-![изображение](https://user-images.githubusercontent.com/85301851/165526704-4f7486c4-f330-4c86-a25d-6ed8ab2affe4.png)
-
-- `WaveFox.Toolbar.Transparency` > 1 or 2 or 3 or 4
-
 ### Toolbar Roundings (Horizontal and Vertical tabs)
 Ability to control the rounding of browser bar elements.
 <img width="1778" height="120" alt="изображение" src="https://github.com/user-attachments/assets/ec10f079-fabc-4bdf-bfa5-ccd3125d5792" />
