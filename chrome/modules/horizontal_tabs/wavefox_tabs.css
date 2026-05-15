@@ -171,7 +171,7 @@ tab-split-view-wrapper
 
 /* ---------------------------------------- Attached Tabs ---------------------------------------- */
 
-@media -moz-pref("WaveFox.AttachedTabs")
+@media -moz-pref("WaveFox.HorizontalTabs.AttachedTabs")
 {
     :root
     {
@@ -291,42 +291,42 @@ tab-split-view-wrapper
 
         /* Custom shapes */
 
-        @media -moz-pref("WaveFox.AttachedTabs.Shape", 1) or
-               -moz-pref("WaveFox.AttachedTabs.Shape", 2) or
-               -moz-pref("WaveFox.AttachedTabs.Shape", 3) or
-               -moz-pref("WaveFox.AttachedTabs.Shape", 4)
+        @media -moz-pref("WaveFox.HorizontalTabs.AttachedTabs.Shape", 1) or
+               -moz-pref("WaveFox.HorizontalTabs.AttachedTabs.Shape", 2) or
+               -moz-pref("WaveFox.HorizontalTabs.AttachedTabs.Shape", 3) or
+               -moz-pref("WaveFox.HorizontalTabs.AttachedTabs.Shape", 4)
         {
             :scope
             {
                 --tab-first-last-inline-margin: calc(var(--tab-min-height) / 2) !important;
                 --tab-corner-incline-y: 0px;
 
-                @media -moz-pref("WaveFox.AttachedTabs.Shape", 1)
+                @media -moz-pref("WaveFox.HorizontalTabs.AttachedTabs.Shape", 1)
                 {
                     --tab-corner-incline-x: calc(var(--tab-min-height) * 0.875);
                 }
 
-                @media -moz-pref("WaveFox.AttachedTabs.Shape", 2)
+                @media -moz-pref("WaveFox.HorizontalTabs.AttachedTabs.Shape", 2)
                 {
                     --tab-corner-incline-x: calc(var(--tab-min-height) * 0.75);
                 }
 
-                @media -moz-pref("WaveFox.AttachedTabs.Shape", 3)
+                @media -moz-pref("WaveFox.HorizontalTabs.AttachedTabs.Shape", 3)
                 {
                     --tab-corner-incline-x: calc(var(--tab-min-height) * 0.625);
                 }
 
-                @media -moz-pref("WaveFox.AttachedTabs.Shape", 4)
+                @media -moz-pref("WaveFox.HorizontalTabs.AttachedTabs.Shape", 4)
                 {
                     --tab-corner-incline-x: calc(var(--tab-min-height) * 0.5);
                 }
 
-                @media -moz-pref("WaveFox.AttachedTabs.Shape.Mode", 1)
+                @media -moz-pref("WaveFox.HorizontalTabs.AttachedTabs.Shape.Mode", 1)
                 {
                     --tab-corner-incline-y: calc(var(--tab-min-height) * 0.125);
                 }
 
-                @media -moz-pref("WaveFox.AttachedTabs.Shape.Mode", 2)
+                @media -moz-pref("WaveFox.HorizontalTabs.AttachedTabs.Shape.Mode", 2)
                 {
                     --tab-corner-incline-y: calc(var(--tab-min-height) * 0.25);
                 }
