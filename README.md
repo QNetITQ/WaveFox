@@ -96,7 +96,7 @@ The keys below are relevant only for the second option.
 ### One Line
 ![Снимок](https://github.com/QNetITQ/WaveFox/assets/85301851/05bba314-643d-46f3-a09c-b3ac31f9761d)
 
-- `WaveFox.HorizontalTabs.OneLine`
+- `WaveFox.HorizontalTabs.FloatingTabs.OneLine`
 
 ### Floating Web Page (Horizontal tabs)
 ![изображение](https://github.com/user-attachments/assets/26a19f9a-642b-4a10-a4f9-80d87cc42bdc)
