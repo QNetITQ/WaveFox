@@ -1,3 +1,14 @@
+/* Floating Tabs */
+
+@media not -moz-pref("WaveFox.HorizontalTabs.AttachedTabs")
+{
+    #nav-bar,
+    #PersonalToolbar
+    {
+        background-color: transparent !important;
+    }
+}
+
 /* Density */
 
 :root
