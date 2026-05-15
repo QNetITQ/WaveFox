@@ -1,24 +1,25 @@
-@media -moz-pref("WaveFox.HorizontalTabs.TabsBelowURL")
+@media -moz-pref("WaveFox.HorizontalTabs.FloatingTabs.TabsBelowURL")
 {
-    #toolbar-menubar
+    @media not -moz-pref("WaveFox.HorizontalTabs.AttachedTabs")
     {
-        order: 0 !important;
-        background-color: var(--toolbar-bgcolor) !important;
-        color: var(--toolbar-color) !important;
-    }
+        #toolbar-menubar
+        {
+            order: 0 !important;
+        }
 
-    #nav-bar
-    {
-        order: 1 !important;
-    }
+        #nav-bar
+        {
+            order: 1 !important;
+        }
 
-    #PersonalToolbar
-    {
-        order: 2 !important;
-    }
+        #PersonalToolbar
+        {
+            order: 2 !important;
+        }
 
-    #TabsToolbar
-    {
-        order: 3 !important;
+        #TabsToolbar
+        {
+            order: 3 !important;
+        }
     }
 }
