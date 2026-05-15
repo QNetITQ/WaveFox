@@ -57,10 +57,10 @@ Works only with System / Light / Dark theme and attached tabs.
 ![изображение](https://user-images.githubusercontent.com/85301851/152011749-4d5619b3-0fd8-40f9-a3dc-96be31839971.png)
 
 ##### Shadows (Light Theme)
-- `WaveFox.LightTheme.Tabs.Shadows` > 1 or 2 or 3 or 4
+- `WaveFox.HorizontalTabs.AttachedTabs.LightTheme.Shadows` > 1 or 2 or 3 or 4
 
 ##### Shadows (Dark Theme)
-- `WaveFox.DarkTheme.Tabs.Shadows` > 1 or 2 or 3 or 4
+- `WaveFox.HorizontalTabs.AttachedTabs.DarkTheme.Shadows` > 1 or 2 or 3 or 4
 
 ### Tab Separators
 ![изображение](https://user-images.githubusercontent.com/85301851/152351312-f6ad4578-e7d5-40b7-8b2d-49388a750f54.png)
