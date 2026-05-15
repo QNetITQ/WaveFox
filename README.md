@@ -92,9 +92,7 @@ The keys below are relevant only for the second option.
 ### Drag Space
 ![изображение](https://user-images.githubusercontent.com/85301851/152680229-43547df0-1d2c-4384-b024-950e7aa56ca6.png)
 
-- `WaveFox.AttachedTabs.DragSpace` > 1 or 2 or 3
-- `WaveFox.DragSpace.TabBarLeftSide.Disabled`
-- `WaveFox.DragSpace.TabBarRightSide.Disabled`
+- `WaveFox.HorizontalTabs.AttachedTabs.DragSpace` > 1 or 2 or 3
 
 ### Tabs Below URL
 ![Снимок](https://github.com/QNetITQ/WaveFox/assets/85301851/514cf30d-a417-48cb-bfd1-0e77c9df1bf4)
