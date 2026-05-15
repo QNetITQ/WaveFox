@@ -1,9 +1,9 @@
-@media -moz-pref("WaveFox.Tabs.Separators", 1) or 
-       -moz-pref("WaveFox.Tabs.Separators", 2)
+@media -moz-pref("WaveFox.HorizontalTabs.Tabs.Separators", 1) or 
+       -moz-pref("WaveFox.HorizontalTabs.Tabs.Separators", 2)
 {
     @scope (#tabbrowser-arrowscrollbox) to (tab-group, tab-split-view-wrapper)
     {
-        @media -moz-pref("WaveFox.Tabs.Separators", 1)
+        @media -moz-pref("WaveFox.HorizontalTabs.Tabs.Separators", 1)
         {
             .tabbrowser-tab + .tabbrowser-tab > .tab-stack,
             .tabbrowser-tab + .tabbrowser-tab[hidden] + .tabbrowser-tab > .tab-stack
@@ -25,7 +25,7 @@
                     inset-inline-end: calc(100% + var(--tab-overflow-clip-margin));
                 }
 
-                @media -moz-pref("WaveFox.AttachedTabs")
+                @media -moz-pref("WaveFox.HorizontalTabs.AttachedTabs")
                 {
                     &::before
                     {
@@ -42,7 +42,7 @@
             }
         }
 
-        @media -moz-pref("WaveFox.Tabs.Separators", 2)
+        @media -moz-pref("WaveFox.HorizontalTabs.Tabs.Separators", 2)
         {
             .tabbrowser-tab > .tab-stack > .tab-background
             {
