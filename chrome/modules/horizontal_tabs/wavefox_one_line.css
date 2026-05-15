@@ -1,67 +1,62 @@
-@media -moz-pref("WaveFox.HorizontalTabs.OneLine")
+@media -moz-pref("WaveFox.HorizontalTabs.FloatingTabs.OneLine")
 {
-    #navigator-toolbox
+    @media not -moz-pref("WaveFox.HorizontalTabs.AttachedTabs")
     {
-        display: grid !important;
-    }
-
-    #navigator-toolbox:has(~ #browser > #sidebar-main:not([sidebar-positionend]))
-    {
-        grid-template-columns: minmax(auto, 0%) auto !important;
-
-        #TabsToolbar
+        #navigator-toolbox
         {
-            grid-area: 2 / 2 / auto / auto !important;
+            display: grid !important;
         }
+
+        #navigator-toolbox:has(~ #browser > #sidebar-main:not([sidebar-positionend]))
+        {
+            grid-template-columns: minmax(auto, 0%) auto !important;
+
+            #TabsToolbar
+            {
+                grid-area: 2 / 2 / auto / auto !important;
+            }
+
+            #nav-bar
+            {
+                grid-area: 2 / 1 / auto / auto !important;
+            }
+        }
+
+        #navigator-toolbox:has(~ #browser > #sidebar-main[sidebar-positionend])
+        {
+            grid-template-columns: auto minmax(auto, 0%) !important;
+
+            #TabsToolbar
+            {
+                grid-area: 2 / 1 / auto / auto !important;
+            }
+
+            #nav-bar
+            {
+                grid-area: 2 / 2 / auto / auto !important;
+            }
+        }
+
+        /* Nav Bar */
 
         #nav-bar
         {
-            grid-area: 2 / 1 / auto / auto !important;
+            width: fit-content !important;
+            border: none !important;
         }
-    }
-    
-    #navigator-toolbox:has(~ #browser > #sidebar-main[sidebar-positionend])
-    {
-        grid-template-columns: auto minmax(auto, 0%) !important;
-        
-        #TabsToolbar
+
+        /* Bookmarks Bar / Notifications */
+
+        #navigator-toolbox > *:not(#TabsToolbar, #nav-bar)
         {
-            grid-area: 2 / 1 / auto / auto !important;
+            grid-column: 1 / span 2 !important;
         }
 
-        #nav-bar
+        /* Customization */
+
+        #customization-panelWrapper
         {
-            grid-area: 2 / 2 / auto / auto !important;
+            --panel-arrow-offset: 0px !important;
         }
-    }
-
-    /* #TabsToolbar */
-    
-    #TabsToolbar
-    {
-        background-color: var(--toolbar-bgcolor) !important;
-        color: var(--toolbar-color) !important;
-    }
-
-    /* Nav Bar */
-
-    #nav-bar
-    {
-        width: fit-content !important;
-        border: none !important;
-    }
-
-    /* Bookmarks Bar / Notifications */
-
-    #navigator-toolbox > *:not(#TabsToolbar, #nav-bar)
-    {
-        grid-column: 1 / span 2 !important;
-    }
-
-    /* Customization */
-
-    #customization-panelWrapper
-    {
-        --panel-arrow-offset: 0px !important;
     }
 }
