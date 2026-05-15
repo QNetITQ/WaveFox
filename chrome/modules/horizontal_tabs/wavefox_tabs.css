@@ -1,15 +1,3 @@
-/* Floating Tabs */
-
-@media not -moz-pref("WaveFox.HorizontalTabs.AttachedTabs")
-{
-    #nav-bar,
-    #PersonalToolbar
-    {
-        background-color: transparent !important;
-        color: inherit !important;
-    }
-}
-
 /* Density */
 
 :root
@@ -178,6 +166,23 @@ tab-split-view-wrapper
                 inset-block: auto calc(-1 * (var(--tab-block-margin) + var(--split-view-padding-block))) !important;
             }
         }
+    }
+}
+
+/* ---------------------------------------- Floating Tabs ---------------------------------------- */
+
+@media not -moz-pref("WaveFox.HorizontalTabs.AttachedTabs")
+{
+    #navigator-toolbox
+    {
+        border-bottom: none !important;
+    }
+    
+    #navigator-toolbox > *,
+    #browser
+    {
+        background-color: transparent !important;
+        color: inherit !important;
     }
 }
 
