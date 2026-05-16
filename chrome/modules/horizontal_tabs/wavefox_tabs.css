@@ -80,7 +80,7 @@
     .tabbrowser-tab:is([image], [pinned]) .tab-content[attention]:not([selected]),
     .tab-content[pinned][titlechanged]:not([selected])
     {
-        background-position: 50% calc(50% - 12px) !important;
+        background-position: 50% calc(50% - 13px) !important;
     }
 }
 
