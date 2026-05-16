@@ -4,9 +4,10 @@
 {
     :root
     {
-        --border-radius-medium: 4px !important;
-        --arrowpanel-border-radius: 4px !important;
-        --arrowpanel-menuitem-border-radius: 4px !important;
+        --border-radius-xsmall: 0px !important;
+        --border-radius-small: 0px !important;
+        --border-radius-medium: 0px !important;
+        --border-radius-large: 0px !important;
     }
 }
 
@@ -14,8 +15,42 @@
 {
     :root
     {
+        --border-radius-xsmall: 4px !important;
+        --border-radius-small: 4px !important;
+        --border-radius-medium: 4px !important;
+        --border-radius-large: 4px !important;
+    }
+}
+
+@media -moz-pref("WaveFox.Toolbar.Roundings", 3)
+{
+    :root
+    {
+        --border-radius-xsmall: 6px !important;
+        --border-radius-small: 6px !important;
+        --border-radius-medium: 6px !important;
+        --border-radius-large: 6px !important;
+    }
+}
+
+@media -moz-pref("WaveFox.Toolbar.Roundings", 4)
+{
+    :root
+    {
+        --border-radius-xsmall: 10px !important;
+        --border-radius-small: 10px !important;
+        --border-radius-medium: 10px !important;
+        --border-radius-large: 10px !important;
+    }
+}
+
+@media -moz-pref("WaveFox.Toolbar.Roundings", 5)
+{
+    :root
+    {
+        --border-radius-xsmall: 12px !important;
+        --border-radius-small: 12px !important;
         --border-radius-medium: 12px !important;
-        --arrowpanel-border-radius: 12px !important;
-        --arrowpanel-menuitem-border-radius: 12px !important;
+        --border-radius-large: 12px !important;
     }
 }
