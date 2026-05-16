@@ -13,11 +13,11 @@
             fill: currentColor !important;
             border-radius: 50px !important;
             top: 8px !important;
-            inset-inline-end: 8px !important;
+            inset-inline-end: -8px !important;
 
             &:hover
             {
-                background-color: color-mix(in srgb, currentColor 15%, transparent) !important;
+                background-color: color-mix(in srgb, currentColor 17%, transparent) !important;
             }
 
             &:hover:active
@@ -31,9 +31,9 @@
             clip-path: shape(
                 nonzero from 0px 0px,
                 hline by 16px,
-                vline by 16px,
+                vline by 8px,
+                arc by -8px 8px of 8px ccw,
                 hline by -8px,
-                arc by -8px -8px of 8px ccw, /* 0px small rotate 0deg */
                 close
             );
 
@@ -42,9 +42,9 @@
                 clip-path: shape(
                     nonzero from 0px 0px,
                     hline by 16px,
-                    vline by 8px,
-                    arc by -8px 8px of 8px ccw, /* 0px small rotate 0deg */
+                    vline by 16px,
                     hline by -8px,
+                    arc by -8px -8px of 8px ccw,
                     close
                 );
             }
@@ -69,7 +69,7 @@
 
             &:hover
             {
-                --mask-overlay-background: linear-gradient(to bottom, rgba(0,0,0,0.15), rgba(0,0,0,0.15));
+                --mask-overlay-background: linear-gradient(to bottom, rgba(0,0,0,0.17), rgba(0,0,0,0.17));
             }
 
             &:hover:active
@@ -96,7 +96,7 @@
         &:where([busy], [image], [sharing], [pictureinpicture]) .tab-icon-overlay
         {
             top: 8px !important;
-            inset-inline-end: 8px !important;
+            inset-inline-end: -8px !important;
         }
 
         &:where([soundplaying], [muted], [activemedia-blocked])
@@ -106,9 +106,9 @@
                 clip-path: shape(
                     nonzero from 0px 0px,
                     hline by 16px,
-                    vline by 16px,
+                    vline by 8px,
+                    arc by -8px 8px of 8px ccw,
                     hline by -8px,
-                    arc by -8px -8px of 8px ccw, /* 0px small rotate 0deg */
                     close
                 );
 
@@ -117,9 +117,9 @@
                     clip-path: shape(
                         nonzero from 0px 0px,
                         hline by 16px,
-                        vline by 8px,
-                        arc by -8px 8px of 8px ccw, /* 0px small rotate 0deg */
+                        vline by 16px,
                         hline by -8px,
+                        arc by -8px -8px of 8px ccw,
                         close
                     );
                 }
@@ -141,7 +141,7 @@
 
         .tab-icon-stack > *
         {
-            margin-inline-end: 6px !important;
+            margin-inline-end: 8px !important;
         }
 
         .tab-audio-button
@@ -161,9 +161,9 @@
                 clip-path: shape(
                     nonzero from 0px 0px,
                     hline by 16px,
-                    vline by 16px,
+                    vline by 8px,
+                    arc by -8px 8px of 8px ccw,
                     hline by -8px,
-                    arc by -8px -8px of 8px ccw, /* 0px small rotate 0deg */
                     close
                 );
             }
