@@ -7,10 +7,10 @@
 [Download Firefox](https://www.mozilla.org/en-US/firefox/all/#product-desktop-release) / [Download WaveFox](https://github.com/QNetITQ/WaveFox/releases) / [WaveFox Nightly](https://github.com/QNetITQ/WaveFox/tree/WaveFox-Nightly)
 
 <details>
-  <summary>WaveFox v1.9.150+</summary>
+  <summary>WaveFox v1.9.151</summary>
 
 - ##### Minimum Requirements
-  - Firefox 150+
+  - Firefox 151
   - Windows / MacOS / Linux
 
 - Download the `chrome` folder and put it in your user profile folder
@@ -26,13 +26,13 @@ This setting makes tabs one with the browser toolbar. Depends on the corner roun
   - `WaveFox.HorizontalTabs.AttachedTabs.Shape` > 1 or 2 or 3 or 4
     - `WaveFox.HorizontalTabs.AttachedTabs.Shape.Mode` > 1 or 2
 
-### Windows 10 Transparency (Horizontal and Vertical tabs)
+### Windows 10 Transparency
 Install [DWMBlurGlass](https://github.com/Maplespe/DWMBlurGlass). Configure to your liking and activate the keys below. Works only with the system theme.
 ![изображение](https://github.com/user-attachments/assets/632c972f-b48a-4ca6-8c69-28859e34485b)
 
 - `WaveFox.Windows10.Transparency.Enabled` and `browser.tabs.inTitlebar > 1`
 
-### Linux Transparency (Horizontal and Vertical tabs)
+### Linux Transparency
 Requires Linux with transparency support. Works only with the system theme.
 
 ![Снимок5](https://github.com/QNetITQ/WaveFox/assets/85301851/3b4dcfc8-217d-48a1-aba7-1621f9375f67)
@@ -40,11 +40,11 @@ Requires Linux with transparency support. Works only with the system theme.
 - `WaveFox.Linux.Transparency.Enabled` and `browser.tabs.inTitlebar > 1`
   - `WaveFox.Linux.Transparency.TextColor.White.Enabled`
 
-### Toolbar Roundings (Horizontal and Vertical tabs)
+### Toolbar Roundings
 Ability to control the rounding of browser bar elements.
 <img width="1778" height="120" alt="изображение" src="https://github.com/user-attachments/assets/ec10f079-fabc-4bdf-bfa5-ccd3125d5792" />
 
-- `WaveFox.Toolbar.Roundings` > 1 or 2
+- `WaveFox.Toolbar.Roundings` > 1 or 2 or 3 or 4 or 5
 
 ### Tab Bar Shadows
 Works only with System / Light / Dark theme and attached tabs.
@@ -103,7 +103,7 @@ The keys below are relevant only for the second option.
 
 - `WaveFox.HorizontalTabs.FloatingWebPage`
 
-### Toolbar Autohide (Vertical tabs)
+### Toolbar Autohide
 <img width="1727" height="918" alt="изображение" src="https://github.com/user-attachments/assets/bf786951-7633-4429-ada2-1639d2210263" />
 
 - `WaveFox.VerticalTabs.Toolbar.Autohide.Enabled`
