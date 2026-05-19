@@ -27,36 +27,10 @@
                 --drag-space: 8px;
             }
         }
-
-        #TabsToolbar :where(.tabbrowser-tab, .toolbarbutton-1, separator, #personal-bookmarks, #search-container, .tab-group-label-container, tab-split-view-wrapper, .tab-group-overflow-count-container)
+        
+        #TabsToolbar > *:not(.titlebar-buttonbox-container)
         {
-            margin-top: var(--drag-space, 0px) !important;
-        }
-
-        #TabsToolbar tab-split-view-wrapper
-        {
-            align-self: end !important;
-
-            .tabbrowser-tab
-            {
-                margin-top: 0px !important;
-            }
-        }
-
-        /* ---------- Shadow DOM ---------- */
-
-        #pinned-tabs-container,
-        #tabbrowser-arrowscrollbox
-        {
-            --drag-space-only-tabs: var(--drag-space, 0px) !important;
-        }
-
-        #scrollbutton-up,
-        #scrollbutton-down,
-        spacer[part="overflow-start-indicator"],
-        spacer[part="overflow-end-indicator"]
-        {
-            margin-top: var(--drag-space-only-tabs, revert) !important;
+            margin-top: var(--drag-space) !important;
         }
     }
 }
