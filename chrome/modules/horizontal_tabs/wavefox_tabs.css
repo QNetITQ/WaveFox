@@ -234,6 +234,7 @@ tab-split-view-wrapper
     {
         .tabbrowser-tab
         {
+            --tab-loading-fill: var(--color-accent-attention) !important;
             --tab-border-radius: clamp(0px, var(--toolbarbutton-border-radius), calc(var(--tab-min-height) / 2)) !important;
             overflow-clip-margin: var(--tab-first-last-inline-margin) !important;
             padding-inline: 0px !important;
@@ -245,6 +246,7 @@ tab-split-view-wrapper
                 .tab-background
                 {
                     background-color: var(--toolbar-bgcolor) !important;
+                    box-shadow: inset 0px 2px 0px var(--tab-loading-fill) !important;
                 }
 
                 .tab-content
