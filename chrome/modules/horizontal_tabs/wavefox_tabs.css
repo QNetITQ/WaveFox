@@ -192,7 +192,7 @@ tab-split-view-wrapper
 {
     :root
     {
-        --tab-first-last-inline-margin: var(--tab-border-radius);
+        --tab-first-last-inline-margin: clamp(0px, var(--tab-border-radius), 12px) !important;
         --tabstrip-min-height: auto !important;
     }
 
@@ -234,8 +234,8 @@ tab-split-view-wrapper
     {
         .tabbrowser-tab
         {
-            --tab-loading-fill: var(--color-accent-attention) !important;
-            --tab-border-radius: clamp(0px, var(--toolbarbutton-border-radius), calc(var(--tab-min-height) / 2)) !important;
+            --tab-border-radius: var(--tab-first-last-inline-margin) !important;
+            --tab-loading-fill: var(--color-accent-primary) !important;
             overflow-clip-margin: var(--tab-first-last-inline-margin) !important;
             padding-inline: 0px !important;
 
@@ -370,36 +370,36 @@ tab-split-view-wrapper
                 }
             }
         }
-    }
 
-    /* Tab Scroll Animation */
-
-    #tabbrowser-tabs:not([movingtab])
-    {
-        #pinned-tabs-container[overflowing],
-        #tabbrowser-arrowscrollbox[overflowing]
+        /* Tab Scroll Animation */
+    
+        #tabbrowser-tabs:not([movingtab])
         {
-            .tabbrowser-tab
+            #pinned-tabs-container[overflowing],
+            #tabbrowser-arrowscrollbox[overflowing]
             {
-                pointer-events: none !important;
-                box-sizing: content-box !important;
-                padding-inline: var(--tab-first-last-inline-margin) !important;
-                margin-inline: calc(-1 * var(--tab-first-last-inline-margin)) !important;
-                overflow-clip-margin: 0px !important;
-                
-                &:nth-child(1 of .tabbrowser-tab:not([hidden]))
+                .tabbrowser-tab
                 {
-                    margin-inline-start: 0px !important;
-                }
-
-                &:nth-last-child(1 of .tabbrowser-tab:not([hidden]))
-                {
-                    margin-inline-end: 0px !important;
-                }
-                
-                .tab-stack
-                {
-                    pointer-events: auto !important;
+                    pointer-events: none !important;
+                    box-sizing: content-box !important;
+                    padding-inline: var(--tab-first-last-inline-margin) !important;
+                    margin-inline: calc(-1 * var(--tab-first-last-inline-margin)) !important;
+                    overflow-clip-margin: 0px !important;
+                    
+                    &:nth-child(1 of .tabbrowser-tab:not([hidden]))
+                    {
+                        margin-inline-start: 0px !important;
+                    }
+    
+                    &:nth-last-child(1 of .tabbrowser-tab:not([hidden]))
+                    {
+                        margin-inline-end: 0px !important;
+                    }
+                    
+                    .tab-stack
+                    {
+                        pointer-events: auto !important;
+                    }
                 }
             }
         }
