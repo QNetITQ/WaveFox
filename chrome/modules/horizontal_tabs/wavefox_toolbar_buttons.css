@@ -1,10 +1,8 @@
 /* ---------------------------------------- Firefox View ---------------------------------------- */
 
-:where(toolbarbutton, toolbarpaletteitem) + #tabbrowser-tabs
+#tabbrowser-tabs::before
 {
-    border-inline-start: none !important;
-    padding-inline-start: var(--tab-overflow-pinned-tabs-width) !important;
-    margin-inline-start: 0px !important;
+    display: none !important;
 }
 
 #TabsToolbar #firefox-view-button[open] > .toolbarbutton-icon
@@ -79,10 +77,4 @@
 #TabsToolbar-customization-target > toolbarpaletteitem:last-child > :is(toolbarbutton, toolbaritem)
 {
     margin-inline-end: calc(var(--toolbar-start-end-padding) - var(--toolbarbutton-outer-padding)) !important;
-}
-
-.tabbrowser-tab:not([hidden]) + #tabbrowser-arrowscrollbox-periphery > #tabs-newtab-button,
-.tabbrowser-tab:not([hidden]) + .tabbrowser-tab[hidden] + #tabbrowser-arrowscrollbox-periphery > #tabs-newtab-button
-{
-    margin-inline-start: calc(-1 * var(--tab-first-last-inline-margin, 0px) / 2) !important;
 }

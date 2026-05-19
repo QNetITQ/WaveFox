@@ -1,4 +1,4 @@
-@media -moz-pref("WaveFox.WebPage.Floating.Enabled")
+@media -moz-pref("WaveFox.HorizontalTabs.FloatingWebPage")
 {
     :root:not([inDOMFullscreen])
     {
@@ -8,7 +8,6 @@
         {
             --sidebar-background-color: var(--toolbar-bgcolor) !important;
             --sidebar-text-color: var(--toolbar-color) !important;
-            --content-area-shadow: 0px 0px 1px light-dark(rgba(0,0,0,0.125), rgba(0,0,0,0.5)), 0px 2px 6px light-dark(rgba(0,0,0,0.125), rgba(0,0,0,0.5)) !important;
         }
         
         #navigator-toolbox
@@ -27,8 +26,6 @@
                     background-color: var(--sidebar-background-color) !important;
                     color: var(--sidebar-text-color) !important;
                     border-radius: var(--border-radius-medium) !important;
-                    outline: none !important;
-                    box-shadow: var(--content-area-shadow) !important;
                     margin-top: 0px !important;
                     margin-inline: 0px !important;
                     margin-bottom: 6px !important;
@@ -83,8 +80,6 @@
                     margin-top: 0px !important;
                     margin-inline: 0px !important;
                     margin-bottom: 6px !important;
-                    outline: none !important;
-                    box-shadow: var(--content-area-shadow) !important;
                     
                     :root[sizemode="fullscreen"] &
                     {

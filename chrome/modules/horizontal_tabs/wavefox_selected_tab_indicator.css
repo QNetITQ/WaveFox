@@ -1,7 +1,0 @@
-@media -moz-pref("WaveFox.Tabs.SelectedTabIndicator.Enabled")
-{
-    .tabbrowser-tab[visuallyselected] .tab-loading-burst
-    {
-        box-shadow: inset 0px 2px 0px var(--tab-loading-fill) !important;
-    }
-}

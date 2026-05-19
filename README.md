@@ -9,10 +9,10 @@
 [Download Firefox](https://www.mozilla.org/en-US/firefox/all/#product-desktop-release) / [Download WaveFox](https://github.com/QNetITQ/WaveFox/releases) / [WaveFox Nightly](https://github.com/QNetITQ/WaveFox/tree/WaveFox-Nightly)
 
 <details>
-  <summary>WaveFox v1.9.150</summary>
+  <summary>WaveFox v1.9.151</summary>
 
 - ##### Minimum Requirements
-  - Firefox 150
+  - Firefox 151
   - Windows / MacOS / Linux
 
 - Download the `chrome` folder and put it in your user profile folder
@@ -21,54 +21,20 @@
 ## Optional
 
 ### Tab Shapes
+This setting makes tabs one with the browser toolbar. Depends on the corner rounding settings or custom tab shapes.
+<img width="1794" height="103" alt="изображение" src="https://github.com/user-attachments/assets/665f7f02-4869-46ab-bb65-6ffe83ca36c2" />
 
-##### Shape 5
-![изображение](https://github.com/user-attachments/assets/cd6fb4a9-8cc7-4fd1-9f26-9acef5a4a121)
+- `WaveFox.HorizontalTabs.AttachedTabs` > true
+  - `WaveFox.HorizontalTabs.AttachedTabs.Shape` > 1 or 2 or 3 or 4
+    - `WaveFox.HorizontalTabs.AttachedTabs.Shape.Mode` > 1 or 2
 
-- `WaveFox.Tabs.Shape` > 5
-  
-##### Shape 6
-![изображение](https://github.com/user-attachments/assets/21c6644f-f579-419d-92b8-cb614a726742)
-
-- `WaveFox.Tabs.Shape` > 6
-  
-##### Shape 7
-![изображение](https://github.com/user-attachments/assets/b648e7c3-2dc4-478d-9ee0-8ac9b727c37d)
-
-- `WaveFox.Tabs.Shape` > 7
-  
-##### Shape 8
-![изображение](https://github.com/user-attachments/assets/8cce9ecd-2005-4aba-9c66-6e49f2ccb76a)
-
-- `WaveFox.Tabs.Shape` > 8
-  
-##### Shape 9
-![изображение](https://github.com/user-attachments/assets/d720364a-88f3-4fe6-a61f-0747f93e5f20)
-
-- `WaveFox.Tabs.Shape` > 9
-  
-##### Shape 10
-![изображение](https://github.com/user-attachments/assets/88d1d2de-2d0c-4837-b15f-a10694e5093a)
-
-- `WaveFox.Tabs.Shape` > 10
-  
-##### Shape 11
-![изображение](https://github.com/user-attachments/assets/084a7915-12d9-44da-a3d1-a0b17267d356)
-
-- `WaveFox.Tabs.Shape` > 11
-  
-##### Shape 12
-![изображение](https://github.com/user-attachments/assets/2d38da42-f304-468c-bb52-1190d936bc19)
-
-- `WaveFox.Tabs.Shape` > 12
-
-### Windows 10 Transparency (Horizontal and Vertical tabs)
+### Windows 10 Transparency
 Install [DWMBlurGlass](https://github.com/Maplespe/DWMBlurGlass). Configure to your liking and activate the keys below. Works only with the system theme.
 ![изображение](https://github.com/user-attachments/assets/632c972f-b48a-4ca6-8c69-28859e34485b)
 
 - `WaveFox.Windows10.Transparency.Enabled` and `browser.tabs.inTitlebar > 1`
 
-### Linux Transparency (Horizontal and Vertical tabs)
+### Linux Transparency
 Requires Linux with transparency support. Works only with the system theme.
 
 ![Снимок5](https://github.com/QNetITQ/WaveFox/assets/85301851/3b4dcfc8-217d-48a1-aba7-1621f9375f67)
@@ -76,37 +42,23 @@ Requires Linux with transparency support. Works only with the system theme.
 - `WaveFox.Linux.Transparency.Enabled` and `browser.tabs.inTitlebar > 1`
   - `WaveFox.Linux.Transparency.TextColor.White.Enabled`
 
-### Toolbar Transparency
-Works only with the system theme.
-![изображение](https://user-images.githubusercontent.com/85301851/165526704-4f7486c4-f330-4c86-a25d-6ed8ab2affe4.png)
-
-- `WaveFox.Toolbar.Transparency` > 1 or 2 or 3 or 4 and `browser.tabs.inTitlebar > 1`
-
-### Toolbar Roundings (Horizontal and Vertical tabs)
+### Toolbar Roundings
 Ability to control the rounding of browser bar elements.
 <img width="1778" height="120" alt="изображение" src="https://github.com/user-attachments/assets/ec10f079-fabc-4bdf-bfa5-ccd3125d5792" />
 
-- `WaveFox.Toolbar.Roundings` > 1 or 2
+- `WaveFox.Toolbar.Roundings` > 1 or 2 or 3 or 4 or 5
 
 ### Tab Bar Shadows
 Works only with System / Light / Dark theme.
 ![изображение](https://user-images.githubusercontent.com/85301851/152011749-4d5619b3-0fd8-40f9-a3dc-96be31839971.png)
 
-##### Shadows (Light Theme)
-- `WaveFox.LightTheme.Tabs.Shadows` > 1 or 2 or 3 or 4
-
-##### Shadows (Dark Theme)
-- `WaveFox.DarkTheme.Tabs.Shadows` > 1 or 2 or 3 or 4
+##### Shadows
+- `WaveFox.HorizontalTabs.AttachedTabs.Shadows.Mode` > 1 or 2 (2 - unavailable)
 
 ### Tab Separators
 ![изображение](https://user-images.githubusercontent.com/85301851/152351312-f6ad4578-e7d5-40b7-8b2d-49388a750f54.png)
 
-- `WaveFox.Tabs.Separators` > 1 or 2 or 3 or 4
-
-### Background For Inactive Tabs
-![изображение](https://github.com/user-attachments/assets/56fc829a-3cb6-4009-a58c-485fc84f65e9)
-
-- `WaveFox.Tabs.Background.Inactive.Enabled`
+- `WaveFox.HorizontalTabs.Tabs.Separators` > 1 or 2
 
 ### Icons (firefox-csshacks / Lepton) / (Horizontal and Vertical tabs)
 This is third-party code. I will update this code according to the original source.
@@ -133,46 +85,27 @@ The keys below are relevant only for the second option.
 ### Drag Space
 ![изображение](https://user-images.githubusercontent.com/85301851/152680229-43547df0-1d2c-4384-b024-950e7aa56ca6.png)
 
-- `WaveFox.DragSpace.Tabs` > 1 or 2 or 3
-- `WaveFox.DragSpace.TabBarLeftSide.Disabled`
-- `WaveFox.DragSpace.TabBarRightSide.Disabled`
+- `WaveFox.HorizontalTabs.AttachedTabs.DragSpace` > 1 or 2 or 3
 
-### Selected Tab Indicator
-![изображение](https://github.com/user-attachments/assets/e6d221d2-38b0-4890-9bbc-d5abc9b027c0)
-
-- `WaveFox.Tabs.SelectedTabIndicator.Enabled`
-
-### Tabs Below URL (Floating Tabs Only)
+### Tabs Below URL
 ![Снимок](https://github.com/QNetITQ/WaveFox/assets/85301851/514cf30d-a417-48cb-bfd1-0e77c9df1bf4)
 
-- `WaveFox.TabsBelowURL.Enabled` and `browser.tabs.inTitlebar > 0`
+- `WaveFox.HorizontalTabs.FloatingTabs.TabsBelowURL`
 
-### One Line (Floating Tabs Only)
+### One Line
 ![Снимок](https://github.com/QNetITQ/WaveFox/assets/85301851/05bba314-643d-46f3-a09c-b3ac31f9761d)
 
-- `WaveFox.OneLine` > 1 or 2
+- `WaveFox.HorizontalTabs.FloatingTabs.OneLine`
 
-### Floating Web Page (Horizontal tabs)
+### Floating Web Page
 ![изображение](https://github.com/user-attachments/assets/26a19f9a-642b-4a10-a4f9-80d87cc42bdc)
 
-- `WaveFox.WebPage.Floating.Enabled`
+- `WaveFox.HorizontalTabs.FloatingWebPage`
 
-### Transparent Web Page (Experimentally) (Horizontal and Vertical tabs)
-Works only with system theme. Requires transparency support from the operating system. The quality of this option depends heavily on the specific website.
-![изображение](https://github.com/user-attachments/assets/99afc380-027a-46b3-b0d6-5cdf3c55a33e)
-
-- `WaveFox.WebPage.Transparency` > 1 or 2 and `browser.tabs.allow_transparent_browser` (1 - New tab page only / 2 - All browser windows and all websites)
-  - `WaveFox.WebPage.Background.Saturation` > 1 or 2 or 3
-
-### Toolbar Autohide (Vertical tabs)
+### Toolbar Autohide
 <img width="1727" height="918" alt="изображение" src="https://github.com/user-attachments/assets/bf786951-7633-4429-ada2-1639d2210263" />
 
 - `WaveFox.VerticalTabs.Toolbar.Autohide.Enabled`
-
-### Experimental
-
-Disables the ability to pin tabs by dragging. Some users find this feature annoying.
-- `WaveFox.Experimental.Tabs.Pin_By_Dragging.Disabled`
 
 </details>
 
