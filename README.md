@@ -47,14 +47,11 @@ Ability to control the rounding of browser bar elements.
 - `WaveFox.Toolbar.Roundings` > 1 or 2 or 3 or 4 or 5
 
 ### Tab Bar Shadows
-Works only with System / Light / Dark theme and attached tabs.
+Works only with System / Light / Dark theme.
 ![изображение](https://user-images.githubusercontent.com/85301851/152011749-4d5619b3-0fd8-40f9-a3dc-96be31839971.png)
 
-##### Shadows (Light Theme)
-- `WaveFox.HorizontalTabs.AttachedTabs.LightTheme.Shadows` > 1 or 2 or 3 or 4
-
-##### Shadows (Dark Theme)
-- `WaveFox.HorizontalTabs.AttachedTabs.DarkTheme.Shadows` > 1 or 2 or 3 or 4
+##### Shadows
+- `WaveFox.HorizontalTabs.AttachedTabs.Shadows.Mode` > 1 or 2 (2 - unavailable)
 
 ### Tab Separators
 ![изображение](https://user-images.githubusercontent.com/85301851/152351312-f6ad4578-e7d5-40b7-8b2d-49388a750f54.png)
