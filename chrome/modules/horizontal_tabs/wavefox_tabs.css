@@ -165,9 +165,21 @@ tab-split-view-wrapper
             
             .tab-group-line
             {
-                inset-block: auto calc(-1 * (var(--tab-block-margin) + var(--split-view-padding-block))) !important;
+                display: none !important;
             }
         }
+    }
+
+    #tabbrowser-tabs[movingtab]:not([movingtab-group],[movingtab-ungroup]) &
+    {
+        background-color: light-dark(var(--dragover-tab-group-color), var(--dragover-tab-group-color-invert)) !important;
+        color: white !important;
+    }
+    
+    tab-group > &:not([dragtarget])
+    {
+        background-color: var(--tab-group-line-color) !important;
+        color: white !important;
     }
 }
 
