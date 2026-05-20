@@ -31,6 +31,8 @@
 
 .tabbrowser-tab
 {
+    --tab-loading-fill: var(--color-accent-primary) !important;
+
     &:not([visuallyselected])
     {
         &:hover
@@ -230,12 +232,11 @@ tab-split-view-wrapper
 
     /* Pinned Container / Regular Container */
     
-    @scope (#pinned-tabs-container, #tabbrowser-arrowscrollbox) to (tab-group, tab-split-view-wrapper)
+    @scope (:root) to (tab-group, tab-split-view-wrapper)
     {
         .tabbrowser-tab
         {
             --tab-border-radius: var(--tab-first-last-inline-margin) !important;
-            --tab-loading-fill: var(--color-accent-primary) !important;
             overflow-clip-margin: var(--tab-first-last-inline-margin) !important;
             padding-inline: 0px !important;
 
