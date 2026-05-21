@@ -27,6 +27,13 @@
     }
 }
 
+/* Nav Bar */
+
+#nav-bar
+{
+    border: none !important;
+}
+
 /* Tabs */
 
 .tabbrowser-tab
@@ -208,13 +215,6 @@ tab-split-view-wrapper
     {
         --tab-first-last-inline-margin: clamp(0px, var(--tab-border-radius), 12px) !important;
         --tabstrip-min-height: auto !important;
-    }
-
-    /* Nav Bar */
-
-    #nav-bar
-    {
-        border: none !important;
     }
     
     /* Tab Bar */
