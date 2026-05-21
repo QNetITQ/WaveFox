@@ -38,7 +38,7 @@
 
 .tabbrowser-tab
 {
-    --tab-loading-fill: var(--color-accent-primary) !important;
+    --tab-loading-fill: var(--focus-outline-color) !important;
 
     &:not([visuallyselected])
     {
@@ -258,13 +258,13 @@ tab-split-view-wrapper
 
                 .tab-background
                 {
-                    background-color: var(--toolbar-bgcolor) !important;
+                    background-color: var(--toolbar-background-color) !important;
                     box-shadow: inset 0px 2px 0px var(--tab-loading-fill) !important;
                 }
 
                 .tab-content
                 {
-                    color: var(--toolbar-color) !important;
+                    color: var(--toolbar-text-color) !important;
                 }
             }
 
