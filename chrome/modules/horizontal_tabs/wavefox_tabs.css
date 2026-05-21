@@ -39,7 +39,7 @@
         {
             .tab-background
             {
-                background-color: var(--toolbarbutton-hover-background) !important;
+                background-color: var(--toolbarbutton-background-color-hover) !important;
             }
         }
         
@@ -47,7 +47,7 @@
         {
             .tab-background
             {
-                background-color: var(--toolbarbutton-active-background) !important;
+                background-color: var(--toolbarbutton-background-color-active) !important;
                 outline: none !important;
                 box-shadow: none !important;
             }
