@@ -152,7 +152,7 @@
 
 tab-split-view-wrapper
 {
-    background-color: var(--toolbarbutton-hover-background) !important;
+    background-color: var(--toolbarbutton-background-color-hover) !important;
 
     .tabbrowser-tab
     {
