@@ -2,39 +2,45 @@
 {
     @media not -moz-pref("WaveFox.HorizontalTabs.AttachedTabs")
     {
+        @media (-moz-platform: windows) or (-moz-platform: linux)
+        {
+            #navigator-toolbox
+            {
+                grid-template-columns: minmax(auto, 0%) auto !important;
+
+                #TabsToolbar
+                {
+                    grid-area: 2 / 2 / auto / auto !important;
+                }
+
+                #nav-bar
+                {
+                    grid-area: 2 / 1 / auto / auto !important;
+                }
+            }
+        }
+        
+        @media (-moz-platform: macos)
+        {
+            #navigator-toolbox
+            {
+                grid-template-columns: auto minmax(auto, 0%) !important;
+
+                #TabsToolbar
+                {
+                    grid-area: 2 / 1 / auto / auto !important;
+                }
+
+                #nav-bar
+                {
+                    grid-area: 2 / 2 / auto / auto !important;
+                }
+            }
+        }
+
         #navigator-toolbox
         {
             display: grid !important;
-        }
-
-        #navigator-toolbox:has(~ #browser > #sidebar-main:not([sidebar-positionend]))
-        {
-            grid-template-columns: minmax(auto, 0%) auto !important;
-
-            #TabsToolbar
-            {
-                grid-area: 2 / 2 / auto / auto !important;
-            }
-
-            #nav-bar
-            {
-                grid-area: 2 / 1 / auto / auto !important;
-            }
-        }
-
-        #navigator-toolbox:has(~ #browser > #sidebar-main[sidebar-positionend])
-        {
-            grid-template-columns: auto minmax(auto, 0%) !important;
-
-            #TabsToolbar
-            {
-                grid-area: 2 / 1 / auto / auto !important;
-            }
-
-            #nav-bar
-            {
-                grid-area: 2 / 2 / auto / auto !important;
-            }
         }
 
         /* Nav Bar */
@@ -42,7 +48,6 @@
         #nav-bar
         {
             width: fit-content !important;
-            border: none !important;
         }
 
         /* Bookmarks Bar / Notifications */
