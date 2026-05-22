@@ -38,32 +38,11 @@
 
 .tabbrowser-tab
 {
-    --tab-loading-fill: var(--focus-outline-color) !important;
-
-    &:not([visuallyselected])
+    --tab-loading-fill: currentColor !important;
+    
+    &:is([visuallyselected], [multiselected])
     {
-        &:hover
-        {
-            .tab-background
-            {
-                background-color: var(--toolbarbutton-background-color-hover) !important;
-            }
-        }
-        
-        &[multiselected]
-        {
-            .tab-background
-            {
-                background-color: var(--toolbarbutton-background-color-active) !important;
-                outline: none !important;
-                box-shadow: none !important;
-            }
-            
-            .tab-content
-            {
-                color: inherit !important;
-            }
-        }
+        --tab-loading-fill: var(--focus-outline-color) !important;
     }
 
     &[pinned] .tab-content
@@ -119,47 +98,13 @@
             display: none !important;
         }
     }
-
-    .tabbrowser-tab
-    {
-        color: white !important;
-
-        &:not([visuallyselected])
-        {
-            .tab-background
-            {
-                background-color: var(--tab-group-line-color) !important;
-                
-                .tab-group-line
-                {
-                    display: none !important;
-                }
-            }
-
-            &:hover
-            {
-                .tab-background
-                {
-                    background-color: color-mix(in srgb, currentColor 17%, var(--tab-group-line-color) 100%) !important;
-                }
-            }
-
-            &[multiselected]
-            {
-                .tab-background
-                {
-                    background-color: color-mix(in srgb, currentColor 30%, var(--tab-group-line-color) 100%) !important;
-                }
-            }
-        }
-    }
 }
 
 /* Split View */
 
 tab-split-view-wrapper
 {
-    background-color: var(--toolbarbutton-background-color-hover) !important;
+    background-color: var(--tab-background-color-hover) !important;
 
     .tabbrowser-tab
     {
@@ -172,21 +117,9 @@ tab-split-view-wrapper
             
             .tab-group-line
             {
-                display: none !important;
+                inset-block: auto calc(-1 * (var(--tab-block-margin) + var(--split-view-padding-block))) !important;
             }
         }
-    }
-
-    #tabbrowser-tabs[movingtab]:not([movingtab-group],[movingtab-ungroup]) &
-    {
-        background-color: light-dark(var(--dragover-tab-group-color), var(--dragover-tab-group-color-invert)) !important;
-        color: white !important;
-    }
-    
-    tab-group > &:not([dragtarget])
-    {
-        background-color: var(--tab-group-line-color) !important;
-        color: white !important;
     }
 }
 
@@ -275,6 +208,11 @@ tab-split-view-wrapper
                 &[multiselected]
                 {
                     z-index: 1 !important;
+                    
+                    .tab-background
+                    {
+                        box-shadow: inset 0px 1px 0px var(--tab-loading-fill) !important;
+                    }
                 }
             }
 
