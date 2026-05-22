@@ -74,7 +74,7 @@
                     z-index: 2;
                 }
 
-                .tabbrowser-tab[visuallyselected]
+                .tabbrowser-tab:is([visuallyselected], [multiselected])
                 {
                     filter: var(--wavefox-selected-tab-filter) !important;
                 }
