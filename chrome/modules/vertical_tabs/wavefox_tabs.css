@@ -26,15 +26,8 @@
         --tab-min-height: 40px !important;
     }
 
-    --tab-pinned-expanded-background-width: var(--tab-min-height) !important;
     --tab-height-with-margin-padding: calc(var(--tab-min-height) + (2 * var(--tab-block-margin))) !important;
     --tab-icon-end-margin: 8px !important;
-
-    #tabbrowser-tabs
-    {
-        padding-block: calc(var(--space-medium) - var(--tab-block-margin)) !important;
-        --tab-icon-end-margin: 8px !important;
-    }
 }
 
 .tabbrowser-tab
@@ -65,7 +58,6 @@
             height: 16px !important;
             padding: 2px !important;
             margin: 0px !important;
-            border-radius: 50px !important;
             top: -2px !important;
             inset-inline-start: calc(var(--tab-inner-inline-margin) - 2px) !important;
         }
@@ -74,7 +66,7 @@
 
 tab-split-view-wrapper
 {
-    background-color: var(--tab-hover-background-color) !important;
+    background-color: var(--tab-background-color-hover) !important;
     margin-block: 0px !important;
     padding-block: 0px !important;
     
@@ -91,7 +83,7 @@ tab-split-view-wrapper
         {
             .tab-background:not([selected], [multiselected])
             {
-                background-color: var(--tab-hover-background-color) !important;
+                background-color: var(--tab-background-color-hover) !important;
             }
         }
     
