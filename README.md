@@ -99,6 +99,7 @@ The keys below are relevant only for the second option.
 ![изображение](https://github.com/user-attachments/assets/26a19f9a-642b-4a10-a4f9-80d87cc42bdc)
 
 - `WaveFox.HorizontalTabs.FloatingWebPage`
+- `WaveFox.VerticalTabs.FloatingWebPage`
 
 ### Toolbar Autohide
 <img width="1727" height="918" alt="изображение" src="https://github.com/user-attachments/assets/bf786951-7633-4429-ada2-1639d2210263" />
