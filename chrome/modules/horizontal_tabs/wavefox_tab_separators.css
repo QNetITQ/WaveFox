@@ -85,7 +85,7 @@
                     margin-inline-start: 8px !important;
                 }
                 
-                #pinned-tabs-container:not([overflowing]) > .tabbrowser-tab:last-child
+                :is(#pinned-tabs-container, #tabbrowser-arrowscrollbox):not([overflowing]) > .tabbrowser-tab:nth-last-child(1 of .tabbrowser-tab:not([hidden]))
                 {
                     margin-inline-end: 8px !important;
                 }
