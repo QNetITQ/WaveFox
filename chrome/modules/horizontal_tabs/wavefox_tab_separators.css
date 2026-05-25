@@ -78,20 +78,14 @@
 
             @media not -moz-pref("WaveFox.HorizontalTabs.AttachedTabs")
             {
-                .tabbrowser-tab:nth-child(1 of .tabbrowser-tab:not([hidden])) > .tab-stack
+                :is(#pinned-tabs-container, #tabbrowser-arrowscrollbox):not([overflowing]) > .tabbrowser-tab:nth-child(1 of .tabbrowser-tab:not([hidden]))
                 {
-                    &::before
-                    {
-                        opacity: 0;
-                    }
+                    margin-inline-start: 8px !important;
                 }
                 
-                .tabbrowser-tab:nth-last-child(1 of .tabbrowser-tab:not([hidden])) > .tab-stack
+                #pinned-tabs-container:not([overflowing]) > .tabbrowser-tab:last-child
                 {
-                    &::after
-                    {
-                        opacity: 0;
-                    }
+                    margin-inline-end: 8px !important;
                 }
             }
         }
