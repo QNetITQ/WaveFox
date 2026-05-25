@@ -7,8 +7,7 @@
         {
             .tabbrowser-tab:not([hidden])
             {
-                & + .tabbrowser-tab:not([hidden]) > .tab-stack,
-                & + .tabbrowser-tab[hidden] + .tabbrowser-tab:not([hidden]) > .tab-stack
+                & > .tab-stack
                 {
                     &::before
                     {
@@ -18,20 +17,54 @@
                         width: var(--tab-overflow-clip-margin);
                         height: 50%;
                         top: 25%;
-                        background-color: color-mix(in srgb, currentColor 17%, transparent);
+                        background-color: color-mix(in srgb, currentColor 25%, transparent);
                         pointer-events: none;
-                        inset-inline-end: calc(100% + var(--tab-overflow-clip-margin) / 2);
-                        
+                        inset-inline-start: calc(-1 * var(--tab-overflow-clip-margin) - var(--tab-overflow-clip-margin) / 2);
+
                         @media -moz-pref("WaveFox.HorizontalTabs.AttachedTabs")
                         {
-                            inset-inline-end: calc(100% - var(--tab-overflow-clip-margin) / 2);
+                            inset-inline-start: calc(-1 * var(--tab-overflow-clip-margin) / 2);
                         }
                     }
                 }
                 
-                #tabbrowser-tabs:not([movingtab]) &:is([selected], :hover, [multiselected], [dragover-groupTarget])
+                &:nth-last-child(1 of .tabbrowser-tab:not([hidden])),
+                &:has(+ :is(tab-group, tab-split-view-wrapper)),
+                &:has(+ .tabbrowser-tab[hidden] + :is(tab-group, tab-split-view-wrapper))
                 {
-                    & > .tab-stack,
+                    > .tab-stack
+                    {
+                        &::after
+                        {
+                            content: "";
+                            display: block;
+                            position: absolute;
+                            width: var(--tab-overflow-clip-margin);
+                            height: 50%;
+                            top: 25%;
+                            background-color: color-mix(in srgb, currentColor 25%, transparent);
+                            pointer-events: none;
+                            inset-inline-end: calc(-1 * var(--tab-overflow-clip-margin) - var(--tab-overflow-clip-margin) / 2);
+
+                            @media -moz-pref("WaveFox.HorizontalTabs.AttachedTabs")
+                            {
+                                inset-inline-end: calc(-1 * var(--tab-overflow-clip-margin) / 2);
+                            }
+                        }
+                    }
+                }
+
+                &:is([selected], :hover, [multiselected], [dragover-groupTarget])
+                {
+                    & > .tab-stack
+                    {
+                        &::before,
+                        &::after
+                        {
+                            opacity: 0;
+                        }
+                    }
+
                     & + .tabbrowser-tab:not([hidden]) > .tab-stack,
                     & + .tabbrowser-tab[hidden] + .tabbrowser-tab:not([hidden]) > .tab-stack
                     {
@@ -41,10 +74,24 @@
                         }
                     }
                 }
-                
-                #tabbrowser-tabs[movingtab] &[selected] > .tab-stack::before
+            }
+
+            @media not -moz-pref("WaveFox.HorizontalTabs.AttachedTabs")
+            {
+                .tabbrowser-tab:nth-child(1 of .tabbrowser-tab:not([hidden])) > .tab-stack
                 {
-                    opacity: 0;
+                    &::before
+                    {
+                        opacity: 0;
+                    }
+                }
+                
+                .tabbrowser-tab:nth-last-child(1 of .tabbrowser-tab:not([hidden])) > .tab-stack
+                {
+                    &::after
+                    {
+                        opacity: 0;
+                    }
                 }
             }
         }
