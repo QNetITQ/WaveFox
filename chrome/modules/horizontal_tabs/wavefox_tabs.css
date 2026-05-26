@@ -141,12 +141,12 @@ tab-split-view-wrapper
 
     :is(#pinned-tabs-container, #tabbrowser-arrowscrollbox):not([overflowing]) > .tabbrowser-tab:nth-child(1 of .tabbrowser-tab:not([hidden]))
     {
-        margin-inline-start: var(--toolbar-padding-inline) !important;
+        margin-inline-start: calc(var(--toolbar-padding-inline) - var(--tab-overflow-clip-margin)) !important;
     }
                 
     :is(#pinned-tabs-container, #tabbrowser-arrowscrollbox):not([overflowing]) > .tabbrowser-tab:nth-last-child(1 of .tabbrowser-tab:not([hidden]))
     {
-        margin-inline-end: var(--toolbar-padding-inline) !important;
+        margin-inline-end: calc(var(--toolbar-padding-inline) - var(--tab-overflow-clip-margin)) !important;
     }
 }
 
