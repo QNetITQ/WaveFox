@@ -195,7 +195,8 @@ tab-split-view-wrapper
             overflow-clip-margin: var(--tab-first-last-inline-margin) !important;
             padding-inline: 0px !important;
 
-            @media -moz-pref("WaveFox.Toolbar.Roundings", 1)
+            @media -moz-pref("WaveFox.Toolbar.Roundings", 1) and /* Square Tabs */
+                   (not -moz-pref("WaveFox.HorizontalTabs.AttachedTabs.Shape"))
             {
                 --tab-first-last-inline-margin: var(--toolbar-padding-inline) !important;
                 --tab-border-radius: 0px !important;
