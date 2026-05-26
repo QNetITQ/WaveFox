@@ -77,19 +77,6 @@
                     }
                 }
             }
-
-            @media not -moz-pref("WaveFox.HorizontalTabs.AttachedTabs")
-            {
-                :is(#pinned-tabs-container, #tabbrowser-arrowscrollbox):not([overflowing]) > .tabbrowser-tab:nth-child(1 of .tabbrowser-tab:not([hidden]))
-                {
-                    margin-inline-start: 8px !important;
-                }
-                
-                :is(#pinned-tabs-container, #tabbrowser-arrowscrollbox):not([overflowing]) > .tabbrowser-tab:nth-last-child(1 of .tabbrowser-tab:not([hidden]))
-                {
-                    margin-inline-end: 8px !important;
-                }
-            }
         }
 
         @media -moz-pref("WaveFox.HorizontalTabs.Tabs.Separators", 2)
