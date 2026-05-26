@@ -89,20 +89,6 @@
                     --wavefox-inner-tabbar-shadow-blur: 4px;
                     --wavefox-inner-tabbar-shadow-spread: -4px;
                 }
-
-                /*
-                @media -moz-pref("WaveFox.HorizontalTabs.AttachedTabs.Shadows.Mode", 2)
-                {
-                    .tabbrowser-tab[visuallyselected]
-                    {
-                        filter: var(--wavefox-selected-tab-filter) drop-shadow(0px 
-                                                                               clamp(0px, calc(var(--tab-border-radius) / 2), 12px) 
-                                                                               clamp(0px, calc(var(--tab-border-radius) / 2), 12px)
-                                                                               rgba(0,0,0,0.5))
-                        !important;
-                    }
-                }
-                */
             }
         }
     }
