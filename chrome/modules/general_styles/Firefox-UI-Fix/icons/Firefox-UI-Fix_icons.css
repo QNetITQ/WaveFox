@@ -890,6 +890,28 @@
     #sidebarMenu-popup > *:is(menuitem)[data-l10n-id="sidebar-menu-close"] {
       --menuitem-image: url("chrome://global/skin/icons/close.svg");
     }
+    /*= sidebar-context-menu =====================================================*/
+    #sidebar-context-menu-manage-extension {
+      --menuitem-image: url("chrome://global/skin/icons/settings.svg");
+    }
+    #sidebar-context-menu-remove-extension {
+      --menuitem-image: url("chrome://global/skin/icons/delete.svg");
+    }
+    #sidebar-context-menu-report-extension {
+      --menuitem-image: url("../icons/send.svg");
+    }
+    #sidebar-context-menu-unpin-extension {
+      --menuitem-image: url("../icons/unpin-tab.svg");
+    }
+    #sidebar-context-menu-hide-sidebar {
+      --menuitem-image: url("../icons/eye-hide.svg");
+    }
+    #sidebar-context-menu-customize-sidebar {
+      --menuitem-image: url("chrome://browser/skin/customize.svg");
+    }
+    #sidebar-context-menu-enable-vertical-tabs {
+      --menuitem-image: url("chrome://browser/skin/sidebar-collapsed.svg");
+    }
     /*= chrome://browser/content/syncedtabs/sidebar.xhtml ========================*/
     .item.client[clientType="phone"] > .item-title-container > .item-icon-container {
       background-image: url("../icons/device-phone.svg") !important;
@@ -952,7 +974,8 @@
         #menu_ToolsPopup,
         #windowPopup,
         #menu_HelpPopup,
-        #usercssloader-menupopup
+        #usercssloader-menupopup,
+        #sidebar-context-menu
       )
       menuitem:not(.menuitem-iconic, .bookmark-item, .in-menulist, [checked="true"]),
     menupopup:is(
@@ -966,7 +989,8 @@
         #menu_ToolsPopup,
         #windowPopup,
         #menu_HelpPopup,
-        #usercssloader-menupopup
+        #usercssloader-menupopup,
+        #sidebar-context-menu
       )
       menu:not(.menu-iconic, .in-menulist, [checked="true"]),
     menupopup:is(#organizeButtonPopup, #maintenanceButtonPopup)
@@ -1040,7 +1064,8 @@
         #menu_ToolsPopup,
         #windowPopup,
         #menu_HelpPopup,
-        #usercssloader-menupopup
+        #usercssloader-menupopup,
+        #sidebar-context-menu
       )
       menuitem:not(.menuitem-iconic, .bookmark-item, .in-menulist, [checked="true"]),
     menupopup:is(
@@ -1054,7 +1079,8 @@
         #menu_ToolsPopup,
         #windowPopup,
         #menu_HelpPopup,
-        #usercssloader-menupopup
+        #usercssloader-menupopup,
+        #sidebar-context-menu
       )
       menu:not(.menu-iconic, .in-menulist, [checked="true"]),
     menupopup:is(#organizeButtonPopup, #maintenanceButtonPopup)
@@ -1148,7 +1174,8 @@
           #menu_ToolsPopup,
           #windowPopup,
           #menu_HelpPopup,
-          #usercssloader-menupopup
+          #usercssloader-menupopup,
+          #sidebar-context-menu
         )
         menuitem:not(.menuitem-iconic, .bookmark-item, .in-menulist, [checked="true"]),
       menupopup:is(
@@ -1162,7 +1189,8 @@
           #menu_ToolsPopup,
           #windowPopup,
           #menu_HelpPopup,
-          #usercssloader-menupopup
+          #usercssloader-menupopup,
+          #sidebar-context-menu
         )
         menu:not(.menu-iconic, .in-menulist, [checked="true"]),
       menupopup:is(#organizeButtonPopup, #maintenanceButtonPopup)
@@ -1184,6 +1212,69 @@
       #context_openANewTab.tabmix-newtab-menu-icon {
         padding-inline-start: var(--menu-background-padding-default) !important;
         margin-left: 0 !important;
+      }
+      :not(menu, #ContentSelectDropdown, #context-navigation)
+        > menupopup:not(.in-menulist)
+        > menuitem:not(.menuitem-iconic, .bookmark-item, .in-menulist, [checked="true"])
+        > .menu-icon,
+      :not(menu, #ContentSelectDropdown, #context-navigation)
+        > menupopup:not(.in-menulist)
+        > menu:not(.menu-iconic, .in-menulist, [checked="true"])
+        > .menu-icon,
+      menupopup:is(
+          #menu_FilePopup,
+          #menu_EditPopup,
+          #menu_viewPopup,
+          #goPopup,
+          #historyMenuPopup,
+          #bookmarksMenuPopup,
+          #menu_ProfilesPopup,
+          #menu_ToolsPopup,
+          #windowPopup,
+          #menu_HelpPopup,
+          #usercssloader-menupopup,
+          #sidebar-context-menu
+        )
+        menuitem:not(.menuitem-iconic, .bookmark-item, .in-menulist, [checked="true"])
+        > .menu-icon,
+      menupopup:is(
+          #menu_FilePopup,
+          #menu_EditPopup,
+          #menu_viewPopup,
+          #goPopup,
+          #historyMenuPopup,
+          #bookmarksMenuPopup,
+          #menu_ProfilesPopup,
+          #menu_ToolsPopup,
+          #windowPopup,
+          #menu_HelpPopup,
+          #usercssloader-menupopup,
+          #sidebar-context-menu
+        )
+        menu:not(.menu-iconic, .in-menulist, [checked="true"])
+        > .menu-icon,
+      menupopup:is(#organizeButtonPopup, #maintenanceButtonPopup)
+        > menuitem:not(.menuitem-iconic, .bookmark-item, .in-menulist, [checked="true"])
+        > .menu-icon,
+      menupopup:is(#viewMenuPopup, #maintenanceButtonPopup)
+        > menu:not(.menu-iconic, .in-menulist, [checked="true"])
+        > .menu-icon,
+      menupopup:is(
+          #context_sendTabToDevicePopupMenu,
+          #context-sendpagetodevice-popup,
+          #context-sendlinktodevice-popup,
+          #frame > menupopup,
+          #spell-dictionaries-menu,
+          #context-ask-chat > menupopup
+        )
+        > menuitem:not([type="checkbox"][checked="true"], [type="radio"])
+        > .menu-icon,
+      .openintabs-menuitem > .menu-icon,
+      #blockedPopupDontShowMessage > .menu-icon,
+      #BMB_viewBookmarksToolbar > .menu-icon,
+      #sidebarMenu-popup:is(menupopup) > .menu-icon,
+      #context_openANewTab.tabmix-newtab-menu-icon > .menu-icon {
+        display: none !important;
       }
       .menupopup-arrowscrollbox {
         padding-inline: 0 !important; /* Original: padding: var(--panel-padding); --panel-padding-block: 4px; */
@@ -1219,7 +1310,8 @@
               #menu_ToolsPopup,
               #windowPopup,
               #menu_HelpPopup,
-              #usercssloader-menupopup
+              #usercssloader-menupopup,
+              #sidebar-context-menu
             )
             menuitem:not(.menuitem-iconic, .bookmark-item, .in-menulist, [checked="true"]),
           menupopup:is(
@@ -1233,7 +1325,8 @@
               #menu_ToolsPopup,
               #windowPopup,
               #menu_HelpPopup,
-              #usercssloader-menupopup
+              #usercssloader-menupopup,
+              #sidebar-context-menu
             )
             menu:not(.menu-iconic, .in-menulist, [checked="true"]),
           menupopup:is(#organizeButtonPopup, #maintenanceButtonPopup)
@@ -1256,6 +1349,69 @@
           #context_openANewTab.tabmix-newtab-menu-icon {
             padding-inline-start: var(--menu-background-padding-default) !important;
             margin-left: 0 !important;
+          }
+          :not(menu, #ContentSelectDropdown, #context-navigation)
+            > menupopup:not(.in-menulist)
+            > menuitem:not(.menuitem-iconic, .bookmark-item, .in-menulist, [checked="true"])
+            > .menu-icon,
+          :not(menu, #ContentSelectDropdown, #context-navigation)
+            > menupopup:not(.in-menulist)
+            > menu:not(.menu-iconic, .in-menulist, [checked="true"])
+            > .menu-icon,
+          menupopup:is(
+              #menu_FilePopup,
+              #menu_EditPopup,
+              #menu_viewPopup,
+              #goPopup,
+              #historyMenuPopup,
+              #bookmarksMenuPopup,
+              #menu_ProfilesPopup,
+              #menu_ToolsPopup,
+              #windowPopup,
+              #menu_HelpPopup,
+              #usercssloader-menupopup,
+              #sidebar-context-menu
+            )
+            menuitem:not(.menuitem-iconic, .bookmark-item, .in-menulist, [checked="true"])
+            > .menu-icon,
+          menupopup:is(
+              #menu_FilePopup,
+              #menu_EditPopup,
+              #menu_viewPopup,
+              #goPopup,
+              #historyMenuPopup,
+              #bookmarksMenuPopup,
+              #menu_ProfilesPopup,
+              #menu_ToolsPopup,
+              #windowPopup,
+              #menu_HelpPopup,
+              #usercssloader-menupopup,
+              #sidebar-context-menu
+            )
+            menu:not(.menu-iconic, .in-menulist, [checked="true"])
+            > .menu-icon,
+          menupopup:is(#organizeButtonPopup, #maintenanceButtonPopup)
+            > menuitem:not(.menuitem-iconic, .bookmark-item, .in-menulist, [checked="true"])
+            > .menu-icon,
+          menupopup:is(#viewMenuPopup, #maintenanceButtonPopup)
+            > menu:not(.menu-iconic, .in-menulist, [checked="true"])
+            > .menu-icon,
+          menupopup:is(
+              #context_sendTabToDevicePopupMenu,
+              #context-sendpagetodevice-popup,
+              #context-sendlinktodevice-popup,
+              #frame > menupopup,
+              #spell-dictionaries-menu,
+              #context-ask-chat > menupopup
+            )
+            > menuitem:not([type="checkbox"][checked="true"], [type="radio"])
+            > .menu-icon,
+          .openintabs-menuitem > .menu-icon,
+          #blockedPopupDontShowMessage > .menu-icon,
+          #BMB_viewBookmarksToolbar > .menu-icon,
+          #sidebarMenu-popup:is(menupopup) > .menu-icon,
+          #context_openANewTab.tabmix-newtab-menu-icon > .menu-icon {
+            display: none !important;
           }
           .menupopup-arrowscrollbox {
             padding-inline: 0 !important; /* Original: padding: var(--panel-padding); --panel-padding-block: 4px; */
@@ -1283,6 +1439,9 @@
       .menu-icon {
         display: unset !important;
       }
+      #main-menubar > menu > .menu-icon {
+        display: none !important;
+      }
     }
     /* Padding - Mac */
     @media -moz-pref("layout.css.osx-font-smoothing.enabled") {
@@ -1299,11 +1458,6 @@
         > menu:not(.menu-iconic, .in-menulist, [checked="true"]),
       #blockedPopupDontShowMessage {
         padding-inline-end: var(--context-menu-background-padding) !important;
-      }
-      /* text position */
-      :not(menu, #ContentSelectDropdown, #context-navigation) > menupopup:not(.in-menulist) > menuitem > .menu-text,
-      :not(menu, #ContentSelectDropdown, #context-navigation) > menupopup:not(.in-menulist) > menu > .menu-text {
-        padding-inline-start: var(--context-menu-mac-padding) !important;
       }
       /* Checkbox menuitem, None iconic menu */
       :not(menu, #ContentSelectDropdown, #context-navigation)
@@ -1324,7 +1478,8 @@
             #menu_ToolsPopup,
             #windowPopup,
             #menu_HelpPopup,
-            #usercssloader-menupopup
+            #usercssloader-menupopup,
+            #sidebar-context-menu
           )
           menuitem:not(.menuitem-iconic, .bookmark-item),
         menupopup:is(
@@ -1338,7 +1493,8 @@
             #menu_ToolsPopup,
             #windowPopup,
             #menu_HelpPopup,
-            #usercssloader-menupopup
+            #usercssloader-menupopup,
+            #sidebar-context-menu
           )
           menu:not(.menu-iconic) {
           list-style-image: var(--menuitem-image, url("../icons/blank.svg")) !important;
@@ -1388,10 +1544,14 @@
     /* Windows */
     @media (-moz-platform: windows) {
       /* Bookmark Popup - None icon menu */
-      menupopup:is(#BMB_bookmarksPopup)[placespopup="true"] menuitem:not(.menuitem-iconic, [disabled="true"]),
-      menupopup:is(#BMB_bookmarksPopup)[placespopup="true"] menu:not(.menu-iconic),
-      #PersonalToolbar menupopup[placespopup="true"] menuitem:not(.menuitem-iconic, [disabled="true"]),
-      #PersonalToolbar menupopup[placespopup="true"] menu:not(.menu-iconic) {
+      menupopup:is(#BMB_bookmarksPopup)[placespopup="true"]
+        menuitem:not(.menuitem-iconic, [disabled="true"]):not(:has(.menu-icon[aria-hidden="true"])),
+      menupopup:is(#BMB_bookmarksPopup)[placespopup="true"]
+        menu:not(.menu-iconic):not(:has(.menu-icon[aria-hidden="true"])),
+      #PersonalToolbar
+        menupopup[placespopup="true"]
+        menuitem:not(.menuitem-iconic, [disabled="true"]):not(:has(.menu-icon[aria-hidden="true"])),
+      #PersonalToolbar menupopup[placespopup="true"] menu:not(.menu-iconic):not(:has(.menu-icon[aria-hidden="true"])) {
         margin-inline: var(--arrowpanel-menuitem-margin-inline) !important;
         padding-inline-start: var(--bookmark-menu-icon-text-padding) !important;
         background-position: var(--uc-menu-background-position) var(--bookmark-menu-icon-background-padding) center !important;
@@ -1410,26 +1570,44 @@
         margin-inline-start: -1px !important;
       }
       /* Bookmark Popup - None icon menu */
-      menupopup:is(#BMB_bookmarksPopup)[placespopup="true"] menuitem:not(.menuitem-iconic, [disabled="true"]),
-      menupopup:is(#BMB_bookmarksPopup)[placespopup="true"] menu:not(.menu-iconic),
-      #PersonalToolbar menupopup[placespopup="true"] menuitem:not(.menuitem-iconic, [disabled="true"]),
-      #PersonalToolbar menupopup[placespopup="true"] menu:not(.menu-iconic) {
+      menupopup:is(#BMB_bookmarksPopup)[placespopup="true"]
+        menuitem:not(.menuitem-iconic, [disabled="true"]):not(:has(.menu-icon[aria-hidden="true"])),
+      menupopup:is(#BMB_bookmarksPopup)[placespopup="true"]
+        menu:not(.menu-iconic):not(:has(.menu-icon[aria-hidden="true"])),
+      #PersonalToolbar
+        menupopup[placespopup="true"]
+        menuitem:not(.menuitem-iconic, [disabled="true"]):not(:has(.menu-icon[aria-hidden="true"])),
+      #PersonalToolbar menupopup[placespopup="true"] menu:not(.menu-iconic):not(:has(.menu-icon[aria-hidden="true"])) {
         padding-inline-start: calc(var(--context-menu-background-padding) + 2px) !important;
       }
       @media -moz-pref("userChrome.theme.non_native_menu") {
-        menupopup:is(#BMB_bookmarksPopup)[placespopup="true"] menuitem:not(.menuitem-iconic, [disabled="true"]),
-        menupopup:is(#BMB_bookmarksPopup)[placespopup="true"] menu:not(.menu-iconic),
-        #PersonalToolbar menupopup[placespopup="true"] menuitem:not(.menuitem-iconic, [disabled="true"]),
-        #PersonalToolbar menupopup[placespopup="true"] menu:not(.menu-iconic) {
+        menupopup:is(#BMB_bookmarksPopup)[placespopup="true"]
+          menuitem:not(.menuitem-iconic, [disabled="true"]):not(:has(.menu-icon[aria-hidden="true"])),
+        menupopup:is(#BMB_bookmarksPopup)[placespopup="true"]
+          menu:not(.menu-iconic):not(:has(.menu-icon[aria-hidden="true"])),
+        #PersonalToolbar
+          menupopup[placespopup="true"]
+          menuitem:not(.menuitem-iconic, [disabled="true"]):not(:has(.menu-icon[aria-hidden="true"])),
+        #PersonalToolbar
+          menupopup[placespopup="true"]
+          menu:not(.menu-iconic):not(:has(.menu-icon[aria-hidden="true"])) {
           margin-inline: var(--arrowpanel-menuitem-margin-inline) !important;
         }
       }
       menupopup:is(#BMB_bookmarksPopup)[placespopup="true"]
-        menuitem:not(.menuitem-iconic, [disabled="true"])
+        menuitem:not(.menuitem-iconic, [disabled="true"]):not(:has(.menu-icon[aria-hidden="true"]))
         .menu-text,
-      menupopup:is(#BMB_bookmarksPopup)[placespopup="true"] menu:not(.menu-iconic) .menu-text,
-      #PersonalToolbar menupopup[placespopup="true"] menuitem:not(.menuitem-iconic, [disabled="true"]) .menu-text,
-      #PersonalToolbar menupopup[placespopup="true"] menu:not(.menu-iconic) .menu-text {
+      menupopup:is(#BMB_bookmarksPopup)[placespopup="true"]
+        menu:not(.menu-iconic):not(:has(.menu-icon[aria-hidden="true"]))
+        .menu-text,
+      #PersonalToolbar
+        menupopup[placespopup="true"]
+        menuitem:not(.menuitem-iconic, [disabled="true"]):not(:has(.menu-icon[aria-hidden="true"]))
+        .menu-text,
+      #PersonalToolbar
+        menupopup[placespopup="true"]
+        menu:not(.menu-iconic):not(:has(.menu-icon[aria-hidden="true"]))
+        .menu-text {
         margin-inline-start: var(--context-menu-text-padding) !important;
       }
     }
@@ -1440,20 +1618,32 @@
         padding-inline: var(--arrowpanel-menuitem-padding-inline) !important;
       }
       /* Bookmark Popup - None icon menu */
-      menupopup:is(#BMB_bookmarksPopup)[placespopup="true"] menuitem:not(.menuitem-iconic, [disabled="true"]),
-      menupopup:is(#BMB_bookmarksPopup)[placespopup="true"] menu:not(.menu-iconic) {
+      menupopup:is(#BMB_bookmarksPopup)[placespopup="true"]
+        menuitem:not(.menuitem-iconic, [disabled="true"]):not(:has(.menu-icon[aria-hidden="true"])),
+      menupopup:is(#BMB_bookmarksPopup)[placespopup="true"]
+        menu:not(.menu-iconic):not(:has(.menu-icon[aria-hidden="true"])) {
         padding-inline-start: calc(var(--arrowpanel-menuitem-padding-inline) + 3px) !important;
       }
-      #PersonalToolbar menupopup[placespopup="true"] menuitem:not(.menuitem-iconic, [disabled="true"]),
-      #PersonalToolbar menupopup[placespopup="true"] menu:not(.menu-iconic) {
+      #PersonalToolbar
+        menupopup[placespopup="true"]
+        menuitem:not(.menuitem-iconic, [disabled="true"]):not(:has(.menu-icon[aria-hidden="true"])),
+      #PersonalToolbar menupopup[placespopup="true"] menu:not(.menu-iconic):not(:has(.menu-icon[aria-hidden="true"])) {
         padding-inline-start: calc(var(--arrowpanel-menuitem-padding-inline) + 1px) !important;
       }
       menupopup:is(#BMB_bookmarksPopup)[placespopup="true"]
-        menuitem:not(.menuitem-iconic, [disabled="true"])
+        menuitem:not(.menuitem-iconic, [disabled="true"]):not(:has(.menu-icon[aria-hidden="true"]))
         > .menu-text,
-      menupopup:is(#BMB_bookmarksPopup)[placespopup="true"] menu:not(.menu-iconic) > .menu-text,
-      #PersonalToolbar menupopup[placespopup="true"] menuitem:not(.menuitem-iconic, [disabled="true"]) > .menu-text,
-      #PersonalToolbar menupopup[placespopup="true"] menu:not(.menu-iconic) > .menu-text {
+      menupopup:is(#BMB_bookmarksPopup)[placespopup="true"]
+        menu:not(.menu-iconic):not(:has(.menu-icon[aria-hidden="true"]))
+        > .menu-text,
+      #PersonalToolbar
+        menupopup[placespopup="true"]
+        menuitem:not(.menuitem-iconic, [disabled="true"]):not(:has(.menu-icon[aria-hidden="true"]))
+        > .menu-text,
+      #PersonalToolbar
+        menupopup[placespopup="true"]
+        menu:not(.menu-iconic):not(:has(.menu-icon[aria-hidden="true"]))
+        > .menu-text {
         padding-inline-start: var(--context-menu-mac-padding) !important;
       }
     }
@@ -1652,6 +1842,12 @@
       }
       #toolbar-context-undoCloseTab {
         --menuitem-image: url("../icons/undo.svg");
+      }
+      #toolbar-context-customize-sidebar {
+        --menuitem-image: url("chrome://browser/skin/customize.svg");
+      }
+      #toolbar-context-toggle-vertical-tabs {
+        --menuitem-image: url("chrome://browser/skin/sidebar-collapsed.svg");
       }
       #toggle_toolbar-menubar {
         /* checkbox */
