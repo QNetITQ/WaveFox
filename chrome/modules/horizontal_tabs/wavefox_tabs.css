@@ -84,6 +84,16 @@
             inset-inline: 0px !important;
         }
     }
+
+    .tab-content
+    {
+        .tab-audio-button
+        {
+            --button-size-icon-small: 16px !important;
+            --button-min-height-small: 16px !important;
+            margin-inline: 2px 4px !important;
+        }
+    }
 }
 
 /* Tab Groups */
