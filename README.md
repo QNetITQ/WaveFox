@@ -9,10 +9,10 @@
 [Download Firefox](https://www.mozilla.org/en-US/firefox/all/#product-desktop-release) / [Download WaveFox](https://github.com/QNetITQ/WaveFox/releases) / [WaveFox Nightly](https://github.com/QNetITQ/WaveFox/tree/WaveFox-Nightly)
 
 <details>
-  <summary>WaveFox v1.9.151</summary>
+  <summary>WaveFox v1.9.152</summary>
 
 - ##### Minimum Requirements
-  - Firefox 151
+  - Firefox 152
   - Windows / MacOS / Linux
 
 - Download the `chrome` folder and put it in your user profile folder
@@ -53,7 +53,7 @@ Works only with System / Light / Dark theme.
 ![изображение](https://user-images.githubusercontent.com/85301851/152011749-4d5619b3-0fd8-40f9-a3dc-96be31839971.png)
 
 ##### Shadows
-- `WaveFox.HorizontalTabs.AttachedTabs.Shadows.Mode` > 1 or 2 (2 - unavailable)
+- `WaveFox.HorizontalTabs.AttachedTabs.Shadows.Mode` > 1
 
 ### Tab Separators
 ![изображение](https://user-images.githubusercontent.com/85301851/152351312-f6ad4578-e7d5-40b7-8b2d-49388a750f54.png)
@@ -101,6 +101,7 @@ The keys below are relevant only for the second option.
 ![изображение](https://github.com/user-attachments/assets/26a19f9a-642b-4a10-a4f9-80d87cc42bdc)
 
 - `WaveFox.HorizontalTabs.FloatingWebPage`
+- `WaveFox.VerticalTabs.FloatingWebPage`
 
 ### Toolbar Autohide
 <img width="1727" height="918" alt="изображение" src="https://github.com/user-attachments/assets/bf786951-7633-4429-ada2-1639d2210263" />

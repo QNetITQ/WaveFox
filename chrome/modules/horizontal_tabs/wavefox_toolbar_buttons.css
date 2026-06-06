@@ -5,20 +5,7 @@
     display: none !important;
 }
 
-#TabsToolbar #firefox-view-button[open] > .toolbarbutton-icon
-{
-    background-color: var(--toolbarbutton-active-background) !important;
-    color: inherit !important;
-    box-shadow: none !important;
-    outline: none !important;
-}
-
 /* -------------------- Extensions menu -------------------- */
-
-#unified-extensions-panel
-{
-    --uei-icon-size: 24px !important;
-}
 
 #unified-extensions-panel .unified-extensions-item
 {
@@ -62,7 +49,7 @@
 
 #TabsToolbar
 {
-    --toolbarbutton-inner-padding: inherit !important;
+    --toolbarbutton-padding-inner: inherit !important;
 }
 
 /* ---------------------------------------- Indents ---------------------------------------- */
@@ -70,11 +57,11 @@
 #TabsToolbar-customization-target > :is(toolbarbutton, toolbaritem):first-child,
 #TabsToolbar-customization-target > toolbarpaletteitem:first-child > :is(toolbarbutton, toolbaritem)
 {
-    margin-inline-start: calc(var(--toolbar-start-end-padding) - var(--toolbarbutton-outer-padding)) !important;
+    padding-inline-start: var(--toolbar-padding-inline) !important;
 }
 
 #TabsToolbar-customization-target > :is(toolbarbutton, toolbaritem):last-child,
 #TabsToolbar-customization-target > toolbarpaletteitem:last-child > :is(toolbarbutton, toolbaritem)
 {
-    margin-inline-end: calc(var(--toolbar-start-end-padding) - var(--toolbarbutton-outer-padding)) !important;
+    padding-inline-end: var(--toolbar-padding-inline) !important;
 }

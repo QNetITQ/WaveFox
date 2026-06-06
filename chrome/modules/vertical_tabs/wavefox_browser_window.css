@@ -1,117 +1,81 @@
-:root:not([inDOMFullscreen])
+@media -moz-pref("WaveFox.VerticalTabs.FloatingWebPage")
 {
-    @media -moz-pref("extensions.activeThemeID", 'default-theme@mozilla.org')         or
-           -moz-pref("extensions.activeThemeID", 'firefox-compact-light@mozilla.org') or
-           -moz-pref("extensions.activeThemeID", 'firefox-compact-dark@mozilla.org')
+    :root:not([inDOMFullscreen])
     {
-        --sidebar-background-color: var(--toolbar-bgcolor) !important;
-        --sidebar-text-color: var(--toolbar-color) !important;
-        --content-area-shadow: 0px 0px 1px light-dark(rgba(0,0,0,0.125), rgba(0,0,0,0.5)), 0px 2px 6px light-dark(rgba(0,0,0,0.125), rgba(0,0,0,0.5)) !important;
-    }
-    
-    #browser
-    {
-        #sidebar-main
+        #browser
         {
-            margin-top: 0px !important;
-            margin-bottom: 6px !important;
-            background-color: var(--sidebar-background-color) !important;
-            background-image: none !important;
-            color: var(--sidebar-text-color) !important;
-            border: none !important;
-            box-shadow: var(--content-area-shadow) !important;
-
-            :root[sizemode="fullscreen"] &
+            #sidebar-launcher-splitter,
+            #sidebar-splitter,
+            #ai-window-splitter,
+            .split-view-splitter
             {
-                margin-top: 6px !important;
-            }
-                
-            &:not([sidebar-positionend])
-            {
-                border-start-end-radius: var(--border-radius-medium) !important;
-                border-end-end-radius: var(--border-radius-medium) !important;
-            }
-                
-            &[sidebar-positionend]
-            {
-                border-start-start-radius: var(--border-radius-medium) !important;
-                border-end-start-radius: var(--border-radius-medium) !important;
-            }
-        }
-
-        #sidebar-launcher-splitter,
-        #sidebar-splitter,
-        #ai-window-splitter,
-        .split-view-splitter
-        {
-            width: 6px !important;
-            margin-top: 0px !important;
-            margin-inline: 0px !important;
-            margin-bottom: 6px !important;
-            border: none !important;
-            border-radius: var(--border-radius-medium) !important;
-            background-color: transparent !important;
-            transition: background-color 0.5s ease-in-out !important;
-            
-            &:hover
-            {
-                background-color: var(--focus-outline-color) !important;
-            }
-
-            :root[sizemode="fullscreen"] &
-            {
-                margin-top: 6px !important;
-            }
-        }
-        
-        #ai-window-splitter[collapsed]
-        {
-            display: block !important;
-            pointer-events: none !important;
-            visibility: visible !important;
-        }
-
-        #sidebar-box
-        {
-            padding: 0px !important;
-
-            #sidebar
-            {
-                outline: none !important;
+                width: 6px !important;
                 margin-top: 0px !important;
+                margin-inline: 0px !important;
                 margin-bottom: 6px !important;
-                box-shadow: var(--content-area-shadow) !important;
-                
-                :root[sizemode="fullscreen"] &
-                {
-                    margin-top: 6px !important;
-                }
-            }
-        }
-
-        #tabbrowser-tabbox
-        {
-            #tabbrowser-tabpanels[splitview]
-            {
-                .split-view-panel
-                {
-                    overflow: visible !important;
-                    margin: 0px !important;
-                }
-            }
-
-            .browserContainer
-            {
-                overflow: clip !important;
-                margin-top: 0px !important;
-                margin-bottom: 6px !important;
+                border: none !important;
                 border-radius: var(--border-radius-medium) !important;
-                outline: none !important;
-                box-shadow: var(--content-area-shadow) !important;
+                background-color: transparent !important;
+                transition: background-color 0.5s ease-in-out !important;
+
+                &:hover
+                {
+                    background-color: var(--focus-outline-color) !important;
+                }
 
                 :root[sizemode="fullscreen"] &
                 {
                     margin-top: 6px !important;
+                }
+            }
+
+            #ai-window-splitter[collapsed]
+            {
+                display: block !important;
+                pointer-events: none !important;
+                visibility: visible !important;
+            }
+
+            #sidebar-box
+            {
+                padding: 0px !important;
+
+                #sidebar
+                {
+                    margin-top: 0px !important;
+                    margin-bottom: 6px !important;
+                    box-shadow: var(--content-area-shadow) !important;
+                    outline-offset: 0px !important;
+
+                    :root[sizemode="fullscreen"] &
+                    {
+                        margin-top: 6px !important;
+                    }
+                }
+            }
+
+            #tabbrowser-tabbox
+            {
+                #tabbrowser-tabpanels[splitview]
+                {
+                    .split-view-panel
+                    {
+                        overflow: visible !important;
+                        margin: 0px !important;
+                    }
+                }
+
+                .browserContainer
+                {
+                    overflow: clip !important;
+                    margin-top: 0px !important;
+                    margin-bottom: 6px !important;
+                    border-radius: var(--border-radius-medium) !important;
+
+                    :root[sizemode="fullscreen"] &
+                    {
+                        margin-top: 6px !important;
+                    }
                 }
             }
         }
