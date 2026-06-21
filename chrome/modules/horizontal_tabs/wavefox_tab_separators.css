@@ -17,10 +17,11 @@
                         width: var(--tab-overflow-clip-margin);
                         height: 50%;
                         top: 25%;
-                        background-color: color-mix(in srgb, currentColor 25%, transparent);
                         pointer-events: none;
                         inset-inline-start: calc(-1 * var(--tab-overflow-clip-margin) - var(--tab-overflow-clip-margin) / 2);
                         border-radius: 8px;
+                        border-inline-start: var(--tab-overflow-clip-margin) solid color-mix(in srgb, currentColor 25%, transparent);
+                        box-sizing: border-box;
 
                         @media -moz-pref("WaveFox.HorizontalTabs.AttachedTabs")
                         {
@@ -43,10 +44,11 @@
                             width: var(--tab-overflow-clip-margin);
                             height: 50%;
                             top: 25%;
-                            background-color: color-mix(in srgb, currentColor 25%, transparent);
                             pointer-events: none;
                             inset-inline-end: calc(-1 * var(--tab-overflow-clip-margin) - var(--tab-overflow-clip-margin) / 2);
                             border-radius: 8px;
+                            border-inline-end: var(--tab-overflow-clip-margin) solid color-mix(in srgb, currentColor 25%, transparent);
+                            box-sizing: border-box;
 
                             @media -moz-pref("WaveFox.HorizontalTabs.AttachedTabs")
                             {
