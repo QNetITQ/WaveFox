@@ -19,7 +19,6 @@
                         top: 25%;
                         pointer-events: none;
                         inset-inline-start: calc(-1 * var(--tab-overflow-clip-margin) - var(--tab-overflow-clip-margin) / 2);
-                        border-radius: 8px;
                         border-inline-start: var(--tab-overflow-clip-margin) solid color-mix(in srgb, currentColor 25%, transparent);
                         box-sizing: border-box;
 
@@ -46,7 +45,6 @@
                             top: 25%;
                             pointer-events: none;
                             inset-inline-end: calc(-1 * var(--tab-overflow-clip-margin) - var(--tab-overflow-clip-margin) / 2);
-                            border-radius: 8px;
                             border-inline-end: var(--tab-overflow-clip-margin) solid color-mix(in srgb, currentColor 25%, transparent);
                             box-sizing: border-box;
 
