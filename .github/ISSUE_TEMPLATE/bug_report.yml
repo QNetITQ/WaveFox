@@ -66,6 +66,7 @@ body:
         - Developer
         - Beta
         - Release
+        - ESR 153
         - ESR 140
         - ESR 128
         - ESR 115
@@ -88,6 +89,7 @@ body:
       options:
         - Nightly
         - Release
+        - ESR 153
         - ESR 140
         - ESR 128
         - ESR 115
