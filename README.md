@@ -12,7 +12,7 @@
   <summary>WaveFox v1.99.153 ESR</summary>
 
 - ##### Minimum Requirements
-  - Firefox 153
+  - Firefox 153 ESR
   - Windows / MacOS / Linux
 
 - Download the `chrome` folder and put it in your user profile folder
