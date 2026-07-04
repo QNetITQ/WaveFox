@@ -1,4 +1,4 @@
-# *WaveFox*
+# *WaveFox-Nova*
 
 ![WaveFox_Preview](https://github.com/QNetITQ/WaveFox/assets/85301851/268bda8c-b987-45d1-966b-59992c18e66e)
 
@@ -7,10 +7,10 @@
 [Download Firefox](https://www.mozilla.org/en-US/firefox/all/#product-desktop-release) / [Download WaveFox](https://github.com/QNetITQ/WaveFox/releases) / [WaveFox Nightly](https://github.com/QNetITQ/WaveFox/tree/WaveFox-Nightly)
 
 <details>
-  <summary>WaveFox v1.99.153</summary>
+  <summary>WaveFox v1.99.153 ESR</summary>
 
 - ##### Minimum Requirements
-  - Firefox 153
+  - Firefox 153 ESR
   - Windows / MacOS / Linux
 
 - Download the `chrome` folder and put it in your user profile folder
