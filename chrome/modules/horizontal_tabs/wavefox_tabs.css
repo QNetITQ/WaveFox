@@ -34,17 +34,45 @@
     border: none !important;
 }
 
+#tabbrowser-tabs
+{
+    min-height: auto !important;
+}
+
 /* Tabs */
 
 .tabbrowser-tab
 {
-    --tab-loading-fill: currentColor !important;
-    
-    &:is([visuallyselected], [multiselected])
+    &[visuallyselected]
     {
-        --tab-loading-fill: var(--focus-outline-color) !important;
+        .tab-background
+        {
+            background: none !important;
+            background-color: var(--toolbar-background-color) !important;
+            background-image: none !important;
+        }
+    }
+    
+    &:not([visuallyselected])
+    {
+        &:hover
+        {
+            .tab-background
+            {
+                background-color: var(--toolbarbutton-background-color-hover) !important;
+            }
+        }
+        
+        &[multiselected]
+        {
+            .tab-background
+            {
+                background-color: var(--toolbarbutton-background-color-active) !important;
+            }
+        }
     }
 
+    /*
     &[pinned] .tab-content
     {
         padding-inline: calc((var(--tab-min-height) - 16px) / 2) !important;
@@ -53,6 +81,15 @@
     &:not([pinned]) .tab-content
     {
         padding-inline: 10px !important;
+    }
+    */
+    
+    .tab-background
+    {
+        outline: none !important;
+        border: none !important;
+        margin-block: 4px !important;
+        box-shadow: none !important;
     }
 
     .tab-close-button
@@ -137,28 +174,26 @@ tab-split-view-wrapper
 
 @media not -moz-pref("WaveFox.HorizontalTabs.AttachedTabs")
 {
-    #navigator-toolbox
-    {
-        border-bottom: none !important;
-    }
-    
-    #navigator-toolbox > *,
-    #browser
+    #navigator-toolbox > *
     {
         background-color: transparent !important;
         color: inherit !important;
     }
-
-    :is(#pinned-tabs-container, #tabbrowser-arrowscrollbox):not([overflowing]) > .tabbrowser-tab:nth-child(1 of .tabbrowser-tab:not([hidden]))
-    {
-        margin-inline-start: calc(var(--toolbar-padding-inline) - var(--tab-overflow-clip-margin)) !important;
-    }
-                
-    :is(#pinned-tabs-container, #tabbrowser-arrowscrollbox):not([overflowing]) > .tabbrowser-tab:nth-last-child(1 of .tabbrowser-tab:not([hidden]))
-    {
-        margin-inline-end: calc(var(--toolbar-padding-inline) - var(--tab-overflow-clip-margin)) !important;
-    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ---------------------------------------- Attached Tabs ---------------------------------------- */
 
