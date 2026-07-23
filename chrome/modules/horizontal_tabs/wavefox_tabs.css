@@ -1,18 +1,25 @@
 /* Density */
-
+/*
 :root
 {
-    --tab-min-height: 36px !important;
+    --tab-min-height 36px !important;
 
     &[uidensity="compact"]
     {
-        --tab-min-height: 32px !important;
+        --tab-min-height 32px !important;
     }
 
     &[uidensity="touch"]
     {
-        --tab-min-height: 40px !important;
+        --tab-min-height 40px !important;
     }
+}*/
+
+#navigator-toolbox > *
+{
+    background-color: transparent !important;
+    color: inherit !important;
+    border: none !important;
 }
 
 /* Titlebar */
@@ -43,13 +50,21 @@
 
 .tabbrowser-tab
 {
+    &[pinned]
+    {
+        .tab-context-line
+        {
+            width: 4px !important;
+        }
+    }
+    
     &[visuallyselected]
     {
         .tab-background
         {
-            background: none !important;
             background-color: var(--toolbar-background-color) !important;
             background-image: none !important;
+            background-clip: content-box !important;
         }
     }
     
@@ -71,18 +86,6 @@
             }
         }
     }
-
-    /*
-    &[pinned] .tab-content
-    {
-        padding-inline: calc((var(--tab-min-height) - 16px) / 2) !important;
-    }
-    
-    &:not([pinned]) .tab-content
-    {
-        padding-inline: 10px !important;
-    }
-    */
     
     .tab-background
     {
@@ -90,6 +93,21 @@
         border: none !important;
         margin-block: 4px !important;
         box-shadow: none !important;
+        
+        .tab-context-line
+        {
+            inset-block: 0px auto !important;
+        }
+        
+        .tab-group-line
+        {
+            position: relative !important;
+            height: 4px !important;
+            border-radius: 4px !important;
+            inset-inline: 0px !important;
+            inset-block: auto 0px !important;
+            margin-inline: calc(var(--tab-inline-padding) + 8px) calc(var(--tab-inline-padding) / 2 + 12px) !important;
+        }
     }
 
     .tab-close-button
@@ -109,30 +127,6 @@
     }
 }
 
-/* Tab Groups / Split View */
-
-.tabbrowser-tab
-{
-    .tab-background
-    {
-        .tab-group-line
-        {
-            inset-block: auto 0px !important;
-            inset-inline: 0px !important;
-        }
-    }
-
-    .tab-content
-    {
-        .tab-audio-button
-        {
-            --button-size-icon-small: 16px !important;
-            --button-min-height-small: 16px !important;
-            margin-inline: 2px 4px !important;
-        }
-    }
-}
-
 /* Tab Groups */
 
 @scope (tab-group) to (tab-split-view-wrapper)
@@ -149,6 +143,7 @@
 
 /* Split View */
 
+/*
 tab-split-view-wrapper
 {
     background-color: var(--tab-background-color-hover) !important;
@@ -169,18 +164,7 @@ tab-split-view-wrapper
         }
     }
 }
-
-/* ---------------------------------------- Floating Tabs ---------------------------------------- */
-
-@media not -moz-pref("WaveFox.HorizontalTabs.AttachedTabs")
-{
-    #navigator-toolbox > *
-    {
-        background-color: transparent !important;
-        color: inherit !important;
-    }
-}
-
+*/
 
 
 
