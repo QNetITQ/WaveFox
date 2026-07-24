@@ -121,26 +121,16 @@ tab-group
 
 tab-split-view-wrapper
 {
-    margin: 0px !important;
-    padding: 0px !important;
-    align-self: center !important;
+    margin-block: 4px !important;
     outline: none !important;
-    gap: var(--tab-overflow-clip-margin) !important;
-    
-    &:is(:hover, [hasactivetab])
-    {
-        background-color: transparent !important;
-    }
 
     .tabbrowser-tab
     {
         border: none !important;
-        padding-inline: 0px !important;
-        
+
         .tab-background
         {
             margin: 0px !important;
-            min-height: var(--tab-min-height) !important;
             background-color: var(--toolbarbutton-background-color-hover) !important;
         }
     }
