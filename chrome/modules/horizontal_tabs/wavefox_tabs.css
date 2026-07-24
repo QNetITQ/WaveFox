@@ -41,6 +41,7 @@
             background-color: var(--toolbar-background-color) !important;
             background-image: none !important;
             background-clip: content-box !important;
+            box-shadow: 0 2px 2px var(--chrome-content-separator-color) !important;
         }
     }
     
@@ -112,6 +113,7 @@
         {
             margin: 0px !important;
             background-color: var(--toolbarbutton-background-color-hover) !important;
+            box-shadow: none !important;
         }
     }
 }
