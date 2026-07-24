@@ -157,10 +157,32 @@ tab-split-view-wrapper
 
 @media -moz-pref("WaveFox.HorizontalTabs.AttachedTabs")
 {
+    /* Density */
+
     :root
     {
-        --tab-first-last-inline-margin: clamp(0px, var(--tab-border-radius), 12px) !important;
-        --tabstrip-min-height: auto !important;
+        --tab-min-height: 36px !important;
+
+        &[uidensity="compact"]
+        {
+            --tab-min-height: 32px !important;
+        }
+
+        &[uidensity="touch"]
+        {
+            --tab-min-height: 40px !important;
+        }
+    }
+
+    :root
+    {
+        --tab-first-last-inline-margin: clamp(0px, var(--tab-border-radius), calc(var(--tab-min-height) / 2)) !important;
+    }
+    
+    #navigator-toolbox > *:not(.browser-titlebar)
+    {
+        background-color: var(--toolbar-background-color) !important;
+        color: var(--toolbar-text-color) !important;
     }
     
     /* Tab Bar */
@@ -176,7 +198,7 @@ tab-split-view-wrapper
     {
         .tab-background
         {
-            min-height: calc(var(--tab-min-height) - var(--tab-block-margin) * 2) !important;
+            min-height: auto !important;
         }
     }
     
@@ -184,7 +206,7 @@ tab-split-view-wrapper
     {
         .tab-background
         {
-            min-height: calc(var(--tab-min-height) - var(--tab-block-margin) * 2 - var(--split-view-padding-block) * 2) !important;
+            min-height: calc(var(--tab-min-height) - 4px * 2 - var(--split-view-padding-block) * 2) !important;
         }
     }
 
@@ -212,7 +234,6 @@ tab-split-view-wrapper
                 .tab-background
                 {
                     background-color: var(--toolbar-background-color) !important;
-                    box-shadow: inset 0px 2px 0px var(--tab-loading-fill) !important;
                 }
 
                 .tab-content
@@ -278,6 +299,18 @@ tab-split-view-wrapper
         {
             margin-inline-end: var(--tab-first-last-inline-margin) !important;
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
 
         /* Custom shapes */
 
