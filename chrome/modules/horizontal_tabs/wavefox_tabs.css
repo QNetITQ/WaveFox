@@ -1,20 +1,3 @@
-/* Density */
-/*
-:root
-{
-    --tab-min-height 36px !important;
-
-    &[uidensity="compact"]
-    {
-        --tab-min-height 32px !important;
-    }
-
-    &[uidensity="touch"]
-    {
-        --tab-min-height 40px !important;
-    }
-}*/
-
 #navigator-toolbox > *
 {
     background-color: transparent !important;
@@ -32,13 +15,6 @@
         transition: none !important;
         opacity: 1 !important;
     }
-}
-
-/* Nav Bar */
-
-#nav-bar
-{
-    border: none !important;
 }
 
 #tabbrowser-tabs
@@ -143,28 +119,32 @@
 
 /* Split View */
 
-/*
 tab-split-view-wrapper
 {
-    background-color: var(--tab-background-color-hover) !important;
+    margin: 0px !important;
+    padding: 0px !important;
+    align-self: center !important;
+    outline: none !important;
+    outline-offset: 0px !important;
+    
+    &:is(:hover, [hasactivetab])
+    {
+        background-color: transparent !important;
+    }
 
     .tabbrowser-tab
     {
         border: none !important;
+        padding-inline: 0px !important;
         
         .tab-background
         {
             margin: 0px !important;
-            border-radius: calc(var(--toolbarbutton-border-radius) - var(--tab-overflow-clip-margin)) !important;
-            
-            .tab-group-line
-            {
-                inset-block: auto calc(-1 * (var(--tab-block-margin) + var(--split-view-padding-block))) !important;
-            }
+            min-height: var(--tab-min-height) !important;
+            background-color: var(--toolbarbutton-background-color-hover) !important;
         }
     }
 }
-*/
 
 
 
