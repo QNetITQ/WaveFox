@@ -103,9 +103,9 @@
     }
 }
 
-/* Tab Groups */
+/* Tab Group */
 
-@scope (tab-group) to (tab-split-view-wrapper)
+tab-group
 {
     .tab-group-label-container,
     .tab-group-overflow-count-container
@@ -125,7 +125,7 @@ tab-split-view-wrapper
     padding: 0px !important;
     align-self: center !important;
     outline: none !important;
-    outline-offset: 0px !important;
+    gap: var(--tab-overflow-clip-margin) !important;
     
     &:is(:hover, [hasactivetab])
     {
