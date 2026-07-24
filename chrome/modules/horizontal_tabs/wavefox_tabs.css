@@ -101,6 +101,19 @@
     {
         background-position: 50% calc(50% - 13px) !important;
     }
+    
+    /* Split View */
+    
+    tab-split-view-wrapper &
+    {
+        border: none !important;
+        
+        .tab-background
+        {
+            margin: 0px !important;
+            background-color: var(--toolbarbutton-background-color-hover) !important;
+        }
+    }
 }
 
 /* Tab Group */
@@ -123,17 +136,6 @@ tab-split-view-wrapper
 {
     margin-block: 4px !important;
     outline: none !important;
-
-    .tabbrowser-tab
-    {
-        border: none !important;
-
-        .tab-background
-        {
-            margin: 0px !important;
-            background-color: var(--toolbarbutton-background-color-hover) !important;
-        }
-    }
 }
 
 
