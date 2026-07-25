@@ -43,6 +43,11 @@
             background-clip: content-box !important;
             box-shadow: 0 2px 2px var(--chrome-content-separator-color) !important;
         }
+        
+        .tab-content
+        {
+            color: var(--toolbar-text-color) !important;
+        }
     }
     
     &:not([visuallyselected])
@@ -140,27 +145,13 @@ tab-split-view-wrapper
     outline: none !important;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ---------------------------------------- Attached Tabs ---------------------------------------- */
 
 @media -moz-pref("WaveFox.HorizontalTabs.AttachedTabs")
 {
-    /* Density */
-
     :root
     {
+        --tab-first-last-inline-margin: clamp(0px, var(--tab-border-radius), calc(var(--tab-min-height) / 2)) !important;
         --tab-min-height: 36px !important;
 
         &[uidensity="compact"]
@@ -174,24 +165,12 @@ tab-split-view-wrapper
         }
     }
 
-    :root
-    {
-        --tab-first-last-inline-margin: clamp(0px, var(--tab-border-radius), calc(var(--tab-min-height) / 2)) !important;
-    }
-    
     #navigator-toolbox > *:not(.browser-titlebar)
     {
         background-color: var(--toolbar-background-color) !important;
         color: var(--toolbar-text-color) !important;
     }
-    
-    /* Tab Bar */
 
-    #TabsToolbar #search-container
-    {
-        padding-block: 0 !important;
-    }
-    
     /* Tab Groups / Split View */
     
     tab-group
@@ -220,26 +199,9 @@ tab-split-view-wrapper
             overflow-clip-margin: var(--tab-first-last-inline-margin) !important;
             padding-inline: 0px !important;
 
-            @media -moz-pref("WaveFox.Toolbar.Roundings", 1) and /* Square Tabs */
-                   (not -moz-pref("WaveFox.HorizontalTabs.AttachedTabs.Shape"))
-            {
-                --tab-first-last-inline-margin: var(--toolbar-padding-inline) !important;
-                --tab-border-radius: 0px !important;
-            }
-
             &[visuallyselected]
             {
                 z-index: 2 !important;
-
-                .tab-background
-                {
-                    background-color: var(--toolbar-background-color) !important;
-                }
-
-                .tab-content
-                {
-                    color: var(--toolbar-text-color) !important;
-                }
             }
 
             &:not([visuallyselected])
@@ -249,11 +211,6 @@ tab-split-view-wrapper
                 &[multiselected]
                 {
                     z-index: 1 !important;
-                    
-                    .tab-background
-                    {
-                        box-shadow: inset 0px 1px 0px var(--tab-loading-fill) !important;
-                    }
                 }
             }
 
@@ -276,11 +233,6 @@ tab-split-view-wrapper
                     close
                 );
 
-                .tab-context-line
-                {
-                    margin: 0px !important;
-                }
-
                 .tab-loading-burst::before
                 {
                     margin-inline-start: 0px !important;
@@ -299,18 +251,6 @@ tab-split-view-wrapper
         {
             margin-inline-end: var(--tab-first-last-inline-margin) !important;
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
 
         /* Custom shapes */
 
