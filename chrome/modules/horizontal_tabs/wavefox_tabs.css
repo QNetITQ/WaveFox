@@ -151,7 +151,7 @@ tab-split-view-wrapper
 {
     :root
     {
-        --tab-first-last-inline-margin: clamp(0px, var(--tab-border-radius), calc(var(--tab-min-height) / 2)) !important;
+        --tab-first-last-inline-margin: clamp(4px, var(--tab-border-radius), calc(var(--tab-min-height) / 2)) !important;
         --tab-min-height: 36px !important;
 
         &[uidensity="compact"]
