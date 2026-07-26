@@ -1,4 +1,4 @@
-# *WaveFox-Nova*
+# *WaveFox Nova*
 
 ![WaveFox_Preview](https://github.com/QNetITQ/WaveFox/assets/85301851/268bda8c-b987-45d1-966b-59992c18e66e)
 
@@ -7,7 +7,7 @@
 [Download Firefox](https://www.mozilla.org/en-US/firefox/all/#product-desktop-release) / [Download WaveFox](https://github.com/QNetITQ/WaveFox/releases) / [WaveFox Nightly](https://github.com/QNetITQ/WaveFox/tree/WaveFox-Nightly)
 
 <details>
-  <summary>WaveFox-Nova v0.5.154</summary>
+  <summary>WaveFox Nova v0.5.154</summary>
 
 - ##### Minimum Requirements
   - Firefox 154
@@ -35,8 +35,8 @@ This setting makes tabs one with the browser toolbar. Depends on the corner roun
 Requires OS with transparency support. Works only with the system theme. When enabled together with compact mode, it expands to the browser toolbar.
 ![Снимок5](https://github.com/QNetITQ/WaveFox/assets/85301851/3b4dcfc8-217d-48a1-aba7-1621f9375f67)
 
-- `WaveFox.OS.Transparency`
-  - `WaveFox.OS.Transparency.TextColor.White`
+- `WaveFox.HorizontalTabs.OS.Transparency`
+  - `WaveFox.HorizontalTabs.OS.Transparency.TextColor.White`
 
 ### Toolbar Roundings
 Ability to control the rounding of browser bar elements.
