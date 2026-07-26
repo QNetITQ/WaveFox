@@ -89,7 +89,6 @@ The keys below are relevant only for the second option.
 ### Floating Web Page
 ![изображение](https://github.com/user-attachments/assets/26a19f9a-642b-4a10-a4f9-80d87cc42bdc)
 
-- `WaveFox.HorizontalTabs.FloatingWebPage`
 - `WaveFox.VerticalTabs.FloatingWebPage`
 
 ### Toolbar Autohide
