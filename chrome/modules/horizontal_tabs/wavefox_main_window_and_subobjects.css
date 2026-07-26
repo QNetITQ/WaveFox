@@ -9,7 +9,8 @@
     }
 }
 
-@media -moz-pref("WaveFox.HorizontalTabs.Toolbar.Compact")
+@media -moz-pref("WaveFox.HorizontalTabs.Toolbar.Compact", 1) or
+       -moz-pref("WaveFox.HorizontalTabs.Toolbar.Compact", 2)
 {
     #navigator-toolbox
     {
@@ -30,6 +31,18 @@
             background-repeat: var(--toolbox-background-repeat) !important;
             background-position: var(--toolbox-background-position) !important;
             background-size: var(--toolbox-background-size) !important;
+        }
+
+        @media -moz-pref("WaveFox.HorizontalTabs.Toolbar.Compact", 2)
+        {
+            --chrome-window-gap: 0px !important;
+            --chrome-block-radius: 0px !important;
+            
+            .browserContainer
+            {
+                border-inline: none !important;
+                border-bottom: none !important;
+            }
         }
     }
 }
