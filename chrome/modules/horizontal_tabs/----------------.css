@@ -1,0 +1,44 @@
+@media not -moz-pref("WaveFox.ClassicLook", false)
+{
+    @media not -moz-pref("WaveFox.HorizontalTabs.AttachedTabs")
+    {
+            body
+            {
+                background-color: var(--toolbar-background-color) !important;
+                background-image: var(--toolbox-background-image) !important;
+                background-repeat: var(--toolbox-background-repeat) !important;
+                background-position: var(--toolbox-background-position) !important;
+                background-size: var(--toolbox-background-size) !important;
+            }
+
+            #navigator-toolbox
+            {
+                --chrome-window-gap: 0px;
+                --chrome-block-radius: 0px;
+                --chrome-content-separator-color: none;
+                background-color: transparent !important;
+                background-image: none !important;
+            }
+      }
+  
+    @media -moz-pref("WaveFox.HorizontalTabs.AttachedTabs")
+    {
+            body
+            {
+                background-color: var(--toolbar-background-color) !important;
+                background-image: var(--toolbox-background-image) !important;
+                background-repeat: var(--toolbox-background-repeat) !important;
+                background-position: var(--toolbox-background-position) !important;
+                background-size: var(--toolbox-background-size) !important;
+            }
+
+            #navigator-toolbox
+            {
+                --chrome-window-gap: 0px;
+                --chrome-block-radius: 0px;
+                --chrome-content-separator-color: none;
+                background-color: transparent !important;
+                background-image: none !important;
+            }
+      }
+}
