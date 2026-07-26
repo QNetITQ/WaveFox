@@ -1,44 +1,35 @@
-@media not -moz-pref("WaveFox.ClassicLook", false)
+#navigator-toolbox > *
 {
+    border: none !important;
+        
     @media not -moz-pref("WaveFox.HorizontalTabs.AttachedTabs")
     {
-            body
-            {
-                background-color: var(--toolbar-background-color) !important;
-                background-image: var(--toolbox-background-image) !important;
-                background-repeat: var(--toolbox-background-repeat) !important;
-                background-position: var(--toolbox-background-position) !important;
-                background-size: var(--toolbox-background-size) !important;
-            }
+        background-color: transparent !important;
+        color: inherit !important;
+    }
+}
 
-            #navigator-toolbox
-            {
-                --chrome-window-gap: 0px;
-                --chrome-block-radius: 0px;
-                --chrome-content-separator-color: none;
-                background-color: transparent !important;
-                background-image: none !important;
-            }
-      }
-  
-    @media -moz-pref("WaveFox.HorizontalTabs.AttachedTabs")
+@media -moz-pref("WaveFox.HorizontalTabs.Toolbar.Compact")
+{
+    #navigator-toolbox
     {
-            body
-            {
-                background-color: var(--toolbar-background-color) !important;
-                background-image: var(--toolbox-background-image) !important;
-                background-repeat: var(--toolbox-background-repeat) !important;
-                background-position: var(--toolbox-background-position) !important;
-                background-size: var(--toolbox-background-size) !important;
-            }
-
-            #navigator-toolbox
-            {
-                --chrome-window-gap: 0px;
-                --chrome-block-radius: 0px;
-                --chrome-content-separator-color: none;
-                background-color: transparent !important;
-                background-image: none !important;
-            }
-      }
+        margin: 0px !important;
+        border-radius: 0px !important;
+        border: none !important;
+    }
+    
+    #browser
+    {
+        background-color: var(--toolbar-background-color) !important;
+        will-change: background-color !important;
+        transition: background-color var(--inactive-window-transition) !important;
+        
+        @media not -moz-pref("WaveFox.HorizontalTabs.AttachedTabs")
+        {
+            background-image: var(--toolbox-background-image) !important;
+            background-repeat: var(--toolbox-background-repeat) !important;
+            background-position: var(--toolbox-background-position) !important;
+            background-size: var(--toolbox-background-size) !important;
+        }
+    }
 }
