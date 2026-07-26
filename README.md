@@ -42,7 +42,7 @@ Requires OS with transparency support. Works only with the system theme. When en
 Ability to control the rounding of browser bar elements.
 <img width="1778" height="120" alt="изображение" src="https://github.com/user-attachments/assets/ec10f079-fabc-4bdf-bfa5-ccd3125d5792" />
 
-- `WaveFox.Toolbar.Roundings` > 1 or 2 or 3 or 4 or 5
+- `WaveFox.Toolbar.Roundings` > 1 or 2 or 3 or 4
 
 ### Tab Separators
 ![изображение](https://user-images.githubusercontent.com/85301851/152351312-f6ad4578-e7d5-40b7-8b2d-49388a750f54.png)
