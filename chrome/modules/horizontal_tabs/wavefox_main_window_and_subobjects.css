@@ -49,7 +49,7 @@
 
 /* Transparency */
 
-@media -moz-pref("WaveFox.OS.Transparency") and
+@media -moz-pref("WaveFox.HorizontalTabs.OS.Transparency") and
        -moz-pref("extensions.activeThemeID", 'default-theme@mozilla.org')
 {
     #main-window
@@ -80,7 +80,7 @@
                 }
             }
             
-            @media -moz-pref("WaveFox.OS.Transparency.TextColor.White")
+            @media -moz-pref("WaveFox.HorizontalTabs.OS.Transparency.TextColor.White")
             {
                 color: white !important;
                 
