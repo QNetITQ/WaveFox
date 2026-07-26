@@ -18,6 +18,11 @@
 
 ## Optional
 
+### Compact mode
+<img width="1776" height="105" alt="изображение" src="https://github.com/user-attachments/assets/055deaa7-4681-4fe4-923c-610f4ef967cd" />
+
+- `WaveFox.HorizontalTabs.Toolbar.Compact`
+
 ### Tab Shapes
 This setting makes tabs one with the browser toolbar. Depends on the corner rounding settings or custom tab shapes.
 <img width="1794" height="103" alt="изображение" src="https://github.com/user-attachments/assets/665f7f02-4869-46ab-bb65-6ffe83ca36c2" />
