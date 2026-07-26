@@ -31,19 +31,12 @@ This setting makes tabs one with the browser toolbar. Depends on the corner roun
   - `WaveFox.HorizontalTabs.AttachedTabs.Shape` > 1 or 2 or 3 or 4
     - `WaveFox.HorizontalTabs.AttachedTabs.Shape.Mode` > 1 or 2
 
-### Windows 10 Transparency
-Install [DWMBlurGlass](https://github.com/Maplespe/DWMBlurGlass). Configure to your liking and activate the keys below. Works only with the system theme.
-![изображение](https://github.com/user-attachments/assets/632c972f-b48a-4ca6-8c69-28859e34485b)
-
-- `WaveFox.Windows10.Transparency.Enabled` and `browser.tabs.inTitlebar > 1`
-
-### Linux Transparency
-Requires Linux with transparency support. Works only with the system theme.
-
+### Windows / Linux / MacOS Transparency
+Requires OS with transparency support. Works only with the system theme. When enabled together with compact mode, it expands to the browser toolbar.
 ![Снимок5](https://github.com/QNetITQ/WaveFox/assets/85301851/3b4dcfc8-217d-48a1-aba7-1621f9375f67)
 
-- `WaveFox.Linux.Transparency.Enabled` and `browser.tabs.inTitlebar > 1`
-  - `WaveFox.Linux.Transparency.TextColor.White.Enabled`
+- `WaveFox.OS.Transparency`
+  - `WaveFox.OS.Transparency.TextColor.White`
 
 ### Toolbar Roundings
 Ability to control the rounding of browser bar elements.
