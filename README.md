@@ -31,12 +31,11 @@ This setting makes tabs one with the browser toolbar. Depends on the corner roun
   - `WaveFox.HorizontalTabs.AttachedTabs.Shape` > 1 or 2 or 3 or 4
     - `WaveFox.HorizontalTabs.AttachedTabs.Shape.Mode` > 1 or 2
 
-### Windows / Linux / MacOS Transparency
+### Windows / Linux / MacOS System Theme
 Requires OS with transparency support. Works only with the system theme. When enabled together with compact mode, it expands to the browser toolbar.
 ![Снимок5](https://github.com/QNetITQ/WaveFox/assets/85301851/3b4dcfc8-217d-48a1-aba7-1621f9375f67)
 
-- `WaveFox.HorizontalTabs.OS.Transparency`
-  - `WaveFox.HorizontalTabs.OS.Transparency.TextColor.White`
+- `WaveFox.HorizontalTabs.OS.SystemTheme`
 
 ### Toolbar Roundings
 Ability to control the rounding of browser bar elements.
