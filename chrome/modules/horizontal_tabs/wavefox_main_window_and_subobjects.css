@@ -11,8 +11,7 @@
 
 /* Compact Mode */
 
-@media -moz-pref("WaveFox.HorizontalTabs.Toolbar.Compact", 1) or
-       -moz-pref("WaveFox.HorizontalTabs.Toolbar.Compact", 2)
+@media -moz-pref("WaveFox.HorizontalTabs.Toolbar.Compact")
 {
     body
     {
@@ -41,23 +40,6 @@
             background-color: var(--toolbar-background-color) !important;
         }
     }
-
-    /*
-    @media -moz-pref("WaveFox.HorizontalTabs.Toolbar.Compact", 2)
-    {
-        #browser:has(#sidebar-container[hidden], #tabbrowser-tabpanels:not([splitview]))
-        {
-            padding: 0px !important;
-            
-            #tabbrowser-tabpanels > :not(.split-view-panel) .browserContainer
-            {
-                border-radius: 0px !important;
-                border-inline: none !important;
-                border-bottom: none !important;
-            }
-        }
-    }
-    */
 }
 
 /* OS System Theme */
@@ -65,13 +47,75 @@
 @media -moz-pref("WaveFox.HorizontalTabs.OS.SystemTheme") and
        -moz-pref("extensions.activeThemeID", 'default-theme@mozilla.org')
 {
-    #main-window
+    #main-window,
+    body
     {
         background-color: transparent !important;
+    }
+}
 
-        body
-        {
-            background-color: transparent !important;
-        }
+
+
+
+
+
+
+
+/* Web Page */
+
+@media -moz-pref("WaveFox.HorizontalTabs.WebPage.Compact")
+{
+    #browser
+    {
+        padding: 0px !important;
+        gap: 0px !important;
+    }
+
+    #sidebar-container
+    {
+        border: none !important;
+        border-radius: 0px !important;
+        box-shadow: var(--content-area-shadow) !important;
+        z-index: 2 !important;
+    }
+
+    #sidebar-box
+    {
+        margin: 0px !important;
+        border: none !important;
+        border-radius: 0px !important;
+        box-shadow: var(--content-area-shadow) !important;
+    }
+
+    #sidebar-splitter
+    {
+        width: 4px !important;
+        margin-block: 0px !important;
+        margin-inline: -2px !important;
+    }
+
+    .browserContainer
+    {
+        border: none !important;
+        border-radius: 0px !important;
+        box-shadow: var(--content-area-shadow) !important;
+    }
+
+    #tabbrowser-tabpanels[splitview] .browserContainer
+    {
+        outline: none !important;
+    }
+
+    .split-view-panel
+    {
+        margin: 0px !important;
+    }
+
+    .split-view-splitter
+    {
+        width: 4px !important;
+        margin-block: 0px !important;
+        margin-inline: -2px !important;
+        z-index: 1 !important;
     }
 }
