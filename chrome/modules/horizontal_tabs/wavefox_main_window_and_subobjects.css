@@ -9,47 +9,60 @@
     }
 }
 
+/* Compact Mode */
+
 @media -moz-pref("WaveFox.HorizontalTabs.Toolbar.Compact", 1) or
        -moz-pref("WaveFox.HorizontalTabs.Toolbar.Compact", 2)
 {
-    #navigator-toolbox
-    {
-        margin: 0px !important;
-        border-radius: 0px !important;
-        border: none !important;
-    }
-    
-    #browser
+    body
     {
         background-color: var(--toolbar-background-color) !important;
+        background-image: var(--toolbox-background-image) !important;
+        background-repeat: var(--toolbox-background-repeat) !important;
+        background-position: var(--toolbox-background-position) !important;
+        background-size: var(--toolbox-background-size) !important;
         will-change: background-color !important;
         transition: background-color var(--inactive-window-transition) !important;
-        
-        @media not -moz-pref("WaveFox.HorizontalTabs.AttachedTabs")
-        {
-            background-image: var(--toolbox-background-image) !important;
-            background-repeat: var(--toolbox-background-repeat) !important;
-            background-position: var(--toolbox-background-position) !important;
-            background-size: var(--toolbox-background-size) !important;
-        }
+    }
 
-        @media -moz-pref("WaveFox.HorizontalTabs.Toolbar.Compact", 2)
+    #navigator-toolbox
+    {
+        background-color: transparent !important;
+        background-image: none !important;
+        margin: 0px !important;
+        border: none !important;
+        border-radius: 0px !important;
+    }
+
+    @media -moz-pref("WaveFox.HorizontalTabs.AttachedTabs")
+    {
+        #browser
         {
-            --chrome-window-gap: 0px !important;
-            --chrome-block-radius: 0px !important;
+            background-color: var(--toolbar-background-color) !important;
+        }
+    }
+
+    /*
+    @media -moz-pref("WaveFox.HorizontalTabs.Toolbar.Compact", 2)
+    {
+        #browser:has(#sidebar-container[hidden], #tabbrowser-tabpanels:not([splitview]))
+        {
+            padding: 0px !important;
             
-            .browserContainer
+            #tabbrowser-tabpanels > :not(.split-view-panel) .browserContainer
             {
+                border-radius: 0px !important;
                 border-inline: none !important;
                 border-bottom: none !important;
             }
         }
     }
+    */
 }
 
-/* Transparency */
+/* OS System Theme */
 
-@media -moz-pref("WaveFox.HorizontalTabs.OS.Transparency") and
+@media -moz-pref("WaveFox.HorizontalTabs.OS.SystemTheme") and
        -moz-pref("extensions.activeThemeID", 'default-theme@mozilla.org')
 {
     #main-window
@@ -59,36 +72,6 @@
         body
         {
             background-color: transparent !important;
-
-            @media -moz-pref("WaveFox.HorizontalTabs.Toolbar.Compact", 1) or
-                   -moz-pref("WaveFox.HorizontalTabs.Toolbar.Compact", 2)
-            {
-                #navigator-toolbox,
-                #browser
-                {
-                    background-color: transparent !important;
-                    background-image: none !important;
-                }
-                
-                @media -moz-pref("WaveFox.HorizontalTabs.Toolbar.Compact", 1) and
-                       -moz-pref("WaveFox.HorizontalTabs.AttachedTabs")
-                {
-                    #browser
-                    {
-                        background-color: var(--toolbar-background-color) !important;
-                    }
-                }
-            }
-            
-            @media -moz-pref("WaveFox.HorizontalTabs.OS.Transparency.TextColor.White")
-            {
-                color: white !important;
-                
-                #navigator-toolbox
-                {
-                    color: inherit !important;
-                }
-            }
         }
     }
 }
