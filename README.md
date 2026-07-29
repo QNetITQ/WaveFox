@@ -24,6 +24,7 @@
 - `WaveFox.HorizontalTabs.Toolbar.Compact`
 
 ### Compact Web Page
+Works only with the Compact Mode option.
 <img width="1738" height="892" alt="изображение" src="https://github.com/user-attachments/assets/7f39bae0-1c03-4579-9400-1a083496b1a2" />
 
 - `WaveFox.HorizontalTabs.WebPage.Compact`
