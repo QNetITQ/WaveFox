@@ -54,16 +54,10 @@
     }
 }
 
-
-
-
-
-
-
-
 /* Web Page */
 
-@media -moz-pref("WaveFox.HorizontalTabs.WebPage.Compact")
+@media -moz-pref("WaveFox.HorizontalTabs.WebPage.Compact") and
+       -moz-pref("WaveFox.HorizontalTabs.Toolbar.Compact")
 {
     #browser
     {
@@ -73,49 +67,51 @@
 
     #sidebar-container
     {
+        outline: 1px solid var(--chrome-content-separator-color) !important;
         border: none !important;
         border-radius: 0px !important;
-        box-shadow: var(--content-area-shadow) !important;
-        z-index: 2 !important;
+        z-index: 3 !important;
     }
 
     #sidebar-box
     {
+        outline: 1px solid var(--chrome-content-separator-color) !important;
         margin: 0px !important;
         border: none !important;
         border-radius: 0px !important;
-        box-shadow: var(--content-area-shadow) !important;
     }
 
     #sidebar-splitter
     {
         width: 4px !important;
-        margin-block: 0px !important;
-        margin-inline: -2px !important;
-    }
-
-    .browserContainer
-    {
-        border: none !important;
         border-radius: 0px !important;
-        box-shadow: var(--content-area-shadow) !important;
-    }
-
-    #tabbrowser-tabpanels[splitview] .browserContainer
-    {
-        outline: none !important;
-    }
-
-    .split-view-panel
-    {
         margin: 0px !important;
     }
 
-    .split-view-splitter
+    #tabbrowser-tabbox
     {
-        width: 4px !important;
-        margin-block: 0px !important;
-        margin-inline: -2px !important;
-        z-index: 1 !important;
+        .browserContainer
+        {
+            outline: 1px solid var(--chrome-content-separator-color) !important;
+            border: none !important;
+            border-radius: 0px !important;
+            box-shadow: none !important;
+        }
+        
+        #tabbrowser-tabpanels[splitview]
+        {
+            .split-view-panel
+            {
+                overflow: visible !important;
+                margin: 0px !important;
+            }
+            
+            .split-view-splitter
+            {
+                width: 4px !important;
+                border-radius: 0px !important;
+                margin: 0px !important;
+            }
+        }
     }
 }
