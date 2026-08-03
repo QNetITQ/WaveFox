@@ -18,13 +18,7 @@
 
 ## Optional
 
-### Compact Mode
-<img width="1776" height="105" alt="изображение" src="https://github.com/user-attachments/assets/055deaa7-4681-4fe4-923c-610f4ef967cd" />
-
-- `WaveFox.HorizontalTabs.Toolbar.Compact`
-
 ### Compact Web Page
-Works only with the Compact Mode option.
 <img width="1738" height="892" alt="изображение" src="https://github.com/user-attachments/assets/7f39bae0-1c03-4579-9400-1a083496b1a2" />
 
 - `WaveFox.HorizontalTabs.WebPage.Compact`
@@ -38,7 +32,7 @@ This setting makes tabs one with the browser toolbar. Depends on the corner roun
     - `WaveFox.HorizontalTabs.AttachedTabs.Shape.Mode` > 1 or 2
 
 ### Windows / Linux / MacOS System Theme
-Requires OS with transparency support. Works only with the system theme. When enabled together with compact mode, it expands to the browser toolbar.
+Requires OS with transparency support. Works only with the system theme.
 ![Снимок5](https://github.com/QNetITQ/WaveFox/assets/85301851/3b4dcfc8-217d-48a1-aba7-1621f9375f67)
 
 - `WaveFox.HorizontalTabs.OS.SystemTheme`
