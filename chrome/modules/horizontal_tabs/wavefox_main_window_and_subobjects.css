@@ -1,15 +1,5 @@
-body
-{
-    background-image: var(--toolbox-background-image) !important;
-    background-repeat: var(--toolbox-background-repeat) !important;
-    background-position: var(--toolbox-background-position) !important;
-    background-size: var(--toolbox-background-size) !important;
-}
-
 #navigator-toolbox
 {
-    background-color: transparent !important;
-    background-image: none !important;
     margin: 0px !important;
     border: none !important;
     border-radius: 0px !important;
@@ -73,7 +63,12 @@ body
     body
     {
         background-color: transparent !important;
-        background-image: none !important;
+        
+        #navigator-toolbox
+        {
+            background-color: transparent !important;
+            background-image: none !important;
+        }
     }
 }
 
