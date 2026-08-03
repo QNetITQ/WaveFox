@@ -1,43 +1,65 @@
-#navigator-toolbox > *
+body
 {
+    background-image: var(--toolbox-background-image) !important;
+    background-repeat: var(--toolbox-background-repeat) !important;
+    background-position: var(--toolbox-background-position) !important;
+    background-size: var(--toolbox-background-size) !important;
+}
+
+#navigator-toolbox
+{
+    background-color: transparent !important;
+    background-image: none !important;
+    margin: 0px !important;
     border: none !important;
-        
-    @media not -moz-pref("WaveFox.HorizontalTabs.AttachedTabs")
+    border-radius: 0px !important;
+    
+    & > *
     {
-        background-color: transparent !important;
-        color: inherit !important;
+        border: none !important;
+    }
+    
+    #nav-bar
+    {
+        border-top: 1px solid var(--chrome-content-separator-color) !important;
     }
 }
 
-/* Compact Mode */
-
-@media -moz-pref("WaveFox.HorizontalTabs.Toolbar.Compact")
+#browser
 {
-    body
-    {
-        background-color: var(--toolbar-background-color) !important;
-        background-image: var(--toolbox-background-image) !important;
-        background-repeat: var(--toolbox-background-repeat) !important;
-        background-position: var(--toolbox-background-position) !important;
-        background-size: var(--toolbox-background-size) !important;
-        will-change: background-color !important;
-        transition: background-color var(--inactive-window-transition) !important;
-    }
+    background-color: var(--toolbar-background-color) !important;
+    color: var(--toolbar-text-color) !important;
+}
 
-    #navigator-toolbox
-    {
-        background-color: transparent !important;
-        background-image: none !important;
-        margin: 0px !important;
-        border: none !important;
-        border-radius: 0px !important;
-    }
+/* Web Page */
 
-    @media -moz-pref("WaveFox.HorizontalTabs.AttachedTabs")
+#browser
+{
+    #sidebar-splitter
     {
-        #browser
+        width: 4px !important;
+        margin-block: 0px !important;
+        margin-inline: -4px !important;
+    }
+    
+    #tabbrowser-tabbox
+    {
+        .split-view-panel
         {
-            background-color: var(--toolbar-background-color) !important;
+            margin: 0px !important;
+        }
+
+        .split-view-splitter
+        {
+            width: 4px !important;
+            margin: 0px !important;
+        }
+
+        .browserContainer
+        {
+            outline: none !important;
+            border: 1px solid var(--chrome-content-separator-color) !important;
+            box-shadow: none !important;
         }
     }
 }
@@ -51,66 +73,45 @@
     body
     {
         background-color: transparent !important;
+        background-image: none !important;
     }
 }
 
 /* Web Page */
 
-@media -moz-pref("WaveFox.HorizontalTabs.WebPage.Compact") and
-       -moz-pref("WaveFox.HorizontalTabs.Toolbar.Compact")
+@media -moz-pref("WaveFox.HorizontalTabs.WebPage.Compact")
 {
     #browser
     {
         padding: 0px !important;
         gap: 0px !important;
-    }
+        border-top: 1px solid var(--chrome-content-separator-color) !important;
+        
 
-    #sidebar-container
-    {
-        outline: 1px solid var(--chrome-content-separator-color) !important;
-        border: none !important;
-        border-radius: 0px !important;
-        z-index: 3 !important;
-    }
-
-    #sidebar-box
-    {
-        outline: 1px solid var(--chrome-content-separator-color) !important;
-        margin: 0px !important;
-        border: none !important;
-        border-radius: 0px !important;
-    }
-
-    #sidebar-splitter
-    {
-        width: 4px !important;
-        border-radius: 0px !important;
-        margin: 0px !important;
-    }
-
-    #tabbrowser-tabbox
-    {
-        .browserContainer
+        #sidebar-container
         {
-            outline: 1px solid var(--chrome-content-separator-color) !important;
             border: none !important;
             border-radius: 0px !important;
-            box-shadow: none !important;
         }
-        
-        #tabbrowser-tabpanels[splitview]
+
+        #sidebar-box
         {
-            .split-view-panel
+            margin: 0px !important;
+            border: none !important;
+            border-radius: 0px !important;
+        }
+
+        #sidebar-splitter
+        {
+            margin: 0px !important;
+        }
+
+        #tabbrowser-tabbox
+        {
+            .browserContainer
             {
-                overflow: visible !important;
-                margin: 0px !important;
-            }
-            
-            .split-view-splitter
-            {
-                width: 4px !important;
+                border: none !important;
                 border-radius: 0px !important;
-                margin: 0px !important;
             }
         }
     }
