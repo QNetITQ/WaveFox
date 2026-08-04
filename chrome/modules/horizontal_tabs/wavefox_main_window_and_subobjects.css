@@ -13,7 +13,7 @@ body
     margin: 0px !important;
     border: none !important;
     border-radius: 0px !important;
-
+    
     #nav-bar
     {
         background-color: transparent !important;
@@ -24,6 +24,28 @@ body
 {
     background-color: var(--toolbar-background-color) !important;
     color: var(--toolbar-text-color) !important;
+}
+
+@media -moz-pref("WaveFox.HorizontalTabs.AttachedTabs")
+{
+    #navigator-toolbox
+    {
+        & > *
+        {
+            border: none !important;
+        }
+
+        #nav-bar
+        {
+            background-color: var(--toolbar-background-color) !important;
+        }
+    }
+    
+    #browser
+    {
+        background-color: var(--toolbar-background-color) !important;
+        color: var(--toolbar-text-color) !important;
+    }
 }
 
 /* Web Page */
