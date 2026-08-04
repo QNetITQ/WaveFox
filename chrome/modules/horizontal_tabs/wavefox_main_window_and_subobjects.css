@@ -1,21 +1,26 @@
+body
+{
+    background-image: var(--toolbox-background-image) !important;
+    background-repeat: var(--toolbox-background-repeat) !important;
+    background-position: var(--toolbox-background-position) !important;
+    background-size: var(--toolbox-background-size) !important;
+}
+
 #navigator-toolbox
 {
+    background-color: transparent !important;
+    background-image: none !important;
     margin: 0px !important;
     border: none !important;
     border-radius: 0px !important;
-    
-    & > *
-    {
-        border: none !important;
-    }
-    
+
     #nav-bar
     {
-        border-top: 1px solid var(--chrome-content-separator-color) !important;
+        background-color: transparent !important;
     }
 }
 
-#browser
+#navigator-toolbox:has(#PersonalToolbar:not([collapsed])) + #browser
 {
     background-color: var(--toolbar-background-color) !important;
     color: var(--toolbar-text-color) !important;
@@ -63,12 +68,7 @@
     body
     {
         background-color: transparent !important;
-        
-        #navigator-toolbox
-        {
-            background-color: transparent !important;
-            background-image: none !important;
-        }
+        background-image: none !important;
     }
 }
 
@@ -99,10 +99,17 @@
         #sidebar-splitter
         {
             margin: 0px !important;
+            margin-inline: -2px !important;
         }
 
         #tabbrowser-tabbox
         {
+            .split-view-splitter
+            {
+                margin-inline: -2px !important;
+                z-index: 1 !important;
+            }
+
             .browserContainer
             {
                 border: none !important;
