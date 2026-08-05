@@ -14,37 +14,23 @@ body
     border: none !important;
     border-radius: 0px !important;
     
-    #nav-bar
+    & > *
     {
         background-color: transparent !important;
+        border: none !important;
     }
-}
-
-#navigator-toolbox:has(#PersonalToolbar:not([collapsed])) + #browser
-{
-    background-color: var(--toolbar-background-color) !important;
-    color: var(--toolbar-text-color) !important;
 }
 
 @media -moz-pref("WaveFox.HorizontalTabs.AttachedTabs")
 {
-    #navigator-toolbox
+    #navigator-toolbox > *:not(.browser-titlebar)
     {
-        & > *
-        {
-            border: none !important;
-        }
-
-        #nav-bar
-        {
-            background-color: var(--toolbar-background-color) !important;
-        }
+        background-color: var(--toolbar-background-color) !important;
     }
     
     #browser
     {
         background-color: var(--toolbar-background-color) !important;
-        color: var(--toolbar-text-color) !important;
     }
 }
 
