@@ -36,6 +36,7 @@ Requires OS with transparency support. Works only with the system theme.
 ![Снимок5](https://github.com/QNetITQ/WaveFox/assets/85301851/3b4dcfc8-217d-48a1-aba7-1621f9375f67)
 
 - `WaveFox.HorizontalTabs.OS.SystemTheme`
+- `WaveFox.VerticalTabs.OS.SystemTheme`
 
 ### Toolbar Roundings
 Ability to control the rounding of browser bar elements.
