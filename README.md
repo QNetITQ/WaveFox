@@ -2,6 +2,8 @@
 
 ![WaveFox_Preview](https://github.com/QNetITQ/WaveFox/assets/85301851/268bda8c-b987-45d1-966b-59992c18e66e)
 
+![visitor badge](https://visitor-badge.laobi.icu/badge?page_id=QNetITQ.WaveFox&left_text=My%20Page%20Visitors)
+
 ## Installation
 
 [Download Firefox](https://www.mozilla.org/en-US/firefox/all/#product-desktop-release) / [Download WaveFox](https://github.com/QNetITQ/WaveFox/releases) / [WaveFox Nightly](https://github.com/QNetITQ/WaveFox/tree/WaveFox-Nightly)
