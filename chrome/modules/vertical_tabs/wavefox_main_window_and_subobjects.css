@@ -1,0 +1,92 @@
+body
+{
+    background-image: var(--toolbox-background-image) !important;
+    background-repeat: var(--toolbox-background-repeat) !important;
+    background-position: var(--toolbox-background-position) !important;
+    background-size: var(--toolbox-background-size) !important;
+}
+
+#navigator-toolbox
+{
+    background-color: transparent !important;
+    background-image: none !important;
+    margin: 0px !important;
+    border: none !important;
+    border-radius: 0px !important;
+    
+    & > *
+    {
+        background-color: transparent !important;
+        border: none !important;
+    }
+}
+
+/* OS System Theme */
+
+@media -moz-pref("WaveFox.VerticalTabs.OS.SystemTheme") and
+       -moz-pref("extensions.activeThemeID", 'default-theme@mozilla.org')
+{
+    #main-window,
+    body
+    {
+        background-color: transparent !important;
+        background-image: none !important;
+    }
+}
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+#browser
+{
+    padding: 0px !important;
+    gap: 0px !important;
+    
+    #sidebar-container
+    {
+        background-color: transparent !important;
+        border: none !important;
+        border-radius: 0px !important;
+    }
+    
+    #sidebar-launcher-splitter
+    {
+        width: 4px !important;
+        margin: 0px !important;
+    }
+    
+    #sidebar-box
+    {
+        border: 1px solid var(--chrome-content-separator-color) !important;
+        border-radius: var(--chrome-block-radius) !important;
+    }
+    
+     #sidebar-splitter
+    {
+        width: 4px !important;
+        margin: 0px !important;
+    }
+}
+
+:root[sidebar-expand-on-hover]
+{
+    #browser
+    {
+        #sidebar-container
+        {
+            &[sidebar-launcher-expanded], 
+            &[sidebar-ongoing-animations]:not([sidebar-launcher-expanded]) 
+            {
+                background-color: var(--toolbar-background-color) !important;
+                background-image: var(--toolbox-background-image) !important;
+                background-repeat: var(--toolbox-background-repeat) !important;
+                background-position: var(--toolbox-background-position) !important;
+                background-size: var(--toolbox-background-size) !important;
+            }
+        }
+        
+        #sidebar-launcher-splitter
+        {
+            display: none !important;
+        }
+    }
+}

@@ -4,17 +4,6 @@
 {
     :root
     {
-        --border-radius-xsmall: 0px !important;
-        --border-radius-small: 0px !important;
-        --border-radius-medium: 0px !important;
-        --border-radius-large: 0px !important;
-    }
-}
-
-@media -moz-pref("WaveFox.Toolbar.Roundings", 2)
-{
-    :root
-    {
         --border-radius-xsmall: 4px !important;
         --border-radius-small: 4px !important;
         --border-radius-medium: 4px !important;
@@ -22,7 +11,7 @@
     }
 }
 
-@media -moz-pref("WaveFox.Toolbar.Roundings", 3)
+@media -moz-pref("WaveFox.Toolbar.Roundings", 2)
 {
     :root
     {
@@ -33,7 +22,7 @@
     }
 }
 
-@media -moz-pref("WaveFox.Toolbar.Roundings", 4)
+@media -moz-pref("WaveFox.Toolbar.Roundings", 3)
 {
     :root
     {
@@ -44,7 +33,7 @@
     }
 }
 
-@media -moz-pref("WaveFox.Toolbar.Roundings", 5)
+@media -moz-pref("WaveFox.Toolbar.Roundings", 4)
 {
     :root
     {

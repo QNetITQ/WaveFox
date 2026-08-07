@@ -2,6 +2,32 @@
        -moz-pref("extensions.activeThemeID", 'firefox-compact-light@mozilla.org') or
        -moz-pref("extensions.activeThemeID", 'firefox-compact-dark@mozilla.org')
 {
+    @media not -moz-pref("WaveFox.HorizontalTabs.AttachedTabs")
+    {
+        @scope (:root) to (tab-split-view-wrapper)
+        {
+            :scope
+            {
+                --wavefox-selected-tab-shadow-offset-x: 0px;
+                --wavefox-selected-tab-shadow-offset-y: 2px;
+                --wavefox-selected-tab-shadow-blur: 2px;
+                --wavefox-selected-tab-shadow-spread: 0px;
+                --wavefox-selected-tab-shadow-color: ThreeDShadow;
+
+                --wavefox-selected-tab-shadow: var(--wavefox-selected-tab-shadow-offset-x)
+                                               var(--wavefox-selected-tab-shadow-offset-y)
+                                               var(--wavefox-selected-tab-shadow-blur)
+                                               var(--wavefox-selected-tab-shadow-spread)
+                                               color-mix(in srgb, var(--wavefox-selected-tab-shadow-color) var(--wavefox-filter-shadow-saturation, 100%), transparent);
+
+                .tabbrowser-tab[visuallyselected] .tab-background
+                {
+                    box-shadow: var(--wavefox-selected-tab-shadow) !important;
+                }
+            }
+        }
+    }
+
     @media -moz-pref("WaveFox.HorizontalTabs.AttachedTabs")
     {
         @scope (:root) to (tab-group, tab-split-view-wrapper)
@@ -10,49 +36,27 @@
             {
                 --wavefox-selected-tab-filter-offset-x: 0px;
                 --wavefox-selected-tab-filter-offset-y: 0px;
-                --wavefox-selected-tab-filter-blur: 1px;
-                --wavefox-selected-tab-filter-color: rgb(0,0,0);
-
-                --wavefox-selected-tab-shadow-offset-x: 0px;
-                --wavefox-selected-tab-shadow-offset-y: 0px;
-                --wavefox-selected-tab-shadow-blur: 2px;
-                --wavefox-selected-tab-shadow-spread: 0px;
-                --wavefox-selected-tab-shadow-color: rgb(0,0,0);
+                --wavefox-selected-tab-filter-blur: 2px;
+                --wavefox-selected-tab-filter-color: ThreeDShadow;
 
                 --wavefox-inner-tabbar-shadow-offset-x: 0px;
-                --wavefox-inner-tabbar-shadow-offset-y: -2px;
-                --wavefox-inner-tabbar-shadow-blur: 2px;
-                --wavefox-inner-tabbar-shadow-spread: -2px;
-                --wavefox-inner-tabbar-shadow-color: rgb(0,0,0);
+                --wavefox-inner-tabbar-shadow-offset-y: -4px;
+                --wavefox-inner-tabbar-shadow-blur: 4px;
+                --wavefox-inner-tabbar-shadow-spread: -4px;
+                --wavefox-inner-tabbar-shadow-color: ThreeDShadow;
 
                 --wavefox-selected-tab-filter: drop-shadow(
                                                var(--wavefox-selected-tab-filter-offset-x)
                                                var(--wavefox-selected-tab-filter-offset-y)
                                                var(--wavefox-selected-tab-filter-blur)
-                                               color-mix(in srgb, var(--wavefox-selected-tab-filter-color) var(--wavefox-filter-shadow-saturation, 0%), transparent));
-
-                --wavefox-selected-tab-shadow: var(--wavefox-selected-tab-shadow-offset-x)
-                                               var(--wavefox-selected-tab-shadow-offset-y)
-                                               var(--wavefox-selected-tab-shadow-blur)
-                                               var(--wavefox-selected-tab-shadow-spread)
-                                               color-mix(in srgb, var(--wavefox-selected-tab-shadow-color) var(--wavefox-filter-shadow-saturation, 0%), transparent);
+                                               color-mix(in srgb, var(--wavefox-selected-tab-filter-color) var(--wavefox-filter-shadow-saturation, 100%), transparent));
 
                 --wavefox-inner-tabbar-shadow: inset
                                                var(--wavefox-inner-tabbar-shadow-offset-x)
                                                var(--wavefox-inner-tabbar-shadow-offset-y)
                                                var(--wavefox-inner-tabbar-shadow-blur)
                                                var(--wavefox-inner-tabbar-shadow-spread)
-                                               color-mix(in srgb, var(--wavefox-inner-tabbar-shadow-color) var(--wavefox-filter-shadow-saturation, 0%), transparent);
-
-                @media (prefers-color-scheme: light)
-                {
-                    --wavefox-filter-shadow-saturation: 25%;
-                }
-
-                @media (prefers-color-scheme: dark)
-                {
-                    --wavefox-filter-shadow-saturation: 100%;
-                }
+                                               color-mix(in srgb, var(--wavefox-inner-tabbar-shadow-color) var(--wavefox-filter-shadow-saturation, 100%), transparent);
 
                 #TabsToolbar
                 {
@@ -74,20 +78,9 @@
                     z-index: 2;
                 }
 
-                .tabbrowser-tab:is([visuallyselected], [multiselected])
+                .tabbrowser-tab[visuallyselected]
                 {
                     filter: var(--wavefox-selected-tab-filter) !important;
-                }
-
-                @media -moz-pref("WaveFox.HorizontalTabs.AttachedTabs.Shadows.Mode", 1)
-                {
-                    --wavefox-selected-tab-filter-blur: 2px;
-
-                    --wavefox-selected-tab-shadow-blur: 4px;
-
-                    --wavefox-inner-tabbar-shadow-offset-y: -4px;
-                    --wavefox-inner-tabbar-shadow-blur: 4px;
-                    --wavefox-inner-tabbar-shadow-spread: -4px;
                 }
             }
         }

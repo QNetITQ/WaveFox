@@ -1,4 +1,4 @@
-# *WaveFox*
+# *WaveFox Nova*
 
 ![WaveFox_Preview](https://github.com/QNetITQ/WaveFox/assets/85301851/268bda8c-b987-45d1-966b-59992c18e66e)
 
@@ -7,6 +7,88 @@
 ## Installation
 
 [Download Firefox](https://www.mozilla.org/en-US/firefox/all/#product-desktop-release) / [Download WaveFox](https://github.com/QNetITQ/WaveFox/releases) / [WaveFox Nightly](https://github.com/QNetITQ/WaveFox/tree/WaveFox-Nightly)
+
+<details>
+  <summary>WaveFox Nova v0.5.154</summary>
+
+- ##### Minimum Requirements
+  - Firefox 154
+  - Windows / MacOS / Linux
+
+- Download the `chrome` folder and put it in your user profile folder
+- Go to `about:config` and activate the key `toolkit.legacyUserProfileCustomizations.stylesheets` and `browser.nova.enabled`
+
+## Optional
+
+### Compact Web Page
+<img width="1738" height="892" alt="изображение" src="https://github.com/user-attachments/assets/7f39bae0-1c03-4579-9400-1a083496b1a2" />
+
+- `WaveFox.HorizontalTabs.WebPage.Compact`
+
+### Tab Shapes
+This setting makes tabs one with the browser toolbar. Depends on the corner rounding settings or custom tab shapes.
+<img width="1794" height="103" alt="изображение" src="https://github.com/user-attachments/assets/665f7f02-4869-46ab-bb65-6ffe83ca36c2" />
+
+- `WaveFox.HorizontalTabs.AttachedTabs` > true
+  - `WaveFox.HorizontalTabs.AttachedTabs.Shape` > 1 or 2 or 3 or 4
+    - `WaveFox.HorizontalTabs.AttachedTabs.Shape.Mode` > 1 or 2
+
+### Windows / Linux / MacOS System Theme
+Requires OS with transparency support. Works only with the system theme.
+![Снимок5](https://github.com/QNetITQ/WaveFox/assets/85301851/3b4dcfc8-217d-48a1-aba7-1621f9375f67)
+
+- `WaveFox.HorizontalTabs.OS.SystemTheme`
+- `WaveFox.VerticalTabs.OS.SystemTheme`
+
+### Toolbar Roundings
+Ability to control the rounding of browser bar elements.
+<img width="1778" height="120" alt="изображение" src="https://github.com/user-attachments/assets/ec10f079-fabc-4bdf-bfa5-ccd3125d5792" />
+
+- `WaveFox.Toolbar.Roundings` > 1 or 2 or 3 or 4
+
+### Tab Separators
+![изображение](https://user-images.githubusercontent.com/85301851/152351312-f6ad4578-e7d5-40b7-8b2d-49388a750f54.png)
+
+- `WaveFox.HorizontalTabs.Tabs.Separators` > 1 or 2
+
+### Icons (firefox-csshacks / Lepton) / (Horizontal and Vertical tabs)
+This is third-party code. I will update this code according to the original source.
+
+![изображение](https://user-images.githubusercontent.com/85301851/151192118-0cbdb5a7-a77f-4275-8841-2ac321657c86.png)
+
+- `svg.context-properties.content.enabled` (Required key)
+- `WaveFox.Icons` > 1 or 2 (Required key)
+
+The keys below are relevant only for the second option.
+  - `userChrome.icon.panel_full` or `userChrome.icon.panel_photon`
+  - `userChrome.icon.library`
+  - `userChrome.icon.panel`
+  - `userChrome.icon.menu`
+  - `userChrome.icon.context_menu`
+  - `userChrome.icon.global_menu`
+  - `userChrome.icon.global_menubar`
+  - `userChrome.icon.1-25px_stroke`
+  - `userChrome.icon.account_image_to_right`
+  - `userChrome.icon.account_label_to_right`
+  - `userChrome.icon.menu.full`
+  - `userChrome.icon.global_menu.mac`
+
+### Drag Space
+![изображение](https://user-images.githubusercontent.com/85301851/152680229-43547df0-1d2c-4384-b024-950e7aa56ca6.png)
+
+- `WaveFox.HorizontalTabs.AttachedTabs.DragSpace` > 1 or 2 or 3
+
+### Tabs Below URL
+![Снимок](https://github.com/QNetITQ/WaveFox/assets/85301851/514cf30d-a417-48cb-bfd1-0e77c9df1bf4)
+
+- `WaveFox.HorizontalTabs.FloatingTabs.TabsBelowURL`
+
+### One Line
+![Снимок](https://github.com/QNetITQ/WaveFox/assets/85301851/05bba314-643d-46f3-a09c-b3ac31f9761d)
+
+- `WaveFox.HorizontalTabs.FloatingTabs.OneLine`
+
+</details>
 
 <details>
   <summary>WaveFox v1.99.153 ESR</summary>

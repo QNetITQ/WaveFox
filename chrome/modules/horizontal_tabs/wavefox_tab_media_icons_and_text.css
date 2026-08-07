@@ -8,45 +8,23 @@
     {
         .tab-icon-overlay
         {
-            background-color: transparent !important;
+            background-color: var(--toolbar-background-color) !important;
             background-image: none !important;
+            color: var(--toolbar-text-color) !important;
             fill: currentColor !important;
-            border-radius: 50px !important;
-            top: 8px !important;
+            top: -8px !important;
             inset-inline-end: -8px !important;
+            padding: 1px !important;
+            box-shadow: 0 2px 2px var(--chrome-content-separator-color) !important;
 
             &:hover
             {
-                background-color: color-mix(in srgb, currentColor 17%, transparent) !important;
+                background-color: color-mix(in srgb, currentColor 17%, var(--toolbar-background-color)) !important;
             }
 
             &:hover:active
             {
-                background-color: color-mix(in srgb, currentColor 30%, transparent) !important;
-            }
-        }
-
-        &:where([soundplaying], [muted], [activemedia-blocked]) .tab-icon-stack > :not(.tab-icon-overlay)
-        {
-            clip-path: shape(
-                nonzero from 0px 0px,
-                hline by 16px,
-                vline by 8px,
-                arc by -8px 8px of 8px ccw,
-                hline by -8px,
-                close
-            );
-
-            :root:-moz-locale-dir(rtl) &
-            {
-                clip-path: shape(
-                    nonzero from 0px 0px,
-                    hline by 16px,
-                    vline by 16px,
-                    hline by -8px,
-                    arc by -8px -8px of 8px ccw,
-                    close
-                );
+                background-color: color-mix(in srgb, currentColor 30%, var(--toolbar-background-color)) !important;
             }
         }
     }
@@ -55,80 +33,13 @@
 
     .tabbrowser-tab:not([pinned], [crashed])
     {
-        .tab-icon-overlay
+        .tab-audio-button
         {
-            background-color: currentColor !important;
-            border-radius: 50px !important;
-            top: 0px !important;
-            inset-inline-end: 0px !important;
-            mask-image: var(--mask-overlay-background, none), var(--mask-overlay-image, none) !important;
-            mask-size: 16px 16px, 12px 12px !important;
-            mask-position: center center !important;
-            mask-repeat: no-repeat !important;
-            mask-mode: alpha !important;
-
-            &:hover
-            {
-                --mask-overlay-background: linear-gradient(to bottom, rgba(0,0,0,0.17), rgba(0,0,0,0.17));
-            }
-
-            &:hover:active
-            {
-                --mask-overlay-background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.3));
-            }
-        }
-
-        &[soundplaying] .tab-icon-overlay
-        {
-            --mask-overlay-image: url("chrome://browser/skin/tabbrowser/tab-audio-playing-small.svg");
-        }
-
-        &[muted] .tab-icon-overlay
-        {
-            --mask-overlay-image: url("chrome://browser/skin/tabbrowser/tab-audio-muted-small.svg");
-        }
-
-        &[activemedia-blocked] .tab-icon-overlay
-        {
-            --mask-overlay-image: url("chrome://browser/skin/tabbrowser/tab-audio-blocked-small.svg");
-        }
-
-        &:where([busy], [image], [sharing], [pictureinpicture]) .tab-icon-overlay
-        {
-            top: 8px !important;
-            inset-inline-end: -8px !important;
-        }
-
-        &:where([soundplaying], [muted], [activemedia-blocked])
-        {
-            .tab-icon-stack > :not(.tab-icon-overlay)
-            {
-                clip-path: shape(
-                    nonzero from 0px 0px,
-                    hline by 16px,
-                    vline by 8px,
-                    arc by -8px 8px of 8px ccw,
-                    hline by -8px,
-                    close
-                );
-
-                :root:-moz-locale-dir(rtl) &
-                {
-                    clip-path: shape(
-                        nonzero from 0px 0px,
-                        hline by 16px,
-                        vline by 16px,
-                        hline by -8px,
-                        arc by -8px -8px of 8px ccw,
-                        close
-                    );
-                }
-            }
-
-            .tab-icon-overlay
-            {
-                display: revert !important;
-            }
+            --icon-size: 14px !important;
+            --button-size-icon-small: 16px !important;
+            --button-min-height-small: 16px !important;
+            --button-border-radius: var(--border-radius-circle) !important;
+            margin-inline: -2px 2px !important;
         }
     }
 
@@ -136,37 +47,12 @@
     {
         &[fadein]
         {
-            min-width: var(--tab-min-width-pref) !important;
+            min-width: var(--tab-min-width-pref, var(--tab-min-width)) !important;
         }
 
         .tab-icon-stack > *
         {
-            margin-inline-end: 8px !important;
-        }
-
-        .tab-audio-button
-        {
-            display: none !important;
-        }
-    }
-    
-    /* Picture-In-Picture */
-
-    .tabbrowser-tab[pictureinpicture]:not([crashed], [busy])
-    {
-        &:is([soundplaying], [muted], [activemedia-blocked])
-        {
-            .tab-icon-stack::before
-            {
-                clip-path: shape(
-                    nonzero from 0px 0px,
-                    hline by 16px,
-                    vline by 8px,
-                    arc by -8px 8px of 8px ccw,
-                    hline by -8px,
-                    close
-                );
-            }
+            margin-inline-end: 4px !important;
         }
     }
 }
@@ -194,10 +80,19 @@
             transform: rotateY(180deg);
         }
     }
-
-    .tab-icon-stack > :not(.tab-icon-overlay)
+    
+    .tab-icon-stack > *
     {
-        opacity: 0 !important;
+        background-color: var(--toolbar-background-color) !important;
+        border-radius: var(--border-radius-circle) !important;
+        box-shadow: 0 2px 2px var(--chrome-content-separator-color) !important;
+        position: relative !important;
+        padding: 2px !important;
+        inset-inline-start: 8px !important;
+        top: 8px !important;
+        mask-image: none !important;
+        box-sizing: border-box !important;
+        z-index: 1 !important;
     }
 }
 
@@ -219,9 +114,4 @@
     white-space: nowrap !important;
     text-overflow: ellipsis !important;
     margin-block: 0px !important;
-}
-
-.tab-secondary-label
-{
-    display: none !important;
 }
