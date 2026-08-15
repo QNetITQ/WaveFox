@@ -59,6 +59,11 @@
             {
                 grid-area: 1 / 1 / auto / auto !important;
             }
+            
+            .tab-icon-image:not([src], [pinned], [crashed], [sharing], [pictureinpicture], [busy])
+            {
+                display: block !important;
+            }
         }
     }
 
