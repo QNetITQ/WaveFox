@@ -121,3 +121,50 @@ body
         inset-inline-end: 0px !important;
     }
 }
+
+@media -moz-pref("WaveFox.VerticalTabs.Tests", 2)
+{
+    #navigator-toolbox
+    {
+        anchor-name: --navigator-toolbox;
+        z-index: 5 !important;
+        
+        #nav-bar
+        {
+            position: absolute !important;
+            top: anchor(--navigator-toolbox bottom);
+            inset-inline-start: anchor(--sidebar-container left);
+            inset-inline-end: anchor(--sidebar-container right);
+            z-index: 3 !important;
+        }
+    }
+
+    #sidebar-container
+    {
+        anchor-name: --sidebar-container;
+        min-width: 250px !important;
+        
+        margin-top: 72px !important;
+    }
+
+    #nav-bar-customization-target
+    {
+        flex-wrap: wrap !important;
+    }
+
+    #urlbar-container
+    {
+        width: 100% !important;
+        order: 3;
+    }
+
+    #nav-bar > *:not(#nav-bar-customization-target)
+    {
+        display: none !important;
+    }
+
+    #nav-bar-customization-target > *:not(#back-button, #forward-button, #stop-reload-button, #urlbar-container)
+    {
+        display: none !important;
+    }
+}
