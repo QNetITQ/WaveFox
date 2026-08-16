@@ -90,3 +90,34 @@ body
         }
     }
 }
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+@media -moz-pref("WaveFox.VerticalTabs.Tests", 1)
+{
+    #sidebar-launcher-splitter,
+    #sidebar-splitter
+    {
+        anchor-name: --sidebar-splitter;
+    }
+
+    #navigator-toolbox
+    {
+        anchor-name: --navigator-toolbox !important;
+        position-anchor: --sidebar-splitter !important;
+        position: absolute !important;
+        inset-inline-start: anchor(right);
+        inset-inline-end: 0px;
+        z-index: 3 !important;
+    }
+
+    #tabbrowser-tabbox
+    {
+        position-anchor: --navigator-toolbox !important;
+        position: fixed !important;
+        top: anchor(bottom) !important;
+        bottom: 0px !important;
+        width: anchor-size(width) !important;
+        inset-inline-end: 0px !important;
+    }
+}
