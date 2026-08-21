@@ -9,10 +9,10 @@
 [Download Firefox](https://www.mozilla.org/en-US/firefox/all/#product-desktop-release) / [Download WaveFox](https://github.com/QNetITQ/WaveFox/releases) / [WaveFox Nightly](https://github.com/QNetITQ/WaveFox/tree/WaveFox-Nightly)
 
 <details>
-  <summary>WaveFox Nova v0.5.154</summary>
+  <summary>WaveFox Nova v0.5.155</summary>
 
 - ##### Minimum Requirements
-  - Firefox 154
+  - Firefox 155
   - Windows / MacOS / Linux
 
 - Download the `chrome` folder and put it in your user profile folder
