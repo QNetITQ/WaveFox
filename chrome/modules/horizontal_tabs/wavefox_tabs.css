@@ -23,7 +23,23 @@
     {
         .tab-context-line
         {
+            position: relative !important;
             width: 4px !important;
+            height: 4px !important;
+            margin-block: 0px auto !important;
+            margin-inline: auto !important;
+        }
+    }
+    
+    &:not([pinned])
+    {
+        .tab-context-line
+        {
+            position: relative !important;
+            height: 3px !important;
+            margin-block: 0px auto !important;
+            margin-inline: calc(var(--tab-border-radius) / 2 + 4px) !important;
+            mask-image: none !important;
         }
     }
     
@@ -65,22 +81,16 @@
     {
         outline: none !important;
         border: none !important;
-        margin-block: 4px !important;
         box-shadow: none !important;
-        
-        .tab-context-line
-        {
-            inset-block: 0px auto !important;
-        }
         
         .tab-group-line
         {
             position: relative !important;
-            height: 4px !important;
+            height: 3px !important;
             border-radius: 4px !important;
             inset-inline: 0px !important;
             inset-block: auto 0px !important;
-            margin-inline: calc(var(--tab-inline-padding) + 8px) calc(var(--tab-inline-padding) / 2 + 12px) !important;
+            margin-inline: calc(var(--tab-border-radius) / 2 + 4px) !important;
         }
     }
 
@@ -93,11 +103,10 @@
     }
     
     /* Tab Icon Indicators */
-
-    .tabbrowser-tab:is([image], [pinned]) .tab-content[attention]:not([selected]),
-    .tab-content[pinned][titlechanged]:not([selected])
+    
+    .tab-content
     {
-        background-position: 50% calc(50% - 13px) !important;
+        background-position: 50% calc(50% + var(--tab-min-height) / 2 - 2px) !important;
     }
     
     /* Split View */
@@ -125,6 +134,14 @@ tab-group
         {
             display: none !important;
         }
+        
+        .tab-group-label
+        {
+            width: calc(16px + var(--toolbarbutton-padding-inner)) !important;
+            height: calc(16px + var(--toolbarbutton-padding-inner)) !important;
+            min-width: auto !important;
+            border-radius: var(--tab-border-radius) !important;
+        }
     }
 }
 
@@ -135,6 +152,24 @@ tab-split-view-wrapper
     margin-block: 4px !important;
     outline: none !important;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ---------------------------------------- Attached Tabs ---------------------------------------- */
 
