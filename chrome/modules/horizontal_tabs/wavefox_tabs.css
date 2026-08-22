@@ -178,17 +178,6 @@ tab-split-view-wrapper
     :root
     {
         --tab-first-last-inline-margin: clamp(4px, var(--tab-border-radius), calc(var(--tab-min-height) / 2)) !important;
-        --tab-min-height: 36px !important;
-
-        &[uidensity="compact"]
-        {
-            --tab-min-height: 32px !important;
-        }
-
-        &[uidensity="touch"]
-        {
-            --tab-min-height: 40px !important;
-        }
     }
 
     /* Tab Groups / Split View */
@@ -203,10 +192,8 @@ tab-split-view-wrapper
     
     tab-split-view-wrapper
     {
-        .tab-background
-        {
-            min-height: calc(var(--tab-min-height) - 4px * 2 - var(--split-view-padding-block) * 2) !important;
-        }
+        margin-block: 0px !important;
+        align-items: stretch !important;
     }
 
     /* Pinned Container / Regular Container */
