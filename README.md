@@ -9,7 +9,7 @@
 [Download Firefox](https://www.mozilla.org/en-US/firefox/all/#product-desktop-release) / [Download WaveFox](https://github.com/QNetITQ/WaveFox/releases) / [WaveFox Nightly](https://github.com/QNetITQ/WaveFox/tree/WaveFox-Nightly)
 
 <details>
-  <summary>WaveFox Nova v0.5.155</summary>
+  <summary>WaveFox Nova v0.6.155</summary>
 
 - ##### Minimum Requirements
   - Firefox 155
