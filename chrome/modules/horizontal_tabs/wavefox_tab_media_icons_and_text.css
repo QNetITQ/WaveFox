@@ -15,7 +15,6 @@
             top: -8px !important;
             inset-inline-end: -8px !important;
             padding: 1px !important;
-            box-shadow: 0 2px 2px var(--chrome-content-separator-color) !important;
 
             &:hover
             {
@@ -39,7 +38,32 @@
             --button-size-icon-small: 16px !important;
             --button-min-height-small: 16px !important;
             --button-border-radius: var(--border-radius-circle) !important;
-            margin-inline: -2px 2px !important;
+            margin: 0px !important;
+            position: relative !important;
+            top: -8px !important;
+            inset-inline-end: -8px !important;
+            background-color: var(--toolbar-background-color) !important;
+            border-radius: var(--border-radius-circle) !important;
+            color: var(--toolbar-text-color) !important;
+            box-shadow: var(--box-shadow-level-1) !important;
+        }
+        
+        .tab-content
+        {
+            display: grid !important;
+            grid-template-rows: auto !important;
+            grid-template-columns: auto 1fr auto !important;
+
+            .tab-icon-stack,
+            .tab-audio-button
+            {
+                grid-area: 1 / 1 / auto / auto !important;
+            }
+            
+            .tab-icon-image:not([src], [pinned], [crashed], [sharing], [pictureinpicture], [busy])
+            {
+                display: block !important;
+            }
         }
     }
 
@@ -52,7 +76,7 @@
 
         .tab-icon-stack > *
         {
-            margin-inline-end: 4px !important;
+            margin-inline-end: 6px !important;
         }
     }
 }
@@ -85,12 +109,11 @@
     {
         background-color: var(--toolbar-background-color) !important;
         border-radius: var(--border-radius-circle) !important;
-        box-shadow: 0 2px 2px var(--chrome-content-separator-color) !important;
+        box-shadow: var(--box-shadow-level-1) !important;
         position: relative !important;
         padding: 2px !important;
         inset-inline-start: 8px !important;
         top: 8px !important;
-        mask-image: none !important;
         box-sizing: border-box !important;
         z-index: 1 !important;
     }
@@ -102,7 +125,6 @@
 {
     height: auto !important;
     font-size: clamp(0px, 1em, 16px) !important;
-    mask-image: none !important;
 }
 
 .tab-label
