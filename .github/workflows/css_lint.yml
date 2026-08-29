@@ -18,8 +18,19 @@ jobs:
     - name: Check the repository
       uses: actions/checkout@v4
 
-    - name: Run Stylelint
-      uses: xt0rted/stylelint-action@v3
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
       with:
-        file_pattern: "**/*.css"
-        config: '{ "extends": "stylelint-config-standard" }'
+        node-version: 'lts/*'
+        cache: 'npm'
+
+    - name: Install Stylelint
+      run: npm install -g stylelint stylelint-config-standard
+
+    - name: Register Stylelint Problem Matcher
+      uses: xt0rted/stylelint-problem-matcher@v2
+
+    - name: Run Stylelint
+      run: |
+        echo '{ "extends": "stylelint-config-standard" }' > .stylelintrc.json
+        npx stylelint "**/*.css"
