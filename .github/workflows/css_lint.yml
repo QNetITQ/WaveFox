@@ -1,0 +1,25 @@
+name: CSS Syntax Checking
+
+on:
+  push:
+    branches:
+    - main
+    - WaveFox-Nightly
+  pull_request:
+    branches: 
+    - main
+    - WaveFox-Nightly
+
+jobs:
+  my_job_lint-css:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check the repository
+      uses: actions/checkout@v4
+
+    - name: Run Stylelint
+      uses: xt0rted/stylelint-action@v3
+      with:
+        file_pattern: "**/*.css"
+        config: '{ "extends": "stylelint-config-standard" }'
