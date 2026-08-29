@@ -18,8 +18,7 @@ jobs:
     - name: Check the repository
       uses: actions/checkout@v4
 
-    - name: Install dependencies
-      run: npm install
-
     - name: Run Stylelint
-      run: npx stylelint "**/*.css" --formatter github
+      run: |
+        npm install stylelint stylelint-config-standard
+        npx stylelint "**/*.css" --config '{"extends": "stylelint-config-standard"}' --formatter github
