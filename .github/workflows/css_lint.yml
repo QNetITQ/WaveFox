@@ -11,20 +11,15 @@ on:
     - WaveFox-Nightly
 
 jobs:
-  my_job_lint-css:
+  Lint_CSS:
     runs-on: ubuntu-latest
 
     steps:
     - name: Check the repository
       uses: actions/checkout@v4
 
-    - name: Install Stylelint
-      run: npm install -g stylelint stylelint-config-standard
-
-    - name: Register Stylelint Problem Matcher
-      uses: xt0rted/stylelint-problem-matcher@v1
+    - name: Install dependencies
+      run: npm ci
 
     - name: Run Stylelint
-      run: |
-        echo '{ "extends": "stylelint-config-standard" }' > .stylelintrc.json
-        npx stylelint "**/*.css"
+      run: npx stylelint "**/*.css" --formatter github
