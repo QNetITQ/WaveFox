@@ -28,7 +28,7 @@ jobs:
       run: npm install -g stylelint stylelint-config-standard
 
     - name: Register Stylelint Problem Matcher
-      uses: xt0rted/stylelint-problem-matcher@v2
+      uses: xt0rted/stylelint-problem-matcher@v1
 
     - name: Run Stylelint
       run: |
