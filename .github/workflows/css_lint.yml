@@ -21,4 +21,4 @@ jobs:
     - name: Run Stylelint
       run: |
         npm install stylelint stylelint-config-standard
-        npx stylelint "**/*.css" --config '{"extends": "stylelint-config-standard"}' --formatter github
+        npx stylelint "**/*.css" --config '{"extends": "stylelint-config-standard"}' --formatter string
