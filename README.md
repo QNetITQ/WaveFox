@@ -27,11 +27,6 @@ These are very rough options. There's no guarantee they'll make it into the fina
 
 - `WaveFox.VerticalTabs.Tests` > 1 or 2
 
-### Compact Web Page
-<img width="1738" height="892" alt="изображение" src="https://github.com/user-attachments/assets/7f39bae0-1c03-4579-9400-1a083496b1a2" />
-
-- `WaveFox.HorizontalTabs.WebPage.Compact`
-
 ### Tab Shapes
 This setting makes tabs one with the browser toolbar. Depends on the corner rounding settings or custom tab shapes.
 <img width="1794" height="103" alt="изображение" src="https://github.com/user-attachments/assets/665f7f02-4869-46ab-bb65-6ffe83ca36c2" />
