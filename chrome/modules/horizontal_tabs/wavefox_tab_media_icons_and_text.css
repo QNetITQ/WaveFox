@@ -6,24 +6,35 @@
 
     .tabbrowser-tab[pinned]:not([crashed])
     {
+        &:where([soundplaying], [muted], [activemedia-blocked]) .tab-icon-stack > :not(.tab-icon-overlay)
+        {
+            clip-path: shape(
+                nonzero from 0px 0px,
+                hline by 16px,
+                vline by 16px,
+                arc by -16px 0px of 8px ccw,
+                close
+            );
+        }
+
         .tab-icon-overlay
         {
-            background-color: var(--toolbar-background-color) !important;
+            background-color: transparent !important;
             background-image: none !important;
-            color: var(--toolbar-text-color) !important;
+            color: inherit !important;
             fill: currentColor !important;
-            top: -8px !important;
-            inset-inline-end: -8px !important;
-            padding: 1px !important;
+            top: 8px !important;
+            inset-inline-end: 0px !important;
+            box-shadow: none !important;
 
             &:hover
             {
-                background-color: color-mix(in srgb, currentColor 17%, var(--toolbar-background-color)) !important;
+                background-color: color-mix(in srgb, currentColor 17%, transparent) !important;
             }
 
             &:hover:active
             {
-                background-color: color-mix(in srgb, currentColor 30%, var(--toolbar-background-color)) !important;
+                background-color: color-mix(in srgb, currentColor 30%, transparent) !important;
             }
         }
     }
@@ -32,20 +43,30 @@
 
     .tabbrowser-tab:not([pinned], [crashed])
     {
+        &:where([soundplaying], [muted], [activemedia-blocked]) .tab-icon-stack > *
+        {
+            clip-path: shape(
+                nonzero from 0px 0px,
+                hline by 16px,
+                vline by 16px,
+                arc by -16px 0px of 8px ccw,
+                close
+            );
+        }
+        
         .tab-audio-button
         {
-            --icon-size: 14px !important;
             --button-size-icon-small: 16px !important;
             --button-min-height-small: 16px !important;
-            --button-border-radius: var(--border-radius-circle) !important;
+            --button-background-color-ghost: transparent !important;
+            --button-text-color-ghost: inherit !important;
+            --button-background-color-ghost-hover: color-mix(in srgb, currentColor 17%, transparent) !important;
+            --button-text-color-ghost-hover: inherit !important;
+            --button-background-color-ghost-active: color-mix(in srgb, currentColor 30%, transparent) !important;
+            --button-text-color-ghost-active: inherit !important;
             margin: 0px !important;
             position: relative !important;
-            top: -8px !important;
-            inset-inline-end: -8px !important;
-            background-color: var(--toolbar-background-color) !important;
-            border-radius: var(--border-radius-circle) !important;
-            color: var(--toolbar-text-color) !important;
-            box-shadow: var(--box-shadow-level-1) !important;
+            top: 8px !important;
         }
         
         .tab-content
@@ -81,50 +102,13 @@
     }
 }
 
-/* Picture-In-Picture */
-
-.tabbrowser-tab[pictureinpicture]:not([crashed], [busy])
-{
-    .tab-icon-stack::before
-    {
-        content: "";
-        display: block;
-        position: absolute;
-        width: 16px;
-        height: 16px;
-        background-color: currentColor;
-        mask-image: url("chrome://global/skin/media/picture-in-picture-open.svg");
-        mask-size: 16px 16px;
-        mask-position: center center;
-        mask-repeat: no-repeat;
-        mask-mode: alpha;
-        
-        :root:-moz-locale-dir(rtl) &
-        {
-            transform: rotateY(180deg);
-        }
-    }
-    
-    .tab-icon-stack > *
-    {
-        background-color: var(--toolbar-background-color) !important;
-        border-radius: var(--border-radius-circle) !important;
-        box-shadow: var(--box-shadow-level-1) !important;
-        position: relative !important;
-        padding: 2px !important;
-        inset-inline-start: 8px !important;
-        top: 8px !important;
-        box-sizing: border-box !important;
-        z-index: 1 !important;
-    }
-}
-
 /* Tab Text */
 
 .tab-label-container
 {
     height: auto !important;
     font-size: clamp(0px, 1em, 16px) !important;
+    mask-image: none !important;
 }
 
 .tab-label
