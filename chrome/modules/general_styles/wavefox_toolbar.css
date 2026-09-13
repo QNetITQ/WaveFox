@@ -9,6 +9,7 @@
         --border-radius-medium: 4px !important;
         --border-radius-large: 4px !important;
         --border-radius-xlarge: 4px !important;
+        --border-radius-circle: 4px !important;
     }
 }
 
@@ -21,6 +22,7 @@
         --border-radius-medium: 6px !important;
         --border-radius-large: 6px !important;
         --border-radius-xlarge: 6px !important;
+        --border-radius-circle: 6px !important;
     }
 }
 
@@ -33,6 +35,7 @@
         --border-radius-medium: 10px !important;
         --border-radius-large: 10px !important;
         --border-radius-xlarge: 10px !important;
+        --border-radius-circle: 10px !important;
     }
 }
 
@@ -45,5 +48,6 @@
         --border-radius-medium: 12px !important;
         --border-radius-large: 12px !important;
         --border-radius-xlarge: 12px !important;
+        --border-radius-circle: 12px !important;
     }
 }
