@@ -9,10 +9,10 @@
 [Download Firefox](https://www.mozilla.org/en-US/firefox/all/#product-desktop-release) / [Download WaveFox](https://github.com/QNetITQ/WaveFox/releases) / [WaveFox Nightly](https://github.com/QNetITQ/WaveFox/tree/WaveFox-Nightly)
 
 <details>
-  <summary>WaveFox Nova v0.6.155</summary>
+  <summary>WaveFox Nova v0.7.156</summary>
 
 - ##### Minimum Requirements
-  - Firefox 155
+  - Firefox 156
   - Windows / MacOS / Linux
 
 - Download the `chrome` folder and put it in your user profile folder
@@ -26,11 +26,6 @@ These are very rough options. There's no guarantee they'll make it into the fina
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/5b225ca2-a389-4c3e-86ee-00f8aaaff03c" />
 
 - `WaveFox.VerticalTabs.Tests` > 1 or 2
-
-### Compact Web Page
-<img width="1738" height="892" alt="изображение" src="https://github.com/user-attachments/assets/7f39bae0-1c03-4579-9400-1a083496b1a2" />
-
-- `WaveFox.HorizontalTabs.WebPage.Compact`
 
 ### Tab Shapes
 This setting makes tabs one with the browser toolbar. Depends on the corner rounding settings or custom tab shapes.
