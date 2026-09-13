@@ -21,7 +21,7 @@
 {
     &[pinned]
     {
-        .tab-context-line
+        &[usercontextid] .tab-context-line
         {
             position: relative !important;
             width: 4px !important;
@@ -33,13 +33,14 @@
     
     &:not([pinned])
     {
-        .tab-context-line
+        &[usercontextid] .tab-context-line
         {
             position: relative !important;
+            width: auto !important;
             height: 3px !important;
             margin-block: 0px auto !important;
             margin-inline: calc(var(--tab-border-radius) / 2 + 4px) !important;
-            mask-image: none !important;
+            background-color: var(--identity-stroke-color) !important;
         }
     }
     
@@ -106,7 +107,7 @@
     
     .tab-content
     {
-        background-position: 50% calc(50% + var(--tab-min-height) / 2 - 2px) !important;
+        background-position: 50% calc(50% - var(--tab-min-height) / 2 + 2px) !important;
     }
     
     /* Split View */
