@@ -26,6 +26,8 @@
             top: 8px !important;
             inset-inline-end: 0px !important;
             box-shadow: none !important;
+            border: none !important;
+            border-radius: 50px !important;
 
             &:hover
             {
@@ -64,6 +66,7 @@
             --button-text-color-ghost-hover: inherit !important;
             --button-background-color-ghost-active: color-mix(in srgb, currentColor 30%, transparent) !important;
             --button-text-color-ghost-active: inherit !important;
+            --button-border-radius: 50px !important;
             margin: 0px !important;
             position: relative !important;
             top: 8px !important;
