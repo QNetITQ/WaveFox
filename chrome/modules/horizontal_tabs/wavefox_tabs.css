@@ -10,11 +10,6 @@
     }
 }
 
-#tabbrowser-tabs
-{
-    min-height: auto !important;
-}
-
 /* Tabs */
 
 .tabbrowser-tab
@@ -48,32 +43,24 @@
     {
         .tab-background
         {
-            background-color: var(--toolbar-background-color) !important;
+            background: none !important;
+            background-color: var(--tab-background-color-selected) !important;
             background-image: none !important;
-            background-clip: content-box !important;
-        }
-        
-        .tab-content
-        {
-            color: var(--toolbar-text-color) !important;
         }
     }
-    
+
     &:not([visuallyselected])
     {
-        &:hover
-        {
-            .tab-background
-            {
-                background-color: var(--toolbarbutton-background-color-hover) !important;
-            }
-        }
-        
         &[multiselected]
         {
             .tab-background
             {
                 background-color: var(--toolbarbutton-background-color-active) !important;
+            }
+            
+            .tab-content
+            {
+                color: inherit !important;
             }
         }
     }
@@ -83,7 +70,7 @@
         outline: none !important;
         border: none !important;
         box-shadow: none !important;
-        
+
         .tab-group-line
         {
             position: relative !important;
