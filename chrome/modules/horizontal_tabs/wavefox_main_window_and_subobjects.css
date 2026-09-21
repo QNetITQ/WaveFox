@@ -1,8 +1,14 @@
-#navigator-toolbox
+@media -moz-pref("extensions.activeThemeID", "default-theme@mozilla.org")         or
+       -moz-pref("extensions.activeThemeID", "firefox-compact-light@mozilla.org") or 
+       -moz-pref("extensions.activeThemeID", "firefox-compact-dark@mozilla.org")
 {
-    & > *
+    @media not (-moz-native-theme)
     {
-        border: none !important;
+        :scope
+        {
+            --toolbar-background-color: transparent !important;
+            --toolbar-field-background-color: var(--tab-background-color-selected) !important;
+        }
     }
 }
 
@@ -12,8 +18,7 @@
        -moz-pref("extensions.activeThemeID", 'default-theme@mozilla.org')
 {
     #main-window,
-    body,
-    #navigator-toolbox
+    body
     {
         background-color: transparent !important;
         background-image: none !important;
