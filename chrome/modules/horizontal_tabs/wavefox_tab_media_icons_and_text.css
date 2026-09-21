@@ -1,7 +1,11 @@
 /* -------------------- Media Icons -------------------- */
 
-@scope (#pinned-tabs-container, #tabbrowser-arrowscrollbox) to (tab-group, tab-split-view-wrapper)
+.tabbrowser-tab
 {
+    --tab-min-width-extra-icons: 0px !important;
+    --tab-icon-end-margin: 6px !important;
+}
+
     /* Pinned Tabs */
 
     .tabbrowser-tab[pinned]:not([crashed])
@@ -90,20 +94,6 @@
             }
         }
     }
-
-    .tabbrowser-tab:not([pinned])
-    {
-        &[fadein]
-        {
-            min-width: var(--tab-min-width-pref, var(--tab-min-width)) !important;
-        }
-
-        .tab-icon-stack > *
-        {
-            margin-inline-end: 6px !important;
-        }
-    }
-}
 
 /* Tab Text */
 
