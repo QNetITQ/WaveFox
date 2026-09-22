@@ -43,9 +43,7 @@
     {
         .tab-background
         {
-            background: none !important;
-            background-color: var(--tab-background-color-selected) !important;
-            background-image: none !important;
+            background: none var(--tab-background-color-selected) !important;
         }
     }
 
