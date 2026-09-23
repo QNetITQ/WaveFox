@@ -139,25 +139,13 @@ tab-group
 {
     :root
     {
-        --tab-first-last-inline-margin: clamp(4px, var(--tab-border-radius), calc(var(--tab-min-height) / 2)) !important;
-    }
-    
-    #tabbrowser-tabs
-    {
-        --tabstrip-min-height: auto !important;
-    }
-
-    /* Tab Groups / Split View */
-    
-    tab-split-view-wrapper
-    {
-        margin-block: 0px !important;
-        align-items: stretch !important;
+        --tab-first-last-inline-margin: clamp(0px, var(--tab-border-radius), calc((var(--tab-min-height) + var(--tab-margin-block) * 2) / 2)) !important;
+        --tab-min-height: 24px !important;
     }
 
     /* Pinned Container / Regular Container */
     
-    @scope (:root) to (tab-split-view-wrapper)
+    @scope (:root) to (tab-group, tab-split-view-wrapper)
     {
         .tabbrowser-tab
         {
@@ -171,7 +159,7 @@ tab-group
                 
                 .tab-background
                 {
-                    background: none var(--toolbar-background-color) !important;
+                    background-color: var(--toolbar-background-color) !important;
                 }
             }
 
@@ -184,9 +172,20 @@ tab-group
                     z-index: 1 !important;
                 }
             }
+            
+            &[pinned] .tab-content
+            {
+                padding-inline: calc(((var(--tab-min-height) + var(--tab-margin-block) * 2) - 16px) / 2) !important;
+            }
+            
+            &[usercontextid] .tab-context-line
+            {
+                margin-block: 0px auto !important;
+            }
 
             .tab-background
             {
+                min-height: calc(var(--tab-min-height) + var(--tab-margin-block) * 2) !important;
                 margin-inline: calc(-1 * var(--tab-border-radius)) !important;
                 margin-block: 0px !important;
                 border-radius: 0px !important;
@@ -208,32 +207,24 @@ tab-group
                 {
                     margin-inline-start: 0px !important;
                 }
+                
+                .tab-group-line
+                {
+                    margin-block: auto 0px !important;
+                }
             }
         }
 
         /* Margins */
         
-        @scope (&) to (tab-group, tab-split-view-wrapper)
+        .tabbrowser-tab:nth-child(1 of .tabbrowser-tab:not([hidden], [dragtarget]))
         {
-            .tabbrowser-tab:nth-child(1 of .tabbrowser-tab:not([hidden], [dragtarget]))
-            {
-                margin-inline-start: var(--tab-first-last-inline-margin) !important;
-            }
+            margin-inline-start: var(--tab-first-last-inline-margin) !important;
+        }
 
-            .tabbrowser-tab:nth-last-child(1 of .tabbrowser-tab:not([hidden], [dragtarget]))
-            {
-                margin-inline-end: var(--tab-first-last-inline-margin) !important;
-            }
-        }
-        
-        tab-group[collapsed] > .tabbrowser-tab:not([visuallyselected])
+        .tabbrowser-tab:nth-last-child(1 of .tabbrowser-tab:not([hidden], [dragtarget]))
         {
-            --tab-first-last-inline-margin: 0px !important;
-        }
-        
-        tab-group[movingtabgroup] > .tabbrowser-tab
-        {
-            --tab-first-last-inline-margin: 0px !important;
+            margin-inline-end: var(--tab-first-last-inline-margin) !important;
         }
 
         /* Custom shapes */
