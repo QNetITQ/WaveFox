@@ -14,52 +14,12 @@
 
 .tabbrowser-tab
 {
-    &[pinned]
-    {
-        &[usercontextid] .tab-context-line
-        {
-            position: relative !important;
-            width: 4px !important;
-            height: 4px !important;
-            margin-block: 0px auto !important;
-            margin-inline: auto !important;
-        }
-    }
-    
-    &:not([pinned])
-    {
-        &[usercontextid] .tab-context-line
-        {
-            position: relative !important;
-            width: auto !important;
-            height: 3px !important;
-            margin-block: 0px auto !important;
-            margin-inline: calc(var(--tab-border-radius) / 2 + 4px) !important;
-            background-color: var(--identity-stroke-color) !important;
-        }
-    }
-    
     &[visuallyselected]
     {
         .tab-background
         {
-            background: none var(--tab-background-color-selected) !important;
-        }
-    }
-
-    &:not([visuallyselected])
-    {
-        &[multiselected]
-        {
-            .tab-background
-            {
-                background-color: var(--toolbarbutton-background-color-active) !important;
-            }
-            
-            .tab-content
-            {
-                color: inherit !important;
-            }
+            background: none !important;
+            background-color: var(--tab-background-color-selected) !important;
         }
     }
     
@@ -68,24 +28,27 @@
         outline: none !important;
         border: none !important;
         box-shadow: none !important;
-
-        .tab-group-line
-        {
-            position: relative !important;
-            height: 3px !important;
-            border-radius: 4px !important;
-            inset-inline: 0px !important;
-            inset-block: auto 0px !important;
-            margin-inline: calc(var(--tab-border-radius) / 2 + 4px) !important;
-        }
     }
 
-    .tab-close-button
+    &[usercontextid] .tab-context-line
     {
-        width: 16px !important;
-        height: 16px !important;
-        padding: 2px !important;
-        margin: 0px !important;
+        position: static !important;
+        width: auto !important;
+        height: 2px !important;
+        margin-block: calc(-1 * (var(--tab-margin-block) - 2px)) auto !important;
+        margin-inline: 0px !important;
+        background: none !important;
+        background-color: var(--identity-stroke-color) !important;
+        border: none !important;
+    }
+
+    .tab-group-line
+    {
+        position: static !important;
+        height: 2px !important;
+        margin-block: auto calc(-1 * (var(--tab-margin-block) - 2px)) !important;
+        margin-inline: 0px !important;
+        border-radius: var(--border-radius-xsmall) !important;
     }
     
     /* Tab Icon Indicators */
@@ -95,16 +58,42 @@
         background-position: 50% calc(50% - var(--tab-min-height) / 2 + 2px) !important;
     }
     
-    /* Split View */
-    
-    tab-split-view-wrapper &
+    .tab-close-button
     {
+        width: 16px !important;
+        height: 16px !important;
+        padding: 2px !important;
+        margin: 0px !important;
+    }
+}
+
+/* Split View */
+    
+tab-split-view-wrapper
+{
+    & > .tabbrowser-tab
+    {
+        overflow: visible !important;
         border: none !important;
+
+        &:not([visuallyselected], [multiselected]) .tab-background
+        {
+            background-color: var(--toolbarbutton-background-color-hover) !important;
+        }
         
         .tab-background
         {
             margin: 0px !important;
-            background-color: var(--toolbarbutton-background-color-hover) !important;
+        }
+        
+        &[usercontextid] .tab-context-line
+        {
+            margin-block: calc(-1 * var(--tab-margin-block)) auto !important;
+        }
+
+        .tab-group-line
+        {
+            margin-block: auto calc(-1 * var(--tab-margin-block)) !important;
         }
     }
 }
@@ -130,11 +119,6 @@ tab-group
         }
     }
 }
-
-
-
-
-
 
 
 
