@@ -39,6 +39,13 @@
                                            var(--wavefox-inner-tabbar-shadow-blur)
                                            var(--wavefox-inner-tabbar-shadow-spread)
                                            color-mix(in srgb, var(--wavefox-inner-tabbar-shadow-color) var(--wavefox-filter-shadow-saturation, 100%), transparent);
+            
+            @media (prefers-color-scheme: dark)
+            {
+                --wavefox-selected-tab-shadow-color: black;
+                --wavefox-selected-tab-filter-color: black;
+                --wavefox-inner-tabbar-shadow-color: black;
+            }
 
             @media not -moz-pref("WaveFox.HorizontalTabs.AttachedTabs")
             {
