@@ -9,10 +9,10 @@
 [Download Firefox](https://www.mozilla.org/en-US/firefox/all/#product-desktop-release) / [Download WaveFox](https://github.com/QNetITQ/WaveFox/releases) / [WaveFox Nightly](https://github.com/QNetITQ/WaveFox/tree/WaveFox-Nightly)
 
 <details>
-  <summary>WaveFox Nova v0.7.156</summary>
+  <summary>WaveFox Nova v0.8.157</summary>
 
 - ##### Minimum Requirements
-  - Firefox 156
+  - Firefox 157
   - Windows / MacOS / Linux
 
 - Download the `chrome` folder and put it in your user profile folder
@@ -46,12 +46,17 @@ Requires OS with transparency support. Works only with the system theme.
 Ability to control the rounding of browser bar elements.
 <img width="1778" height="120" alt="изображение" src="https://github.com/user-attachments/assets/ec10f079-fabc-4bdf-bfa5-ccd3125d5792" />
 
-- `WaveFox.Toolbar.Roundings` > 1 or 2 or 3 or 4
+- `WaveFox.Toolbar.Roundings` > 1 or 2 or 3 or 4 or 5
 
 ### Tab Separators
 ![изображение](https://user-images.githubusercontent.com/85301851/152351312-f6ad4578-e7d5-40b7-8b2d-49388a750f54.png)
 
 - `WaveFox.HorizontalTabs.Tabs.Separators` > 1 or 2
+
+### Tab Bar Shadows
+![изображение](https://user-images.githubusercontent.com/85301851/152011749-4d5619b3-0fd8-40f9-a3dc-96be31839971.png)
+
+- `WaveFox.HorizontalTabs.Tabs.Shadows`
 
 ### Icons (firefox-csshacks / Lepton) / (Horizontal and Vertical tabs)
 This is third-party code. I will update this code according to the original source.

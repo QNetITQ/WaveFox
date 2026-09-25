@@ -81,9 +81,9 @@
 
         @media -moz-pref("WaveFox.HorizontalTabs.Tabs.Separators", 2)
         {
-            .tabbrowser-tab > .tab-stack > .tab-background
+            .tabbrowser-tab:not([visuallyselected], :hover, [multiselected]) > .tab-stack > .tab-background
             {
-                background-color: color-mix(in srgb, currentColor 17%, transparent);
+                background-color: color-mix(in srgb, currentColor 10%, transparent) !important;
             }
         }
     }

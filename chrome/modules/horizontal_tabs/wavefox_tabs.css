@@ -10,71 +10,16 @@
     }
 }
 
-#tabbrowser-tabs
-{
-    min-height: auto !important;
-}
-
 /* Tabs */
 
 .tabbrowser-tab
 {
-    &[pinned]
-    {
-        &[usercontextid] .tab-context-line
-        {
-            position: relative !important;
-            width: 4px !important;
-            height: 4px !important;
-            margin-block: 0px auto !important;
-            margin-inline: auto !important;
-        }
-    }
-    
-    &:not([pinned])
-    {
-        &[usercontextid] .tab-context-line
-        {
-            position: relative !important;
-            width: auto !important;
-            height: 3px !important;
-            margin-block: 0px auto !important;
-            margin-inline: calc(var(--tab-border-radius) / 2 + 4px) !important;
-            background-color: var(--identity-stroke-color) !important;
-        }
-    }
-    
     &[visuallyselected]
     {
         .tab-background
         {
-            background-color: var(--toolbar-background-color) !important;
-            background-image: none !important;
-            background-clip: content-box !important;
-        }
-        
-        .tab-content
-        {
-            color: var(--toolbar-text-color) !important;
-        }
-    }
-    
-    &:not([visuallyselected])
-    {
-        &:hover
-        {
-            .tab-background
-            {
-                background-color: var(--toolbarbutton-background-color-hover) !important;
-            }
-        }
-        
-        &[multiselected]
-        {
-            .tab-background
-            {
-                background-color: var(--toolbarbutton-background-color-active) !important;
-            }
+            background: none !important;
+            background-color: var(--tab-background-color-selected) !important;
         }
     }
     
@@ -83,24 +28,27 @@
         outline: none !important;
         border: none !important;
         box-shadow: none !important;
-        
-        .tab-group-line
-        {
-            position: relative !important;
-            height: 3px !important;
-            border-radius: 4px !important;
-            inset-inline: 0px !important;
-            inset-block: auto 0px !important;
-            margin-inline: calc(var(--tab-border-radius) / 2 + 4px) !important;
-        }
     }
 
-    .tab-close-button
+    &[usercontextid] .tab-context-line
     {
-        width: 16px !important;
-        height: 16px !important;
-        padding: 2px !important;
-        margin: 0px !important;
+        position: static !important;
+        width: auto !important;
+        height: 2px !important;
+        margin-block: calc(-1 * (var(--tab-margin-block) - 2px)) auto !important;
+        margin-inline: 0px !important;
+        background: none !important;
+        background-color: var(--identity-stroke-color) !important;
+        border: none !important;
+    }
+
+    .tab-group-line
+    {
+        position: static !important;
+        height: 2px !important;
+        margin-block: auto calc(-1 * (var(--tab-margin-block) - 2px)) !important;
+        margin-inline: 0px !important;
+        border-radius: var(--border-radius-xsmall) !important;
     }
     
     /* Tab Icon Indicators */
@@ -110,16 +58,42 @@
         background-position: 50% calc(50% - var(--tab-min-height) / 2 + 2px) !important;
     }
     
-    /* Split View */
-    
-    tab-split-view-wrapper &
+    .tab-close-button
     {
+        width: 16px !important;
+        height: 16px !important;
+        padding: 2px !important;
+        margin: 0px !important;
+    }
+}
+
+/* Split View */
+    
+tab-split-view-wrapper
+{
+    & > .tabbrowser-tab
+    {
+        overflow: visible !important;
         border: none !important;
+
+        &:not([visuallyselected], [multiselected]) .tab-background
+        {
+            background-color: var(--toolbarbutton-background-color-hover) !important;
+        }
         
         .tab-background
         {
             margin: 0px !important;
-            background-color: var(--toolbarbutton-background-color-hover) !important;
+        }
+        
+        &[usercontextid] .tab-context-line
+        {
+            margin-block: calc(-1 * var(--tab-margin-block)) auto !important;
+        }
+
+        .tab-group-line
+        {
+            margin-block: auto calc(-1 * var(--tab-margin-block)) !important;
         }
     }
 }
@@ -146,19 +120,6 @@ tab-group
     }
 }
 
-/* Split View */
-
-tab-split-view-wrapper
-{
-    margin-block: 4px !important;
-    outline: none !important;
-}
-
-
-
-
-
-
 
 
 
@@ -178,23 +139,8 @@ tab-split-view-wrapper
 {
     :root
     {
-        --tab-first-last-inline-margin: clamp(4px, var(--tab-border-radius), calc(var(--tab-min-height) / 2)) !important;
-    }
-
-    /* Tab Groups / Split View */
-    
-    tab-group
-    {
-        .tab-background
-        {
-            min-height: auto !important;
-        }
-    }
-    
-    tab-split-view-wrapper
-    {
-        margin-block: 0px !important;
-        align-items: stretch !important;
+        --tab-first-last-inline-margin: clamp(0px, var(--tab-border-radius), calc((var(--tab-min-height) + var(--tab-margin-block) * 2) / 2)) !important;
+        --tab-min-height: 24px !important;
     }
 
     /* Pinned Container / Regular Container */
@@ -210,6 +156,11 @@ tab-split-view-wrapper
             &[visuallyselected]
             {
                 z-index: 2 !important;
+                
+                .tab-background
+                {
+                    background-color: var(--toolbar-background-color) !important;
+                }
             }
 
             &:not([visuallyselected])
@@ -221,9 +172,20 @@ tab-split-view-wrapper
                     z-index: 1 !important;
                 }
             }
+            
+            &[pinned] .tab-content
+            {
+                padding-inline: calc(((var(--tab-min-height) + var(--tab-margin-block) * 2) - 16px) / 2) !important;
+            }
+            
+            &[usercontextid] .tab-context-line
+            {
+                margin-block: 0px auto !important;
+            }
 
             .tab-background
             {
+                min-height: calc(var(--tab-min-height) + var(--tab-margin-block) * 2) !important;
                 margin-inline: calc(-1 * var(--tab-border-radius)) !important;
                 margin-block: 0px !important;
                 border-radius: 0px !important;
@@ -245,11 +207,16 @@ tab-split-view-wrapper
                 {
                     margin-inline-start: 0px !important;
                 }
+                
+                .tab-group-line
+                {
+                    margin-block: auto 0px !important;
+                }
             }
         }
 
         /* Margins */
-
+        
         .tabbrowser-tab:nth-child(1 of .tabbrowser-tab:not([hidden], [dragtarget]))
         {
             margin-inline-start: var(--tab-first-last-inline-margin) !important;

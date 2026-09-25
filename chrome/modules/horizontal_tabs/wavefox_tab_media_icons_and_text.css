@@ -1,104 +1,63 @@
 /* -------------------- Media Icons -------------------- */
 
-@scope (#pinned-tabs-container, #tabbrowser-arrowscrollbox) to (tab-group, tab-split-view-wrapper)
+tab-split-view-wrapper
 {
-    /* Pinned Tabs */
+    min-width: calc(var(--tab-min-width-pref, var(--tab-min-width)) * 2 + 6px) !important;
+}
 
-    .tabbrowser-tab[pinned]:not([crashed])
+.tabbrowser-tab
+{
+    --tab-min-width-extra-icons: 0px !important;
+    --tab-icon-end-margin: 6px !important;
+}
+
+/* Pinned Tabs */
+
+.tabbrowser-tab[pinned]:not([crashed])
+{
+    &:where([soundplaying], [muted], [activemedia-blocked]) .tab-icon-stack > :not(.tab-icon-overlay)
     {
-        &:where([soundplaying], [muted], [activemedia-blocked]) .tab-icon-stack > :not(.tab-icon-overlay)
-        {
-            clip-path: shape(
-                nonzero from 0px 0px,
-                hline by 16px,
-                vline by 16px,
-                arc by -16px 0px of 8px ccw,
-                close
-            );
-        }
-
-        .tab-icon-overlay
-        {
-            background-color: transparent !important;
-            background-image: none !important;
-            color: inherit !important;
-            fill: currentColor !important;
-            top: 8px !important;
-            inset-inline-end: 0px !important;
-            box-shadow: none !important;
-
-            &:hover
-            {
-                background-color: color-mix(in srgb, currentColor 17%, transparent) !important;
-            }
-
-            &:hover:active
-            {
-                background-color: color-mix(in srgb, currentColor 30%, transparent) !important;
-            }
-        }
+        clip-path: shape(
+            nonzero from 0px 0px,
+            hline by 16px,
+            vline by 16px,
+            arc by -16px 0px of 8px ccw,
+            close
+        );
     }
 
-    /* Regular Tabs */
-
-    .tabbrowser-tab:not([pinned], [crashed])
+    .tab-icon-overlay
     {
-        &:where([soundplaying], [muted], [activemedia-blocked]) .tab-icon-stack > *
-        {
-            clip-path: shape(
-                nonzero from 0px 0px,
-                hline by 16px,
-                vline by 16px,
-                arc by -16px 0px of 8px ccw,
-                close
-            );
-        }
-        
-        .tab-audio-button
-        {
-            --button-size-icon-small: 16px !important;
-            --button-min-height-small: 16px !important;
-            --button-background-color-ghost: transparent !important;
-            --button-text-color-ghost: inherit !important;
-            --button-background-color-ghost-hover: color-mix(in srgb, currentColor 17%, transparent) !important;
-            --button-text-color-ghost-hover: inherit !important;
-            --button-background-color-ghost-active: color-mix(in srgb, currentColor 30%, transparent) !important;
-            --button-text-color-ghost-active: inherit !important;
-            margin: 0px !important;
-            position: relative !important;
-            top: 8px !important;
-        }
-        
-        .tab-content
-        {
-            display: grid !important;
-            grid-template-rows: auto !important;
-            grid-template-columns: auto 1fr auto !important;
+        background-color: transparent !important;
+        background-image: none !important;
+        color: inherit !important;
+        fill: currentColor !important;
+        top: 8px !important;
+        inset-inline-end: 0px !important;
+        box-shadow: none !important;
+        border: none !important;
+        border-radius: 50px !important;
 
-            .tab-icon-stack,
-            .tab-audio-button
-            {
-                grid-area: 1 / 1 / auto / auto !important;
-            }
-            
-            .tab-icon-image:not([src], [pinned], [crashed], [sharing], [pictureinpicture], [busy])
-            {
-                display: block !important;
-            }
+        &:hover
+        {
+            background-color: color-mix(in srgb, currentColor 17%, transparent) !important;
+        }
+
+        &:hover:active
+        {
+            background-color: color-mix(in srgb, currentColor 30%, transparent) !important;
         }
     }
+}
 
-    .tabbrowser-tab:not([pinned])
+/* Regular Tabs */
+
+.tabbrowser-tab
+{
+    .tab-audio-button
     {
-        &[fadein]
-        {
-            min-width: var(--tab-min-width-pref, var(--tab-min-width)) !important;
-        }
-
-        .tab-icon-stack > *
-        {
-            margin-inline-end: 6px !important;
-        }
+        --button-size-icon-small: 16px !important;
+        --button-min-height-small: 16px !important;
     }
 }
 

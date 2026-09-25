@@ -1,19 +1,11 @@
-#navigator-toolbox
-{
-    & > *
-    {
-        border: none !important;
-    }
-}
-
 /* OS System Theme */
 
 @media -moz-pref("WaveFox.HorizontalTabs.OS.SystemTheme") and
-       -moz-pref("extensions.activeThemeID", 'default-theme@mozilla.org')
+       -moz-pref("extensions.activeThemeID", 'default-theme@mozilla.org') and
+       (-moz-native-theme)
 {
     #main-window,
-    body,
-    #navigator-toolbox
+    body
     {
         background-color: transparent !important;
         background-image: none !important;
