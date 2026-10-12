@@ -35,7 +35,7 @@ tab-split-view-wrapper
         top: 8px !important;
         inset-inline-end: 0px !important;
         box-shadow: none !important;
-        border: none !important;
+        outline: none !important;
         border-radius: 50px !important;
 
         &:hover
