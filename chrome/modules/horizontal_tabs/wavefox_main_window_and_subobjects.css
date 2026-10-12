@@ -1,11 +1,11 @@
 /* OS System Theme */
 
 @media -moz-pref("WaveFox.HorizontalTabs.OS.SystemTheme") and
-       -moz-pref("extensions.activeThemeID", 'default-theme@mozilla.org') and
-       (-moz-native-theme)
+       -moz-pref("extensions.activeThemeID", 'default-theme@mozilla.org')
 {
     #main-window,
-    body
+    body,
+    #navigator-toolbox
     {
         background-color: transparent !important;
         background-image: none !important;
