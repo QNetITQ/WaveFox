@@ -68,6 +68,15 @@
             inset: 0px !important;
         }
     }
+    
+    &[pinned]
+    {
+        .tab-context-line
+        {
+            width: 4px !important;
+            height: 4px !important;
+        }
+    }
 
 
 
