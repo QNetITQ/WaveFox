@@ -28,28 +28,50 @@
         outline: none !important;
         border: none !important;
         box-shadow: none !important;
+        
+        display: grid !important;
+        grid-template-rows: auto !important;
+        grid-template-columns: auto !important;
+
+        .tab-context-line
+        {
+            grid-row: 1 / span 1 !important;
+            grid-column: 1 / span 1 !important;
+            
+            position: relative !important;
+            width: calc(100% - var(--tab-border-radius) - 16px) !important;
+            height: 3px !important;
+            border: none !important;
+            border-radius: var(--tab-border-radius) !important;
+            margin-inline: auto !important;
+            margin-block: 0px auto !important;
+            background-color: var(--identity-stroke-color) !important;
+        }
+        
+        .tab-loading-burst
+        {
+            grid-row: 1 / span 1 !important;
+            grid-column: 1 / span 1 !important;
+        }
+        
+        .tab-group-line
+        {
+            grid-row: 1 / span 1 !important;
+            grid-column: 1 / span 1 !important;
+            
+            position: relative !important;
+            width: calc(100% - var(--tab-border-radius) - 16px) !important;
+            height: 3px !important;
+            border-radius: var(--tab-border-radius) !important;
+            margin-inline: auto !important;
+            margin-block: auto 0px !important;
+            inset: 0px !important;
+        }
     }
 
-    &[usercontextid] .tab-context-line
-    {
-        position: static !important;
-        width: auto !important;
-        height: 2px !important;
-        margin-block: calc(-1 * (var(--tab-margin-block) - 2px)) auto !important;
-        margin-inline: 0px !important;
-        background: none !important;
-        background-color: var(--identity-stroke-color) !important;
-        border: none !important;
-    }
 
-    .tab-group-line
-    {
-        position: static !important;
-        height: 2px !important;
-        margin-block: auto calc(-1 * (var(--tab-margin-block) - 2px)) !important;
-        margin-inline: 0px !important;
-        border-radius: var(--border-radius-xsmall) !important;
-    }
+
+
     
     /* Tab Icon Indicators */
     
@@ -73,27 +95,14 @@ tab-split-view-wrapper
 {
     & > .tabbrowser-tab
     {
-        overflow: visible !important;
-        border: none !important;
+        & .tab-stack
+        {
+            border: none !important;
+        }
 
         &:not([visuallyselected], [multiselected]) .tab-background
         {
             background-color: var(--toolbarbutton-background-color-hover) !important;
-        }
-        
-        .tab-background
-        {
-            margin: 0px !important;
-        }
-        
-        &[usercontextid] .tab-context-line
-        {
-            margin-block: calc(-1 * var(--tab-margin-block)) auto !important;
-        }
-
-        .tab-group-line
-        {
-            margin-block: auto calc(-1 * var(--tab-margin-block)) !important;
         }
     }
 }
