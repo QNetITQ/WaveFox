@@ -172,7 +172,7 @@ tab-group
 
     :root
     {
-        --tab-first-last-inline-margin: clamp(0px, var(--tab-border-radius), calc((var(--tab-min-height) + var(--tab-margin-block) * 2) / 2)) !important;
+        --tab-first-last-inline-margin: clamp(4px, var(--tab-border-radius), calc(var(--tab-min-height) / 2)) !important;
         --tabstrip-min-height: auto !important;
     }
 
@@ -189,11 +189,6 @@ tab-group
             &[visuallyselected]
             {
                 z-index: 2 !important;
-                
-                .tab-background
-                {
-                    background-color var(--toolbar-background-color) !important;
-                }
             }
 
             &:not([visuallyselected])
@@ -204,16 +199,6 @@ tab-group
                 {
                     z-index: 1 !important;
                 }
-            }
-            
-            &[pinned] .tab-content
-            {
-                padding-inline: calc(((var(--tab-min-height) + var(--tab-margin-block) * 2) - 16px) / 2) !important;
-            }
-            
-            &[usercontextid] .tab-context-line
-            {
-                margin-block: 0px auto !important;
             }
 
             .tab-background
@@ -238,11 +223,6 @@ tab-group
                 .tab-loading-burst::before
                 {
                     margin-inline-start: 0px !important;
-                }
-                
-                .tab-group-line
-                {
-                    margin-block: auto 0px !important;
                 }
             }
         }
