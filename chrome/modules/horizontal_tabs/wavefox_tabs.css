@@ -10,7 +10,25 @@
     }
 }
 
+@media -moz-pref("browser.theme.native-theme", false) and
+       (not -moz-pref("WaveFox.HorizontalTabs.AttachedTabs"))
+{
+    #navigator-toolbox > *,
+    #browser
+    {
+        background-color: transparent !important;
+    }
+}
+
 /* Tabs */
+
+@scope (#tabbrowser-arrowscrollbox, #pinned-tabs-container) to (tab-group)
+{
+    .tabbrowser-tab
+    {
+        overflow: visible !important;
+    }
+}
 
 .tabbrowser-tab
 {
@@ -28,7 +46,6 @@
         outline: none !important;
         border: none !important;
         box-shadow: none !important;
-        
         display: grid !important;
         grid-template-rows: auto !important;
         grid-template-columns: auto !important;
@@ -37,7 +54,6 @@
         {
             grid-row: 1 / span 1 !important;
             grid-column: 1 / span 1 !important;
-            
             position: relative !important;
             width: calc(100% - var(--tab-border-radius) - 16px) !important;
             height: 3px !important;
@@ -58,7 +74,6 @@
         {
             grid-row: 1 / span 1 !important;
             grid-column: 1 / span 1 !important;
-            
             position: relative !important;
             width: calc(100% - var(--tab-border-radius) - 16px) !important;
             height: 3px !important;
@@ -78,10 +93,6 @@
         }
     }
 
-
-
-
-    
     /* Tab Icon Indicators */
     
     .tab-content
@@ -102,16 +113,13 @@
     
 tab-split-view-wrapper
 {
+    background-color: var(--tab-background-color-hover);
+
     & > .tabbrowser-tab
     {
         & .tab-stack
         {
             border: none !important;
-        }
-
-        &:not([visuallyselected], [multiselected]) .tab-background
-        {
-            background-color: var(--toolbarbutton-background-color-hover) !important;
         }
     }
 }
@@ -133,7 +141,6 @@ tab-group
             width: calc(16px + var(--toolbarbutton-padding-inner)) !important;
             height: calc(16px + var(--toolbarbutton-padding-inner)) !important;
             min-width: auto !important;
-            border-radius: var(--tab-border-radius) !important;
         }
     }
 }
@@ -155,15 +162,23 @@ tab-group
 
 @media -moz-pref("WaveFox.HorizontalTabs.AttachedTabs")
 {
+    @media -moz-pref("browser.theme.native-theme", false)
+    {
+        :scope
+        {
+            --toolbar-background-color: var(--tab-background-color-selected) !important;
+        }
+    }
+
     :root
     {
         --tab-first-last-inline-margin: clamp(0px, var(--tab-border-radius), calc((var(--tab-min-height) + var(--tab-margin-block) * 2) / 2)) !important;
-        --tab-min-height: 24px !important;
+        --tabstrip-min-height: auto !important;
     }
 
     /* Pinned Container / Regular Container */
     
-    @scope (:root) to (tab-group, tab-split-view-wrapper)
+    @scope (:root) to (tab-split-view-wrapper)
     {
         .tabbrowser-tab
         {
@@ -177,7 +192,7 @@ tab-group
                 
                 .tab-background
                 {
-                    background-color: var(--toolbar-background-color) !important;
+                    background-color var(--toolbar-background-color) !important;
                 }
             }
 
@@ -203,7 +218,6 @@ tab-group
 
             .tab-background
             {
-                min-height: calc(var(--tab-min-height) + var(--tab-margin-block) * 2) !important;
                 margin-inline: calc(-1 * var(--tab-border-radius)) !important;
                 margin-block: 0px !important;
                 border-radius: 0px !important;
