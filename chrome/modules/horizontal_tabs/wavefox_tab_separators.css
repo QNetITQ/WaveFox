@@ -14,17 +14,17 @@
                         content: "";
                         display: block;
                         position: absolute;
-                        width: var(--tab-overflow-clip-margin);
+                        width: var(--tab-margin-overflow-clip);
                         height: 50%;
                         top: 25%;
                         pointer-events: none;
-                        inset-inline-start: calc(-1 * var(--tab-overflow-clip-margin) - var(--tab-overflow-clip-margin) / 2);
-                        border-inline-start: var(--tab-overflow-clip-margin) solid color-mix(in srgb, currentColor 25%, transparent);
+                        inset-inline-start: calc(-1 * var(--tab-margin-overflow-clip) - var(--tab-margin-overflow-clip) / 2);
+                        border-inline-start: var(--tab-margin-overflow-clip) solid color-mix(in srgb, currentColor 25%, transparent);
                         box-sizing: border-box;
 
                         @media -moz-pref("WaveFox.HorizontalTabs.AttachedTabs")
                         {
-                            inset-inline-start: calc(-1 * var(--tab-overflow-clip-margin) / 2);
+                            inset-inline-start: calc(-1 * var(--tab-margin-overflow-clip) / 2);
                         }
                     }
                 }
@@ -40,17 +40,17 @@
                             content: "";
                             display: block;
                             position: absolute;
-                            width: var(--tab-overflow-clip-margin);
+                            width: var(--tab-margin-overflow-clip);
                             height: 50%;
                             top: 25%;
                             pointer-events: none;
-                            inset-inline-end: calc(-1 * var(--tab-overflow-clip-margin) - var(--tab-overflow-clip-margin) / 2);
-                            border-inline-end: var(--tab-overflow-clip-margin) solid color-mix(in srgb, currentColor 25%, transparent);
+                            inset-inline-end: calc(-1 * var(--tab-margin-overflow-clip) - var(--tab-margin-overflow-clip) / 2);
+                            border-inline-end: var(--tab-margin-overflow-clip) solid color-mix(in srgb, currentColor 25%, transparent);
                             box-sizing: border-box;
 
                             @media -moz-pref("WaveFox.HorizontalTabs.AttachedTabs")
                             {
-                                inset-inline-end: calc(-1 * var(--tab-overflow-clip-margin) / 2);
+                                inset-inline-end: calc(-1 * var(--tab-margin-overflow-clip) / 2);
                             }
                         }
                     }
