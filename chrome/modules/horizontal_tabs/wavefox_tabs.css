@@ -55,7 +55,7 @@
             grid-row: 1 / span 1 !important;
             grid-column: 1 / span 1 !important;
             position: relative !important;
-            width: calc(100% - var(--tab-border-radius) - 16px) !important;
+            width: calc(100% - var(--tab-border-radius) - 8px) !important;
             height: 3px !important;
             border: none !important;
             border-radius: var(--tab-border-radius) !important;
@@ -75,7 +75,7 @@
             grid-row: 1 / span 1 !important;
             grid-column: 1 / span 1 !important;
             position: relative !important;
-            width: calc(100% - var(--tab-border-radius) - 16px) !important;
+            width: calc(100% - var(--tab-border-radius) - 8px) !important;
             height: 3px !important;
             border-radius: var(--tab-border-radius) !important;
             margin-inline: auto !important;
