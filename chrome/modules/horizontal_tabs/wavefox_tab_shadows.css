@@ -81,19 +81,6 @@
                 {
                     filter: var(--wavefox-selected-tab-filter) !important;
                 }
-                
-                tab-group
-                {
-                    .tabbrowser-tab[visuallyselected]
-                    {
-                        filter: none !important;
-                        
-                        .tab-background
-                        {
-                            box-shadow: var(--wavefox-selected-tab-shadow) !important;
-                        }
-                    }
-                }
             }
         }
     }
