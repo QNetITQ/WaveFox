@@ -9,10 +9,10 @@
 [Download Firefox](https://www.mozilla.org/en-US/firefox/all/#product-desktop-release) / [Download WaveFox](https://github.com/QNetITQ/WaveFox/releases) / [WaveFox Nightly](https://github.com/QNetITQ/WaveFox/tree/WaveFox-Nightly)
 
 <details>
-  <summary>WaveFox Nova v0.8.158</summary>
+  <summary>WaveFox Nova v0.9.159</summary>
 
 - ##### Minimum Requirements
-  - Firefox 158
+  - Firefox 159
   - Windows / MacOS / Linux
 
 - Download the `chrome` folder and put it in your user profile folder

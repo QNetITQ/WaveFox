@@ -1,10 +1,5 @@
 /* -------------------- Media Icons -------------------- */
 
-tab-split-view-wrapper
-{
-    min-width: calc(var(--tab-min-width-pref, var(--tab-min-width)) * 2 + 6px) !important;
-}
-
 .tabbrowser-tab
 {
     --tab-min-width-extra-icons: 0px !important;
