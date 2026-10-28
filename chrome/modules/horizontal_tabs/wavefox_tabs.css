@@ -174,6 +174,8 @@ tab-group
 
 @media -moz-pref("WaveFox.HorizontalTabs.AttachedTabs")
 {
+    /* Tab Margins */
+    
     @scope (#pinned-tabs-container, #tabbrowser-arrowscrollbox) to (tab-group, tab-split-view-wrapper)
     {
         .tabbrowser-tab:nth-child(1 of .tabbrowser-tab:not([hidden], [dragtarget]))
@@ -187,7 +189,7 @@ tab-group
         }
     }
     
-    /* !!!!!!!!!!!!!!!!!!!!!!!!! */
+    /* Tab Groups */
     
     tab-group
     {
@@ -208,31 +210,19 @@ tab-group
         }
     }
     
-    /* !!!!!!!!!!!!!!!!!!!!!!!!! */
+    /* Split View */
     
     tab-split-view-wrapper
     {
         margin-block: 0px !important;
     }
-    
-    
-    
-    
-    
-    
-    
+
+    /* Tabs */
+
     :root
     {
         --tab-first-last-inline-margin: clamp(4px, var(--tab-border-radius), calc(var(--tab-min-height) / 2)) !important;
         --tabstrip-min-height: auto !important;
-    }
-    
-    @media -moz-pref("browser.theme.native-theme", false)
-    {
-        :scope
-        {
-            --toolbar-background-color: var(--tab-background-color-selected) !important;
-        }
     }
 
     /* Pinned Container / Regular Container */
@@ -262,11 +252,20 @@ tab-group
                 }
             }
             
+            &[pinned]
+            {
+                .tab-context-line
+                {
+                    width: 4px !important;
+                    height: 4px !important;
+                }
+            }
+            
             &:not([pinned])
             {
                 .tab-context-line
                 {
-                    width: calc(100% - var(--tab-border-radius) * 4 - 8px) !important;
+                    width: calc(100% - var(--tab-border-radius) * 4) !important;
                 }
             }
 
@@ -275,8 +274,6 @@ tab-group
                 margin-inline: calc(-1 * var(--tab-border-radius)) !important;
                 margin-block: 0px !important;
                 border-radius: 0px !important;
-                outline: none !important;
-                pointer-events: none !important;
                 clip-path: shape(
                     nonzero from 0px 100%,
                     arc by var(--tab-border-radius) calc(-1 * var(--tab-border-radius)) of var(--tab-border-radius) ccw, /* 0px small rotate 0deg */
@@ -291,7 +288,7 @@ tab-group
                 
                 .tab-group-line
                 {
-                    width: calc(100% - var(--tab-border-radius) * 4 - 8px) !important;
+                    width: calc(100% - var(--tab-border-radius) * 4) !important;
                 }
             }
         }
@@ -304,7 +301,7 @@ tab-group
         
         
         
-        /* Custom shapes */
+        /* Custom Shapes */
 
         @media -moz-pref("WaveFox.HorizontalTabs.AttachedTabs.Shape", 1) or
                -moz-pref("WaveFox.HorizontalTabs.AttachedTabs.Shape", 2) or
@@ -383,7 +380,6 @@ tab-group
                     box-sizing: content-box !important;
                     padding-inline: var(--tab-first-last-inline-margin) !important;
                     margin-inline: calc(-1 * var(--tab-first-last-inline-margin)) !important;
-                    overflow-clip-margin: 0px !important;
 
                     &:nth-child(1 of .tabbrowser-tab:not([hidden]))
                     {
