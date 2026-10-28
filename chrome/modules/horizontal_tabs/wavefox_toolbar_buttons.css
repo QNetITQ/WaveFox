@@ -49,7 +49,7 @@
 
 #TabsToolbar
 {
-    --toolbarbutton-padding-inner: inherit !important;
+    --toolbarbutton-padding-inner: calc(var(--tab-min-height) / 4 - 2px) !important;
 }
 
 /* ---------------------------------------- Indents ---------------------------------------- */
