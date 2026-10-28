@@ -16,12 +16,24 @@
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
-@media -moz-pref("browser.theme.native-theme", false)
+@media (-moz-pref("extensions.activeThemeID", "default-theme@mozilla.org") and -moz-pref("browser.theme.native-theme", false)) or
+        -moz-pref("extensions.activeThemeID", "firefox-compact-light@mozilla.org") or
+        -moz-pref("extensions.activeThemeID", "firefox-compact-dark@mozilla.org") or
+        -moz-pref("extensions.activeThemeID", "nova-spark@mozilla.org") or
+        -moz-pref("extensions.activeThemeID", "nova-flare@mozilla.org") or
+        -moz-pref("extensions.activeThemeID", "nova-dusk@mozilla.org") or
+        -moz-pref("extensions.activeThemeID", "nova-pine@mozilla.org") or
+        -moz-pref("extensions.activeThemeID", "nova-ash@mozilla.org") or
+        -moz-pref("extensions.activeThemeID", "nova-sun@mozilla.org") or
+        -moz-pref("extensions.activeThemeID", "nova-flame@mozilla.org") or
+        -moz-pref("extensions.activeThemeID", "nova-lavender@mozilla.org") or
+        -moz-pref("extensions.activeThemeID", "nova-lagoon@mozilla.org") or
+        -moz-pref("extensions.activeThemeID", "nova-tide@mozilla.org") or
+        -moz-pref("extensions.activeThemeID", "nova-smoke@mozilla.org")
 {
     :scope
     {
-        --toolbar-background-color: transparent !important;
-        --toolbar-field-background-color: var(--toolbar-field-background-color-focus) !important;
+        --toolbar-background-color: var(--tab-background-color-selected) !important;
     }
 }
 
@@ -39,8 +51,12 @@
     {
         .tab-background
         {
-            background: none !important;
-            background-color: var(--tab-background-color-selected) !important;
+            background: var(--toolbar-background-color) !important;
+        }
+        
+        .tab-content
+        {
+            color: var(--toolbar-text-color) !important;
         }
     }
     
@@ -58,7 +74,7 @@
             grid-row: 1 / span 1 !important;
             grid-column: 1 / span 1 !important;
             position: relative !important;
-            width: calc(100% - var(--tab-border-radius) - 8px) !important;
+            width: calc(100% - var(--tab-border-radius) * 2) !important;
             height: 3px !important;
             border: none !important;
             border-radius: var(--tab-border-radius) !important;
@@ -71,6 +87,12 @@
         {
             grid-row: 1 / span 1 !important;
             grid-column: 1 / span 1 !important;
+            
+            &::before
+            {
+                position: relative !important;
+                margin-inline: auto !important;
+            }
         }
         
         .tab-group-line
@@ -78,7 +100,7 @@
             grid-row: 1 / span 1 !important;
             grid-column: 1 / span 1 !important;
             position: relative !important;
-            width: calc(100% - var(--tab-border-radius) - 8px) !important;
+            width: calc(100% - var(--tab-border-radius) * 2) !important;
             height: 3px !important;
             border-radius: var(--tab-border-radius) !important;
             margin-inline: auto !important;
@@ -86,17 +108,6 @@
             inset: 0px !important;
         }
     }
-    
-    &[pinned]
-    {
-        .tab-context-line
-        {
-            width: 4px !important;
-            height: 4px !important;
-        }
-    }
-
-    /* Tab Icon Indicators */
     
     .tab-content
     {
@@ -277,11 +288,6 @@ tab-group
                     arc by var(--tab-border-radius) var(--tab-border-radius) of var(--tab-border-radius) ccw, /* 0px small rotate 0deg */
                     close
                 );
-
-                .tab-loading-burst::before
-                {
-                    margin-inline-start: 0px !important;
-                }
                 
                 .tab-group-line
                 {
