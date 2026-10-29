@@ -103,12 +103,18 @@
 {
     @scope (:root) to (tab-split-view-wrapper)
     {
-            .tabbrowser-tab:not([hidden])
+        .tabbrowser-tab:not([hidden])
+        {
+            & > .tab-stack
+            {
+                margin-inline-end: 1px !important;
+            }
+
+            &:has(+ .tabbrowser-tab:not([hidden])),
+            &:has(+ .tabbrowser-tab[hidden] + .tabbrowser-tab:not([hidden]))
             {
                 & > .tab-stack
                 {
-                    margin-inline-end: 1px !important;
-                    
                     &::after
                     {
                         content: "";
@@ -118,7 +124,7 @@
                         height: 50%;
                         top: 25%;
                         pointer-events: none;
-                        inset-inline-start: calc(100% + var(--tab-margin-overflow-clip)) !important;
+                        inset-inline-start: calc(100% + var(--tab-margin-overflow-clip));
                         border-inline-start: 1px solid color-mix(in srgb, currentColor 25%, transparent);
                         box-sizing: border-box;
 
@@ -128,38 +134,17 @@
                         }
                     }
                 }
-
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                &:is([selected], :hover, [multiselected], [dragover-groupTarget]),
-                &:has(+ .tabbrowser-tab:not([hidden]):is([selected], :hover, [multiselected], [dragover-groupTarget])),
-                &:has(+ .tabbrowser-tab[hidden] + .tabbrowser-tab:not([hidden]):is([selected], :hover, [multiselected], [dragover-groupTarget]))
-                {
-                    & > .tab-stack::after
-                    {
-                        opacity: 0 !important;
-                    }
-                }
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
             }
+
+            &:is([selected], :hover, [multiselected], [dragover-groupTarget]),
+            &:has(+ .tabbrowser-tab:not([hidden]):is([selected], :hover, [multiselected], [dragover-groupTarget])),
+            &:has(+ .tabbrowser-tab[hidden] + .tabbrowser-tab:not([hidden]):is([selected], :hover, [multiselected], [dragover-groupTarget]))
+            {
+                & > .tab-stack::after
+                {
+                    opacity: 0 !important;
+                }
+            }
+        }
     }
 }
