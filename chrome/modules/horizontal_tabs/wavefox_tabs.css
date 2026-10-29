@@ -121,6 +121,15 @@
         padding: 2px !important;
         margin: 0px !important;
     }
+    
+    &[pinned]
+    {
+        .tab-context-line
+        {
+            width: 4px !important;
+            height: 4px !important;
+        }
+    }
 }
 
 /* Split View */
@@ -232,9 +241,7 @@ tab-group
         .tabbrowser-tab
         {
             overflow: visible !important;
-            
             --tab-border-radius: var(--tab-first-last-inline-margin) !important;
-            
             padding-inline: 0px !important;
 
             &[visuallyselected]
@@ -251,16 +258,7 @@ tab-group
                     z-index: 1 !important;
                 }
             }
-            
-            &[pinned]
-            {
-                .tab-context-line
-                {
-                    width: 4px !important;
-                    height: 4px !important;
-                }
-            }
-            
+
             &:not([pinned])
             {
                 .tab-context-line
