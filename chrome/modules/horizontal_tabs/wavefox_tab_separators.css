@@ -1,3 +1,5 @@
+/*
+
 @media -moz-pref("WaveFox.HorizontalTabs.Tabs.Separators", 1) or 
        -moz-pref("WaveFox.HorizontalTabs.Tabs.Separators", 2)
 {
@@ -86,5 +88,78 @@
                 background-color: color-mix(in srgb, currentColor 10%, transparent) !important;
             }
         }
+    }
+}
+
+*/
+
+
+
+
+
+
+
+@media -moz-pref("WaveFox.HorizontalTabs.Tabs.Separators", 1)
+{
+    @scope (:root) to (tab-split-view-wrapper)
+    {
+            .tabbrowser-tab:not([hidden])
+            {
+                & > .tab-stack
+                {
+                    margin-inline-end: 1px !important;
+                    
+                    &::after
+                    {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        width: 1px;
+                        height: 50%;
+                        top: 25%;
+                        pointer-events: none;
+                        inset-inline-start: calc(100% + var(--tab-margin-overflow-clip)) !important;
+                        border-inline-start: 1px solid color-mix(in srgb, currentColor 25%, transparent);
+                        box-sizing: border-box;
+
+                        @media -moz-pref("WaveFox.HorizontalTabs.AttachedTabs")
+                        {
+                            inset-inline-start: 100%;
+                        }
+                    }
+                }
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                &:is([selected], :hover, [multiselected], [dragover-groupTarget]),
+                &:has(+ .tabbrowser-tab:not([hidden]):is([selected], :hover, [multiselected], [dragover-groupTarget])),
+                &:has(+ .tabbrowser-tab[hidden] + .tabbrowser-tab:not([hidden]):is([selected], :hover, [multiselected], [dragover-groupTarget]))
+                {
+                    & > .tab-stack::after
+                    {
+                        opacity: 0 !important;
+                    }
+                }
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+            }
     }
 }
