@@ -46,6 +46,26 @@
                 --wavefox-selected-tab-filter-color: black;
                 --wavefox-inner-tabbar-shadow-color: black;
             }
+            
+            #TabsToolbar
+            {
+                position: relative !important;
+                clip-path: inset(0px) !important;
+            }
+
+            #TabsToolbar::before
+            {
+                content: "";
+                display: block;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                bottom: 0px;
+                inset-inline-start: 0px;
+                box-shadow: var(--wavefox-inner-tabbar-shadow);
+                pointer-events: none;
+                z-index: 2;
+            }
 
             @media not -moz-pref("WaveFox.HorizontalTabs.AttachedTabs")
             {
@@ -57,26 +77,6 @@
             
             @media -moz-pref("WaveFox.HorizontalTabs.AttachedTabs")
             {
-                #TabsToolbar
-                {
-                    position: relative !important;
-                    clip-path: inset(0px) !important;
-                }
-
-                #TabsToolbar::before
-                {
-                    content: "";
-                    display: block;
-                    position: absolute;
-                    width: 100%;
-                    height: 100%;
-                    bottom: 0px;
-                    inset-inline-start: 0px;
-                    box-shadow: var(--wavefox-inner-tabbar-shadow);
-                    pointer-events: none;
-                    z-index: 2;
-                }
-
                 .tabbrowser-tab[visuallyselected]
                 {
                     filter: var(--wavefox-selected-tab-filter) !important;
