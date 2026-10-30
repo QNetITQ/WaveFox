@@ -48,6 +48,7 @@
         #nav-bar
         {
             width: fit-content !important;
+            background-color: transparent !important;
         }
 
         /* Bookmarks Bar / Notifications */
@@ -62,6 +63,20 @@
         #customization-panelWrapper
         {
             --panel-arrow-offset: 0px !important;
+        }
+        
+        /* Browser */
+        
+        #browser
+        {
+            background-color: transparent !important;
+        }
+        
+        /* Root */
+        
+        :root
+        {
+            --wavefox-inner-tabbar-shadow-color: transparent;
         }
     }
 }
