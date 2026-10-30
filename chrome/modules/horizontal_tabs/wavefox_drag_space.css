@@ -35,10 +35,9 @@
 
         #TabsToolbar tab-split-view-wrapper
         {
-            align-self: end !important;
-
             .tabbrowser-tab
             {
+                --split-view-tab-strip-inset: 0px !important;
                 margin-top: 0px !important;
             }
         }
