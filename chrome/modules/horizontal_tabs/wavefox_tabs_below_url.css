@@ -21,5 +21,15 @@
         {
             order: 3 !important;
         }
+        
+        #browser
+        {
+            background-color: transparent !important;
+        }
+        
+        :root
+        {
+            --wavefox-inner-tabbar-shadow-offset-y: 4px;
+        }
     }
 }
