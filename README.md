@@ -817,6 +817,13 @@ Open `userChrome.css` and paste your code under the appropriate comment. Your co
 
 </details>
 
+<details>
+  <summary>How to enable the System theme? (Windows / Linux / MacOS)</summary>
+
+  - `browser.theme.native-theme`
+
+</details>
+
 ###### Have a question not related to this project? These resources will help you
 - [Mozilla support](https://support.mozilla.org/en-US/)
 - [Reddit](https://www.reddit.com/r/firefox)
