@@ -30,5 +30,5 @@
 
 /* ---------------------------------------- User styles (Maximum priority) ---------------------------------------- */  
 
-@import "wavefox_horizontal_tabs_user_styles.css" /* layer() supports() */ -moz-pref("WaveFox.HorizontalTabs.UserStyles") and ("sidebar.verticalTabs", false);
-@import "wavefox_vertical_tabs_user_styles.css"   /* layer() supports() */ -moz-pref("WaveFox.VerticalTabs.UserStyles")   and ("sidebar.verticalTabs", true);
+@import "wavefox_horizontal_tabs_user_styles.css" /* layer() supports() */ -moz-pref("WaveFox.HorizontalTabs.UserStyles") and -moz-pref("sidebar.verticalTabs", false);
+@import "wavefox_vertical_tabs_user_styles.css"   /* layer() supports() */ -moz-pref("WaveFox.VerticalTabs.UserStyles")   and -moz-pref("sidebar.verticalTabs", true);
