@@ -21,9 +21,10 @@
 ## Optional
 
 ### User Styles
-Go to the "chrome" folder, create a file named "wavefox_user_styles.css", add the desired styles to it, and enable the key specified below. Please note that this file has maximum execution priority. It will overwrite all styles, regardless of selector specificity. I make no guarantees of compatibility and will not resolve any style conflicts you may encounter.
+Go to the "chrome" folder, create a file named "wavefox_horizontal_tabs_user_styles.css" or/and "wavefox_vertical_tabs_user_styles.css", add the desired styles to it, and enable the key/s specified below. Please note that this files has maximum execution priority. It will overwrite all styles, regardless of selector specificity. I make no guarantees of compatibility and will not resolve any style conflicts you may encounter.
 
-- `WaveFox.UserStyles` > true
+- `WaveFox.HorizontalTabs.UserStyles`
+- `WaveFox.VerticalTabs.UserStyles`
 
 You can also add styles directly to the "userChrome.css". Just do whatever is most convenient for you.
 
