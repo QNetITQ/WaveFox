@@ -197,7 +197,7 @@ tab-group
 
     :root
     {
-        --tab-first-last-inline-margin: clamp(4px, var(--tab-border-radius), calc(var(--tab-min-height) / 2)) !important;
+        --tab-first-last-inline-margin: clamp(0px, var(--tab-border-radius), calc(var(--tab-min-height) / 2)) !important;
         --tabstrip-min-height: auto !important;
     }
 
