@@ -1,7 +1,8 @@
 /* OS System Theme */
 
 @media -moz-pref("WaveFox.HorizontalTabs.OS.SystemTheme") and
-       -moz-pref("extensions.activeThemeID", 'default-theme@mozilla.org')
+       -moz-pref("extensions.activeThemeID", 'default-theme@mozilla.org') and
+       -moz-pref("browser.theme.native-theme", true)
 {
     #main-window,
     body,
