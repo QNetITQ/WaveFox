@@ -32,6 +32,7 @@
         box-shadow: none !important;
         outline: none !important;
         border-radius: 50px !important;
+        padding: 1px !important;
 
         &:hover
         {
@@ -53,6 +54,7 @@
     {
         --button-size-icon-small: 16px !important;
         --button-min-height-small: 16px !important;
+        --icon-size-xsmall: 14px !important;
     }
 }
 
