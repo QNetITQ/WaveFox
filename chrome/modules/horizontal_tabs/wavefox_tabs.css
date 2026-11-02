@@ -10,39 +10,6 @@
     }
 }
 
-
-
-
-
-/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
-
-@media (-moz-pref("extensions.activeThemeID", "default-theme@mozilla.org") and -moz-pref("browser.theme.native-theme", false)) or
-        -moz-pref("extensions.activeThemeID", "firefox-compact-light@mozilla.org") or
-        -moz-pref("extensions.activeThemeID", "firefox-compact-dark@mozilla.org") or
-        -moz-pref("extensions.activeThemeID", "nova-spark@mozilla.org") or
-        -moz-pref("extensions.activeThemeID", "nova-flare@mozilla.org") or
-        -moz-pref("extensions.activeThemeID", "nova-dusk@mozilla.org") or
-        -moz-pref("extensions.activeThemeID", "nova-pine@mozilla.org") or
-        -moz-pref("extensions.activeThemeID", "nova-ash@mozilla.org") or
-        -moz-pref("extensions.activeThemeID", "nova-sun@mozilla.org") or
-        -moz-pref("extensions.activeThemeID", "nova-flame@mozilla.org") or
-        -moz-pref("extensions.activeThemeID", "nova-lavender@mozilla.org") or
-        -moz-pref("extensions.activeThemeID", "nova-lagoon@mozilla.org") or
-        -moz-pref("extensions.activeThemeID", "nova-tide@mozilla.org") or
-        -moz-pref("extensions.activeThemeID", "nova-smoke@mozilla.org")
-{
-    :scope
-    {
-        --toolbar-background-color: var(--tab-background-color-selected) !important;
-    }
-}
-
-
-
-
-
-
-
 /* Tabs */
 
 .tabbrowser-tab
