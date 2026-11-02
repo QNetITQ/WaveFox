@@ -16,7 +16,7 @@
   - Windows / MacOS / Linux
 
 - Download the `chrome` folder and put it in your user profile folder
-- Go to `about:config` and activate the key `toolkit.legacyUserProfileCustomizations.stylesheets` and `browser.nova.enabled`
+- Go to `about:config` and activate the key `toolkit.legacyUserProfileCustomizations.stylesheets`
 
 ## Optional
 
