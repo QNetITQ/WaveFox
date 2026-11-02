@@ -85,16 +85,6 @@ The keys below are relevant only for the second option.
 
 - `WaveFox.HorizontalTabs.AttachedTabs.DragSpace` > 1 or 2 or 3
 
-### Tabs Below URL
-![Снимок](https://github.com/QNetITQ/WaveFox/assets/85301851/514cf30d-a417-48cb-bfd1-0e77c9df1bf4)
-
-- `WaveFox.HorizontalTabs.FloatingTabs.TabsBelowURL`
-
-### One Line
-![Снимок](https://github.com/QNetITQ/WaveFox/assets/85301851/05bba314-643d-46f3-a09c-b3ac31f9761d)
-
-- `WaveFox.HorizontalTabs.FloatingTabs.OneLine`
-
 </details>
 
 <details>
