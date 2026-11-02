@@ -47,8 +47,8 @@ This setting makes tabs one with the browser toolbar. Depends on the corner roun
 Requires OS with transparency support. Works only with the system theme.
 ![Снимок5](https://github.com/QNetITQ/WaveFox/assets/85301851/3b4dcfc8-217d-48a1-aba7-1621f9375f67)
 
-- `WaveFox.HorizontalTabs.OS.SystemTheme`
-- `WaveFox.VerticalTabs.OS.SystemTheme`
+- `WaveFox.HorizontalTabs.OS.SystemTheme` and `browser.theme.native-theme`
+- `WaveFox.VerticalTabs.OS.SystemTheme`   and `browser.theme.native-theme`
 
 ### Toolbar Roundings
 Ability to control the rounding of browser bar elements.
