@@ -20,6 +20,13 @@
 
 ## Optional
 
+### User Styles
+Go to the "chrome" folder, create a file named "wavefox_user_styles.css", add the desired styles to it, and enable the key specified below. Please note that this file has maximum execution priority. It will overwrite all styles, regardless of selector specificity. I make no guarantees of compatibility and will not resolve any style conflicts you may encounter.
+
+- `WaveFox.UserStyles` > true
+
+You can also add styles directly to the "userChrome.css". Just do whatever is most convenient for you.
+
 ### Tests
 These are very rough options. There's no guarantee they'll make it into the final release.
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/fbaa8228-ad10-4b41-93c6-cc46e5838a74" />
