@@ -9,16 +9,24 @@
 [Download Firefox](https://www.mozilla.org/en-US/firefox/all/#product-desktop-release) / [Download WaveFox](https://github.com/QNetITQ/WaveFox/releases) / [WaveFox Nightly](https://github.com/QNetITQ/WaveFox/tree/WaveFox-Nightly)
 
 <details>
-  <summary>WaveFox Nova v0.9.159</summary>
+  <summary>WaveFox Nova v0.9.160</summary>
 
 - ##### Minimum Requirements
-  - Firefox 159
+  - Firefox 160
   - Windows / MacOS / Linux
 
 - Download the `chrome` folder and put it in your user profile folder
-- Go to `about:config` and activate the key `toolkit.legacyUserProfileCustomizations.stylesheets` and `browser.nova.enabled`
+- Go to `about:config` and activate the key `toolkit.legacyUserProfileCustomizations.stylesheets`
 
 ## Optional
+
+### User Styles
+Go to the "chrome" folder, add the desired styles to the appropriate files, and enable the key/s specified below. Please note that this files has maximum execution priority. It will overwrite all styles, regardless of selector specificity. I make no guarantees of compatibility and will not resolve any style conflicts you may encounter.
+
+- `WaveFox.HorizontalTabs.UserStyles`
+- `WaveFox.VerticalTabs.UserStyles`
+
+You can also add styles directly to the "userChrome.css". Just do whatever is most convenient for you.
 
 ### Tests
 These are very rough options. There's no guarantee they'll make it into the final release.
@@ -39,8 +47,8 @@ This setting makes tabs one with the browser toolbar. Depends on the corner roun
 Requires OS with transparency support. Works only with the system theme.
 ![Снимок5](https://github.com/QNetITQ/WaveFox/assets/85301851/3b4dcfc8-217d-48a1-aba7-1621f9375f67)
 
-- `WaveFox.HorizontalTabs.OS.SystemTheme`
-- `WaveFox.VerticalTabs.OS.SystemTheme`
+- `WaveFox.HorizontalTabs.OS.SystemTheme` and `browser.theme.native-theme`
+- `WaveFox.VerticalTabs.OS.SystemTheme`   and `browser.theme.native-theme`
 
 ### Toolbar Roundings
 Ability to control the rounding of browser bar elements.
@@ -84,16 +92,6 @@ The keys below are relevant only for the second option.
 ![изображение](https://user-images.githubusercontent.com/85301851/152680229-43547df0-1d2c-4384-b024-950e7aa56ca6.png)
 
 - `WaveFox.HorizontalTabs.AttachedTabs.DragSpace` > 1 or 2 or 3
-
-### Tabs Below URL
-![Снимок](https://github.com/QNetITQ/WaveFox/assets/85301851/514cf30d-a417-48cb-bfd1-0e77c9df1bf4)
-
-- `WaveFox.HorizontalTabs.FloatingTabs.TabsBelowURL`
-
-### One Line
-![Снимок](https://github.com/QNetITQ/WaveFox/assets/85301851/05bba314-643d-46f3-a09c-b3ac31f9761d)
-
-- `WaveFox.HorizontalTabs.FloatingTabs.OneLine`
 
 </details>
 
@@ -820,7 +818,7 @@ Open `userChrome.css` and paste your code under the appropriate comment. Your co
 <details>
   <summary>How to enable the System theme? (Windows / Linux / MacOS)</summary>
 
-  - `browser.theme.native-theme`
+  - Enable the system theme in the browser and activate the key `browser.theme.native-theme`
 
 </details>
 
