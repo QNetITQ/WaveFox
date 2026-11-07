@@ -28,7 +28,7 @@
 @import "modules/vertical_tabs/wavefox_tab_media_icons_and_text.css"     layer(BasicPriority) /* supports() */ -moz-pref("sidebar.verticalTabs!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!", true);
 @import "modules/vertical_tabs/wavefox_toolbar_buttons.css"              layer(BasicPriority) /* supports() */ -moz-pref("sidebar.verticalTabs", true);
 
-/* ---------------------------------------- User styles (Maximum priority) ---------------------------------------- */  
+/* ---------------------------------------- User styles (Maximum priority) ---------------------------------------- */
 
 @import "wavefox_horizontal_tabs_user_styles.css" /* layer() supports() */ -moz-pref("WaveFox.HorizontalTabs.UserStyles") and -moz-pref("sidebar.verticalTabs", false);
 @import "wavefox_vertical_tabs_user_styles.css"   /* layer() supports() */ -moz-pref("WaveFox.VerticalTabs.UserStyles")   and -moz-pref("sidebar.verticalTabs", true);
