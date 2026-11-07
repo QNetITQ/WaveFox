@@ -818,7 +818,7 @@ Open `userChrome.css` and paste your code under the appropriate comment. Your co
 <details>
   <summary>How to enable the System theme? (Windows / Linux / MacOS)</summary>
 
-  - `browser.theme.native-theme`
+  - Enable the system theme in the browser and activate the key `browser.theme.native-theme`
 
 </details>
 
