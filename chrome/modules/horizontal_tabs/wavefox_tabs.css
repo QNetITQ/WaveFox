@@ -47,7 +47,7 @@
             border-radius: var(--tab-border-radius) !important;
             margin-inline: auto !important;
             margin-block: 0px auto !important;
-            background-color: var(--identity-stroke-color) !important;
+            inset: 0px !important;
         }
         
         .tab-loading-burst
@@ -163,6 +163,13 @@ tab-group
         {
             margin-inline-end: var(--tab-first-last-inline-margin) !important;
         }
+    }
+
+    /* Overflow animations */
+
+    scrollbox[part="scrollbox"]
+    {
+        scroll-padding-inline: var(--tab-first-last-inline-margin) !important;
     }
     
     /* Tab Groups */
@@ -325,41 +332,6 @@ tab-group
                         calc(-1 * var(--tab-corner-incline-x)) calc(-1 * var(--tab-corner-incline-y)) from end,
                         close
                     );
-                }
-            }
-        }
-    }
-    
-    @scope (:root) to (tab-group, tab-split-view-wrapper)
-    {
-        /* Tab Scroll Animation */
-
-        #tabbrowser-tabs:not([movingtab])
-        {
-            #pinned-tabs-container[overflowing],
-            #tabbrowser-arrowscrollbox[overflowing]
-            {
-                .tabbrowser-tab
-                {
-                    pointer-events: none !important;
-                    box-sizing: content-box !important;
-                    padding-inline: var(--tab-first-last-inline-margin) !important;
-                    margin-inline: calc(-1 * var(--tab-first-last-inline-margin)) !important;
-
-                    &:nth-child(1 of .tabbrowser-tab:not([hidden]))
-                    {
-                        margin-inline-start: 0px !important;
-                    }
-
-                    &:nth-last-child(1 of .tabbrowser-tab:not([hidden]))
-                    {
-                        margin-inline-end: 0px !important;
-                    }
-
-                    .tab-stack
-                    {
-                        pointer-events: auto !important;
-                    }
                 }
             }
         }
