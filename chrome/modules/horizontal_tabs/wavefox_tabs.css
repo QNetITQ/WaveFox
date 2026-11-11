@@ -193,12 +193,50 @@ tab-group
         }
     }
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
     /* Split View */
     
     tab-split-view-wrapper
     {
-        margin-block: 0px !important;
+        margin: 0px !important;
+        padding: 0px !important;
+        
+        .tabbrowser-tab
+        {
+            .tab-stack
+            {
+                padding: 0px !important;
+                
+                .tab-background
+                {
+                    min-height: var(--tab-min-height) !important;
+                }
+                
+                .tab-content
+                {
+                    padding-inline: var(--tab-padding-inline) !important;
+                }
+            }
+        }
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
     /* Tabs */
 
@@ -209,61 +247,59 @@ tab-group
     }
 
     /* Pinned Container / Regular Container */
-    
-    @scope (:root) to (tab-split-view-wrapper)
+
+    .tabbrowser-tab
     {
-        .tabbrowser-tab
+        overflow: visible !important;
+        --tab-border-radius: var(--tab-first-last-inline-margin) !important;
+        padding-inline: 0px !important;
+
+        &[visuallyselected]
         {
-            overflow: visible !important;
-            --tab-border-radius: var(--tab-first-last-inline-margin) !important;
-            padding-inline: 0px !important;
+            z-index: 2 !important;
+        }
 
-            &[visuallyselected]
+        &:not([visuallyselected])
+        {
+            z-index: 0 !important;
+
+            &[multiselected]
             {
-                z-index: 2 !important;
-            }
-
-            &:not([visuallyselected])
-            {
-                z-index: 0 !important;
-
-                &[multiselected]
-                {
-                    z-index: 1 !important;
-                }
-            }
-
-            &:not([pinned])
-            {
-                .tab-context-line
-                {
-                    width: calc(100% - var(--tab-border-radius) * 4) !important;
-                }
-            }
-
-            .tab-background
-            {
-                margin-inline: calc(-1 * var(--tab-border-radius)) !important;
-                margin-block: 0px !important;
-                border-radius: 0px !important;
-                clip-path: shape(
-                    nonzero from 0px 100%,
-                    arc by var(--tab-border-radius) calc(-1 * var(--tab-border-radius)) of var(--tab-border-radius) ccw, /* 0px small rotate 0deg */
-                    vline to var(--tab-border-radius),
-                    arc by var(--tab-border-radius) calc(-1 * var(--tab-border-radius)) of var(--tab-border-radius) cw, /* 0px small rotate 0deg */
-                    hline to calc(100% - calc(var(--tab-border-radius) * 2)),
-                    arc by var(--tab-border-radius) var(--tab-border-radius) of var(--tab-border-radius) cw, /* 0px small rotate 0deg */
-                    vline to calc(100% - var(--tab-border-radius)),
-                    arc by var(--tab-border-radius) var(--tab-border-radius) of var(--tab-border-radius) ccw, /* 0px small rotate 0deg */
-                    close
-                );
-                
-                .tab-group-line
-                {
-                    width: calc(100% - var(--tab-border-radius) * 4) !important;
-                }
+                z-index: 1 !important;
             }
         }
+
+        &:not([pinned])
+        {
+            .tab-context-line
+            {
+                width: calc(100% - var(--tab-border-radius) * 4) !important;
+            }
+        }
+
+        .tab-background
+        {
+            margin-inline: calc(-1 * var(--tab-border-radius)) !important;
+            margin-block: 0px !important;
+            border-radius: 0px !important;
+            clip-path: shape(
+                nonzero from 0px 100%,
+                arc by var(--tab-border-radius) calc(-1 * var(--tab-border-radius)) of var(--tab-border-radius) ccw, /* 0px small rotate 0deg */
+                vline to var(--tab-border-radius),
+                arc by var(--tab-border-radius) calc(-1 * var(--tab-border-radius)) of var(--tab-border-radius) cw, /* 0px small rotate 0deg */
+                hline to calc(100% - calc(var(--tab-border-radius) * 2)),
+                arc by var(--tab-border-radius) var(--tab-border-radius) of var(--tab-border-radius) cw, /* 0px small rotate 0deg */
+                vline to calc(100% - var(--tab-border-radius)),
+                arc by var(--tab-border-radius) var(--tab-border-radius) of var(--tab-border-radius) ccw, /* 0px small rotate 0deg */
+                close
+            );
+
+            .tab-group-line
+            {
+                width: calc(100% - var(--tab-border-radius) * 4) !important;
+            }
+        }
+    }
         
         
 
@@ -335,5 +371,4 @@ tab-group
                 }
             }
         }
-    }
 }
