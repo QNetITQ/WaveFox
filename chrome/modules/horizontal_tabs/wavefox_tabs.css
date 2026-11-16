@@ -105,7 +105,13 @@ tab-split-view-wrapper
 {
     outline: none !important;
     padding: 0px !important;
-    background-color: var(--tab-background-color-hover);
+    margin-inline: var(--tab-margin-overflow-clip) !important;
+    gap: calc(var(--tab-margin-overflow-clip) * 2) !important;
+    
+    &:is([hasactivetab], :hover)
+    {
+        background-color: transparent !important;
+    }
 
     & > .tabbrowser-tab
     {
@@ -121,6 +127,11 @@ tab-split-view-wrapper
             .tab-background
             {
                 min-height: var(--tab-min-height) !important;
+                
+                &:not([selected], [multiselected])
+                {
+                    background-color: var(--tab-background-color-hover) !important;
+                }
             }
             
             .tab-content
@@ -188,6 +199,11 @@ tab-group
         {
             margin-inline-start: var(--tab-first-last-inline-margin) !important;
         }
+        
+        .tabbrowser-tab:nth-last-child(1 of .tabbrowser-tab:not([hidden]))
+        {
+            margin-inline-end: var(--tab-first-last-inline-margin) !important;
+        }
     }
 
     /* Overflow animations */
@@ -230,7 +246,8 @@ tab-group
     
     tab-split-view-wrapper
     {
-        margin-block: 0px !important;
+        gap: 0px !important;
+        margin: 0px !important;
         
         #tabbrowser-arrowscrollbox &:nth-child(1 of :not([hidden]))
         {
