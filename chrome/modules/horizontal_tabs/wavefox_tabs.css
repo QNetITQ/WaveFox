@@ -178,41 +178,43 @@ tab-group
 
 @media -moz-pref("WaveFox.HorizontalTabs.AttachedTabs")
 {
-    /* Tab Margins */
+    /* Tab Margins (Shadow DOM) */
 
-    #pinned-tabs-container
+    #tabbrowser-tabs:first-child
     {
-        .tabbrowser-tab:first-child
+        #pinned-tabs-container:not(:empty)
         {
-            margin-inline-start: var(--tab-first-last-inline-margin) !important;
+            --wavefox-scrollbox-first-padding: var(--tab-first-last-inline-margin);
         }
 
-        .tabbrowser-tab:last-child
+        #pinned-tabs-container:empty ~ #tabbrowser-arrowscrollbox
         {
-            margin-inline-end: var(--tab-first-last-inline-margin) !important;
+            --wavefox-scrollbox-first-padding: var(--tab-first-last-inline-margin);
         }
     }
-
-    @scope (#tabbrowser-arrowscrollbox) to (tab-group, tab-split-view-wrapper)
+    
+    :is(#pinned-tabs-container, #tabbrowser-arrowscrollbox)
     {
-        .tabbrowser-tab:nth-child(1 of :not([hidden]))
+        &:not([overflowing])
         {
-            margin-inline-start: var(--tab-first-last-inline-margin) !important;
+            --wavefox-scrollbox-overflow: visible;
         }
-        
-        .tabbrowser-tab:nth-last-child(1 of .tabbrowser-tab:not([hidden]))
+
+        &[overflowing]
         {
-            margin-inline-end: var(--tab-first-last-inline-margin) !important;
+            --wavefox-scrollbox-first-padding: var(--tab-first-last-inline-margin);
+            --wavefox-scrollbox-last-padding: var(--tab-first-last-inline-margin);
         }
     }
-
-    /* Overflow animations */
 
     scrollbox[part="scrollbox"]
     {
-        scroll-padding-inline: var(--tab-first-last-inline-margin) !important;
+        padding-inline-start: var(--wavefox-scrollbox-first-padding, revert-rule) !important;
+        padding-inline-end: var(--wavefox-scrollbox-last-padding, revert-rule) !important;
+        scroll-padding-inline: var(--tab-first-last-inline-margin, revert-rule) !important;
+        overflow: var(--wavefox-scrollbox-overflow, hidden) !important;
     }
-    
+
     /* Tab Groups */
     
     tab-group
@@ -248,11 +250,6 @@ tab-group
     {
         gap: 0px !important;
         margin: 0px !important;
-        
-        #tabbrowser-arrowscrollbox &:nth-child(1 of :not([hidden]))
-        {
-            margin-inline-start: var(--tab-first-last-inline-margin) !important;
-        }
     }
 
     /* Tabs */
