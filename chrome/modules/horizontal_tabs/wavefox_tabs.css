@@ -387,6 +387,16 @@ tab-group
                         calc(-1 * var(--tab-corner-incline-x)) calc(-1 * var(--tab-corner-incline-y)) from end,
                         close
                     );
+
+                    /* Напоминание
+                    clip-path: shape(
+                        from 0 100%,
+                        curve to 50% 50% with 20% 100% / 20% 100%,
+                        smooth to 100% 0% with 80% 0%,
+                        vline to 100%,
+                        close
+                      );
+                    */
                 }
             }
         }
