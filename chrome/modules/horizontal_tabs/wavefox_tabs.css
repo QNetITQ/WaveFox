@@ -58,7 +58,7 @@
             &::before
             {
                 position: relative !important;
-                margin-inline: auto !important;
+                margin: 0px !important;
             }
         }
         
@@ -104,9 +104,6 @@
 tab-split-view-wrapper
 {
     outline: none !important;
-    padding: 0px !important;
-    margin-inline: var(--tab-margin-overflow-clip) !important;
-    gap: calc(var(--tab-margin-overflow-clip) * 2) !important;
     
     &:is([hasactivetab], :hover)
     {
@@ -115,19 +112,12 @@ tab-split-view-wrapper
 
     & > .tabbrowser-tab
     {
-        --tab-min-height: inherit !important;
-        margin: 0px !important;
-        padding: 0px !important;
-
         & .tab-stack
         {
             border: none !important;
-            padding: 0px !important;
             
             .tab-background
-            {
-                min-height: var(--tab-min-height) !important;
-                
+            {                
                 &:not([selected], [multiselected])
                 {
                     background-color: var(--tab-background-color-hover) !important;
@@ -248,8 +238,23 @@ tab-group
     
     tab-split-view-wrapper
     {
-        gap: 0px !important;
         margin: 0px !important;
+        padding: 0px !important;
+
+        & > .tabbrowser-tab
+        {
+            --tab-min-height: inherit !important;
+
+            & .tab-stack
+            {
+                padding: 0px !important;
+
+                .tab-background
+                {
+                    min-height: var(--tab-min-height) !important;
+                }
+            }
+        }
     }
 
     /* Tabs */
