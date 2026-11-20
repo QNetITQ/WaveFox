@@ -201,7 +201,7 @@ tab-group
     {
         padding-inline-start: var(--wavefox-scrollbox-first-padding, revert-rule) !important;
         padding-inline-end: var(--wavefox-scrollbox-last-padding, revert-rule) !important;
-        scroll-padding-inline: var(--tab-first-last-inline-margin, revert-rule) !important;
+        scroll-padding-inline: var(--wavefox-scrollbox-last-padding, revert-rule) !important;
         overflow: var(--wavefox-scrollbox-overflow, hidden) !important;
     }
 
@@ -376,7 +376,7 @@ tab-group
                 .tab-background
                 {
                     margin-inline: calc(-1 * var(--tab-first-last-inline-margin)) !important;
-                    clip-path: shape(
+                    clip-path shape(
                         nonzero from 0px var(--tab-min-height),
                         curve by var(--tab-min-height) calc(-1 * var(--tab-min-height)) with
                         var(--tab-corner-incline-x) calc(-1 * var(--tab-corner-incline-y)) from start /
@@ -387,16 +387,48 @@ tab-group
                         calc(-1 * var(--tab-corner-incline-x)) calc(-1 * var(--tab-corner-incline-y)) from end,
                         close
                     );
-
-                    /* Напоминание
+                    
+                    
+                    
+                    
+                    
+                    
                     clip-path: shape(
-                        from 0 100%,
-                        curve to 50% 50% with 20% 100% / 20% 100%,
-                        smooth to 100% 0% with 80% 0%,
-                        vline to 100%,
+                        nonzero from 0px var(--tab-min-height),
+                        
+                        
+                        
+                        curve by var(--tab-min-height) calc(-1 * var(--tab-min-height)) with
+                        var(--tab-corner-incline-x) calc(-1 * var(--tab-corner-incline-y)) from start /
+                        calc(-1 * var(--tab-corner-incline-x)) var(--tab-corner-incline-y) from end,
+                        
+                        
+                        
+                        
+                        hline to calc(100% - var(--tab-min-height)),
+                        curve by var(--tab-min-height) var(--tab-min-height) with
+                        var(--tab-corner-incline-x) var(--tab-corner-incline-y) from start /
+                        calc(-1 * var(--tab-corner-incline-x)) calc(-1 * var(--tab-corner-incline-y)) from end,
                         close
-                      );
+                    );
+                    
+                    /*
+                    
+                      clip-path: shape(
+             from 0px 100%,
+             curve to 50% 50% with 25% 0% from start / -25% 50% from end,
+             smooth to 100% 0% with -25% 0% from end,
+             vline to 100%,
+             close
+             );
                     */
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                 }
             }
         }
