@@ -35,3 +35,10 @@
         --toolbar-background-color: var(--tab-background-color-selected) !important;
     }
 }
+
+/* Nav Bar */
+
+#nav-bar
+{
+    border-top: none !important;
+}
