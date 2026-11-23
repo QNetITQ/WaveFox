@@ -1,7 +1,5 @@
 @media -moz-pref("WaveFox.HorizontalTabs.Tabs.Shadows")
 {
-    @scope (:root) to (tab-split-view-wrapper)
-    {
         :scope
         {
             --wavefox-selected-tab-shadow-offset-x: 0px;
@@ -83,5 +81,4 @@
                 }
             }
         }
-    }
 }
