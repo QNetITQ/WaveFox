@@ -39,9 +39,8 @@ These are very rough options. There's no guarantee they'll make it into the fina
 This setting makes tabs one with the browser toolbar. Depends on the corner rounding settings or custom tab shapes.
 <img width="1794" height="103" alt="изображение" src="https://github.com/user-attachments/assets/665f7f02-4869-46ab-bb65-6ffe83ca36c2" />
 
-- `WaveFox.HorizontalTabs.AttachedTabs` > true
-  - `WaveFox.HorizontalTabs.AttachedTabs.Shape` > 1 or 2 or 3 or 4
-    - `WaveFox.HorizontalTabs.AttachedTabs.Shape.Mode` > 1 or 2
+- `WaveFox.HorizontalTabs.AttachedTabs` > true + - `WaveFox.Toolbar.Roundings`
+  - `WaveFox.HorizontalTabs.AttachedTabs.Shape` > 1 or 2 or 3 or 4 or 5
 
 ### Windows / Linux / MacOS System Theme
 Requires OS with transparency support. Works only with the system theme.
