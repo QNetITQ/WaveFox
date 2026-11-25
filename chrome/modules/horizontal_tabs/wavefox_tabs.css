@@ -319,54 +319,202 @@ tab-group
             }
         }
     }
-        
-        
 
-
-        
-        
-        
-        
     /* Custom Shapes */
 
     @media -moz-pref("WaveFox.HorizontalTabs.AttachedTabs.Shape", 1) or
            -moz-pref("WaveFox.HorizontalTabs.AttachedTabs.Shape", 2) or
            -moz-pref("WaveFox.HorizontalTabs.AttachedTabs.Shape", 3) or
-           -moz-pref("WaveFox.HorizontalTabs.AttachedTabs.Shape", 4)
+           -moz-pref("WaveFox.HorizontalTabs.AttachedTabs.Shape", 4) or
+           -moz-pref("WaveFox.HorizontalTabs.AttachedTabs.Shape", 5)
     {
         :scope
         {
             --tab-first-last-inline-margin: calc(var(--tab-min-height) / 2) !important;
-            --tab-corner-incline-y: 0px;
 
             @media -moz-pref("WaveFox.HorizontalTabs.AttachedTabs.Shape", 1)
             {
-                --tab-corner-incline-x: calc(var(--tab-min-height) * 0.875);
+                --wavefox-tab-shape-start-x: calc(var(--tab-min-height) / 4) !important;
+                --wavefox-tab-shape-start-y: var(--tab-min-height) !important;
+                
+                --wavefox-tab-shape-center-line-x: calc(100% - var(--tab-min-height) / 2 - var(--tab-min-height) / 4) !important;
+
+                --wavefox-tab-shape-first-line-x: calc(var(--tab-min-height) / 2) !important;
+                --wavefox-tab-shape-first-line-y: calc(-1 * var(--tab-min-height)) !important;
+                --wavefox-tab-shape-last-line-x: calc(var(--tab-min-height) / 2) !important;
+                --wavefox-tab-shape-last-line-y: var(--tab-min-height) !important;
+                
+                --wavefox-tab-shape-first-curve-position-end-x: 0px !important;
+                --wavefox-tab-shape-first-curve-position-end-y: 0px !important;
+                --wavefox-tab-shape-first-curve-rounding-start-x: 0px !important;
+                --wavefox-tab-shape-first-curve-rounding-start-y: 0px !important;
+                --wavefox-tab-shape-first-curve-rounding-end-x: 0px !important;
+                --wavefox-tab-shape-first-curve-rounding-end-y: 0px !important;
+
+                --wavefox-tab-shape-first-smooth-position-end-x: 0px !important;
+                --wavefox-tab-shape-first-smooth-position-end-y: 0px !important;
+                --wavefox-tab-shape-first-smooth-rounding-end-x: 0px !important;
+                --wavefox-tab-shape-first-smooth-rounding-end-y: 0px !important;
+                
+                --wavefox-tab-shape-last-curve-position-end-x: 0px !important;
+                --wavefox-tab-shape-last-curve-position-end-y: 0px !important;
+                --wavefox-tab-shape-last-curve-rounding-start-x: 0px !important;
+                --wavefox-tab-shape-last-curve-rounding-start-y: 0px !important;
+                --wavefox-tab-shape-last-curve-rounding-end-x: 0px !important;
+                --wavefox-tab-shape-last-curve-rounding-end-y: 0px !important;
+
+                --wavefox-tab-shape-last-smooth-position-end-x: 0px !important;
+                --wavefox-tab-shape-last-smooth-position-end-y: 0px !important;
+                --wavefox-tab-shape-last-smooth-rounding-end-x: 0px !important;
+                --wavefox-tab-shape-last-smooth-rounding-end-y: 0px !important;
             }
 
             @media -moz-pref("WaveFox.HorizontalTabs.AttachedTabs.Shape", 2)
             {
-                --tab-corner-incline-x: calc(var(--tab-min-height) * 0.75);
+                --wavefox-tab-shape-start-x: 0px !important;
+                --wavefox-tab-shape-start-y: var(--tab-min-height) !important;
+                
+                --wavefox-tab-shape-center-line-x: calc(100% - var(--tab-min-height)) !important;
+
+                --wavefox-tab-shape-first-line-x: 0px !important;
+                --wavefox-tab-shape-first-line-y: 0px !important;
+                --wavefox-tab-shape-last-line-x: 0px !important;
+                --wavefox-tab-shape-last-line-y: 0px !important;
+
+                --wavefox-tab-shape-first-curve-position-end-x: calc(var(--tab-min-height) / 2) !important;
+                --wavefox-tab-shape-first-curve-position-end-y: calc(-1 * var(--tab-min-height) / 2) !important;
+                --wavefox-tab-shape-first-curve-rounding-start-x: calc(var(--tab-min-height) / 4 + 3px) !important;
+                --wavefox-tab-shape-first-curve-rounding-start-y: 0px !important;
+                --wavefox-tab-shape-first-curve-rounding-end-x: calc(-1 * var(--tab-min-height) / 4 + 3px) !important;
+                --wavefox-tab-shape-first-curve-rounding-end-y: calc(var(--tab-min-height) / 2 - 3px) !important;
+
+                --wavefox-tab-shape-first-smooth-position-end-x: calc(var(--tab-min-height) / 2) !important;
+                --wavefox-tab-shape-first-smooth-position-end-y: calc(-1 * var(--tab-min-height) / 2) !important;
+                --wavefox-tab-shape-first-smooth-rounding-end-x: calc(-1 * var(--tab-min-height) / 4 - 3px) !important;
+                --wavefox-tab-shape-first-smooth-rounding-end-y: 0px !important;
+                
+                --wavefox-tab-shape-last-curve-position-end-x: calc(var(--tab-min-height) / 2) !important;
+                --wavefox-tab-shape-last-curve-position-end-y: calc(var(--tab-min-height) / 2) !important;
+                --wavefox-tab-shape-last-curve-rounding-start-x: calc(var(--tab-min-height) / 4 + 3px) !important;
+                --wavefox-tab-shape-last-curve-rounding-start-y: 0px !important;
+                --wavefox-tab-shape-last-curve-rounding-end-x: calc(-1 * var(--tab-min-height) / 4 + 3px) !important;
+                --wavefox-tab-shape-last-curve-rounding-end-y: calc(-1 * var(--tab-min-height) / 2 + 3px) !important;
+
+                --wavefox-tab-shape-last-smooth-position-end-x: calc(var(--tab-min-height) / 2) !important;
+                --wavefox-tab-shape-last-smooth-position-end-y: calc(var(--tab-min-height) / 2) !important;
+                --wavefox-tab-shape-last-smooth-rounding-end-x: calc(-1 * var(--tab-min-height) / 4 - 3px) !important;
+                --wavefox-tab-shape-last-smooth-rounding-end-y: 0px !important;
             }
 
             @media -moz-pref("WaveFox.HorizontalTabs.AttachedTabs.Shape", 3)
             {
-                --tab-corner-incline-x: calc(var(--tab-min-height) * 0.625);
+                --wavefox-tab-shape-start-x: 0px !important;
+                --wavefox-tab-shape-start-y: var(--tab-min-height) !important;
+                
+                --wavefox-tab-shape-center-line-x: calc(100% - var(--tab-min-height)) !important;
+
+                --wavefox-tab-shape-first-line-x: 0px !important;
+                --wavefox-tab-shape-first-line-y: 0px !important;
+                --wavefox-tab-shape-last-line-x: 0px !important;
+                --wavefox-tab-shape-last-line-y: 0px !important;
+
+                --wavefox-tab-shape-first-curve-position-end-x: calc(var(--tab-min-height) / 2) !important;
+                --wavefox-tab-shape-first-curve-position-end-y: calc(-1 * var(--tab-min-height) / 2) !important;
+                --wavefox-tab-shape-first-curve-rounding-start-x: calc(var(--tab-min-height) / 4 + 6px) !important;
+                --wavefox-tab-shape-first-curve-rounding-start-y: 0px !important;
+                --wavefox-tab-shape-first-curve-rounding-end-x: calc(-1 * var(--tab-min-height) / 4 + 6px) !important;
+                --wavefox-tab-shape-first-curve-rounding-end-y: calc(var(--tab-min-height) / 2 - 6px) !important;
+
+                --wavefox-tab-shape-first-smooth-position-end-x: calc(var(--tab-min-height) / 2) !important;
+                --wavefox-tab-shape-first-smooth-position-end-y: calc(-1 * var(--tab-min-height) / 2) !important;
+                --wavefox-tab-shape-first-smooth-rounding-end-x: calc(-1 * var(--tab-min-height) / 4 - 6px) !important;
+                --wavefox-tab-shape-first-smooth-rounding-end-y: 0px !important;
+                
+                --wavefox-tab-shape-last-curve-position-end-x: calc(var(--tab-min-height) / 2) !important;
+                --wavefox-tab-shape-last-curve-position-end-y: calc(var(--tab-min-height) / 2) !important;
+                --wavefox-tab-shape-last-curve-rounding-start-x: calc(var(--tab-min-height) / 4 + 6px) !important;
+                --wavefox-tab-shape-last-curve-rounding-start-y: 0px !important;
+                --wavefox-tab-shape-last-curve-rounding-end-x: calc(-1 * var(--tab-min-height) / 4 + 6px) !important;
+                --wavefox-tab-shape-last-curve-rounding-end-y: calc(-1 * var(--tab-min-height) / 2 + 6px) !important;
+
+                --wavefox-tab-shape-last-smooth-position-end-x: calc(var(--tab-min-height) / 2) !important;
+                --wavefox-tab-shape-last-smooth-position-end-y: calc(var(--tab-min-height) / 2) !important;
+                --wavefox-tab-shape-last-smooth-rounding-end-x: calc(-1 * var(--tab-min-height) / 4 - 6px) !important;
+                --wavefox-tab-shape-last-smooth-rounding-end-y: 0px !important;
             }
 
             @media -moz-pref("WaveFox.HorizontalTabs.AttachedTabs.Shape", 4)
             {
-                --tab-corner-incline-x: calc(var(--tab-min-height) * 0.5);
-            }
+                --wavefox-tab-shape-start-x: 0px !important;
+                --wavefox-tab-shape-start-y: var(--tab-min-height) !important;
+                
+                --wavefox-tab-shape-center-line-x: calc(100% - var(--tab-min-height)) !important;
 
-             @media -moz-pref("WaveFox.HorizontalTabs.AttachedTabs.Shape.Mode", 1)
-            {
-                --tab-corner-incline-y: calc(var(--tab-min-height) * 0.125);
-            }
+                --wavefox-tab-shape-first-line-x: 0px !important;
+                --wavefox-tab-shape-first-line-y: 0px !important;
+                --wavefox-tab-shape-last-line-x: 0px !important;
+                --wavefox-tab-shape-last-line-y: 0px !important;
 
-            @media -moz-pref("WaveFox.HorizontalTabs.AttachedTabs.Shape.Mode", 2)
+                --wavefox-tab-shape-first-curve-position-end-x: var(--tab-min-height) !important;
+                --wavefox-tab-shape-first-curve-position-end-y: calc(-1 * var(--tab-min-height)) !important;
+                --wavefox-tab-shape-first-curve-rounding-start-x: calc(var(--tab-min-height) * 0.875) !important;
+                --wavefox-tab-shape-first-curve-rounding-start-y: 0px !important;
+                --wavefox-tab-shape-first-curve-rounding-end-x: calc(-1 * var(--tab-min-height) * 0.875) !important;
+                --wavefox-tab-shape-first-curve-rounding-end-y: 0px !important;
+
+                --wavefox-tab-shape-first-smooth-position-end-x: 0px !important;
+                --wavefox-tab-shape-first-smooth-position-end-y: 0px !important;
+                --wavefox-tab-shape-first-smooth-rounding-end-x: 0px !important;
+                --wavefox-tab-shape-first-smooth-rounding-end-y: 0px !important;
+                
+                --wavefox-tab-shape-last-curve-position-end-x: var(--tab-min-height) !important;
+                --wavefox-tab-shape-last-curve-position-end-y: var(--tab-min-height) !important;
+                --wavefox-tab-shape-last-curve-rounding-start-x: calc(var(--tab-min-height) * 0.875) !important;
+                --wavefox-tab-shape-last-curve-rounding-start-y: 0px !important;
+                --wavefox-tab-shape-last-curve-rounding-end-x: calc(-1 * var(--tab-min-height) * 0.875) !important;
+                --wavefox-tab-shape-last-curve-rounding-end-y: 0px !important;
+
+                --wavefox-tab-shape-last-smooth-position-end-x: 0px !important;
+                --wavefox-tab-shape-last-smooth-position-end-y: 0px !important;
+                --wavefox-tab-shape-last-smooth-rounding-end-x: 0px !important;
+                --wavefox-tab-shape-last-smooth-rounding-end-y: 0px !important;
+            }
+            
+            @media -moz-pref("WaveFox.HorizontalTabs.AttachedTabs.Shape", 5)
             {
-                --tab-corner-incline-y: calc(var(--tab-min-height) * 0.25);
+                --wavefox-tab-shape-start-x: 0px !important;
+                --wavefox-tab-shape-start-y: var(--tab-min-height) !important;
+                
+                --wavefox-tab-shape-center-line-x: calc(100% - var(--tab-min-height)) !important;
+
+                --wavefox-tab-shape-first-line-x: 0px !important;
+                --wavefox-tab-shape-first-line-y: 0px !important;
+                --wavefox-tab-shape-last-line-x: 0px !important;
+                --wavefox-tab-shape-last-line-y: 0px !important;
+
+                --wavefox-tab-shape-first-curve-position-end-x: var(--tab-min-height) !important;
+                --wavefox-tab-shape-first-curve-position-end-y: calc(-1 * var(--tab-min-height)) !important;
+                --wavefox-tab-shape-first-curve-rounding-start-x: calc(var(--tab-min-height) * 0.75) !important;
+                --wavefox-tab-shape-first-curve-rounding-start-y: 0px !important;
+                --wavefox-tab-shape-first-curve-rounding-end-x: calc(-1 * var(--tab-min-height) * 0.75) !important;
+                --wavefox-tab-shape-first-curve-rounding-end-y: 0px !important;
+
+                --wavefox-tab-shape-first-smooth-position-end-x: 0px !important;
+                --wavefox-tab-shape-first-smooth-position-end-y: 0px !important;
+                --wavefox-tab-shape-first-smooth-rounding-end-x: 0px !important;
+                --wavefox-tab-shape-first-smooth-rounding-end-y: 0px !important;
+                
+                --wavefox-tab-shape-last-curve-position-end-x: var(--tab-min-height) !important;
+                --wavefox-tab-shape-last-curve-position-end-y: var(--tab-min-height) !important;
+                --wavefox-tab-shape-last-curve-rounding-start-x: calc(var(--tab-min-height) * 0.75) !important;
+                --wavefox-tab-shape-last-curve-rounding-start-y: 0px !important;
+                --wavefox-tab-shape-last-curve-rounding-end-x: calc(-1 * var(--tab-min-height) * 0.75) !important;
+                --wavefox-tab-shape-last-curve-rounding-end-y: 0px !important;
+
+                --wavefox-tab-shape-last-smooth-position-end-x: 0px !important;
+                --wavefox-tab-shape-last-smooth-position-end-y: 0px !important;
+                --wavefox-tab-shape-last-smooth-rounding-end-x: 0px !important;
+                --wavefox-tab-shape-last-smooth-rounding-end-y: 0px !important;
             }
         }
 
@@ -376,33 +524,35 @@ tab-group
             {
                 margin-inline: calc(-1 * var(--tab-first-last-inline-margin)) !important;
                 clip-path: shape(
-                        nonzero from 0px var(--tab-min-height),
-                        curve by var(--tab-min-height) calc(-1 * var(--tab-min-height)) with
-                        var(--tab-corner-incline-x) calc(-1 * var(--tab-corner-incline-y)) from start /
-                        calc(-1 * var(--tab-corner-incline-x)) var(--tab-corner-incline-y) from end,
-                        hline to calc(100% - var(--tab-min-height)),
-                        curve by var(--tab-min-height) var(--tab-min-height) with
-                        var(--tab-corner-incline-x) var(--tab-corner-incline-y) from start /
-                        calc(-1 * var(--tab-corner-incline-x)) calc(-1 * var(--tab-corner-incline-y)) from end,
+                        nonzero from var(--wavefox-tab-shape-start-x)
+                                     var(--wavefox-tab-shape-start-y),
+                        line by var(--wavefox-tab-shape-first-line-x)
+                                var(--wavefox-tab-shape-first-line-y),
+                        curve by var(--wavefox-tab-shape-first-curve-position-end-x)
+                                 var(--wavefox-tab-shape-first-curve-position-end-y) with
+                                 var(--wavefox-tab-shape-first-curve-rounding-start-x)
+                                 var(--wavefox-tab-shape-first-curve-rounding-start-y) from start /
+                                 var(--wavefox-tab-shape-first-curve-rounding-end-x)
+                                 var(--wavefox-tab-shape-first-curve-rounding-end-y) from end,
+                        smooth by var(--wavefox-tab-shape-first-smooth-position-end-x)
+                                  var(--wavefox-tab-shape-first-smooth-position-end-y) with 
+                                  var(--wavefox-tab-shape-first-smooth-rounding-end-x)
+                                  var(--wavefox-tab-shape-first-smooth-rounding-end-y) from end,
+                        hline to var(--wavefox-tab-shape-center-line-x),
+                        curve by var(--wavefox-tab-shape-last-curve-position-end-x)
+                                 var(--wavefox-tab-shape-last-curve-position-end-y) with
+                                 var(--wavefox-tab-shape-last-curve-rounding-start-x)
+                                 var(--wavefox-tab-shape-last-curve-rounding-start-y) from start /
+                                 var(--wavefox-tab-shape-last-curve-rounding-end-x)
+                                 var(--wavefox-tab-shape-last-curve-rounding-end-y) from end,
+                        smooth by var(--wavefox-tab-shape-last-smooth-position-end-x)
+                                  var(--wavefox-tab-shape-last-smooth-position-end-y) with 
+                                  var(--wavefox-tab-shape-last-smooth-rounding-end-x)
+                                  var(--wavefox-tab-shape-last-smooth-rounding-end-y) from end,
+                        line by var(--wavefox-tab-shape-last-line-x)
+                                var(--wavefox-tab-shape-last-line-y),
                         close
                 );
-
-                /*    
-                --test: 12px;
-                --test2: 2px;
-
-                clip-path: shape(
-                        nonzero from 0px var(--tab-min-height),
-                        curve by calc(var(--tab-min-height) / 2) calc(-1 * var(--tab-min-height) / 2) with var(--test) 0px from start / calc(-1 * var(--test2)) var(--test) from end,
-                        smooth by calc(var(--tab-min-height) / 2) calc(-1 * var(--tab-min-height) / 2) with calc(-1 * var(--test)) 0px from end,
-                        hline to calc(100% - var(--tab-min-height)),
-                        curve by calc(var(--tab-min-height) / 2) calc(var(--tab-min-height) / 2) with var(--test) 0px from start / calc(-1 * var(--test2)) calc(-1 * var(--test)) from end,
-                        smooth by calc(var(--tab-min-height) / 2) calc(var(--tab-min-height) / 2) with calc(-1 * var(--test)) 0px from end,
-                        close
-                );
-                    
-                */
-                
             }
         }
     }
