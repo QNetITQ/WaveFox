@@ -28,13 +28,6 @@ Go to the "chrome" folder, add the desired styles to the appropriate files, and 
 
 You can also add styles directly to the "userChrome.css". Just do whatever is most convenient for you.
 
-### Tests
-These are very rough options. There's no guarantee they'll make it into the final release.
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/fbaa8228-ad10-4b41-93c6-cc46e5838a74" />
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/5b225ca2-a389-4c3e-86ee-00f8aaaff03c" />
-
-- `WaveFox.VerticalTabs.Tests` > 1 or 2
-
 ### Tab Shapes
 This setting makes tabs one with the browser toolbar. Depends on the corner rounding settings or custom tab shapes.
 <img width="1794" height="103" alt="изображение" src="https://github.com/user-attachments/assets/665f7f02-4869-46ab-bb65-6ffe83ca36c2" />
