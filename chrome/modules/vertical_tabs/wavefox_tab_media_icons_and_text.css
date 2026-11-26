@@ -2,6 +2,8 @@
 
 /* Collapsed tabs / Expanded pinned tabs */
 
+/*
+
 #tabbrowser-tabs:not([expanded]) .tabbrowser-tab:not([crashed]),
 #tabbrowser-tabs[expanded] .tabbrowser-tab[pinned]:not([crashed])
 {
@@ -50,8 +52,11 @@
     }
 }
 
+*/
+
 /* Expanded tabs */
 
+/*
 #tabbrowser-tabs[expanded] .tabbrowser-tab:not([pinned], [crashed])
 {
     .tab-icon-overlay
@@ -140,8 +145,11 @@
     }
 }
 
+*/
+
 /* ---------- Picture-In-Picture ---------- */
 
+/*
 #tabbrowser-tabs:is([expanded], :not([expanded])) .tabbrowser-tab[pictureinpicture]:not([crashed], [busy])
 {
     .tab-icon-stack::before
@@ -182,7 +190,11 @@
     }
 }
 
+*/
+
 /* -------------------- Tab Text -------------------- */
+
+/*
 
 .tab-label-container
 {
@@ -201,3 +213,5 @@
     text-overflow: ellipsis !important;
     margin-block: 0px !important;
 }
+
+*/
