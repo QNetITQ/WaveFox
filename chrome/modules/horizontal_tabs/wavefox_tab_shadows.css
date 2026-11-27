@@ -37,12 +37,21 @@
                                            var(--wavefox-inner-tabbar-shadow-blur)
                                            var(--wavefox-inner-tabbar-shadow-spread)
                                            color-mix(in srgb, var(--wavefox-inner-tabbar-shadow-color) var(--wavefox-filter-shadow-saturation, 100%), transparent);
-            
-            @media (prefers-color-scheme: dark)
+
+            @media (-moz-pref("extensions.activeThemeID", "default-theme@mozilla.org") and -moz-pref("browser.theme.toolbar-theme", 2)) or
+                    -moz-pref("extensions.activeThemeID", "firefox-compact-light@mozilla.org")
             {
-                --wavefox-selected-tab-shadow-color: black;
-                --wavefox-selected-tab-filter-color: black;
-                --wavefox-inner-tabbar-shadow-color: black;
+                --wavefox-selected-tab-shadow-color: rgb(0,0,0,0.125) !important;
+                --wavefox-selected-tab-filter-color: rgb(0,0,0,0.125) !important;
+                --wavefox-inner-tabbar-shadow-color: rgb(0,0,0,0.125) !important;
+            }
+
+            @media (-moz-pref("extensions.activeThemeID", "default-theme@mozilla.org") and -moz-pref("browser.theme.toolbar-theme", 0)) or
+                    -moz-pref("extensions.activeThemeID", "firefox-compact-dark@mozilla.org")
+            {
+                --wavefox-selected-tab-shadow-color: rgb(0,0,0,0.5) !important;
+                --wavefox-selected-tab-filter-color: rgb(0,0,0,0.5) !important;
+                --wavefox-inner-tabbar-shadow-color: rgb(0,0,0,0.5) !important;
             }
             
             #TabsToolbar
