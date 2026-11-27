@@ -13,7 +13,7 @@
     }
 }
 
-/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+/* Firefox Gradient Themes */
 
 @media (-moz-pref("extensions.activeThemeID", "default-theme@mozilla.org") and -moz-pref("browser.theme.native-theme", false)) or
         -moz-pref("extensions.activeThemeID", "firefox-compact-light@mozilla.org") or
@@ -32,7 +32,19 @@
 {
     :scope
     {
-        --toolbar-background-color: var(--tab-background-color-selected) !important;
+        --toolbar-background-color: var(--tabpanel-background-color) !important;
+    }
+}
+
+/* Titlebar */
+
+:root[customtitlebar]
+{
+    .browser-titlebar
+    {
+        will-change: auto !important;
+        transition: none !important;
+        opacity: 1 !important;
     }
 }
 
