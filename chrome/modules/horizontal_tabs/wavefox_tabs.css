@@ -1,15 +1,3 @@
-/* Titlebar */
-
-:root[customtitlebar]
-{
-    .browser-titlebar
-    {
-        will-change: auto !important;
-        transition: none !important;
-        opacity: 1 !important;
-    }
-}
-
 /* Tabs */
 
 .tabbrowser-tab
