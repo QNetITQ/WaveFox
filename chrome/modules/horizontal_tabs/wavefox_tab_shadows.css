@@ -38,8 +38,8 @@
                                            var(--wavefox-inner-tabbar-shadow-spread)
                                            color-mix(in srgb, var(--wavefox-inner-tabbar-shadow-color) var(--wavefox-filter-shadow-saturation, 100%), transparent);
 
-            @media (-moz-pref("extensions.activeThemeID", "default-theme@mozilla.org") and -moz-pref("browser.theme.toolbar-theme", 2)) or
-                    -moz-pref("extensions.activeThemeID", "firefox-compact-light@mozilla.org")
+            @media -moz-pref("extensions.activeThemeID", "default-theme@mozilla.org") or
+                   -moz-pref("extensions.activeThemeID", "firefox-compact-light@mozilla.org")
             {
                 --wavefox-selected-tab-shadow-color: rgb(0,0,0,0.125) !important;
                 --wavefox-selected-tab-filter-color: rgb(0,0,0,0.125) !important;
