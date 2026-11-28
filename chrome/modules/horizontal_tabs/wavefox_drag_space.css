@@ -1,6 +1,5 @@
-@media -moz-pref("WaveFox.HorizontalTabs.AttachedTabs.DragSpace", 1)  or
-       -moz-pref("WaveFox.HorizontalTabs.AttachedTabs.DragSpace", 2)  or
-       -moz-pref("WaveFox.HorizontalTabs.AttachedTabs.DragSpace", 3)
+@media -moz-pref("WaveFox.HorizontalTabs.AttachedTabs.DragSpace", 1) or
+       -moz-pref("WaveFox.HorizontalTabs.AttachedTabs.DragSpace", 2)
 {
     @media -moz-pref("WaveFox.HorizontalTabs.AttachedTabs")
     {
@@ -8,54 +7,34 @@
         {
             :root[sizemode="normal"]
             {
-                --drag-space: 8px;
+                --wavefox-drag-space: 16px;
             }
         }
 
         @media -moz-pref("WaveFox.HorizontalTabs.AttachedTabs.DragSpace", 2)
         {
-            :root:is([sizemode="normal"], [sizemode="maximized"])
+            :root[sizemode="normal"]
             {
-                --drag-space: 8px;
+                --wavefox-drag-space: 16px;
+            }
+            
+            :root[sizemode="maximized"]
+            {
+                --wavefox-drag-space: var(--toolbar-edge-padding, 4px);
             }
         }
 
-        @media -moz-pref("WaveFox.HorizontalTabs.AttachedTabs.DragSpace", 3)
+        #TabsToolbar
         {
-            :root:is([sizemode="normal"], [sizemode="maximized"], [sizemode="fullscreen"])
+            .titlebar-spacer
             {
-                --drag-space: 8px;
+                display: none !important;
             }
-        }
-
-        #TabsToolbar :where(.tabbrowser-tab, .toolbarbutton-1, separator, #personal-bookmarks, #search-container, .tab-group-label-container, tab-split-view-wrapper, .tab-group-overflow-count-container)
-        {
-            margin-top: var(--drag-space, 0px) !important;
-        }
-
-        #TabsToolbar tab-split-view-wrapper
-        {
-            .tabbrowser-tab
+            
+            .toolbar-items
             {
-                --split-view-tab-strip-inset: 0px !important;
-                margin-top: 0px !important;
+                margin-top: var(--wavefox-drag-space) !important;
             }
-        }
-
-        /* ---------- Shadow DOM ---------- */
-
-        #pinned-tabs-container,
-        #tabbrowser-arrowscrollbox
-        {
-            --drag-space-only-tabs: var(--drag-space, 0px) !important;
-        }
-
-        #scrollbutton-up,
-        #scrollbutton-down,
-        spacer[part="overflow-start-indicator"],
-        spacer[part="overflow-end-indicator"]
-        {
-            margin-top: var(--drag-space-only-tabs, revert) !important;
         }
     }
 }
