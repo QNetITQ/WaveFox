@@ -36,5 +36,11 @@
                 margin-top: var(--wavefox-drag-space) !important;
             }
         }
+        
+        scrollbox[part="scrollbox"][orient="horizontal"][smoothscroll="true"]
+        {
+            margin-top: calc(-1 * var(--wavefox-drag-space)) !important;
+            padding-top: var(--wavefox-drag-space) !important;
+        }
     }
 }
