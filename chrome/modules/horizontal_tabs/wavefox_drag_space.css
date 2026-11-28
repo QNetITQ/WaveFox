@@ -20,7 +20,7 @@
             
             :root[sizemode="maximized"]
             {
-                --wavefox-drag-space: var(--toolbar-edge-padding, 4px);
+                --wavefox-drag-space: 8px;
             }
         }
 
