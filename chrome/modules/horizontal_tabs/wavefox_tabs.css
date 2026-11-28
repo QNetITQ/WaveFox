@@ -185,7 +185,7 @@ tab-group
         }
     }
 
-    scrollbox[part="scrollbox"]
+    scrollbox[part="scrollbox"][orient="horizontal"]
     {
         padding-inline-start: var(--wavefox-scrollbox-first-padding, revert-rule) !important;
         padding-inline-end: var(--wavefox-scrollbox-last-padding, revert-rule) !important;
