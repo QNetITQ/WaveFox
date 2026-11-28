@@ -83,7 +83,7 @@ The keys below are relevant only for the second option.
 ### Drag Space
 ![изображение](https://user-images.githubusercontent.com/85301851/152680229-43547df0-1d2c-4384-b024-950e7aa56ca6.png)
 
-- `WaveFox.HorizontalTabs.AttachedTabs.DragSpace` > 1 or 2 or 3
+- `WaveFox.HorizontalTabs.AttachedTabs.DragSpace` > 1 or 2
 
 </details>
 
